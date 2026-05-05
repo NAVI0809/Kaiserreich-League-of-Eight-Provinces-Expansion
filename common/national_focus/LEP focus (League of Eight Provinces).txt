@@ -3837,6 +3837,7 @@ focus_tree = {
 		x = 15
 		y = 25
 		available = { china_is_the_unifier_of_china_trigger = yes }
+		allow_branch = { china_is_the_unifier_of_china_trigger = yes }
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.1
@@ -8603,6 +8604,198 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_recruit_beiyang_admiralty
+		icon = GFX_goal_FNG_beiyang_navy
+	    cost = 5
+
+		relative_position_id =  LEP_artillery_of_the_sea
+		x = 0
+	    y = 2
+
+		prerequisite = {
+		    focus = LEP_artillery_of_the_sea
+	    }
+		available = {
+		    china_is_the_unifier_of_china_trigger = yes
+			owns_state = 743
+			owns_state = 746
+			owns_state = 747
+			owns_state = 591
+			owns_state = 745
+			owns_state = 744
+	    }
+		ai_will_do = { factor = 10 }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"
+
+			if = {
+			    limit = { NOT = { has_tech = early_ship_hull_light } }
+			    set_technology = { early_ship_hull_light = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = early_ship_hull_cruiser } }
+			    set_technology = { early_ship_hull_cruiser = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = coastal_defense_ships } }
+			    set_technology = { coastal_defense_ships = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = coastal_defense_ships } }
+			    set_technology = { coastal_defense_ships = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = basic_naval_mines } }
+			    set_technology = { basic_naval_mines = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = basic_battery } }
+			    set_technology = { basic_battery = 1 }
+		    }
+		    if = {
+			    limit = { NOT = { has_tech = basic_torpedo } }
+			    set_technology = { basic_torpedo = 1 }
+		    }
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 1
+			}
+			if = {
+				limit = {
+					controls_province = 1150 #大连
+					745 = { #大连
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = naval_facility
+					}
+				}
+				745 = { #大连
+					add_building_construction = {
+						type = naval_facility
+						level = 1
+						province = 1150 #大连
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 1075 802 747 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = naval_facility
+					}
+					construct_building_in_random_province = { naval_facility = 1 }
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			QIE = {
+			    custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = QIE_sa_zhenbing
+				    		is_character = QIE_du_xigui
+				    		is_character = QIE_wu_yulin
+				    		is_character = QIE_yang_shuzhuang
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    QIE_sa_zhenbing = { set_nationality = ROOT }
+				    QIE_du_xigui = { set_nationality = ROOT }
+				    QIE_wu_yulin = { set_nationality = ROOT }
+				    QIE_yang_shuzhuang = { set_nationality = ROOT }
+			    }
+			}	
+			if = {
+				limit = { NOT = { country_exists = FNG } }
+				FNG = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = FNG_shen_honglie }
+					}
+					hidden_effect = {
+						FNG_shen_honglie = { set_nationality = ROOT }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = HNN } }
+				HNN = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = HNN_yang_xuancheng}
+					}
+					hidden_effect = {
+						HNN_yang_xuancheng = { set_nationality = ROOT }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = YUN} }
+				YUN = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = YUN_ouyang_ge}
+					}
+					hidden_effect = {
+						YUN_ouyang_ge = { set_nationality = ROOT }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = SHD} }
+				SHD = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = SHD_lin_jianzhang}
+					}
+					hidden_effect = {
+						SHD_lin_jianzhang = { set_nationality = ROOT }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = GXC } }
+				GXC = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { 
+							OR = {
+								is_character = GXC_chen_weizhou
+								is_character = GXC_chen_ce
+								is_character = GXC_li_qingwen
+								is_character = GXC_tang_tingguang
+								is_character = GXC_zhou_tianlu
+							}
+						}	
+					}
+					hidden_effect = {
+						GXC_chen_weizhou = { set_nationality = ROOT }
+						GXC_chen_ce = { set_nationality = ROOT }
+						GXC_li_qingwen = { set_nationality = ROOT }
+						GXC_tang_tingguang = { set_nationality = ROOT }
+						GXC_zhou_tianlu = { set_nationality = ROOT }
+					}
+				}
+			}
+			else_if = {
+			    limit = { CHI = { has_character = CHI_chen_shaokuan } }
+			    CHI = {
+				    custom_effect_tooltip = characters_will_be_recruited
+				    character_list_tooltip = {
+					    limit = { is_character = CHI_chen_shaokuan }
+				    }
+				    hidden_effect = {
+					    CHI_chen_shaokuan = { set_nationality = ROOT }
+				    }
+			    }
+		    }	
+		}	
+	}
+
+	focus = {
 		id = LEP_fortifying_our_positions
 		icon = GFX_focus_FIN_weapon_caches
 		cost = 5
@@ -8688,8 +8881,42 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			
+			custom_effect_tooltip = tooltip_white_line
+			
+			if = {
+				limit = {
+					controls_province = 3992 #南昌
+					1044 = { #南昌
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				1044 = { #南昌
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						province = 3992 #南昌
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 606 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = air_facility
+					}
+					construct_building_in_random_province = { air_facility = 1 }
+				}
+			}
 			random_owned_controlled_state = {
-				prioritize = { 613 }
+				prioritize = { 613 } #南京
 				limit = {
 					is_core_of = ROOT
 					is_in_home_area = yes
@@ -8702,6 +8929,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS

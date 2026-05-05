@@ -1,20 +1,17 @@
 LEPEXP_mio_field_repair_tool_kit = { #战地维护套件
-	name = CHI_mio_policy_improved_external_equipment
-	icon = GFX_goal_Automobile_Production
+	name = LEPEXP_mio_field_repair_tool_kit_desc
+	icon =  GFX_mio_policy_ordnance_factory_board
 	allowed = {
-		is_military_industrial_organization = mio_jinling_organisation
+		has_dlc_nsb = yes
+		is_military_industrial_organization = LEP_jinling_organisation
 	}
 	available = {
 		has_mio_size > 5
 	}
-	visible = {
-		has_dlc_nsb = yes
-	}
 	equipment_bonus = {
 		same_as_mio = {
 			reliability = 0.15
-			build_cost_ic = 0.03
 		}
 	}
-	ai_will_do = { base = 1000 }
+	ai_will_do = { base = 10 }
 }
