@@ -1,0 +1,125 @@
+LEP_governor_contacts_missions = {
+	icon = political_actions
+	allowed = { always = no }
+}
+
+LEP_reconstruction_decisions = {
+	icon = GFX_decision_category_generic_industry
+	priority = 120
+	allowed = { always = no }
+}
+
+LEP_redoubts_for_revenue_decisions = {
+	icon = political_actions
+	allowed = { always = no }
+}
+
+LEP_governor_replace_decisions = {
+	icon = political_actions
+	allowed = { always = no }
+}
+
+LEP_collapse_war_decisions = {
+	icon = military_operation
+	allowed = { always = no }
+}
+
+LEP_reestablish_control = {
+	icon = border_conflicts
+	priority = 100
+
+	allowed = { always = no }
+}
+
+LEP_AOG_decisions = {
+	icon = generic_economy
+	allowed = { always = no }
+	visible = {
+		FROM = {
+			exists = yes
+			NOT = { has_war_with = ROOT }
+		}
+	}
+}
+
+#zigai
+
+LEP_balance_of_power_category = {
+	icon = GFX_decision_category_power_struggle
+	allowed = { original_tag = LEP }
+	visible = { has_power_balance = { id = LEP_power_balance } }
+	priority = 0
+}
+
+LEP_Central_Local_Power_Balance_category = {
+	icon = GFX_decision_category_power_struggle
+	allowed = { original_tag = LEP }
+	visible = { has_power_balance = { id = LEP_Central_Local_Power_Balance } }
+	priority = 0
+}
+
+LEP_country_development = {
+	icon = GFX_decision_category_power_struggle
+	allowed = { original_tag = LEP }
+	visible = { original_tag = LEP }
+	priority = 100
+}
+
+LEP_political_consultation = {
+	icon = GFX_decision_category_power_struggle
+	allowed = { original_tag = LEP }
+	visible = { original_tag = LEP }
+	priority = 101
+}
+
+LEP_foreign_policy_decisions = {
+	icon = GFX_decision_category_power_struggle
+	picture = GFX_decision_cat_picture_chi_political_support
+	allowed = { original_tag = LEP }
+	priority = 499
+	visible_when_empty = no
+}
+
+LEP_stride_towards_unification = {
+	icon = GFX_decision_category_power_struggle
+	picture = GFX_decision_cat_picture_chi_political_support
+	allowed = { original_tag = LEP }
+	priority = 498
+	visible_when_empty = no
+}
+
+LEP_republican_administration = {
+	icon = GFX_decision_category_power_struggle
+	picture = GFX_decision_cat_outer_parties
+	visible = { 
+		AND = {
+			has_country_flag = LEP_dem_gov
+			NOT = {
+				has_country_flag = LEP_DSP_win
+				has_country_flag = LEP_ZXX_win
+				has_country_flag = LEP_JNSB_win
+				has_country_flag = LEP_NSU_win
+			}
+		}
+	}
+	allowed = { original_tag = LEP }
+	priority = 500
+	visible_when_empty = no
+}
+
+LEP_liberation_of_asia_category = {
+	icon = GFX_decision_category_patriotic
+	picture = GFX_decision_cat_generic_australasia
+	priority = 70
+	allowed = {
+		tag = LEP
+	}
+	visible = {
+		has_completed_focus = LEP_Return_to_the_World_Stage
+	}
+	visible_when_empty = yes
+}
+
+
+
+
