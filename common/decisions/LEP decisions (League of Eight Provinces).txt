@@ -1,0 +1,2664 @@
+###########################
+# League of Eight Provinces Decisions
+###########################
+# By Erag, Flamefang, WordZero
+###########################
+
+LEP_governor_contacts_missions = {
+	LEP_jiangxi_governor = {
+		icon = generic_flags
+		allowed = { always = no } #activated by effect
+		cost = 50
+		selectable_mission = yes
+		fire_only_once = yes
+		days_mission_timeout = 36
+
+		ai_will_do = { base = 1000 }
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_jiangxi_governor"
+			add_political_power = -50
+			random_list = {
+				25 = {
+					custom_effect_tooltip = LEP_deng_fate_unknown_tt
+					hidden_effect = { LEP_deng_ruzhuo = { unit_leader_event = league_war_character_events.102 } }
+				}
+				75 = {
+					effect_tooltip = { LEP_deng_ruzhuo = { kill_character = yes } }
+					hidden_effect = { LEP_deng_ruzhuo = { unit_leader_event = league_war_character_events.109 } }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_jiangxi_governor"
+			add_stability = 0.05
+			add_war_support = 0.05
+			LEP_deng_ruzhuo = {
+				unit_leader_event = league_war_character_events.101
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_jiangsu_governor = {
+		icon = generic_flags
+		allowed = { always = no } #activated by effect
+		cost = 50
+		selectable_mission = yes
+		fire_only_once = yes
+		days_mission_timeout = 36
+
+		ai_will_do = { base = 1000 }
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_jiangsu_governor"
+			add_political_power = -50
+			random_list = {
+				25 = {
+					custom_effect_tooltip = LEP_zheng_fate_unknown_tt
+					hidden_effect = { LEP_zheng_junyan = { unit_leader_event = league_war_character_events.104 } }
+				}
+				75 = {
+					effect_tooltip = { LEP_zheng_junyan = { kill_character = yes } }
+					hidden_effect = { LEP_zheng_junyan = { unit_leader_event = league_war_character_events.110 } }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_jiangsu_governor"
+			add_stability = 0.05
+			add_war_support = 0.05
+			LEP_zheng_junyan = {
+				unit_leader_event = league_war_character_events.103
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_zhejiang_governor = {
+		icon = generic_flags
+		allowed = { always = no } #activated by effect
+		cost = 50
+		selectable_mission = yes
+		fire_only_once = yes
+		days_mission_timeout = 36
+
+		ai_will_do = { base = 1000 }
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_zhejiang_governor"
+			add_political_power = -50
+			random_list = {
+				25 = {
+					custom_effect_tooltip = LEP_chen_fate_unknown_tt
+					hidden_effect = { LEP_chen_yi = { unit_leader_event = league_war_character_events.106 } }
+				}
+				75 = {
+					effect_tooltip = { LEP_chen_yi = { kill_character = yes } }
+					hidden_effect = { LEP_chen_yi = { unit_leader_event = league_war_character_events.111 } }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_zhejiang_governor"
+			add_stability = 0.05
+			add_war_support = 0.05
+			LEP_chen_yi = {
+				unit_leader_event = league_war_character_events.105
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_zhejiang_governor_chen_traitor = {
+		icon = generic_flags
+		allowed = { always = no } #activated by effect
+		cost = 50
+		selectable_mission = yes
+		fire_only_once = yes
+		days_mission_timeout = 36
+
+		ai_will_do = { base = 1000 }
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_zhejiang_governor_chen_traitor"
+			add_political_power = -50
+			random_list = {
+				25 = {
+					custom_effect_tooltip = LEP_shangguan_fate_unknown_tt
+					hidden_effect = { LEP_shangguan_yunxiang = { unit_leader_event = league_war_character_events.108 } }
+				}
+				75 = {
+					effect_tooltip = { LEP_shangguan_yunxiang = { kill_character = yes } }
+					hidden_effect = { LEP_shangguan_yunxiang = { unit_leader_event = league_war_character_events.112 } }
+				}
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_zhejiang_governor_chen_traitor"
+			add_stability = 0.05
+			add_war_support = 0.05
+			LEP_shangguan_yunxiang = {
+				unit_leader_event = league_war_character_events.107
+			}
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_reconstruction_decisions = {
+	LEP_road_reconstruction_decision = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		available = {
+			controls_state = 596
+			controls_state = 1014
+		}
+
+		visible = {
+			LEP_has_widespread_destruction = yes
+			NOT = {
+				has_country_flag = LEP_in_destruction_lvl3
+				has_country_flag = LEP_in_destruction_lvl4
+			}
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 60
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_road_reconstruction_decision"
+			LEP_reduce_widespread_destruction = yes
+			596 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1014 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_invest_in_armaments_industry_decision = {
+		icon = GFX_decision_ger_military_buildup
+
+		allowed = { always = no }
+
+		available = {
+			controls_state = 596
+		}
+
+		visible = {
+			LEP_has_widespread_destruction = yes
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 60
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_invest_in_armaments_industry_decision"
+			LEP_reduce_widespread_destruction = yes
+			596 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_repair_the_machinery_decision = {
+		icon = GFX_decision_generic_industry
+
+		allowed = { always = no }
+
+		visible = {
+			LEP_has_damaged_industry = yes
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 40
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_repair_the_machinery_decision"
+			LEP_reduce_damaged_industry = yes
+		}
+		fixed_random_seed = no
+	}
+	LEP_factory_repair_teams_decision = {
+		icon = GFX_decision_eng_blackshirt_march
+
+		allowed = { always = no }
+
+		visible = {
+			OR = {
+				AND = {
+					NOT = { has_country_flag = LEP_in_destruction_lvl4 }
+					LEP_has_widespread_destruction = yes
+				}
+				LEP_has_damaged_industry = yes
+			}
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 60
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_factory_repair_teams_decision"
+			if = {
+				limit = {
+					NOT = { has_country_flag = LEP_in_destruction_lvl4 }
+				}
+				LEP_reduce_widespread_destruction = yes
+			}
+			LEP_reduce_damaged_industry = yes
+		}
+		fixed_random_seed = no
+	}
+	LEP_new_industrial_investments_decision = {
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = { always = no }
+
+		available = {
+			controls_state = 613
+		}
+
+		visible = {
+			OR = {
+				AND = {
+					NOT = {
+						has_country_flag = LEP_in_destruction_lvl2
+						has_country_flag = LEP_in_destruction_lvl3
+						has_country_flag = LEP_in_destruction_lvl4
+					}
+					LEP_has_widespread_destruction = yes
+				}
+				LEP_has_damaged_industry = yes
+			}
+		}
+
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_new_industrial_investments_decision"
+			LEP_reduce_damaged_industry = yes
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = LEP_in_destruction_lvl2
+						has_country_flag = LEP_in_destruction_lvl3
+						has_country_flag = LEP_in_destruction_lvl4
+					}
+				}
+				LEP_reduce_widespread_destruction = yes
+			}
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_village_reconstruction_decision = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			LEP_has_widespread_destruction = yes
+		}
+
+		fire_only_once = yes
+		cost = 20
+		days_remove = 45
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_village_reconstruction_decision"
+			LEP_reduce_widespread_destruction = yes
+			add_stability = 0.05
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_redoubts_for_revenue_decisions = {
+	LEP_fortify_xuzhou = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		visible = {
+			owns_state = 1047
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 1047
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1047 }
+		}
+
+		fire_only_once = yes
+		cost = 0
+		days_remove = 80
+
+		ai_will_do = { factor = 50 }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_fortify_xuzhou"
+			add_political_power = 25
+			1047 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 12055
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 3
+						VP = 12055
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_fujian_inland_defences = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		visible = {
+			owns_state = 802
+			owns_state = 1046
+			owns_state = 1066
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 802
+			controls_state = 1046
+			controls_state = 1066
+		}
+
+		fire_only_once = yes
+		cost = 0
+		days_remove = 80
+
+		ai_will_do = { factor = 50 }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_fujian_inland_defences"
+			add_political_power = 25
+			802 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 7071
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = coastal_bunker
+						NUMBER = 2
+						VP = 7071
+					}
+				}
+			}
+			1066 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11986
+					instant_build = yes
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 11986
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = coastal_bunker
+						NUMBER = 1
+						VP = 11986
+					}
+				}
+			}
+			1046 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_coastal_provinces
+						BUILDING = coastal_bunker
+						NUMBER = 1
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_fortify_hangzhou_bay = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		visible = {
+			owns_state = 596
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 596
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 596 }
+		}
+
+		fire_only_once = yes
+		cost = 0
+		days_remove = 80
+
+		ai_will_do = { factor = 50 }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_fortify_hangzhou_bay"
+			add_political_power = 25
+			596 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 7191
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = coastal_bunker
+						NUMBER = 2
+						VP = 7191
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_coastal_provinces
+						BUILDING = coastal_bunker
+						NUMBER = 1
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_jiangxi_mountain_strongholds = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		visible = {
+			owns_state = 1044
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 1044
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1044 }
+		}
+
+		fire_only_once = yes
+		cost = 0
+		days_remove = 80
+
+		ai_will_do = { factor = 50 }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_jiangxi_mountain_strongholds"
+			add_political_power = 25
+			1044 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 3992
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 3
+						VP = 3992
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4038
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7054
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 7007
+					instant_build = yes
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_anhui_border_forts = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		visible = {
+			owns_state = 606
+			owns_state = 1050
+		}
+
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			controls_state = 606
+			controls_state = 1050
+		}
+
+		fire_only_once = yes
+		cost = 0
+		days_remove = 80
+
+		ai_will_do = { factor = 50 }
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_anhui_border_forts"
+			add_political_power = 25
+			606 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 1083
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 1
+						VP = 1083
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces
+						BUILDING = bunker
+						NUMBER = 1
+					}
+				}
+			}
+			1050 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_border_provinces
+						BUILDING = bunker
+						NUMBER = 1
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4079
+					instant_build = yes
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_reestablish_control = {
+	LEP_temp_suppress_kmt = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #manually activated
+		visible = {
+			has_idea = LEP_kuomintang
+		}
+
+		ai_will_do = { factor = 90 }
+
+		available = {
+			check_variable = {
+				tooltip = lep_can_suppress_tt
+				lep_kmt_unrest_level > 1
+			}
+		}
+
+		fixed_random_seed = no
+		cost = 30
+		days_remove = lep_kmt_suppress_remove?0
+		selectable_mission = yes
+		days_mission_timeout = lep_suppress_kmt_mission_timeout?70
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_temp_suppress_kmt"
+			clear_variable = lep_kmt_suppress_remove
+			hidden_effect = {
+				LEP_increase_kmt_unrest_level = yes
+				activate_mission = LEP_temp_suppress_kmt
+				LEP_negative_kmt_event = yes
+			}
+			custom_effect_tooltip = lep_increase_kmt_unrest_tt
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_temp_suppress_kmt"
+			custom_effect_tooltip = lep_decrease_kmt_unrest_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_track_down_kmt }
+						check_variable = { lep_kmt_unrest_level > 1 }
+					}
+				}
+				custom_effect_tooltip = lep_reduce_kmt_available_tt
+				set_variable = { lep_kmt_suppress_remove = days_mission_timeout@LEP_temp_suppress_kmt }
+			}
+			hidden_effect = { LEP_decrease_kmt_unrest_level = yes }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_temp_suppress_kmt"
+			clear_variable = lep_kmt_suppress_remove
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_track_down_kmt }
+						check_variable = { lep_kmt_unrest_level > 1 }
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = { lep_kmt_random_delay = random }
+					subtract_from_temp_variable = { lep_kmt_random_delay = -0.5 }
+					multiply_temp_variable = { lep_kmt_random_delay = 15 }
+					add_to_variable = { lep_suppress_kmt_mission_timeout = lep_kmt_random_delay }
+					activate_mission = LEP_temp_suppress_kmt
+				}
+			}
+		}
+	}
+
+	LEP_decision_lower_kmt_unrest = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no }
+
+		visible = {
+			has_idea = LEP_kuomintang
+		}
+
+		cost = 45
+		days_remove = 50
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_decision_lower_kmt_unrest"
+			if = {
+				limit = {
+					check_variable = { lep_kmt_unrest_level < 1 }
+				}
+				custom_effect_tooltip = lep_remove_kmt_unrest_tt
+				remove_ideas = LEP_kuomintang
+				hidden_effect = {
+					if = {
+						limit = { has_country_flag = LEP_dem_gov }
+						country_event = { id = league_mid.55 days = 1 }
+					}
+					else = {
+						country_event = { id = league_events.50 days = 1 }
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = lep_decrease_kmt_unrest_tt
+				LEP_decrease_kmt_unrest_level = yes
+			}
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_temp_suppress_rural_banditry = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #manually activated
+		visible = {
+			has_idea = LEP_rural_banditry
+		}
+
+		ai_will_do = { factor = 90 }
+
+		available = {
+			check_variable = {
+				tooltip = lep_can_suppress_tt
+				lep_rural_unrest_level > 1
+			}
+		}
+
+		fixed_random_seed = no
+		selectable_mission = yes
+		cost = 20
+		days_remove = LEP_rural_banditry_suppress_remove?0
+		days_mission_timeout = lep_suppress_rural_banditry_mission_timeout?70
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_temp_suppress_rural_banditry"
+			clear_variable = LEP_rural_banditry_suppress_remove
+			hidden_effect = {
+				LEP_increase_rural_banditry_unrest_level = yes
+				activate_mission = LEP_temp_suppress_rural_banditry
+				LEP_negative_rural_banditry_event = yes
+			}
+			custom_effect_tooltip = lep_increase_rural_banditry_and_unrest_tt
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_temp_suppress_rural_banditry"
+			custom_effect_tooltip = lep_decrease_rural_banditry_and_unrest_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_crack_down_rural_bandits }
+						check_variable = { lep_rural_unrest_level > 1 }
+					}
+				}
+				set_variable = { LEP_rural_banditry_suppress_remove = days_mission_timeout@LEP_temp_suppress_rural_banditry }
+			}
+			else = {
+				custom_effect_tooltip = lep_reduce_rural_banditry_and_unrest_available_tt
+				set_variable = { LEP_rural_banditry_suppress_remove = 0 }
+			}
+			hidden_effect = { LEP_decrease_rural_banditry_unrest_level = yes }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_temp_suppress_rural_banditry"
+			clear_variable = LEP_rural_banditry_suppress_remove
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_crack_down_rural_bandits }
+						check_variable = { lep_rural_unrest_level > 1 }
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = { LEP_rural_banditry_random_delay = random }
+					subtract_from_temp_variable = { LEP_rural_banditry_random_delay = -0.5 }
+					multiply_temp_variable = { LEP_rural_banditry_random_delay = 15 }
+					add_to_variable = { lep_suppress_rural_banditry_mission_timeout = LEP_rural_banditry_random_delay }
+					activate_mission = LEP_temp_suppress_rural_banditry
+				}
+			}
+		}
+	}
+
+	LEP_decision_lower_bandit_unrest = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no }
+
+		visible = {
+			has_idea = LEP_rural_banditry
+		}
+
+		cost = 30
+		days_remove = 40
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_decision_lower_bandit_unrest"
+			if = {
+				limit = {
+					check_variable = { lep_rural_unrest_level < 1 }
+				}
+				custom_effect_tooltip = lep_remove_rural_banditry_and_unrest_tt
+				remove_ideas = LEP_rural_banditry
+				hidden_effect = {
+					if = {
+						limit = {
+							has_country_flag = LEP_dem_gov
+						}
+						country_event = { id = league_mid.57 days = 1 }
+					}
+				    else = {
+						country_event = { id = league_events.58 days = 1 }
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = lep_decrease_rural_banditry_and_unrest_tt
+				LEP_decrease_rural_banditry_unrest_level = yes
+			}
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_governor_replace_decisions = {
+	LEP_send_shangguan_back_to_zhejiang_decision = {
+		icon = decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			NOT = { has_character = LEP_chen_yi }
+			has_character = LEP_shangguan_yunxiang
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+
+		ai_will_do = { factor = 25 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_send_shangguan_back_to_zhejiang_decision"
+			add_stability = 0.02
+			add_war_support = 0.02
+			set_country_flag = LEP_zhejiang_gov_done
+		}
+		fixed_random_seed = no
+	}
+	LEP_send_chen_yi_back_to_zhejiang_decision = {
+		icon = decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			NOT = { has_character = LEP_shangguan_yunxiang }
+			has_character = LEP_chen_yi
+		}
+
+		fire_only_once = yes
+		cost = 25
+		days_remove = 15
+
+		ai_will_do = { factor = 25 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_send_chen_yi_back_to_zhejiang_decision"
+			add_stability = 0.02
+			add_war_support = 0.02
+			set_country_flag = LEP_zhejiang_gov_done
+		}
+		fixed_random_seed = no
+	}
+	LEP_new_governor_zhejiang_decision = {
+		icon = decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			NOT = { has_character = LEP_chen_yi }
+			NOT = { has_character = LEP_shangguan_yunxiang }
+		}
+
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = { factor = 25 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_new_governor_zhejiang_decision"
+			country_event = league_events.114
+		}
+		fixed_random_seed = no
+	}
+	LEP_new_governor_fujian_decision = {
+		icon = decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			has_country_flag = LEP_zhejiang_gov_done
+		}
+
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = { factor = 25 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_new_governor_fujian_decision"
+			country_event = league_events.115
+		}
+		fixed_random_seed = no
+	}
+	LEP_new_governor_jiangxi_decision = {
+		icon = decision_generic_political_discourse
+
+		allowed = { always = no }
+
+		visible = {
+			has_country_flag = LEP_zhejiang_gov_done
+		}
+
+		fire_only_once = yes
+		cost = 25
+
+		ai_will_do = { factor = 25 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_new_governor_jiangxi_decision"
+			if = {
+				limit = { has_character = LEP_deng_ruzhuo }
+				country_event = league_events.117
+			}
+			else = {
+				country_event = league_events.116
+			}
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_collapse_war_decisions = {
+	LEP_emergency_troop_training_decision = {
+		icon = eng_blackshirt_march
+
+		allowed = { always = no }
+
+		custom_cost_text = CP_25
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+
+		days_remove = 15
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_emergency_troop_training_decision"
+			hidden_effect = { add_command_power = -25 }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_emergency_troop_training_decision"
+			613 = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_units
+						COUNT = 2
+						TYPE = "Bubing Zhen"
+					}
+					create_unit = {
+						division = "division_template = \"Bubing Zhen\" start_experience_factor = 0.4"
+						owner = ROOT
+						count = 2
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_emergency_evaluate_doctrines_decision = {
+		icon = hol_draw_up_staff_plans
+
+		allowed = { always = no }
+
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+		custom_cost_text = CP_25
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_emergency_evaluate_doctrines_decision"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			add_doctrine_cost_reduction = {
+				name = LEP_emergency_evaluate_doctrines_decision
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_seize_the_heartland_decision = {
+		icon = oppression
+
+		allowed = { always = no }
+
+		custom_cost_trigger = {
+			NOT = { command_power < 25 }
+		}
+		custom_cost_text = CP_25
+		fire_only_once = yes
+
+		ai_will_do = { factor = 1000 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_seize_the_heartland_decision"
+			hidden_effect = {
+				add_command_power = -25
+			}
+			add_timed_idea = {
+				idea = LEP_seize_the_heartland_idea
+				days = 50
+			}
+		}
+		fixed_random_seed = no
+	}
+	LEP_relocate_important_facilities_decision = {
+		icon = GFX_decision_fortress
+
+		allowed = { always = no }
+
+		visible = {
+			controls_state = 613
+		}
+
+		custom_cost_text = CP_25
+		custom_cost_trigger = {
+			OR = {
+				is_ai = yes
+				NOT = { command_power < 25 }
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = { factor = 50 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_relocate_important_facilities_decision"
+			hidden_effect = {
+				if = {
+					limit = { is_ai = no }
+					add_command_power = -25
+				}
+			}
+			set_global_flag = LEP_wuxi_vp_increased
+			add_victory_points = { province = 10076 value = 5 }
+		}
+		fixed_random_seed = no
+	}
+}
+
+LEP_AOG_decisions = {
+	LEP_AOG_factories_civ = {
+		icon = GFX_decision_generic_construction
+
+		allowed = { always = no }
+
+		cost = 35
+		days_remove = 180
+		days_re_enable = 100
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				set_temp_variable = { LEP_influence_decrease_desire = party_popularity@market_liberal }
+				multiply_temp_variable = { LEP_influence_decrease_desire = -25 }
+				add = LEP_influence_decrease_desire
+			}
+		}
+
+		modifier = {
+			market_liberal_drift = 0.01
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_AOG_factories_civ"
+			add_offsite_building = { type = industrial_complex level = 3 }
+			LEP_modify_tsingtau_spirit = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_AOG_factories_civ"
+			add_offsite_building = { type = industrial_complex level = -3 }
+			LEP_modify_tsingtau_spirit = yes
+		}
+		fixed_random_seed = no
+	}
+	LEP_AOG_factories_mil = {
+		icon = GFX_decision_generic_industry
+
+		allowed = { always = no }
+
+		cost = 35
+		days_remove = 180
+		days_re_enable = 100
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				set_temp_variable = { LEP_influence_decrease_desire = party_popularity@market_liberal }
+				multiply_temp_variable = { LEP_influence_decrease_desire = -25 }
+				add = LEP_influence_decrease_desire
+			}
+		}
+
+		modifier = {
+			market_liberal_drift = 0.01
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_AOG_factories_mil"
+			add_offsite_building = { type = arms_factory level = 3 }
+			LEP_modify_tsingtau_spirit = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_AOG_factories_mil"
+			add_offsite_building = { type = arms_factory level = -3 }
+			LEP_modify_tsingtau_spirit = yes
+		}
+		fixed_random_seed = no
+	}
+	LEP_AOG_training = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = { always = no }
+
+		cost = 35
+		days_remove = 120
+		days_re_enable = 60
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				set_temp_variable = { LEP_influence_decrease_desire = party_popularity@market_liberal }
+				multiply_temp_variable = { LEP_influence_decrease_desire = -50 }
+				add = LEP_influence_decrease_desire
+			}
+		}
+
+		modifier = {
+			command_power_gain_mult = 0.25
+			experience_gain_army_factor = 0.1
+			market_liberal_drift = 0.01
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_AOG_training"
+			LEP_modify_tsingtau_spirit = yes
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_AOG_training"
+			LEP_modify_tsingtau_spirit = yes
+		}
+		fixed_random_seed = no
+	}
+	LEP_AOG_decrease_influence = {
+		icon = GFX_decision_oppression
+
+		allowed = { always = no }
+
+		cost = 100
+		days_remove = 60
+		days_re_enable = 120
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				set_temp_variable = { LEP_influence_decrease_desire = party_popularity@market_liberal }
+				multiply_temp_variable = { LEP_influence_decrease_desire = 100 }
+				add = LEP_influence_decrease_desire
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_idea = LEP_Tsingtau_Collaboration0
+					has_idea = LEP_Tsingtau_Collaboration1
+					has_idea = LEP_Tsingtau_Collaboration2
+					has_idea = LEP_Tsingtau_Collaboration3
+					has_idea = LEP_Tsingtau_Collaboration4
+					has_idea = LEP_Tsingtau_Collaboration5
+					has_idea = LEP_Tsingtau_Collaboration6
+				}
+			}
+		}
+
+		modifier = {
+			market_liberal_drift = -0.1
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_AOG_decrease_influence"
+			LEP_modify_tsingtau_spirit = yes
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_AOG_decrease_influence"
+			LEP_modify_tsingtau_spirit = yes
+		}
+		fixed_random_seed = no
+	}
+}
+
+#zigai
+
+LEP_balance_of_power_category = {
+	LEP_new_loans = {
+		icon = GFX_decision_gre_investment_decisions
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_jiangnan_loans
+		}
+        cost = 5
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			industrial_capacity_factory = 0.15
+			consumer_goods_factor = -0.1   
+		}
+
+        complete_effect = {  
+			add_political_power = 50
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = -0.05
+		    }
+		}
+	}
+
+	LEP_Intellectuals_symposium = {
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_support_federalist_movement
+		}
+        cost = 5
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			social_liberal_drift = 0.02
+			market_liberal_drift = 0.02
+			social_conservative_drift = 0.02
+		}
+
+        complete_effect = {
+			add_political_power = 20
+			add_war_support = 0.05
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = -0.05
+		    }
+		}
+	}
+	LEP_Purchase_military_supplies = {
+		icon = GFX_decision_support_equipment
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_raise_chamber_funds
+		}
+        cost = 5
+        days_remove = 20
+		days_re_enable = 10
+
+        complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = LEC
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 750
+				producer = LEC
+			}
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = -0.05
+		    }
+		}
+	}
+
+	LEP_Counting_the_military_command_system = {
+		icon = GFX_decision_generic_army_support
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_qis_central_command
+		}
+        cost = 5
+        days_remove = 15
+		days_re_enable = 10
+		modifier = {
+			attrition_factor  = -0.15      
+		}
+
+        complete_effect = {
+			add_stability = 0.05
+			army_experience = 15
+			add_command_power = 10
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = 0.05
+		    }
+		}
+	}
+
+	LEP_Issue_an_order_of_command = {
+		icon = GFX_decision_generic_reorganize_irregulars
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_enforce_officer_loyalty
+		}
+        cost = 5
+        days_remove = 30
+		days_re_enable = 10
+		
+		modifier = {
+			army_attack_factor = 0.1
+			army_defence_factor = 0.1    
+		}
+
+        complete_effect = {
+			army_experience = 5
+			add_command_power = 5
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = 0.05
+		    }
+		}
+	}
+
+}
+
+
+
+LEP_country_development = {
+	LEP_decision_reduce_expenditure = {
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			stability_factor = -0.1
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_issue_bonds = {
+		icon = GFX_decision_ger_mefo_bills
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_xihu_expo = {
+		icon = GFX_decision_generic_consumer_goods
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_seek_overseas_chinese_capital = {
+		icon = GFX_decision_card
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_bank_consortium = {
+		icon = GFX_decision_gre_investment_decisions
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	#矿业
+	LEP_jianghuai_coal_power = {
+		icon = GFX_decision_coal
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		cost = 50
+        days_remove = 40
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = coal
+				amount = 25
+				state = 1050
+			}
+		}
+	}
+
+	LEP_gannan_tungsten_development = {
+		icon = GFX_decision_tungsten
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = tungsten
+				amount = 20
+				state = 600
+			}
+		}
+	}
+
+	LEP_maanshan_iron_mine = {
+		icon = GFX_decision_steel
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 28
+				state = 606
+			}
+		}
+	}
+
+	LEP_revitalize_jingdezhen_porcelain_industry = {
+		icon = GFX_decision_cement_mixer
+        allowed = {
+            tag = LEP
+        }
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			1044 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type =  industrial_complex
+				    level = 2
+				    instant_build = yes
+			    }
+			}
+		}
+	}
+
+	LEP_decision_shangli_reservoir = {
+		icon = GFX_decision_electrify
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			802 = { increase_state_category_by_two_levels = yes }
+			802 = {
+			    if = {
+				    limit = { dam > 0 }
+				    increase_state_category_by_one_level = yes
+			    }
+			    else = {
+				    add_extra_state_shared_building_slots = 1
+				    custom_effect_tooltip = tooltip_white_line
+				    add_building_construction = {
+					    type = dam
+					    level = 1
+					    province = 7071
+					    instant_build = yes
+				    }
+			    }
+			    prioritize_state = yes
+		    }
+			if = {
+			    limit = { 802 = { dam < 1 } } #separate due to tooltip indentation
+			    custom_effect_tooltip = {
+				    localization_key = building_state_modifier|dam
+				    INDENT = "    "
+			    }
+			    custom_effect_tooltip = tooltip_white_line
+		    }
+			add_one_random_civilian_factory = yes
+		}
+	}
+
+	LEP_decision_baimao_gate = {
+		icon = GFX_decision_hol_drain_water_lines
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			613 = { increase_state_category_by_two_levels = yes }
+			613 = {
+			    if = {
+				    limit = { dam > 0 }
+				    increase_state_category_by_one_level = yes
+			    }
+			    else = {
+				    add_extra_state_shared_building_slots = 1
+				    custom_effect_tooltip = tooltip_white_line
+				    add_building_construction = {
+					    type = dam
+					    level = 1
+					    province = 7120
+					    instant_build = yes
+				    }
+			    }
+			    prioritize_state = yes
+		    }
+			if = {
+			    limit = { 613 = { dam < 1 } } #separate due to tooltip indentation
+			    custom_effect_tooltip = {
+				    localization_key = building_state_modifier|dam
+				    INDENT = "    "
+			    }
+			    custom_effect_tooltip = tooltip_white_line
+		    }
+			add_one_random_civilian_factory = yes
+		}
+	}
+
+	LEP_decision_jiangzhe_seawall = {
+		icon = GFX_decision_generic_coastal_fortification
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			598 = { increase_state_category_by_two_levels = yes }
+			613 = { increase_state_category_by_two_levels = yes }
+			1047 = { increase_state_category_by_two_levels = yes }
+		}
+
+	}
+
+	LEP_decision_westlake_dredging = {
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		
+        cost = 30
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			596 = { increase_state_category_by_two_levels = yes }
+		}
+
+	}
+}
+
+
+LEP_foreign_policy_decisions = {
+	LEP_join_the_reichspakt_decision = {
+		icon = GFX_decision_trumpet
+		priority = 75
+
+		allowed = { always = no }
+
+		allowed = {
+			tag  = FNG
+		}
+
+		available = {
+			has_war_support > 0.75
+			GER = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		visible = {
+			is_in_faction = no
+		}
+		
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete china_join_the_reichspakt_decision"
+			GER = { country_event = china_events.404 } #China Seeks to Join the reichspakt
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_join_the_moscow_accord_decision = {
+		icon = GFX_decision_trumpet
+		priority = 150
+
+		allowed = { always = no }
+
+		allowed = {
+			tag  = LEP
+		}
+
+		available = {
+			has_war_support > 0.75
+			RUS = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		visible = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete china_join_the_moscow_accord_decision"
+			RUS = { country_event = china_events.407 } #China Seeks to Join the MA
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_join_the_entente_decision = {
+		icon = GFX_decision_trumpet
+		priority = 150
+
+		allowed = { always = no }
+
+		allowed = {
+			tag  = LEP
+		}
+
+		available = {
+			has_war_support > 0.75
+			ENT = {
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+		visible = {
+			is_in_faction = no
+		}
+		
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete china_join_the_moscow_accord_decision"
+			ENT = { country_event = china_events.428 } #China Seeks to Join the entente
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_found_our_faction = {
+		icon = GFX_decision_chinese_flag
+		priority = 150
+
+		allowed = { always = no }
+
+		allowed = {
+			tag  = LEP
+		}
+
+		available = {
+			has_war_support > 0.75
+		}
+		visible = {
+			is_in_faction = no
+			has_completed_focus = LEP_Return_to_the_World_Stage
+		}
+		
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_found_our_faction"
+			create_faction_from_template = { template = faction_template_generic name = asian_union }
+			activate_targeted_decision = { target = KOR decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = BRM decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = INC decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = VIN decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = LAO decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = CAM decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = SIA decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = MAL decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = SAR decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = PHI decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = INS decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = NEP decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = BHU decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = PRF decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = CEY decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = AFG decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = PER decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = KAZ decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = BUK decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = TRK decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = KHI decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = HAW decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = AST decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = NZL decision = china_invite_countries_to_faction }
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_invite_to_economic_council = {
+		icon = GFX_decision_global_trade
+
+		available = {
+			if = {
+				has_completed_focus = LEP_multilateral_trade_pact
+			}
+			else = {
+				is_faction_leader = yes
+			}
+			num_of_owned_factories > 100
+			FROM = { both_socialist_or_both_not_socialist = yes }
+		}
+
+		visible = {
+			has_idea = LEP_ECT_idea_LEP
+			FROM = {
+				is_in_economic_sphere = no
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = INT
+					is_in_faction_with = ENT
+					is_in_faction_with = JAP
+					is_in_faction_with = GER
+				}
+			}
+		}
+
+		
+		target_array = subjects
+		target_array = faction_members
+
+		target_root_trigger = {
+			has_idea = LEP_ECT_idea_LEP
+		}
+		target_trigger = {
+			has_idea = LEP_ECT_idea_LEP
+			FROM = {
+				is_in_economic_sphere = no
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+					is_in_faction_with = INT
+					is_in_faction_with = ENT
+					is_in_faction_with = JAP
+					is_in_faction_with = GER
+					has_country_flag = RUS_refused_moscow_treaty
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
+			FROM = { country_event = league_generic.4 }
+		}
+		fixed_random_seed = no
+	}
+
+}
+
+LEP_stride_towards_unification = {
+	LEP_negotiate_with_the_UPC = {
+		allowed = { tag = LEP }
+		
+		targets = { UPC }
+		
+		visible = {
+			has_country_flag = LEP_dem_gov
+		}
+		
+		target_root_trigger = {
+
+
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
+				has_country_leader = {
+					character = GXC_chen_jiongming
+					ruling_only = yes
+				}
+			}
+		}
+	
+	    available = {
+		    ROOT = { has_war = no }
+	    }
+	    fire_only_once = yes
+	    icon = GFX_decision_peace_dove
+
+	    cost = 100
+
+	    cancel_if_not_visible = yes
+        complete_effect = {
+		    log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_negotiate_with_the_UPC"
+		    FROM = { country_event = { id = league_mid.16 days = 3 } } #A Republican Alliance?
+	    }
+	    fixed_random_seed = no
+	}
+
+	
+
+    LEP_subjugate_federalists_decision = { 
+		allowed = { always = no }
+
+		visible = {
+			has_country_flag = LEP_dem_gov
+			
+		}
+		target_trigger = {
+			FROM = {
+				has_country_flag = LEP_UPC_NAP_flag
+			}
+		}
+		available = {
+			ROOT = {
+				china_enable_alliances_decisions = yes
+			}
+		}
+		fire_only_once = yes
+		icon = GFX_decision_hand_out
+
+		cost = 100
+
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			base = 100
+		}
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete CHI_subjugate_federalists_decision"
+			FROM = { country_event = { id = league_mid.16 days = 3 } } #A Republican Alliance?
+		}
+		fixed_random_seed = no
+    }
+}
+
+LEP_republican_administration = {
+	LEP_ZZH_decision = {
+		icon = GFX_social_liberal_texticon
+		priority = 500
+		available = { always = no }
+	}
+
+	LEP_hold_provincial_council = {
+		icon = GFX_decision_SOV_place_hq
+		priority = 499
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_autonomy_outline
+		}
+		visible = {
+			has_completed_focus = LEP_autonomy_outline
+		}
+		modifier = {
+			social_democrat_drft = 0.01
+			social_liberal_drift = 0.03
+			market_liberal_drift = 0.01
+			social_conservative_drift = 0.01
+		}
+		
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+	}
+	LEP_develop_local_education = {
+		icon = GFX_decision_generic_research
+		priority = 498
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_southeast_autonomy_academy
+		}
+		visible = {
+			has_completed_focus = LEP_southeast_autonomy_academy
+		}
+		modifier = {
+			research_speed_factor = 0.05
+		}
+
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		complete_effect = {
+			LEP_strengthen_ZZH_small = yes
+		}
+	}
+
+	LEP_grassroots_autonomy_propaganda = {
+		icon = GFX_decision_generic_speech
+		priority = 497
+		cost = 50
+		days_remove = 5
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+		}
+	}
+	LEP_rectify_party_discipline = {
+		icon = GFX_decision_SWI_dismiss_council
+		priority = 496
+		cost = 50
+		days_remove = 5
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+		}
+	}
+	LEP_public_opinion_offensive = {
+		icon = GFX_decision_hol_radio_oranje
+		priority = 495
+		custom_cost_trigger = {
+			has_stability > 0.10
+		}
+		custom_cost_text = LEP_decision_cost_stb_3
+		cost = 50
+		days_remove = 15
+		days_re_enable = 10
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			social_liberal_drift = 0.01
+		}
+
+		complete_effect = {
+			add_stability = -0.03
+		}
+
+		
+	}
+	LEP_release_political_prisoners = {
+		icon = GFX_decision_freedom
+		priority = 494
+		days_remove = 5
+		days_re_enable = 15
+		custom_cost_trigger = {
+			has_stability > 0.10
+		}
+		custom_cost_text = LEP_decision_cost_stb_3
+		cost = 50
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		complete_effect = {
+			add_stability = -0.03
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.01
+			}
+		}
+	}
+
+	LEP_ZXX_decision = {
+		icon = GFX_market_liberal_texticon
+		priority = 450
+		available = { always = no }
+	}
+	LEP_salt_customs_special_supervision = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 449
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_administrative_system
+		}
+		visible = {
+			has_completed_focus = LEP_administrative_system
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+
+	LEP_crack_down_on_local_corruption = {
+		icon = GFX_decision_generic_arrest
+		priority = 448
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_board_of_audit
+		}
+		visible = {
+			has_completed_focus = LEP_board_of_audit
+		}
+
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_manpower = -20
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+
+	LEP_rectify_warzone_order = {
+		icon = GFX_decision_generic_protection
+		priority = 447
+		cost = 50
+		days_remove = 20
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			command_power_gain = 0.75
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+	LEP_dispatch_inspection_commissioners = {
+		icon = GFX_decision_SWI_expand_covert_operations
+		priority = 446
+		cost = 50
+		days_remove = 20
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			political_power_factor = 0.05
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+	LEP_national_defense_mobilization = {
+		icon = GFX_decision_generic_military
+		priority = 445
+		custom_cost_trigger = {
+			has_stability > 0.10
+		}
+		custom_cost_text = LEP_decision_cost_stb_3
+		cost = 50
+		days_remove = 50
+		days_re_enable = 5
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			mobilization_laws_cost_factor = -0.33
+			mobilization_speed = 0.25
+			dig_in_speed_factor = 0.20
+
+		}
+
+		complete_effect = {
+			add_stability = -0.03
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+
+	LEP_JNSB_decision = {
+		icon = GFX_social_conservative_texticon
+		priority = 400
+		available = { always = no }
+	}
+	LEP_local_industry_protection = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		priority = 399
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		visible = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		modifier = {
+			production_factory_start_efficiency_factor = 0.1
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+	}
+	LEP_relax_chamber_commerce_autonomy = {
+		icon = GFX_decision_give_cash
+		priority = 398
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_Commercial_Freedom
+		}
+		visible = {
+			has_completed_focus = LEP_Commercial_Freedom
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+	}
+
+
+	LEP_engage_business_networks = {
+		icon = GFX_decision_generic_political_discourse
+		priority = 397
+		cost = 50
+		days_remove = 15
+		days_re_enable = 5
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			trade_laws_cost_factor = -0.33
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+	}
+	LEP_coordinate_material_supply = {
+		icon = GFX_decision_generic_consumer_goods
+		priority = 396
+		cost = 50
+		days_remove = 20
+		days_re_enable = 5
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+
+		complete_effect = {
+			add_stability = 0.03
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+	}
+	LEP_call_for_tax_relief = {
+		icon = GFX_decision_cash_flow
+		priority = 395
+		custom_cost_trigger = {
+			has_stability > 0.10
+		}
+		custom_cost_text = LEP_decision_cost_stb_3
+		cost = 50
+		days_remove = 5
+		days_re_enable = 15
+
+		visible = {
+			has_completed_focus = LEP_new_republic_old_ideals
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+	}
+}
+
+LEP_liberation_of_asia_category = {
+	LEP_liberation_war_decision = {
+		icon = GFX_decision_chinese_flag
+		allowed = { always = no }
+		available = {
+			can_declare_war_on = FROM
+			is_subject = no
+		}
+		visible = {
+			hidden_trigger = {
+				#So its not as annoying to see on cancel if not visible
+				FROM = {
+					any_owned_state = { is_claim_or_core_of_ROOT = yes }
+					any_owned_state = {
+						OR = {
+							is_on_continent = asia
+							is_on_continent = australia
+							is_on_continent = india
+							is_on_continent = middle_east #99% Afghanistan counts as ME
+						}
+					}
+				}
+			}
+		}
+
+		cost = 35
+		days_remove = 30
+		fire_only_once = yes
+		war_with_target_on_remove = yes
+		cancel_if_not_visible = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				country_is_in_dangerous_war = yes
+			}
+			modifier = {
+				factor = 0
+				FROM = { default_attack_AI_trigger_consider_naval_strength = yes }
+			}
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel KMT_liberation_war_decision"
+			clear_decision_attack_AI = yes
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete KMT_liberation_war_decision"
+			FROM = { incoming_war_notification_effect = yes }
+			setup_decision_attack_AI = yes
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove KMT_liberation_war_decision"
+			clear_decision_attack_AI = yes
+			create_wargoal = {
+				target = FROM
+				type = topple_government
+			}
+		}
+		fixed_random_seed = no
+	}
+}

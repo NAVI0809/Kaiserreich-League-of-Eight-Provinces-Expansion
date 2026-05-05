@@ -1,0 +1,16 @@
+on_actions = {    
+    on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { tag = LEP }
+				if = {
+					limit = {
+						FROM.FROM = { state = 608 } #Beijing
+						has_country_flag = LEP_dem_gov
+					}
+					country_event = { id = league_mid.28 days = 3 } 
+				}
+			}
+		}
+	}
+}
