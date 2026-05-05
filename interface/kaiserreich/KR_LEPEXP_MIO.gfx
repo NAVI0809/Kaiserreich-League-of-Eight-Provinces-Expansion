@@ -1,0 +1,12 @@
+spriteTypes = {
+	#MIOs
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_hongqiao"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_hongqiao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_jinling"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_jinling.png"
+	}
+}
+

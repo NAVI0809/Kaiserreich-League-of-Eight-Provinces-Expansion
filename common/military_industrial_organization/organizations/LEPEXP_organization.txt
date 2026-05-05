@@ -1,0 +1,180 @@
+########################################################################
+#NOTE: Chinese Domestic MIOs have been moved to CHINA_organization.txt #
+#     Foreign MIOs will remain tag-side content for the near future    #
+########################################################################
+
+###################
+### Armour MIOs ###
+###################
+
+
+##################
+### Naval MIOs ###
+##################
+
+#####################
+### Airplane MIOs ###
+#####################
+LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
+    name = mio_hongqiao_organisation
+	icon = GFX_idea_LEP_MIO_hongqiao
+	allowed = {
+		OR = {
+			is_chinese_tag = yes
+		}
+	}
+	available = {
+		OR = {
+			FROM = { owns_state = 743 } #上海
+			743 = { owner = { is_subject_of = FROM } }
+		}
+	}
+	equipment_type = {
+		small_plane_airframe
+		medium_plane_airframe
+		large_plane_airframe
+		cv_small_plane_airframe
+		helicopter_equipment
+		mothership_equipment
+		strat_bomber_intercontinental_equipment
+	}
+
+	research_categories = {
+		mio_cat_all_light_aircraft_and_modules
+		mio_cat_all_medium_aircraft_and_modules
+		mio_cat_all_heavy_aircraft_and_modules
+		plane_modules_tech
+	}
+
+	ai_will_do = { base = 100 }
+
+	initial_trait = {
+		name = LEP_hongqiao_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_size_up_requirement = -0.25
+		}
+	}
+}
+
+
+#####################
+### Materiel MIOs ###
+#####################
+LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
+    name = mio_jinling_organisation
+	icon = GFX_idea_LEP_MIO_jinling
+	allowed = {
+		OR = {
+			is_chinese_tag = yes
+		}
+	}
+	available = {
+		OR = {
+			FROM = { owns_state = 613 } #金陵
+			613 = { owner = { is_subject_of = FROM } }
+		}
+	}
+	equipment_type = {
+		infantry_equipment
+		rocket_artillery_equipment
+		artillery_equipment
+	}
+
+	research_categories = {
+		infantry_weapons
+		support_tech
+		battlefield_support_tree
+		cat_battlefield_support
+		night_vision
+		cat_special_forces_generic
+		mio_cat_all_artillery_equipment
+	}
+
+	ai_will_do = { base = 100 }
+
+	initial_trait = {
+		name = LEP_jinling_mio_desc
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.03
+		}
+	}
+
+	trait = { #着重步兵装备生产
+		token = lepexp_jinling_upgrade_1
+		name = lepexp_jinling_upgrade_1
+		icon = GFX_generic_mio_department_icon_infantry_technology
+		special_trait_background = yes
+
+		visible = { FROM = { NOT = { has_country_flag = lepexp_jinling_weapons_chosen } } }
+
+		position = { x = 2 y = 1 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		production_bonus = {
+			production_capacity_factor = 0.03
+			production_efficiency_gain_factor = 0.10
+		}
+
+		on_complete = {
+			custom_effect_tooltip = lepexp_jinling_infantry_1_traits_tt
+			FROM = { set_country_flag = lepexp_jinling_infantry }
+			FROM = { set_country_flag = lepexp_jinling_weapons_chosen }
+		}
+	}
+
+	trait = { #着重火炮生产
+		token = lepexp_jinling_upgrade_2
+		name = lepexp_jinling_upgrade_2
+		icon = GFX_generic_mio_department_icon_artillery_technology
+		special_trait_background = yes
+
+		visible = { FROM = { NOT = { has_country_flag = syb_kr_bonus_chosen } } }
+
+		position = { x = 6 y = 1 }
+
+		limit_to_equipment_type = { 
+			artillery_equipment 
+			rocket_artillery_equipment 
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.03
+			production_efficiency_gain_factor = 0.10
+		}
+
+		on_complete = {	
+			custom_effect_tooltip = syb_kr_pp_on_traits_tt
+			FROM = { set_country_flag = lepexp_jinling_artillery }
+			FROM = { set_country_flag = syb_kr_bonus_chosen }
+		}
+	}
+
+	trait = {
+		token = lepexp_jinling_inf_1
+		name = lepexp_jinling_inf_1
+		icon = GFX_generic_mio_trait_icon_defense
+
+		visible = { FROM = { NOT = { has_country_flag = syb_kr_stats_for_xp } } }
+		available = { FROM = { has_country_flag = syb_kr_bonus_chosen } }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		position = { x = 0 y = 0 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+		
+
+		on_complete = {
+		}
+	}
+}
