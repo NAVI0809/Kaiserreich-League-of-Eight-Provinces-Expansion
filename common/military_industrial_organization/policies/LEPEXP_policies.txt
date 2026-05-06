@@ -11,6 +11,7 @@ LEPEXP_mio_field_repair_tool_kit = { #战地维护套件
 	equipment_bonus = {
 		same_as_mio = {
 			reliability = 0.15
+			defense = 0.1
 		}
 	}
 	ai_will_do = { base = 10 }
