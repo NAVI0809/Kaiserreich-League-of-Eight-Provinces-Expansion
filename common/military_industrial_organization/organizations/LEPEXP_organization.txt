@@ -80,6 +80,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		infantry_equipment
 		rocket_artillery_equipment
 		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
 	}
 
 	research_categories = {
@@ -136,13 +138,15 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		icon = GFX_generic_mio_department_icon_artillery_technology
 		special_trait_background = yes
 
-		visible = { FROM = { NOT = { has_country_flag = syb_kr_bonus_chosen } } }
+		visible = { FROM = { NOT = { has_country_flag = lepexp_jinling_weapons_chosen } } }
 
-		position = { x = 6 y = 1 }
+		position = { x = 8 y = 1 }
 
 		limit_to_equipment_type = { 
 			artillery_equipment 
 			rocket_artillery_equipment 
+			anti_tank_equipment
+		    anti_air_equipment
 		}
 
 		production_bonus = {
@@ -151,30 +155,133 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		}
 
 		on_complete = {	
-			custom_effect_tooltip = syb_kr_pp_on_traits_tt
+			custom_effect_tooltip = lepexp_jinling_artillery_1_traits_tt
 			FROM = { set_country_flag = lepexp_jinling_artillery }
-			FROM = { set_country_flag = syb_kr_bonus_chosen }
+			FROM = { set_country_flag = lepexp_jinling_weapons_chosen }
 		}
 	}
 
-	trait = {
+	trait = {#购买毛瑟公司老旧设备
 		token = lepexp_jinling_inf_1
 		name = lepexp_jinling_inf_1
-		icon = GFX_generic_mio_trait_icon_defense
+		icon = GFX_generic_mio_department_icon_facilities
 
-		visible = { FROM = { NOT = { has_country_flag = syb_kr_stats_for_xp } } }
-		available = { FROM = { has_country_flag = syb_kr_bonus_chosen } }
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		position = { x = 2 y = 0 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.03
+			production_efficiency_gain_factor = 0.03
+			production_resource_need_factor = 0.05
+			production_capacity_factor = 0.03
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.10
+			add_political_power = -50
+			custom_effect_tooltip = tooltip_white_line
+			GER = { 
+				add_political_power = 50 
+				mio:GER_mauser_organisation = {
+			        add_mio_funds = 100
+		        }
+			}
+		}
+	}
+	trait = {#与陆军修械所合作
+		token = lepexp_jinling_inf_2
+		name = lepexp_jinling_inf_2
+		icon = GFX_generic_mio_department_icon_infantry_production
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
 
 		limit_to_equipment_type = { infantry_equipment }
 
-		position = { x = 0 y = 0 }
+		position = { x = 5 y = 0 }
 
-		equipment_bonus = {
-			build_cost_ic = -0.05
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = 0.05
 		}
-		
 
 		on_complete = {
+			add_mio_research_bonus = 0.10
+			add_political_power = -50
+		}
+	}
+
+	trait = {#步枪榴弹发射器
+		token = lepexp_jinling_inf_3
+		name = lepexp_jinling_inf_3
+		icon = GFX_generic_mio_department_icon_tank_general_spg
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		position = { x = 8 y = 0 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.10
+			add_political_power = -50
+		}
+	}
+
+	trait = {#简化生产工艺
+		token = lepexp_jinling_inf_4
+		name = lepexp_jinling_inf_4
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		limit_to_equipment_type = { infantry_equipment }
+		all_parents = { lepexp_jinling_inf_1 }
+		mutually_exclusive = { lepexp_jinling_inf_5 } 
+
+		position = { x = 1 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.10
+			add_political_power = -50
+		}
+	}
+
+	trait = {#购买新机床
+		token = lepexp_jinling_inf_5
+		name = lepexp_jinling_inf_5
+		icon = GFX_KR_generic_mio_trait_icon_funds
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		limit_to_equipment_type = { infantry_equipment }
+		all_parents = { lepexp_jinling_inf_1 }
+
+		position = { x = 3 y = 2 }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.10
+			add_political_power = -50
 		}
 	}
 }

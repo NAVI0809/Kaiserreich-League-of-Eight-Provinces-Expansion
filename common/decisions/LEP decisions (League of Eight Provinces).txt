@@ -4,6 +4,53 @@
 # By Erag, Flamefang, WordZero
 ###########################
 
+
+#DEBUG
+LEPEXP_DEBUG_CAT = {
+	LEPEXP_MIO_debug_hongqiao = {
+		icon = generic_industry
+		fire_only_once = no
+		cost = 0
+		available = {
+			is_ai = no
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			mio:LEP_hongqiao_organisation = {
+				add_mio_size = 200
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	LEPEXP_MIO_debug_jinling = {
+		icon = generic_industry
+		fire_only_once = no
+		cost = 0
+		available = {
+			is_ai = no
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			mio:LEP_jinling_organisation = {
+				add_mio_size = 200
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
 LEP_governor_contacts_missions = {
 	LEP_jiangxi_governor = {
 		icon = generic_flags
