@@ -169,7 +169,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
 		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
 
-		position = { x = 2 y = 0 }
+		position = { x = 1 y = 0 }
 
 		production_bonus = {
 			production_efficiency_cap_factor = 0.03
@@ -190,17 +190,25 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 			}
 		}
 	}
+
 	trait = {#与陆军修械所合作
 		token = lepexp_jinling_inf_2
 		name = lepexp_jinling_inf_2
 		icon = GFX_generic_mio_department_icon_infantry_production
 
-		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
-		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+		visible = { 
+			FROM = { 
+				has_country_flag = lepexp_jinling_infantry 
+			} 
+		}
+		available = { 
+			FROM = { 
+				has_country_flag =  lepexp_jinling_weapons_chosen 
+				has_army_experience > 10
+			} 
+		}
 
-		limit_to_equipment_type = { infantry_equipment }
-
-		position = { x = 5 y = 0 }
+		position = { x = 4 y = 0 }
 
 		production_bonus = {
 			production_efficiency_cap_factor = 0.025
@@ -209,7 +217,21 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			add_mio_research_bonus = 0.10
-			add_political_power = -50
+			add_political_power = -50			
+			FROM = {				
+				613 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_equipment_to_stockpile = {
+			       type = infantry_equipment
+			       amount = 2500
+		        }
+			}		
 		}
 	}
 
@@ -223,7 +245,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		limit_to_equipment_type = { infantry_equipment }
 
-		position = { x = 8 y = 0 }
+		position = { x = 7 y = 0 }
 
 		production_bonus = {
 			production_efficiency_cap_factor = 0.025
@@ -245,19 +267,24 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
 
 		limit_to_equipment_type = { infantry_equipment }
+		
 		all_parents = { lepexp_jinling_inf_1 }
 		mutually_exclusive = { lepexp_jinling_inf_5 } 
 
-		position = { x = 1 y = 2 }
+		relative_position_id = lepexp_jinling_inf_1
 
-		production_bonus = {
-			production_efficiency_cap_factor = 0.025
-			production_resource_need_factor = 0.05
+		position = { x = -1 y = 2 }
+
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			reliability = -0.1
 		}
 
-		on_complete = {
-			add_mio_research_bonus = 0.10
-			add_political_power = -50
+		production_bonus = {
+			production_resource_need_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = -0.1
+			production_capacity_factor = 0.02
 		}
 	}
 
@@ -272,16 +299,105 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		limit_to_equipment_type = { infantry_equipment }
 		all_parents = { lepexp_jinling_inf_1 }
 
-		position = { x = 3 y = 2 }
+		position = { x = 1 y = 2 }
+		relative_position_id = lepexp_jinling_inf_1
+
+		equipment_bonus = {
+			soft_attack = 0.02
+			build_cost_ic = 0.1
+			reliability = 0.15
+			maximum_speed = 0.05
+		}
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.025
-			production_resource_need_factor = 0.05
+			production_efficiency_cap_factor = 0.1
+			production_efficiency_gain_factor = -0.03
+			production_resource_need_factor = 0.02
+			production_capacity_factor = 0.05
 		}
 
 		on_complete = {
 			add_mio_research_bonus = 0.10
 			add_political_power = -50
+		}
+	}
+
+	trait = {#重型枪管
+		token = lepexp_jinling_inf_6
+		name = lepexp_jinling_inf_6
+		icon = GFX_generic_mio_department_icon_infantry_offense
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_2
+		position = { x = -1 y = 1 }
+		all_parents = { lepexp_jinling_inf_2 }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.03
+			build_cost_ic = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.05		
+		}
+	}
+
+	trait = {#轻量化设计
+		token = lepexp_jinling_inf_7
+		name = lepexp_jinling_inf_7
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { 		
+			if = {
+				limit = {
+					FROM = {
+					    tag = LEP
+						has_completed_focus = LEP_primacy_of_the_engineering_corps
+				        has_country_flag = lepexp_jinling_weapons_chosen
+				    }
+				}
+			}
+		}
+
+		relative_position_id = lepexp_jinling_inf_2
+		position = { x = 1 y = 1 }
+		all_parents = { lepexp_jinling_inf_2 }
+
+		equipment_bonus = {
+			build_cost_ic = 0.02
+			maximum_speed = 0.15
+		}
+
+		#on_complete = {
+		#	
+		#}
+	}
+
+	trait = {#可拆卸弹匣
+		token = lepexp_jinling_inf_8
+		name = lepexp_jinling_inf_8
+		icon = GFX_generic_mio_department_icon_infantry_conversion
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_7
+		position = { x = -1 y = 1 }
+		any_parent = { lepexp_jinling_inf_6 lepexp_jinling_inf_7 }
+
+		equipment_bonus = {
+			defense = 0.075
+			soft_attack = 0.03
+			breakthrough = 0.075
+			build_cost_ic = 0.05
+		}
+
+		on_complete = {
+			add_mio_research_bonus = 0.02		
 		}
 	}
 }

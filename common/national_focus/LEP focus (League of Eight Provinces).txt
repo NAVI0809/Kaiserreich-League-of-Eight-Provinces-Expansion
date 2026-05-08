@@ -8349,6 +8349,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_expanded_engineer_corps = yes
 			custom_effect_tooltip = tooltip_white_line
+			set_technology = { tech_LEP_combat_engineer = 1 }
 			add_tech_bonus = {
 				name = LEP_primacy_of_the_engineering_corps
 				uses = 1
