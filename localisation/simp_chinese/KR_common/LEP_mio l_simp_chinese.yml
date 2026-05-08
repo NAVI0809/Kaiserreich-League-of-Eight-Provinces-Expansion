@@ -1,7 +1,14 @@
 ﻿l_simp_chinese:
+
+ tech_LEP_combat_engineer: "战斗工兵连"
+ LEP_combat_engineer: "战斗工兵连"
+
+ div_qingxing_unit: "轻型步兵协"
+ div_jingbei_unit: "警备协"
+
  LEPEXP_DEBUG_CAT: "MIO调试"
- LEPEXP_MIO_debug_hongqiao: "金陵兵工厂调试"
- LEPEXP_MIO_debug_jinling: "上海虹桥航空工厂调试"
+ LEPEXP_MIO_debug_hongqiao: "上海虹桥航空工厂调试"
+ LEPEXP_MIO_debug_jinling: "金陵兵工厂调试"
  mio_jinling_organisation: "金陵兵工厂"
  LEP_jinling_mio_desc: "$jinling_LEP_MIO$\n§L$jinling_desc$§!\n"
  jinling_LEP_MIO: "步兵装备与火炮工厂"
@@ -11,14 +18,19 @@
  LEPEXP_mio_field_repair_tool_kit_desc: "战地维护套件"
  lepexp_jinling_upgrade_1: "着重步兵装备生产"
  lepexp_jinling_infantry_1_traits_tt: "§O金陵兵工厂§!将重点制造步兵装备"
- lepexp_jinling_artillery_1_traits_tt: "§O金陵兵工厂§!将重点炮兵装备"
+ lepexp_jinling_artillery_1_traits_tt: "§O金陵兵工厂§!将重点制造火炮"
  lepexp_jinling_upgrade_2: "着重火炮生产"
+ lepexp_jinling_infantry: "§O金陵兵工厂§!重点制造步兵装备"
+ lepexp_jinling_artillery: "§O金陵兵工厂§!重点制造火炮"
+ lepexp_jinling_weapons_chosen: "已完成生产重点选择"
 
  lepexp_jinling_inf_1: "购买毛瑟公司老旧设备"
  lepexp_jinling_inf_2: "与陆军修械所合作"
  lepexp_jinling_inf_3: "步枪榴弹发射器"
  lepexp_jinling_inf_4: "简化生产工艺"
  lepexp_jinling_inf_5: "购买新机床"
+ lepexp_jinling_inf_6: "重型枪管"
+ lepexp_jinling_inf_7: "轻量化设计"
 
  mio_hongqiao_organisation: "上海虹桥航空工厂"
  LEP_hongqiao_mio_desc: "$hongqiao_LEP_MIO$\n§L$hongqiao_desc$§!\n"
