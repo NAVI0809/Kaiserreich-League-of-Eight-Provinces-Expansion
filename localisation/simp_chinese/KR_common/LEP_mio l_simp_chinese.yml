@@ -1,7 +1,7 @@
 ﻿l_simp_chinese:
 
- tech_LEP_combat_engineer: "战斗工兵连"
- LEP_combat_engineer: "战斗工兵连"
+ tech_LEP_combat_engineer: "战斗工兵连科技"
+ combat_engineer: "战斗工兵连"
 
  div_qingxing_unit: "轻型步兵协"
  div_jingbei_unit: "警备协"
