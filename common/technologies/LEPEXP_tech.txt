@@ -9,7 +9,7 @@ technologies = {
 			always = no
 		}
 		enable_subunits = {
-			LEP_combat_engineer
+			combat_engineer
 		}
 	}
 
