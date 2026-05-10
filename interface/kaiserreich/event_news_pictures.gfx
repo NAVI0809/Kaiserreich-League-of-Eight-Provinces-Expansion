@@ -754,6 +754,26 @@ spriteTypes = {
 		name = "GFX_news_event_LEP_dem_victory"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_dem_victory.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_LEP_DSP"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_DSP.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_LEP_ZXX"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_ZXX.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_LEP_JNSB"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_JNSB.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_LEP_JXH"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_JXH.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_LEP_JGH"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_JGH.png"
+	}
 
 	### LIT - Lithuania ###
 	spriteType = {

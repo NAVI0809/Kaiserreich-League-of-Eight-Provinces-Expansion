@@ -2464,3 +2464,114 @@ news_event = {
 	}
 }
 
+news_event = {
+	id = china_events.318
+	immediate = { log = "[GetLogInfo]: event china_events.318" }
+	title = china_events.318.t
+	desc = china_events.318.d
+	picture = GFX_news_event_LEP_DSP
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.318.a
+	}
+}
+
+news_event = {
+	id = china_events.319
+	immediate = { log = "[GetLogInfo]: event china_events.319" }
+	title = china_events.319.t
+	desc = china_events.319.d
+	picture = GFX_news_event_LEP_ZXX
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.319.a
+	}
+}
+
+news_event = {
+	id = china_events.320
+	immediate = { log = "[GetLogInfo]: event china_events.320" }
+	title = china_events.320.t
+	desc = china_events.320.d
+	picture = GFX_news_event_LEP_JNSB
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.320.a
+	}
+}
+
+news_event = {
+	id = china_events.321
+	immediate = { log = "[GetLogInfo]: event china_events.321" }
+	title = china_events.321.t
+	desc = china_events.321.d
+	picture = GFX_news_event_LEP_JGH
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.321.a
+	}
+}
+
+news_event = {
+	id = china_events.322
+	immediate = { log = "[GetLogInfo]: event china_events.322" }
+	title = china_events.322.t
+	desc = china_events.322.d
+	picture = GFX_news_event_LEP_JXH
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.322.a
+	}
+}
+
+news_event = {
+	id = china_events.323
+	immediate = { log = "[GetLogInfo]: event china_events.323" }
+	title = china_events.323.t
+	desc = china_events.323.d
+	picture = GFX_news_event_LEP_dem_victory
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = china_events.323.a
+	}
+}
+
+
+
+
