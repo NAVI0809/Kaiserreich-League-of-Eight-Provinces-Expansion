@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_LEP_MIO_trait_jinling"
+		texturefile = "gfx/interface/state_modifiers/LEP_MIO_trait_jinling.png"
+	}
+}
