@@ -210,6 +210,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		position = { x = 4 y = 0 }
 
+		limit_to_equipment_type = { infantry_equipment }
+
 		production_bonus = {
 			production_efficiency_cap_factor = 0.025
 			production_resource_need_factor = 0.05
@@ -247,9 +249,14 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		position = { x = 7 y = 0 }
 
+		equipment_bonus = {
+			soft_attack = 0.1
+			build_cost_ic = 0.03
+			reliability = -0.03
+		}
+
 		production_bonus = {
-			production_efficiency_cap_factor = 0.025
-			production_resource_need_factor = 0.05
+			production_resource_need_factor = 0.03
 		}
 
 		on_complete = {
@@ -277,14 +284,15 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		equipment_bonus = {
 			build_cost_ic = -0.1
-			reliability = -0.1
+			reliability = -0.05
 		}
 
 		production_bonus = {
-			production_resource_need_factor = 0.05
+			production_resource_need_factor = -0.2
 			production_efficiency_gain_factor = 0.05
 			production_efficiency_cap_factor = -0.1
 			production_capacity_factor = 0.02
+			production_resource_penalty_factor = 0.2
 		}
 	}
 
@@ -334,6 +342,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		position = { x = -1 y = 1 }
 		all_parents = { lepexp_jinling_inf_2 }
 
+		limit_to_equipment_type = { infantry_equipment }
+
 		equipment_bonus = {
 			soft_attack = 0.05
 			hard_attack = 0.03
@@ -367,6 +377,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		position = { x = 1 y = 1 }
 		all_parents = { lepexp_jinling_inf_2 }
 
+		limit_to_equipment_type = { infantry_equipment }
+
 		equipment_bonus = {
 			build_cost_ic = 0.02
 			maximum_speed = 0.15
@@ -377,7 +389,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		#}
 	}
 
-	trait = {#可拆卸弹匣
+	trait = {#冶金工艺改善
 		token = lepexp_jinling_inf_8
 		name = lepexp_jinling_inf_8
 		icon = GFX_generic_mio_department_icon_infantry_conversion
@@ -390,14 +402,187 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		any_parent = { lepexp_jinling_inf_6 lepexp_jinling_inf_7 }
 
 		equipment_bonus = {
-			defense = 0.075
-			soft_attack = 0.03
 			breakthrough = 0.075
+			reliability = 0.05
 			build_cost_ic = 0.05
 		}
 
+		production_bonus = {
+			production_resource_need_factor = -0.03
+		}
+
 		on_complete = {
-			add_mio_research_bonus = 0.02		
+			add_mio_research_bonus = 0.01	
+		}
+	}
+
+	trait = {#超口径高爆枪榴弹
+		token = lepexp_jinling_inf_9
+		name = lepexp_jinling_inf_9
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_3
+		position = { x = -1 y = 2 }
+		all_parents = { lepexp_jinling_inf_3 }
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		mutually_exclusive = { lepexp_jinling_inf_10 } 
+
+		equipment_bonus = {
+			soft_attack = 0.1
+			breakthrough = 0.1
+			build_cost_ic = 0.03
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.01
+			production_resource_need_factor = 0.02
+		}
+
+		#on_complete = {
+		#}
+	}
+
+	trait = {#超口径破甲枪榴弹弹
+		token = lepexp_jinling_inf_10
+		name = lepexp_jinling_inf_10
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_3
+		position = { x = 1 y = 2 }
+		all_parents = { lepexp_jinling_inf_3 }
+
+		
+
+		limit_to_equipment_type = { infantry_equipment }
+
+		equipment_bonus = {
+			hard_attack = 0.5
+			ap_attack = 0.25
+			build_cost_ic = 0.1
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = -0.01
+			production_resource_need_factor = 0.02
+		}
+
+		#on_complete = {
+		#}
+	}
+
+	trait = {#技术工人培训
+		token = lepexp_jinling_inf_11
+		name = lepexp_jinling_inf_11
+		icon = GFX_KR_generic_mio_trait_icon_research
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_8
+		position = { x = -1 y = 1 }
+		all_parents = { lepexp_jinling_inf_8 }
+		any_parent = { lepexp_jinling_inf_4 lepexp_jinling_inf_5 lepexp_jinling_inf_9 lepexp_jinling_inf_10 }
+
+		equipment_bonus = {
+			reliability = 0.05
+		}
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+		on_complete = {
+			FROM = {
+				manpower = -9000
+				add_political_power = -80
+				if = {
+		            limit = { has_idea = generic_research_advances }
+		            modify_timed_idea = {
+			            idea = generic_research_advances
+			            days = 150
+		            }
+	            }
+	            else = {
+		            add_timed_idea = {
+			            idea = generic_research_advances
+			            days = 150
+		            }
+	            }
+				custom_effect_tooltip = tooltip_white_line
+				add_breakthrough_progress = {
+				    specialization = specialization_army
+				    value = 1
+			    }
+			}
+		}
+	}
+
+	trait = {#新式发射药
+		token = lepexp_jinling_inf_12
+		name = lepexp_jinling_inf_12
+		icon = GFX_KR_generic_mio_trait_icon_technology
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { FROM = { has_country_flag =  lepexp_jinling_weapons_chosen } }
+
+		relative_position_id = lepexp_jinling_inf_8
+		position = { x = 1 y = 1 }
+		all_parents = { lepexp_jinling_inf_8 }
+		any_parent = { lepexp_jinling_inf_4 lepexp_jinling_inf_5 lepexp_jinling_inf_9 lepexp_jinling_inf_10 }
+
+		equipment_bonus = {
+			breakthrough = 0.1
+			soft_attack = 0.05
+			ap_attack = 0.05
+		}
+
+		#on_complete = {
+		#}
+	}
+
+	trait = {#改进金陵兵工厂
+		token = lepexp_jinling_inf_13
+		name = lepexp_jinling_inf_13
+		icon = GFX_LEP_MIO_trait_jinling
+
+		visible = { FROM = { has_country_flag = lepexp_jinling_infantry } }
+		available = { 
+			FROM = { 
+				has_country_flag =  lepexp_jinling_weapons_chosen 
+				has_army_experience > 10
+			} 
+		}
+
+		special_trait_background = yes
+
+		relative_position_id = lepexp_jinling_inf_8
+		position = { x = 0 y = 2 }
+		all_parents = { lepexp_jinling_inf_11 lepexp_jinling_inf_12 }
+
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.025
+			production_resource_need_factor = -0.02
+		}
+
+		on_complete = {
+			FORM = {
+				add_political_power = -50
+				army_experience = -10
+			}
+			613 = {
+				add_dynamic_modifier = { modifier = LEP_military_industrial_complex_modifier }
+				prioritize_state = yes
+			}
 		}
 	}
 }
