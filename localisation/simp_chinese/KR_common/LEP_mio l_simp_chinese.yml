@@ -4,6 +4,8 @@
  tech_LEP_combat_engineer_desc: "一支装备了大量自动或半自动武器与防弹板甲的精英工兵连，掌握了构筑工事清理障碍能力的同时擅长小规模的近距离交战以及反坦克作战。"
  combat_engineer: "战斗工兵连"
 
+ LEP_military_industrial_complex_modifier: "军工复合体"
+
  div_qingxing_unit: "轻型步兵协"
  div_jingbei_unit: "警备协"
 
@@ -32,6 +34,12 @@
  lepexp_jinling_inf_5: "购买新机床"
  lepexp_jinling_inf_6: "重型枪管"
  lepexp_jinling_inf_7: "轻量化设计"
+ lepexp_jinling_inf_8: "冶金工艺改善"
+ lepexp_jinling_inf_9: "超口径高爆枪榴弹"
+ lepexp_jinling_inf_10: "超口径破甲枪榴弹弹"
+ lepexp_jinling_inf_11: "技术工人培训"
+ lepexp_jinling_inf_12: "新式发射药"
+ lepexp_jinling_inf_13: "改进金陵兵工厂"
 
  mio_hongqiao_organisation: "上海虹桥航空工厂"
  LEP_hongqiao_mio_desc: "$hongqiao_LEP_MIO$\n§L$hongqiao_desc$§!\n"
