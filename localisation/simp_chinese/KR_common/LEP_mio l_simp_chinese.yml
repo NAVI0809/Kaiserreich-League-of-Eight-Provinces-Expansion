@@ -40,6 +40,10 @@
  lepexp_jinling_inf_11: "技术工人培训"
  lepexp_jinling_inf_12: "新式发射药"
  lepexp_jinling_inf_13: "改进金陵兵工厂"
+ lepexp_jinling_inf_14: "承包舰艇分段建造"
+ lepexp_jinling_inf_15: "造船部门扩张"
+ mio_jinling_navy_1_tt: "还有§g1§!个造船部门特性可以升级"
+ lepexp_jinling_art_1: "身管自紧技术"
 
  mio_hongqiao_organisation: "上海虹桥航空工厂"
  LEP_hongqiao_mio_desc: "$hongqiao_LEP_MIO$\n§L$hongqiao_desc$§!\n"
