@@ -17,8 +17,8 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 550
-		y = 1400
+		x = 250
+		y = 2800
 	}
 
     
@@ -7428,9 +7428,11 @@ focus_tree = {
 				tooltip = {
 					localization_key = tooltip_create_division_template
 					NAME = "League Infantry Division"
-					LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 5 }
-					SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+					LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 8 }
+					LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_combat_engineer_icon_medium_white }
 					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = light_tank_recon ICON = GFX_unit_light_armor_icon_small }
 				}
 				if = {
 					limit = { has_template = "League Infantry Division" }
@@ -7443,12 +7445,17 @@ focus_tree = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
 						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						artillery_brigade = { x = 2 y = 0 }
+						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						combat_engineer = { x = 0 y = 0 }
 						artillery = { x = 0 y = 1 }
+						light_tank_recon = { x = 0 y = 2 }
 					}
 				}
 			}
@@ -7642,6 +7649,28 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = LEP_eliteheer_2
 					add_idea = LEP_eliteheer_4
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+			if = {
+				limit = {
+					controls_province = 11947 #丽水
+					1069 = { #丽水
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = land_facility
+					}
+				}
+				1069 = { #丽水
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						province = 11947 #丽水
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -8554,7 +8583,7 @@ focus_tree = {
 
 		relative_position_id = LEP_artillery_of_the_sky
 		x = 0
-		y = 2
+		y = 1
 
 		ai_will_do = {
 			base = 15
@@ -8793,6 +8822,11 @@ focus_tree = {
 				    }
 			    }
 		    }	
+		}
+		search_filters = {
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_INDUSTRY
 		}	
 	}
 
@@ -8857,7 +8891,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_fortifying_our_positions
-		x = 0
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -8998,8 +9032,8 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = 1
-		y = 2
+		x = -3
+		y = 1
 
 		ai_will_do = {
 			base = 20
@@ -9030,27 +9064,226 @@ focus_tree = {
 				category = mio_cat_all_light_aircraft_and_modules
 				bonus = 0.75
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = CHN_aviation_industry_organisation
+			mio:CHN_aviation_industry_organisation = {
+				set_mio_flag = CHN_mio_unlocked
+				add_mio_size = 2
+				add_mio_funds = 800
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_aat = yes }
 				if = {
-					limit = { mio:CHN_aviation_industry_organisation = { is_mio_available = no } }
+					limit = { mio:LEP_hongqiao_organisation = { is_mio_available = no } }
 					custom_effect_tooltip = available_mio_tt
 					show_mio_tooltip = CHN_aviation_industry_organisation
 				}
-				mio:CHN_aviation_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 1
-					add_mio_funds = 500
+				mio:LEP_hongqiao_organisation = {
+					add_mio_size = 2
+					add_mio_funds = 800
 				}
 			}
 			else = {
-				add_one_random_military_factory = yes
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHN_aviation_industry_organisation
+				mio:CHN_aviation_industry_organisation = {
+					set_mio_flag = CHN_mio_unlocked
+					add_mio_size = 2
+					add_mio_funds = 800
+				}
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
 			FOCUS_FILTER_RESEARCH
 			FOCUS_FILTER_INDUSTRY
+		}
+	}
+
+	focus = { #整合全国空军
+		id = LEP_CNAF_regroup
+		icon = GFX_goal_FNG_chinese_flying_corps
+		cost = 6
+
+		relative_position_id = LEP_china_air_fleet
+		x = 0
+		y = 1
+
+		available = {
+		    china_is_the_unifier_of_china_trigger = yes
+	    }
+
+		ai_will_do = {
+			base = 20
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_china_air_fleet }
+		prerequisite = { focus = LEP_cult_of_aviation }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_CNAF_regroup"
+			air_experience = 50
+			swap_ideas = {
+				remove_idea = LEP_nanjing_airforce_5
+				add_idea = LEP_nanjing_airforce_6
+			}
+			add_mastery_bonus = {
+				name = LEP_CNAF_regroup
+				bonus = 0.1
+				days = 365
+				track = fighter_aircraft
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_CNAF_regroup_desc_tt
+			QIE = {
+			    custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = QIE_wang_guanyi
+				    		is_character = QIE_ren_yunge
+				    		is_character = QIE_shi_bangfan
+				    		is_character = QIE_liu_muqun
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    QIE_wang_guanyi = { set_nationality = ROOT }
+				    QIE_ren_yunge = { set_nationality = ROOT }
+				    QIE_shi_bangfan = { set_nationality = ROOT }
+				    QIE_liu_muqun = { set_nationality = ROOT }
+			    }
+			}
+			CHI = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = CHI_zhou_zhirou
+				    		is_character = CHI_mao_bangchu
+				    		is_character = QIE_shi_bangfan
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    CHI_zhou_zhirou = { set_nationality = ROOT }
+				    CHI_mao_bangchu = { set_nationality = ROOT }
+				    CHI_chen_changzu = { set_nationality = ROOT }
+			    }
+			}
+			HNN = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = SHX_cao_baoqing
+				    		is_character = SHX_zhong_jihan
+							is_character = SHX_xie_wenda
+							is_character = SHX_shen_dexie
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    SHX_cao_baoqing = { set_nationality = ROOT }
+				    SHX_zhong_jihan = { set_nationality = ROOT }
+					SHX_xie_wenda = { set_nationality = ROOT }
+					SHX_shen_dexie = { set_nationality = ROOT }
+			    }
+			}
+			SZC = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = SZC_jiang_kui
+				    		is_character = SZC_zheng_shaoyu
+							is_character = SZC_yue_yiqin
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    SZC_jiang_kui = { set_nationality = ROOT }
+				    SZC_zheng_shaoyu = { set_nationality = ROOT }
+					SZC_yue_yiqin = { set_nationality = ROOT }
+			    }
+			}
+			YUN = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = YUN_qian_dajun
+				    		is_character = YUN_zhang_jingyu
+							is_character = YUN_liu_peiquan
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    YUN_qian_dajun = { set_nationality = ROOT }
+				    YUN_zhang_jingyu = { set_nationality = ROOT }
+					YUN_liu_peiquan = { set_nationality = ROOT }
+			    }
+			}
+			GXC = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = GXC_huang_guangrui
+				    		is_character = GXC_ding_jixu
+							is_character = GXC_feng_huang
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    GXC_huang_guangrui = { set_nationality = ROOT }
+				    GXC_ding_jixu = { set_nationality = ROOT }
+					GXC_feng_huang = { set_nationality = ROOT }
+			    }
+			}
+			FNG = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = FNG_li_guidan
+				    		is_character = FNG_tong_yanbo
+							is_character = FNG_gao_zhihang
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    FNG_li_guidani = { set_nationality = ROOT }
+				    FNG_tong_yanbo = { set_nationality = ROOT }
+					FNG_gao_zhihang = { set_nationality = ROOT }
+			    }
+			}
+			SHD = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = SHD_robert_short
+				    		is_character = SHD_vincent_schmidt
+							is_character = SHD_antonio_riva
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    SHD_robert_short = { set_nationality = ROOT }
+				    SHD_vincent_schmidt = { set_nationality = ROOT }
+					SHD_antonio_riva = { set_nationality = ROOT }
+			    }
+			}
+
+
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
 		}
 	}
 
