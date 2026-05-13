@@ -171,6 +171,8 @@ recruit_character = LEP_yuan_xiluo
 recruit_character = LEP_zhao_fengchang
 recruit_character = LEP_jiang_qian
 
+recruit_character = LEP_wang_e
+recruit_character = LEP_huang_baitao 
 
 
 ### theorists ###
