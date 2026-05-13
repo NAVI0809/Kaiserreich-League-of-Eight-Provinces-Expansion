@@ -1648,6 +1648,114 @@ country_event = { #修缮金陵
 
 	}
 }
+country_event = { #南北两京——吴佩孚支持新皖系
+	id = league_mid.60
+	title = league_mid.60.t
+	desc = league_mid.60.d
+	picture = GFX_report_event_ANQ_chen_tiaoyuan
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: eventleague_mid.60 option league_mid.60.a"
+		name = league_mid.60.a
+		add_opinion_modifier = {
+			target = QIE
+			modifier = KR_outraged
+		}
+		QIE = {
+			add_opinion_modifier = {
+				target = LEP
+				modifier = KR_outraged
+			}
+		}
+		
+	}
+}
+
+country_event = { #南北两京——吴佩孚支持宁系
+	id = league_mid.61
+	title = league_mid.61.t
+	desc = league_mid.61.d
+	picture = GFX_report_event_QIE_cao_kun_5
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: eventleague_mid.61 option league_mid.61.a"
+		name = league_mid.61.a
+		QIE = diplomatic_relation = {
+			country = 1
+			relation = gurantee
+			active = no
+		}
+		add_opinion_modifier = {
+			target = QIE
+			modifier = KR_outraged
+		}
+		QIE = {
+			add_opinion_modifier = {
+				target = LEP
+				modifier = KR_outraged
+			}
+		}
+	}
+}
+
+country_event = { #南北两京——宫廷政变 
+	id = league_mid.62
+	title = league_mid.62.t
+	desc = league_mid.62.d
+	picture = GFX_report_event_QIE_puyi_uniform
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: eventleague_mid.62 option league_mid.62.a"
+		name = league_mid.62.a
+		add_opinion_modifier = {
+			target = QIE
+			modifier = KR_outraged
+		}
+		QIE = {
+			add_opinion_modifier = {
+				target = LEP
+				modifier = KR_outraged
+			}
+		}
+		add_war_support = 0.05
+	}
+}
+
+country_event = { #南北两京——北京政府
+	id = league_mid.63
+	title = league_mid.63.t
+	desc = league_mid.63.d
+	picture = GFX_report_event_QIE_hu_shih_yan_huiqing
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: eventleague_mid.63 option league_mid.63.a"
+		name = league_mid.63.a
+		add_opinion_modifier = {
+			target = QIE
+			modifier = KR_outraged
+		}
+		QIE = {
+			add_opinion_modifier = {
+				target = LEP
+				modifier = KR_outraged
+			}
+		}
+	}
+}
+
+
 
 
 
