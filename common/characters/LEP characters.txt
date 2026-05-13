@@ -1404,6 +1404,74 @@ characters = {
 		}
 	}
 
+    #王萼
+	LEP_wang_e = {
+		name = LEP_wang_e
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_wang_e_army_small
+				large = GFX_portrait_LEP_wang_e_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_wang_e_commander_desc
+			traits = { 
+				career_officer
+				artillery_specialist
+				naval_invader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = high_command
+			ledger = navy
+			idea_token = LEP_wang_e_high_command
+			traits = { LEPEXP_coastline_defender }
+			cost = 120
+		}
+	}
+
+    #黄百韬
+	LEP_huang_baitao = {
+		name = LEP_huang_baitao
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_huang_baitao_army_small
+				large = GFX_portrait_LEP_huang_baitao_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_huang_baitao_commander_desc
+			traits = { 
+				career_officer
+				brilliant_strategist
+				skilled_staffer
+				trait_engineer
+				combined_arms_expert
+				armor_officer
+				CHN_SZH_officer
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = LEP_huang_baitao_high_command
+			ledger = army
+			traits = { LEPEXP_Grassroots_General }
+			cost = 150
+		}
+	}
+
 	#方本仁
 	LEP_fang_benren = {
 		name = LEP_fang_benren
