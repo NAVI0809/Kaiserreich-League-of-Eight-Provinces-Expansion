@@ -1686,14 +1686,16 @@ country_event = { #南北两京——吴佩孚支持宁系
     option = {
 		log = "[GetLogInfo]: eventleague_mid.61 option league_mid.61.a"
 		name = league_mid.61.a
-		QIE = diplomatic_relation = {
-			country = 1
-			relation = gurantee
-			active = no
-		}
-		add_opinion_modifier = {
-			target = QIE
-			modifier = KR_outraged
+		QIE = {
+			diplomatic_relation = {
+			    country = 1
+			    relation = gurantee
+			    active = no
+		    }
+		    add_opinion_modifier = {
+			    target = QIE
+			    modifier = KR_outraged
+			}	
 		}
 		QIE = {
 			add_opinion_modifier = {
@@ -2551,6 +2553,93 @@ country_event = { #China invites us to ECT
 			modifier = KR_disapproves_of_govt
 		}
 		set_country_flag = LEP_refused_ECT_invitation
+	}
+}
+
+unit_leader_event = { #黄百韬
+	id = league_generic.5
+	title = league_generic.5.t
+	desc = league_generic.5.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.5.a
+		log = "[GetLogInfo]: event league_generic.5 option league_generic.5.a"
+		hidden_effect = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"Zhejiang Bubing Di 41 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}		
+		}
+		custom_effect_tooltip = LEPEXP_huang_baitao_unitleader_tt
+	}
+}
+
+unit_leader_event = { #王萼
+	id = league_generic.6
+	title = league_generic.6.t
+	desc = league_generic.6.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.6.a
+		log = "[GetLogInfo]: event league_generic.6 option league_generic.6.a"
+		#enable_tech_marine_bonus = yes #陆战队国策给
+		add_tech_bonus = {
+			name = LEP_league_generic.6
+			bonus = 0.5
+			uses = 1
+			category = marine_tech
+		}
+		custom_effect_tooltip = LEPEXP_wang_e_unitleader_tt
+		custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Luzhan Dui Huncheng Lü"
+					LINE_1 = { localization_key = line_battalion_tt NAME = marine ICON = GFX_unit_marine_icon_small COUNT = 4 }
+					LINE_2 = { localization_key = line_battalion_tt NAME = marine_commando  ICON = GFX_unit_marine_icon_small COUNT = 2 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = pioneer_support ICON = GFX_unit_pioneer_support_icon_medium_white }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				}
+				if = {
+					limit = { has_template = "Luzhan Dui Huncheng Lü" }
+					delete_unit_template_and_units = { division_template = "Luzhan Dui Huncheng Lü" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Luzhan Dui Huncheng Lü"
+					division_names_group = LEP_NMC_01
+					regiments = {
+						marine = { x = 0 y = 0 }
+				        marine = { x = 0 y = 1 }
+				        marine = { x = 1 y = 0 }
+				        marine = { x = 1 y = 1 }
+						marine_commando = { x = 2 y = 0 }
+						marine_commando = { x = 2 y = 1 }
+					}
+					support = {
+						pioneer_support = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+				}
+			}
+		hidden_effect = {
+			random_owned_controlled_state = {
+				prioritize = { 1066 }
+				create_unit = {
+					division = "name = \"Mawei Luzhan Dui Huncheng Di 1 Lü\" division_template = \"Luzhan Dui Huncheng Lü\" start_equipment_factor = 1 start_experience_factor = 0.7"
+					owner = ROOT
+				}
+			}		
+		}
 	}
 }
 
