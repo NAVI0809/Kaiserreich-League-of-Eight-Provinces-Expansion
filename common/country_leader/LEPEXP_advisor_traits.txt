@@ -17,8 +17,10 @@ leader_traits = {
 		max_dig_in = 4
 		production_speed_coastal_bunker_factor = 0.25
 		production_speed_bunker_factor = 0.1
-		amphibious_invasion = 0.25
-		invasion_preparation = -0.25
+		amphibious_invasion = 0.2
+		invasion_preparation = -0.1
+		special_forces_cap_flat = 5
+		special_forces_attack_factor = 0.05
 
 		ai_will_do = {
 			factor = 0

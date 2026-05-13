@@ -7414,9 +7414,78 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			show_unit_leaders_tooltip = LEP_guo_chan
 			show_unit_leaders_tooltip = LEP_zhou_yan
+			show_unit_leaders_tooltip = LEP_huang_baitao
+			show_unit_leaders_tooltip = LEP_wang_e
 			hidden_effect = {
 				LEP_guo_chan = { CHN_recruit_character_effect = yes }
 				LEP_zhou_yan = { CHN_recruit_character_effect = yes }
+				LEP_huang_baitao = { CHN_recruit_character_effect = yes }
+				LEP_wang_e = { CHN_recruit_character_effect = yes }
+				LEP_huang_baitao = {
+                    unit_leader_event = {
+                        id = league_generic.5
+                        hours = 12
+                    }
+                }
+				LEP_wang_e = {
+                    unit_leader_event = {
+                        id = league_generic.6
+                        hours = 26
+                    }
+				}
+				if = {
+				    limit = { has_dlc_nsb = yes }
+				    if = {
+					    limit = { NOT = { has_tech = basic_light_tank_chassis } }
+					    set_technology = { basic_light_tank_chassis = 1 popup = no }
+				    }
+				    create_equipment_variant = {
+					    name = "Panzer I Ausf. A"
+					    type = light_tank_chassis_1
+					    show_position = no
+					    parent_version = 0
+					    modules = {
+						    main_armament_slot = tank_heavy_machine_gun				# MG13/MG17 twin
+						    turret_type_slot = tank_light_one_man_tank_turret
+						    suspension_type_slot = tank_bogie_suspension
+						    armor_type_slot = tank_riveted_armor
+						    engine_type_slot = tank_gasoline_engine
+						    special_type_slot_1 = secondary_turret_hmg				# Represent 2nd MG in twinned pair
+						    special_type_slot_2 = tank_radio_1
+					    }
+					    upgrades = {
+						    tank_nsb_engine_upgrade = 6
+						    tank_nsb_armor_upgrade = 1
+						}
+						icon = GFX_GER_basic_light_tank_medium
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 200
+						variant_name = "Panzer I Ausf. A"
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_tech = basic_light_tank } }
+						set_technology = { basic_light_tank = 1 popup = no }
+					}
+					create_equipment_variant = {
+						name = "Panzer I Ausf. A"
+						type = light_tank_equipment_1
+						upgrades = {
+							tank_gun_upgrade = 2
+							tank_armor_upgrade = 2
+							tank_reliability_upgrade = 2
+							tank_engine_upgrade = 2
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 200
+						variant_name = "Panzer I Ausf. A"
+					}
+				}	
 			}
 			if = {
 				limit = { has_character = LEP_chen_yi }

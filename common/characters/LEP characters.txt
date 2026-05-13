@@ -1414,7 +1414,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = LEP_wang_e_commander_desc
+			desc = LEP_wang_e_high_command_desc
 			traits = { 
 				career_officer
 				artillery_specialist
@@ -1446,7 +1446,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			desc = LEP_huang_baitao_commander_desc
+			desc = LEP_huang_baitao_high_command_desc
 			traits = { 
 				career_officer
 				brilliant_strategist
