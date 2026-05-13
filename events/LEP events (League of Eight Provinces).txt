@@ -1876,7 +1876,7 @@ country_event = {
 			if = {
 				limit = { has_country_flag = wu_intervenes_proLEP }
 				custom_effect_tooltip = anq_qing_guarantee_tt
-				country_event = { id = league_war.11 hours = 6 }
+				country_event = { id = league_war_events.11 hours = 6 }
 			}
 		}
 	}
