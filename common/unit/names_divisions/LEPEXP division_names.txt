@@ -1,0 +1,50 @@
+LEP_LTB_01 = {
+	name = div_qingxing_unit
+
+	for_countries = { LEP }
+
+	division_types = { "mountaineers" "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Qingxing Bubing di %d Xie"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Qingxing Bubing di 1 Xie" }
+	}
+}
+
+LEP_GAR_01 = {
+	name = div_jingbei_unit
+
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry"}
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Jingbei di %d Xie"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Nanjing Jingbei Xie" }
+		2 = { "Hangzhou Jingbei Xie" }
+		3 = { "Ningbo Jingbei Xie" }
+		4 = { "Hefei Jingbei Xie" }
+		5 = { "Wuhu Jingbei Xie" }
+		6 = { "Wuxi Jingbei Xie" }
+		7 = { "Xuzhou Jingbei Xie" }
+		8 = { "Nanchang Jingbei Xie" }
+		9 = { "Nantong Jingbei Xie" }
+		10 = { "Bengbu Jingbei Xie" }
+		11 = { "Jinghua Jingbei Xie" }
+		12 = { "Anqing Jingbei Xie" }
+		13 = { "Xiamen Jingbei Xie" }
+	}
+}
+
