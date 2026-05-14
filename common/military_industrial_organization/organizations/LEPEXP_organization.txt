@@ -685,15 +685,15 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 	#NAVY traits
 	trait = {#造船部门扩张
-		token = lepexp_jinling_NAVY_2
-		name = lepexp_jinling_NAVY_2
+		token = lepexp_jinling_inf_15
+		name = lepexp_jinling_inf_15
 		icon = GFX_KR_generic_mio_trait_icon_manpower
 
 		visible = { 
 			FROM = { 
 			    has_country_flag = lepexp_jinling_weapons_chosen
 				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_NAVY_1
+					is_mio_trait_completed = lepexp_jinling_inf_14
 				}			
 		    } 
 	    }
@@ -739,8 +739,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 	}	
 
 	trait = {#承包舰艇分段建造
-		token = lepexp_jinling_NAVY_1
-		name = lepexp_jinling_NAVY_1
+		token = lepexp_jinling_inf_14
+		name = lepexp_jinling_inf_14
 		icon = GFX_generic_mio_department_icon_ship_general_engine
 
 		visible = { 
@@ -748,7 +748,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 			    has_country_flag = lepexp_jinling_weapons_chosen 
 				NOT = {
 					mio:LEP_jinling_organisation = {
-						is_mio_trait_completed = lepexp_jinling_NAVY_1
+						is_mio_trait_completed = lepexp_jinling_inf_14
 					}
 				}			
 		    } 
@@ -790,238 +790,6 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 					instant_build = yes
 				}
 			}
-		}
-	}
-
-	trait = {#新建铝热法铬冶炼工厂
-		token = lepexp_jinling_generic_4
-		name = lepexp_jinling_generic_4
-		icon = GFX_KR_generic_mio_trait_icon_chromium
-
-		visible = { 
-			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_3
-				}	
-		    } 
-	    }
-		available = { 
-			FROM = { 
-				has_country_flag =  lepexp_jinling_weapons_chosen
-			}
-		}
-
-		special_trait_background = yes
-
-		position = { x = 6 y = 4 }
-
-		on_complete = {
-			custom_effect_tooltip = mio_jinling_generic_4_tt
-			FORM = {
-				add_political_power = -50
-				mio:LEP_jinling_organisation = {
-			        add_mio_funds = 200
-		        }
-			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_3
-				bonus = 1
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = chromium
-				amount = 8
-				state = 613 #南京
-			}
-			add_resource = {
-				type = aluminium
-				amount = -1
-				state = 613 #南京
-			}
-			613 = {#南京
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	trait = {#引进合成橡胶生产线
-		token = lepexp_jinling_generic_3
-		name = lepexp_jinling_generic_3
-		icon = GFX_KR_generic_mio_trait_icon_rubber
-
-		visible = { 
-			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_2
-				}	
-				NOT = {
-					mio:LEP_jinling_organisation = {
-					    is_mio_trait_completed = lepexp_jinling_generic_3
-				    }
-				}
-		    } 
-	    }
-		available = { 
-			FROM = { 
-				has_country_flag =  lepexp_jinling_weapons_chosen
-			}
-		}
-
-		special_trait_background = yes
-
-		position = { x = 6 y = 4 }
-
-		on_complete = {
-			custom_effect_tooltip = mio_jinling_generic_3_tt
-			FORM = {
-				add_political_power = -50
-				mio:LEP_jinling_organisation = {
-			        add_mio_funds = 200
-		        }
-				613 = {#南京
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = synthetic_refinery
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_3
-				bonus = 1
-				uses = 1
-				category = synth_resources
-			}
-			add_resource = {
-				type = rubber
-				amount = 10
-				state = 613 #南京
-			}
-			
-		}
-	}
-
-	trait = {#投资金陵钢铁厂
-		token = lepexp_jinling_generic_2
-		name = lepexp_jinling_generic_2
-		icon = GFX_KR_generic_mio_trait_icon_steel
-
-		visible = { 
-			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_1
-				}
-				NOT = {
-					mio:LEP_jinling_organisation = {
-					    is_mio_trait_completed = lepexp_jinling_generic_2
-				    }
-				}	
-		    } 
-	    }
-		available = { 
-			FROM = { 
-				has_country_flag =  lepexp_jinling_weapons_chosen
-			}
-		}
-
-		special_trait_background = yes
-
-		position = { x = 6 y = 4 }
-
-		on_complete = {
-			custom_effect_tooltip = mio_jinling_generic_2_tt
-			FORM = {
-				add_political_power = -50
-				mio:LEP_jinling_organisation = {
-			        add_mio_funds = 200
-		        }
-				613 = {#南京
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_2
-				bonus = 0.5
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 613 #南京
-			}
-			
-		}
-	}
-
-	trait = {#引进电解铝生产线
-		token = lepexp_jinling_generic_1
-		name = lepexp_jinling_generic_1
-		icon = GFX_KR_generic_mio_trait_icon_aluminum
-
-		visible = { 
-			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				NOT = {
-					mio:LEP_jinling_organisation = {
-					    is_mio_trait_completed = lepexp_jinling_generic_1
-					}	
-				}				
-		    } 
-	    }
-		available = { 
-			FROM = { 
-				has_country_flag =  lepexp_jinling_weapons_chosen
-			}
-		}
-
-		special_trait_background = yes
-
-		position = { x = 6 y = 4 }
-
-		on_complete = {
-			custom_effect_tooltip = mio_jinling_generic_1_tt
-			FORM = {
-				add_political_power = -100
-				mio:LEP_jinling_organisation = {
-			        add_mio_funds = 100
-		        }
-				613 = {#南京
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_1
-				bonus = 0.5
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = aluminium
-				amount = 10
-				state = 613 #南京
-			}
-			
 		}
 	}
 }
