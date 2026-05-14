@@ -2607,7 +2607,7 @@ unit_leader_event = { #王萼
 					NAME = "Luzhan Dui Huncheng Lü"
 					LINE_1 = { localization_key = line_battalion_tt NAME = marine ICON = GFX_unit_marine_icon_small COUNT = 4 }
 					LINE_2 = { localization_key = line_battalion_tt NAME = marine_commando  ICON = GFX_unit_marine_icon_small COUNT = 2 }
-					SUPPORT_1 = { localization_key = support_battalion_tt NAME = pioneer_support ICON = GFX_unit_pioneer_support_icon_medium_white }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = pioneer_support ICON = GFX_unit_engineer_icon_small }
 					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
 				}
 				if = {
