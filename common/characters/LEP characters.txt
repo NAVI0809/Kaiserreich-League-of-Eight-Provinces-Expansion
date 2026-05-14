@@ -576,6 +576,14 @@ characters = {
 			cost = 0
 			can_be_fired = no
 		}
+
+		advisor = {
+			desc = LEP_lu_xiangting_sic_desc
+			slot = army_chief
+			idea_token = LEP_lu_xiangting_army_chief
+			traits = { KR_army_chief_offensive_3 }
+			cost = 150
+		}
 	}
 
 	#張心一
@@ -1007,6 +1015,14 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 2
+		}
+		advisor = {
+			desc = LEP_deng_ruzhuo_commander_desc
+			slot = army_chief
+			idea_token = LEP_LEP_deng_ruzhuo_army_chief
+			ledger = army
+			traits = { KR_army_chief_morale_2 }
+			cost = 150
 		}
 	}
 
