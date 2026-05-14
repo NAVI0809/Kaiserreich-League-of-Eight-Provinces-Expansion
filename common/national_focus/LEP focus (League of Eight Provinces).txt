@@ -7499,7 +7499,7 @@ focus_tree = {
 					NAME = "League Infantry Division"
 					LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 8 }
 					LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
-					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_combat_engineer_icon_medium_white }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_engineer_icon_small }
 					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
 					SUPPORT_3 = { localization_key = support_battalion_tt NAME = light_tank_recon ICON = GFX_unit_light_armor_icon_small }
 				}

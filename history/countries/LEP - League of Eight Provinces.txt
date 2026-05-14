@@ -173,7 +173,7 @@ recruit_character = LEP_jiang_qian
 
 recruit_character = LEP_wang_e
 recruit_character = LEP_huang_baitao 
-
+recruit_character = LEP_sa_shijun
 
 ### theorists ###
 recruit_character = LEP_nanjing_clique_theorist

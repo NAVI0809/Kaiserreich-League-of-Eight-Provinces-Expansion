@@ -815,6 +815,39 @@ characters = {
 		}
 	}
 
+    #萨师俊
+	LEP_sa_shijun = {
+		name = LEP_sa_shijun
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_sa_shijun_army_small
+				large = GFX_portrait_LEP_sa_shijun_army_large
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = LEP_sa_shijun_high_command
+			traits = { KR_MHC_naval_air_defence_3 }
+			cost = 120
+		}
+		navy_leader = {
+			desc = LEP_sa_shijun_high_command_desc
+			traits = { 
+				navy_career_officer 
+				aviation_enthusiast 
+				mine_craft
+				inshore_fighter 
+				fly_swatter
+				bold
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 1
+		}
+	}
+
 	###################
 	#### Air staff ####
 	###################
