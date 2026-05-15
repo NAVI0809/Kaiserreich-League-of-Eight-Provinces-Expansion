@@ -5098,4 +5098,29 @@ leader_traits = {
 
 		ai_will_do = { factor = 1 }
 	}
+
+	KR_semi_auto = {
+		sprite = 5
+		random = no
+
+		special_project_speed_factor = 0.15
+		research_speed_factor = 0.05
+
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.15
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+			artillery_equipment = {
+				soft_attack = 0.10
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
 }
