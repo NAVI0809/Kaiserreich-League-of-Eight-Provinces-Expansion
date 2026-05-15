@@ -2643,6 +2643,110 @@ unit_leader_event = { #王萼
 	}
 }
 
+country_event = { #电解铝生产线
+	id = league_generic.1000
+	title = league_generic.1000.t
+	desc = league_generic.1000.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.1001 option league_generic.1000.a"
+		name = league_generic.1000.a
+		add_tech_bonus = {
+			name = lepexp_jinling_generic_1
+			bonus = 0.5
+			uses = 1
+			category = excavation_tech
+		}
+		add_resource = {
+			type = aluminium
+			amount = 4
+			state = 613 #南京
+		}
+	}
+}
+
+country_event = { #投资金陵钢铁厂
+	id = league_generic.1001
+	title = league_generic.1001.t
+	desc = league_generic.1001.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.1001 option league_generic.1001.a"
+		name = league_generic.1001.a
+		add_tech_bonus = {
+			name = lepexp_jinling_generic_2
+			bonus = 0.5
+			uses = 1
+			category = excavation_tech
+		}
+		add_resource = {
+			type = steel
+			amount = 4
+			state = 613 #南京
+		}
+	}
+}
+
+country_event = { #引进合成橡胶生产线
+	id = league_generic.1002
+	title = league_generic.1002.t
+	desc = league_generic.1002.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.1002 option league_generic.1002.a"
+		name = league_generic.1001.a
+		add_tech_bonus = {
+			name = lepexp_jinling_generic_3
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+		add_resource = {
+			type = rubber
+			amount = 4
+			state = 613 #南京
+		}
+	}
+}
+
+country_event = { #新建铝热法铬冶炼工厂
+	id = league_generic.1003
+	title = league_generic.1002.t
+	desc = league_generic.1002.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.1002 option league_generic.1002.a"
+		name = league_generic.1001.a
+		add_tech_bonus = {
+			name = lepexp_jinling_generic_4
+			bonus = 1
+			uses = 1
+			category = excavation_tech
+		}
+		add_resource = {
+			type = chromium
+			amount = 6
+			state = 613 #南京
+		}
+		add_resource = {
+			type = aluminium
+			amount = -1
+			state = 613 #南京
+		}
+	}
+}
 news_event = {
 	id = china_events.317
 	immediate = { log = "[GetLogInfo]: event china_events.317" }
