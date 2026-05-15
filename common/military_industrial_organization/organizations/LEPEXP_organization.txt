@@ -542,7 +542,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			FROM = {
-				manpower = -9000
+				add_manpower = -9000
 				add_political_power = -80
 				if = {
 		            limit = { has_idea = generic_research_advances }
@@ -631,7 +631,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		}
 
 		on_complete = {
-			FORM = {
+			FROM = {
 				add_political_power = -50
 				army_experience = -10
 			}
@@ -691,15 +691,11 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { 
 			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_NAVY_1
-				}			
+				has_country_flag =  lepexp_jinling_weapons_chosen 		
 		    } 
 	    }
 		available = { 
 			FROM = { 
-				has_country_flag = lepexp_jinling_weapons_chosen 
 				has_navy_experience > 10
 			} 
 		}
@@ -719,8 +715,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		}
 
 		on_complete = {
-			FORM = {
-				manpower = -10000
+			FROM = {
+				add_manpower = -10000
 				add_political_power = -50
 			    navy_experience = -10
 				mio:LEP_jinling_organisation = {
@@ -744,8 +740,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		icon = GFX_generic_mio_department_icon_ship_general_engine
 
 		visible = { 
-			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
+			FROM = {
+				has_country_flag =  lepexp_jinling_weapons_chosen 
 				NOT = {
 					mio:LEP_jinling_organisation = {
 						is_mio_trait_completed = lepexp_jinling_NAVY_1
@@ -775,7 +771,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			custom_effect_tooltip = mio_jinling_navy_1_tt
-			FORM = {
+			FROM = {
 				add_political_power = -50
 			    navy_experience = -10
 				mio:LEP_jinling_organisation = {
@@ -800,10 +796,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { 
 			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_3
-				}	
+				has_country_flag =  lepexp_jinling_weapons_chosen
 		    } 
 	    }
 		available = { 
@@ -818,36 +811,41 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			custom_effect_tooltip = mio_jinling_generic_4_tt
-			FORM = {
+			FROM = {
 				add_political_power = -50
 				mio:LEP_jinling_organisation = {
 			        add_mio_funds = 200
 		        }
-			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_3
-				bonus = 1
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = chromium
-				amount = 8
-				state = 613 #南京
-			}
-			add_resource = {
-				type = aluminium
-				amount = -1
-				state = 613 #南京
-			}
-			613 = {#南京
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
+				613 = {#南京
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
 				}
+				hidden_effect = { country_event = { id = league_generic.1003 hours = 1 } }
 			}
+			effect_tooltip = {
+				FROM = {
+					add_tech_bonus = {
+						name = lepexp_jinling_generic_3
+						bonus = 1
+						uses = 1
+						category = excavation_tech
+					}
+					add_resource = {
+						type = chromium
+						amount = 6
+						state = 613 #南京
+					}
+					add_resource = {
+						type = aluminium
+						amount = -2
+						state = 613 #南京
+					}
+				} 
+			}						
 		}
 	}
 
@@ -858,10 +856,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { 
 			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_2
-				}	
+				has_country_flag =  lepexp_jinling_weapons_chosen
 				NOT = {
 					mio:LEP_jinling_organisation = {
 					    is_mio_trait_completed = lepexp_jinling_generic_3
@@ -881,7 +876,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			custom_effect_tooltip = mio_jinling_generic_3_tt
-			FORM = {
+			FROM = {
 				add_political_power = -50
 				mio:LEP_jinling_organisation = {
 			        add_mio_funds = 200
@@ -894,19 +889,23 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 						instant_build = yes
 					}
 				}
+				hidden_effect = { country_event = { id = league_generic.1002 hours = 1 } }
 			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_3
-				bonus = 1
-				uses = 1
-				category = synth_resources
-			}
-			add_resource = {
-				type = rubber
-				amount = 10
-				state = 613 #南京
-			}
-			
+			effect_tooltip = {
+				FROM = {
+					add_tech_bonus = {
+						name = lepexp_jinling_generic_3
+						bonus = 1
+						uses = 1
+						category = synth_resources
+					}
+					add_resource = {
+						type = rubber
+						amount = 4
+						state = 613 #南京
+					}
+				}
+			}			
 		}
 	}
 
@@ -917,10 +916,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { 
 			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
-				mio:LEP_jinling_organisation = {
-					is_mio_trait_completed = lepexp_jinling_generic_1
-				}
+				has_country_flag =  lepexp_jinling_weapons_chosen
 				NOT = {
 					mio:LEP_jinling_organisation = {
 					    is_mio_trait_completed = lepexp_jinling_generic_2
@@ -940,7 +936,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			custom_effect_tooltip = mio_jinling_generic_2_tt
-			FORM = {
+			FROM = {
 				add_political_power = -50
 				mio:LEP_jinling_organisation = {
 			        add_mio_funds = 200
@@ -953,19 +949,23 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 						instant_build = yes
 					}
 				}
+				hidden_effect = { country_event = { id = league_generic.1001 hours = 1 } }
 			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_2
-				bonus = 0.5
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 613 #南京
-			}
-			
+			effect_tooltip = {
+				FROM = {
+					add_tech_bonus = {
+				        name = lepexp_jinling_generic_2
+				        bonus = 0.5
+				        uses = 1
+				        category = excavation_tech
+			        }
+			        add_resource = {
+				        type = steel
+				        amount = 4
+				        state = 613 #南京
+			        }
+				}
+			}						
 		}
 	}
 
@@ -976,7 +976,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { 
 			FROM = { 
-			    has_country_flag = lepexp_jinling_weapons_chosen 
+				has_country_flag =  lepexp_jinling_weapons_chosen
 				NOT = {
 					mio:LEP_jinling_organisation = {
 					    is_mio_trait_completed = lepexp_jinling_generic_1
@@ -986,7 +986,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 	    }
 		available = { 
 			FROM = { 
-				has_country_flag =  lepexp_jinling_weapons_chosen
+				has_country_flag =  lepexp_jinling_weapons_chosen	
 			}
 		}
 
@@ -996,11 +996,12 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			custom_effect_tooltip = mio_jinling_generic_1_tt
-			FORM = {
+			FROM = {
 				add_political_power = -100
 				mio:LEP_jinling_organisation = {
 			        add_mio_funds = 100
 		        }
+				hidden_effect = { country_event = { id = league_generic.1000 hours = 1 } }
 				613 = {#南京
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -1010,18 +1011,21 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 					}
 				}
 			}
-			add_tech_bonus = {
-				name = lepexp_jinling_generic_1
-				bonus = 0.5
-				uses = 1
-				category = excavation_tech
-			}
-			add_resource = {
-				type = aluminium
-				amount = 10
-				state = 613 #南京
-			}
-			
+			effect_tooltip = {
+				FROM = {
+					add_tech_bonus = {
+						name = lepexp_jinling_generic_1
+						bonus = 0.5
+						uses = 1
+						category = excavation_tech
+					}
+					add_resource = {
+						type = aluminium
+						amount = 4
+						state = 613 #南京
+					}	
+				}
+			}						
 		}
 	}
 }

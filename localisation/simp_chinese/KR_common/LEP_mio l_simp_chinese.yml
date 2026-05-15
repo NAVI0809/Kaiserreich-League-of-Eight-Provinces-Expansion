@@ -15,8 +15,8 @@
  LEPEXP_MIO_debug_jinling: "金陵兵工厂调试"
  mio_jinling_organisation: "金陵兵工厂"
  LEP_jinling_mio_desc: "$jinling_LEP_MIO$\n§L$jinling_desc$§!\n"
- jinling_LEP_MIO: "步兵装备与火炮工厂"
- jinling_LEP: "步兵装备与火炮工厂"
+ jinling_LEP_MIO: "军工龙头"
+ jinling_LEP: "军工龙头"
  jinling_desc: "金陵兵工厂，即金陵机器制造局，亦称江宁机器局，金陵制造局。由洋务运动的代表人物李鸿章创办，是清末四家最早最大的机械化兵工厂之一，在中国近代工业史上占有重要的地位扩建后的机器局从最初400多人增加到12000多人，生产昼夜不息，炉火通红，机器轰响，远近可闻。早晚鸣拉汽笛，招呼员工们上下班。制造的军火均仿制于西洋，虽然早期所需的原材料大多向德国、瑞士、美国等购买，但是在20-30年代期间获得了一定的自主设计与生产能力。成品有各种火炮、枪支、子弹、水雷等。"
 
  LEPEXP_mio_field_repair_tool_kit_desc: "战地维护套件"

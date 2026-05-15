@@ -8540,6 +8540,38 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_nanjing_airforce_1
 			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			if = {
+				limit = {
+					controls_province = 3992 #南昌
+					1044 = { #南昌
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				1044 = { #南昌
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						province = 3992 #南昌
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 606 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = air_facility
+					}
+					construct_building_in_random_province = { air_facility = 1 }
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_bba = yes }
 				if = {
@@ -8677,6 +8709,7 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
 			random_owned_controlled_state = {
 				prioritize = { 613 }
 				limit = {
@@ -8692,6 +8725,39 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 1
+			}
+			if = {
+				limit = {
+					controls_province = 1150 #大连
+					745 = { #大连
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = naval_facility
+					}
+				}
+				745 = { #大连
+					add_building_construction = {
+						type = naval_facility
+						level = 1
+						province = 1150 #大连
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 1075 802 747 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = naval_facility
+					}
+					construct_building_in_random_province = { naval_facility = 1 }
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			navy_experience = 50
 			add_ideas = LEP_nanjing_navy
 		}
@@ -8760,33 +8826,7 @@ focus_tree = {
 				specialization = specialization_naval
 				value = 1
 			}
-			if = {
-				limit = {
-					controls_province = 1150 #大连
-					745 = { #大连
-						is_owned_and_controlled_by = ROOT
-						can_construct_building = naval_facility
-					}
-				}
-				745 = { #大连
-					add_building_construction = {
-						type = naval_facility
-						level = 1
-						province = 1150 #大连
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
-					prioritize = { 1075 802 747 }
-					limit = {
-						is_core_of = ROOT
-						can_construct_building = naval_facility
-					}
-					construct_building_in_random_province = { naval_facility = 1 }
-				}
-			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			QIE = {
 			    custom_effect_tooltip = characters_will_be_recruited
@@ -8992,33 +9032,6 @@ focus_tree = {
 			
 			custom_effect_tooltip = tooltip_white_line
 			
-			if = {
-				limit = {
-					controls_province = 3992 #南昌
-					1044 = { #南昌
-						is_owned_and_controlled_by = ROOT
-						can_construct_building = air_facility
-					}
-				}
-				1044 = { #南昌
-					add_building_construction = {
-						type = air_facility
-						level = 1
-						province = 3992 #南昌
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
-					prioritize = { 606 }
-					limit = {
-						is_core_of = ROOT
-						can_construct_building = air_facility
-					}
-					construct_building_in_random_province = { air_facility = 1 }
-				}
-			}
 			random_owned_controlled_state = {
 				prioritize = { 613 } #南京
 				limit = {
