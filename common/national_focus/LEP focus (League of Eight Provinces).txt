@@ -7742,6 +7742,13 @@ focus_tree = {
 					}
 				}
 			}
+			#every_character = {
+			#	limit = {
+			#		is_unit_leader = yes
+			#		is_character = LEP_huang_baitao
+			#	}
+			#	gain_xp = 1500
+			#}	
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS

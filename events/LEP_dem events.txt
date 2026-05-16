@@ -2643,6 +2643,80 @@ unit_leader_event = { #王萼
 	}
 }
 
+unit_leader_event = {
+	id = league_generic.7
+	title = {
+		text = league_generic.7.t.LEP_liu_qingeng
+		trigger = { THIS = { is_character = LEP_liu_qingeng } }
+	}	
+
+	title = {
+		text = league_generic.7.t.LEP_huang_baitao
+		trigger = { THIS = { is_character = LEP_huang_baitao } }
+	}
+
+	desc = {
+		text = league_generic.7.d.LEP_liu_qingeng
+		trigger = { THIS = { is_character = LEP_liu_qingeng } }
+	}
+
+	desc = {
+		text = league_generic.7.d.LEP_huang_baitao
+		trigger = { THIS = { is_character = LEP_huang_baitao } }
+	}
+
+	is_triggered_only = yes #fired by on_event related to general promotions.
+
+	trigger = {
+		THIS = {
+			OR = {
+				is_character = LEP_liu_qingeng
+				is_character = LEP_huang_baitao
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.7 option league_generic.7.a"
+		name = league_generic.7.a
+		trigger = { THIS = { is_character = LEP_liu_qingeng } }
+		LEP = {
+			army_experience = 10
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -100 }
+			modify_timed_idea = {
+				idea = LEP_Liu_rifle_idea
+				days = -60
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+			add_tech_bonus = {
+				name = league_generic.7.t.LEP_liu_qingeng
+				bonus = 1
+				uses = 1
+				category = infantry_tech
+			}			
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.7 option league_generic.7.b"
+		name = league_generic.7.b
+		trigger = { THIS = { is_character = LEP_huang_baitao } }
+		LEP = {
+			army_experience = 10
+			LEP_huang_baitao = {
+				add_timed_unit_leader_trait = {
+					trait = trait_determined
+					days = 60
+				}
+			}
+		}
+	}
+}
+
 country_event = { #电解铝生产线
 	id = league_generic.1000
 	title = league_generic.1000.t
