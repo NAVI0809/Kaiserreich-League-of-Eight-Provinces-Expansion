@@ -1472,6 +1472,118 @@ country_event = { #谈判成功
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		hidden_effect = {
+			ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+			CHI = {
+				if = {
+					limit = {
+						has_character = CHI_li_jishen
+					}
+					CHI_li_jishen = {
+				    	set_nationality = ROOT
+						set_portraits = {
+					        army = { large = GFX_portrait_CHI_li_jishen_dem }
+				        }
+			    	}
+				}
+				else_if = {
+					limit = {
+						has_character = ANQ_sun_liren
+					}
+					ANQ_sun_liren = {
+				    	set_nationality = ROOT
+						set_portraits = {
+					        army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			    	}
+				}
+				else_if = {
+					limit = {
+						has_character = CHI_chen_shaokuan
+					}
+					CHI_chen_shaokuan= {
+				    	set_nationality = ROOT
+			    	}
+				}
+				else_if = {
+					limit = {
+						has_character = CHI_peng_xuefeng
+					}
+					CHI_peng_xuefeng = {
+				    	set_nationality = ROOT
+						set_portraits = {
+					        army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				        }
+			    	}
+				}
+			}
+			ANQ = {
+				if = {
+				    limit = {
+					    has_character = ANQ_sun_liren
+				    }
+				    ANQ_sun_liren = {
+				       set_nationality = ROOT
+					   set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+			    }
+			}
+			GXC = {
+				if = {
+					limit = {
+						has_character = CHI_li_jishen
+					}
+					CHI_li_jishen = {
+				        set_nationality = ROOT
+						set_portraits = {
+					        army = { large = GFX_portrait_CHI_li_jishen_dem }
+				        }
+			        }
+				}
+				else_if = {
+				    limit = {
+					    has_character = ANQ_sun_liren
+				    }
+				    ANQ_sun_liren = {
+				       set_nationality = ROOT
+					   set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+			    }
+			}
+			QIE = {
+				if = {
+					limit = {
+						has_character = ANQ_sun_liren
+					}
+					ANQ_sun_liren = {
+				        set_nationality = ROOT
+						set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+				}
+			}
+			SZC = {
+				if = {
+					limit = {
+						has_character = ANQ_sun_liren
+					}
+					ANQ_sun_liren = {
+				        set_nationality = ROOT
+						set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+				}
+			}
+		}
+	}
+
     option = {
 		log = "[GetLogInfo]: eventleague_mid.54 option league_mid.54.a"
 		name = league_mid.54.a
@@ -1497,6 +1609,11 @@ country_event = { #谈判成功
 				set_nationality = ROOT
 			}
 		}
+		show_unit_leaders_tooltip = CHI_li_jishen		
+		show_unit_leaders_tooltip = LEP_li_yutang
+		show_unit_leaders_tooltip = CHI_peng_xuefeng
+		custom_effect_tooltip = league_mid_54_ANQ_sun_liren_tt
+		show_unit_leaders_tooltip = ANQ_sun_liren
 		CHI_recruit_PAC_endgame_advisors_effect = yes
 	}
 }
@@ -2568,6 +2685,7 @@ unit_leader_event = { #黄百韬
 	option = {
 		name = league_generic.5.a
 		log = "[GetLogInfo]: event league_generic.5 option league_generic.5.a"
+		LEP_huang_baitao = { add_unit_leader_trait = rising_star }
 		hidden_effect = {
 			random_owned_controlled_state = {
 				prioritize = { 613 }
