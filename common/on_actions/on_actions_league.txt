@@ -13,4 +13,15 @@ on_actions = {
 			}
 		}
 	}
+
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = LEP }
+				}
+				unit_leader_event = league_generic.7 #Champion Event
+			}
+		}
+	}
 }
