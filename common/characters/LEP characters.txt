@@ -362,6 +362,21 @@ characters = {
 			}
 		}
 	}
+
+	#司徒雷登
+	LEP_leighton_stuart = {
+		name = LEP_leighton_stuart
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_leighton_stuart_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = LEP_leighton_stuart_advisor
+			traits = { venerable_diplomat }
+		}
+	}
 	#江谦
 	LEP_jiang_qian = {
 		name = LEP_jiang_qian
@@ -1521,6 +1536,42 @@ characters = {
 		}
 	}
 
+	#李玉堂
+	LEP_li_yutang = {
+		name = LEP_li_yutang
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_li_yutang_army_small
+				large = GFX_portrait_LEP_li_yutang_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_li_yutang_high_command_desc
+			traits = { 
+				career_officer
+				light_infantry_officer
+				brilliant_strategist
+				urban_assault_specialist
+				trickster
+				expert_improviser
+				CHN_LKT_officer_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = LEP_li_yutang_high_command
+			ledger = army
+			traits = { LEPEXP_maneuver_warfare }
+			cost = 150
+		}
+	}
+
 	#方本仁
 	LEP_fang_benren = {
 		name = LEP_fang_benren
@@ -1634,8 +1685,8 @@ characters = {
 				large = GFX_portrait_LEP_liu_qingeng_scientist_large
 			}
 			army = {
-				small = GFX_portrait_LEP_liuqingeng_army_small
-				large = GFX_portrait_LEP_liuqingeng_army_large
+				small = GFX_portrait_LEP_liu_qingeng_army_small
+				large = GFX_portrait_LEP_liu_qingeng_army_large
 			}
 		}
 		scientist = {

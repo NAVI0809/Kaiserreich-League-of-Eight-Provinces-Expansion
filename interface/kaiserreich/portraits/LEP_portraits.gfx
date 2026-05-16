@@ -64,13 +64,41 @@ spriteTypes = {
 		texturefile = "gfx/interface/advisors/LEP/LEP_rong_zongjing.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_LEP_liu_qingeng_civilian_small"
+		name = "GFX_portrait_LEP_liu_qingeng_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_liu_qingeng.png"
 	}
-	#zigai
 	spriteType = {
-		name = "GFX_portrait_LEP_liuqingeng_army_large"
+		name = "GFX_portrait_LEP_li_yutang_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_yutang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_leighton_stuart_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_leighton_stuart.png"
+	}
+	#zigai 
+	spriteType = {
+		name = "GFX_portrait_CHI_peng_xuefeng_dem"
+		texturefile = "gfx/leaders/LEP/CHI_peng_xuefeng_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_yutang_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_yutang_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ANQ_sun_liren_dem"
+		texturefile = "gfx/leaders/LEP/ANQ_sun_liren_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_CHI_li_jishen_dem"
+		texturefile = "gfx/leaders/LEP/CHI_li_jishen_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_army_large"
 		texturefile = "gfx/leaders/LEP/LEP_liu_qingeng_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_liu_qingeng_dem_army_large.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_liu_qingeng_scientist_large"

@@ -1078,6 +1078,11 @@ LEP_change_clothes_of_generals = {
 			army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
 		}
 	}
+	LEP_liu_qingeng = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_liu_qingeng_dem_army_large }
+		}
+	}
 	
 }
 
