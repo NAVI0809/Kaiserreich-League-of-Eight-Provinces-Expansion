@@ -1572,6 +1572,40 @@ characters = {
 		}
 	}
 
+    #马师恭
+	LEP_ma_shigong = {
+		name = LEP_ma_shigong
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_ma_shigong_army_small
+				large = GFX_portrait_LEP_ma_shigong_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_ma_shigong_high_command_desc
+			traits = { 
+				career_officer
+				light_infantry_officer
+				trickster
+				paratrooper
+				CHN_RKT_officer_trait
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = LEP_ma_shigong_high_command
+			ledger = army
+			traits = { KR_MHC_airborne_2 }
+			cost = 100
+		}
+	}
+
 	#方本仁
 	LEP_fang_benren = {
 		name = LEP_fang_benren
