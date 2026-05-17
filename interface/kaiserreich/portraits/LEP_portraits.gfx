@@ -75,7 +75,15 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_leighton_stuart_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_leighton_stuart.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_shigong_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ma_shigong_army_small.png"
+	}
 	#zigai 
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_shigong_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_ma_shigong_army_large.png"
+	}
 	spriteType = {
 		name = "GFX_portrait_CHI_peng_xuefeng_dem"
 		texturefile = "gfx/leaders/LEP/CHI_peng_xuefeng_dem.png"
