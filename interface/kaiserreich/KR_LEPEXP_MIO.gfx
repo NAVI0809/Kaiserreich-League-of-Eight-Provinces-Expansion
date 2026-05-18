@@ -1,4 +1,5 @@
 spriteTypes = {
+	
 	#MIOs
 	spriteType = {
 		name = "GFX_idea_LEP_MIO_hongqiao"
@@ -7,6 +8,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_LEP_MIO_jinling"
 		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_jinling.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_zeiss"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_zeiss.png"
+	}
+
+	#MIO trait
+	spriteType = {
+		name = "GFX_LEP_MIO_trait_jinling"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_MIO_trait_jinling.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_icon_zeiss"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_mio_trait_icon_zeiss.png"
 	}
 }
 

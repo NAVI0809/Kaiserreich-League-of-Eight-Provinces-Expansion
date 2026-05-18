@@ -2000,7 +2000,7 @@ ideas = {
 			picture = SWE_formation_flying
 			allowed = { always = no }
 			modifier = {
-				air_training_xp_gain_factor = 0.08
+				air_training_xp_gain_factor = 0.1
 				air_mission_efficiency = 0.05
 				ground_attack_factor = 0.05
 				air_ace_bonuses_factor = 0.15
