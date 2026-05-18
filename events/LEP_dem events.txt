@@ -1,6 +1,7 @@
 add_namespace = league_mid
 add_namespace = league_rebuild
 add_namespace = league_generic
+add_namespace = league_endgame
 
 country_event = { #明争暗斗
 	id = league_mid.1
@@ -2608,6 +2609,82 @@ country_event = {
 	}
 }
 
+##各路线特有事件
+country_event = { #民主科学社
+	id = league_endgame.1
+	title = league_endgame.1.t
+	desc = league_endgame.1.d
+	picture = GFX_report_event_LEP_chu_fucheng
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_endgame.1 option league_endgame.1.a"
+		name = league_endgame.1.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #政学系
+	id = league_endgame.2
+	title = league_endgame.2.t
+	desc = league_endgame.2.d
+	picture = GFX_report_event_LEP_chu_fucheng
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_endgame.2 option league_endgame.2.a"
+		name = league_endgame.2.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #工商联
+	id = league_endgame.3
+	title = league_endgame.3.t
+	desc = league_endgame.3.d
+	picture = GFX_report_event_LEC_shanghai_river
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_endgame.3 option league_endgame.3.a"
+		name = league_endgame.3.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #救国会
+	id = league_endgame.4
+	title = league_endgame.4.t
+	desc = league_endgame.4.d
+	picture = GFX_report_event_LEP_ma_xulun
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_endgame.4 option league_endgame.4.a"
+		name = league_endgame.4.a
+		add_political_power = 10
+	}
+}
+
+country_event = { #景星会
+	id = league_endgame.5
+	title = league_endgame.5.t
+	desc = league_endgame.5.d
+	picture = GFX_report_event_CHN_official_announcement
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_endgame.5 option league_endgame.5.a"
+		name = league_endgame.5.a
+		add_political_power = 10
+	}
+}
+
 country_event = { #政治不信任
 	id = league_generic.1
 	title = league_generic.1.t
@@ -2962,7 +3039,9 @@ country_event = { #新建铝热法铬冶炼工厂
 		}
 	}
 }
-news_event = {
+
+#各派系掌权新闻
+news_event = {#通用统一新闻
 	id = china_events.317
 	immediate = { log = "[GetLogInfo]: event china_events.317" }
 	title = china_events.317.t
@@ -2980,7 +3059,7 @@ news_event = {
 	}
 }
 
-news_event = {
+news_event = {#民主科学社
 	id = china_events.318
 	immediate = { log = "[GetLogInfo]: event china_events.318" }
 	title = china_events.318.t
