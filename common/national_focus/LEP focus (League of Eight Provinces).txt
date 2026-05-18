@@ -50,6 +50,7 @@ focus_tree = {
 			hidden_effect = {
 				add_political_power = 80
 			}
+			
 		}
 	}
 	
@@ -1880,6 +1881,7 @@ focus_tree = {
 		}
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		completion_reward = {
+			country_event = { id = china_events.318 days = 0 }
 			LEP_chu_fucheng = { add_trait = { trait = LEP_autonomy_standard_bearer ideology = social_liberal_subtype } }
 		}
 
@@ -2165,6 +2167,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		completion_reward = {
+			country_event = { id = league_endgame.1 days = 0 }
 			LEP_improve_popular_support = yes
 		}
 
@@ -2181,6 +2184,7 @@ focus_tree = {
 		}
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		completion_reward = {
+			country_event = { id = china_events.319 days = 0 }
 			QIE_huang_fu = { add_trait = { trait = LEP_order_engineer ideology = market_liberal_subtype } }
 		}
 
@@ -2443,6 +2447,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
+			country_event = { id = league_endgame.2 days = 0 }
 			LEP_improve_popular_support = yes
 		}
 
@@ -2459,6 +2464,7 @@ focus_tree = {
 			has_country_flag = LEP_JNSB_win
 		}
 		completion_reward = {
+			country_event = { id = china_events.320 days = 0 }
 			LEP_rong_zongjing = { add_trait = { trait = LEP_chamber_of_commerce_leader ideology = social_conservative_subtype } }
 
 		}
@@ -2741,6 +2747,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			country_event = { id = league_endgame.3 days = 0 }
 			LEP_improve_popular_support = yes
 		}
 
@@ -2937,6 +2944,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
 			hidden_effect = {
+				country_event = { id = china_events.321 days = 0 }
 				set_country_flag = LEP_JGH_win
 			}
 		}
@@ -3026,7 +3034,9 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = unlock_focuses
+			
 			hidden_effect = {
+				country_event = { id = china_events.322 days = 0 }
 				set_country_flag = LEP_JXH_win
 			}
 		}
@@ -3207,6 +3217,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
+			country_event = { id = league_endgame.4 days = 0 }
 			LEP_improve_popular_support = yes
 		}
 
@@ -3291,6 +3302,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			country_event = { id = league_endgame.5 days = 0 }
 			LEP_improve_popular_support = yes
 		}
 
