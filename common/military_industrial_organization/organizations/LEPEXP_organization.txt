@@ -681,8 +681,42 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		#}
 	}
 
+	trait = {#采用国产蔡司炮队镜
+		token = lepexp_jinling_zeiss_1
+		name = lepexp_jinling_zeiss_1
+		icon = GFX_KR_LEP_mio_trait_icon_zeiss
 
+		visible = { FROM = { has_country_flag = lepexp_jinling_artillery } }
+		available = { FROM = { has_country_flag = lepexp_jinling_weapons_chosen } }
 
+		position = { x = 4 y = 4 }
+
+		special_trait_background = yes
+
+		limit_to_equipment_type = { 
+			artillery_equipment 
+			rocket_artillery_equipment 
+			anti_tank_equipment
+		}
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			ap_attack = 0.1
+			breakthrough = 0.05
+			defense = 0.075
+			build_cost_ic = 0.02
+		}
+
+		production_bonus = {
+			production_resource_need_factor = 0.02		
+		}
+
+		#on_complete = {
+		#}
+	}
+
+    ### --end ofartillery traits -- ###
+    ###################################
 	#NAVY traits
 	trait = {#造船部门扩张
 		token = lepexp_jinling_NAVY_2
