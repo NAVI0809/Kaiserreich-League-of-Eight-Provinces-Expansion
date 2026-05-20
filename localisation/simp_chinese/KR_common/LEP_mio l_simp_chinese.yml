@@ -9,6 +9,8 @@
  div_qingxing_unit: "轻型步兵协"
  div_jingbei_unit: "警备协"
  div_fujianluzhandui_unit: "陆战队混成旅"
+ div_armoured_unit: "装甲师（新）"
+ div_marine_new_unit: "陆战队师"
 
  LEPEXP_DEBUG_CAT: "MIO调试"
  LEPEXP_MIO_debug_hongqiao: "上海虹桥航空工厂调试"
