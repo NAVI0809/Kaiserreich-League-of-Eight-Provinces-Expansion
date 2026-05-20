@@ -7584,7 +7584,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_army_nationalization
-		icon = GFX_goal_generic_army_cooperation
+		icon = GFX_goal_CHN_beiyang_militarism
 		cost = 5
         relative_position_id = LEP_ningbo_autonomy_army
 		x = 1
@@ -7628,6 +7628,9 @@ focus_tree = {
 			focus = LEP_army_nationalization
 		}
 		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.05
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = {
 				localization_key = tooltip_modify_dynmod
 				DYNMOD = LEP_national_autonomy_army
@@ -7647,10 +7650,7 @@ focus_tree = {
 			add_to_variable = {
 				LEP_experience_loss_factor = -0.25
 				tooltip = experience_loss_factor_tooltip
-			}
-			custom_effect_tooltip = tooltip_white_line
-			army_experience = 25
-			add_war_support = 0.05
+			}			
 			custom_effect_tooltip = tooltip_white_line
 			china_army_reform_increase_step = yes
 		}
@@ -7695,7 +7695,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_innovation_breeds_victory
-		icon = GFX_goal_generic_army_cooperation
+		icon = GFX_goal_chinese_instructors
 		cost = 6
 
 		relative_position_id = LEP_new_model_officer
@@ -7779,7 +7779,7 @@ focus_tree = {
 			value = GFX_goal_LEP_officer_initiative
 		}
 		icon = {
-			value = GFX_focus_generic_military_mission
+			value = GFX_goal_China_Beiyang_Army
 		}
 		dynamic = yes
 		cost = 7
@@ -7829,7 +7829,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_thorough_logistics
-		icon = GFX_focus_generic_truck
+		icon = GFX_focus_generic_supply_line
 		cost = 7
 
 		relative_position_id = LEP_innovation_breeds_victory
@@ -8250,6 +8250,9 @@ focus_tree = {
 			focus = LEP_southeast_iron_army
 		}
 		completion_reward = {
+			show_unit_leaders_tooltip = LEP_li_rentao
+			show_unit_leaders_tooltip = LEP_xu_peigen
+			custom_effect_tooltip = tooltip_white_line
 			effect_tooltip = {
 				add_trait = {
 					character = LEP_zhejun_officers_theorist
@@ -8257,8 +8260,7 @@ focus_tree = {
 					trait = LEP_professional_nco_system
 				}
 			}
-			show_unit_leaders_tooltip = LEP_li_rentao
-			_unit_leaders_tooltip = LEP_xu_peigen
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.005
@@ -8326,12 +8328,25 @@ focus_tree = {
 			every_unit_leader = {
 				add_logistics = 1
 			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_dlc_aat = no }
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = faw_motors
 			}
 			else = {
+				if = {
+					limit = { mio:LEP_jinling_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = available_mio_tt
+				}
+				mio:LEP_jinling_organisation = {
+					add_mio_size = 1
+				    add_mio_funds = 400
+				}
+				
+				custom_effect_tooltip = tooltip_white_line
+				
 				if = {
 					limit = { mio:CHN_transportation_industry_organisation = { is_mio_available = no } }
 					custom_effect_tooltip = tooltip_white_line
@@ -8341,6 +8356,7 @@ focus_tree = {
 				mio:CHN_transportation_industry_organisation = {
 					set_mio_flag = CHN_mio_unlocked
 					add_mio_size = 1
+					add_mio_funds = 400
 				}
 			}
 		}
@@ -8348,7 +8364,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_strengthen_fire_support
-		icon = GFX_goal_generic_army_superior_firepower
+		icon = GFX_focus_SWE_let_fly_all_guns
 		cost = 5
         relative_position_id = LEP_looking_to_the_west
 		x = 1
@@ -9047,6 +9063,7 @@ focus_tree = {
 				uses = 2
 				category = air_doctrine
 			}
+			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 1
@@ -9480,6 +9497,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_the_pinnacle_of_chinese_soldiery"
 			custom_effect_tooltip = LEP_combine_army_ideas_tt
+			add_potential_special_forces_tree = yes
 			custom_effect_tooltip = tooltip_white_line
 			china_add_research_slots = yes
 			hidden_effect = {
