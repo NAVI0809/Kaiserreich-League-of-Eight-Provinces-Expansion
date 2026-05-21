@@ -7890,6 +7890,8 @@ focus_tree = {
 		prerequisite = { focus = LEP_innovation_breeds_victory }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_thorough_logistics"
+			enable_tech_improved_logistics = yes
+			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = LEP_thorough_logistics
 				bonus = 0.75
@@ -8014,6 +8016,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_tide_of_steel"
 			add_command_power = -10
+			add_ideas = GER_self_propelled_artillery
+			add_ideas = LEP_idea_tide_of_steel
 			if = {
 				limit = { has_tech = basic_medium_tank_chassis }
 				create_equipment_variant = {
@@ -9128,6 +9132,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"
 
+			add_ideas = GEA_pacific_rule_idea
+			custom_effect_tooltip = tooltip_white_line
+
 			if = {
 			    limit = { NOT = { has_tech = early_ship_hull_light } }
 			    set_technology = { early_ship_hull_light = 1 }
@@ -9283,7 +9290,7 @@ focus_tree = {
 		cost = 7
 
 		relative_position_id = LEP_recruit_beiyang_admiralty
-		x = 0
+		x = 2
 		y = 1
 
 		ai_will_do = {
@@ -9296,6 +9303,7 @@ focus_tree = {
 		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus LEP_marine_exp"
+			add_potential_special_forces_tree = yes
 			enable_tech_marine_bonus = yes
 			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
@@ -9355,14 +9363,14 @@ focus_tree = {
 						TYPE = "Marine-Division"
 					}
 					create_unit = {
-						division = "name = \"Luzhandui Di 1 Shi-'Mingquan'\"division_template = \"Marine-Division\" start_experience_factor = 0.5"
+						division = "name = \"Luzhandui Di 1 Shi-'Mingquan'\"division_template = \"Marine-Division\" start_experience_factor = 0.8"
 						owner = ROOT
 					}
 				}
 			}
 			random_owned_controlled_state = {
 				limit = {
-					is_core_of = GER
+					is_core_of = LEP
 					valid_state_for_spawning_friendly_unit = yes
 				}
 				custom_override_tooltip = {
@@ -9371,7 +9379,7 @@ focus_tree = {
 						TYPE = "Marine-Division"
 					}
 					create_unit = {
-						division = "name = \"Luzhandui Lianjun Di 2 Shi-'Zhuquan'\"division_template = \"Marine-Division\" start_experience_factor = 0.5"
+						division = "name = \"Luzhandui Lianjun Di 2 Shi-'Zhuquan'\"division_template = \"Marine-Division\" start_experience_factor = 0.8"
 						owner = ROOT
 					}
 				}
@@ -9382,6 +9390,164 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_BONUS
 			FOCUS_FILTER_RESEARCH
 		}
+	}
+
+	focus = {
+		id = LEP_coast_radar
+		icon = GFX_goal_generic_radar_instillation
+		cost = 7
+
+		relative_position_id = LEP_recruit_beiyang_admiralty
+		x = -2
+		y = 1
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 2
+				china_is_the_unifier_of_china_trigger = yes
+			}
+		}
+		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus LEP_coast_radar"
+			add_tech_bonus = {
+				name = LEP_coast_radar
+				bonus = 0.5
+				uses = 2
+				category = radar_tech
+			}
+			custom_effect_tooltip = CHI_coastal_defense_stratagems_tt
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 745 #Dalian
+						state = 1065 #Weixian
+						state = 1075 #Nantong
+						state = 1099 #Samnam
+					}
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { is_ally_with = KOR }
+				KOR = {
+					random_owned_controlled_state = {
+						prioritize = { 1099 }
+						limit = {
+							is_core_of = ROOT
+							is_coastal = yes
+						}
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_NAVY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_six_year_programme
+		icon = GFX_goal_bluewater_navy
+		cost = 7
+
+		relative_position_id = LEP_recruit_beiyang_admiralty
+		x = 0
+		y = 1
+
+		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 2
+				china_is_the_unifier_of_china_trigger = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed CHI_six_year_programme"
+			add_timed_idea = {
+				idea = SHX_rapid_naval_modernisation_idea
+				days = 365
+			}
+			add_timed_idea = {
+				idea = CHI_six_year_programme_idea
+				days = 365
+			}
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 613 } #南京
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 743 } #Shanghai
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = csic
+			}
+			else = {
+				if = {
+					limit = { mio:CHN_naval_industry_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = available_mio_tt
+					show_mio_tooltip = CHN_naval_industry_organisation
+				}
+				mio:CHN_naval_industry_organisation = {
+					set_mio_flag = CHN_mio_unlocked
+					add_mio_size = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
 
 	focus = {
@@ -9503,6 +9669,104 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_kongshu_trooper
+		icon = GFX_focus_generic_paratrooper
+		cost = 5
+
+		relative_position_id = LEP_nanjing_air_academy
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			base = 30
+			modifier = {
+				has_war = yes
+				add = 15
+			}
+		}
+		prerequisite = { focus = LEP_nanjing_air_academy }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_cult_of_aviation"
+			add_potential_special_forces_tree = yes
+			add_doctrine_cost_reduction = {
+				name = LEP_kongshu_trooper
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_paratroopers_doctrine
+			}
+			add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 100 producer = USA }
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Kongshu Budui"
+					LINE_1 = { localization_key = line_battalion_tt NAME = paratrooper ICON = GFX_unit_paratrooper_icon_small COUNT = 8 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = airborne_light_armor ICON = GFX_unit_light_armor_icon_small }
+				}
+				if = {
+					limit = { has_template = "Kongshu Budui" }
+					delete_unit_template_and_units = { division_template = "Kongshu Budui" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Kongshu Budui"
+					division_names_group = LEP_PAR_02
+					regiments = {
+						paratrooper = { x = 0 y = 0 }
+						paratrooper = { x = 0 y = 1 }
+						paratrooper = { x = 1 y = 0 }
+						paratrooper = { x = 1 y = 1 }
+						paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 2 y = 1 }
+						paratrooper = { x = 3 y = 0 }
+						paratrooper = { x = 3 y = 1 }
+					}
+					support = {
+						combat_engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						airborne_light_armor = { x = 0 y = 2 }
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 613 } #南京
+				limit = { valid_state_for_spawning_friendly_unit = yes }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Kongshu Budui"
+					}
+					create_unit = {
+						division = "division_template = \"Kongshu Budui\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 606 } #安庆
+				limit = { valid_state_for_spawning_friendly_unit = yes }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Kongshu Budui"
+					}
+					create_unit = {
+						division = "division_template = \"Kongshu Budui\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			enable_tech_better_paratroopers = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_ARMY_BONUS
+		}
+	}
+
+	focus = {
 		id = LEP_cult_of_aviation
 		icon = GFX_focus_SOV_flying_clubs
 		cost = 5
@@ -9560,7 +9824,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = -3
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -9636,7 +9900,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_china_air_fleet
-		x = 0
+		x = 2
 		y = 1
 
 		available = {
