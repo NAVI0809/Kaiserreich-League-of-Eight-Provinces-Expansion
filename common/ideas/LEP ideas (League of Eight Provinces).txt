@@ -4205,6 +4205,15 @@ ideas = {
 				}
 			}
 		}
+		LEP_idea_tide_of_steel = { #New Guards Units
+			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel " }
+			picture = GFX_idea_advisors_china_beiyang
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				additional_brigade_column_size = 1
+			}
+		}
 	}
 
 

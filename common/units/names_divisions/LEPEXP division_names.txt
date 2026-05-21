@@ -131,3 +131,21 @@ LEP_ARM_02 = {
 	}
 }
 
+LEP_PAR_02 = {
+	name = div_paratrooper_unit_LEPEXP
+
+	for_countries = { LEP }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Kongshu Di %d Xie"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Kongshu Di %d Shi" }
+	}
+}
