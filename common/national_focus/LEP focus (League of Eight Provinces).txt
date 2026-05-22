@@ -9687,7 +9687,8 @@ focus_tree = {
 		prerequisite = { focus = LEP_nanjing_air_academy }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_cult_of_aviation"
-			LEP_ma_shigong = { CHN_recruit_character_effect = yes }
+			show_unit_leaders_tooltip = LEP_ma_shigong
+			hidden_effect = { LEP_ma_shigong = { CHN_recruit_character_effect = yes } }
 			custom_effect_tooltip = tooltip_white_line
 			add_potential_special_forces_tree = yes
 			add_doctrine_cost_reduction = {
