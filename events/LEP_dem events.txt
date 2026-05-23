@@ -1488,7 +1488,7 @@ country_event = { #谈判成功
 				        }
 			    	}
 				}
-				else_if = {
+				if = {
 					limit = {
 						has_character = ANQ_sun_liren
 					}
@@ -1499,7 +1499,7 @@ country_event = { #谈判成功
 				        }
 			    	}
 				}
-				else_if = {
+				if = {
 					limit = {
 						has_character = CHI_chen_shaokuan
 					}
@@ -1507,7 +1507,7 @@ country_event = { #谈判成功
 				    	set_nationality = ROOT
 			    	}
 				}
-				else_if = {
+				if = {
 					limit = {
 						has_character = CHI_peng_xuefeng
 					}
@@ -1544,7 +1544,7 @@ country_event = { #谈判成功
 				        }
 			        }
 				}
-				else_if = {
+				if = {
 				    limit = {
 					    has_character = ANQ_sun_liren
 				    }
@@ -1557,6 +1557,19 @@ country_event = { #谈判成功
 			    }
 			}
 			QIE = {
+				if = {
+					limit = {
+						has_character = ANQ_sun_liren
+					}
+					ANQ_sun_liren = {
+				        set_nationality = ROOT
+						set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+				}
+			}
+			HNN = {
 				if = {
 					limit = {
 						has_character = ANQ_sun_liren
