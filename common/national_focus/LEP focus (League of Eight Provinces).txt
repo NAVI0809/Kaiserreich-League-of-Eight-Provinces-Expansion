@@ -7952,7 +7952,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = LEP_thorough_logistics }
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_field_hospital"
+			log = "[GetLogRoot]: Focus Completed LEP_field_hospital_focus"
 			add_tech_bonus = {
 				name = LEP_field_hospital_focus
 				bonus = 0.75
