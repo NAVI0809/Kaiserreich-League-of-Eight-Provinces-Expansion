@@ -805,6 +805,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = tooltip_white_line
 			remove_mission = LEP_temp_suppress_kmt
+			remove_mission = LEP_temp_suppress_rural_banditry
 			
 			activate_targeted_decision = { target = THIS decision = LEP_decision_lower_kmt_unrest }
 			LEP_strengthen_ZXX_small = yes
@@ -878,6 +879,20 @@ focus_tree = {
 					add_to_array = { ROOT.china_possible_targets_array = YUN }
 					add_to_array = { china_possible_allies_array = YUN }
 					effect_tooltip = { activate_targeted_decision = { target = YUN decision = china_demand_submission } }
+				}
+			}
+			if = {
+				limit = {
+					SHD = {
+						AND = {
+							exists = yes
+							is_subject = no
+						}
+					}
+				}
+				create_wargoal = {
+					target = SHD
+					type = annex_everything
 				}
 			}
 		}
@@ -3850,6 +3865,7 @@ focus_tree = {
 		y = 25
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		allow_branch = { china_is_the_unifier_of_china_trigger = yes }
+		
 		completion_reward = {
 			add_political_power = 50
 			add_war_support = 0.1

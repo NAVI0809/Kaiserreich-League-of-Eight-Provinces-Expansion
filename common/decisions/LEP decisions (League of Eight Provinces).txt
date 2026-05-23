@@ -2657,14 +2657,16 @@ LEP_liberation_of_asia_category = {
 			hidden_trigger = {
 				#So its not as annoying to see on cancel if not visible
 				FROM = {
-					any_owned_state = { is_claim_or_core_of_ROOT = yes }
-					any_owned_state = {
-						OR = {
-							is_on_continent = asia
-							is_on_continent = australia
-							is_on_continent = india
-							is_on_continent = middle_east #99% Afghanistan counts as ME
-						}
+					OR = {
+						any_owned_state = { is_claim_or_core_of_ROOT = yes }
+						any_owned_state = {
+						    OR = {
+							    is_on_continent = asia
+							    is_on_continent = australia
+							    is_on_continent = india
+							    is_on_continent = middle_east #99% Afghanistan counts as ME
+						    }
+					    }
 					}
 				}
 			}
