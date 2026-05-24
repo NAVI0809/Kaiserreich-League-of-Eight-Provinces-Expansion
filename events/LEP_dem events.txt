@@ -900,13 +900,15 @@ country_event = { #妇女参政权
 
 	immediate = {
 		hidden_effect = {
-			recruit_character = LEP_tang_qunying
+			LEP_tang_qunying = { CHN_recruitS_character_effect = yes }
 		}
 	}
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.33 option league_mid.33.a"
-		name = league_mid.33.a
+		name = league_mid.33.a 
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = LEP_tang_qunying_advisor
 	}
 }
 
@@ -1421,12 +1423,26 @@ country_event = { #新军官
 		log = "[GetLogInfo]: eventleague_mid.52 option league_mid.52.a"
 		name = league_mid.52.a
 		army_experience = 15
-		LEP_lin_wei = { CHN_recruit_character_effect = yes }
-		LEP_guo_chan = { CHN_recruit_character_effect = yes }
-		LEP_zhou_yan = { CHN_recruit_character_effect = yes }
-		LEP_xu_peigen = { CHN_recruit_character_effect = yes }
-		LEP_li_rentao = { CHN_recruit_character_effect = yes }
-		LEP_change_clothes_of_generals = yes
+		add_command_power = 20
+
+		LEP_huang_baitao = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_wang_e = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			LEP_huang_baitao = { CHN_recruit_character_effect = yes }
+			LEP_wang_e = { CHN_recruit_character_effect = yes }
+			LEP_huang_baitao = {
+                unit_leader_event = {
+                    id = league_generic.5
+                    hours = 12
+                }
+            }
+			LEP_wang_e = {
+                unit_leader_event = {
+                    id = league_generic.6
+                    hours = 26
+                }
+			}
+		}
 	}
 }
 
@@ -1475,8 +1491,11 @@ country_event = { #谈判成功
 
 	immediate = {
 		hidden_effect = {
+			
 			ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
 			CHI = {
+				CHI_recruit_PAC_endgame_advisors_effect = yes
+				CHI_recruit_peng_xuefeng_effect = yes
 				if = {
 					limit = {
 						has_character = CHI_li_jishen
@@ -1517,6 +1536,14 @@ country_event = { #谈判成功
 					        army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
 				        }
 			    	}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_character = CHI_peng_xuefeng
+						}						
+					}
+					CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
 				}
 			}
 			ANQ = {
@@ -1595,6 +1622,19 @@ country_event = { #谈判成功
 			        }
 				}
 			}
+			every_other_country = {
+				if = {
+					limit = {
+						has_character = ANQ_sun_liren
+					}
+					ANQ_sun_liren = {
+				        set_nationality = ROOT
+						set_portraits = {
+					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
+				        }
+			        }
+				}
+			}
 		}
 	}
 
@@ -1618,17 +1658,28 @@ country_event = { #谈判成功
 			ideology = totalist
 			popularity = 0.01
 		}
+		custom_effect_tooltip = tooltip_white_line
 		CHI = {
 			CHI_song_qingling = {
 				set_nationality = ROOT
 			}
 		}
-		show_unit_leaders_tooltip = CHI_li_jishen		
-		show_unit_leaders_tooltip = LEP_li_yutang
-		show_unit_leaders_tooltip = CHI_peng_xuefeng
+		custom_effect_tooltip = tooltip_white_line
+		CHI_li_jishen = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
 		custom_effect_tooltip = league_mid_54_ANQ_sun_liren_tt
-		show_unit_leaders_tooltip = ANQ_sun_liren
-		CHI_recruit_PAC_endgame_advisors_effect = yes
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			CHI = {
+				CHI_peng_xuefeng = {
+				    set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				    }
+			    }
+			}
+		}		
 	}
 }
 

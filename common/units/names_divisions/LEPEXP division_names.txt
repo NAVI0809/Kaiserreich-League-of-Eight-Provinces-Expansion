@@ -109,7 +109,7 @@ LEP_NMC_02 = {
 
 
 LEP_ARM_02 = {
-	name = div_armoured_unit
+	name = div_armoured_unit_2
 
 	for_countries = { LEP }
 

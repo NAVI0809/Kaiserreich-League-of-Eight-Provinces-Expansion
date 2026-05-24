@@ -136,7 +136,9 @@ recruit_character = LEP_ouyang_wu
 recruit_character = LEP_li_chenggan
 recruit_character = LEP_hermann_kriebel
 
+
 recruit_character = LEP_leighton_stuart
+recruit_character = LEP_tang_qunying
 
 
 ### Generals ###
@@ -192,39 +194,42 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 
+LEP_tang_qunying = { #recruit only by league_mid.33
+	retire = yes
+}
 LEP_ma_shigong = { #recruit only by paratrooper focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_li_yutang = {
+LEP_li_yutang = { #recruit only by league_mid.54
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_wang_e = {
+LEP_wang_e = { #recruit only by league_mid.52
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_huang_baitao = {
+LEP_huang_baitao = { #recruit only by league_mid.52
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_lin_wei = {
+LEP_lin_wei = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_guo_chan = {
+LEP_guo_chan = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_zhou_yan = {
+LEP_zhou_yan = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_li_rentao = {
+LEP_li_rentao = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
-LEP_xu_peigen = {
+LEP_xu_peigen = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }

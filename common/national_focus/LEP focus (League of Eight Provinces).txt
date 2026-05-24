@@ -7440,27 +7440,11 @@ focus_tree = {
 				tooltip = max_dig_in_tooltip
 			}
 			custom_effect_tooltip = tooltip_white_line
-			show_unit_leaders_tooltip = LEP_guo_chan
-			show_unit_leaders_tooltip = LEP_zhou_yan
-			show_unit_leaders_tooltip = LEP_huang_baitao
-			show_unit_leaders_tooltip = LEP_wang_e
+			LEP_guo_chan = { custom_effect_tooltip = character_becomes_a_general }
+			LEP_zhou_yan = { custom_effect_tooltip = character_becomes_a_general }
 			hidden_effect = {
 				LEP_guo_chan = { CHN_recruit_character_effect = yes }
-				LEP_zhou_yan = { CHN_recruit_character_effect = yes }
-				LEP_huang_baitao = { CHN_recruit_character_effect = yes }
-				LEP_wang_e = { CHN_recruit_character_effect = yes }
-				LEP_huang_baitao = {
-                    unit_leader_event = {
-                        id = league_generic.5
-                        hours = 12
-                    }
-                }
-				LEP_wang_e = {
-                    unit_leader_event = {
-                        id = league_generic.6
-                        hours = 26
-                    }
-				}
+				LEP_zhou_yan = { CHN_recruit_character_effect = yes }								
 				if = {
 				    limit = { has_dlc_nsb = yes }
 				    if = {
@@ -7517,7 +7501,8 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_character = LEP_chen_yi }
-				custom_effect_tooltip = LEP_chen_yi_will_recommend_lin_wei
+				custom_effect_tooltip = LEP_chen_yi_will_recommend_lin_wei_lepexp
+				LEP_lin_wei = { custom_effect_tooltip = character_becomes_a_general }
 				hidden_effect = { LEP_lin_wei = { CHN_recruit_character_effect = yes } }
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -8510,8 +8495,8 @@ focus_tree = {
 			focus = LEP_southeast_iron_army
 		}
 		completion_reward = {
-			show_unit_leaders_tooltip = LEP_li_rentao
-			show_unit_leaders_tooltip = LEP_xu_peigen
+			LEP_li_rentao = { custom_effect_tooltip = character_becomes_a_general }
+			LEP_xu_peigen = { custom_effect_tooltip = character_becomes_a_general }
 			custom_effect_tooltip = tooltip_white_line
 			effect_tooltip = {
 				add_trait = {
@@ -8557,6 +8542,8 @@ focus_tree = {
 			focus = LEP_looking_to_the_west
 		}
 		completion_reward = {
+			LEP_li_erkang = { custom_effect_tooltip = character_becomes_a_general }
+			custom_effect_tooltip = tooltip_white_line
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 100
@@ -9703,7 +9690,7 @@ focus_tree = {
 		prerequisite = { focus = LEP_nanjing_air_academy }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_cult_of_aviation"
-			show_unit_leaders_tooltip = LEP_ma_shigong
+			LEP_ma_shigong = { custom_effect_tooltip = character_becomes_a_general }
 			hidden_effect = { LEP_ma_shigong = { CHN_recruit_character_effect = yes } }
 			custom_effect_tooltip = tooltip_white_line
 			add_potential_special_forces_tree = yes
