@@ -1,6 +1,12 @@
 spriteTypes = {
+	#idea
 	spriteType = {
 		name = "GFX_idea_LEP_Liu_rifle_idea"
 		texturefile = "gfx/interface/ideas/LEP_Liu_rifle.png"
+	}
+	#decisons
+	spriteType = {
+		name = "GFX_decision_cat_picture_N38D_marching"
+		texturefile = "gfx/interface/decisions/decisions_categories_pictures/N38D_marching.png"
 	}
 }

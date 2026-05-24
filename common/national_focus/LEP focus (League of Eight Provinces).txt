@@ -7531,6 +7531,7 @@ focus_tree = {
 						infantry = { x = 1 y = 0 }
 						infantry = { x = 1 y = 1 }
 						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
 						artillery_brigade = { x = 2 y = 0 }
 						artillery_brigade = { x = 2 y = 1 }
 					}
@@ -7654,6 +7655,18 @@ focus_tree = {
 			}			
 			custom_effect_tooltip = tooltip_white_line
 			china_army_reform_increase_step = yes
+			activate_mission = LEPEXP_east_coast_defence_readyness
+			country_event = { id = league_mid.64 days = 1 }
+			set_country_flag = LEP_east_coast_defence_readyness1_incomplete
+			set_country_flag = LEP_east_coast_defence_readyness2_incomplete
+			set_country_flag = LEP_east_coast_defence_readyness3_incomplete
+			set_country_flag = LEP_east_coast_defence_readyness4_incomplete
+			hidden_effect = {
+				activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
+				activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
+				activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
+				activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
+			}
 		}
 	}
 
@@ -8544,6 +8557,27 @@ focus_tree = {
 		completion_reward = {
 			LEP_li_erkang = { custom_effect_tooltip = character_becomes_a_general }
 			custom_effect_tooltip = tooltip_white_line
+			hidden_effect = {
+				LEP_li_erkang = {
+                    unit_leader_event = {
+                        id = league_generic.8
+                        hours = 6
+                    }
+			    }
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				name = LEP_material_mobilization
+				category = land_doctrine
+				uses = 1
+			}
+			add_mastery_bonus = {
+				name = LEP_material_mobilization
+				bonus = 0.25
+				days = 365
+				track = operations
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_equipment_to_stockpile = {
 				type = motorized_equipment
 				amount = 100
@@ -8556,13 +8590,13 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
-				name = CHI_create_supply_corps
+				name = LEP_material_mobilization
 				bonus = 1
 				uses = 1
 				category = support_tech
 			}
 			add_tech_bonus = {
-				name = LEP_emphasising_mobility
+				name = LEP_material_mobilization
 				bonus = 1
 				uses = 3
 				category = mio_cat_tech_all_armor_and_modules

@@ -8,6 +8,19 @@ LEP_military_industrial_complex_modifier = {
 	local_factory_energy_consumption = -0.10
 	industrial_capacity_dockyard = 0.1
 	industrial_capacity_factory = 0.1
-}	
+}
+LEPEXP_east_coast_defence_ready_modifier = {
+	icon = CHN_beiyang_star
 
+	remove_trigger = {
+		NOT = { is_owned_by = LEP }
+	}
 
+	equipment_capture_factor_for_controller = 0.1 #TODO_Manu: Potentially not necessary
+	enemy_army_speed_factor = -0.5
+	enemy_local_supplies = -0.3
+	enemy_attrition = 0.2
+	enemy_truck_attrition_factor = 0.2
+	army_defence_factor = 0.2
+	dig_in_speed_factor = 0.5
+}

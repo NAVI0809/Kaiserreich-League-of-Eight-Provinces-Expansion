@@ -53,6 +53,17 @@ LEPEXP_DEBUG_CAT = {
 	priority = 100
 }
 
+LEPEXP_military_defence_development_CAT = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_cat_picture_N38D_marching
+	allowed = { always = no }
+	visible = { 
+		original_tag = LEP
+		has_completed_focus = LEP_southeast_iron_army
+	}
+	priority = 80
+}
+
 LEP_balance_of_power_category = {
 	icon = GFX_decision_category_power_struggle
 	allowed = { original_tag = LEP }
