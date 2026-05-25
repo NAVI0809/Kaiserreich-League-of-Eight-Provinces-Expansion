@@ -2729,6 +2729,7 @@ LEPEXP_military_defence_development_CAT = {
 
 		is_good = no
 		days_mission_timeout = 720
+		priority = 100
 
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout LEPEXP_east_coast_defence_readyness"
@@ -2761,6 +2762,7 @@ LEPEXP_military_defence_development_CAT = {
 		cost = 40
 		days_remove = 120
 		fire_only_once = yes
+		priority = 50
 
 		modifier = {
 			civilian_factory_use = 3
@@ -2842,6 +2844,7 @@ LEPEXP_military_defence_development_CAT = {
 		cost = 40
 		days_remove = 120
 		fire_only_once = yes
+		priority = 50
 
 		modifier = {
 			civilian_factory_use = 3
@@ -2901,6 +2904,7 @@ LEPEXP_military_defence_development_CAT = {
 		cost = 40
 		days_remove = 120
 		fire_only_once = yes
+		priority = 50
 
 		modifier = {
 			civilian_factory_use = 3
@@ -2973,6 +2977,7 @@ LEPEXP_military_defence_development_CAT = {
 		cost = 40
 		days_remove = 120
 		fire_only_once = yes
+		priority = 40
 
 		custom_cost_text = LEP_50000_mp_4000_eq_30_cp
 		custom_cost_trigger = {
@@ -3064,6 +3069,57 @@ LEPEXP_military_defence_development_CAT = {
 						owner = ROOT
 						count = 2
 					}
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_coal_jinling_arsenal_descison = {
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			613 = { is_owned_and_controlled_by = ROOT }
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 } #nanjing
+		}
+		allowed = { tag = LEP }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 70
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_coal_jinling_arsenal_descison"
+		}
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_coal_jinling_arsenal_descison"
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = coal
+				amount = 4
+			}
+			if = {
+				limit = { has_dlc_aat = yes }
+				mio:LEP_jinling_organisation = {
+					add_mio_funds = 500
 				}
 			}
 		}

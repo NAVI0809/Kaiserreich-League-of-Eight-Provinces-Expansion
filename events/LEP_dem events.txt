@@ -1957,11 +1957,31 @@ country_event = { #特别国防预算听证会
 			activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
 		}
+		set_country_flag = LEP_east_coast_defence_readyness1_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness2_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness3_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness4_incomplete
+		hidden_effect = {
+			activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: eventleague_mid.64 option league_mid.64.b"
 		name = league_mid.64.b
 		effect_tooltip = {
+			activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
+		}
+		set_country_flag = LEP_east_coast_defence_readyness1_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness2_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness3_incomplete
+		set_country_flag = LEP_east_coast_defence_readyness4_incomplete
+		hidden_effect = {
 			activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }

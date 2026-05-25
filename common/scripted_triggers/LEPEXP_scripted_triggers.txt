@@ -1,0 +1,11 @@
+is_controlled_by_jap_or_its_puppet = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_jap_or_its_puppet_tt
+		controller = {
+			OR = {
+				is_puppet_of = JAP
+				TAG = JAP
+			}
+		}
+	}
+}

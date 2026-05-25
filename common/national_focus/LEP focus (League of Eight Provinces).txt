@@ -3655,6 +3655,7 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_gannan_tungsten_development
 			unlock_decision_tooltip = LEP_maanshan_iron_mine
 			unlock_decision_tooltip = LEP_revitalize_jingdezhen_porcelain_industry
+			unlock_decision_tooltip = LEPEXP_coal_jinling_arsenal_descison 
 			hidden_effect = {
 				country_event = { id = league_mid.37 days = 5 }
 			}
@@ -7613,6 +7614,7 @@ focus_tree = {
 				tooltip = experience_gain_factor_tooltip
 			}
 			country_event = { id = league_mid.43 days = 15 }
+			country_event = { id = league_mid.64 days = 1 } #国防线
 		}
 	}
 
@@ -7656,17 +7658,17 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			china_army_reform_increase_step = yes
 			activate_mission = LEPEXP_east_coast_defence_readyness
-			country_event = { id = league_mid.64 days = 1 }
-			set_country_flag = LEP_east_coast_defence_readyness1_incomplete
-			set_country_flag = LEP_east_coast_defence_readyness2_incomplete
-			set_country_flag = LEP_east_coast_defence_readyness3_incomplete
-			set_country_flag = LEP_east_coast_defence_readyness4_incomplete
-			hidden_effect = {
-				activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
-				activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
-				activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
-				activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
-			}
+			#country_event = { id = league_mid.64 days = 1 } #国防线
+			#set_country_flag = LEP_east_coast_defence_readyness1_incomplete
+			#set_country_flag = LEP_east_coast_defence_readyness2_incomplete
+			#set_country_flag = LEP_east_coast_defence_readyness3_incomplete
+			#set_country_flag = LEP_east_coast_defence_readyness4_incomplete
+			#hidden_effect = {
+			#	activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
+			#	activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
+			#	activate_targeted_decision = { target = FROM decision = LEPEXP_wufu_line_defence }
+			#	activate_targeted_decision = { target = FROM decision = LEPEXP_coast_guards_decision }
+			#}
 		}
 	}
 
