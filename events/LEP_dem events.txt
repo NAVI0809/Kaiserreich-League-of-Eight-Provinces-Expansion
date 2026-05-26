@@ -3077,6 +3077,23 @@ unit_leader_event = { #厉尔康
 	}
 }
 
+unit_leader_event = { #刘氏自装枪
+	id = league_generic.9
+	title = league_generic.9.t
+	desc = league_generic.9.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.9.a
+		log = "[GetLogInfo]: event league_generic.9 option league_generic.9.a"
+		army_experience = 15
+		add_ideas = LEP_Liu_rifle_2_idea
+	}
+}
+
 country_event = { #电解铝生产线
 	id = league_generic.1000
 	title = league_generic.1000.t

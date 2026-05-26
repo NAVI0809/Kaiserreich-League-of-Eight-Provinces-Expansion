@@ -4198,16 +4198,56 @@ ideas = {
 
 			equipment_bonus = {
 				infantry_equipment = {
+					reliability = -0.05
 					build_cost_ic = 0.10
 					soft_attack = 0.1
 					breakthrough = 0.1
 					instant = yes
 				}
 			}
+			on_remove = {
+				if = {
+					limit = {
+						tag = LEP
+					}
+					LEP_liu_qingeng = {
+						unit_leader_event = {
+                            id = league_generic.9 #刘氏自装枪
+                        }
+					}
+				}
+			}
+		}
+
+		LEP_Liu_rifle_2_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_2_idea" }
+			picture = GFX_idea_LEP_Liu_rifle_idea
+			allowed = { always = no }
+			available = {
+				limit = { NOT = { has_tech = infantry_equipment_3 } }
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.2
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					build_cost_ic = 0.03
+					soft_attack = 0.15
+					breakthrough = 0.15
+					instant = yes
+				}
+			}
 		}
 		LEP_idea_tide_of_steel = { #New Guards Units
 			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel " }
-			picture = GFX_idea_advisors_china_beiyang
+			picture = GFX_idea_LEP_idea_tide_of_steel
 			modifier = {
 				army_armor_attack_factor = 0.1
 				army_armor_defence_factor = 0.1
