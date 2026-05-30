@@ -3125,4 +3125,205 @@ LEPEXP_military_defence_development_CAT = {
 		}
 		fixed_random_seed = no
 	}
+
+	LEPEXP_GER_theorist_xu_peigeng_decision = {
+		icon = generic_army_support
+
+		visible = {
+			has_completed_focus = LEP_looking_to_the_west
+			NOT = {
+				has_country_flag = GER_theorist_done
+			}
+		}
+		allowed = { tag = LEP }
+		available = {
+			NOT = { 
+				command_power < 50 
+				has_army_experience < 10
+				has_country_flag = GER_theorist_done
+			}			
+		}
+
+		custom_cost_text = LEP_CP_50_ARMY_XP_50
+
+		priority = 100
+		ai_will_do = { factor = 50 }
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_GER_theorist_xu_peigeng_decision"
+			effect_tooltip = {
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_theory_of_moltke_of_the_east
+				}
+			}
+			hidden_effect = {
+				add_command_power = -50 
+				army_experience = -10
+				remove_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_german_military_mission
+				}
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_theory_of_moltke_of_the_east
+				}
+			}
+		}
+	}
+
+	LEPEXP_GER_theorist_li_rentao_decision = {
+		icon = generic_army_support
+
+		visible = {
+			has_completed_focus = LEP_looking_to_the_west
+			NOT = {
+				has_country_flag = GER_theorist_done
+			}
+		}
+		allowed = { tag = LEP }
+		available = {
+			NOT = { 
+				command_power < 50 
+				has_army_experience < 10
+				has_country_flag = GER_theorist_done
+			}			
+		}
+
+		custom_cost_text = LEP_CP_50_ARMY_XP_50
+
+		priority = 100
+		ai_will_do = { factor = 50 }
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_GER_theorist_li_rentao_decision"
+			effect_tooltip = {
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_theory_of_moltke_of_the_east
+				}
+			}
+			hidden_effect = {
+				add_command_power = -50 
+				army_experience = -10
+				remove_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_german_military_mission
+				}
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_gas_warfare_trait
+				}
+			}
+			set_country_flag = GER_theorist_done
+		}
+	}
+
+	LEPEXP_GER_theorist_liu_qingeng_decision = {
+		icon = generic_army_support
+
+		visible = {
+			has_completed_focus = LEP_looking_to_the_west
+			NOT = {
+				has_country_flag = GER_theorist_done
+			}
+		}
+		allowed = { tag = LEP }
+		available = {
+			NOT = { 
+				command_power < 50 
+				has_army_experience < 10
+				has_country_flag = GER_theorist_done
+			}			
+		}
+
+		custom_cost_text = LEP_CP_50_ARMY_XP_50
+
+		priority = 100
+		ai_will_do = { factor = 50 }
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_GER_theorist_liu_qingeng_decision"
+			effect_tooltip = {
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_theory_of_moltke_of_the_east
+				}
+			}
+			hidden_effect = {
+				add_command_power = -50 
+				army_experience = -10
+				remove_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_german_military_mission
+				}
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_harmony_of_military_industry
+				}
+			}
+		}
+	}
+
+	LEPEXP_GER_theorist_ger_decision = {
+		icon = generic_army_support
+
+		visible = {
+			has_completed_focus = LEP_looking_to_the_west
+			NOT = {
+				has_country_flag = GER_theorist_done
+			}
+		}
+		allowed = { tag = LEP }
+		available = {
+			NOT = { 
+				command_power < 50 
+				has_army_experience < 10
+				has_country_flag = GER_theorist_done
+			}			
+		}
+
+		custom_cost_text = LEP_CP_50_ARMY_XP_50
+
+		priority = 100
+		ai_will_do = { factor = 50 }
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_GER_theorist_ger_decision"
+			effect_tooltip = {
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_theory_of_moltke_of_the_east
+				}
+			}
+			hidden_effect = {
+				add_command_power = -50 
+				army_experience = -10
+				remove_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_german_military_mission
+				}
+				add_trait = {
+					character = LEP_german_trained_officers_theorist
+					slot = theorist
+					trait = LEP_legacy_of_the_weltkrieg_theorist
+				}
+			}
+		}
+	}	
 }

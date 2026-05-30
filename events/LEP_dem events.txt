@@ -3094,6 +3094,26 @@ unit_leader_event = { #刘氏自装枪
 	}
 }
 
+country_event = { #顾问团
+	id = league_generic.10
+	title = league_generic.10.t
+	desc = league_generic.10.d
+	picture = GFX_report_event_YUN_KMT_Army
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_generic.10 option league_generic.10.a"
+		name = league_generic.10.a
+		army_experience = 10
+		effect_tooltip = {
+			activate_targeted_decision = { target = FROM decision = EPEXP_GER_theorist_xu_peigeng_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_li_rentao_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_liu_qingeng_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_ger_decision }
+		}
+	}
+}
+
 country_event = { #电解铝生产线
 	id = league_generic.1000
 	title = league_generic.1000.t
@@ -3103,7 +3123,7 @@ country_event = { #电解铝生产线
 	hidden = yes
 
 	option = {
-		log = "[GetLogInfo]: event league_generic.1001 option league_generic.1000.a"
+		log = "[GetLogInfo]: event league_generic.1000 option league_generic.1000.a"
 		name = league_generic.1000.a
 		add_tech_bonus = {
 			name = lepexp_jinling_generic_1
@@ -3178,7 +3198,7 @@ country_event = { #新建铝热法铬冶炼工厂
 	hidden = yes
 
 	option = {
-		log = "[GetLogInfo]: event league_generic.1002 option league_generic.1002.a"
+		log = "[GetLogInfo]: event league_generic.1003 option league_generic.1003.a"
 		name = league_generic.1001.a
 		add_tech_bonus = {
 			name = lepexp_jinling_generic_4
