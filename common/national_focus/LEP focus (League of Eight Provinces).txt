@@ -7657,7 +7657,6 @@ focus_tree = {
 			}			
 			custom_effect_tooltip = tooltip_white_line
 			china_army_reform_increase_step = yes
-			activate_mission = LEPEXP_east_coast_defence_readyness
 			#country_event = { id = league_mid.64 days = 1 } #国防线
 			#set_country_flag = LEP_east_coast_defence_readyness1_incomplete
 			#set_country_flag = LEP_east_coast_defence_readyness2_incomplete

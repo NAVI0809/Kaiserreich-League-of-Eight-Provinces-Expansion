@@ -1142,13 +1142,6 @@ LEP_add_to_ECT = {
 	}
 }
 
-enable_tech_combat_engineer = {
-	custom_override_tooltip = {
-		tooltip = tech_effect|tech_LEP_combat_engineer
-		set_technology = { tech_LEP_combat_engineer = 1 popup = no }
-	}
-}
-
 
 
 

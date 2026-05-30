@@ -59,7 +59,7 @@ LEPEXP_military_defence_development_CAT = {
 	allowed = { always = no }
 	visible = { 
 		original_tag = LEP
-		has_completed_focus = LEP_southeast_iron_army
+		has_completed_focus = LEP_army_nationalization
 	}
 	priority = 80
 }

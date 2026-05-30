@@ -1951,6 +1951,7 @@ country_event = { #特别国防预算听证会
     option = {
 		log = "[GetLogInfo]: eventleague_mid.64 option league_mid.64.a"
 		name = league_mid.64.a
+		activate_mission = LEPEXP_east_coast_defence_readyness
 		effect_tooltip = {
 			activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }
@@ -3105,12 +3106,11 @@ country_event = { #顾问团
 		log = "[GetLogInfo]: event league_generic.10 option league_generic.10.a"
 		name = league_generic.10.a
 		army_experience = 10
-		effect_tooltip = {
-			activate_targeted_decision = { target = FROM decision = EPEXP_GER_theorist_xu_peigeng_decision }
-			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_li_rentao_decision }
-			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_liu_qingeng_decision }
-			activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_ger_decision }
-		}
+		set_country_flag = LEP_GER_theorist_choose
+		activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_xu_peigeng_decision }
+		activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_li_rentao_decision }
+		activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_liu_qingeng_decision }
+		activate_targeted_decision = { target = FROM decision = LEPEXP_GER_theorist_ger_decision }
 	}
 }
 

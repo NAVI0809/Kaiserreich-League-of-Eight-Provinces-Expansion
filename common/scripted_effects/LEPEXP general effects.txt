@@ -1,0 +1,23 @@
+
+enable_tech_combat_engineer = {
+	custom_override_tooltip = {
+		tooltip = tech_effect|tech_LEP_combat_engineer
+		set_technology = { tech_LEP_combat_engineer = 1 popup = no }
+	}
+}
+
+enable_tech_livens_gas_projector = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|tech_livens_gas_projector
+			EFFECT = tech_effect|tech_livens_gas_projector
+		}
+		set_technology = { tech_livens_gas_projector = 1 popup = no }
+	}
+}
+
+
+
+
+
