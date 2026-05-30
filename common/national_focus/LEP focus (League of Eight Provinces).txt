@@ -8543,7 +8543,7 @@ focus_tree = {
 				LEP_li_rentao = { CHN_recruit_character_effect = yes }
 				LEP_xu_peigen = { CHN_recruit_character_effect = yes }
 			}
-			country_event = league_rebuild.18
+			country_event = league_generic.10
 		}
 	}
 

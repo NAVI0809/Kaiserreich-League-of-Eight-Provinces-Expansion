@@ -2729,7 +2729,7 @@ LEPEXP_military_defence_development_CAT = {
 
 		is_good = no
 		days_mission_timeout = 720
-		priority = 100
+		priority = 200
 
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout LEPEXP_east_coast_defence_readyness"

@@ -10,7 +10,7 @@ LEP_military_industrial_complex_modifier = {
 	industrial_capacity_factory = 0.1
 }
 LEPEXP_east_coast_defence_ready_modifier = {
-	icon = CHN_beiyang_star
+	icon = GFX_modifiers_CHN_beiyang_star
 
 	remove_trigger = {
 		or = {
