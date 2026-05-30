@@ -3,6 +3,8 @@
  tech_LEP_combat_engineer: "战斗工兵连"
  tech_LEP_combat_engineer_desc: "一支装备了大量自动或半自动武器与防弹板甲的精英工兵连，掌握了构筑工事清理障碍能力的同时擅长小规模的近距离交战以及反坦克作战。"
  combat_engineer: "战斗工兵连"
+ tech_livens_gas_projector: "莱文斯毒气抛射炮"
+ tech_livens_gas_projector_effect: "§Y$fort$§!:\n    $STAT_ADJUSTER_ATTACK$[?0.1|=+1%]\n    $STAT_ADJUSTER_DEFENCE$[?0.05|=+1%]\n    §Y$jungle$§!:\n    $STAT_ADJUSTER_ATTACK$[?0.1|=+1%]\n    $STAT_ADJUSTER_DEFENCE$[?0.05|=+1%]\n    §Y$urban$§!:\n    $STAT_ADJUSTER_ATTACK$[?0.1|=+1%]\n    $STAT_ADJUSTER_DEFENCE$[?0.05|=+1%]"
 
  LEP_military_industrial_complex_modifier: "军工复合体"
 

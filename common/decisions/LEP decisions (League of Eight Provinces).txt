@@ -3209,6 +3209,7 @@ LEPEXP_military_defence_development_CAT = {
 					trait = LEP_theory_of_moltke_of_the_east
 				}
 			}
+			set_technology = { tech_livens_gas_projector = 1 }
 			hidden_effect = {
 				add_command_power = -50 
 				army_experience = -10
@@ -3259,6 +3260,10 @@ LEPEXP_military_defence_development_CAT = {
 					slot = theorist
 					trait = LEP_theory_of_moltke_of_the_east
 				}
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
 			}
 			hidden_effect = {
 				add_command_power = -50 
