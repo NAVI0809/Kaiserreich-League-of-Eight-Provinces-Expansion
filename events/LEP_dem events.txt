@@ -1991,9 +1991,38 @@ country_event = { #特别国防预算听证会
 	}
 }
 
+country_event = { #从工厂到餐桌
+	id = league_mid.65
+	title =league_mid.65.t
+	desc = league_mid.65.d
+	picture = GFX_report_event_LEP_rusheng
 
+	is_triggered_only = yes
+	fire_only_once = yes
 
+    option = { 
+		log = "[GetLogInfo]: event league_mid.65 option league_mid.65.a"
+		name = league_mid.65.a
+		add_stability = 0.05
+		add_war_support = 0.02
+	}
+}	
 
+country_event = { #“中国蔡司”
+	id = league_mid.66
+	title =league_mid.66.t
+	desc = league_mid.66.d
+	picture = GFX_report_event_LEP_cn_zisse
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { 
+		log = "[GetLogInfo]: event league_mid.65 option league_mid.66.a"
+		name = league_mid.66.a
+		#todo: new mio
+	}
+}	
 
 
 

@@ -3596,8 +3596,8 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
+			country_event = { id = league_mid.66 days = 1 } #蔡司
 		}
-
 	}
 	focus = {
 		id = LEP_industrial_general_committee
@@ -8642,6 +8642,7 @@ focus_tree = {
 					add_mio_funds = 400
 				}
 			}
+			country_event = { id = league_mid.65 days = 2 } #罐头厂 flavor
 		}
 	}
 
