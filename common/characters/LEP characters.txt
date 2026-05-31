@@ -871,6 +871,39 @@ characters = {
 		}
 	}
 
+	#吴纫礼
+	LEP_wu_rengli = {
+		name = LEP_wu_rengli
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_wu_rengli_army_small
+				large = GFX_portrait_LEP_wu_rengli_navy_large
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = LEP_wu_rengli_navy_chief
+			traits = { KR_opportunistic_naval_reformer }
+			cost = 120
+		}
+		navy_leader = {
+			desc = LEP_wu_rengli_high_command_desc
+			traits = { 
+				navy_career_officer 
+				gentlemanly
+				bold
+				naval_lineage
+				spotter
+				cruiser_captain
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+
 	###################
 	#### Air staff ####
 	###################

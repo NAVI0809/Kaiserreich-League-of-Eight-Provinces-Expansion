@@ -252,7 +252,7 @@ recruit_character = LEP_shen_jingchen
 recruit_character = ANQ_sa_benxin
 
 recruit_character = LEP_sa_shijun
-
+recruit_character = LEP_wu_rengli
 ### air staff ###
 recruit_character = LEP_chen_qixia
 recruit_character = LEP_wang_tianxiang

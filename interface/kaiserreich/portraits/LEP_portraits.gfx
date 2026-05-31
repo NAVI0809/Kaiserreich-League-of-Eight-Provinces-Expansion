@@ -216,10 +216,18 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_sa_shijun_army_large"
 		texturefile = "gfx/leaders/LEP/LEP_sa_shijun_army_large.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_rengli_navy_large"
+		texturefile = "gfx/leaders/LEP/LEP_wu_rengli_large.png"
+	}
 	##zigai-advisors
 	spriteType = {
 		name = "GFX_portrait_LEP_sa_shijun_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_sa_shijun_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_rengli_army_small"
+		texturefile = "gfx/interface/advisors/LEP_wu_rengli_small.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_wang_e_army_small"
@@ -277,8 +285,6 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_gao_fengqian_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_gao_fengqian.png"
 	}
-
-
 	spriteType = {
 		name = "GFX_portrait_LEP_ma_xulun_civilian_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_ma_xulun.png"
