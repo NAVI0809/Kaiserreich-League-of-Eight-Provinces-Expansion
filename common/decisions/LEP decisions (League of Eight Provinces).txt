@@ -7,6 +7,108 @@
 
 #DEBUG
 LEPEXP_DEBUG_CAT = {
+	LEP_stage_1_bop = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = -0.5
+		    }
+		}
+	}
+
+	LEP_establish_dem_gov = {
+		fire_only_once = yes
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			LEP_chu_fucheng = {
+			    unit_leader_event = { id = league_mid.4 days = 1 }
+		    }
+		}
+	}
+
+	LEP_add_regional_stage_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_dem_gov
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	LEP_remove_regional_stage_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_dem_gov
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_dem_gov
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_add_national_stage_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_dem_national_stage
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	LEP_remove_national_stage_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_dem_national_stage
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_dem_national_stage
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
 	LEPEXP_MIO_debug_hongqiao = {
 		icon = generic_industry
 		fire_only_once = no

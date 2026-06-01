@@ -1340,7 +1340,13 @@
  LEP_ZXX_win: "政学系赢得了多数"
  LEP_JNSB_win: "工商联赢得了多数"
  LEP_NSU_win: "国家团结联盟成立"
-
+ ##调试决议
+ LEP_stage_1_bop: "权力平衡直接拉满"
+ LEP_establish_dem_gov: "成立民主政府"
+ LEP_add_regional_stage_focus: "加载民主政府地区阶段国策"
+ LEP_remove_regional_stage_focus: "移除民主政府地区阶段国策"
+ LEP_add_national_stage_focus: "加载民主政府全国阶段国策"
+ LEP_remove_national_stage_focus: "移除民主政府全国阶段国策"
  #路线指南
  LEP_guide: "§M南直系§!（$paternal_autocrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向联帅一侧且大于33%。\n\n§M民主科学社§!（$social_liberal_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率大于33%且稳定度大于50%\n\n§M国民党（政学系）§!（$market_liberal_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度大于50%\n£white_dot 在“内阁总辞”事件中选择“黄郛的国民党赢得多数席位”\n\n§M全国工商联合会§!（$social_conservative_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度大于50%\n£white_dot 在“内阁总辞”事件中选择“荣宗敬领导的工商联成功组阁”\n\n§M人民救国会§!（$social_democrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度小于50%\n£white_dot 在“团结联盟解散”事件中选择“由人民救国会主导新政府”\n\n§M景星会§!（$authoritarian_democrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度小于50%\n£white_dot 在“团结联盟解散”事件中选择“景星会接掌了国家机器”"
 
