@@ -27,11 +27,13 @@ set_technology = {
 	basic_train = 1
 }
 
-### Planes - non BBA ###
+### Planes - has BBA ###
 if = {
 	limit = { has_dlc_bba = yes }
+	set_air_oob = "LEP_air_bba"
 	set_technology = {
 		iw_small_airframe = 1
+		basic_small_airframe = 1
 		iw_medium_airframe = 1
 		engines_1 = 1
 		early_bombs = 1
@@ -42,9 +44,11 @@ if = {
 ### Planes - non BBA ###
 if = {
 	limit = { has_dlc_bba = no }
+	set_air_oob = "LEP_air_legacy"
 	set_technology = {
 		early_fighter = 1
 		early_bomber = 1
+		fighter1 = 1
 	}
 }
 
@@ -272,3 +276,9 @@ country_event = { id = league_events.207 days = 762 } #Ju Peon event
 country_event = { id = league_events.208 days = 81 } #Tsen's Theorem
 country_event = { id = league_events.209 days = 285 } #Zhou Xuan
 country_event = { id = league_events.210 days = 285 } #Dummy Zhou Xuan event
+
+
+################
+### Variants ###
+################
+LEP_add_plane_variants = yes

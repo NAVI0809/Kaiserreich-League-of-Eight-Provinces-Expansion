@@ -17,6 +17,55 @@ enable_tech_livens_gas_projector = {
 	}
 }
 
+LEP_add_plane_variants = {
+	if = {
+		limit = { has_dlc_bba = yes }
+		create_equipment_variant = {
+			name = "He-51"										# Based on HE-51
+			type = small_plane_airframe_0
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x			# 4 × 7.7 mm MG
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			design_team = mio:LEP_focke_wulf_organisation				# FF is reserved for naval planes only
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Bf 109C"
+			type = small_plane_airframe_1
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 =	light_mg_2x		# 4x MG
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			design_team = mio:LEP_focke_wulf_organisation
+			icon = GFX_GER_small_1_bf109e_medium
+		}
+		create_equipment_variant = {
+			name = "Do 23"
+			type = medium_plane_airframe_0
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay		# 1000kg bomb bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				fixed_auxiliary_weapon_slot_2 = empty
+				fixed_auxiliary_weapon_slot_3 = empty
+				engine_type_slot = engine_1_2x
+				special_type_slot_1 = lmg_defense_turret_2x		# 3 x 7.92 mm MG
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			obsolete = yes
+			icon = GFX_GER_medium_0_do23_medium
+		}
+	}	
+}
+
 
 
 

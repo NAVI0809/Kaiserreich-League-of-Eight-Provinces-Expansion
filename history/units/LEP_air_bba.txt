@@ -1,0 +1,32 @@
+air_wings = {
+	#南京航校
+	613 = { 
+		# 联合空军第1训练中队
+		small_plane_airframe_0 =  {		
+			owner = "LEP" 
+			amount = 20
+			version_name = "He-51"
+		}
+		name = "联合空军第1训练中队"
+	}
+	
+	613 = { 
+		# 联合空军第1战斗机中队
+		small_plane_airframe_1 =  {		
+			owner = "LEP" 
+			amount = 20
+			version_name = "Bf 109C"
+		}
+		name = "联合空军第1战斗机大队"
+	}
+
+	613 = { 
+		# 联合空军第1轰炸机中队
+		medium_plane_airframe_0 =  {		
+			owner = "LEP" 
+			amount = 12
+			version_name = "Do 23"
+		}
+		name = "联合空军第1轰炸机中队"
+	}
+}	
