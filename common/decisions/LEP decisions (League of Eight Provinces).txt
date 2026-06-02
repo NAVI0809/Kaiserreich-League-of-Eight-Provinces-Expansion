@@ -2855,7 +2855,7 @@ LEPEXP_military_defence_development_CAT = {
 		fixed_random_seed = no
 	}
 	LEPEXP_huhang_line_defence = { #准备沪杭线防御
-		icon = generic_prepare_civil_war
+		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by focus
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
@@ -2937,7 +2937,7 @@ LEPEXP_military_defence_development_CAT = {
 		fixed_random_seed = no
 	}
 	LEPEXP_xicheng_line_defence = { #准备锡澄线防御
-		icon = generic_prepare_civil_war
+		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by focus
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
@@ -2997,7 +2997,7 @@ LEPEXP_military_defence_development_CAT = {
 	}
 
 	LEPEXP_wufu_line_defence = { #准备吴福线防御
-		icon = generic_prepare_civil_war
+		icon = GFX_decision_fortress
 		allowed = { always = no }			# Activated by focus
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
@@ -3070,27 +3070,26 @@ LEPEXP_military_defence_development_CAT = {
 	
 	LEPEXP_coast_guards_decision = { #江防军
 		icon = generic_prepare_civil_war
-		allowed = { always = no }			# Activated by focus QIE_symphony_of_military_and_industry
+		allowed = { always = no }			# Activated by focus 
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
-			NOT = { has_country_flag = QIE_symphony_of_military_and_industry1_incomplete }
 		}
 
 		cost = 40
-		days_remove = 120
+		days_remove = 1 #20
 		fire_only_once = yes
 		priority = 40
 
-		custom_cost_text = LEP_50000_mp_4000_eq_30_cp
+		custom_cost_text = LEP_50000_mp_1000_eq_30_cp
 		custom_cost_trigger = {
-			NOT = { has_equipment = { infantry_equipment < 4000 } }
+			NOT = { has_equipment = { infantry_equipment < 1000 } }
 			NOT = { has_manpower < 50000 }
 			NOT = { command_power < 30 }
 		}
 
-		modifier = {
-			civilian_factory_use = 4
-		}
+		#modifier = {
+		#	civilian_factory_use = 4
+		#}
 
 		ai_will_do = { factor = 800 }
 
@@ -3177,6 +3176,140 @@ LEPEXP_military_defence_development_CAT = {
 		fixed_random_seed = no
 	}
 
+	LEPEXP_fort_nantong_defence = { #建立南通要塞司令部
+		icon = GFX_decision_fortress
+		allowed = { always = no }			# Activated by focus
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			NOT = {
+				has_country_flag = LEP_east_coast_defence_readyness4_incomplete
+			}
+		}
+
+		days_remove = 40
+		fire_only_once = yes
+		priority = 60
+
+		custom_cost_text = LEP_CP_50_PP_10
+		custom_cost_trigger = {
+			NOT = { has_political_power < 10 }
+			NOT = { command_power < 50 }
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		ai_will_do = { factor = 800 }
+
+		highlight_states = {
+			highlight_state_targets = { state = 1075 }
+			highlight_state_targets = { state = 598 }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_fort_nantong_defence"
+			1075 = { #南通
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						province = 13707 #南通
+						level = 3
+						instant_build = yes
+					}
+			    	tooltip = { 
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 3
+						VP = 13707 #南通
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						province = 13707 #南通
+						level = 3
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = coastal_bunker
+						NUMBER = 3
+						VP = 13707 #南通
+					}
+				}
+			}			
+			598 = { #盐城
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						province = 4091 #如皋
+						level = 2
+						instant_build = yes
+					}
+			    	tooltip = { 
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 2
+						VP = 4091 #如皋
+					}
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 1098
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					province = 1098
+					level = 2
+					instant_build = yes
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = coastal_bunker
+						province = 4091 #如皋
+						level = 2
+						instant_build = yes
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = coastal_bunker
+						NUMBER = 2
+						VP = 4091 #如皋
+					}
+				}
+			}	
+			1075 = { #南通
+			    custom_override_tooltip = {
+				    tooltip = {
+					    localization_key = tooltip_spawn_unit
+					    TYPE = "江防军"
+				    }
+				    create_unit = {
+					    division = "name = \"江防军-南通要塞警备师\" division_template = \"Jiang Fang Jun\" start_experience_factor = 0.4"
+					    owner = ROOT
+				    }
+			    }
+		    }
+			598 = { #盐城
+			    custom_override_tooltip = {
+				    tooltip = {
+					    localization_key = tooltip_spawn_unit
+					    TYPE = "江防军"
+				    }
+				    create_unit = {
+					    division = "name = \"江防军-如皋警备师\" division_template = \"Jiang Fang Jun\" start_experience_factor = 0.4"
+					    owner = ROOT
+				    }
+			    }
+		    }
+		}
+		fixed_random_seed = no
+	}
+
 	LEPEXP_coal_jinling_arsenal_descison = {
 		visible = {
 			has_completed_focus = LEP_east_china_industry_mining
@@ -3244,7 +3377,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_50
+		custom_cost_text = LEP_CP_50_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3304,7 +3437,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_50
+		custom_cost_text = LEP_CP_50_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3365,7 +3498,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_50
+		custom_cost_text = LEP_CP_50_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3429,7 +3562,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_50
+		custom_cost_text = LEP_CP_50_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }

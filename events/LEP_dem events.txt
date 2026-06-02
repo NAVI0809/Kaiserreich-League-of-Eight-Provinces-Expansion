@@ -3143,6 +3143,23 @@ country_event = { #顾问团
 	}
 }
 
+unit_leader_event = { #南通要塞
+	id = league_generic.11
+	title = league_generic.11.t
+	desc = league_generic.11.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.11.a
+		log = "[GetLogInfo]: event league_generic.11 option league_generic.11.a"
+		add_command_power = 25
+		activate_targeted_decision = { target = FROM decision = LEPEXP_fort_nantong_defence }
+	}
+}
+
 country_event = { #电解铝生产线
 	id = league_generic.1000
 	title = league_generic.1000.t

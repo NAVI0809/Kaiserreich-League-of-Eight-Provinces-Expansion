@@ -9609,6 +9609,14 @@ focus_tree = {
 		prerequisite = { focus = LEP_railway_corps }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_fortifying_our_positions"
+			hidden_effect = {
+				LEP_wu_rengli = {
+                    unit_leader_event = {
+                        id = league_generic.11
+                        hours = 12
+                    }
+			    }
+			}
 			if = {
 				limit = { has_idea = LEP_engineering_corps_2 }
 				swap_ideas = {
@@ -9638,6 +9646,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			LEP_fortifying_our_positions_effect = yes
+
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS

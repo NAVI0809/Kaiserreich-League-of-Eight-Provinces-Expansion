@@ -192,7 +192,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		production_bonus = {
 			production_efficiency_cap_factor = 0.03
 			production_efficiency_gain_factor = 0.03
-			production_resource_need_factor = 0.05
+			production_resource_need_factor = -0.05
 			production_capacity_factor = 0.03
 		}
 
@@ -232,7 +232,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		production_bonus = {
 			production_efficiency_cap_factor = 0.025
-			production_resource_need_factor = 0.05
+			production_capacity_factor = 0.02
 		}
 
 		on_complete = {
@@ -332,6 +332,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		limit_to_equipment_type = { infantry_equipment }
 		all_parents = { lepexp_jinling_inf_1 }
+		mutually_exclusive = { lepexp_jinling_inf_4 } 
 
 		position = { x = 1 y = 2 }
 		relative_position_id = lepexp_jinling_inf_1
@@ -501,7 +502,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		position = { x = 1 y = 2 }
 		all_parents = { lepexp_jinling_inf_3 }
 
-		
+		mutually_exclusive = { lepexp_jinling_inf_9 } 
 
 		limit_to_equipment_type = { infantry_equipment }
 
@@ -659,6 +660,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		available = { FROM = { has_country_flag = lepexp_jinling_weapons_chosen } }
 
 		position = { x = 0 y = 0 }
+		mutually_exclusive = { lepexp_jinling_art_2 }
 
 		limit_to_equipment_type = { 
 			artillery_equipment 
@@ -752,6 +754,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { FROM = { has_country_flag = lepexp_jinling_artillery } }
 		available = { FROM = { has_country_flag = lepexp_jinling_weapons_chosen } }
+		mutually_exclusive = { lepexp_jinling_art_5 }
 
 		position = { x = 6 y = 0 }
 
@@ -844,6 +847,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { FROM = { has_country_flag = lepexp_jinling_artillery } }
 		available = { FROM = { has_country_flag = lepexp_jinling_weapons_chosen } }
+		mutually_exclusive = { lepexp_jinling_art_8 }
 
 		position = { x = 0 y = 4 }
 
@@ -927,6 +931,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		visible = { FROM = { has_country_flag = lepexp_jinling_artillery } }
 		available = { FROM = { has_country_flag = lepexp_jinling_weapons_chosen } }
+		mutually_exclusive = { lepexp_jinling_art_11 }
 
 		position = { x = 6 y = 4 }
 
