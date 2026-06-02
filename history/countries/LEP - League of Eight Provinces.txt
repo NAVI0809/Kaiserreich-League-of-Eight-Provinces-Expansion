@@ -186,7 +186,8 @@ recruit_character = LEP_wang_e
 recruit_character = LEP_huang_baitao 
 recruit_character = LEP_li_yutang
 recruit_character = LEP_ma_shigong
-
+recruit_character = LEP_shi_beiheng
+recruit_character = LEP_xing_zhennan
 ### theorists ###
 recruit_character = LEP_nanjing_clique_theorist
 recruit_character = LEP_zhejun_officers_theorist
@@ -198,6 +199,12 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 
+LEP_shi_beiheng = { #recruit only by league_mid.52
+	retire = yes
+}
+LEP_xing_zhennan = { #recruit only by league_mid.52
+	retire = yes
+}
 LEP_tang_qunying = { #recruit only by league_mid.33
 	retire = yes
 }

@@ -1427,9 +1427,25 @@ country_event = { #新军官
 
 		LEP_huang_baitao = { custom_effect_tooltip = character_becomes_a_general }
 		LEP_wang_e = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_shi_beiheng = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_xing_zhennan = { custom_effect_tooltip = character_becomes_a_general }
 		hidden_effect = {
 			LEP_huang_baitao = { CHN_recruit_character_effect = yes }
 			LEP_wang_e = { CHN_recruit_character_effect = yes }
+			LEP_shi_beiheng = { CHN_recruit_character_effect = yes }
+			LEP_xing_zhennan = { CHN_recruit_character_effect = yes }
+			LEP_shi_beiheng = {
+				unit_leader_event = {
+                    id = league_generic.12
+                    hours = 36
+                }
+			}
+			LEP_xing_zhennan = {
+				unit_leader_event = {
+                    id = league_generic.13
+                    hours = 48
+                }
+			}
 			LEP_huang_baitao = {
                 unit_leader_event = {
                     id = league_generic.5
@@ -1439,7 +1455,7 @@ country_event = { #新军官
 			LEP_wang_e = {
                 unit_leader_event = {
                     id = league_generic.6
-                    hours = 26
+                    hours = 24
                 }
 			}
 		}
@@ -3157,6 +3173,75 @@ unit_leader_event = { #南通要塞
 		log = "[GetLogInfo]: event league_generic.11 option league_generic.11.a"
 		add_command_power = 25
 		activate_targeted_decision = { target = FROM decision = LEPEXP_fort_nantong_defence }
+	}
+}
+
+unit_leader_event = { #施北衡
+	id = league_generic.12
+	title = league_generic.12.t
+	desc = league_generic.12.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.12.a
+		log = "[GetLogInfo]: event league_generic.12 option league_generic.12.a"
+		LEP_shi_beiheng = { add_unit_leader_trait = master_of_ordnance }
+		add_tech_bonus = {
+			name = league_generic.12.t
+			bonus = 0.5
+			uses = 3
+			category = mio_cat_all_artillery_equipment
+		}
+		hidden_effect = {
+			596 = { #杭州
+				create_unit = {
+					division = "name = \"新编第15师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.5"
+					owner = ROOT
+				}	
+			}		
+		}
+		custom_effect_tooltip = LEPEXP_shi_beiheng_unitleader_tt
+	}
+}
+
+unit_leader_event = { #邢震南
+	id = league_generic.13
+	title = league_generic.13.t
+	desc = league_generic.13.d
+	picture = GFX_report_event_generic_mussolini
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.13.a
+		log = "[GetLogInfo]: event league_generic.13 option league_generic.13.a"
+		add_war_support = 0.1
+		add_stability = 0.05
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.02
+		}
+		hidden_effect = {
+			1050 = { #蚌埠
+				create_unit = {
+					division = "name = \"浙军步兵第3师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.5"
+					owner = ROOT
+				}
+			}	
+		}
+		custom_effect_tooltip = LEPEXP_xing_zhennan_unitleader_tt
 	}
 }
 

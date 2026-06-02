@@ -1658,6 +1658,73 @@ characters = {
 			logistics_skill = 3
 		}
 	}
+
+	#施北衡
+	LEP_shi_beiheng = {
+		name = LEP_shi_beiheng
+		portraits = {
+			army = {
+				#small = GFX_portrait_LEP_shi_beiheng_army_small
+				large = GFX_portrait_LEP_shi_beiheng_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_shi_beiheng_high_command_desc
+			traits = { 
+				career_officer
+				skilled_staffer
+				trickster
+				logistics_wizard
+				#master_of_ordnance
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 3
+		}
+
+		#advisor = {
+		#	slot = high_command
+		#	idea_token = LEP_shi_beiheng_high_command
+		#	ledger = army
+		#	traits = { KR_MHC_airborne_2 }
+		#	cost = 100
+		#}
+	}
+
+	#邢震南
+	LEP_xing_zhennan = {
+		name = LEP_xing_zhennan
+		portraits = {
+			army = {
+				#small = GFX_portrait_LEP_xing_zhennan_army_small
+				large = GFX_portrait_LEP_xing_zhennan_army_large
+			}
+		}
+		corps_commander = {
+			desc = LEP_xing_zhennan_high_command_desc
+			traits = { 
+				career_officer
+				light_infantry_officer
+				irregulars_officer
+				commando
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+
+		#advisor = {
+		#	slot = high_command
+		#	idea_token = LEP_xing_zhennan_high_command
+		#	ledger = army
+		#	traits = { KR_MHC_airborne_2 }
+		#	cost = 100
+		#}
+	}
 	#################
 	### Theorists ###
 	#################
