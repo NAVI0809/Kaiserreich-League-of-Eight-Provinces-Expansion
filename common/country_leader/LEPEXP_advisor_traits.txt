@@ -27,7 +27,7 @@ leader_traits = {
 		}
 	}
 
-	LEPEXP_maneuver_warfare = {#运动战大师
+	LEPEXP_maneuver_warfare = { #运动战大师
 	    sprite = 5
 		experience_loss_factor = -0.1
 		land_reinforce_rate = 0.02
@@ -37,6 +37,24 @@ leader_traits = {
 		army_defence_factor = 0.10
 		max_dig_in = 4
 		army_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_fort_destroyer = { #工事毁灭者
+	    sprite = 16
+		
+		breakthrough_factor = 0.1
+		army_artillery_attack_factor = 0.1
+		supply_consumption_factor = 0.05
+		
+		modifier = {
+			fort = {
+				attack = 0.15
+			}
+		}
 
 		ai_will_do = {
 			factor = 0

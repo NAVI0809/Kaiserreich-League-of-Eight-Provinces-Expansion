@@ -1,5 +1,7 @@
 ﻿l_simp_chinese:
 
+ available_high_command: "§G启用§!§Y总司令§!:"
+
  tech_LEP_combat_engineer: "战斗工兵连"
  tech_LEP_combat_engineer_desc: "一支装备了大量自动或半自动武器与防弹板甲的精英工兵连，掌握了构筑工事清理障碍能力的同时擅长小规模的近距离交战以及反坦克作战。"
  combat_engineer: "战斗工兵连"

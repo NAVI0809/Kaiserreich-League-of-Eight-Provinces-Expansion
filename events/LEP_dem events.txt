@@ -3201,9 +3201,13 @@ unit_leader_event = { #施北衡
 					division = "name = \"新编第15师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.5"
 					owner = ROOT
 				}	
-			}		
+			}	
+			set_country_flag = LEP_shi_beiheng_high_command_flag
 		}
 		custom_effect_tooltip = LEPEXP_shi_beiheng_unitleader_tt
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_high_command
+		show_ideas_tooltip = LEP_shi_beiheng_high_command
 	}
 }
 
@@ -3233,6 +3237,7 @@ unit_leader_event = { #邢震南
 			ideology = syndicalist
 			popularity = 0.02
 		}
+
 		hidden_effect = {
 			1050 = { #蚌埠
 				create_unit = {
@@ -3240,9 +3245,13 @@ unit_leader_event = { #邢震南
 					owner = ROOT
 				}
 			}	
+			set_country_flag = LEP_xing_zhennan_high_command_flag
 		}
 		custom_effect_tooltip = LEPEXP_xing_zhennan_unitleader_tt
-	}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = LEP_xing_zhennan_high_command
+	}	
 }
 
 country_event = { #电解铝生产线

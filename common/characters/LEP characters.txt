@@ -1664,7 +1664,7 @@ characters = {
 		name = LEP_shi_beiheng
 		portraits = {
 			army = {
-				#small = GFX_portrait_LEP_shi_beiheng_army_small
+				small = GFX_portrait_LEP_shi_beiheng_army_small
 				large = GFX_portrait_LEP_shi_beiheng_army_large
 			}
 		}
@@ -1684,13 +1684,18 @@ characters = {
 			logistics_skill = 3
 		}
 
-		#advisor = {
-		#	slot = high_command
-		#	idea_token = LEP_shi_beiheng_high_command
-		#	ledger = army
-		#	traits = { KR_MHC_airborne_2 }
-		#	cost = 100
-		#}
+		advisor = {
+			slot = high_command
+			idea_token = LEP_shi_beiheng_high_command
+			ledger = army
+			traits = { LEPEXP_fort_destroyer }
+			cost = 120
+			available = {
+			    hidden_effect = {
+				    has_country_flag = LEP_shi_beiheng_high_command_flag
+			    }			
+		    }
+		}
 	}
 
 	#邢震南
@@ -1698,7 +1703,7 @@ characters = {
 		name = LEP_xing_zhennan
 		portraits = {
 			army = {
-				#small = GFX_portrait_LEP_xing_zhennan_army_small
+				small = GFX_portrait_LEP_xing_zhennan_army_small
 				large = GFX_portrait_LEP_xing_zhennan_army_large
 			}
 		}
@@ -1717,13 +1722,18 @@ characters = {
 			logistics_skill = 1
 		}
 
-		#advisor = {
-		#	slot = high_command
-		#	idea_token = LEP_xing_zhennan_high_command
-		#	ledger = army
-		#	traits = { KR_MHC_airborne_2 }
-		#	cost = 100
-		#}
+		advisor = {
+			slot = high_command
+			idea_token = LEP_xing_zhennan_high_command
+			ledger = army
+			traits = { KR_MHC_irregular_3 }
+			cost = 150
+		}
+		available = {
+			hidden_effect = {
+				has_country_flag = LEP_xing_zhennan_high_command_flag
+			}			
+		}
 	}
 	#################
 	### Theorists ###
