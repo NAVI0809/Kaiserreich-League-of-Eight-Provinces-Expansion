@@ -109,6 +109,45 @@ LEPEXP_DEBUG_CAT = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+
+	LEP_load_new_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_new_focus
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_new_focus
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_remove_new_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_new_focus
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_new_focus
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
 	LEPEXP_MIO_debug_hongqiao = {
 		icon = generic_industry
 		fire_only_once = no

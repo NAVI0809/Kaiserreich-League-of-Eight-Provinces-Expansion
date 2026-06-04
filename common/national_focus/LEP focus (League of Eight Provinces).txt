@@ -1885,6 +1885,580 @@ focus_tree = {
 		}
 	}
 
+	##新北伐国策
+	focus = {
+		id = LEP_new_republic_with_old_ideals
+		x = 15
+		y = 14
+		cost = 0
+		icon = GFX_focus_CHI_restore_the_old_republic
+		allow_branch = {
+			has_country_flag = LEP_new_focus
+		}
+	}
+	focus = {
+		id = LEP_take_over_commissions_and_ministries
+		
+		cost = 0
+		icon = GFX_goal_generic_parliament2
+		
+		prerequisite = {
+			focus = LEP_new_republic_with_old_ideals
+		}
+		relative_position_id = LEP_new_republic_with_old_ideals
+		x = -1
+		y = 1
+	}
+	focus = {
+		id = LEP_release_political_prisoners
+		
+		cost = 0
+		icon = GFX_goal_RUS_never_another_savinkov
+		prerequisite = {
+			focus = LEP_take_over_commissions_and_ministries
+		}
+		relative_position_id = LEP_take_over_commissions_and_ministries
+		x = -2
+		y = 1
+	}
+	focus = {
+		id = LEP_handle_old_treaties
+		x = 0
+		y = 1
+		cost = 0
+		icon = GFX_goal_treaty_fails
+		prerequisite = {
+			focus = LEP_take_over_commissions_and_ministries
+		}
+		relative_position_id = LEP_take_over_commissions_and_ministries
+	}
+	focus = {
+		id = LEP_national_reconstruction_administration
+		
+		cost = 0
+		icon = GFX_goal_develop_provinces
+		prerequisite = {
+			focus = LEP_new_republic_with_old_ideals
+		}
+		relative_position_id = LEP_new_republic_with_old_ideals
+		x = 1
+		y = 1
+	}
+	focus = {
+		id = LEP_curb_inflation
+		x = 0
+		y = 1
+		cost = 0
+		icon = GFX_goal_generic_austerity_measures
+		prerequisite = {
+			focus = LEP_national_reconstruction_administration
+		}
+		relative_position_id = LEP_national_reconstruction_administration
+	}
+	focus = {
+		id = LEP_grasp_key_resources
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		prerequisite = {
+			focus = LEP_long_trains_and_steel_horses
+		}
+		prerequisite = {
+			focus = LEP_restore_infrastructure
+		}
+		relative_position_id = LEP_long_trains_and_steel_horses
+	}
+	focus = {
+		id = LEP_national_images_continuity
+		x = 0
+		y = 3
+		cost = 0
+		icon = GFX_goal_China_five_races_flag
+		prerequisite = {
+			focus = LEP_handle_old_treaties
+		}
+		prerequisite = {
+			focus = LEP_curb_inflation
+		}
+		prerequisite = {
+			focus = LEP_release_political_prisoners
+		}
+		prerequisite = {
+			focus = LEP_confiscate_noble_assets
+		}
+		relative_position_id = LEP_new_republic_with_old_ideals
+	}
+	focus = {
+		id = LEP_legacy_of_southeast_mutual_protection
+		x = 13
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_industrialists
+		mutually_exclusive = {
+			focus = LEP_strive_towards_democratic_future
+		}
+		prerequisite = {
+			focus = LEP_national_images_continuity
+		}
+		relative_position_id = LEP_national_images_continuity
+	}
+	focus = {
+		id = LEP_strive_towards_democratic_future
+		x = 11
+		y = 1
+		cost = 0
+		icon = GFX_goal_RUS_american_liberty
+		mutually_exclusive = {
+			focus = LEP_legacy_of_southeast_mutual_protection
+		}
+		prerequisite = {
+			focus = LEP_national_images_continuity
+		}
+		relative_position_id = LEP_national_images_continuity
+	}
+	focus = {
+		id = LEP_accelerate_military_reduction
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_military_dictatorship
+		prerequisite = {
+			focus = LEP_war_comes_from_the_north
+		}
+		relative_position_id = LEP_war_comes_from_the_north
+	}
+	focus = {
+		id = LEP_womens_rights
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_female_rights
+		prerequisite = {
+			focus = LEP_preliminary_social_security
+		}
+		relative_position_id = LEP_preliminary_social_security
+	}
+	focus = {
+		id = LEP_nationalist_rhetoric
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_CHI_ally_the_young_china_party
+		mutually_exclusive = {
+			focus = LEP_uphold_civilian_politics
+		}
+		prerequisite = {
+			focus = LEP_talk_more_about_issues
+		}
+		relative_position_id = LEP_talk_more_about_issues
+	}
+	focus = {
+		id = LEP_empower_the_supreme_judicial_court
+		x = -2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_court
+		prerequisite = {
+			focus = LEP_united_democratic_alliance
+			focus = LEP_new_beiyang_faction
+		}
+		relative_position_id = LEP_united_democratic_alliance
+	}
+	focus = {
+		id = LEP_uphold_civilian_politics
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+		mutually_exclusive = {
+			focus = LEP_nationalist_rhetoric
+		}
+		prerequisite = {
+			focus = LEP_new_factory_law
+		}
+		relative_position_id = LEP_new_factory_law
+	}
+	focus = {
+		id = LEP_new_factory_law
+		x = 0
+		y = 1
+		cost = 0
+		icon = GFX_focus_PRC_urbanization
+		prerequisite = {
+			focus = LEP_united_democratic_alliance
+		}
+		relative_position_id = LEP_united_democratic_alliance
+	}
+	focus = {
+		id = LEP_new_beiyang_faction
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_goal_QIE_beijing_government
+		prerequisite = {
+			focus = LEP_legacy_of_southeast_mutual_protection
+			focus = LEP_strive_towards_democratic_future
+		}
+		relative_position_id = LEP_legacy_of_southeast_mutual_protection
+	}
+	focus = {
+		id = LEP_protect_private_property
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_focus_CHI_Legitimise_du
+		prerequisite = {
+			focus = LEP_new_beiyang_faction
+			focus = LEP_united_democratic_alliance
+		}
+		relative_position_id = LEP_new_beiyang_faction
+	}
+	focus = {
+		id = LEP_maintain_production_order
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_steel_mill
+		prerequisite = {
+			focus = LEP_united_democratic_alliance
+			focus = LEP_new_beiyang_faction
+		}
+		relative_position_id = LEP_united_democratic_alliance
+	}
+	focus = {
+		id = LEP_elite_republicanism
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_RAJ_temple_entry_movements
+		prerequisite = {
+			focus = LEP_protect_private_property
+		}
+		prerequisite = {
+			focus = LEP_talk_more_about_issues
+		}
+		relative_position_id = LEP_protect_private_property
+	}
+	focus = {
+		id = LEP_long_trains_and_steel_horses
+		x = 0
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_railroad
+		prerequisite = {
+			focus = LEP_economics_democratization
+		}
+		relative_position_id = LEP_economics_democratization
+	}
+	focus = {
+		id = LEP_confiscate_noble_assets
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = {
+			focus = LEP_national_reconstruction_administration
+		}
+		relative_position_id = LEP_national_reconstruction_administration
+	}
+	focus = {
+		id = LEP_war_comes_from_the_north
+		x = -6
+		y = 1
+		cost = 0
+		icon = GFX_goal_generic_attack_fengtian
+		prerequisite = {
+			focus = LEP_national_images_continuity
+		}
+		relative_position_id = LEP_national_images_continuity
+	}
+	focus = {
+		id = LEP_national_defense_design_council
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_CHI_military_mission
+		prerequisite = {
+			focus = LEP_war_comes_from_the_north
+		}
+		relative_position_id = LEP_war_comes_from_the_north
+	}
+	focus = {
+		id = LEP_seek_international_recognition
+		x = -2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = {
+			focus = LEP_national_images_continuity
+		}
+		relative_position_id = LEP_national_images_continuity
+	}
+	focus = {
+		id = LEP_restore_infrastructure
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = {
+			focus = LEP_economics_democratization
+		}
+		relative_position_id = LEP_economics_democratization
+	}
+	focus = {
+		id = LEP_economics_democratization
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = {
+			focus = LEP_national_images_continuity
+		}
+		relative_position_id = LEP_national_images_continuity
+	}
+	focus = {
+		id = LEP_arm_national_guard
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = {
+			focus = LEP_national_defense_design_council
+		}
+		relative_position_id = LEP_national_defense_design_council
+	}
+	focus = {
+		id = LEP_resume_higher_education
+		x = -2
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_university_1
+		prerequisite = {
+			focus = LEP_economics_democratization
+		}
+		relative_position_id = LEP_economics_democratization
+	}
+	focus = {
+		id = LEP_stockpile_logistics_supplies
+		x = 0
+		y = 2
+		cost = 0
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		prerequisite = {
+			focus = LEP_national_defense_design_council
+		}
+		relative_position_id = LEP_national_defense_design_council
+	}
+	focus = {
+		id = LEP_propaganda_offensive
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_printing_press
+		prerequisite = {
+			focus = LEP_national_defense_design_council
+		}
+		relative_position_id = LEP_national_defense_design_council
+	}
+	focus = {
+		id = LEP_appeal_for_international_support
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_league_of_nations
+		prerequisite = {
+			focus = LEP_seek_international_recognition
+		}
+		prerequisite = {
+			focus = LEP_war_comes_from_the_north
+		}
+		relative_position_id = LEP_seek_international_recognition
+	}
+	focus = {
+		id = LEP_appoint_republican_officers
+		x = 0
+		y = 2
+		cost = 0
+		icon = GFX_focus_CHI_meritocratic_principles
+		prerequisite = {
+			focus = LEP_accelerate_military_reduction
+		}
+		relative_position_id = LEP_accelerate_military_reduction
+	}
+	focus = {
+		id = LEP_divide_war_zones
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_GER_fuhrerprinzip_goring
+		prerequisite = {
+			focus = LEP_integrate_arsenal_factories
+		}
+		relative_position_id = LEP_integrate_arsenal_factories
+	}
+	focus = {
+		id = LEP_industrial_technology_transfer
+		x = 0
+		y = 2
+		cost = 0
+		icon = GFX_focus_generic_industrial_experts
+		prerequisite = {
+			focus = LEP_seek_international_recognition
+		}
+		relative_position_id = LEP_seek_international_recognition
+	}
+	focus = {
+		id = LEP_empower_the_president
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_goal_RUS_symphony_of_authorities
+		mutually_exclusive = {
+			focus = LEP_uphold_parliamentarism
+		}
+		prerequisite = {
+			focus = LEP_elite_republicanism
+			focus = LEP_uphold_civilian_politics
+		}
+		prerequisite = {
+			focus = LEP_nationalist_rhetoric
+		}
+		relative_position_id = LEP_nationalist_rhetoric
+	}
+	focus = {
+		id = LEP_liberate_working_farmers
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_CHI_students_to_the_countryside
+		prerequisite = {
+			focus = LEP_restore_infrastructure
+		}
+		relative_position_id = LEP_restore_infrastructure
+	}
+	focus = {
+		id = LEP_public_health_system
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_bad_medical
+		prerequisite = {
+			focus = LEP_long_trains_and_steel_horses
+		}
+		relative_position_id = LEP_long_trains_and_steel_horses
+	}
+	focus = {
+		id = LEP_preliminary_social_security
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_goal_generic_solidarity
+		prerequisite = {
+			focus = LEP_empower_the_supreme_judicial_court
+		}
+		relative_position_id = LEP_empower_the_supreme_judicial_court
+	}
+	focus = {
+		id = LEP_talk_more_about_issues
+		x = 0
+		y = 1
+		cost = 0
+		icon = GFX_goal_QIE_president_hu
+		prerequisite = {
+			focus = LEP_new_beiyang_faction
+		}
+		relative_position_id = LEP_new_beiyang_faction
+	}
+	focus = {
+		id = LEP_united_democratic_alliance
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_goal_China_CDL
+		prerequisite = {
+			focus = LEP_strive_towards_democratic_future
+			focus = LEP_legacy_of_southeast_mutual_protection
+		}
+		relative_position_id = LEP_strive_towards_democratic_future
+	}
+	focus = {
+		id = LEP_ally_with_local_factions
+		x = 2
+		y = 1
+		cost = 0
+		icon = GFX_goal_China_twelve_symbols
+		prerequisite = {
+			focus = LEP_elite_republicanism
+		}
+		relative_position_id = LEP_elite_republicanism
+	}
+	focus = {
+		id = LEP_uphold_parliamentarism
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_goal_QIE_assembly
+		mutually_exclusive = {
+			focus = LEP_empower_the_president
+		}
+		prerequisite = {
+			focus = LEP_uphold_civilian_politics
+			focus = LEP_nationalist_rhetoric
+		}
+		prerequisite = {
+			focus = LEP_civil_public_hearing
+		}
+		relative_position_id = LEP_civil_public_hearing
+	}
+	focus = {
+		id = LEP_public_works_projects
+		x = 0
+		y = 2
+		cost = 0
+		icon = GFX_GBR_fate_of_unions
+		prerequisite = {
+			focus = LEP_long_trains_and_steel_horses
+		}
+		relative_position_id = LEP_long_trains_and_steel_horses
+	}
+	focus = {
+		id = LEP_audit_the_military
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_ITA_bersaglieri
+		prerequisite = {
+			focus = LEP_preliminary_social_security
+		}
+		relative_position_id = LEP_preliminary_social_security
+	}
+	focus = {
+		id = LEP_integrate_arsenal_factories
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_AUS_raid_military_storages
+		prerequisite = {
+			focus = LEP_accelerate_military_reduction
+		}
+		relative_position_id = LEP_accelerate_military_reduction
+	}
+	focus = {
+		id = LEP_civil_public_hearing
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_focus_AFG_parliamentary_democracy
+		prerequisite = {
+			focus = LEP_new_factory_law
+		}
+		prerequisite = {
+			focus = LEP_empower_the_supreme_judicial_court
+		}
+		relative_position_id = LEP_new_factory_law
+	}
+
 	focus = {
 		id = LEP_DSP
 		icon = GFX_goal_ideology_social_liberal
