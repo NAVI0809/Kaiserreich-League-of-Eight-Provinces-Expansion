@@ -5415,14 +5415,11 @@ focus_tree = {
 	focus = {
 		id = LEP_two_marshals_under_the_sky
 		icon = {
-			trigger = {
+			GFX_goal_ANQ_stand_with_qing = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			value = GFX_goal_ANQ_stand_with_qing
-		}
-		icon = {
-			value = GFX_goal_beijing_begonia
+			GFX_goal_beijing_begonia = yes
 		}
 		dynamic = yes
 		cost = 4
@@ -5541,14 +5538,11 @@ focus_tree = {
 	focus = {
 		id = LEP_joint_training_with_beijing
 		icon = {
-			trigger = {
+			GFX_goal_QIE_hail_to_the_qing = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			value = GFX_goal_QIE_hail_to_the_qing
-		}
-		icon = {
-			value = GFX_goal_QIE_reorganise_warlord_divisions
+			GFX_goal_QIE_reorganise_warlord_divisions = yes
 		}
 		dynamic = yes
 		cost = 5
@@ -10769,11 +10763,10 @@ focus_tree = {
 	focus = {
 		id = LEP_the_pinnacle_of_chinese_soldiery
 		icon = {
-			trigger = { has_country_flag = LEP_dem_gov }
-			value = GFX_goal_China_Beiyang_Mass_Assault
-		}
-		icon = {
-			value = GFX_goal_LEP_southern_school
+			GFX_goal_China_Beiyang_Mass_Assault = {
+				has_country_flag = LEP_dem_gov
+			}
+			GFX_goal_LEP_southern_school = yes
 		}
 		dynamic = yes
 		cost = 6
