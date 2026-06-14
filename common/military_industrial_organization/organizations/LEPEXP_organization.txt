@@ -630,7 +630,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		production_bonus = {
 			production_efficiency_gain_factor = 0.05
 			production_efficiency_cap_factor = 0.025
-			production_resource_need_factor = -0.02
+			production_resource_need_factor = -0.05
 		}
 
 		on_complete = {

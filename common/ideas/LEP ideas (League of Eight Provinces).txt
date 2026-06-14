@@ -2047,6 +2047,39 @@ ideas = {
 			}
 		}
 
+		LEP_nanjing_navy_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_2" }
+			name = LEP_nanjing_navy
+			picture = SWE_coastal_support
+			allowed = { always = no }
+			modifier = {
+				experience_gain_navy = 0.10
+				shore_bombardment_bonus = 0.15
+				navy_org_factor = 0.05
+				refit_speed = 0.15
+				navy_fuel_consumption_factor = -0.1
+				naval_coordination = 0.1
+				naval_night_attack = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05
+					lg_attack = 0.1
+					hg_attack = 0.1
+					instant = yes
+				}
+				ship_hull_heavy = {
+					lg_attack = 0.1
+					hg_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+
 		LEP_disrupting_their_supply = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_disrupting_their_supply" }
 			picture = generic_supply_line
@@ -3814,7 +3847,7 @@ ideas = {
 
 		LEP_social_reform = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform" }
-			picture = FRA_home_of_the_revolution
+			picture = GFX_idea_FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -3825,7 +3858,7 @@ ideas = {
 
 		LEP_social_reform2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform2" }
-			picture = FRA_home_of_the_revolution
+			picture = GFX_idea_FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -3838,7 +3871,7 @@ ideas = {
 
 		LEP_social_reform3 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform3" }
-			picture = FRA_home_of_the_revolution
+			picture = GFX_idea_FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -3853,7 +3886,7 @@ ideas = {
 
 		LEP_demo_edu = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu" }
-			picture = communard_spirit
+			picture = GFX_idea_FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3865,7 +3898,7 @@ ideas = {
 
 		LEP_demo_edu2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu2" }
-			picture = communard_spirit
+			picture = GFX_idea_FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3879,7 +3912,7 @@ ideas = {
 
 		LEP_demo_edu3 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu3" }
-			picture = communard_spirit
+			picture = GFX_idea_FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -3896,7 +3929,7 @@ ideas = {
 
 		LEP_social_revolution = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_revolution" }
-			picture = FRA_home_of_the_revolution
+			picture = GFX_idea_FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.05

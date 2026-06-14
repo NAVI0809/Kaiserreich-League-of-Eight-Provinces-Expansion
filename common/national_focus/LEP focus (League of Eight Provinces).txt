@@ -9741,6 +9741,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"
 
 			add_ideas = GEA_pacific_rule_idea
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy
+				add_idea = LEP_nanjing_navy_2
+			}
 			custom_effect_tooltip = tooltip_white_line
 
 			if = {
@@ -10107,7 +10111,7 @@ focus_tree = {
 			}
 			add_timed_idea = {
 				idea = CHI_six_year_programme_idea
-				days = 365
+				days = 2190
 			}
 			custom_effect_tooltip = tooltip_white_line
 			random_owned_controlled_state = {

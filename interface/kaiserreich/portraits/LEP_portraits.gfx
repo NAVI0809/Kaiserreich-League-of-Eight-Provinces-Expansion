@@ -238,16 +238,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/advisors/LEP/LEP_shi_beiheng_army_small.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_LEP_wu_rengli_army_small"
-		texturefile = "gfx/interface/advisors/LEP/LEP_wu_rengli_army_small.png"
-	}
-	spriteType = {
 		name = "GFX_portrait_LEP_sa_shijun_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_sa_shijun_small.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_wu_rengli_army_small"
-		texturefile = "gfx/interface/advisors/LEP_wu_rengli_small.png"
+		texturefile = "gfx/interface/advisors/LEP_wu_rengli_army_small.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_wang_e_army_small"
