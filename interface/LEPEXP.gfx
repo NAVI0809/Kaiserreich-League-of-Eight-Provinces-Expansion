@@ -1,15 +1,5 @@
 spriteTypes = {
 
-    #ideas
-	spriteType = {
-		name = "GFX_idea_LEP_Liu_rifle_idea"
-		texturefile = "gfx/interface/ideas/LEP_Liu_rifle.png"
-	}
-	spriteType = {
-		name = "GFX_idea_LEP_idea_tide_of_steel"
-		texturefile = "gfx/interface/ideas/LEP_idea_tide_of_steel.png"
-	}
-
 	#subunits
 	spriteType = { 
 		name = "GFX_unit_combat_engineer_icon_medium"

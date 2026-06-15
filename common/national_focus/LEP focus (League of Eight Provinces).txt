@@ -4012,7 +4012,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_small_scale_waterworks
-		icon = GFX_goal_dam
+		icon = GFX_focus_PRC_construct_the_banqiao_dam
 		cost = 3.00
 		prerequisite = {
 			focus = LEP_four_pillars_education
@@ -4278,7 +4278,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_gonghe_cooperative_movement
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_focus_CHI_initiate_gung_ho_movement
 		cost = 3.00
 		prerequisite = {
 			focus = LEP_industrial_general_committee
@@ -9901,7 +9901,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_marine_exp
-		icon = GFX_goal_generic_marines2
+		icon = GFX_focus_CHI_fund_marine_corp
 		cost = 7
 
 		relative_position_id = LEP_recruit_beiyang_admiralty
@@ -10231,7 +10231,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_nanjing_air_academy
-		icon = GFX_goal_China_Beiyang_Air_Force
+		icon = GFX_focus_CHI_formalise_training_regime
 		cost = 6
 
 		relative_position_id = LEP_fortifying_our_positions
@@ -10395,7 +10395,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_cult_of_aviation
-		icon = GFX_focus_SOV_flying_clubs
+		icon = GFX_focus_PRC_pilot_training
 		cost = 5
 
 		relative_position_id = LEP_nanjing_air_academy
@@ -10447,7 +10447,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_china_air_fleet
-		icon = GFX_focus_generic_air_bases
+		icon = GFX_goal_China_Beiyang_Air_Force
 		cost = 6
 
 		relative_position_id = LEP_nanjing_air_academy
@@ -10708,7 +10708,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_through_fire_and_war
-		icon = GFX_goal_generic_intense_warfare
+		icon = GFX_focus_CHI_decisive_battles
 		cost = 6
 
 		relative_position_id = LEP_symphony_of_factory_and_firepower
