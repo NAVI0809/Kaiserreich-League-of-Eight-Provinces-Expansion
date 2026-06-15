@@ -66,6 +66,556 @@ LEP_add_plane_variants = {
 	}	
 }
 
+#zigai
+
+LEP_rescue_industry = {
+	if = {
+		limit = { has_idea = LEP_Crippled_Industry }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industry
+			add_idea = LEP_Crippled_Industrym1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Crippled_Industrym1 }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industrym1
+			add_idea = LEP_Crippled_Industrym2a
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Crippled_Industrym2a }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industrym2a
+			add_idea = LEP_Crippled_Industrym3
+		}
+	}
+	else = {
+		add_political_power = 50
+		add_stability = 0.1
+		add_war_support = 0.05
+	}
+}
+
+LEP_rebuild_order = {
+	if = {
+		limit = { has_idea = LEP_Rampant_Disorder }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder
+			add_idea = LEP_Rampant_Disorder1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder1 }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder1
+			add_idea = LEP_Rampant_Disorder2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder2 }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder2
+			add_idea = LEP_Rampant_Disorder3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder3 }
+		remove_ideas = LEP_Rampant_Disorder3
+	}
+	else = {
+		add_political_power = 50
+		add_stability = 0.1
+		add_war_support = 0.05
+	}
+}
+
+
+LEP_improve_popular_support = {
+	if = {
+		limit = { has_idea = LEP_popular_support_0 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_0
+			add_idea = LEP_popular_support_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_1 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_1
+			add_idea = LEP_popular_support_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_2 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_2
+			add_idea = LEP_popular_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_3 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_3
+			add_idea = LEP_popular_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_4 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_4
+			add_idea = LEP_popular_support_5
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_DSP_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_governance_for_truth
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_ZXX_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_governance_by_zhengxue
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JNSB_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_industry_and_commerce_co_governance
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JGH_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_voice_of_the_people
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JXH_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_rational_order
+		}
+	}
+	else = {
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.15
+	}
+}
+
+LEP_improve_industry = {
+	if = {
+		limit = { has_idea = LEP_industrial_general_committee1 }
+		swap_ideas = {
+			remove_idea = LEP_industrial_general_committee1
+			add_idea = LEP_industrial_general_committee2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_industrial_general_committee2 }
+		swap_ideas = {
+			remove_idea = LEP_industrial_general_committee2
+			add_idea = LEP_industrial_general_committee3
+		}
+	}
+}
+
+LEP_raise_funds = {
+	if = {
+		limit = { has_idea = LEP_funding_shortage1 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage1
+			add_idea = LEP_funding_shortage2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage2 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage2
+			add_idea = LEP_funding_shortage3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage3 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage3
+			add_idea = LEP_funding_shortage4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage4 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage4
+			add_idea = LEP_funding_shortage5
+		}
+	}
+
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage5 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage5
+			add_idea = LEP_funding_shortage6
+		}
+	}
+}
+
+LEP_promote_democracy = {
+	if = {
+		limit = { has_idea = LEP_weak_democracy }
+		swap_ideas = {
+			remove_idea = LEP_weak_democracy
+			add_idea = LEP_unstable_democracy
+		}
+	}
+	if = {
+		limit = { has_idea = LEP_unstable_democracy }
+		swap_ideas = {
+			remove_idea = LEP_unstable_democracy
+			add_idea = LEP_strenghtening_democracy
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_strenghtening_democracy }
+		swap_ideas = {
+			remove_idea = LEP_strenghtening_democracy
+			add_idea = LEP_strong_democracy
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_strong_democracy }
+		swap_ideas = {
+			remove_idea = LEP_strong_democracy
+			add_idea = LEP_genuine_democracy
+		}
+	}
+	else = {
+		add_political_power = 100
+		add_stability = 0.1
+	}
+
+}
+
+LEP_recruit_RCA_endgame_advisors_effect = {
+	CHI = {
+		CHI_wang_jingwei = { LEP_recruit_characters_effect = yes }
+		CHI_gu_mengyu = { LEP_recruit_characters_effect = yes }
+	    CHI_guo_chuntao = { LEP_recruit_characters_effect = yes }
+	    CHI_zhou_fohai = { LEP_recruit_characters_effect = yes }
+	}
+}
+
+LEP_recruit_PAC_endgame_advisors_effect = {
+	CHI = {
+		CHI_song_qingling = { LEP_recruit_characters_effect = yes }
+		CHI_chen_youren = { LEP_recruit_characters_effect = yes }
+	    CHI_zhang_bojun = { LEP_recruit_characters_effect = yes }
+	    CHI_song_ziwen = { LEP_recruit_characters_effect = yes }
+	}
+}
+
+LEP_dem_unification_effect = {
+	set_cosmetic_tag = united_china
+	if = {
+		limit = { 
+			NOT = {
+				has_country_flag = LEP_NSU_win 
+			}
+		}
+	}
+	country_event = { id = league_generic.1 days = 3 }
+}
+
+LEP_strengthen_ZZH_small = {
+	custom_effect_tooltip = LEP_add_ZZH_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_ZZH_large = {
+	custom_effect_tooltip = LEP_add_ZZH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_ZXX_small = {
+	custom_effect_tooltip = LEP_add_ZXX_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_ZXX_large = {
+	custom_effect_tooltip = LEP_add_ZXX_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JNSB_small = {
+	custom_effect_tooltip = LEP_add_JNSB_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_JNSB_large = {
+	custom_effect_tooltip = LEP_add_JNSB_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JGH_large = {
+	custom_effect_tooltip = LEP_add_JGH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JXH_large = {
+	custom_effect_tooltip = LEP_add_JXH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_weaken_ZZH_small = {
+	custom_effect_tooltip = LEP_sub_ZZH_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_ZZH_large = {
+	custom_effect_tooltip = LEP_sub_ZZH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.08
+		}
+	}
+}
+
+LEP_weaken_ZXX_small = {
+	custom_effect_tooltip = LEP_sub_ZXX_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_ZXX_large = {
+	custom_effect_tooltip = LEP_sub_ZXX_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.08
+		}
+	}
+}
+
+LEP_weaken_JNSB_small = {
+	custom_effect_tooltip = LEP_sub_JNSB_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_JNSB_large = {
+	custom_effect_tooltip = LEP_sub_JNSB_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_change_clothes_of_generals = {
+	LEP_chen_yi = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_chen_yi_dem_army_large }
+		}
+	}
+	LEP_tang_enbo = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_tang_enbo_dem_army_large }
+		}
+	}
+	LEP_zhou_fengqi = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_zhou_fengqi_dem_army_large }
+		}
+	}
+	LEP_ge_jingen = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_ge_jingen_dem_army_large }
+		}
+	}
+	LEP_qian_zongze = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_qian_zongze_dem_army_large }
+		}
+	}
+	LEP_shi_yousan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_shi_yousan_dem_army_large }
+		}
+	}
+	LEP_lin_wei = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_lin_wei_dem_army_large }
+		}
+	}
+	LEP_zhou_yan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_zhou_yan_dem_army_large }
+		}
+	}
+	LEP_guo_chan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_guo_chan_dem_army_large }
+		}
+	}
+	LEP_xu_peigen = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_xu_peigen_dem_army_large }
+		}
+	}
+	LEP_li_rentao = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
+		}
+	}
+	LEP_liu_qingeng = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_liu_qingeng_dem_army_large }
+		}
+	}
+	
+}
+
+LEP_tianyuan_effect = {
+	if = {
+		limit = { has_idea = LEP_tianyuan_idea }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea
+			add_idea = LEP_tianyuan_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_tianyuan_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea2
+			add_idea = LEP_tianyuan_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_tianyuan_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea3
+			add_idea = LEP_tianyuan_idea4
+		}
+	}
+}
+
+LEP_found_economic_cooperation_treaty = {
+	add_ideas = LEP_ECT_idea_LEP
+	custom_effect_tooltip = tooltip_white_line
+	custom_effect_tooltip = LEP_invite_to_ECT_tt
+	hidden_effect = {
+		save_global_event_target_as = KR_ECT_leader
+		create_economic_sphere = yes
+		var:economic_sphere = {
+			set_character_name = LEP_ECT_Name
+			var:icon = { set_character_name = "GFX_goal_LEP_jiangzhe_bank" }
+			var:desc = { set_character_name = LEP_ECT_desc }
+			set_variable = { red = 0.972 }
+			set_variable = { green = 0.776 }
+			set_variable = { blue = 0.0 }
+		}
+	}
+}
+
+LEP_add_to_ECT = {
+	custom_effect_tooltip = LEP_add_to_ECT_tt
+	add_ideas = LEP_ECT_idea_Member
+	hidden_effect = {
+		set_temp_variable = { sphere_target = THIS }
+		LEP = {
+			add_to_economic_sphere = yes
+			remove_opinion_modifier = { target = PREV modifier = KR_disapproves_of_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_hates_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_outraged }
+		}
+	}
+}
+
 
 
 

@@ -1304,6 +1304,12 @@ focus_tree = {
 	focus = {
 		id = LEP_march_along_yangtze
 		icon = {
+			GFX_goal_generic_attack_qing = {
+				has_global_flag = QIE_manchu_restoration
+			}
+			GFX_goal_generic_attack_zhili = yes
+		}
+		icon = {
 			trigger = { has_global_flag = QIE_manchu_restoration }
 			value = GFX_goal_generic_attack_qing
 		}
@@ -8355,14 +8361,11 @@ focus_tree = {
 	focus = {
 		id = LEP_staff_officer_school
 		icon = {
-			trigger = {
+			GFX_goal_LEP_officer_initiative = {
 				QIE = { is_monarchy = yes }
 				NOT = { has_global_flag = QIE_manchu_restoration }
 			}
-			value = GFX_goal_LEP_officer_initiative
-		}
-		icon = {
-			value = GFX_goal_China_Beiyang_Army
+			GFX_goal_LEP_officer_initiative = yes
 		}
 		dynamic = yes
 		cost = 7

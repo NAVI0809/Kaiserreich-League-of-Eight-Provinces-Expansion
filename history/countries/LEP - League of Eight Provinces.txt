@@ -143,7 +143,7 @@ recruit_character = LEP_hermann_kriebel
 
 recruit_character = LEP_leighton_stuart
 recruit_character = LEP_tang_qunying
-
+recruit_character = LEP_fang_yexian 
 
 ### Generals ###
 recruit_character = LEP_liu_zongji
@@ -199,6 +199,9 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 
+LEP_fang_yexian  = { #recruit only by league_mid.64
+	retire = yes
+}
 LEP_shi_beiheng = { #recruit only by league_mid.52
 	retire = yes
 }

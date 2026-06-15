@@ -1,0 +1,2335 @@
+#######################################
+# League of Eight Provinces EXP Ideas #
+#######################################
+# By new guys
+###########################
+
+ideas = {
+
+		#zigai
+
+		LEP_nanjing_airforce_6 = { 
+			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
+			name = LEP_nanjing_airforce_1
+			picture = SWE_formation_flying
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_mission_efficiency = 0.05
+				ground_attack_factor = 0.05
+				air_ace_bonuses_factor = 0.15
+				ace_effectiveness_factor = 0.1
+				air_home_defence_factor = 0.10
+			}
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				mio_cat_eq_only_light_fighter_no_cv = {
+					instant = yes
+					build_cost_ic = -0.10
+				}
+			}
+		}
+
+		LEP_nanjing_navy_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_2" }
+			name = LEP_nanjing_navy
+			picture = SWE_coastal_support
+			allowed = { always = no }
+			modifier = {
+				experience_gain_navy = 0.10
+				shore_bombardment_bonus = 0.15
+				navy_org_factor = 0.05
+				refit_speed = 0.15
+				navy_fuel_consumption_factor = -0.1
+				naval_coordination = 0.1
+				naval_night_attack = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05
+					lg_attack = 0.1
+					hg_attack = 0.1
+					instant = yes
+				}
+				ship_hull_heavy = {
+					lg_attack = 0.1
+					hg_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		LEP_labor_discipline = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labor_discipline" }
+			picture = TUS_recovering_syndies_economy
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+
+		LEP_Win_over_the_trade_union = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labor_discipline" }
+			picture = backward_industry
+			allowed = { always = no }
+			available = {
+			    OR = {
+				    has_war_with = CHI
+				    has_war_with = ANQ
+			    }
+		    }
+			modifier = {
+				consumer_goods_factor = 0.02
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		LEP_chamber = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_chamber" }
+			picture = generic_government_reconciliation
+			allowed = { always = no }
+			available = {
+			    OR = {
+				    has_war_with = CHI
+				    has_war_with = ANQ
+			    }
+		    }
+			modifier = {
+				political_power_factor = 0.05
+				power_balance_weekly = -0.01
+				trade_laws_cost_factor  = -0.1
+				economy_cost_factor = -0.1
+			}
+		}
+
+		LEP_panel_of_consultants = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_panel_of_consultants" }
+			picture = generic_officer
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_factor = 0.1
+				power_balance_weekly = 0.01
+				theorist_cost_factor = -0.1                                
+				army_chief_cost_factor = -0.1
+			}
+		}
+        
+		LEP_Student_Volunteer_Group = { #学生志愿团
+			on_add = { log = "[GetLogRoot]: add idea LEP_Student_Volunteer_Group" }
+			picture = generic_officer
+			allowed = { always = no }
+			available = {
+			    OR = {
+				    has_war_with = CHI
+				    has_war_with = ANQ
+			    }
+		    }
+			modifier = {
+				mobilization_speed = 0.005
+				army_morale_factor = 0.05
+				supply_consumption_factor = -0.05
+				power_balance_weekly = -0.005
+
+			}
+		}
+
+		LEP_popular_support_0 = {
+			on_add = { log = "[GetLogRoot]: add idea 	LEP_cease_hostilities" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.35
+				war_support_factor = -0.35
+				political_power_factor = -0.35
+				compliance_gain = -0.10
+				research_speed_factor = -0.3
+			}
+		}
+
+		LEP_popular_support_1 = {
+			on_add = { log = "[GetLogRoot]: add idea 	LEP_popular_support_1" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.3
+				political_power_factor = -0.1
+				compliance_gain = -0.02
+				research_speed_factor = -0.2
+
+			}
+		}
+
+		LEP_popular_support_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_2" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.20
+				compliance_gain = -0.01
+				political_power_factor = -0.05
+				research_speed_factor = -0.15
+
+			}
+		}
+
+		LEP_popular_support_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_3" }
+			picture = FNG_mantetsu_influence
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				compliance_gain = -0.01
+				political_power_factor = -0.05
+				research_speed_factor = -0.1
+
+			}
+		}
+
+		LEP_popular_support_4 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_4" }
+			picture = FNG_pervasive_mantetsu
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				compliance_gain = -0.01
+				research_speed_factor = -0.05
+
+			}
+		}
+
+		LEP_popular_support_5 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_5" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.05
+				compliance_gain = 0.01
+
+			}
+		}
+
+		LEP_popular_support_governance_for_truth = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_governance_for_truth" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.15
+				political_power_factor = 0.20
+				compliance_gain = 0.025
+				research_speed_factor = 0.10
+				social_liberal_drift = 0.01
+
+			}
+		}
+
+		LEP_popular_governance_by_zhengxue = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_governance_by_zhengxue" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_factor = 0.15
+				compliance_gain = 0.035
+				political_advisor_cost_factor = -0.10
+				required_garrison_factor = -0.10
+				market_liberal_drift = 0.01
+
+			}
+		}
+
+		LEP_popular_support_industry_and_commerce_co_governance = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_industry_and_commerce_co_governance" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_factor = 0.15
+				compliance_gain = 0.035
+				consumer_goods_factor = -0.15
+				min_export = 0.25
+				social_conservative_drift = 0.01
+
+			}
+		}
+
+		LEP_popular_support_voice_of_the_people = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_voice_of_the_people" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_factor = 0.10
+				compliance_gain = 0.035
+				production_factory_max_efficiency_factor = 0.05
+				global_building_slots_factor = 0.10
+				social_democrat_drift = 0.01
+
+			}
+		}
+
+		LEP_popular_support_rational_order = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_rational_order" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_factor = 0.15
+				compliance_gain = 0.035
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				authoritarian_democrat_drift = 0.01
+
+			}
+		}
+
+		LEP_industrial_general_committee1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_general_committee1" }
+			picture = generic_lightbulb
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+
+			}
+		}
+
+		LEP_industrial_general_committee2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_general_committee2" }
+			picture = generic_lightbulb
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.20
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+
+			}
+		}
+
+		LEP_industrial_general_committee3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_general_committee3" }
+			picture = generic_lightbulb
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.20
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.15
+
+			}
+		}
+
+		LEP_industrial_general_committee4 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_committee3" }
+			picture = generic_lightbulb
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.20
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.15
+				research_speed_factor = 0.1
+
+			}
+		}
+
+		LEP_rural_development = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_rural_development" }
+			picture = generic_mechanised_agriculture
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				monthly_population = 0.025
+				production_speed_infrastructure_factor = 0.05
+				global_building_slots_factor = 0.05
+				
+			}
+		}
+
+		LEP_rural_development1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_rural_development1" }
+			picture = generic_mechanised_agriculture
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				monthly_population = 0.10
+				production_speed_infrastructure_factor = 0.1
+				global_building_slots_factor = 0.2
+				
+			}
+		}
+
+		LEP_rural_development2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_rural_development2" }
+			picture = generic_mechanised_agriculture
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				monthly_population = 0.2
+				production_speed_infrastructure_factor = 0.15
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = -0.05
+				political_power_factor = 0.05
+				
+			}
+		}
+
+		LEP_rural_cooperation = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_rural_cooperation" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.1
+				
+			}
+		}
+
+		LEP_Expand_the_merchant_leet = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_private_education" }
+			picture = eng_steady_as_she_goes
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				min_export = 0.05
+				trade_opinion_factor = 0.5
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		LEP_funding_shortage1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = KTG_Industrial_Crisis_Factories
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.30
+				political_power_gain = -0.05
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+
+		LEP_funding_shortage2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = KTG_Industrial_Crisis_Factories
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				consumer_goods_factor = 0.2
+				political_power_gain = -0.01
+				industrial_capacity_factory = -0.05
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+
+		LEP_funding_shortage3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = LEC_medium_reserves
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.15
+				political_power_gain = 0.03
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		LEP_funding_shortage4 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = LEC_staggering_reserves
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		LEP_funding_shortage5 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = generic_loans
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.15
+				global_building_slots_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_funding_shortage6 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_funding_shortage" }
+			picture = generic_loans
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.15
+				political_power_gain = 0.15
+				industrial_capacity_factory = 0.2
+				global_building_slots_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		LEP_urban_expansion1 = {
+            on_add = { log = "[GetLogRoot]: add idea LEP_urban_expansion" }
+			picture = generic_colonize
+			allowed = { always = no }
+		
+            modifier = {
+				mobilization_speed = 0.10
+				conscription = 0.002
+                industrial_capacity_factory = 0.1       # 民用工厂建造速度 +10%
+                local_resources_factor = 0.05           # 本地资源产出 +5%
+                population_growth = 0.02                # 人口增长率 +2%
+                stability_factor = 0.02          
+			}
+		}
+
+		LEP_urban_expansion2 = {
+            on_add = { log = "[GetLogRoot]: add idea LEP_urban_expansion" }
+			picture = generic_colonize
+			allowed = { always = no }
+		
+            modifier = {
+				mobilization_speed = 0.10
+				conscription = 0.002
+                industrial_capacity_factory = 0.1       # 民用工厂建造速度 +10%
+                local_resources_factor = 0.05           # 本地资源产出 +5%
+                population_growth = 0.02                # 人口增长率 +2%
+                stability_factor = 0.02
+				research_speed_factor = 0.05
+				electronics_research = 0.1
+				land_reinforce_rate = 0.05            
+			}
+		}
+
+		LEP_national_road_construction_plan = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_national_road_construction_plan" }
+			picture = HOL_labor_camps
+			allowed = { always = no }
+		
+            modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+	
+			}
+		}
+
+		LEP_professional_training = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_national_road_construction_plan" }
+			picture = generic_colonize
+			allowed = { always = no }
+		
+            modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+		}
+
+		LEP_southeast_prosperity = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_southeast_prosperity" }
+			picture = generic_colonize
+			allowed = { always = no }
+		
+            modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				compliance_gain = 0.03
+				party_popularity_stability_factor = 0.15
+			}
+		}
+
+		LEP_three_colors_democracy1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy1" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+		
+            modifier = {
+				party_popularity_stability_factor = 0.1
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+			}
+		}
+
+		LEP_three_colors_democracy2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy2" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+		
+            modifier = {
+				party_popularity_stability_factor = 0.15
+				social_democrat_drift = 0.01
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+			}
+		}
+
+		LEP_three_colors_democracy3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy3" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+		
+            modifier = {
+				stability_weekly = -0.005
+				party_popularity_stability_factor = -0.15
+				war_support_factor = -0.2
+			}
+		}
+
+		LEP_three_colors_democracy4m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy4m" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+		
+            modifier = {
+				stability_weekly = -0.002
+				party_popularity_stability_factor = 0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		LEP_three_colors_democracy4n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy4n" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+		
+            modifier = {
+				stability_weekly = -0.003
+				war_support_factor = -0.05
+			}
+		}
+
+		LEP_three_colors_democracy5 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_three_colors_democracy5" }
+			picture = FNG_dominant_mantetsu
+			allowed = { always = no }
+		
+            modifier = {
+				party_popularity_stability_factor = 0.1
+				war_support_factor = 0.15
+			}
+		}
+
+		LEP_autonomy_outline_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.1
+				LEP_political_power_factor = 0.05
+			}
+		}
+
+		LEP_autonomy_outline_idea1m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea1m" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.1
+				political_power_factor = 0.05
+				required_garrison_factor = -0.1
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+			}
+		}
+
+		LEP_autonomy_outline_idea1n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea1n" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.1
+				political_power_factor = 0.05
+				mobilization_laws_cost_factor = -0.33
+				conscription = -0.005
+				planning_speed = 0.15
+			}
+		}
+
+		LEP_autonomy_outline_idea2m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea2m" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.25
+				political_power_factor = 0.05
+				required_garrison_factor = -0.1
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				resistance_growth = -0.20
+				local_supplies = 0.1
+				political_advisor_cost_factor = -0.15
+			}
+		}
+
+		LEP_autonomy_outline_idea2n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea2n" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.25
+				political_power_factor = 0.05
+				mobilization_laws_cost_factor = -0.33
+				conscription = -0.005
+				planning_speed = 0.15
+				resistance_growth = -0.20
+				local_supplies = 0.1
+				political_advisor_cost_factor = -0.15
+			}
+		}
+
+		LEP_autonomy_outline_idea3m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea3m" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.25
+				political_power_factor = 0.05
+				required_garrison_factor = -0.1
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.25
+				resistance_growth = -0.20
+				local_supplies = 0.1
+				political_advisor_cost_factor = -0.15
+				surrender_limit = 0.50
+				justify_war_goal_time = 0.15
+				war_support_factor = -0.2
+			}
+		}
+
+		LEP_autonomy_outline_idea3n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_autonomy_outline_idea3n" }
+			picture = OTT_solid_idea
+			allowed = { always = no }
+		
+            modifier = {
+				compliance_gain = 0.25
+				political_power_factor = 0.05
+				mobilization_laws_cost_factor = -0.33
+				conscription = -0.005
+				planning_speed = 0.15
+				resistance_growth = -0.20
+				local_supplies = 0.1
+				political_advisor_cost_factor = -0.15
+				surrender_limit = 0.50
+				justify_war_goal_time = 0.15
+				war_support_factor = -0.2
+			}
+		}
+
+		LEP_livelihood_equality_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_livelihood_equality_idea" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+		
+            modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.15
+				local_resources_factor = 0.05
+			}
+		}
+
+		LEP_factory_welfare_reform_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_factory_welfare_reform_idea" }
+			picture = economic_control_icon
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_gain = -0.10
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		LEP_appease_general_labor_union_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_appease_general_labor_union_idea" }
+			picture = UK_economy_syn_idea
+			allowed = { always = no }
+		
+            modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				line_change_production_efficiency_factor = 0.15
+			}
+		}
+
+		LEP_new_citizen1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_citizen1" }
+			picture = HOL_workplace_democracy
+			allowed = { always = no }
+		
+            modifier = {
+				war_support_factor = 0.15
+				drift_defence_factor = 0.15
+				army_morale_factor = 0.10
+			}
+		}
+
+		LEP_new_citizen2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_citizen2" }
+			picture = HOL_workplace_democracy
+			allowed = { always = no }
+		
+            modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.15
+				drift_defence_factor = 0.15
+				army_morale_factor = 0.15
+				army_org_factor = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		LEP_new_citizen3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_citizen3" }
+			picture = HOL_workplace_democracy
+			allowed = { always = no }
+		
+            modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				drift_defence_factor = 0.15
+				army_morale_factor = 0.15
+				army_org_factor = 0.15
+				consumer_goods_factor = -0.15
+				research_speed_factor = 0.15
+			}
+		}
+
+		LEP_socia_solidarity = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_socia_solidarity" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+		
+            modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = 0.1
+				industry_repair_factor = 0.25
+				conversion_cost_mil_to_civ_factor = -0.25
+				industry_air_damage_factor = -0.2
+			}
+		}
+
+		LEP_administrative_rectification1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification1" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.05
+			}
+		}
+
+		LEP_administrative_rectification2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification2" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+
+		LEP_administrative_rectification3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification3" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		LEP_administrative_rectification4m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification4m" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.15
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_administrative_rectification4n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification4n" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.1
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
+				global_building_slots_factor = 0.15
+			}
+		}
+
+		LEP_administrative_rectification5m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification4m" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.2
+				line_change_production_efficiency_factor = 0.1
+				conscription_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		LEP_administrative_rectification5n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_administrative_rectification4n" }
+			picture = generic_investigation
+			allowed = { always = no }
+		
+            modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.15
+				global_building_slots_factor = 0.15
+				conscription_factor = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		LEP_Modern_Civil_Service_System = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Modern_Civil_Service_System" }
+			picture = generic_investigation
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.15
+				
+			}
+		}
+
+		LEP_Whampoa_spirit_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Whampoa_spirit_idea" }
+			picture = generic_investigation
+			allowed = { always = no }
+			modifier = {
+				military_leader_cost_factor = 0.15
+				trait_trickster_xp_gain_factor = 0.15
+				trait_infantry_leader_xp_gain_factor = 0.15
+				trait_commando_xp_gain_factor = 0.15
+			}
+		}
+		LEP_labouring_army_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labouring_army_idea" }
+			picture = Recruitment_Crisis
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				experience_loss_factor = 0.10
+				compliance_growth = 0.10
+			}
+		}
+
+		LEP_conflict_and_struggle = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_conflict_and_struggle" }
+			picture = generic_broken_champagne
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = -0.15
+				stability_weekly = -0.05
+				stability_factor = -0.40
+				war_support_factor = -0.3
+			}
+		}
+
+
+		LEP_new_republican_army1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_republican_army1" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+		
+            modifier = {
+				experience_gain_army_factor = 0.1
+				army_morale_factor = 0.25
+				army_org_factor = 0.15
+				attrition = -0.05 
+			}
+		}
+
+		LEP_new_republican_army2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_republican_army2" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+		
+            modifier = {
+				experience_gain_army = 0.05
+				experience_gain_army_factor = 0.1
+				army_morale_factor = 0.25
+				army_org_factor = 0.15
+				attrition = -0.05
+				command_power_gain_mult = 0.25
+				theorist_cost_factor = -0.1
+				army_chief_cost_factor = -0.1
+				high_command_cost_factor = -0.1     
+			}
+		}
+
+		LEP_new_republican_army3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_republican_army3" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+		
+            modifier = {
+				experience_gain_army = 0.05
+				experience_gain_army_factor = 0.1
+				army_morale_factor = 0.25
+				army_org_factor = 0.15
+				attrition = -0.05
+				command_power_gain_mult = 0.25
+				theorist_cost_factor = -0.1
+				army_chief_cost_factor = -0.1
+				high_command_cost_factor = -0.1  
+				training_time_factor = -0.15                           
+                training_time_army_factor = -0.1       
+			}
+		}
+
+		LEP_military_industrial_cooperation = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_industrial_cooperation" }
+			picture = china_five_races_soldier
+			allowed = { always = no }
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+            equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEP_Modern_Civil_Service_System = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Modern_Civil_Service_System" }
+			picture = RUS_duma_influence
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				political_advisor_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.15
+				political_power_factor = 0.05
+			}
+		}
+
+		
+
+		LEP_embers_of_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_embers_of_democracy" }
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+		}
+
+		LEP_weak_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_weak_democracy" }
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_factor = -0.075
+				stability_factor = -0.075
+			}
+		}
+
+		LEP_unstable_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_unstable_democracy" }
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+			}
+		}
+
+		LEP_strenghtening_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_strenghtening_democracy" }
+			picture = generic_political_support
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.025
+			}
+		}
+
+		LEP_strong_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_strong_democracy" }
+			picture = generic_political_support
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.025
+			}
+		}
+
+		LEP_genuine_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_genuine_democracy" }
+			picture = SPR_torchbearers_of_tomorrow
+			modifier = {
+				political_power_factor = 0.15
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		LEP_guided_democracy = {
+			on_add = { log = "[GetLogRoot]: add idea RUS_guided_democracy" }
+			picture = generic_scales
+			modifier = {
+				political_power_factor = 0.1
+				party_popularity_stability_factor = 0.1
+				war_support_factor = -0.05
+			}
+		}
+
+		
+
+		LEP_labor_welfare = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labor_welfare" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		LEP_good_government_idea_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_good_government_idea_1" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05 
+			}
+		}
+
+		LEP_good_government_idea_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_good_government_idea_2" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.25
+				stability_factor = 0.15
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.05 
+				resistance_growth = -0.15
+			}
+		}
+
+		LEP_industrial_education = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_education" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				industry_repair_factor = 0.25
+			}
+		}
+
+		LEP_federal_centralization = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_federal_centralization" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				local_supplies = 0.05
+				local_resources = 0.1
+				production_speed_buildings_factor = 0.1
+				enemy_operative_detection_chance_factor  = 0.15
+			}
+		}
+
+		LEP_pragmatic_governance = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_pragmatic_governance" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				industrial_concern_cost_factor = -0.15
+				materiel_manufacturer_cost_factor = -0.15
+				consumer_goods_factor = -0.05                    
+				
+			}
+		}
+
+		LEP_construction_institute = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_construction_institute" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				industrial_concern_cost_factor = -0.15
+				materiel_manufacturer_cost_factor = -0.15
+				consumer_goods_factor = -0.05 
+				production_speed_buildings_factor = 0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.1                   	
+			}
+			research_bonus = {
+				nuclear = 0.15
+				rocketry = 0.15
+			}
+		}
+
+
+		LEP_multi_level_overall_control = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_multi_level_overall_control" }
+			picture = RUS_republican_anger
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.15
+				attrition = -0.15
+				occupation = -0.25
+				out_of_supply_factor = -0.10
+			}
+		}
+
+		LEP_technocratic_administration_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_technocratic_administration_idea" }
+			picture = SOV_scientist_defect
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		LEP_rural_reconstruction_movement = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_rural_reconstruction_movement" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.1
+				global_building_slots_factor = 0.2
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		LEP_open_development_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_open_development_1" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+				conversion_cost_mil_to_civ_factor = -0.15
+				industrial_concern_cost_factor = -0.2
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		LEP_open_development_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_open_development_2" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.07
+				consumer_goods_factor = -0.15
+				conversion_cost_mil_to_civ_factor = -0.15
+				industrial_concern_cost_factor = -0.2
+				civilian_intel_to_others = 10
+				trade_opinion_factor = 0.20
+				industrial_capacity_dockyard = 0.3
+			}
+		}
+
+		LEP_mobilisation_of_society_idea_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mobilisation_of_society_idea_1" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.1
+				line_change_production_efficiency_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.15
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_mobilisation_of_society_idea_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mobilisation_of_society_idea_2" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				consumer_goods_factor = -0.15
+				industry_repair_factor = 0.2   
+				line_change_production_efficiency_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.15
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_mobilisation_of_society_idea_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mobilisation_of_society_idea_3" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.1
+				industry_repair_factor = 0.1  
+				conversion_cost_civ_to_mil_factor = -0.15
+				enemy_operative_detection_chance_factor = 0.15
+				enemy_operative_capture_chance_factor = 0.1
+				party_popularity_stability_factor = 0.1
+			}
+		}
+
+		LEP_military_sports_organization_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_sports_organization_idea" }
+			picture = HOL_welfare_state
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army = 0.05
+				training_time_factor = -0.10
+				training_time_army_factor = -0.15
+				conscription = 0.05
+				army_org_factor = 0.1           
+			}
+		}
+
+		LEP_may_fourth_spirit = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_may_fourth_spirit" }
+			picture = war_of_words
+			allowed = { always = no }
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_morale_factor = 0.10
+				war_support_factor = 0.15
+				surrender_limit = 0.25   
+			}
+		}
+
+		LEP_academic_freedom = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_academic_freedom" }
+			picture = generic_research_increase
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+
+		LEP_protect_human_rights = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_protect_human_rights" }
+			picture = RUS_popular_anger
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.1
+			}
+		}
+
+		LEP_political_rationality1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_political_rationality1" }
+			picture = generic_modernisation_reforms
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				trade_laws_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.1
+			}
+		}
+
+		LEP_political_rationality2m = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_political_rationality1" }
+			picture = generic_modernisation_reforms
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.15
+				economy_cost_factor = -0.15
+				trade_laws_cost_factor = -0.15
+				mobilization_laws_cost_factor = -0.15
+			}
+		}
+
+		LEP_political_rationality2n = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_political_rationality2n" }
+			picture = generic_modernisation_reforms
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.1
+				party_popularity_stability_factor = 0.15
+				industrial_concern_cost_factor = -0.25
+				political_power_factor = 0.05
+				political_advisor_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				trade_laws_cost_factor = -0.1
+				mobilization_laws_cost_factor = -0.1
+			}
+		}
+
+		LEP_construction_program = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_construction_program" }
+			picture = economic_control_icon
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+
+		LEP_invigorate_nation_through_science = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_invigorate_nation_through_science" }
+			picture = CZE_Uranium_Research_b
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+		}
+
+		LEP_invigorate_nation_through_science2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_invigorate_nation_through_science" }
+			picture = CZE_Uranium_Research_b
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.15
+				industry = 0.15
+				nuclear = 0.20
+				rocketry = 0.20
+			}
+		}
+
+		LEP_beat_swords_into_plowshares = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_beat_swords_into_plowshares" }
+			picture = ARG_construction_guilds
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = -0.1
+				production_speed_industrial_complex_factor = 0.15
+				conversion_cost_mil_to_civ_factor = -0.25
+				conscription = -0.001
+			}
+			
+		}
+
+		LEP_complete_nation = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_complete_nation" }
+			picture = war_of_words
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		LEP_complete_nation2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_complete_nation2" }
+			picture = war_of_words
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
+				party_popularity_stability_factor = 0.15
+			}
+		}
+
+		LEP_financial_backing = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_financial_backing" }
+			picture = generic_foreign_capital
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		LEP_industrial_education = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_industrial_education" }
+			picture = generic_planning
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.15
+				industry = 0.15
+			}
+		}
+
+		LEP_new_china_construction_society_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_new_china_construction_society_idea" }
+			picture = ARG_construction_guilds
+			allowed = { always = no }
+			modifier = {
+			    consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.2
+			}
+		}
+
+		LEP_multi_level_governance_system_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_multi_level_governance_system_idea" }
+			picture = GFX_idea_government
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.1
+			    political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.33
+				mobilization_laws_cost_factor = -0.33
+			}
+		}
+
+		LEP_disappointment = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_disappointment" }
+			picture = RUS_popular_anger
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				political_power_factor = -0.15
+				party_popularity_stability_factor = -0.15
+			}
+		}
+
+		LEP_disappointment1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_disappointment1" }
+			picture = RUS_popular_anger
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				political_power_factor = -0.1
+				party_popularity_stability_factor = -0.05
+			}
+		}
+
+		LEP_unstable_morale = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_unstable_morale" }
+			picture = generic_neglected_military
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+				army_experience = -0.1
+				army_org_Factor = -0.15
+			}
+		}
+
+		LEP_unstable_morale2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_unstable_morale2" }
+			picture = generic_neglected_military
+			allowed = { always = no }
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_Factor = -0.05
+			}
+		}
+
+		LEP_ruins_waiting_for_reconstruction = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_unstable_morale" }
+			picture = generic_scars_of_civil_war
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.15
+				production_factory_start_efficiency_factor = -0.15
+			}
+		}
+
+		LEP_ruins_waiting_for_reconstruction2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_unstable_morale2" }
+			picture = generic_scars_of_civil_war
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+			}
+		}
+
+		LEP_tianyuan_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_tianyuan_idea" }
+			picture = RUS_land_reforms
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.05
+				production_factory_start_efficiency_factor = -0.05
+			}
+		}
+
+		LEP_tianyuan_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_tianyuan_idea2" }
+			picture = RUS_land_reforms
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				local_resources = 0.05
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		LEP_tianyuan_idea3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_tianyuan_idea3" }
+			picture = RUS_land_reforms
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				local_resources = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		LEP_tianyuan_idea4 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_tianyuan_idea4" }
+			picture = RUS_land_reforms
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.2
+				local_resources = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		LEP_grand_agricultural_plan_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_grand_agricultural_plan_idea" }
+			picture = generic_mechanised_agriculture
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_infrastructure_factor = 0.05
+				local_resources = 0.05
+			}
+		}
+
+		LEP_grand_agricultural_plan_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_grand_agricultural_plan_idea2" }
+			picture = generic_mechanised_agriculture
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_infrastructure_factor = 0.15
+				local_resources = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+
+		LEP_military_cost = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_cost" }
+			picture = HOL_defense_spending_spree
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_unit_factor = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+
+		LEP_modern_management_system_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_modern_management_system" }
+			picture = generic_army_war_college
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				tank_manufacturer_cost_factor = -0.15
+				naval_manufacturer_cost_factor = -0.15
+				aircraft_manufacturer_cost_factor = -0.15
+				materiel_manufacturer_cost_factor = -0.15
+				industrial_concern_cost_factor = -0.15
+			}
+		}
+
+		LEP_labor_capital_reconciliation_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labor_capital_reconciliation" }
+			picture = TUS_recovering_syndies_economy
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		LEP_labor_capital_reconciliation_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_labor_capital_reconciliation_idea2" }
+			picture = TUS_recovering_syndies_economy
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				global_building_slots_factor = 0.15
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+
+		LEP_depoliticize_trade_unions_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_depoliticize_trade_unions_idea" }
+			picture = HOL_banned_unions
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_depoliticize_trade_unions_idea2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_depoliticize_trade_unions_idea2" }
+			picture = HOL_banned_unions
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				global_building_slots_factor = 0.15
+				political_power_gain = -0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+
+		LEP_independent_army = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_independent_army" }
+			picture = army_cooperation
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				high_command_cost_factor = -0.1
+
+			}
+		}
+
+		LEP_social_reform = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform" }
+			picture = GFX_idea_FRA_home_of_the_revolution
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+
+			}
+		}
+
+		LEP_social_reform2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform2" }
+			picture = GFX_idea_FRA_home_of_the_revolution
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				political_power_gain = 0.05
+
+			}
+		}
+
+		LEP_social_reform3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform3" }
+			picture = GFX_idea_FRA_home_of_the_revolution
+			allowed = { always = no }
+			modifier = {
+				local_resources_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+				political_power_gain = 0.05
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.1
+
+			}
+		}
+
+		LEP_demo_edu = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu" }
+			picture = GFX_idea_FRA_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				political_power_factor = 0.1
+
+			}
+		}
+
+		LEP_demo_edu2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu2" }
+			picture = GFX_idea_FRA_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				political_power_factor = 0.1
+				research_speed_factor = 0.1
+				compliance_gain = 0.01
+
+			}
+		}
+
+		LEP_demo_edu3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu3" }
+			picture = GFX_idea_FRA_communard_spirit
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.15
+				political_power_factor = 0.1
+				research_speed_factor = 0.1
+				compliance_gain = 0.01
+				consumer_goods_factor = -0.15
+				local_supplies = 0.25
+
+			}
+		}
+
+
+		LEP_social_revolution = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_social_revolution" }
+			picture = GFX_idea_FRA_home_of_the_revolution
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.05
+				social_democrat_drift = 0.01
+				radical_socialist_drift = 0.01
+			}
+		}
+
+		LEP_demo_nego = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_demo_nego" }
+			picture = generic_government_reconciliation
+			allowed = { always = no }
+			modifier = {
+				stability = 0.1
+				political_power_gain = 0.05
+				social_democrat_drift = 0.01
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+				social_conservative_drift = 0.01
+			}
+		}
+
+		LEP_national_planning = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_national_planning" }
+			picture = state_economy
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.15
+			}
+		}
+
+		LEP_national_planning2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_national_planning2" }
+			picture = state_economy
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_start_efficiency_factor = 0.15
+				line_change_production_efficiency_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+				local_resources_factor = 0.1
+			}
+		}
+
+		LEP_strengthen_administrative = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_strengthen_administrative" }
+			picture = generic_intel_bonus
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+
+
+		LEP_central_policy_research_office = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_central_policy_research_office" }
+			picture = tur_etatism
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.15
+				political_advisor_cost_factor = -0.33
+			}
+		}
+
+		LEP_centralized_unification = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_centralized_unification" }
+			picture = generic_scales
+			allowed = { always = no }
+			modifier = {
+				compliance_gain = 0.01
+				resistance_growth = -0.25
+			}
+		}
+
+		LEP_mobilisation_of_society_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mobilisation_of_society_idea" }
+			picture = tur_coordinated_balkan_armed_forces
+			allowed = { always = no }
+			modifier = {
+				war_support_factor = 0.1
+				industry_repair_factor = 0.1  
+				conversion_cost_civ_to_mil_factor = -0.15
+				enemy_operative_detection_chance_factor = 0.15
+				enemy_operative_capture_chance_factor = 0.1
+				party_popularity_stability_factor = 0.1
+			}
+		}
+
+		LEP_gea_defence_treaty = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_gea_defence_treaty" }
+			picture = RUS_planning_school
+			allowed = { always = no }
+			modifier = {
+				planning_speed = 0.05
+				local_supplies = 0.1
+			}
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.15
+			}
+		}
+
+		LEP_military_guidance = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_guidance" }
+			picture = advisors_russia
+			allowed = { always = no }
+			modifier = {
+				experience_gain_army_factor = 0.1
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}
+		}
+
+		LEP_navy_experience = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_navy_experience" }
+			picture = generic_navy
+			allowed = { always = no }
+			modifier = {
+				production_speed_naval_base_factor = 0.25
+				production_speed_dockyard_factor = 0.25
+				naval_doctrine_cost_factor = -0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				submarine = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				screen_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				capital_ship = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				carrier = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+
+		LEP_trade_pact = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_trade_pact" }
+			picture = KTG_Gold_Trade
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.1
+				trade_opinion_factor = 0.1
+				min_export = 0.05
+			}
+		}
+
+		LEP_trade_pact2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_trade_pact2" }
+			picture = KTG_Gold_Trade
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				trade_opinion_factor = 0.1
+				min_export = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+
+		}
+
+		LEP_ECT_idea_LEP = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_ECT_idea_LEP" }
+			picture = FNG_china_money
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				trade_opinion_factor = 0.20
+			}
+		}
+		
+		LEP_ECT_idea_Member = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_ECT_idea_Member" }
+			picture = FNG_china_money
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				trade_opinion_factor = 0.10
+			}
+		}
+
+		LEP_regional_division_of_labor_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_regional_division_of_labor_idea" }
+			picture = generic_medium_industry
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_lack_of_resource_penalty_factor = -0.1
+				line_change_production_efficiency_factor = 0.15
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		LEP_joint_military_exercises_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_joint_military_exercises_desc" }
+			picture = MON_conscript_conquered
+			allowed = { always = no }
+			modifier = {
+				invasion_preparation = -0.15
+				experience_gain_army = 0.05
+				experience_gain_navy = 0.05
+				experience_gain_air = 0.05
+			}
+		}
+
+		LEP_The_Master_of_Asia = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_The_Master_of_Asia" }
+			picture = ITA_new_roman_empire_ns
+			allowed = { always = no }
+			modifier = {
+				generate_wargoal_tension = -0.50       
+				send_volunteer_size = 10
+				justify_war_goal_time = -0.5
+				war_support_weekly = 0.001    
+			}
+		}
+
+		LEP_recruit_engineers_and_economists_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_recruit_engineers_and_economists_idea" }
+			picture = CZE_Czech_Industrial_Power
+			allowed = { always = no }
+			modifier = {
+				research_speed_factor = 0.15   
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.1
+			}
+		}
+
+		LEP_exploit_the_european_war_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_exploit_the_european_war_idea" }
+			picture = CAN_imperial_trade
+			allowed = { always = no }
+			available = {
+				CAN = {
+					has_war = yes
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.1  
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+			targeted_modifier = {
+				tag = CAN
+				cic_to_target_factor = 0.15
+			}
+		}
+
+		LEP_Liu_rifle_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_idea" }
+			picture = GFX_idea_LEP_Liu_rifle_idea
+			allowed = { always = no }
+			available = {
+				limit = { NOT = { has_tech = infantry_equipment_3 } }
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = -0.05
+					build_cost_ic = 0.10
+					soft_attack = 0.1
+					breakthrough = 0.1
+					instant = yes
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						tag = LEP
+					}
+					LEP_liu_qingeng = {
+						unit_leader_event = {
+                            id = league_generic.9 #刘氏自装枪
+                        }
+					}
+				}
+			}
+		}
+
+		LEP_Liu_rifle_2_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_2_idea" }
+			picture = GFX_idea_LEP_Liu_rifle_idea
+			allowed = { always = no }
+			available = {
+				limit = { NOT = { has_tech = infantry_equipment_3 } }
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.2
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					build_cost_ic = 0.03
+					soft_attack = 0.15
+					breakthrough = 0.15
+					instant = yes
+				}
+			}
+		}
+		LEP_idea_tide_of_steel = { #New Guards Units
+			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel " }
+			picture = GFX_idea_LEP_idea_tide_of_steel
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				additional_brigade_column_size = 1
+			}
+		}
+	}
+
+	#################
+	### Companies ###
+	#################
+	#industrial_concern = {
+	#	LEPEXP_CNCS_company = {
+	#       on_add = { log = "[GetLogRoot]: add LEPEXP_CNCS_company" }
+	#       allowed = { original_tag = LEP }
+	#       available = {
+	#			has_country_flag = LEP_allow_CNCS_flag
+	#		}   
+	#       visible = {
+	#			has_country_flag = LEP_allow_CNCS_flag
+	#		}
+	#       traits = { chemical_producer }
+	#	}
+	#}	
+
+
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+
+		sino_shanghai_economic_accord = {
+			on_add = { log = "[GetLogRoot]: add idea sino_shanghai_economic_accord" }
+			picture = unequal_treaties
+			level = 3
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed = { always = no }
+			cancel = {
+				743 = { owner = { is_chinese_tag = yes } }
+			}
+
+			modifier = {
+				min_export = 0.05
+				civilian_intel_to_others = 10.0
+			}
+			targeted_modifier = {
+				tag = LEC
+				cic_to_target_factor = 0.05
+			}
+
+			allowed_to_remove = {
+				743 = { owner = { is_chinese_tag = yes } }
+			}
+
+			on_remove = {
+				#Have post-LEC China start with export focus
+				if = {
+					limit = {
+						has_idea = closed_economy
+					}
+					swap_ideas = {
+						remove_idea = closed_economy
+						add_idea = 	export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = limited_exports
+					}
+					swap_ideas = {
+						remove_idea = limited_exports
+						add_idea = export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = free_trade
+					}
+					swap_ideas = {
+					    remove_idea = free_trade
+						add_idea = export_focus
+					}
+				}
+			}
+		}
+	}
+
+

@@ -1,5 +1,27 @@
 leader_traits = {
+    #政府首脑
+	LEP_chamber_of_commerce_leader = {
+		custom_modifier_tooltip = LEP_chamber_of_commerce_leader_desc
+		random = no
+		production_factory_start_efficiency_factor = 0.05
+		local_resources = 0.03
+	}
 
+	LEP_order_engineer = {
+		custom_modifier_tooltip = LEP_order_engineer_desc
+		random = no
+		political_power_factor = 0.1
+		research_speed_factor = 0.05
+	}
+
+	LEP_autonomy_standard_bearer = {
+		custom_modifier_tooltip = LEP_autonomy_standard_bearer_desc
+		random = no
+		compliance_gain = 0.05
+		stability_factor = 0.1
+	}
+
+    #司令部
 	LEPEXP_Grassroots_General = { #草根将军
 		sprite = 5
 		army_infantry_attack_factor = 0.1
@@ -60,4 +82,113 @@ leader_traits = {
 			factor = 0
 		}
 	}
+
+	#政治顾问
+	LEPEXP_king_of_chemical_industry = { #化工大王
+	    sprite = 10
+		
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.1
+		production_speed_industrial_complex_factor = 0.1
+		research_speed_factor = 0.1
+		local_resources_factor = 0.07
+		production_factory_max_efficiency_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	KR_temporary_congress_sic = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.02
+		stability_factor = 0.03
+		trade_laws_cost_factor = -0.05
+		mobilization_laws_cost_factor = -0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_publisher = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		war_support_weekly = 0.01
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_educator = {
+		sprite = 13
+		random = no
+		research_speed_factor = 0.1
+		compliance_growth = 0.01
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_modern_sage = {
+		sprite = 13
+		random = no
+		stability_factor = 0.1
+		compliance_gain = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_zhuge_of_republic = {
+		sprite = 13
+		random = no
+		political_power_gain = 0.05
+		political_advisor_cost_factor = -0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_industrialist = {
+		sprite = 13
+		random = no
+		production_speed_buildings_factor = 0.1
+		production_speed_industrial_complex_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.1
+		production_speed_buildings_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_geologist = {
+		sprite = 13
+		random = no
+		local_resources_factor = 0.15
+		research_speed_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_semi_auto = {
+		sprite = 5
+		random = no
+
+		special_project_speed_factor = 0.15
+		research_speed_factor = 0.05
+
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.15
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+			artillery_equipment = {
+				soft_attack = 0.10
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
 }

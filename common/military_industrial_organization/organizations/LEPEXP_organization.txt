@@ -233,11 +233,11 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		production_bonus = {
 			production_efficiency_cap_factor = 0.025
 			production_capacity_factor = 0.02
+			military_industrial_organization_funds_gain = 0.1
 		}
 
 		on_complete = {
-			add_mio_research_bonus = 0.10
-			add_political_power = -50			
+			add_mio_research_bonus = 0.10		
 			FROM = {				
 				613 = {
 					add_extra_state_shared_building_slots = 1
@@ -250,6 +250,9 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 				add_equipment_to_stockpile = {
 			       type = infantry_equipment
 			       amount = 2500
+		        }
+				mio:LEP_jinling_organisation = {
+			        add_mio_funds = 200
 		        }
 			}		
 		}
@@ -279,7 +282,6 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			add_mio_research_bonus = 0.10
-			add_political_power = -50
 		}
 	}
 
@@ -315,10 +317,10 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		production_bonus = {
 			production_resource_need_factor = -0.2
-			production_efficiency_gain_factor = 0.05
+			production_efficiency_gain_factor = 0.1
 			production_efficiency_cap_factor = -0.15
 			production_capacity_factor = 0.02
-			production_resource_penalty_factor = 0.2
+			production_resource_penalty_factor = 0.25
 		}
 	}
 
@@ -362,6 +364,11 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		on_complete = {
 			add_mio_research_bonus = 0.10
 			add_political_power = -50
+			FROM = {
+				mio:LEP_jinling_organisation = {
+			        add_mio_funds = 200
+		        }
+			}
 		}
 	}
 
@@ -545,8 +552,8 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		on_complete = {
 			FROM = {
-				add_manpower = -9000
-				add_political_power = -80
+				add_manpower = -10000
+				add_political_power = -50
 				if = {
 		            limit = { has_idea = generic_research_advances }
 		            modify_timed_idea = {
@@ -565,6 +572,9 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 				    specialization = specialization_army
 				    value = 1
 			    }
+				mio:LEP_jinling_organisation = {
+			        add_mio_funds = 100
+		        }
 			}
 		}
 	}
@@ -767,7 +777,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		equipment_bonus = {
 			maximum_speed = 0.075
-			defense = 0.075
+			defense = 0.1
 			build_cost_ic = -0.03
 		}
 
@@ -797,6 +807,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 			breakthrough = 0.1
 			defense = 0.15
 			build_cost_ic = 0.05
+			armor_value = 0.2
 		}
 
 		production_bonus = {
@@ -1037,15 +1048,12 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 			custom_effect_tooltip = tooltip_white_line
 			FROM = { 
 				add_political_power = 50 
-				army_experience = 50
-				mio:LEP_jinling_organisation = {
-			        add_mio_funds = 500
-		        }				
+				army_experience = 50				
 				613 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
-						level = 1
+						level = 2
 						instant_build = yes
 					}
 					add_dynamic_modifier = { modifier = LEP_military_industrial_complex_modifier }
@@ -1085,8 +1093,16 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 			production_resource_need_factor = 0.02		
 		}
 
-		#on_complete = {
-		#}
+		on_complete = {
+		    FROM = {
+				mio:LEP_jinling_organisation = {
+			        add_mio_funds = 200
+		        }
+				#mio:LEP_jinling_organisation = {
+			    #    add_mio_funds = 200
+		        #}
+			}
+		}
 	}
 
     ### --end ofartillery traits -- ###
