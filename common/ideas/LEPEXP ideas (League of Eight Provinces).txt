@@ -5,9 +5,8 @@
 ###########################
 
 ideas = {
-
-		#zigai
-
+	#zigai
+	country = {
 		LEP_nanjing_airforce_6 = { 
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
 			name = LEP_nanjing_airforce_1
@@ -2241,7 +2240,8 @@ ideas = {
 				}
 			}
 		}
-		LEP_idea_tide_of_steel = { #New Guards Units
+
+		LEP_idea_tide_of_steel = { 
 			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel " }
 			picture = GFX_idea_LEP_idea_tide_of_steel
 			modifier = {
@@ -2250,26 +2250,50 @@ ideas = {
 				additional_brigade_column_size = 1
 			}
 		}
+
+		LEP_orphan_aid_idea = { 
+			on_add = { log = "[GetLogRoot]: add idea LEP_orphan_aid_idea " }
+			picture = GFX_idea_BEL_traditional_family_values
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = 0.007
+				weekly_manpower = 1000
+			}
+		}
 	}
+	
 
 	#################
 	### Companies ###
 	#################
-	#industrial_concern = {
-	#	LEPEXP_CNCS_company = {
-	#       on_add = { log = "[GetLogRoot]: add LEPEXP_CNCS_company" }
-	#       allowed = { original_tag = LEP }
-	#       available = {
-	#			has_country_flag = LEP_allow_CNCS_flag
-	#		}   
-	#       visible = {
-	#			has_country_flag = LEP_allow_CNCS_flag
-	#		}
-	#       traits = { chemical_producer }
-	#	}
-	#}	
+	industrial_concern = {
+		LEPEXP_CNCS_company = {
+	        on_add = { log = "[GetLogRoot]: add LEPEXP_CNCS_company" }
+	        allowed = { original_tag = LEP }
+			available = {
+				OR = {
+					has_completed_focus = LEP_establish_heavy_industry
+					has_country_flag = LEP_allow_CNCS_flag
+				}
+			}
+	        traits = { chemical_producer }
+			modifier = { 
+				production_speed_synthetic_refinery_factor = 0.1
+				consumer_goods_factor = -0.05
+				air_fuel_consumption_factor = -0.05
+				army_fuel_consumption_factor = -0.05
+				navy_fuel_consumption_factor = -0.05
+			}
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.1
+			}			
+		}
+	}	
 
-
+	##################
+	### Trade Laws ###
+	##################
 	trade_laws = {
 		law = yes
 		use_list_view = yes
@@ -2331,5 +2355,4 @@ ideas = {
 			}
 		}
 	}
-
-
+}

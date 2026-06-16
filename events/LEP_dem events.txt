@@ -1968,11 +1968,15 @@ country_event = { #特别国防预算听证会
 		log = "[GetLogInfo]: eventleague_mid.64 option league_mid.64.a"
 		name = league_mid.64.a
 		set_country_flag = LEP_allow_CNCS_flag
+		set_country_flag = mid64_A
 		LEP_strengthen_ZZH_small = yes
 		custom_effect_tooltip = tooltip_white_line
 		LEP_fang_yexian = { CHN_recruit_character_effect = yes }
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = LEP_fang_yexian_advisor
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = available_industrial_concern
+		show_ideas_tooltip = LEPEXP_CNCS_company
 		custom_effect_tooltip = tooltip_white_line
 		activate_mission = LEPEXP_east_coast_defence_readyness
 		effect_tooltip = {
@@ -1995,9 +1999,17 @@ country_event = { #特别国防预算听证会
 	option = { #为显浙苏团结，宁波商帮成员竺梅先与镇江商会长合作出资
 		log = "[GetLogInfo]: eventleague_mid.64 option league_mid.64.b"
 		name = league_mid.64.b
+		set_country_flag = allow_luxiaobo_advisor
+		set_country_flag = mid64_B
 		LEP_strengthen_JNSB_small = yes
 		custom_effect_tooltip = tooltip_white_line
-
+        custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip =LEP_lu_xiaobo_advisor
+		custom_effect_tooltip = tooltip_white_line
+		LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = LEP_zhu_meixian_advisor
+		custom_effect_tooltip = tooltip_white_line
 		effect_tooltip = {
 			activate_targeted_decision = { target = FROM decision = LEPEXP_huhang_line_defence }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_xicheng_line_defence }

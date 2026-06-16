@@ -6,8 +6,6 @@ set_war_support = 0.3
 set_convoys = 10
 starting_train_buffer = 2
 
-
-
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
@@ -140,10 +138,11 @@ recruit_character = LEP_ouyang_wu
 recruit_character = LEP_li_chenggan
 recruit_character = LEP_hermann_kriebel
 
-
 recruit_character = LEP_leighton_stuart
 recruit_character = LEP_tang_qunying
 recruit_character = LEP_fang_yexian 
+recruit_character = LEP_lu_xiaobo
+recruit_character = LEP_zhu_meixian
 
 ### Generals ###
 recruit_character = LEP_liu_zongji
@@ -199,6 +198,12 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 
+LEP_lu_xiaobo  = { #recruit only by league_
+	retire = yes
+}
+EP_zhu_meixian  = { #recruit only by league_mid.64
+	retire = yes
+}
 LEP_fang_yexian  = { #recruit only by league_mid.64
 	retire = yes
 }

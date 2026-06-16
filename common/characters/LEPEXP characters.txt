@@ -759,9 +759,80 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			desc = LEP_LEP_fang_yexian_advisor_desc
+			desc = LEP_fang_yexian_advisor_desc
 			idea_token = LEP_fang_yexian_advisor
 			traits = { LEPEXP_king_of_chemical_industry }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#竺梅先
+	LEP_zhu_meixian = {
+		name = LEP_zhu_meixian
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_zhu_meixian_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_zhu_meixian_advisor_desc
+			idea_token = LEP_zhu_meixian_advisor
+			traits = { LEPEXP_shipping_king }
+			on_add = {
+				#add_timed_idea = {
+				#	idea = LEP_orphan_aid_idea
+				#	days = 720
+				#}
+				FROM = {
+					LEP_strengthen_JNSB_small = yes
+				}
+				#country_event 灾童教养院事件
+			}
+		}
+	}
+    
+	#陆小波
+	LEP_lu_xiaobo = {
+		name = LEP_lu_xiaobo
+		portraits = {
+			army = {
+				large = GFX_portrait_LEP_lu_xiaobo_army_large
+			}
+			civilian = {
+				small = GFX_portrait_LEP_lu_xiaobo_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_lu_xiaobo_advisor_desc
+			idea_token = LEP_lu_xiaobo_advisor
+			traits = { LEPEXP_patriotic_businessman }
+			visible = { has_country_flag = allow_luxiaobo_advisor }
+			on_add = { 
+				FROM = {
+					LEP_strengthen_JNSB_small = yes
+				}
+				#country_event 灾童教养院事件
+			}
+		}
+		corps_commander = {
+			desc = LEP_lu_xiaobo_advisor_desc
+			traits = { 
+				irregulars_officer  
+				urban_assault_specialist 
+				war_hero
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = { has_completed_focus = LEP_jiangnan_loans }
 		}
 	}
 	###################

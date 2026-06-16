@@ -191,7 +191,7 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		ai_will_do = { factor = 800 }
+		ai_will_do = { factor = 1000 }
 		prerequisite = { focus = LEP_north_south_west }
 		available = {
 			OR = {
@@ -202,12 +202,57 @@ focus_tree = {
 		bypass_if_unavailable = yes
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_jiangnan_loans"
+			LEP_lu_xiaobo = { custom_effect_tooltip = character_becomes_a_general }			
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Shangtuan"
+					LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				}
+				if = {
+					limit = { has_template = "Shangtuan" }
+					delete_unit_template_and_units = { division_template = "Shangtuan" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Shangtuan"
+					division_names_group = LEP_GAR_01
+					regiments = {
+						irregular_infantry = { x = 0 y = 0 }
+						irregular_infantry = { x = 0 y = 1 }
+						irregular_infantry = { x = 0 y = 2 }
+						irregular_infantry = { x = 1 y = 0 }
+						irregular_infantry = { x = 1 y = 1 }
+						irregular_infantry = { x = 1 y = 2 }
+						irregular_infantry = { x = 2 y = 0 }
+						irregular_infantry = { x = 2 y = 1 }
+						irregular_infantry = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 1 }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				613 = {
+					create_unit = {
+						division = "name = \"镇江商团\" division_template = \"Shangtuan\" start_equipment_factor = 1 start_experience_factor = 0.2"
+						owner = ROOT
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_political_power = 50
 			LEP_rescue_industry = yes
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.02
-			}
+			}	
+			hidden_effect = {
+				LEP_lu_xiaobo = { CHN_recruit_character_effect = yes }	
+			}		
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -1309,13 +1354,6 @@ focus_tree = {
 			}
 			GFX_goal_generic_attack_zhili = yes
 		}
-		icon = {
-			trigger = { has_global_flag = QIE_manchu_restoration }
-			value = GFX_goal_generic_attack_qing
-		}
-		icon = {
-			value = GFX_goal_generic_attack_zhili
-		}
 		dynamic = yes
 		cost = 2.00
 		prerequisite = {
@@ -1785,7 +1823,57 @@ focus_tree = {
 		relative_position_id = LEP_new_republic_old_ideals
 		x = 5
 		y = 2
-
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = mid64_A
+				}
+				effect_tooltip = {
+					custom_effect_tooltip = tooltip_white_line
+       		 	    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
+				    custom_effect_tooltip = tooltip_white_line
+				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+				    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip = LEP_zhu_meixian_advisor
+				}						
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mid64_B
+				}
+				effect_tooltip = {
+				    custom_effect_tooltip = available_political_advisor
+		            show_ideas_tooltip = LEP_fang_yexian_advisor
+		            custom_effect_tooltip = tooltip_white_line
+		            custom_effect_tooltip = available_industrial_concern
+					show_ideas_tooltip = LEPEXP_CNCS_company
+				}	
+			}
+			else = {
+				custom_effect_tooltip = LEP_mid64_B_TT				
+				effect_tooltip = {
+       		 	    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
+				    custom_effect_tooltip = tooltip_white_line
+				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+				    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip = LEP_zhu_meixian_advisor
+				}
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = LEP_mid64_A_TT
+				effect_tooltip = {
+					custom_effect_tooltip = available_political_advisor
+		            show_ideas_tooltip = LEP_fang_yexian_advisor
+		            custom_effect_tooltip = tooltip_white_line
+		            custom_effect_tooltip = available_industrial_concern
+					show_ideas_tooltip = LEPEXP_CNCS_company
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_jinling_investment }
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_hongqiao_investment }
+		}
 	}
 	focus = {
 		id = LEP_revitalize_frontier_and_barren_lands
@@ -5914,11 +6002,10 @@ focus_tree = {
 	focus = {
 		id = LEP_last_son_of_the_family
 		icon = {
-			trigger = { has_global_flag = QIE_manchu_restoration }
-			value = GFX_goal_generic_attack_qing
-		}
-		icon = {
-			value = GFX_goal_generic_attack_zhili
+			GFX_goal_generic_attack_qing = {
+				has_global_flag = QIE_manchu_restoration
+			}
+			GFX_goal_generic_attack_zhili = yes
 		}
 		dynamic = yes
 		cost = 5
@@ -8125,15 +8212,15 @@ focus_tree = {
 				random_owned_controlled_state = {
 					prioritize = { 613 }
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 1 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 1 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {

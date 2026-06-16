@@ -13,6 +13,8 @@ spriteTypes = {
 		name = "GFX_idea_LEP_MIO_zeiss"
 		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_zeiss.png"
 	}
+
+	#companies
 	spriteType = {
 		name = "GFX_idea_LEPEXP_CNCS_company"
 		texturefile = "gfx/interface/companies/LEP_EXP/LEPEXP_CNCS_company.png"

@@ -108,10 +108,15 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_funds_gain = 0.1
 		}
 
-		equipment_bonus = {
-			soft_attack = 0.03
+		equipment_bonus = {	
+			soft_attack = 0.05
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.02
 		}
 	}
 
@@ -691,7 +696,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		}
 	}
 
-	trait = {#加长炮管倍径
+	trait = {#加大炮管倍径
 		token = lepexp_jinling_art_2
 		name = lepexp_jinling_art_2
 		icon = GFX_KR_LEP_mio_trait_long_art

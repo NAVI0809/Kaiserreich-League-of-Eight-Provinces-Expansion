@@ -18,7 +18,7 @@
  div_paratrooper_unit_LEPEXP: "空输部队"
  div_LEP_JFJ: "江防军"
 
- LEPEXP_DEBUG_CAT: "MIO调试"
+ LEPEXP_DEBUG_CAT: "§YLEP§!§CEXP§! §O调试§!"
  LEPEXP_MIO_debug_hongqiao: "上海虹桥航空工厂调试"
  LEPEXP_MIO_debug_jinling: "金陵兵工厂调试"
  mio_jinling_organisation: "金陵兵工厂"
@@ -64,7 +64,7 @@
  mio_jinling_generic_4_tt: "使用§Y铝热法§!冶炼铬锭需要大量铝粉，而本地的§Y电解铝工厂§!正好可以提供。"
 
  lepexp_jinling_art_1: "冷锻膛膛线工艺"
- lepexp_jinling_art_2: "加长炮管倍径"
+ lepexp_jinling_art_2: "加大炮管倍径"
  lepexp_jinling_art_3: "身管自紧技术"
  lepexp_jinling_art_4: "轻型炮盾"
  lepexp_jinling_art_5: "重型炮盾"
@@ -76,6 +76,7 @@
  lepexp_jinling_art_11: "高转速方向机"
  lepexp_jinling_art_12: "先进火炮瞄具"
  lepexp_jinling_art_13: "规模火炮生产"
+ lepexp_jinling_zeiss_1: "采用国产蔡司炮队镜"
 
  mio_hongqiao_organisation: "上海虹桥航空工厂"
  LEP_hongqiao_mio_desc: "$hongqiao_LEP_MIO$\n§L$hongqiao_desc$§!\n"
@@ -83,7 +84,14 @@
  hongqiao_LEP: "飞行器研究与开发"
  hongqiao_desc: "上海虹桥航空工厂最开始命名为上海飞机修理厂，于1927年在联帅府航空处的授意下正式成立，由德资控股。因为当时上海是远东的最大港口，也是航空器材进口的主要口岸，这里成了维护德国以及八省联合航空队飞机的重要基地，但是，这家远东最大港口的飞机工厂却显得格外寒酸，南京方面拿不出太多的钱来养这个吞金工厂在建厂初期，航空工厂设备简陋、厂房也比较小，整个厂房仅建造机器间和发动机车间一小栋，开办费用也只有1.5万大洋。1928年12月，孙传芳联帅以浙江1年盐税收入为抵押向德国人贷款购入设备雇佣技术人员，1929年2月，随着经费到位，上海航空工厂随即进行对德国信天翁式双翼教练机的仿制工作，仿制机型完成后被命名为“成功”1号，是中国最早的国产飞机之一。随着上海主权完全收回，新的研发团队和更多的资金将会让这家工厂焕发第二春。"
 
- #军事决议
+ ### 军事决议 ###
+ #MIO投资决议
+ LEP_MIO_jinling_investment: "投资金陵兵工厂"
+ LEP_MIO_hongqiao_investment: "投资上海虹桥航空工厂"
+ LEP_mio_investment: "投资进行中"
+ LEPEXP_coal_jinling_arsenal_descison: "建设南京焦化厂"
+ LEPEXP_coal_jinling_arsenal_descison_desc: "随着金陵兵工厂与南京周围各个工厂的产能不断扩大，对焦炭等炼焦化工产品的需求与日俱增，而南京周边并没有焦化设施，从国内其他地区购买焦炭或者从国外进口海运到南京又会大幅度提高成本，因此一座现代化的焦化厂建设迫在眉睫。"
+ #国防方略决议
  is_controlled_by_jap_or_its_puppet_tt: "由@JAP§Y[JAP.GetName]§!或其§Y附属国§!控制"
  LEPEXP_military_defence_development_CAT: "国防方略"
  LEPEXP_military_defence_development_CAT_desc: "江南自古富庶，而中国近代的工业也在江南发源，从江南制造局到金陵兵工厂，再到大大小小的各种民营企业，一同构成了江南的繁荣。\n\n而为了保卫华东五省百姓们安定的生活，我们不仅要在战场上加倍努力，同时也要在工厂，在建筑工地，在实验室为我们的士兵们做最坚固的后盾。"
@@ -104,8 +112,6 @@
  LEP_50000_mp_1000_eq_30_cp: "£manpower_icon  §H50000§! £rifle_texticon §H1000§! £command_power §H30§!"
  LEP_50000_mp_1000_eq_30_cp_blocked: "£manpower_icon  §H50000§! £rifle_texticon §H1000§! £command_power §H30§!"
  LEP_50000_mp_1000_eq_30_cp_tooltip: "需要花费 $LEP_50000_mp_1000_eq_30_cp_blocked$ 来执行此决议"
- LEPEXP_coal_jinling_arsenal_descison: "建设南京焦化厂"
- LEPEXP_coal_jinling_arsenal_descison_desc: "随着金陵兵工厂与南京周围各个工厂的产能不断扩大，对焦炭等炼焦化工产品的需求与日俱增，而南京周边并没有焦化设施，从国内其他地区购买焦炭或者从国外进口海运到南京又会大幅度提高成本，因此一座现代化的焦化厂建设迫在眉睫。"
  LEPEXP_GER_theorist_xu_peigeng_decision: "任命徐培根为军官培训团教育长"
  LEPEXP_GER_theorist_xu_peigeng_decision_desc: "徐培根将重点建设精锐部队并且推广和改善德军在一战中使用的胡尔蒂战术，并且加强对部队的体能与作战技能的训练。"
  LEPEXP_GER_theorist_li_rentao_decision: "任命李忍涛为军官培训团教育长"
