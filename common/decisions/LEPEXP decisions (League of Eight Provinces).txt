@@ -195,6 +195,235 @@ LEPEXP_DEBUG_CAT = {
 
 #zigai
 
+LEP_reestablish_control = {
+	LEP_temp_suppress_kmt = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #manually activated
+		visible = {
+			has_idea = LEP_kuomintang
+		}
+
+		ai_will_do = { factor = 90 }
+
+		available = {
+			check_variable = {
+				tooltip = lep_can_suppress_tt
+				lep_kmt_unrest_level > 1
+			}
+		}
+
+		fixed_random_seed = no
+		cost = 30
+		days_remove = lep_kmt_suppress_remove?0
+		selectable_mission = yes
+		days_mission_timeout = lep_suppress_kmt_mission_timeout?70
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_temp_suppress_kmt"
+			clear_variable = lep_kmt_suppress_remove
+			hidden_effect = {
+				LEP_increase_kmt_unrest_level = yes
+				activate_mission = LEP_temp_suppress_kmt
+				LEP_negative_kmt_event = yes
+			}
+			custom_effect_tooltip = lep_increase_kmt_unrest_tt
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_temp_suppress_kmt"
+			custom_effect_tooltip = lep_decrease_kmt_unrest_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_track_down_kmt }
+						check_variable = { lep_kmt_unrest_level > 1 }
+					}
+				}
+				custom_effect_tooltip = lep_reduce_kmt_available_tt
+				set_variable = { lep_kmt_suppress_remove = days_mission_timeout@LEP_temp_suppress_kmt }
+			}
+			hidden_effect = { LEP_decrease_kmt_unrest_level = yes }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_temp_suppress_kmt"
+			clear_variable = lep_kmt_suppress_remove
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_track_down_kmt }
+						check_variable = { lep_kmt_unrest_level > 1 }
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = { lep_kmt_random_delay = random }
+					subtract_from_temp_variable = { lep_kmt_random_delay = -0.5 }
+					multiply_temp_variable = { lep_kmt_random_delay = 15 }
+					add_to_variable = { lep_suppress_kmt_mission_timeout = lep_kmt_random_delay }
+					activate_mission = LEP_temp_suppress_kmt
+				}
+			}
+		}
+	}
+
+	LEP_decision_lower_kmt_unrest = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no }
+
+		visible = {
+			has_idea = LEP_kuomintang
+		}
+
+		cost = 45
+		days_remove = 50
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_decision_lower_kmt_unrest"
+			if = {
+				limit = {
+					check_variable = { lep_kmt_unrest_level < 1 }
+				}
+				custom_effect_tooltip = lep_remove_kmt_unrest_tt
+				remove_ideas = LEP_kuomintang
+				hidden_effect = {
+					if = {
+						limit = { has_country_flag = LEP_dem_gov }
+						country_event = { id = league_mid.55 days = 1 }
+					}
+					else = {
+						country_event = { id = league_events.50 days = 1 }
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = lep_decrease_kmt_unrest_tt
+				LEP_decrease_kmt_unrest_level = yes
+			}
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_temp_suppress_rural_banditry = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no } #manually activated
+		visible = {
+			has_idea = LEP_rural_banditry
+		}
+
+		ai_will_do = { factor = 90 }
+
+		available = {
+			check_variable = {
+				tooltip = lep_can_suppress_tt
+				lep_rural_unrest_level > 1
+			}
+		}
+
+		fixed_random_seed = no
+		selectable_mission = yes
+		cost = 20
+		days_remove = LEP_rural_banditry_suppress_remove?0
+		days_mission_timeout = lep_suppress_rural_banditry_mission_timeout?70
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_temp_suppress_rural_banditry"
+			clear_variable = LEP_rural_banditry_suppress_remove
+			hidden_effect = {
+				LEP_increase_rural_banditry_unrest_level = yes
+				activate_mission = LEP_temp_suppress_rural_banditry
+				LEP_negative_rural_banditry_event = yes
+			}
+			custom_effect_tooltip = lep_increase_rural_banditry_and_unrest_tt
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEP_temp_suppress_rural_banditry"
+			custom_effect_tooltip = lep_decrease_rural_banditry_and_unrest_tt
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_crack_down_rural_bandits }
+						check_variable = { lep_rural_unrest_level > 1 }
+					}
+				}
+				set_variable = { LEP_rural_banditry_suppress_remove = days_mission_timeout@LEP_temp_suppress_rural_banditry }
+			}
+			else = {
+				custom_effect_tooltip = lep_reduce_rural_banditry_and_unrest_available_tt
+				set_variable = { LEP_rural_banditry_suppress_remove = 0 }
+			}
+			hidden_effect = { LEP_decrease_rural_banditry_unrest_level = yes }
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_temp_suppress_rural_banditry"
+			clear_variable = LEP_rural_banditry_suppress_remove
+			if = {
+				limit = {
+					OR = {
+						NOT = { has_completed_focus = LEP_crack_down_rural_bandits }
+						check_variable = { lep_rural_unrest_level > 1 }
+					}
+				}
+				hidden_effect = {
+					set_temp_variable = { LEP_rural_banditry_random_delay = random }
+					subtract_from_temp_variable = { LEP_rural_banditry_random_delay = -0.5 }
+					multiply_temp_variable = { LEP_rural_banditry_random_delay = 15 }
+					add_to_variable = { lep_suppress_rural_banditry_mission_timeout = LEP_rural_banditry_random_delay }
+					activate_mission = LEP_temp_suppress_rural_banditry
+				}
+			}
+		}
+	}
+
+	LEP_decision_lower_bandit_unrest = {
+		icon = generic_ignite_civil_war
+
+		allowed = { always = no }
+
+		visible = {
+			has_idea = LEP_rural_banditry
+		}
+
+		cost = 30
+		days_remove = 40
+
+		ai_will_do = { factor = 640 }
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEP_decision_lower_bandit_unrest"
+			if = {
+				limit = {
+					check_variable = { lep_rural_unrest_level < 1 }
+				}
+				custom_effect_tooltip = lep_remove_rural_banditry_and_unrest_tt
+				remove_ideas = LEP_rural_banditry
+				hidden_effect = {
+					if = {
+						limit = {
+							has_country_flag = LEP_dem_gov
+						}
+						country_event = { id = league_mid.57 days = 1 }
+					}
+				    else = {
+						country_event = { id = league_events.58 days = 1 }
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = lep_decrease_rural_banditry_and_unrest_tt
+				LEP_decrease_rural_banditry_unrest_level = yes
+			}
+		}
+		fixed_random_seed = no
+	}
+}
+
 chinese_unification = {
 	china_declare_unification = {
 		icon = generic_form_nation
