@@ -2813,7 +2813,7 @@ country_event = { #政学系
 	id = league_endgame.2
 	title = league_endgame.2.t
 	desc = league_endgame.2.d
-	picture = GFX_report_event_LEP_chu_fucheng
+	picture = GFX_report_event_QIE_huang_fu
 
 	is_triggered_only = yes
 	fire_only_once = yes
