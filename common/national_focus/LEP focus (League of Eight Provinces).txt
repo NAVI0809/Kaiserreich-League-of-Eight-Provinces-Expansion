@@ -8301,22 +8301,32 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_experience_gain_army_unit_factor = 0.2
+				LEP_experience_gain_army_unit_factor = 0.1
 				tooltip = experience_gain_army_unit_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_attack_factor = 0.15
+				LEP_army_attack_factor = 0.05
 				tooltip = army_attack_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_defence_factor = 0.15
+				LEP_army_defence_factor = 0.05
 				tooltip = army_defence_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_experience_loss_factor = -0.25
+				LEP_experience_loss_factor = -0.2
 				tooltip = experience_loss_factor_tooltip
 			}			
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_idea = LEP_the_disunited_armies_3 }
+				swap_ideas = {
+					remove_idea = LEP_the_disunited_armies_3
+					add_idea = LEP_eliteheer_1
+				}
+			}
+			else = {
+				add_ideas = LEP_eliteheer_1
+			}
 			china_army_reform_increase_step = yes
 			#country_event = { id = league_mid.64 days = 1 } #国防线
 			#set_country_flag = LEP_east_coast_defence_readyness1_incomplete
@@ -9326,11 +9336,11 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_army_artillery_attack_factor = 0.25
+				LEP_army_artillery_attack_factor = 0.15
 				tooltip = army_artillery_attack_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_artillery_defence_factor = 0.25
+				LEP_army_artillery_defence_factor = 0.2
 				tooltip = army_artillery_defence_factor_tooltip
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -9459,7 +9469,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_primacy_of_the_engineering_corps"
-			add_ideas = GER_krupp_railway_guns
+			add_political_power = -30			
 			if = {
 				limit = { has_dlc_nsb = yes }
 				if = {
@@ -9470,21 +9480,29 @@ focus_tree = {
 					limit = { NOT = { has_tech = railway_gun } }
 					set_technology = { railway_gun = 1 }
 				}
-				custom_effect_tooltip = tooltip_white_line
-				create_railway_gun = {
-					equipment = railway_gun_equipment_1
-					name = "Wuchang"
-				}
-				create_railway_gun = {
-					equipment = railway_gun_equipment_1
-					name = "Huang Hua Gang"
-				}
-				
+				custom_effect_tooltip = tooltip_white_line				
 			}
+			hidden_effect = {
+				create_railway_gun = {
+					equipment = railway_gun_equipment_1
+					name = "武昌"
+				}
+				create_railway_gun = {
+				    equipment = railway_gun_equipment_1
+					name = "黄花岗"
+				}	
+			}
+			
+			add_ideas = GER_krupp_railway_guns
+			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				idea = FNG_railway_gun_production
 				days = 100
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_railway_gun_production_TT
+			custom_effect_tooltip = LEP_railway_gun_Wuchang_tt
+			custom_effect_tooltip = LEP_railway_gun_huanghuagang_tt			
 			custom_effect_tooltip = tooltip_white_line
 			add_equipment_to_stockpile = {
 				type = train_equipment_1

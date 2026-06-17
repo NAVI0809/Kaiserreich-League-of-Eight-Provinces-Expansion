@@ -18,6 +18,10 @@
  div_paratrooper_unit_LEPEXP: "空输部队"
  div_LEP_JFJ: "江防军"
 
+ LEP_railway_gun_production_TT: "§L两门德制克虏伯列车炮将被部署§!"
+ LEP_railway_gun_Wuchang_tt: "§L部署§! §O武昌号§! §L列车炮§!"
+ LEP_railway_gun_huanghuagang_tt: "§L部署§! §O黄花岗号§! §L列车炮§!"
+
  LEPEXP_DEBUG_CAT: "§YLEP§!§CEXP§! §O调试§!"
  LEPEXP_MIO_debug_hongqiao: "上海虹桥航空工厂调试"
  LEPEXP_MIO_debug_jinling: "金陵兵工厂调试"

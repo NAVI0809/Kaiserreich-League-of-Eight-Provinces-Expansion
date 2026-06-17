@@ -2216,7 +2216,7 @@ ideas = {
 
 		LEP_Liu_rifle_2_idea = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_2_idea" }
-			picture = GFX_idea_LEP_Liu_rifle_idea
+			picture = GFX_idea_LEP_Liu_rifle_2_idea
 			allowed = { always = no }
 			available = {
 				limit = { NOT = { has_tech = infantry_equipment_3 } }
