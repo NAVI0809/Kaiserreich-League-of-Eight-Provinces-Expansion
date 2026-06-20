@@ -968,6 +968,7 @@ characters = {
 		}
 		advisor = {
 			slot = navy_chief
+			desc = LEP_wu_rengli_high_command_desc
 			idea_token = LEP_wu_rengli_navy_chief
 			traits = { KR_opportunistic_naval_reformer }
 			cost = 120
