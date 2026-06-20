@@ -963,7 +963,7 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_portrait_LEP_wu_rengli_army_small
-				large = GFX_portrait_LEP_wu_rengli_army_large
+				large = GFX_portrait_LEP_wu_rengli_navy_large
 			}
 		}
 		advisor = {
