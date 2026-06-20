@@ -1382,6 +1382,8 @@
  LEP_remove_national_stage_focus: "移除民主政府全国阶段国策"
  LEP_load_new_focus: "加载新北伐国策树§R（开发中）§!"
  LEP_remove_new_focus: "移除新北伐国策树§R（开发中）§!"
+ LEP_add_dem_consensus_power_balance: "加载民主共识权力平衡§R（开发中）§!"
+ LEP_remove_dem_consensus_power_balance: "移除民主共识权力平衡§R（开发中）§!"
  #路线指南
  LEP_guide: "§M南直系§!（$paternal_autocrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向联帅一侧且大于33%。\n\n§M民主科学社§!（$social_liberal_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率大于33%且稳定度大于50%\n\n§M国民党（政学系）§!（$market_liberal_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度大于50%\n£white_dot 在“内阁总辞”事件中选择“黄郛的国民党赢得多数席位”\n\n§M全国工商联合会§!（$social_conservative_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度大于50%\n£white_dot 在“内阁总辞”事件中选择“荣宗敬领导的工商联成功组阁”\n\n§M人民救国会§!（$social_democrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度小于50%\n£white_dot 在“团结联盟解散”事件中选择“由人民救国会主导新政府”\n\n§M景星会§!（$authoritarian_democrat_coloured$）\n£white_dot 在八省内战中，让权力平衡处于偏向工商联一侧且大于33%。\n£white_dot 在完成国策“召集国民大会”前，使社会自由主义支持率小于33%且稳定度小于50%\n£white_dot 在“团结联盟解散”事件中选择“景星会接掌了国家机器”"
  ##新北伐国策
@@ -1434,6 +1436,18 @@
  LEP_audit_the_military: "对军方的审计"
  LEP_integrate_arsenal_factories: "整合军工厂"
  LEP_civil_public_hearing: "市民公听会"
+  #民主bop
+ LEP_dem_consensus_power_balance: "民主共识"
+ LEP_low_consensus_side: "民主派系主义"
+ LEP_high_consensus_side: "民主协商主义"
+
+ LEP_bop_emerging_consensus: "共和幼苗萌生"
+ LEP_bop_developing_consensus: "民主根基渐固"
+ LEP_bop_mature_consensus: "共和巨树长青"
+
+ LEP_bop_emerging_division: "共和树影斑驳"
+ LEP_bop_developing_division: "民主枝桠乱结"
+ LEP_bop_bitter_division: "共和渐染阴霾"
 
  
 

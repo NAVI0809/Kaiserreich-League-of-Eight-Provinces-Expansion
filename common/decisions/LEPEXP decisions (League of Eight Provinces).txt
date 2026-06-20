@@ -147,6 +147,55 @@ LEPEXP_DEBUG_CAT = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
+
+		LEP_add_dem_consensus_power_balance = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				NOT = {
+					has_power_balance = {
+						id = LEP_dem_consensus_power_balance
+					}
+				}
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_power_balance = {
+				id = LEP_dem_consensus_power_balance
+				left_side = LEP_low_consensus_side
+				right_side = LEP_high_consensus_side
+				set_value = -0.10
+			}
+		}
+	}
+
+	LEP_remove_dem_consensus_power_balance = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_power_balance = {
+					id = LEP_dem_consensus_power_balance
+				}
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			remove_power_balance = {
+				id = LEP_dem_consensus_power_balance
+			}
+		}
+	}
 	
 	LEPEXP_MIO_debug_hongqiao = {
 		icon = generic_industry

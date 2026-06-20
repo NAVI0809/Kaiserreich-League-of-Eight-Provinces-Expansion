@@ -49,105 +49,116 @@ LEP_power_balance = {
 }
 
 
-LEP_Central_Local_Power_Balance = {
-	initial_value = 0.00
-	left_side = LEP_local_side
-	right_side = LEP_central_side
-	decision_category = LEP_Central_Local_Power_Balance_category
+LEP_dem_consensus_power_balance = {
+	initial_value = -0.20
+	left_side = LEP_low_consensus_side
+	right_side = LEP_high_consensus_side
 
-	range = {
-		id = LEP_Central_Local_Coordination
-		min = -0.15
-		max = 0.15
-		modifier = {
-			political_power_gain = 0.05
-			command_power_gain_mult = 0.1
+	### 低共识
+	side = {
+		id = LEP_low_consensus_side
+		icon = GFX_idea_china_five_races_soldier
+
+		range = {
+			id = LEP_bop_emerging_division
+			min = -0.30
+			max = 0.00
+			modifier = {
+				high_command_cost_factor = -0.05
+				political_advisor_cost_factor = 0.05
+			}
+			on_activate = {
+
+			}
+			on_deactivate = {
+			}
 		}
-		on_activate = {
-			
+
+		range = {
+			id = LEP_bop_developing_division
+			min = -0.70
+			max = -0.30
+			modifier = {
+				high_command_cost_factor = -0.10
+				political_advisor_cost_factor = 0.10
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				war_support_factor = -0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+
+		range = {
+			id = LEP_bop_bitter_division
+			min = -1.00
+			max = -0.70
+			modifier = {
+				high_command_cost_factor = -0.15
+				political_advisor_cost_factor = 0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				war_support_factor = -0.20
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
 		}
 	}
 
-	### 地方主导（左侧）
+	### 高共识
 	side = {
-		id = LEP_local_side
-		icon = GFX_idea_ROM_king_carol_ii_hedonist
+		id = LEP_high_consensus_side
+		icon = GFX_idea_war_of_words
+
 		range = {
-			id = LEP_Collaborative_Synergy
-			min = -0.55
-			max = -0.15
+			id = LEP_bop_emerging_consensus
+			min = 0.00
+			max = 0.30
 			modifier = {
-				industrial_capacity_factory = 0.05
-				political_power_factor = 0.05
-				local_supplies = 0.05        
-				conscription_factor = -0.04
+				high_command_cost_factor = 0.05
+				political_advisor_cost_factor = -0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
 			}
 		}
 
 		range = {
-			id = LEP_Divided_Duties
-			min = -0.95
-			max = -0.55
+			id = LEP_bop_developing_consensus
+			min = 0.30
+			max = 0.70
 			modifier = {
-				industrial_capacity_factory = 0.1
-				political_power_factor = 0.1
-				local_supplies = 0.1        
-				conscription_factor = -0.08
+				high_command_cost_factor = 0.10
+				political_advisor_cost_factor = -0.10
+				production_speed_arms_factory_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				stability_factor = -0.10
+			}
+			on_activate = {
+			}
+			on_deactivate = {
 			}
 		}
 
 		range = {
-			id = LEP_Decentralized_Autonomy
-			min = -1
-			max = -0.95
+			id = LEP_bop_mature_consensus
+			min = 0.70
+			max = 1.00
 			modifier = {
-				industrial_capacity_factory = 0.15
-				political_power_factor = 0.15
-				global_building_slots_factor = 0.05
-				local_supplies = 0.15
-				conscription_factor = -0.12
+				high_command_cost_factor = 0.15
+				political_advisor_cost_factor = -0.15
+				production_speed_arms_factory_factor = 0.10
+				production_speed_industrial_complex_factor = 0.10
+				stability_factor = -0.20
 			}
-		}
-	}
-
-	### 中央主导（右侧）
-	side = {
-		id = LEP_central_side
-		icon = GFX_idea_generic_intel_bonus
-        range = {
-			id = LEP_Central_Authority_Oversight
-			min = 0.15
-			max = 0.55
-			modifier = {
-				stability_factor = 0.04
-				research_speed_factor = 0.05
-				political_power_gain = -0.05
+			on_activate = {
 			}
-		}
-
-		range = {
-			id = LEP_Unified_Command_Issuance
-			min = 0.55
-			max = 0.95
-			modifier = {
-				compliance_growth = 0.02
-				stability_factor = 0.08
-				research_speed_factor = 0.1
-				production_speed_buildings_factor = 0.05
-				political_power_gain = -0.1
-			}
-		}
-
-		range = {
-			id = LEP_Centralized_Unification
-			min = 0.95
-			max = 1
-			modifier = {
-				compliance_growth = 0.04
-				stability_factor = 0.12
-				research_speed_factor = 0.1
-				production_speed_buildings_factor = 0.1
-				political_power_gain = -0.1
+			on_deactivate = {
 			}
 		}
 	}
