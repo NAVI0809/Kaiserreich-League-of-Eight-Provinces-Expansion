@@ -1770,7 +1770,7 @@ LEPEXP_military_defence_development_CAT = {
 		}
 
 		cost = 40
-		days_remove = 1 #20
+		days_remove = 30
 		fire_only_once = yes
 		priority = 40
 
@@ -1879,7 +1879,7 @@ LEPEXP_military_defence_development_CAT = {
 					    TYPE = "江防军"
 				    }
 				    create_unit = {
-					    division = "name = \"江防军-江阴要塞警备师\" division_template = \"Jiang Fang Jun\" start_experience_factor = 0.4"
+					    division = "name = \"江防军-长江警备师\" division_template = \"Jiang Fang Jun\" start_experience_factor = 0.4"
 					    owner = ROOT
 				    }
 			    }
