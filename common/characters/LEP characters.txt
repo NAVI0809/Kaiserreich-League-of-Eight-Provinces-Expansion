@@ -283,6 +283,29 @@ characters = {
 			visible = { always = no } #only used for unit_leader_event
 		}
 	}
+	#顾准
+	LEP_gu_zhun = {
+		name = LEP_gu_zhun
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LEP_gu_zhun_civilian_large
+				small = GFX_portrait_LEP_gu_zhun_civilian_small
+			}
+		}
+		country_leader = {
+			desc = LEP_gu_zhun_leader_desc
+			ideology = syndicalist_subtype
+			traits = { CHN_left_kuomintang_aligned }
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = { always = no } #only used for unit_leader_event
+		}
+	}
 	LEP_huang_fu = {
 		name = LEP_huang_fu
 		portraits = {

@@ -283,6 +283,16 @@ promote_character = {
 	character = LEP_li_linsi
 	ideology = authoritarian_democrat_subtype
 }
+recruit_character = LEP_gu_zhun
+promote_character = {
+	character = LEP_gu_zhun
+	ideology = syndicalist_subtype
+}
+set_party_name = {
+	ideology = syndicalist
+	name = LEP_yi_you_club_party
+	long_name = LEP_yi_you_club_party_long
+}
 
 set_variable = { country_intro_page_count = 3 }
 # FLAVOR LEP

@@ -1,0 +1,1999 @@
+defined_text = {
+	name = GetRCAAscendingAdvisorName
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 1 }
+		}
+		localization_key = CHI_chen_gongbo
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 2 }
+		}
+		localization_key = CHI_gu_mengyu
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 3 }
+		}
+		localization_key = CHI_zeng_zhongming
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 4 }
+		}
+		localization_key = CHI_zhou_enlai
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 5 }
+		}
+		localization_key = CHI_hu_zongnan
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 6 }
+		}
+		localization_key = CHI_dai_chunfeng
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascending_advisor = 7 }
+		}
+		localization_key = CHI_chiang_ching_kuo
+	}
+}
+defined_text = {#1号位的GUI名字
+	name = GetRCAAscendedAdvisorName1
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+		}
+		localization_key = CHI_chen_gongbo
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+		}
+		localization_key = CHI_gu_mengyu
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+		}
+		localization_key = CHI_zeng_zhongming
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+		}
+		localization_key = CHI_zhou_enlai
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+		}
+		localization_key = CHI_hu_zongnan
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+		}
+		localization_key = CHI_dai_chunfeng
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+		}
+		localization_key = CHI_chiang_ching_kuo
+	}
+}
+
+defined_text = {#2号位的GUI名字
+	name = GetRCAAscendedAdvisorName2
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+		}
+		localization_key = CHI_chen_gongbo
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+		}
+		localization_key = CHI_gu_mengyu
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+		}
+		localization_key = CHI_zeng_zhongming
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+		}
+		localization_key = CHI_zhou_enlai
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+		}
+		localization_key = CHI_hu_zongnan
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+		}
+		localization_key = CHI_dai_chunfeng
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+		}
+		localization_key = CHI_chiang_ching_kuo
+	}
+}
+
+defined_text = {#3号位的GUI名字
+	name = GetRCAAscendedAdvisorName3
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+		}
+		localization_key = CHI_chen_gongbo
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+		}
+		localization_key = CHI_gu_mengyu
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+		}
+		localization_key = CHI_zeng_zhongming
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+		}
+		localization_key = CHI_zhou_enlai
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+		}
+		localization_key = CHI_hu_zongnan
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+		}
+		localization_key = CHI_dai_chunfeng
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+		}
+		localization_key = CHI_chiang_ching_kuo
+	}
+}
+
+defined_text = {#1号位的GUI特质介绍
+	name = GetRCAAscendedAdvisorTrait1
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+defined_text = {#2号位的GUI特质介绍
+	name = GetRCAAscendedAdvisorTrait2
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+defined_text = {#3号位的GUI特质介绍
+	name = GetRCAAscendedAdvisorTrait3
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_5
+	}	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+defined_text = {
+	name = GET_CHI_ZDMYXD_IDEA
+	text = {
+		localization_key = idea_desc|CHI_ZDMYXD_IDEA
+	}
+}
+defined_text = {
+	name = GET_CHI_harness_peoples_will_idea
+	text = {
+		localization_key = idea_desc|CHI_harness_peoples_will_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_BYCZ_idea
+	text = {
+		localization_key = idea_desc|CHI_BYCZ_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_GXNQ_idea
+	text = {
+		localization_key = idea_desc|CHI_GXNQ_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_XNLD_idea
+	text = {
+		localization_key = idea_desc|CHI_XNLD_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_KRJZDX_idea
+	text = {
+		localization_key = idea_desc|CHI_KRJZDX_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_BRGXT_idea
+	text = {
+		localization_key = idea_desc|CHI_BRGXT_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_BDGMSX_idea
+	text = {
+		localization_key = idea_desc|CHI_BDGMSX_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_GMJZH_idea
+	text = {
+		localization_key = idea_desc|CHI_GMJZH_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_QTBRMDH_idea
+	text = {
+		localization_key = idea_desc|CHI_QTBRMDH_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_QZPP_idea
+	text = {
+		localization_key = idea_desc|CHI_QZPP_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_ZHCJ_idea
+	text = {
+		localization_key = idea_desc|CHI_ZHCJ_idea
+	}
+}
+
+defined_text = {
+	name = GET_CHI_KZDD_idea
+	text = {
+		localization_key = idea_desc|CHI_KZDD_idea
+	}
+}
+defined_text = {
+	name = GET_CHI_harness_peoples_will2_idea
+	text = {
+		localization_key = idea_desc|CHI_harness_peoples_will2_idea
+	}
+}
+defined_text = {#1号位的动态修正介绍
+	name = GetRCAAscendedAdvisorDesc1
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 2 }
+			has_idea = CHI_inner_gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+defined_text = {#2号位的动态修正介绍
+	name = GetRCAAscendedAdvisorDesc2
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+defined_text = {#3号位的动态修正介绍
+	name = GetRCAAscendedAdvisorDesc3
+	text = { #NO ONE
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	#陈公博
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_1
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_2
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_3
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_4
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_5
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_6
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 1 }
+			has_idea = CHI_inner_chen_gongbo_7
+		}
+		localization_key = idea_desc|CHI_inner_chen_gongbo_7
+	}
+	#顾孟余
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_1
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_2
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_3
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_4
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_5
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_6
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_6
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 2 }
+			has_idea = CHI_inner_Gu_mengyu_7
+		}
+		localization_key = idea_desc|CHI_inner_Gu_mengyu_7
+	}
+	#曾仲鸣
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_1
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_2
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_3
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 3 }
+			has_idea = CHI_inner_Zeng_zhongming_4
+		}
+		localization_key = idea_desc|CHI_inner_Zeng_zhongming_4
+	}
+	#周恩来
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_1
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_2
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_3
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_4
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_5
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_5
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 4 }
+			has_idea = CHI_inner_Zhou_enlai_6
+		}
+		localization_key = idea_desc|CHI_inner_Zhou_enlai_6
+	}
+	#胡宗南
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_1
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_2
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 5 }
+			has_idea = CHI_inner_Hu_zongnan_3
+		}
+		localization_key = idea_desc|CHI_inner_Hu_zongnan_3
+	}
+
+	#戴春风
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_1
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_2
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_3
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_4
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_4
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 6 }
+			has_idea = CHI_inner_Dai_chunfeng_5
+		}
+		localization_key = idea_desc|CHI_inner_Dai_chunfeng_5
+	}
+	#蒋经国
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_1
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_2
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_3
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 7 }
+			has_idea = CHI_inner_Jiang_jingguo_4
+		}
+		localization_key = idea_desc|CHI_inner_Jiang_jingguo_4
+	}
+}
+
+######### 无问题 #########
+
+defined_text = {
+	name = GetJMLWQIDEA
+	text = {
+		trigger = {
+			has_idea = CHI_BNGCJZDX2_idea
+		}
+		localization_key = idea_desc|CHI_BNGCJZDX2_idea
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+
+defined_text = {
+	name = GetGDDXIDEA
+	text = {
+		trigger = {
+			has_idea = CHI_BNGCJZDX3_idea
+		}
+		localization_key = idea_desc|CHI_BNGCJZDX3_idea
+	}
+	text = {
+		trigger = {
+			has_idea = CHI_BNGCJZDX4_idea
+		}
+		localization_key = idea_desc|CHI_BNGCJZDX4_idea
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+
+defined_text = {
+	name = GetKZDDIDEA
+	text = {
+		trigger = {
+			has_idea = CHI_BNGCJZDX_idea
+		}
+		localization_key = idea_desc|CHI_BNGCJZDX_idea
+	}
+	text = {
+		localization_key = empty_key
+	}
+}
+
+##########################
+
+defined_text = {
+	name = GetRCAAscendedAdvisor1
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_1 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = RCA_the_inner_circle_tt_ascended_advisor_1
+	}
+}
+
+defined_text = {
+	name = GetRCAAscendedAdvisor2
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_2 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = RCA_the_inner_circle_tt_ascended_advisor_2
+	}
+}
+
+defined_text = {
+	name = GetRCAAscendedAdvisor3
+	text = {
+		trigger = {
+			check_variable = { RCA_ascended_advisor_3 = 0 }
+		}
+		localization_key = empty_key
+	}
+	text = {
+		localization_key = RCA_the_inner_circle_tt_ascended_advisor_3
+	}
+}
