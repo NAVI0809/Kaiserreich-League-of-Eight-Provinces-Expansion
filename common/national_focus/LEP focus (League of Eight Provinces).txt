@@ -1348,12 +1348,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_march_along_yangtze
-		icon = {
-			GFX_goal_generic_attack_qing = {
-				has_global_flag = QIE_manchu_restoration
-			}
-			GFX_goal_generic_attack_zhili = yes
-		}
+		icon = GFX_goal_FNG_Reclamation_War
 		dynamic = yes
 		cost = 2.00
 		prerequisite = {
@@ -1368,7 +1363,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			create_wargoal = {
-				target = QIE
+				target = 608.owner
 				type = topple_government
 			}
 			country_event = { id = league_mid.47 days = 0 }

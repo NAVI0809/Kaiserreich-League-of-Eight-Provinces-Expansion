@@ -591,6 +591,7 @@
  league_mid.11.a: "在五色旗的基础上修改"
  league_mid.11.b: "追寻辛亥革命的回忆"
  league_mid.11.c: "应当尊重工商团体的意见"
+ league_mid.11.e: "保留四色共和旗"
  league_mid.12.t: "来自流亡者的橄榄枝"
  league_mid.12.d: "八省内战的硝烟尚未完全散尽，国民党起义失败的余波仍在东南大地回荡。当年汪精卫领导的中央委员会与亲法派，在起义溃败后被迫流亡上海租界，靠着西方工团主义国家的暗中接济勉强立足；而宋庆龄领导的临时行动委员会，则拒绝了租界的庇护，率残余力量退守闽赣边界的山区，在崇山峻岭间坚持抗争，虽队伍锐减、装备匮乏，却始终未放弃旗帜。\n\n如今，我们成功推翻齐燮元的残暴统治，南京城头竖起新政的旗帜，这一消息传遍东南。近日，一支规模不大的国民党代表团悄然抵达南京，带着几分窘迫与试探，正式向新政府表达了合作意愿。他们的处境一目了然 —— 内战早已耗尽其武装力量，如今既无兵权支撑，也无广泛的地盘依托，对我们的政权难以构成实质威胁。\n\n支持合作的声音认为，接纳国民党流亡势力，尤其是与西方工团主义联系密切的派系，能显著改善我们与相关国家的外交关系，为新政争取更多国际支持与经济援助；但反对者的警告同样尖锐：国民党虽已衰弱，但其多年积累的政治影响力与组织根基仍在，接纳他们无异于引狼入室，难保日后不会成为颠覆新政府的隐患。"
  league_mid.12.a: "让他们共商国是"
@@ -1079,10 +1080,10 @@
  LEP_add_JGH_large_tooltip: "§S此举将会§G大幅提升§!救国会的影响力§!"
  LEP_add_JXH_large_tooltip: "§a此举将会§G大幅提升§!景星会的影响力§!"
 
- LEP_nanjing_flag_tooltip: "我们将以§R五§!§m色§!§c旗§!为基础设计政府的旗帜"
- LEP_shanghai_flag_tooltip: "我们将采用§R上海§!§c光复军§!的§c八角§!星辰旗作为我们的旗帜"
- LEP_jiangsu_flag_tooltip: "我们将使用§c商§!团§m联§!§R合§!旗作为我们的旗帜"
-
+ LEP_nanjing_flag_tooltip: "我们将以§R五§!§m色§!§c旗§!为基础设计政府的旗帜\n----------\n\n£flag_LEP_nanjing_texticons\n\n"
+ LEP_shanghai_flag_tooltip: "我们将采用§R上海§!§c光复军§!的§c八角§!星辰旗作为我们的旗帜\n----------\n\n£flag_LEP_shanghai_texticon\n\n"
+ LEP_jiangsu_flag_tooltip: "我们将使用§c商§!团§m联§!§R合§!旗作为我们的旗帜\n----------\n\n£flag_LEP_jiangsu_texticon\n\n"
+ tooltip_dash_line: "----------"
  
  LEP_autonomy_outline_idea: "自治大纲"
  LEP_autonomy_outline_idea1m: "自治大纲"

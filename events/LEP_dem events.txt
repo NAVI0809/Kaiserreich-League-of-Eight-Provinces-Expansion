@@ -376,7 +376,7 @@ country_event = { #旗帜问题
     option = {
 		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.a"
 		name = league_mid.11.a
-		custom_effect_tooltip = LEP_nanjing_flag_tooltip
+		
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.01
@@ -384,13 +384,18 @@ country_event = { #旗帜问题
 		hidden_effect = {
 			set_cosmetic_tag = LEP_nanjing
 		}
-		
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_nanjing_flag_tooltip
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_dash_line
+        custom_effect_tooltip = tooltip_white_line
 	}
 
 	option = {
 		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.b"
 		name = league_mid.11.b
-		custom_effect_tooltip = LEP_shanghai_flag_tooltip
+		
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.01
@@ -398,13 +403,18 @@ country_event = { #旗帜问题
 		hidden_effect = {
 			set_cosmetic_tag = LEP_shanghai
 		}
-		
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_shanghai_flag_tooltip
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_dash_line
+        custom_effect_tooltip = tooltip_white_line
 	}
 
 	option = {
 		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.c"
 		name = league_mid.11.c
-		custom_effect_tooltip = LEP_jiangsu_flag_tooltip
+		
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.01
@@ -412,7 +422,19 @@ country_event = { #旗帜问题
 		hidden_effect = {
 			set_cosmetic_tag = LEP_jiangsu
 		}
-		
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_jiangsu_flag_tooltip
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = tooltip_dash_line
+        custom_effect_tooltip = tooltip_white_line
+	}
+
+	option = {
+		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.d"
+		name = league_mid.11.e
+		add_political_power = 20
+		add_stability = 0.05
 	}
 }
 

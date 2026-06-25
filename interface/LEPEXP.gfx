@@ -19,5 +19,29 @@ spriteTypes = {
 		noOfFrames = 2 
 	}
 
+	#texticons
+	spriteType = {
+		name = "GFX_flag_LEP_nanjing_texticons"
+		texturefile = "gfx/texticons/LEP_nanjing_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_dem_texticon"
+		texturefile = "gfx/texticons/LEP_dem_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_jiangsu_texticon"
+		texturefile = "gfx/texticons/LEP_jiangsu_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_shanghai_texticon"
+		texturefile = "gfx/texticons/LEP_shanghai_texticon.png"
+		legacy_lazy_load = no
+	}
 	
 }
