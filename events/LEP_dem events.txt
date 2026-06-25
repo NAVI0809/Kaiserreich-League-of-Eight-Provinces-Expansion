@@ -365,30 +365,54 @@ country_event = { #人民救国会成立
 	}
 }
 
-country_event = { #土匪问题
+country_event = { #旗帜问题
 	id = league_mid.11
 	title = league_mid.11.t
 	desc = league_mid.11.d
-	picture = GFX_report_event_QIE_huang_fu_speech
+	picture = GFX_report_event_CHN_China_five_colour_flags
 
 	is_triggered_only = yes
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.a"
 		name = league_mid.11.a
-		add_power_balance_value = {
-			id = LEP_power_balance
-			value = 0.05
+		custom_effect_tooltip = LEP_nanjing_flag_tooltip
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.01
 		}
+		hidden_effect = {
+			set_cosmetic_tag = LEP_nanjing
+		}
+		
 	}
 
 	option = {
 		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.b"
 		name = league_mid.11.b
-		add_power_balance_value = {
-			id = LEP_power_balance
-			value = -0.05
+		custom_effect_tooltip = LEP_shanghai_flag_tooltip
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
 		}
+		hidden_effect = {
+			set_cosmetic_tag = LEP_shanghai
+		}
+		
+	}
+
+	option = {
+		log = "[GetLogInfo]: eventleague_mid.11 option league_mid.11.c"
+		name = league_mid.11.c
+		custom_effect_tooltip = LEP_jiangsu_flag_tooltip
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.01
+		}
+		hidden_effect = {
+			set_cosmetic_tag = LEP_jiangsu
+		}
+		
 	}
 }
 
