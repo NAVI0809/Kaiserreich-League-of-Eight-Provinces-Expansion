@@ -10,6 +10,15 @@ LEPEXP_DEBUG_CAT = {
 	priority = 100
 }
 
+LEPEXP_laws_CAT = {
+	icon = GFX_decision_category_patriotic
+	picture = GFX_decision_cat_generic_australasia
+	priority = 999
+	allowed = {
+		tag = LEP
+	}
+}
+
 LEPEXP_military_defence_development_CAT = {
 	icon = GFX_decision_category_military_operation
 	picture = GFX_decision_cat_picture_N38D_marching
@@ -93,6 +102,33 @@ LEP_liberation_of_asia_category = {
 	}
 	visible = {
 		has_completed_focus = LEP_Return_to_the_World_Stage
+	}
+	visible_when_empty = yes
+}
+
+LEPEXP_gov = {
+	icon = GFX_decision_category_generic_democracy
+	allowed = { tag = LEP }
+	priority = 200
+
+	scripted_gui = LEPEXP_gov_decision_cat_gui
+
+	visible = {
+		
+	}
+	visible_when_empty = yes
+}
+
+progressbar_category = {
+	icon = generic_political_actions
+	
+	priority = 999
+	scripted_gui = ui_progressbar
+	allowed = {
+		always = yes 
+	}
+	visible = {
+		is_debug = yes
 	}
 	visible_when_empty = yes
 }

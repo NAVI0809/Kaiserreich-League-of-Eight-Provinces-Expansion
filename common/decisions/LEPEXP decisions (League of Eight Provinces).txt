@@ -753,6 +753,10 @@ LEP_country_development = {
 	}
 }
 
+LEPEXP_laws_CAT = {
+	
+
+}
 
 LEP_foreign_policy_decisions = {
 	LEP_join_the_reichspakt_decision = {
@@ -2478,5 +2482,54 @@ LEPEXP_military_defence_development_CAT = {
 			}
 		}
 		fixed_random_seed = no
+	}
+}
+
+progressbar_category ={
+	progressbar_daily_add = {
+		icon = generic_industry
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			clr_country_flag = progressbar_decrease
+			set_country_flag = progressbar_add
+		}
+	}
+	progressbar_daily_decrease = {
+		icon = generic_industry
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			clr_country_flag = progressbar_add
+			set_country_flag = progressbar_decrease
+		}
+
+	}
+
+	progressbar_sample = {
+		icon = generic_industry
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			set_country_flag = progressbar_add_sample
+		}
 	}
 }

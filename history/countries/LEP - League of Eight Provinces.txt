@@ -172,7 +172,7 @@ recruit_character = LEP_yu_huancheng
 recruit_character = LEP_yuan_xiluo
 recruit_character = LEP_gao_fengqian
 recruit_character = LEP_Nanking_parliament
-recruit_character = LEP_zhang_jvsheng
+
 recruit_character = LEP_li_siguang
 recruit_character = LEP_huang_qun
 recruit_character = LEP_jing_yaoyue
@@ -197,6 +197,10 @@ recruit_character = LEP_chien_shiung_wu
 recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
+
+LEP_zhang_jvsheng = {
+	retire = yes
+}
 
 LEP_lu_xiaobo  = { #recruit only by league_
 	retire = yes

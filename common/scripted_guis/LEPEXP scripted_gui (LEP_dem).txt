@@ -1,0 +1,29 @@
+scripted_gui = {
+	LEPEXP_gov_decision_cat_gui = {
+		context_type = decision_category
+		window_name = "LEPEXP_gov_decision_cat_gui"
+	}
+
+	ui_progressbar = {
+		context_type = decision_category
+		window_name = "ui_progressbar"
+
+		properties = {
+			progressbar = {
+				frame = progressbar_var
+			}
+			progressbar_sample_1 = {
+				frame = progressbar_var_sample_1
+			}
+
+			
+			progressbar_sample_2 = {
+				frame = progressbar_var_sample_2
+			}
+			progressbar_sample_2_divider = {
+				x = progressbar_x
+			}
+		}
+	}
+}
+

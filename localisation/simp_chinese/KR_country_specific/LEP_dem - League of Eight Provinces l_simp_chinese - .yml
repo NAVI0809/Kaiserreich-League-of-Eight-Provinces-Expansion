@@ -1467,6 +1467,11 @@
  LEP_bop_developing_division: "民主枝桠乱结"
  LEP_bop_bitter_division: "共和渐染阴霾"
 
+ ##GUI文本
+ LEP_ZZH_tooltip: "自治同志会"
+ LEP_ZZH_tooltip_desc: "自治同志会描述\n    $MODIFIER_POLITICAL_POWER_FACTOR$：[?YUG_slovenia_political_power_factor|+=%0]\n    $MODIFIER_STABILITY_FACTOR$：[?YUG_slovenia_stability_factor|+=%]\n    $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：[?YUG_slovenia_industrial_capacity_factory|+=%]"
+ JNSB: "江南商帮"
+
  
 
  

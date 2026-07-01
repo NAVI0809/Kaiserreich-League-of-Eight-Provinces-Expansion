@@ -9,3 +9,14 @@ is_controlled_by_jap_or_its_puppet = {
 		}
 	}
 }
+
+ZZH_winning_1_trigger = {
+	FROM = {
+		social_liberal > 0.05
+	}
+	FROM = {
+		NOT = {
+			social_liberal > 0.10
+		} 
+	}
+}

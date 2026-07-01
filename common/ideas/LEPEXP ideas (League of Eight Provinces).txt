@@ -2260,6 +2260,39 @@ ideas = {
 				weekly_manpower = 1000
 			}
 		}
+
+		LEP_devastated_national_econ_idea = {
+			on_add = { log = "[GetLogRoot]: add idea CHN_devastated_national_econ_idea" }
+			picture = POL_disjointed_industry
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.3
+				political_power_factor = -0.10
+			}
+		}
+		LEP_devastated_national_econ2_idea = {
+			on_add = { log = "[GetLogRoot]: add idea CHN_devastated_national_econ2_idea" }
+			picture = POL_disjointed_industry
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.20
+				consumer_goods_factor = 0.20
+				political_power_factor = -0.05
+			}
+		}
+		LEP_devastated_national_econ3_idea = {
+			on_add = { log = "[GetLogRoot]: add idea CHN_devastated_national_econ3_idea" }
+			picture = POL_successful_four_year_plan
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+				consumer_goods_factor = 0.10
+			}
+		}
 	}
 	
 

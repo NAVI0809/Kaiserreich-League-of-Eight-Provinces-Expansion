@@ -68,3 +68,8 @@ LEP_conflict_and_struggle = {
     social_democrat_drift = LEP_social_democrat_drift
     authoritarian_democrat = LEP_authoritarian_democrat_drift
 }
+
+LEP_ZZH_influence = {
+    icon = "GFX_idea_generic_broken_champagne"
+    stability_factor = LEP_ZZH_stability_factor
+}

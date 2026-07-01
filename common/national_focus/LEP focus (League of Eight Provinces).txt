@@ -655,10 +655,10 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			recruit_character = LEP_Nanking_parliament
 			activate_advisor = LEP_Nanking_parliament
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
+				recruit_character = LEP_Nanking_parliament
 				country_event = { id = league_mid.31 days = 3 }
 				country_event = { id = league_mid.32 days = 35 }
 			}
@@ -1275,8 +1275,13 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+		    show_ideas_tooltip = LEP_zhang_jvsheng_advisor
 			country_event = { id = league_mid.45 days = 0 }
 			LEP_strengthen_ZZH_small = yes
+			hidden_effect = {
+				recruit_character = LEP_zhang_jvsheng
+			}
 		}
 	}
 	focus = {
