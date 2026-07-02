@@ -2083,6 +2083,8 @@ LEPEXP_military_defence_development_CAT = {
 				    }
 			    }
 		    }
+			custom_effect_tooltip = tooltip_white_line
+			add_mines = { region = 76 amount = 1000 }
 		}
 		fixed_random_seed = no
 	}

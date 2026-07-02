@@ -8047,19 +8047,19 @@ focus_tree = {
 			
 			add_dynamic_modifier = { modifier = LEP_national_autonomy_army }
 			add_to_variable = {
-				LEP_attrition = -0.25
+				LEP_attrition = -0.05
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
-				LEP_army_org_factor = 0.1
-				tooltip = army_org_factor_tooltip
+				LEP_max_dig_in = 20
+				tooltip = max_dig_in_tooltip
 			}
 			add_to_variable = {
-				LEP_army_core_defence_factor = 0.1
+				LEP_army_core_defence_factor = 0.05
 				tooltip = army_core_defence_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_core_attack_factor = 0.1
+				LEP_army_core_attack_factor = 0.05
 				tooltip = army_core_attack_factor_tooltip
 			}
 			if={
@@ -8090,7 +8090,19 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_training_time_army_factor = -0.25
+				LEP_experience_gain_army_factor = 0.1
+				tooltip = experience_gain_army_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_attrition = -0.05
+				tooltip = attrition_tooltip
+			}
+			add_to_variable = {
+				LEP_army_org_factor = 0.1
+				tooltip = army_org_factor_tooltip
+			}	
+			add_to_variable = {
+				LEP_training_time_army_factor = 0.05
 				tooltip = training_time_army_factor_tooltip
 			}
 			add_to_variable = {
@@ -8098,9 +8110,10 @@ focus_tree = {
 				tooltip = dig_in_speed_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 25
+				LEP_max_dig_in = 20
 				tooltip = max_dig_in_tooltip
 			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			LEP_guo_chan = { custom_effect_tooltip = character_becomes_a_general }
 			LEP_zhou_yan = { custom_effect_tooltip = character_becomes_a_general }
@@ -8263,16 +8276,16 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_experience_gain_army_factor = 0.15
-				tooltip = experience_gain_army_factor_tooltip
+				LEP_experience_gain_factor = 0.05
+				tooltip = experience_gain_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_command_power_gain_mult = 0.25
+				LEP_command_power_gain_mult = 0.2
 				tooltip = command_power_gain_mult_tooltip
 			}
 			add_to_variable = {
-				LEP_experience_gain_factor = 0.50
-				tooltip = experience_gain_factor_tooltip
+				LEP_org_loss_when_moving = -0.1
+				tooltip = org_loss_when_moving_tooltip
 			}
 			country_event = { id = league_mid.43 days = 15 }
 			country_event = { id = league_mid.64 days = 1 } #国防线
@@ -8313,8 +8326,12 @@ focus_tree = {
 				tooltip = army_defence_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_experience_loss_factor = -0.2
-				tooltip = experience_loss_factor_tooltip
+				LEP_army_defence_factor = 0.05
+				tooltip = army_defence_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_army_core_defence_factor = 0.1
+				tooltip = army_core_defence_factor_tooltip
 			}			
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -8368,11 +8385,30 @@ focus_tree = {
 				remove_idea = LEP_eliteheer_1
 				add_idea = LEP_eliteheer_2
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_army_core_defence_factor = 0.05
+				tooltip = army_core_defence_factor_tooltip
+			}	
+			add_to_variable = {
+				LEP_experience_loss_factor = 0.05
+				tooltip = experience_loss_factor_tooltip
+			}	
+			add_to_variable = {
+				LEP_command_power_gain_mult = 0.05
+				tooltip = command_power_gain_mult_tooltip
+			}	
+			custom_effect_tooltip = tooltip_white_line
 			every_army_leader = {
 				limit = { skill < 2 }
 				gain_xp = 250
 				add_max_trait = 1
 			}
+
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -8672,171 +8708,6 @@ focus_tree = {
 				add_trait = { trait = expert_improviser }
 			}
 			add_ideas = LEP_disrupting_their_supply
-		}
-		search_filters = {
-			FOCUS_FILTER_ARMY_BONUS
-		}
-	}
-
-	focus = {
-		id = LEP_tide_of_steel
-		icon = GFX_goal_generic_army_tanks3
-		cost = 7
-
-		relative_position_id = LEP_disrupting_supply
-		x = 0
-		y = 1
-
-		ai_will_do = {
-			base = 30
-			modifier = {
-				has_war = yes
-				add = 15
-			}
-		}
-		prerequisite = { focus = LEP_disrupting_supply }
-		prerequisite = { focus = LEP_through_fire_and_war }
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_tide_of_steel"
-			add_command_power = -10
-			add_ideas = GER_self_propelled_artillery
-			add_ideas = LEP_idea_tide_of_steel
-			if = {
-				limit = { has_tech = basic_medium_tank_chassis }
-				create_equipment_variant = {
-					name = "St.Pz.Kpfw. III"
-					type = medium_tank_chassis_1
-					show_position = no
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon			# 3.7 cm KwK 36
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-						special_type_slot_2 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 4
-						tank_nsb_armor_upgrade = 2
-					}
-					#design_team = mio:GER_krupp_tank_organisation
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_panzer_divisions_tt
-			custom_effect_tooltip = {
-				localization_key = tooltip_create_division_template
-				NAME = "Panzer-Division"
-				LINE_1 = { localization_key = line_battalion_tt NAME = medium_armor ICON = GFX_unit_medium_armor_icon_small COUNT = 6 }
-				LINE_2 = { localization_key = line_battalion_tt NAME = motorized ICON = GFX_unit_motorized_icon_small COUNT = 4 }
-				SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
-				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
-				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
-			}
-			custom_effect_tooltip = GER_else_tt
-			custom_effect_tooltip = {
-				localization_key = tooltip_create_division_template
-				NAME = "Panzer-Division"
-				LINE_1 = { localization_key = line_battalion_tt NAME = light_armor ICON = GFX_unit_light_armor_icon_small COUNT = 6 }
-				LINE_2 = { localization_key = line_battalion_tt NAME = motorized ICON = GFX_unit_motorized_icon_small COUNT = 4 }
-				SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
-				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
-				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
-			}
-			hidden_effect = {
-				if = {
-					limit = { has_template = "Panzer-Division" }
-					delete_unit_template_and_units = { division_template = "Panzer-Division (Neue)" disband = yes } #no cheating
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						has_tech = basic_medium_tank_chassis
-						has_tech = basic_medium_tank
-					}
-				}
-				division_template = {
-					name = "Panzer-Division"
-					division_names_group = LEP_ARM_02
-					regiments = {
-						medium_armor = { x = 0 y = 0 }
-						medium_armor = { x = 0 y = 1 }
-						medium_armor = { x = 0 y = 2 }
-						medium_armor = { x = 1 y = 0 }
-						medium_armor = { x = 1 y = 1 }
-						medium_armor = { x = 1 y = 2 }
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-					}
-					support = {
-						mot_recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-				}
-			}
-			else = {
-				division_template = {
-					name = "Panzer-Division"
-					division_names_group = LEP_ARM_02
-					regiments = {
-						light_armor = { x = 0 y = 0 }
-						light_armor = { x = 0 y = 1 }
-						light_armor = { x = 0 y = 2 }
-						light_armor = { x = 1 y = 0 }
-						light_armor = { x = 1 y = 1 }
-						light_armor = { x = 1 y = 2 }
-						motorized = { x = 2 y = 0 }
-						motorized = { x = 2 y = 1 }
-						motorized = { x = 2 y = 2 }
-						motorized = { x = 2 y = 3 }
-					}
-					support = {
-						mot_recon = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-					}
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_white_line
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = LEP
-					valid_state_for_spawning_friendly_unit = yes
-				}
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = tooltip_spawn_unit
-						TYPE = "Panzer-Division"
-					}
-					create_unit = {
-						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
-						owner = ROOT
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = LEP
-					valid_state_for_spawning_friendly_unit = yes
-				}
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = tooltip_spawn_unit
-						TYPE = "Panzer-Division"
-					}
-					create_unit = {
-						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
-						owner = ROOT
-					}
-				}
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -9188,6 +9059,19 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_army_org_factor = 0.03
+				tooltip = army_org_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_army_artillery_attack_factor = 0.05
+				tooltip = army_artillery_attack_factor_tooltip
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.005
@@ -9336,11 +9220,11 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_army_artillery_attack_factor = 0.15
+				LEP_army_artillery_attack_factor = 0.1
 				tooltip = army_artillery_attack_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_artillery_defence_factor = 0.2
+				LEP_army_artillery_defence_factor = 0.15
 				tooltip = army_artillery_defence_factor_tooltip
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -9386,19 +9270,19 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_land_reinforce_rate = 0.1
+				LEP_land_reinforce_rate = 0.04
 				tooltip = land_reinforce_rate_tooltip
 			}
 			add_to_variable = {
-				LEP_army_speed_factor = 0.15
+				LEP_army_speed_factor = 0.1
 				tooltip = army_speed_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_combat_width_factor = -0.1
+				LEP_combat_width_factor = -0.05
 				tooltip = combat_width_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_org_loss_when_moving = -0.15
+				LEP_org_loss_when_moving = -0.1
 				tooltip = org_loss_when_moving_tooltip
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -9828,13 +9712,19 @@ focus_tree = {
 		icon = GFX_goal_FNG_beiyang_navy
 	    cost = 5
 
-		relative_position_id =  LEP_artillery_of_the_sea
+		relative_position_id = LEP_artillery_of_the_sea
 		x = 0
 	    y = 1
 
 		prerequisite = {
 		    focus = LEP_artillery_of_the_sea
 	    }
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_artillery_of_the_sea
+		}
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 			owns_state = 743
@@ -9848,7 +9738,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"
 
-			add_ideas = GEA_pacific_rule_idea
+			
 			swap_ideas = {
 				remove_idea = LEP_nanjing_navy
 				add_idea = LEP_nanjing_navy_2
@@ -10005,12 +9895,107 @@ focus_tree = {
 	}
 
 	focus = {
-		id = LEP_marine_exp
-		icon = GFX_focus_CHI_fund_marine_corp
+		id = LEP_refurbish_chinese_dockyards
+		icon = GFX_goal_generic_pipeline
 		cost = 7
 
 		relative_position_id = LEP_recruit_beiyang_admiralty
-		x = 2
+		x = -1
+		y = 1
+
+		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 2
+				has_global_flag = china_united
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed GXC_refurbish_chinese_dockyards"
+			if = {
+		       limit = { owns_state = 1075 } #南通
+		       1075 = {
+			       add_extra_state_shared_building_slots = 2
+			       add_building_construction = {
+				       type = dockyard
+				       level = 1
+				       instant_build = yes
+			        }
+		        }
+	        }
+			if = {
+		       limit = { owns_state = 746 } #NB
+		       746 = {
+			       add_extra_state_shared_building_slots = 2
+			       add_building_construction = {
+				       type = dockyard
+				       level = 1
+				       instant_build = yes
+			        }
+		        }
+	        }
+			if = {
+		       limit = { owns_state = 596 } #hz
+		       596 = {
+			       add_extra_state_shared_building_slots = 1
+			       add_building_construction = {
+				       type = dockyard
+				       level = 1
+				       instant_build = yes
+			        }
+		        }
+	        }
+			if = {
+		       limit = { owns_state = 802 } #厦门
+		       802 = {
+			       add_extra_state_shared_building_slots = 2
+			       add_building_construction = {
+				       type = dockyard
+				       level = 1
+				       instant_build = yes
+			        }
+		        }
+	        }
+			if = {
+		       limit = { owns_state = 803 } #温州
+		       803 = {
+			       add_extra_state_shared_building_slots = 2
+			       add_building_construction = {
+				       type = dockyard
+				       level = 1
+				       instant_build = yes
+			        }
+		        }
+	        }
+			GXC_dockyards_effect = yes
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = yes }
+				mio:CHN_naval_industry_organisation = {
+					add_mio_research_bonus = 0.10
+					add_mio_size = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
+		id = LEP_marine_exp
+		icon = GFX_focus_CHI_fund_marine_corp
+		cost = 5
+
+		relative_position_id = LEP_naval_air_dev
+		x = 0
 		y = 1
 
 		ai_will_do = {
@@ -10020,7 +10005,7 @@ focus_tree = {
 				add = 15
 			}
 		}
-		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		prerequisite = { focus = LEP_naval_air_dev }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus LEP_marine_exp"
 			add_potential_special_forces_tree = yes
@@ -10113,13 +10098,134 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_wolf_pack_sub
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = LEP_marine_exp
+		prerequisite = { focus = LEP_marine_exp }
+		prerequisite = { focus = LEP_six_year_programme }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_wolf_pack_sub"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_3
+				add_idea = LEP_nanjing_navy_4
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = LEP_wolf_pack_sub
+				ahead_reduction = 1
+				uses = 1
+				category = ss_tech
+			}
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_naval_cruiser_submarine } }
+				complete_special_project = {
+					project = sp:sp_naval_cruiser_submarine
+					show_modifiers = no
+				}
+			}
+
+			create_equipment_variant = {
+				name = "Type III"
+				type = ship_hull_cruiser_submarine
+				name_group = CHI_SS_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_2
+					fixed_ship_engine_slot = sub_ship_engine_2
+					front_1_custom_slot = ship_mine_layer_sub
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = ship_mine_layer_sub
+				}
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_submarine
+					version_name = "Type III"
+				}
+				requested_factories = 1
+				progress = 0.95
+				amount = 10
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_naval_midget_submarine } }
+				complete_special_project = {
+					project = sp:sp_naval_midget_submarine
+					show_modifiers = no
+				}
+			}
+			if = {
+				limit = { has_tech = advanced_ship_hull_submarine }
+				create_equipment_variant = {
+					name = "Type II"
+					type = ship_hull_midget_submarine
+					name_group = CHI_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_4
+						fixed_ship_engine_slot = sub_ship_engine_4
+					}
+				}
+			}
+			else_if = {
+				limit = { has_tech = improved_ship_hull_submarine }
+				create_equipment_variant = {
+					name = "Type II"
+					type = ship_hull_midget_submarine
+					name_group = CHI_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_3
+						fixed_ship_engine_slot = sub_ship_engine_3
+					}
+				}
+			}
+			else_if = {
+				limit = { has_tech = basic_ship_hull_submarine }
+				create_equipment_variant = {
+					name = "Type II"
+					type = ship_hull_midget_submarine
+					name_group = CHI_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_2
+						fixed_ship_engine_slot = sub_ship_engine_2
+					}
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "Type II"
+					type = ship_hull_midget_submarine
+					name_group = CHI_SS_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_1
+						fixed_ship_engine_slot = sub_ship_engine_1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
 		id = LEP_coast_radar
 		icon = GFX_goal_generic_radar_instillation
-		cost = 7
+		cost = 5
 
-		relative_position_id = LEP_recruit_beiyang_admiralty
-		x = -2
-		y = 1
+		relative_position_id = LEP_refurbish_chinese_dockyards
+		x = 0
+		y = 2
 
 		ai_will_do = {
 			base = 50
@@ -10136,7 +10242,7 @@ focus_tree = {
 				china_is_the_unifier_of_china_trigger = yes
 			}
 		}
-		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus LEP_coast_radar"
 			add_tech_bonus = {
@@ -10163,7 +10269,11 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { is_ally_with = KOR }
+				limit = { 
+					KOR = {
+						is_subject_of = LEP
+					}
+				}
 				KOR = {
 					random_owned_controlled_state = {
 						prioritize = { 1099 }
@@ -10176,6 +10286,43 @@ focus_tree = {
 							level = 2
 							instant_build = yes
 						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					ROOT = { is_ally_with = KOR }
+				}
+				KOR = {
+					random_owned_controlled_state = {
+						prioritize = { 1099 }
+						limit = {
+							is_core_of = ROOT
+							is_coastal = yes
+						}
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					1099 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				1099= {
+					limit = {
+						is_core_of = ROOT
+						is_coastal = yes
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
 					}
 				}
 			}
@@ -10193,7 +10340,7 @@ focus_tree = {
 
 		relative_position_id = LEP_recruit_beiyang_admiralty
 		x = 0
-		y = 1
+		y = 2
 
 		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
 		ai_will_do = {
@@ -10271,6 +10418,60 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_naval_air_dev
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = LEP_recruit_beiyang_admiralty
+		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 2
+				has_global_flag = china_united
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_naval_air_dev"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_2
+				add_idea = LEP_nanjing_navy_3
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
+		id = LEP_new_spirit_of_maritime_life
+		icon = GFX_goal_generic_sea_and_air
+		cost = 6
+		x = -1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = LEP_wolf_pack_sub
+		prerequisite = { focus = LEP_wolf_pack_sub }
+		prerequisite = { focus = LEP_coast_radar }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_new_spirit_of_maritime_life"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_4
+				add_idea = LEP_nanjing_navy_5
+			}
+			add_ideas = GEA_pacific_rule_idea
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
 		id = LEP_fortifying_our_positions
 		icon = GFX_focus_FIN_weapon_caches
 		cost = 5
@@ -10289,14 +10490,7 @@ focus_tree = {
 		prerequisite = { focus = LEP_railway_corps }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_fortifying_our_positions"
-			hidden_effect = {
-				LEP_wu_rengli = {
-                    unit_leader_event = {
-                        id = league_generic.11
-                        hours = 12
-                    }
-			    }
-			}
+
 			if = {
 				limit = { has_idea = LEP_engineering_corps_2 }
 				swap_ideas = {
@@ -10326,6 +10520,13 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			LEP_fortifying_our_positions_effect = yes
+            custom_effect_tooltip = tooltip_white_line
+			LEP_wu_rengli = {
+                unit_leader_event = {
+                    id = league_generic.11
+                    hours = 12
+                }
+			}
 
 		}
 		search_filters = {
@@ -10335,12 +10536,131 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_beiyang_big_guns
+		icon = GFX_goal_China_Beiyang_Navy
+		cost = 6
+		x = 1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = LEP_new_spirit_of_maritime_life
+		prerequisite = { focus = LEP_new_spirit_of_maritime_life }
+		mutually_exclusive = { focus = LEP_new_and_young_thought_navy }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_beiyang_big_guns"
+			QIE_sa_zhenbing = {
+				add_attack = 1
+				add_maneuver = 1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_5
+				add_idea = LEP_nanjing_navy_6
+			}
+			add_tech_bonus = {
+				name = LEP_beiyang_big_guns
+				bonus = 0.85
+				uses = 2
+				category = bb_tech
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_political_power = -100
+			if = {
+				limit = { NOT = { is_special_project_completed = sp:sp_naval_super_heavy_battleship } }
+				complete_special_project = {
+					project = sp:sp_naval_super_heavy_battleship
+					show_modifiers = no
+				}
+			}
+			create_equipment_variant = {
+				name = "Kunlun Class"
+				type = ship_hull_super_heavy_1
+				name_group = CHYN_THEME_MOUNTAINS
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_anti_air_2
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_1
+				}
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "LEP"
+					version_name = "Kunlun Class"
+				}
+				name = "DN-01 昆仑舰"
+				progress = 0.25
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "LEP"
+					version_name = "Kunlun Class"
+				}
+				name = "DN-02 长白舰"
+				progress = 0.25
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
+		id = LEP_new_and_young_thought_navy
+		icon = GFX_focus_generic_air_carrier
+		cost = 6
+		x = -1
+		y = 1
+		ai_will_do = { base = 100 }
+		relative_position_id = LEP_new_spirit_of_maritime_life
+		prerequisite = { focus = LEP_new_spirit_of_maritime_life }
+		mutually_exclusive = { focus = LEP_beiyang_big_guns }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_new_and_young_thought_navy"
+			LEP_sa_shijun = {
+				add_attack = 1
+				add_coordination = 1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_5
+				add_idea = LEP_nanjing_navy_7
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = LEP_new_and_young_thought_navy
+				bonus = 0.85
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = LEP_new_and_young_thought_navy
+				bonus = 0.85
+				uses = 1
+				category = marine_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
 		id = LEP_nanjing_air_academy
 		icon = GFX_focus_CHI_formalise_training_regime
 		cost = 6
 
 		relative_position_id = LEP_fortifying_our_positions
-		x = -2
+		x = -1
 		y = 1
 
 		ai_will_do = {
@@ -10403,7 +10723,7 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = 2
+		x = 1
 		y = 1
 
 		ai_will_do = {
@@ -10505,7 +10825,7 @@ focus_tree = {
 
 		relative_position_id = LEP_nanjing_air_academy
 		x = 0
-		y = 1
+		y = 2
 
 		ai_will_do = {
 			base = 30
@@ -10556,7 +10876,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = -2
+		x = -1
 		y = 1
 
 		ai_will_do = {
@@ -10576,6 +10896,7 @@ focus_tree = {
 					add_idea = LEP_nanjing_airforce_5
 				}
 			}
+			
 			else = {
 				swap_ideas = {
 					remove_idea = LEP_nanjing_airforce_2
@@ -10632,12 +10953,20 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_china_air_fleet
-		x = 2
-		y = 1
+		x = 0
+		y = 2
 
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 	    }
+
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_cult_of_aviation 
+			has_completed_focus = LEP_china_air_fleet
+		}
 
 		ai_will_do = {
 			base = 20
@@ -10914,6 +11243,171 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
 			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_tide_of_steel
+		icon = GFX_goal_generic_army_tanks3
+		cost = 7
+
+		relative_position_id = LEP_disrupting_supply
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			base = 30
+			modifier = {
+				has_war = yes
+				add = 15
+			}
+		}
+		prerequisite = { focus = LEP_disrupting_supply }
+		prerequisite = { focus = LEP_through_fire_and_war }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_tide_of_steel"
+			add_command_power = -10
+			add_ideas = GER_self_propelled_artillery
+			add_ideas = LEP_idea_tide_of_steel
+			if = {
+				limit = { has_tech = basic_medium_tank_chassis }
+				create_equipment_variant = {
+					name = "St.Pz.Kpfw. III"
+					type = medium_tank_chassis_1
+					show_position = no
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon			# 3.7 cm KwK 36
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 2
+					}
+					#design_team = mio:GER_krupp_tank_organisation
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_panzer_divisions_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "Panzer-Division"
+				LINE_1 = { localization_key = line_battalion_tt NAME = medium_armor ICON = GFX_unit_medium_armor_icon_small COUNT = 6 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = motorized ICON = GFX_unit_motorized_icon_small COUNT = 4 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+			}
+			custom_effect_tooltip = GER_else_tt
+			custom_effect_tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "Panzer-Division"
+				LINE_1 = { localization_key = line_battalion_tt NAME = light_armor ICON = GFX_unit_light_armor_icon_small COUNT = 6 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = motorized ICON = GFX_unit_motorized_icon_small COUNT = 4 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_template = "Panzer-Division" }
+					delete_unit_template_and_units = { division_template = "Panzer-Division (Neue)" disband = yes } #no cheating
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_tech = basic_medium_tank_chassis
+						has_tech = basic_medium_tank
+					}
+				}
+				division_template = {
+					name = "Panzer-Division"
+					division_names_group = LEP_ARM_02
+					regiments = {
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 1 y = 0 }
+						medium_armor = { x = 1 y = 1 }
+						medium_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 2 y = 3 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+			}
+			else = {
+				division_template = {
+					name = "Panzer-Division"
+					division_names_group = LEP_ARM_02
+					regiments = {
+						light_armor = { x = 0 y = 0 }
+						light_armor = { x = 0 y = 1 }
+						light_armor = { x = 0 y = 2 }
+						light_armor = { x = 1 y = 0 }
+						light_armor = { x = 1 y = 1 }
+						light_armor = { x = 1 y = 2 }
+						motorized = { x = 2 y = 0 }
+						motorized = { x = 2 y = 1 }
+						motorized = { x = 2 y = 2 }
+						motorized = { x = 2 y = 3 }
+					}
+					support = {
+						mot_recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = LEP
+					valid_state_for_spawning_friendly_unit = yes
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Panzer-Division"
+					}
+					create_unit = {
+						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = LEP
+					valid_state_for_spawning_friendly_unit = yes
+				}
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "Panzer-Division"
+					}
+					create_unit = {
+						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
 		}
 	}
 }
