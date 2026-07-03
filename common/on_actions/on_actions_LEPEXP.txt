@@ -25,14 +25,5 @@ on_actions = {
 		}
 	}
 
-	on_daily = {
-		effect = {
-			if = {
-				limit = {
-					ZZH_winning_1_trigger = yes
-				}
-				LEP_increase_ZZH_influence = yes
-		    }
-		}
-	}
+	
 }

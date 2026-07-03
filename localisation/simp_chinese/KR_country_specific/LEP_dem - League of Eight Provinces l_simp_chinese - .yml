@@ -1496,9 +1496,16 @@
  LEP_bop_bitter_division: "共和渐染阴霾"
 
  ##GUI文本
- LEP_ZZH_tooltip: "自治同志会"
- LEP_ZZH_tooltip_desc: "自治同志会描述\n    $MODIFIER_POLITICAL_POWER_FACTOR$：[?YUG_slovenia_political_power_factor|+=%0]\n    $MODIFIER_STABILITY_FACTOR$：[?YUG_slovenia_stability_factor|+=%]\n    $MODIFIER_INDUSTRIAL_CAPACITY_FACTOR$：[?YUG_slovenia_industrial_capacity_factory|+=%]"
- JNSB: "江南商帮"
+ LEPEXP_gov: "政府内务"
+ LEP_ZZH_influence_modifier: "自治同志会的影响力"
+ LEP_JNSB_influence_modifier: "江南商帮的影响力"
+ LEP_ZZX_influence_modifier: "政学系的影响力"
+ LEP_ZZH_modifier_tooltip: "§Y自治同志会§!\n§g根据他们的影响力，将得到以下效果：§!\n    £stability_texticon  稳定度：[?LEP_ZZH_stability_factor|+=%]\n    £compliance_gain_texticon  顺从度增长速度：[?LEP_ZZH_compliance_growth_factor|+=%]\n"
+ LEP_ZZH_modifier_tooltip_desc: "§g自治同志会起源于二十年代席卷全国的联省自治运动，其思想根基则深植于浙江持续数年的省宪运动。面对军阀混战与中央失序，褚辅成、阮性存等浙籍士绅、法学家和地方议员主张以省宪法、民选省长和地方自治取代督军专政，希望通过“各省先自治，而后联邦统一”的道路，实现真正的民主共和。然而，从《九九宪法》到“三色宪草”，浙江自治运动屡屡遭到卢永祥、孙传芳等军阀利用或镇压，最终未能摆脱武力政治的阴影。孙传芳和齐燮元遇刺接连后，他们迅速重新组织，以昔日“自治运动同志会”为基础，联合各地地方宪政派、知识分子和学生团体，正式改组为自治同志会。抓住权力真空，与工商联等力量共同建立南京民主政府，成为新政权最重要的执政派系之一。§!"
+ LEP_JNSB_modifier_tooltip: "§Y江南商帮§!\n§g根据他们的影响力，将得到以下效果：§!\n    £civ_factory_output  工厂产出：[?LEP_JNSB_industrial_capacity_factory_factor|+=%]\n    £consumer_goods_texticon  生活消费品工厂系数：§Y[?LEP_JNSB_consumer_goods_factor|-=%]§!"
+ LEP_JNSB_modifier_tooltip_desc: "§g江南商帮代表着南京民主政府中民族资本、银行金融界与地方商会的利益，其影响力遍及上海、苏州、无锡、宁波等长江下游工商业重镇。荣宗敬等实业家、银行家以及各地商会领袖共同构成了这一松散却实力雄厚的利益共同体，他们相信，国家的富强应建立在工业、金融与商业的发展之上。华东混战期间，江南商帮曾一度对齐燮元寄予希望，希望其能够恢复社会秩序、保障工商业发展。然而，连年的战争摧毁了江南工业基础，齐燮元对德国资本的不断让步更使民族企业的生存空间日益萎缩，双方最终彻底决裂。齐燮元旧政权被推翻后，江南商帮迅速组织各地银行、商会与实业团体，为新成立的南京民主政府提供了一笔维持财政与行政运作的重要资金，并协助恢复金融秩序与工商生产，由此成为新政府不可或缺的重要支柱。§!"
+ LEP_ZXX_modifier_tooltip: "§Y政学系§!\n§g根据他们的影响力，将得到以下效果：§!\n    £political_power_texticon  政治点获得：[?LEP_ZXX_political_power_gain_factor|+=]\n    £war_support_modifiericons_texticon  战争支持度：[?LEP_ZXX_war_support_factor|+=%]"
+ LEP_ZXX_modifier_tooltip_desc: "§g政学系的渊源可追溯至北洋共和初年。二次革命失败后，一批拒绝追随孙中山重新发动武装革命的国会议员与知识分子，以“欧事研究会”为基础，逐渐形成了后来被称为政学系的政治集团。他们相信，与其依赖军队夺权，不如依靠议会政治、法律程序和专业行政重建共和国，因此始终主张宪政、法治与渐进改革。然而，在南北军阀混战的年代，这种道路屡遭挫折。无论是段祺瑞的武力政治，还是南方护法运动中的军人干政，都令政学系难以施展抱负。1924年北京政变后，黄郛短暂出任国务总理，却终究无力挽回北洋政局的崩溃。随着南京城头升起共和的旗帜，黄郛拒绝继续依附腐朽的北洋体系，南下南京，与商帮及地方自治派共同参与新政府的筹建，并重新整合散落各地的旧政学系成员以及大批新式官僚、法律学者和技术专家，使沉寂多年的政学系再次成为全国性政治力量。§!"
 
  
 

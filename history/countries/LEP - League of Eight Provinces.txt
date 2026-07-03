@@ -311,3 +311,61 @@ country_event = { id = league_events.210 days = 285 } #Dummy Zhou Xuan event
 ### Variants ###
 ################
 LEP_add_plane_variants = yes
+
+###Var
+##ZZH
+set_variable = {
+	var = LEP_ZZH_stability_factor
+	value = ROOT.party_popularity@social_liberal
+}
+multiply_variable = {
+	var = LEP_ZZH_stability_factor
+	value = 0.3
+}
+
+set_variable = {
+	var = LEP_ZZH_compliance_growth_factor
+	value = ROOT.party_popularity@social_liberal
+}
+multiply_variable = {
+	var = LEP_ZZH_compliance_growth_factor
+	value = 0.25
+}
+
+###JNSB
+set_variable = {
+	var = LEP_JNSB_industrial_capacity_factory_factor
+	value = ROOT.party_popularity@social_conservative
+}
+multiply_variable = {
+	var = LEP_JNSB_industrial_capacity_factory_factor
+	value = 0.3
+}
+
+set_variable = {
+	var = LEP_JNSB_consumer_goods_factor
+	value = ROOT.party_popularity@social_conservative
+}
+multiply_variable = {
+	var = LEP_JNSB_consumer_goods_factor
+	value = -0.6
+}
+
+##ZXX
+set_variable = {
+	var = LEP_ZXX_political_power_gain_factor
+	value = ROOT.party_popularity@market_liberal
+}
+multiply_variable = {
+	var = LEP_ZXX_political_power_gain_factor
+	value = 1
+}
+
+set_variable = {
+	var = LEP_ZXX_war_support_factor
+	value = ROOT.party_popularity@market_liberal
+}
+multiply_variable = {
+	var = LEP_ZXX_war_support_factor
+	value = 0.5
+}
