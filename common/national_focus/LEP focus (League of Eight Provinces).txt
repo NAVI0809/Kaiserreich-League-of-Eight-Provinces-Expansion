@@ -702,6 +702,11 @@ focus_tree = {
 			add_stability = 0.1
 			LEP_strengthen_ZXX_small = yes
 			custom_effect_tooltip = unlock_focuses
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = LEP_ZZH_influence_modifier }	
+				add_dynamic_modifier = { modifier = LEP_JNSB_influence_modifier }		
+				add_dynamic_modifier = { modifier = LEP_ZZX_influence_modifier }			
+			}
 		}
 	}
 	focus = {

@@ -70,19 +70,16 @@ LEP_conflict_and_struggle = {
 }
 
 LEP_ZZH_influence_modifier = {
-    icon = "GFX_idea_generic_broken_champagne"
     stability_factor = LEP_ZZH_stability_factor
     compliance_growth = LEP_ZZH_compliance_growth_factor
 }
 
 LEP_JNSB_influence_modifier = {
-    icon = "GFX_idea_generic_broken_champagne"
     industrial_capacity_factory = LEP_JNSB_industrial_capacity_factory_factor
     consumer_goods_factor = LEP_JNSB_consumer_goods_factor
 }
 
 LEP_ZZX_influence_modifier = {
-    icon = "GFX_idea_generic_broken_champagne"
     political_power_gain = LEP_ZXX_political_power_gain_factor
     war_support_factor = LEP_ZXX_war_support_factor
 }
