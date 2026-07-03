@@ -10106,7 +10106,7 @@ focus_tree = {
 		ai_will_do = { base = 100 }
 		relative_position_id = LEP_marine_exp
 		prerequisite = { focus = LEP_marine_exp }
-		prerequisite = { focus = LEP_coast_radar }
+		prerequisite = { focus = LEP_six_year_programme }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_wolf_pack_sub"
 			swap_ideas = {
@@ -10223,7 +10223,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radar_instillation
 		cost = 5
 
-		relative_position_id = LEP_recruit_beiyang_admiralty
+		relative_position_id = LEP_refurbish_chinese_dockyards
 		x = 0
 		y = 2
 
@@ -10242,7 +10242,7 @@ focus_tree = {
 				china_is_the_unifier_of_china_trigger = yes
 			}
 		}
-		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
+		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus LEP_coast_radar"
 			add_tech_bonus = {
@@ -10338,11 +10338,11 @@ focus_tree = {
 		icon = GFX_goal_bluewater_navy
 		cost = 7
 
-		relative_position_id = LEP_refurbish_chinese_dockyards
+		relative_position_id = LEP_recruit_beiyang_admiralty
 		x = 0
 		y = 2
 
-		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
+		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
 		ai_will_do = {
 			base = 50
 			modifier = {
@@ -10459,7 +10459,7 @@ focus_tree = {
 		ai_will_do = { base = 100 }
 		relative_position_id = LEP_wolf_pack_sub
 		prerequisite = { focus = LEP_wolf_pack_sub }
-		prerequisite = { focus = LEP_six_year_programme }
+		prerequisite = { focus = LEP_coast_radar }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_new_spirit_of_maritime_life"
 			swap_ideas = {
