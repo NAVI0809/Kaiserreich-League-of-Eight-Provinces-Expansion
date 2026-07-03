@@ -66,6 +66,65 @@ LEP_add_plane_variants = {
 	}	
 }
 
+LEP_pb4y_effect = {
+	if = {
+		limit = { NOT = { has_tech = basic_large_airframe } }
+		set_technology = { basic_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = improved_large_airframe } }
+		set_technology = { improved_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = basic_large_airframe } }
+		set_technology = { basic_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = aa_lmg } }
+		set_technology = { aa_lmg = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = engines_3 } }
+		set_technology = { engines_3 = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = air_torpedoe_2 } }
+		set_technology = { air_torpedoe_2 = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = survivability_studies } }
+		set_technology = { survivability_studies = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = early_bombs } }
+		set_technology = { early_bombs = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = aircraft_construction } }
+		set_technology = { aircraft_construction = 1 }
+	}
+	if = {
+		limit = { has_dlc_bba = yes }
+		create_equipment_variant = {
+			name = "PB4Y-CN"
+			show_position = no
+			type = large_plane_maritime_patrol_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting_2 #up to 4 torpedoes - gameplay adjusted
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting_2 #up to 4 torpedoes - gameplay adjusted
+				fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+				engine_type_slot = engine_3_4x #
+				special_type_slot_1 = armor_plate_large
+				special_type_slot_2 = self_sealing_fuel_tanks_large
+				special_type_slot_3 = lmg_defense_turret_2x #2 turrets with 2 ShKAS machine guns in each
+				special_type_slot_4 = lmg_defense_turret_2x #2 turrets with Oerlikon cannons in each
+			}
+			icon = GFX_USA_large_2_pb4y_1_medium
+		}
+	}	
+		
+}
+
 #zigai
 
 LEP_rescue_industry = {

@@ -2113,19 +2113,113 @@ country_event = { #“中国蔡司”
 	id = league_mid.66
 	title =league_mid.66.t
 	desc = league_mid.66.d
+
 	picture = GFX_report_event_LEP_cn_zisse
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = { 
-		log = "[GetLogInfo]: event league_mid.65 option league_mid.66.a"
+	option = { 
+		log = "[GetLogInfo]: event league_mid.66 option league_mid.66.a"
 		name = league_mid.66.a
 		#todo: new mio
 	}
 }	
 
+country_event = { #海军巡逻机
+	id = league_mid.67
+	title = league_mid.67.t
+	desc = league_mid.67.d
+	picture = GFX_report_event_USA_bombing_run
 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = { #yes
+		log = "[GetLogInfo]: event league_mid.67 option league_mid.67.a"
+		name = league_mid.67.a
+		set_country_flag = LEP_pb4y_yes_flag
+		add_political_power = -100
+		add_command_power = -30
+		add_manpower = -1000
+		custom_effect_tooltip = tooltip_white_line
+		613 = { #南京
+			limit = {
+				is_core_of = ROOT
+				is_in_home_area = yes
+				is_valid_state_for_development = yes
+				free_building_slots = { building = air_base size > 0 }
+			}
+			add_building_construction = {
+				type = air_base
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = league_mid.67.t
+			bonus = 0.5
+			uses = 2
+			category = mio_cat_all_naval_bomber_and_modules
+			category = mio_cat_all_heavy_aircraft_and_modules
+		}
+		USA = {
+			add_political_power = 100
+			mio:USA_consolidated_organisation = {
+				add_mio_funds = 1000
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_days_mission_timeout = {
+			mission = LEPEXP_xicheng_line_defence
+			days = 50
+		}	
+		custom_effect_tooltip = tooltip_white_line
+		LEP_pb4y_effect = yes
+		custom_effect_tooltip = LEP_PB4Y_TT
+		hidden_effect = {
+			if = {
+	           limit = { has_dlc_bba = yes }
+	           load_oob = "LEP_PB4Y_air_bba"
+            }			
+		}			
+	}
+	option = { #no
+		log = "[GetLogInfo]: event league_mid.67 option league_mid.67.a"
+		name = league_mid.67.b
+		add_political_power = 60
+		navy_experience = 20
+		air_experience = 20
+		add_days_mission_timeout = {
+			mission = LEPEXP_xicheng_line_defence
+			days = -30
+		}	
+	}
+}	
+
+country_event = { #pb4y
+	id = league_mid.68
+	title =league_mid.68.t
+	desc = league_mid.68.d
+
+	hidden = yes
+
+	picture = GFX_report_event_LEP_cn_zisse
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { 
+		log = "[GetLogInfo]: event league_mid.68 option league_mid.68.a"
+		name = league_mid.68.a
+		hidden_effect = {
+			if = {
+	           limit = { has_dlc_bba = yes }
+	           load_oob = "LEP_PB4Y_air_bba"
+            }		
+		}
+	}
+}	
 
 country_event = { #宪法蓝本选择
 	id = league_rebuild.1
