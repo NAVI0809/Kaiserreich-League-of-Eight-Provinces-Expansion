@@ -2487,8 +2487,8 @@ LEPEXP_military_defence_development_CAT = {
 	}
 }
 
-progressbar_category ={
-	progressbar_daily_add = {
+military_mobilization_category ={
+	military_mobilization_daily_add = {
 		icon = generic_industry
 
 		visible = {
@@ -2499,11 +2499,10 @@ progressbar_category ={
 		cost = 0
 
 		complete_effect = {
-			clr_country_flag = progressbar_decrease
-			set_country_flag = progressbar_add
+			
 		}
 	}
-	progressbar_daily_decrease = {
+	military_mobilization_daily_add = {
 		icon = generic_industry
 
 		visible = {
@@ -2514,13 +2513,28 @@ progressbar_category ={
 		cost = 0
 
 		complete_effect = {
-			clr_country_flag = progressbar_add
-			set_country_flag = progressbar_decrease
+			clr_country_flag = military_mobilization_decrease
+			set_country_flag = military_mobilization_add
+		}
+	}
+	military_mobilization_daily_decrease = {
+		icon = generic_industry
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		complete_effect = {
+			clr_country_flag = military_mobilization_add
+			set_country_flag = military_mobilization_decrease
 		}
 
 	}
 
-	progressbar_sample = {
+	military_mobilization_sample = {
 		icon = generic_industry
 
 		visible = {
@@ -2531,7 +2545,7 @@ progressbar_category ={
 		cost = 0
 
 		complete_effect = {
-			set_country_flag = progressbar_add_sample
+			set_country_flag = military_mobilization_add_sample
 		}
 	}
 }

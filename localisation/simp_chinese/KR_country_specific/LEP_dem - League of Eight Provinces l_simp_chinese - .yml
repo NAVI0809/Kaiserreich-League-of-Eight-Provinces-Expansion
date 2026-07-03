@@ -1495,7 +1495,7 @@
  LEP_bop_developing_division: "民主枝桠乱结"
  LEP_bop_bitter_division: "共和渐染阴霾"
 
- ##GUI文本
+ ##政务GUI文本
  LEPEXP_gov: "政府内务"
  LEP_ZZH_influence_modifier: "自治同志会的影响力"
  LEP_JNSB_influence_modifier: "江南商帮的影响力"
@@ -1507,6 +1507,10 @@
  LEP_ZXX_modifier_tooltip: "§Y政学系§!\n§g根据他们的影响力，将得到以下效果：§!\n    £political_power_texticon  政治点获得：[?LEP_ZXX_political_power_gain_factor|+=]\n    £war_support_modifiericons_texticon  战争支持度：[?LEP_ZXX_war_support_factor|+=%]"
  LEP_ZXX_modifier_tooltip_desc: "§g政学系的渊源可追溯至北洋共和初年。二次革命失败后，一批拒绝追随孙中山重新发动武装革命的国会议员与知识分子，以“欧事研究会”为基础，逐渐形成了后来被称为政学系的政治集团。他们相信，与其依赖军队夺权，不如依靠议会政治、法律程序和专业行政重建共和国，因此始终主张宪政、法治与渐进改革。然而，在南北军阀混战的年代，这种道路屡遭挫折。无论是段祺瑞的武力政治，还是南方护法运动中的军人干政，都令政学系难以施展抱负。1924年北京政变后，黄郛短暂出任国务总理，却终究无力挽回北洋政局的崩溃。随着南京城头升起共和的旗帜，黄郛拒绝继续依附腐朽的北洋体系，南下南京，与商帮及地方自治派共同参与新政府的筹建，并重新整合散落各地的旧政学系成员以及大批新式官僚、法律学者和技术专家，使沉寂多年的政学系再次成为全国性政治力量。§!"
 
+
+###军事GUI文本
+military_mobilization_category: "军事动员"
+military_mobilization_category_desc: "这是文本描述\n\n\n\n\n\n\n\n\n\n这是文本描述"
  
 
  

@@ -119,11 +119,11 @@ LEPEXP_gov = {
 	visible_when_empty = yes
 }
 
-progressbar_category = {
+military_mobilization_category = {
 	icon = generic_political_actions
 	
 	priority = 999
-	scripted_gui = ui_progressbar
+	scripted_gui = ui_military_mobilization
 	allowed = {
 		always = yes 
 	}

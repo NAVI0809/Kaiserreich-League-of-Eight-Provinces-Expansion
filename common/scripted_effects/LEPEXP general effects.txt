@@ -616,16 +616,7 @@ LEP_add_to_ECT = {
 	}
 }
 
-LEP_increase_ZZH_influence = {
-	custom_effect_tooltip = {
-		localization_key = tooltip_modify_dynmod
-		DYNMOD = LEP_ZZH_influence
-	}
-	add_to_variable = {
-		LEP_ZZH_stability_factor = 0.05
-		tooltip = stability_factor_tooltip
-	}
-}
+
 
 
 

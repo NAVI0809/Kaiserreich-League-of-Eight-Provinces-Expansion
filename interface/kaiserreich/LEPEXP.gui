@@ -97,21 +97,21 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "ui_progressbar"
+		name = "ui_military_mobilization"
 		position = { x = 0 y = 0 }
 		size = { width = 100% height= 240 }
 
 		iconType = {
-			name ="progressbar"
-			spriteType = "GFX_mod_progressbar"
+			name ="military_mobilization"
+			spriteType = "GFX_mod_military_mobilization"
 			position = { x= 30	 y = 5 }
 		}
 
 		instantTextBoxType = {
-			name ="progressbar_value"
+			name ="military_mobilization_value"
 			position = { x = 150 y = 80 }
 			font = "hoi_24header"
-			text = "[?progressbar_var]"
+			text = "[?military_mobilization_var]"
 			format = center
 			maxHeight = 24
 		}

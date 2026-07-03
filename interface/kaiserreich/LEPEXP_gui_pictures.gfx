@@ -1,6 +1,6 @@
 spriteTypes = {
 	progressbartype = {
-		name = "GFX_mod_progressbar"
+		name = "GFX_mod_military_mobilization"
 		textureFile1 = "gfx/military_mobilization/military_mobilization_full.dds"
 		textureFile2 = "gfx/military_mobilization/military_mobilization_empty.dds"
 		size = { x = 422 y = 49 }
