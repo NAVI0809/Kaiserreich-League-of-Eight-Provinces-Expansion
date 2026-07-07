@@ -9905,7 +9905,7 @@ focus_tree = {
 		cost = 7
 
 		relative_position_id = LEP_recruit_beiyang_admiralty
-		x = -1
+		x = 2
 		y = 1
 
 		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
@@ -10001,7 +10001,7 @@ focus_tree = {
 
 		relative_position_id = LEP_naval_air_dev
 		x = 0
-		y = 1
+		y = 2
 
 		ai_will_do = {
 			base = 30
@@ -10106,12 +10106,12 @@ focus_tree = {
 		id = LEP_wolf_pack_sub
 		icon = GFX_goal_generic_wolf_pack
 		cost = 5
-		x = -1
-		y = 1
+		x = 2
+		y = 0
 		ai_will_do = { base = 100 }
 		relative_position_id = LEP_marine_exp
-		prerequisite = { focus = LEP_marine_exp }
 		prerequisite = { focus = LEP_coast_radar }
+		prerequisite = { focus = LEP_six_year_programme }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_wolf_pack_sub"
 			swap_ideas = {
@@ -10345,7 +10345,7 @@ focus_tree = {
 
 		relative_position_id = LEP_refurbish_chinese_dockyards
 		x = 0
-		y = 2
+		y = 1
 
 		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
 		ai_will_do = {
@@ -10426,7 +10426,7 @@ focus_tree = {
 		id = LEP_naval_air_dev
 		icon = GFX_goal_generic_air_naval_bomber
 		cost = 5
-		x = 2
+		x = -1
 		y = 1
 		relative_position_id = LEP_recruit_beiyang_admiralty
 		prerequisite = { focus = LEP_recruit_beiyang_admiralty }
@@ -10464,7 +10464,7 @@ focus_tree = {
 		ai_will_do = { base = 100 }
 		relative_position_id = LEP_wolf_pack_sub
 		prerequisite = { focus = LEP_wolf_pack_sub }
-		prerequisite = { focus = LEP_six_year_programme }
+		prerequisite = { focus = LEP_marine_exp }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_new_spirit_of_maritime_life"
 			swap_ideas = {
@@ -10665,7 +10665,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_fortifying_our_positions
-		x = -1
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -10727,8 +10727,8 @@ focus_tree = {
 		icon = GFX_focus_generic_paratrooper
 		cost = 5
 
-		relative_position_id = LEP_nanjing_air_academy
-		x = 1
+		relative_position_id = LEP_artillery_of_the_sky
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -10738,7 +10738,7 @@ focus_tree = {
 				add = 15
 			}
 		}
-		prerequisite = { focus = LEP_nanjing_air_academy }
+		prerequisite = { focus = LEP_artillery_of_the_sky }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_cult_of_aviation"
 			LEP_ma_shigong = { custom_effect_tooltip = character_becomes_a_general }
@@ -10829,8 +10829,8 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 
 		ai_will_do = {
 			base = 30
@@ -10959,19 +10959,19 @@ focus_tree = {
 
 		relative_position_id = LEP_china_air_fleet
 		x = 0
-		y = 2
+		y = 1
 
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 	    }
 
-		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
-			has_completed_focus = LEP_cult_of_aviation 
-			has_completed_focus = LEP_china_air_fleet
-		}
+		#allow_branch = {
+		#	OR = {
+		#		china_is_the_unifier_of_china_trigger = yes
+		#	}
+		#	has_completed_focus = LEP_cult_of_aviation 
+		#	has_completed_focus = LEP_china_air_fleet
+		#}
 
 		ai_will_do = {
 			base = 20
@@ -11143,6 +11143,251 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
 		}
+	}
+
+	focus = {
+		id = LEP_anti_air_tower
+		icon = GFX_focus_PRC_anti_air_effort
+		cost = 5
+		prerequisite = {
+			focus = LEP_CNAF_regroup
+		}
+		relative_position_id = LEP_CNAF_regroup
+		x = 2
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_anti_air_tower"
+			if = {
+				limit = { NOT = { has_tech = antiair2 } }
+				every_owned_state = {
+					display_individual_scopes = yes
+					random_select_amount = 5
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						non_damaged_building_level = { building = industrial_complex level > 3 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				custom_effect_tooltip = GER_air_defence_tt
+			}
+			else = {
+				every_owned_state = {
+					display_individual_scopes = yes
+					random_select_amount = 6
+					limit = {
+						is_core_of = ROOT
+						is_controlled_by = ROOT
+						non_damaged_building_level = { building = industrial_complex level > 3 }
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_AF_radar_stations
+		icon = GFX_goal_generic_radar_instillation
+		cost = 5
+		prerequisite = {
+			focus = LEP_anti_air_tower
+		}
+		relative_position_id = LEP_anti_air_tower
+		x = 0
+		y = 1
+		available = {
+			is_special_project_completed = sp:sp_air_radar
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_night_fighters"
+			effect_tooltip = {
+				746 = {
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				591 = {
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+				885 = { #松江
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				608 = { #北京
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				618 = { #伊犁
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				897 = { #阿克赛钦
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				custom_effect_tooltip = GER_else_tt
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { is_special_project_completed = sp:sp_air_radar }
+					746 = { #宁波
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+					591 = { #海南
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+					885 = { #松江
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+					608 = { #北京
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+					618 = { #伊犁
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+					897 = { #阿克赛钦
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					add_breakthrough_progress = {
+						specialization = specialization_air
+						value = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_AF_night_fighters
+		icon = GFX_goal_HOL_night_fighter
+		cost = 5
+		prerequisite = {
+			focus = LEP_AF_radar_stations
+		}
+		relative_position_id = LEP_AF_radar_stations
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_night_fighters"
+			add_ideas = GER_night_attack
+		}	
+	}
+
+	focus = {
+		id = LEP_AF_night_fighters
+		icon = GFX_goal_HOL_night_fighter
+		cost = 5
+		prerequisite = {
+			focus = LEP_AF_radar_stations
+		}
+		relative_position_id = LEP_AF_radar_stations
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_night_fighters"
+			add_ideas = GER_night_attack
+		}	
+	}
+
+	focus = {
+		id = LEP_AF_AA_aircraft_command
+		icon = GFX_goal_generic_air_heavy_fighter2_new
+		cost = 5
+		prerequisite = {
+			focus = LEP_anti_air_tower
+		}
+		relative_position_id = LEP_anti_air_tower
+		x = 1
+		y = 2
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_AA_command"
+			add_tech_bonus = {
+				name = LEP_AF_AA_aircraft_command
+				bonus = 0.75
+				uses = 2
+				category = mio_cat_all_heavy_aircraft_and_modules
+			}
+			#虹桥特质
+		}	
+	}
+
+	focus = {
+		id = LEP_AF_AA_gun_pud
+		icon = GFX_goal_anti_air
+		cost = 5
+		prerequisite = {
+			focus = LEP_AF_radar_stations
+		}
+		relative_position_id = LEP_AF_radar_stations
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_AA_gun_pud"
+			add_tech_bonus = {
+				name = LEP_AF_AA_gun_pud
+				bonus = 1
+				uses = 1
+				category = cat_anti_air
+			}
+			add_ideas = GER_aa_proliferation
+		}	
 	}
 
 	focus = {

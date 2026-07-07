@@ -3433,6 +3433,167 @@ unit_leader_event = { #邢震南
 	}	
 }
 
+country_event = { #火攻东京
+	id = league_generic.14
+	title = league_generic.14.t
+	desc = league_generic.14.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.14.a
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.a"
+		
+		random_list = {
+			30 = {
+				modifier = { 
+					add = 10
+					has_country_flag = LEP_pb4y_yes_flag
+				}
+				modifier = { 
+					add = 10
+					has_tech = basic_large_airframe
+				}
+				modifier = { 
+					add = 20 
+					has_tech = improved_large_airframe
+				}
+				modifier = { 
+					add = 30
+					has_tech = advanced_large_airframe
+				}
+				country_event = league_generic.15 
+				JAP = {
+			        country_event =  league_generic.15  
+	    	    }
+			}
+			25 = {
+				country_event =  league_generic.16 
+				JAP = {
+			       country_event =  league_generic.16 
+		        }
+			}
+		}		
+	}
+	option = {
+		name = league_generic.14.b
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.b"
+		add_war_support = -0.15
+	}	
+}
+
+country_event = { #东京大轰炸
+	id = league_generic.15
+	title = league_generic.15.t
+	desc = league_generic.15.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.15.a
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.a"
+		trigger = { tag = LEP }
+		LEP = {
+			air_experience = 20
+			add_war_support = 0.05
+		}
+		JAP = {
+			add_timed_idea = {
+				idea = devastation_strategic_bombing_disruption_2
+				days = 120
+			}
+			282 = {
+				add_manpower = -80000
+				damage_building = { type = infrastructure damage = 5 }
+				damage_building = { type = industrial_complex damage = 5 }
+				damage_building = { type = arms_factory damage = 5 }	
+				damage_building = { type = dockyard damage = 5 }		
+			}
+		}		
+	}	
+
+	option = {
+		name = league_generic.15.b
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.a"
+		trigger = { tag = JAP }
+		effect_tooltip = {
+			JAP = {
+			    add_timed_idea = {
+				    idea = devastation_strategic_bombing_disruption_2
+				    days = 120
+			    }
+			    282 = {
+				    add_manpower = -80000
+				    damage_building = { type = infrastructure damage = 5 }
+				    damage_building = { type = industrial_complex damage = 5 }
+				    damage_building = { type = arms_factory damage = 5 }	
+					damage_building = { type = dockyard damage = 5 }			
+			    } 
+		    }
+		}
+				
+	}	
+}
+
+country_event = { #效果平平
+	id = league_generic.16
+	title = league_generic.16.t
+	desc = league_generic.16.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.16.a
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.a"
+		trigger = { tag = LEP }
+		LEP = {
+			air_experience = 20
+			add_war_support = 0.05
+		}
+		JAP = {
+			add_timed_idea = {
+				idea = devastation_strategic_bombing_disruption
+				days = 120
+			}
+			282 = {
+				add_manpower = -10000
+				damage_building = { type = infrastructure damage = 1.5 }
+				damage_building = { type = industrial_complex damage = 1.5 }
+				damage_building = { type = arms_factory damage = 1.5 }	
+				damage_building = { type = dockyard damage = 1.5 }		
+			}
+		}		
+	}	
+
+	option = {
+		name = league_generic.16.b
+		log = "[GetLogInfo]: event league_generic.14 option league_generic.14.a"
+		trigger = { tag = JAP }
+		effect_tooltip = {
+			JAP = {
+			    add_timed_idea = {
+				    idea = devastation_strategic_bombing_disruption
+				    days = 120
+			    }
+			    282 = {
+				    add_manpower = -10000
+				    damage_building = { type = infrastructure damage = 1.5 }
+				    damage_building = { type = industrial_complex damage = 1.5 }
+				    damage_building = { type = arms_factory damage = 1.5 }	
+					damage_building = { type = dockyard damage = 1.5 }			
+			    } 
+		    }
+		}
+				
+	}	
+}
+
 country_event = { #电解铝生产线
 	id = league_generic.1000
 	title = league_generic.1000.t

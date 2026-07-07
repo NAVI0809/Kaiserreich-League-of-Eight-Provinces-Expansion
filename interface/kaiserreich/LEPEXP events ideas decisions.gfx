@@ -12,6 +12,14 @@ spriteTypes = {
 		name = "GFX_idea_LEP_idea_tide_of_steel"
 		texturefile = "gfx/interface/ideas/LEP_idea_tide_of_steel.png"
 	}
+	spriteType = {
+		name = "GFX_idea_devastation_strategic_bombing_disruption"
+		texturefile = "gfx/interface/ideas/LEP_tokyo_brunbrunbrun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_devastation_strategic_bombing_disruption_2"
+		texturefile = "gfx/interface/ideas/LEP_tokyo_brunbrunbrun.png"
+	}
 	#decisons
 	spriteType = {
 		name = "GFX_decision_cat_picture_N38D_marching"

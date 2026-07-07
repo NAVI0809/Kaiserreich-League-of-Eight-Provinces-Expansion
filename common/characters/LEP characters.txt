@@ -1049,6 +1049,44 @@ characters = {
 			cost = 50
 		}
 	}
+
+    #徐焕升
+	LEP_xu_huansheng = {
+		name = LEP_xu_huansheng
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_xu_huansheng_army_small
+			}
+		}
+		advisor = {
+			slot = air_chief
+			desc = LEP_wu_rengli_air_chief_desc
+			idea_token = LEP_LEP_xu_huansheng_air_chief
+			ledger = air
+			traits = { KR_air_chief_strategic_bomber }
+			cost = 100
+
+			on_add = {
+				if = {
+					limit = { 
+						ROOT = {
+							has_war_with = JAP
+							has_country_flag = LEP_pb4y_yes_flag
+						}
+					}
+				}
+				ROOT = {
+					country_event = { id = league_generic.14 days = 3 }
+					add_tech_bonus = {
+						name = league_generic.14.t
+						bonus = 0.5
+						uses = 1
+						category = cat_strategic_bomber
+					}
+				}
+			}
+		}
+	}
 	################
 	### Generals ###
 	################
