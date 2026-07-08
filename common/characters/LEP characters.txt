@@ -1061,6 +1061,9 @@ characters = {
 		advisor = {
 			slot = air_chief
 			desc = LEP_wu_rengli_air_chief_desc
+			available = {
+				has_deployed_air_force_size = { size > 999 }
+			}
 			idea_token = LEP_LEP_xu_huansheng_air_chief
 			ledger = air
 			traits = { KR_air_chief_strategic_bomber }
@@ -1071,7 +1074,6 @@ characters = {
 					limit = { 
 						ROOT = {
 							has_war_with = JAP
-							has_country_flag = LEP_pb4y_yes_flag
 						}
 					}
 				}

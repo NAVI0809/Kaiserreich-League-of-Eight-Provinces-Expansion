@@ -199,10 +199,6 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 
-LEP_xu_huansheng = { #recruit only by focus
-	retire = yes
-}
-
 LEP_zhang_jvsheng = {
 	retire = yes
 }
