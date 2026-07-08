@@ -10550,6 +10550,12 @@ focus_tree = {
 		relative_position_id = LEP_new_spirit_of_maritime_life
 		prerequisite = { focus = LEP_new_spirit_of_maritime_life }
 		mutually_exclusive = { focus = LEP_new_and_young_thought_navy }
+		available = {
+            has_navy_size = {
+                type = capital_ship
+                size > 4
+            }
+        }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_beiyang_big_guns"
 			QIE_sa_zhenbing = {
@@ -10631,6 +10637,12 @@ focus_tree = {
 		relative_position_id = LEP_new_spirit_of_maritime_life
 		prerequisite = { focus = LEP_new_spirit_of_maritime_life }
 		mutually_exclusive = { focus = LEP_beiyang_big_guns }
+		available = {
+            has_navy_size = {
+                type = carrier
+                size > 2
+            }
+        }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_new_and_young_thought_navy"
 			LEP_sa_shijun = {
@@ -10963,6 +10975,7 @@ focus_tree = {
 
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
+			has_deployed_air_force_size = { size > 599 }
 	    }
 
 		#allow_branch = {
