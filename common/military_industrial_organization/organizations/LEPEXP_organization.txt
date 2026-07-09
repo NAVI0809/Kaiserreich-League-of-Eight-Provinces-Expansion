@@ -35,6 +35,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		mio_cat_eq_all_small_plane
 		maritime_patrol_plane
 		helicopter_equipment
+		cat_heavy_fighter
 	}
 	#equipment_type = {
 	#	small_plane_airframe
@@ -87,6 +88,52 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		}
 	}
 	add_trait = {
+		token = LEP_mio_trait_research_air
+		name = LEP_mio_trait_research_air
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 0 y = 0 }
+
+		available = {
+			LEP = { has_completed_focus = LEP_aviation_committee }
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.02
+			production_efficiency_gain_factor = 0.03
+		}
+
+		ai_will_do = { base = 2 }
+	}
+	add_trait = {
+		token = LEP_mio_trait_heavy_fighter
+		name = LEP_mio_trait_heavy_fighter
+		icon = GFX_generic_mio_department_icon_plane_heavy_fighter_engine
+		special_trait_background = yes
+
+		position = { x = 0 y = 1 }
+
+		available = {
+			LEP = { has_completed_focus = LEP_AF_AA_aircraft_command }
+		}
+
+		limit_to_equipment_type = { 
+			cat_heavy_fighter
+		}
+
+		equipment_bonus = {
+			maximum_speed = 0.1
+			air_agility = 0.06
+			air_attack = 0.06
+			fuel_consumption_factor = -0.08
+		}
+	}
+	add_trait = {
 		token = LEP_mio_trait_hongqiao_copter
 		name = LEP_mio_trait_hongqiao_copter
 		icon = GFX_generic_mio_department_icon_helicopter
@@ -111,7 +158,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 			production_capacity_factor = 0.03
 		}
 		organization_modifier = {
-			military_industrial_organization_size_up_requirement = -0.25
+			military_industrial_organization_size_up_requirement = -0.025
 		}
 		#on_complete
 	}

@@ -52,7 +52,9 @@ LEP_focke_wulf_organisation = {
 	allowed = { original_tag = LEP }
 	available = {
 		GER = { NOT = { has_war_with = FROM } }
-		has_country_leader = { character = LEP_qi_xieyuan }
+		LEP = {
+			has_country_flag = LEP_is_pro_GER
+		}
 	}
 	on_design_team_assigned_to_tech = {
 		GER = { add_cic = 100 }
@@ -78,7 +80,9 @@ LEP_krupp_artillery_organisation = {
 	allowed = { original_tag = LEP }
 	available = {
 		GER = { NOT = { has_war_with = FROM } }
-		has_country_leader = { character = LEP_qi_xieyuan }
+		LEP = {
+			has_country_flag = LEP_is_pro_GER
+		}
 	}
 	on_design_team_assigned_to_tech = {
 		GER = { add_cic = 100 }

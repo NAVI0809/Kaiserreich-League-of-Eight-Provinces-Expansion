@@ -10,6 +10,10 @@
 
  LEP_military_industrial_complex_modifier: "军工复合体"
 
+ LEP_is_pro_GER: "§Y[LEP.GetNameWithFlag]§!是亲德政体"
+ LEP_COPTER_tt: "若已完成特殊项目§H$sp_air_helicopter$§!：\n"
+ LEP_get_copter: "§L获得一批实验性直升机§!"
+
  div_qingxing_unit: "轻型步兵师"
  div_jingbei_unit: "警备协"
  div_fujianluzhandui_unit: "陆战队混成旅"
@@ -90,6 +94,8 @@
 
  LEP_mio_trait_seaplane_tryout: "海上巡逻套件"
  LEP_mio_trait_hongqiao_copter: "通用直升机试制"
+ LEP_mio_trait_heavy_fighter: "仿制BF-110"
+ LEP_mio_trait_research_air: "航空委员会特批经费"
 
  ### 军事决议 ###
  #MIO投资决议
@@ -139,6 +145,7 @@
  LEP_CP_50_PP_10_tooltip: "需要花费 $LEP_CP_50_PP_10$ 来执行此决议"
  LEPEXP_fort_nantong_defence: "建立南通要塞司令部"
  LEPEXP_fort_nantong_defence_desc: "作为当地海军的最高长官，吴纫礼将军指出南通方向的防御空虚，仅有的防御工事可以追溯到上世纪末，日军如果选择从华东方向进攻南京，南通将会无险可守，日寇则可以利用南通完善的港口设施更便利的运输兵力与物资。为了将日寇进攻方向锁死在淞沪一带，南通方向必须有可以长时间阻滞日寇的兵力与防御工事。"
+ LEP_fort_nantong_tt: "§C海军§!§L将会对南通方向的防御提出额外要求§!"
  league_generic.11.t: "海军的提议"
  league_generic.11.d: "海军总长吴纫礼将军指出南通方向的防御空虚，仅有的防御工事可以追溯到上世纪末，日军如果选择从华东方向进攻南京，南通将会无险可守，日寇则可以利用南通完善的港口设施更便利的运输兵力与物资。为了将日寇进攻方向锁死在淞沪一带，南通方向必须有可以长时间阻滞日寇的兵力与防御工事。\n\n吴将军请求陆军调拨兵力，参考国防线上部署的江防军在南通设立独立的守备部队布防，并修建现代化的防御工事，引进大口径岸防炮，在适合登陆的海岸滩涂部署障碍，并向入海口投放水雷。为表示诚意，吴将军承诺不干涉要塞守备部队的指挥。"
  league_generic.11.a: "好的吴将军，我们会尽量匀一些资源..."

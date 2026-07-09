@@ -8034,7 +8034,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_ningbo_autonomy_army
-		icon = GFX_goal_ANQ_five_stars_five_provinces
+		icon = GFX_goal_China_Beiyang_soldier
 		cost = 5
 		relative_position_id = LEP_fallout_of_the_league_war
 		x = 4
@@ -8299,7 +8299,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_southeast_iron_army
-		icon = GFX_goal_CHN_china_beiyang_militarism
+		icon = GFX_goal_FNG_fengtian_army
 		cost = 5
         relative_position_id = LEP_ningbo_autonomy_army
 		x = 0
@@ -8323,7 +8323,7 @@ focus_tree = {
 				tooltip = experience_gain_army_unit_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_attack_factor = 0.05
+				LEP_army_attack_factor = 0.025
 				tooltip = army_attack_factor_tooltip
 			}
 			add_to_variable = {
@@ -8331,7 +8331,7 @@ focus_tree = {
 				tooltip = army_defence_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_army_defence_factor = 0.05
+				LEP_army_core_attack_factor = 0.05
 				tooltip = army_defence_factor_tooltip
 			}
 			add_to_variable = {
@@ -8366,7 +8366,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_new_model_officer
-		icon = GFX_focus_generic_full_social_mobilization
+		icon = GFX_focus_CHI_meritocratic_principles
 		cost = 6
 
 		relative_position_id = LEP_eliteheer_model
@@ -8462,7 +8462,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 1
+				value = 0.8
 			}
 			if = {
 				limit = {
@@ -8498,19 +8498,25 @@ focus_tree = {
 
 	focus = {
 		id = LEP_staff_officer_school
-		icon = {
-			GFX_goal_LEP_officer_initiative = {
-				QIE = { is_monarchy = yes }
-				NOT = { has_global_flag = QIE_manchu_restoration }
-			}
-			GFX_goal_LEP_officer_initiative = yes
-		}
 		dynamic = yes
 		cost = 7
 
 		relative_position_id = LEP_new_model_officer
 		x = -2
 		y = 1
+
+		icon = {
+			GFX_goal_LEP_officer_initiative = {
+				QIE = { is_monarchy = yes }
+				NOT = { 
+					has_global_flag = QIE_manchu_restoration 
+					LEP = {
+						has_country_flag = LEP_dem_gov 
+					}
+				}
+			}
+			GFX_goal_China_Beiyang_Army = yes
+		}
 
 		ai_will_do = {
 			base = 30
@@ -9258,7 +9264,8 @@ focus_tree = {
 
 	focus = {
 		id = LEP_seize_the_initiative
-		icon = GFX_goal_RUS_heroism
+		icon = GFX_focus_PRC_raid_weapon_depots
+		#icon = GFX_focus_CHI_prepare_war_zones
 		cost = 5
         relative_position_id = LEP_looking_to_the_west
 		x = 0
@@ -9486,7 +9493,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_air
-				value = 1
+				value = 0.6
 			}
 			if = {
 				limit = {
@@ -9724,12 +9731,7 @@ focus_tree = {
 		prerequisite = {
 		    focus = LEP_artillery_of_the_sea
 	    }
-		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
-			has_completed_focus = LEP_artillery_of_the_sea
-		}
+		
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 			owns_state = 743
@@ -10526,6 +10528,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_fortifying_our_positions_effect = yes
             custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_fort_nantong_tt
 			LEP_wu_rengli = {
                 unit_leader_event = {
                     id = league_generic.11
@@ -10705,7 +10708,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_air
-				value = 1
+				value = 0.7
 			}
 			
 			custom_effect_tooltip = tooltip_white_line
@@ -10804,7 +10807,7 @@ focus_tree = {
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = tooltip_spawn_unit
-						TYPE = "Kongshu Budui"
+						TYPE = "空输部队"
 					}
 					create_unit = {
 						division = "division_template = \"Kongshu Budui\" start_experience_factor = 0.5"
@@ -10818,7 +10821,7 @@ focus_tree = {
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = tooltip_spawn_unit
-						TYPE = "Kongshu Budui"
+						TYPE = "空输部队"
 					}
 					create_unit = {
 						division = "division_template = \"Kongshu Budui\" start_experience_factor = 0.5"
@@ -10836,12 +10839,69 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_huhanmin_copter
+		icon = GFX_focus_CHI_vtol_experiments
+		cost = 5
+
+		relative_position_id = LEP_kongshu_trooper
+		x = 0
+		y = 1
+
+		
+		ai_will_do = {
+			base = 30
+			modifier = {
+				has_war = yes
+				add = 15
+			}
+		}
+		prerequisite = { focus = LEP_kongshu_trooper }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_huhanmin_copter"
+			custom_effect_tooltip = LEP_COPTER_tt
+			custom_effect_tooltip = LEP_get_copter
+			effect_tooltip = {		
+				custom_effect_tooltip = GER_else_tt
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 1
+				}
+			}
+			hidden_effect = {
+				if = {
+				    limit = { NOT = { is_special_project_completed = sp:sp_air_helicopter } }
+				    add_breakthrough_progress = {
+					    specialization = specialization_air
+					    value = 1
+				    }
+			    }
+			    else = {
+				    add_equipment_to_stockpile = {
+					    type = helicopter_equipment_1
+				        amount = 150
+				        producer = LEP
+				    }
+	    		}
+	    	}
+     		custom_effect_tooltip = tooltip_white_line
+			mio:LEP_hongqiao_organisation = {
+				add_mio_funds = 800
+				unlock_mio_trait_tooltip = LEP_mio_trait_hongqiao_copter
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_ARMY_BONUS
+		}
+	}
+
+	focus = {
 		id = LEP_cult_of_aviation
 		icon = GFX_focus_PRC_pilot_training
 		cost = 5
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = 1
+		x = 0
 		y = 1
 
 		ai_will_do = {
@@ -10893,7 +10953,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_nanjing_air_academy
-		x = -1
+		x = -2
 		y = 1
 
 		ai_will_do = {
@@ -10931,7 +10991,7 @@ focus_tree = {
 			show_mio_tooltip = CHN_aviation_industry_organisation
 			mio:CHN_aviation_industry_organisation = {
 				set_mio_flag = CHN_mio_unlocked
-				add_mio_size = 2
+				add_mio_size = 1
 				add_mio_funds = 800
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -10943,7 +11003,7 @@ focus_tree = {
 					show_mio_tooltip = CHN_aviation_industry_organisation
 				}
 				mio:LEP_hongqiao_organisation = {
-					add_mio_size = 2
+					add_mio_size = 1
 					add_mio_funds = 800
 				}
 			}
@@ -10952,7 +11012,7 @@ focus_tree = {
 				show_mio_tooltip = CHN_aviation_industry_organisation
 				mio:CHN_aviation_industry_organisation = {
 					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 2
+					add_mio_size = 1
 					add_mio_funds = 800
 				}
 			}
@@ -11159,6 +11219,143 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_aviation_committee
+		icon = GFX_goal_FNG_beiyang_airforce
+		cost = 5
+		prerequisite = {
+			focus = LEP_CNAF_regroup
+		}
+		relative_position_id = LEP_CNAF_regroup
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
+			add_tech_bonus = {
+				name = LEP_aviation_committee
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = yes }
+				custom_effect_tooltip = tooltip_white_line
+				every_military_industrial_organization = {
+					display_individual_scopes = yes
+					limit = { has_mio_trait = LEP_mio_trait_research_air }
+					unlock_mio_trait_tooltip = LEP_mio_trait_research_air
+				}
+				mio:LEP_hongqiao_organisation = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.025
+				}
+				mio:CHN_aviation_industry_organisation = {
+					add_mio_size = 1
+					add_mio_funds_gain_factor = 0.25
+					add_mio_research_bonus = 0.025
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_national_military_aviation_programme
+		icon = GFX_focus_PRC_establish_domestic_aircraft_production
+		cost = 5
+		prerequisite = {
+			focus = LEP_CNAF_regroup
+		}
+		relative_position_id = LEP_CNAF_regroup
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_national_military_aviation_programme"
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_timed_idea = {
+				idea = GXC_military_aviation_programme_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_ready_jet_era
+		icon = GFX_goal_generic_air_jet_2
+		cost = 5
+		#prerequisite = { focus = LEP_national_military_aviation_programme }
+		relative_position_id = LEP_national_military_aviation_programme
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_ready_jet_era"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.8
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					controls_province = 11771 #沈阳
+					716 = { #辽宁
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				716 = { #辽宁
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							province = 11771 #沈阳
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = air_facility
+							NUMBER = 1
+							VP = 11771
+						}
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 
+						799  #西安
+						602  #株洲
+						661  #绵阳
+					}
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = air_facility
+					}
+					construct_building_in_random_province = { air_facility = 1 }
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = LEP_ready_jet_era
+				bonus = 0.8
+				uses = 2
+				category = jet_technology
+				category = rocketry
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_mastery_bonus = {
+				name = LEP_ready_jet_era
+				bonus = 0.1
+				days = 365
+				folder = air
+			}
+		}
+	}
+
+	focus = {
 		id = LEP_anti_air_tower
 		icon = GFX_focus_PRC_anti_air_effort
 		cost = 5
@@ -11174,7 +11371,7 @@ focus_tree = {
 				limit = { NOT = { has_tech = antiair2 } }
 				every_owned_state = {
 					display_individual_scopes = yes
-					random_select_amount = 5
+					random_select_amount = 6
 					limit = {
 						is_core_of = ROOT
 						is_controlled_by = ROOT
@@ -11186,7 +11383,7 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				custom_effect_tooltip = GER_air_defence_tt
+				custom_effect_tooltip = LEP_air_defence_tt
 			}
 			else = {
 				every_owned_state = {
@@ -11203,6 +11400,12 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+			}
+			add_tech_bonus = {
+				name = LEP_anti_air_tower
+				bonus = 0.8
+				uses = 2
+				category = cat_anti_air
 			}
 		}
 	}
@@ -11222,6 +11425,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_AF_night_fighters"
+			custom_effect_tooltip = GER_radar_detection_tt
 			effect_tooltip = {
 				746 = {
 					add_building_construction = {
@@ -11361,7 +11565,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_AF_AA_aircraft_command
-		icon = GFX_goal_generic_air_heavy_fighter2_new
+		icon = GFX_goal_generic_air_heavy_fighter_new
 		cost = 5
 		prerequisite = {
 			focus = LEP_anti_air_tower
@@ -11374,10 +11578,19 @@ focus_tree = {
 			add_tech_bonus = {
 				name = LEP_AF_AA_aircraft_command
 				bonus = 0.75
-				uses = 2
+				uses = 1
 				category = mio_cat_all_heavy_aircraft_and_modules
 			}
-			#虹桥特质
+			add_tech_bonus = {
+				name = LEP_AF_AA_aircraft_command
+				bonus = 0.75
+				uses = 2
+				category = mio_cat_all_medium_aircraft_and_modules
+			}
+			mio:LEP_hongqiao_organisation = {
+				add_mio_size = 1
+				unlock_mio_trait_tooltip = LEP_mio_trait_heavy_fighter
+			}
 		}	
 	}
 

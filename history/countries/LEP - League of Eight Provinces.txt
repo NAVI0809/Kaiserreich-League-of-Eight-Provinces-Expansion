@@ -51,6 +51,7 @@ if = {
 }
 
 set_cosmetic_tag = LEP_LEP
+set_country_flag = LEP_is_pro_GER
 country_lock_all_division_template = yes
 
 declare_war_on = {

@@ -43,5 +43,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/LEP_shanghai_texticon.png"
 		legacy_lazy_load = no
 	}
+
+	#MIO
+	spriteType = {
+		name = "GFX_military_industrial_organization_cat_heavy_fighter"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_heavy_fighter.dds"
+	}
 	
 }

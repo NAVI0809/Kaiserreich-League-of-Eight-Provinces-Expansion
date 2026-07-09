@@ -134,6 +134,7 @@ unit_leader_event = { #民主政变
 			LEP_chen_yi = {
 			    promote_leader = yes
 		    }
+			clr_country_flag = LEP_is_pro_GER
 		}
 	}
 	
