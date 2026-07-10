@@ -2206,7 +2206,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 0
-		icon = GFX_focus_CHI_Legitimise_du
+		icon = GFX_focus_CHI_registry_of_property
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
 			focus = LEP_united_democratic_alliance
@@ -2230,7 +2230,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 0
-		icon = GFX_focus_RAJ_temple_entry_movements
+		icon = GFX_goal_china_beiyang_cooporation
 		prerequisite = {
 			focus = LEP_protect_private_property
 		}
@@ -2277,7 +2277,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 0
-		icon = GFX_focus_CHI_military_mission
+		icon = GFX_goal_generic_army_high_command
+		#icon = GFX_focus_CHI_military_mission
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
 		}
@@ -2321,7 +2322,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 0
-		icon = GFX_focus_ETH_freedom_at_gunpoint
+		icon = GFX_focus_CHI_guerrilla_warfare
+		#icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = {
 			focus = LEP_national_defense_design_council
 		}
@@ -2390,7 +2392,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 0
-		icon = GFX_focus_GER_fuhrerprinzip_goring
+		icon = GFX_focus_CHI_prepare_war_zones
 		prerequisite = {
 			focus = LEP_integrate_arsenal_factories
 		}
@@ -9050,7 +9052,8 @@ focus_tree = {
 
 	focus = {
 		id = LEP_looking_to_the_west
-		icon = GFX_goal_RUS_dominate_europe
+		icon = GFX_focus_GER_european_confederation
+		#icon = GFX_goal_RUS_dominate_europe
 		cost = 5
         relative_position_id = LEP_southeast_iron_army
 		x = 0
@@ -9721,7 +9724,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_recruit_beiyang_admiralty
-		icon = GFX_goal_FNG_beiyang_navy
+		icon = GFX_goal_China_Beiyang_Navy
 	    cost = 5
 
 		relative_position_id = LEP_artillery_of_the_sea
@@ -10426,7 +10429,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_naval_air_dev
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_focus_SMB_blue_water_fleet
 		cost = 5
 		x = -1
 		y = 1
@@ -10459,7 +10462,8 @@ focus_tree = {
 
 	focus = {
 		id = LEP_new_spirit_of_maritime_life
-		icon = GFX_goal_generic_sea_and_air
+		icon = GFX_focus_PHI_gunboat_diplomacy
+		#icon = GFX_goal_generic_sea_and_air
 		cost = 6
 		x = -1
 		y = 1
@@ -10545,7 +10549,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_beiyang_big_guns
-		icon = GFX_goal_China_Beiyang_Navy
+		icon = GFX_focus_generic_battleship_guns
 		cost = 6
 		x = 1
 		y = 1
@@ -10862,18 +10866,18 @@ focus_tree = {
 			custom_effect_tooltip = LEP_get_copter
 			effect_tooltip = {		
 				custom_effect_tooltip = GER_else_tt
-				add_breakthrough_progress = {
-					specialization = specialization_air
-					value = 1
-				}
+				complete_special_project = {
+	                project = sp:sp_air_helicopter
+		            scientist = LEP_zhu_jiaren
+	            }
 			}
 			hidden_effect = {
 				if = {
 				    limit = { NOT = { is_special_project_completed = sp:sp_air_helicopter } }
-				    add_breakthrough_progress = {
-					    specialization = specialization_air
-					    value = 1
-				    }
+				    complete_special_project = {
+	                    project = sp:sp_air_helicopter
+		                scientist = LEP_zhu_jiaren
+	                }
 			    }
 			    else = {
 				    add_equipment_to_stockpile = {
@@ -10890,8 +10894,9 @@ focus_tree = {
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_AIRFORCE_BONUS
 			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_AIRFORCE_BONUS
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 
