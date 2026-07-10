@@ -238,3 +238,34 @@ defined_text = {
 		localization_key = LEP_sub_JNSB_large_national_stage
 	}
 }
+
+defined_text = {
+	name = GetMilitaryMobilizationVar
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 99 }
+		}
+		localization_key = GetMilitaryMobilizationVar99
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 75 }
+		}
+		localization_key = GetMilitaryMobilizationVar75
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 50 }
+		}
+		localization_key = GetMilitaryMobilizationVar50
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 25 }
+		}
+		localization_key = GetMilitaryMobilizationVar25
+	}
+    text = {
+		localization_key = GetMilitaryMobilizationVar0
+	}
+}
