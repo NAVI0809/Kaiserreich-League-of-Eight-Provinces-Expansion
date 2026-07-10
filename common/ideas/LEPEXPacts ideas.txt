@@ -1,0 +1,27 @@
+ideas = {
+	hidden_ideas = {
+		LEP_compulsory_education_act_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_compulsory_education_act_idea" }
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.02
+				research_speed_factor = 0.03
+			}
+
+		}
+
+		LEP_organization_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.01
+				stability_factor = 0.02
+			}
+		}
+	}
+
+	
+}

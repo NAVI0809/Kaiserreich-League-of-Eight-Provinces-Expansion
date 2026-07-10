@@ -14,9 +14,7 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		add_dynamic_modifier = { modifier = LEP_ZZH_influence_modifier }	
-		add_dynamic_modifier = { modifier = LEP_JNSB_influence_modifier }		
-		add_dynamic_modifier = { modifier = LEP_ZZX_influence_modifier }			
+		activate_targeted_decision = { target = LEP decision = LEP_organization_act }		
 	}
 }
 

@@ -25,5 +25,16 @@ scripted_gui = {
 			}
 		}
 	}
+
+	ui_parliament = {
+		context_type = decision_category
+		window_name = "ui_parliament"
+		effects = {
+			parliament_button_click = {
+				LEP_showcase_laws_effect = yes
+
+			}
+		}
+	}
 }
 

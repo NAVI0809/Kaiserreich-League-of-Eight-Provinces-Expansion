@@ -2756,3 +2756,68 @@ military_mobilization_category ={
 		}
 	}
 }
+
+LEPEXP_parliament = {
+	LEP_act1 = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+
+	}
+	LEP_act2 = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+
+	LEP_organization_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+
+
+	LEP_compulsory_education_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+
+	
+}

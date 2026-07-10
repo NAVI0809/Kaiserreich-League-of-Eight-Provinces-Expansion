@@ -655,12 +655,19 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			activate_advisor = LEP_Nanking_parliament
+			
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_organization_act_tt
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
+				add_ideas = LEP_organization_act_idea
+				activate_targeted_decision = { target = LEP decision = LEP_organization_act }
 				recruit_character = LEP_Nanking_parliament
+				activate_advisor = LEP_Nanking_parliament
 				country_event = { id = league_mid.31 days = 3 }
 				country_event = { id = league_mid.32 days = 35 }
+				
 			}
 		}
 	}
@@ -1210,18 +1217,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = LEP_compulsory_education_act_tt
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_jing_yaoyue_advisor
-			custom_effect_tooltip = tooltip_white_line
-			swap_ideas = {
-				remove_idea = LEP_new_citizen2
-				add_idea = LEP_new_citizen3
-			}
 			custom_effect_tooltip = tooltip_white_line
 			add_research_slot_until_five = yes
 			country_event = { id = league_mid.35 days = 0 }
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_compulsory_education_act }
+				add_ideas = LEP_compulsory_education_act_idea
 				recruit_character = LEP_jing_yaoyue
 			}
 		}

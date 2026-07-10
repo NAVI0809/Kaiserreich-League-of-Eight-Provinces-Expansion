@@ -680,6 +680,24 @@ LEP_mili_var = {
 	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
 }
 
+LEP_showcase_laws_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_chowcase_laws_on
+			}
+		}
+		set_country_flag = LEP_chowcase_laws_on
+	}
+	else = {
+		clr_country_flag = LEP_chowcase_laws_on
+	}
+
+}
+
+
+
+
 
 
 

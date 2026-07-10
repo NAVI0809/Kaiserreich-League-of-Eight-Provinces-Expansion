@@ -118,4 +118,22 @@ guiTypes = {
 			fixedsize = yes
 		}
 	}
+
+	containerWindowType = {
+		name = "ui_parliament"
+		position = { x = 100 y = 100 }
+		size = { width = 100% height = 110 }
+
+		buttonType = {
+			name = "parliament_button"
+			spriteType = "GFX_goal_generic_parliament"
+			clicksound = click_ok
+			pdx_tooltip = "CLOSE"
+			position = { x = 200 y = 0 }
+			effect = {
+				LEP_showcase_laws_effect = yes
+			}
+
+		}
+	}
 }
