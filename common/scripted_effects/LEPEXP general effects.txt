@@ -675,6 +675,10 @@ LEP_add_to_ECT = {
 	}
 }
 
+LEP_mili_var = {
+	custom_effect_tooltip = LEP_add_mili_var_tt
+	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+}
 
 
 
