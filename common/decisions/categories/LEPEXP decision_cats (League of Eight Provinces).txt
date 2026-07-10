@@ -131,7 +131,7 @@ military_mobilization_category = {
 	priority = 999
 	scripted_gui = ui_military_mobilization
 	allowed = {
-		always = yes 
+		tag = LEP
 	}
 	visible = {
 		is_debug = yes
