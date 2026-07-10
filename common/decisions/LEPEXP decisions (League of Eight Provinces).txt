@@ -2495,6 +2495,220 @@ LEPEXP_military_defence_development_CAT = {
 }
 
 military_mobilization_category ={
+	LEP_industrial_census = {
+		icon = eng_trade_unions_support
+		available = {
+
+		}
+
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+			set_temp_variable = { LEP_mili_var_change = 1 }
+			LEP_mili_var = yes
+		}
+	}
+	LEP_expand_war_production = {
+		icon = generic_industry
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
+	
+
+	LEP_strategic_reserve_fund = {
+		icon = hol_attract_foreign_investors
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
+
+	LEP_research_substitute_materials = {
+		icon = generic_confiscation
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
+
+	LEP_collect_scrap_materials = {
+		icon = generic_consumer_goods
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
+
+	LEP_unify_industrial_organization = {
+		icon = generic_merge_plant_materiel
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
+	LEP_train_technical_talent = {
+		icon = generic_research
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    
+    
+
+    
+
+    LEP_domestic_uniform_materials = {
+		icon = GFX_decision_decision_generic_chinese_officers
+		available = {
+
+		}
+		
+		fire_only_once = yes
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_develop_motor_transport = {
+		icon = generic_trucks
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_replace_manpower_with_machinery = {
+		icon = GFX_decision_tank
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_enhance_troop_training = {
+		icon = generic_reorganize_irregulars
+		available = {
+
+		}
+		
+		fire_only_once = yes
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_emergency_requisition_factories = {
+		icon = generic_industry
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_fuel_conservation_decree = {
+		icon = oil
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_war_industry_mobilization_act = {
+		icon = ger_military_buildup
+		available = {
+
+		}
+		
+		fire_only_once = yes
+		cost = 20
+
+		complete_effect = {
+
+		}
+    }
+
+    LEP_recall_skilled_workers = {
+		icon = generic_wreckers
+		available = {
+
+		}
+		
+		fire_only_once = no
+		cost = 20
+
+		complete_effect = {
+
+		}
+	}
 	military_mobilization_daily_add = {
 		icon = generic_industry
 

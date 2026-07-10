@@ -1529,7 +1529,54 @@
 
 ###军事GUI文本
 military_mobilization_category: "军事动员"
-military_mobilization_category_desc: "这是文本描述\n\n\n\n\n\n\n\n\n\n这是文本描述"
+military_mobilization_category_desc: "\n§g“现代及将来之战争，若徒恃精练之军队，激昂之民气，决不能博最后之胜利。必也物资丰富，而一一开发，足为国防之工具者，始可以操胜算也。”\n\n——厉尔康，《国防与物资》，民国十七年§!\n\n§c欧战四年§!之教训昭然若揭：今世之战争，乃§g产业§!之战争，乃§g物资§!之战争，乃§g全国工业力§!之战争。单凭§n军队之精锐§!与§l民气之激昂§!，决不足以博取最后之胜利。为此，我们决意推行§g举国工业之总动员§!，循序渐进地将平时经济转入战时体制。我们将从物资普查、法规律令、原料统制，以至代用品研究、民间工厂改造、技术人才培养，层层深入，逐步实现全国工业之军事化。§n动员程度愈深§!，则§R国家之战争潜力愈强§!，然所需之花费亦随之而增。\n因此，我们必须审慎权衡手头§g各项资源之分配§!。\n\n"
+LEP_add_mili_var_tt: "军事动员度改变[?LEP_mili_var_change|+=]\n"
+LEP_military_mobilization_text: "当前军事动员度：[LEP.GetMilitaryMobilizationVar]（[?LEP.military_mobilization_var]）"
+GetMilitaryMobilizationVar99: "§4钢铁长城§!"
+GetMilitaryMobilizationVar75: "§G百业从戎§!"
+GetMilitaryMobilizationVar50: "§n整军经武§!"
+GetMilitaryMobilizationVar25: "§7绸缪牖户§!"
+GetMilitaryMobilizationVar0: "§Y承平之制§!"
+LEP_military_mobilization_modifier: "军事动员"
+LEP_military_mobilization_modifier_desc: "为了应对即将到来的战争，我们依照厉尔康的理念建立起了一整套军事动员体系。从工业普查到原料统制，从民厂转产到技术储备，每一步都在将国家潜力转化为战时实力。动员越深入，工业生产向战争倾斜的力度就越大，但资源的调配也日益紧张。我们必须把握节奏，在国力承受范围内稳步推进。"
+
+##军事动员决议
+LEP_industrial_census: "工业普查"
+LEP_expand_war_production: "扩大军需生产"
+LEP_develop_refining_industry: "发展精炼工业"
+LEP_strategic_reserve_fund: "战略物资储备基金"
+LEP_research_substitute_materials: "推进代用品研究"
+LEP_collect_scrap_materials: "收集废旧物资"
+LEP_unify_industrial_organization: "统一工业组织与计划"
+LEP_train_technical_talent: "培养军工技术骨干"
+
+LEP_develop_hydrogenated_oil_industry: "发展硬化油工业"
+LEP_secure_aviation_materials: "保障木材与航空材料供应"
+LEP_develop_synthetic_rubber: "人造橡胶工业"
+LEP_domestic_uniform_materials: "国产军服材料"
+LEP_develop_coal_tar_industry: "煤焦油工业"
+LEP_develop_steel_industry: "钢铁工业"
+LEP_strategic_oil_reserve: "战略石油储备"
+LEP_train_mining_metallurgy_talent: "采矿与冶金工业"
+LEP_develop_soybean_oil_industry: "大豆加工与油脂工业"
+
+LEP_develop_motor_transport: "发展汽车运输"
+LEP_replace_manpower_with_machinery: "以机械补人力"
+LEP_enhance_troop_training: "加强军士训练"
+LEP_emergency_requisition_factories: "紧急征用民间工厂"
+LEP_fuel_conservation_decree: "燃料节约令"
+LEP_war_industry_mobilization_act: "军需工业动员法"
+LEP_recall_skilled_workers: "召回技术工人"
+
+
+
+
+
+ 
+ 
+ 
+
+ 
  
 
  
