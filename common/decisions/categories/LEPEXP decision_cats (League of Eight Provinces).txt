@@ -153,6 +153,19 @@ LEPEXP_parliament = {
 
 }
 
+LEP_national_reconstruction_bureau = {
+	icon = generic_industry
+	picture = GFX_decision_cat_industry_KMT
+	priority = 1000
+	allowed = {
+		tag = LEP
+	}
+	visible = {
+		is_debug = yes
+	}
+	visible_when_empty = yes
+}
+
 
 
 

@@ -15,9 +15,12 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		LEP_li_erkang = {
-			unit_leader_event = { id = league_military.1 days = 1 }
+		add_days_mission_timeout = {
+			mission = LEP_economic_recovery_ongoing
+			days = -90
 		}
+		#add_ideas = LEP_devastated_national_econ_idea
+		#add_ideas = LEP_military_disarray_idea1
 	}
 }
 

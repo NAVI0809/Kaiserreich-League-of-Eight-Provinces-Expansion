@@ -658,10 +658,11 @@ focus_tree = {
 			
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_organization_act_tt
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_organization_act_idea
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
-				add_ideas = LEP_organization_act_idea
 				activate_targeted_decision = { target = LEP decision = LEP_organization_act }
 				recruit_character = LEP_Nanking_parliament
 				activate_advisor = LEP_Nanking_parliament
@@ -727,7 +728,7 @@ focus_tree = {
 			focus = LEP_unite_national_liberals
 		}
 		relative_position_id = LEP_unite_gentry_merchants
-		x = -5
+		x = -6
 		y = 1
 		completion_reward = {
 			add_ideas = LEP_autonomy_outline_idea
@@ -979,22 +980,56 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = LEP_board_of_audit
-		icon = GFX_focus_chi_legislative_yuan
+		id = LEP_disaster_relief_fundraising
+		icon = GFX_goal_PAL_Irrigation_Program
 		cost = 2.00
 		prerequisite = {
 			focus = LEP_rebuild_administrative_system
 		}
 		relative_position_id = LEP_rebuild_administrative_system
-		x = -2
+		x = -1
+		y = 1
+	}
+
+	
+	focus = {
+		id = LEP_police_reorganization
+		icon = GFX_goal_generic_police_state
+		cost = 2.00
+		prerequisite = {
+			focus = LEP_rebuild_administrative_system
+		}
+		relative_position_id = LEP_rebuild_administrative_system
+		x = -3
 		y = 1
 		completion_reward = {
 			unlock_decision_tooltip = LEP_crack_down_on_local_corruption
 			custom_effect_tooltip = tooltip_white_line
-			swap_ideas = {
-				remove_idea = LEP_administrative_rectification1
-				add_idea = LEP_administrative_rectification2
+			if = {
+				limit = { has_dlc_lar = no }
+				add_political_power = 50
+			}
+			else_if = {
+				limit = { has_intelligence_agency = no }
+				create_intelligence_agency = yes
+				upgrade_intelligence_agency = upgrade_anti_partisan
+			}
+			else_if = {
+				limit = { NOT = { has_done_agency_upgrade = upgrade_form_department } }
+				upgrade_intelligence_agency = upgrade_form_department
+			}
+			else_if = {
+				limit = { NOT = { has_done_agency_upgrade = upgrade_psycho_warfare } }
+				upgrade_intelligence_agency = upgrade_psycho_warfare
+			}
+			else = { add_political_power = 50 }
+			add_tech_bonus = {
+				name = QIE_flying_too_close_to_the_sun
+				bonus = 2
+				uses = 1
+				category = military_police_tech
 			}
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
@@ -1008,19 +1043,11 @@ focus_tree = {
 		icon = GFX_focus_ETH_support_from_the_japanese_communists
 		cost = 2.00
 		prerequisite = {
-			focus = LEP_board_of_audit
+			focus = LEP_police_reorganization
 		}
-		prerequisite = {
-			focus = LEP_independent_audit_office
-		}
-		prerequisite = {
-			focus = LEP_personnel_bureau
-		}
-		mutually_exclusive = {
-			focus = LEP_secure_the_realm
-		}
-		relative_position_id = LEP_board_of_audit
-		x = 1
+		
+		relative_position_id = LEP_police_reorganization
+		x = 2
 		y = 1
 		completion_reward = {
 			swap_ideas = {
@@ -1039,25 +1066,31 @@ focus_tree = {
 			focus = LEP_rebuild_administrative_system
 		}
 		relative_position_id = LEP_rebuild_administrative_system
-		x = 0
+		x = 2
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_Modern_Civil_Service_System
+			custom_effect_tooltip = LEP_civil_service_act_tt
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_civil_service_act_idea
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZXX_small = yes
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_civil_service_act }
+			}
 		}
 	}
 	focus = {
 		id = LEP_independent_audit_office
-		icon = GFX_goal_generic_banking_legislation
+		icon = GFX_goal_generic_controlled_board
 		cost = 2.00
 		available = {
-			has_completed_focus = LEP_board_of_audit
+			has_completed_focus = LEP_police_reorganization
 		}
 		prerequisite = {
-			focus = LEP_rebuild_administrative_system
+			focus = LEP_personnel_bureau
 		}
-		relative_position_id = LEP_rebuild_administrative_system
-		x = 2
+		relative_position_id = LEP_personnel_bureau
+		x = 1
 		y = 1
 		completion_reward = {
 			swap_ideas = {
@@ -1068,30 +1101,27 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LEP_secure_the_realm
-		icon = GFX_goal_agrarian_soldiers
+		id = LEP_decentralization_support
+		icon = GFX_goal_Fight_for_Freedom
 		cost = 2.00
-		prerequisite = {
-			focus = LEP_board_of_audit
-		}
-		prerequisite = {
-			focus = LEP_independent_audit_office
-		}
 		prerequisite = {
 			focus = LEP_personnel_bureau
 		}
-		mutually_exclusive = {
-			focus = LEP_administrative_inspector
-		}
-		relative_position_id = LEP_independent_audit_office
+		
+		relative_position_id = LEP_personnel_bureau
 		x = -1
 		y = 1
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LEP_administrative_rectification3
-				add_idea = LEP_administrative_rectification4n
-			}
+			custom_effect_tooltip = LEP_provincial_county_organization_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_provincial_county_organization_act_idea
 			LEP_strengthen_JNSB_small = yes
+			LEP_strengthen_ZZH_small = yes
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_provincial_county_organization_act }
+				
+			}
 		}
 	}
 	focus = {
@@ -1131,8 +1161,14 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_factory_welfare_reform_idea
-			LEP_strengthen_JNSB_big = yes
+			custom_effect_tooltip = LEP_factory_inspection_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_factory_inspection_act_idea
+			LEP_strengthen_JNSB_large = yes
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_factory_inspection_act }
+			}
 		}
 	}
 	focus = {
@@ -1149,6 +1185,14 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = LEP_mass_layoff_protection_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_mass_layoff_protection_act_idea
+			LEP_strengthen_ZZH_small = yes
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_mass_layoff_protection_act }
+			}
 			add_popularity = {
 				ideology = syndicalist
 				popularity = 0.05
@@ -1157,8 +1201,6 @@ focus_tree = {
 				ideology = radical_socialist
 				popularity = 0.03
 			}
-			add_ideas = LEP_appease_general_labor_union_idea
-			LEP_strengthen_ZZH_small = yes
 		}
 	}
 	focus = {
@@ -1219,6 +1261,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = LEP_compulsory_education_act_tt
 			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_compulsory_education_act_idea
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_jing_yaoyue_advisor
 			custom_effect_tooltip = tooltip_white_line
@@ -1227,7 +1271,6 @@ focus_tree = {
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_compulsory_education_act }
-				add_ideas = LEP_compulsory_education_act_idea
 				recruit_character = LEP_jing_yaoyue
 			}
 		}
@@ -1239,7 +1282,12 @@ focus_tree = {
 		cost = 2.00
 		prerequisite = {
 			focus = LEP_administrative_inspector
-			focus = LEP_secure_the_realm
+		}
+		prerequisite = {
+			focus = LEP_decentralization_support
+		}
+		prerequisite = {
+			focus = LEP_independent_audit_office
 		}
 		relative_position_id = LEP_rebuild_administrative_system
 		x = 0

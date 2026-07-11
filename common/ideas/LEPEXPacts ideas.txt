@@ -21,6 +21,50 @@ ideas = {
 				stability_factor = 0.02
 			}
 		}
+
+		LEP_civil_service_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.01
+				political_advisor_cost_factor = -0.05
+				economy_cost_factor = -0.05
+				trade_laws_cost_factor = -0.05
+				mobilization_laws_cost_factor = -0.05
+			}
+		}
+
+		LEP_provincial_county_organization_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.02
+				local_supplies = 0.05
+			}
+		}
+
+		LEP_factory_inspection_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -0.02
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		
+		LEP_mass_layoff_protection_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.08
+			}
+		}
 	}
 
 	

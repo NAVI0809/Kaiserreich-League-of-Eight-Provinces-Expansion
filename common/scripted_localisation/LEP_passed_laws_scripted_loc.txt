@@ -11,3 +11,31 @@ defined_text = {
 		localization_key = idea_desc|LEP_compulsory_education_act_idea
 	}
 }
+
+defined_text = {
+	name = GetCivilServiceAct
+	text = {
+		localization_key = idea_desc|LEP_civil_service_act_idea
+	}
+}
+
+defined_text = {
+	name = GetProvincialCountyOrganizationAct
+	text = {
+		localization_key = idea_desc|LEP_provincial_county_organization_act_idea
+	}
+}
+
+defined_text = {
+	name = GetFactoryInspectionAct
+	text = {
+		localization_key = idea_desc|LEP_factory_inspection_act_idea
+	}
+}
+
+defined_text = {
+	name = GetMassLayoffProtectionAct
+	text = {
+		localization_key = idea_desc|LEP_mass_layoff_protection_act_idea
+	}
+}

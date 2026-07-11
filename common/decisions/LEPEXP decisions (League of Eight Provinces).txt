@@ -2819,5 +2819,111 @@ LEPEXP_parliament = {
 
 	}
 
+	LEP_organization_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+	}
+
+	LEP_civil_service_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
 	
+	LEP_provincial_county_organization_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_factory_inspection_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_mass_layoff_protection_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+
+	
+}
+
+LEP_national_reconstruction_bureau = {
+	LEP_economic_recovery_ongoing = {
+		icon = generic_consumer_goods
+
+		available = { always = no }
+
+		days = 360
+		days_mission_timeout = 720
+		timeout_effect = {
+			LEP_improve_economic_devastation_effect = yes
+			activate_mission = LEP_economic_recovery_ongoing
+		}
+	}
+	
+	
+	
+	
+	
+	LEP_military_reorganization_ongoing = {
+		icon = generic_reorganize_irregulars
+
+		available = { always = no }
+
+		days = 360
+		days_mission_timeout = 720
+		timeout_effect = {
+			LEP_improve_military_reorganization_effect = yes
+			activate_mission = LEP_military_reorganization_ongoing
+		}
+	}
 }

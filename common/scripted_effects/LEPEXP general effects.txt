@@ -695,6 +695,173 @@ LEP_showcase_laws_effect = {
 
 }
 
+LEP_improve_economic_devastation_effect = {
+	if = {
+		limit = { has_idea = LEP_devastated_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ_idea
+			add_idea = LEP_devastated_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ2_idea
+			add_idea = LEP_devastated_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ3_idea
+			add_idea = LEP_devastated_national_econ4_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ4_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ4_idea
+			add_idea = LEP_recovering_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ_idea
+			add_idea = LEP_recovering_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ2_idea
+			add_idea = LEP_recovering_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ3_idea }
+		remove_ideas = LEP_recovering_national_econ3_idea
+	}
+	else = { add_one_random_civilian_factory = yes }
+}
+
+LEP_worsen_economic_devastation_effect = {
+	if = {
+		limit = { has_idea = LEP_recovering_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ3_idea
+			add_idea = LEP_recovering_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ2_idea
+			add_idea = LEP_recovering_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ_idea
+			add_idea = LEP_devastated_national_econ4_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ4_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ4_idea
+			add_idea = LEP_devastated_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ3_idea
+			add_idea = LEP_devastated_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ2_idea
+			add_idea = LEP_devastated_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ_idea }
+		remove_ideas = LEP_devastated_national_econ_idea
+	}
+	else = { 
+		add_stability = -0.15
+		add_political_power = -75
+	}
+}
+
+LEP_improve_military_reorganization_effect = {
+	if = {
+		limit = { has_idea = LEP_military_disarray_idea1 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea1
+			add_idea = LEP_military_disarray_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea2
+			add_idea = LEP_military_disarray_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea3
+			add_idea = LEP_military_disarray_idea4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea4 }
+		remove_ideas = LEP_military_disarray_idea4
+	}
+	else = {
+		add_army_experience = 5
+		add_command_power = 10
+	}
+}
+
+LEP_worsen_military_reorganization_effect = {
+	if = {
+		limit = { has_idea = LEP_military_disarray_idea4 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea4
+			add_idea = LEP_military_disarray_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea3
+			add_idea = LEP_military_disarray_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea2
+			add_idea = LEP_military_disarray_idea1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea1 }
+		remove_ideas = LEP_military_disarray_idea1
+	}
+	else = {
+		add_stability = -0.10
+		add_political_power = -50
+	}
+}
+
 
 
 
