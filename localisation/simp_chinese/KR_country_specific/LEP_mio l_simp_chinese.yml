@@ -13,6 +13,7 @@
  LEP_is_pro_GER: "§Y[LEP.GetNameWithFlag]§!是亲德政体"
  LEP_COPTER_tt: "若已完成特殊项目§H$sp_air_helicopter$§!：\n"
  LEP_get_copter: "§L获得一批实验性直升机§!"
+ LEP_has_war_JAP_TT: "如果§Y[LEP.GetNameWithFlag]§!正在与§Y[JAP.GetNameWithFlag]§!交战"
 
  div_qingxing_unit: "轻型步兵师"
  div_jingbei_unit: "警备协"

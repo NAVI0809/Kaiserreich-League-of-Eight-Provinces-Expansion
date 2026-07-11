@@ -79,6 +79,10 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_ma_shigong_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_ma_shigong_army_small.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_huansheng_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xu_huansheng_army_small.png"
+	}
 	#zigai 
 	spriteType = {
 		name = "GFX_portrait_LEP_xing_zhennan_army_large"

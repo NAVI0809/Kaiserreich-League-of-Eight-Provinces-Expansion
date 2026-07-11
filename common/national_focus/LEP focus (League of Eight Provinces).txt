@@ -9985,6 +9985,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed GXC_refurbish_chinese_dockyards"
+			add_timed_idea = {
+				idea = SHX_rapid_naval_modernisation_idea
+				days = 365
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 		       limit = { owns_state = 1075 } #南通
 		       1075 = {
@@ -10042,6 +10047,7 @@ focus_tree = {
 	        }
 			GXC_dockyards_effect = yes
 			custom_effect_tooltip = tooltip_white_line
+			
 			if = {
 				limit = { has_dlc_aat = yes }
 				mio:CHN_naval_industry_organisation = {
@@ -10425,11 +10431,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed CHI_six_year_programme"
 			add_timed_idea = {
-				idea = SHX_rapid_naval_modernisation_idea
-				days = 365
-			}
-			add_timed_idea = {
-				idea = CHI_six_year_programme_idea
+				idea = USA_maritime_industry_idea
 				days = 2190
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -10604,7 +10606,7 @@ focus_tree = {
 	focus = {
 		id = LEP_beiyang_big_guns
 		icon = GFX_focus_generic_battleship_guns
-		cost = 6
+		cost = 8
 		x = 1
 		y = 1
 		ai_will_do = { base = 100 }
@@ -10619,9 +10621,26 @@ focus_tree = {
         }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_beiyang_big_guns"
-			QIE_sa_zhenbing = {
-				add_attack = 1
-				add_maneuver = 1
+			if = {
+				limit = {
+					LEP = {
+					    has_character = QIE_QIE_sa_zhenbing
+				    }
+				}
+				QIE_sa_zhenbing = {
+				    add_attack = 1
+				    add_maneuver = 1
+			    }
+			}
+			else = {
+				effect_tooltip = {
+					QIE = {
+						QIE_sa_zhenbing = {
+				           add_attack = 1
+				           add_maneuver = 1
+			           }
+				    }					
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
@@ -11269,8 +11288,6 @@ focus_tree = {
 					SHD_antonio_riva = { set_nationality = ROOT }
 			    }
 			}
-
-
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -11315,6 +11332,38 @@ focus_tree = {
 					add_mio_research_bonus = 0.025
 				}				
 			}
+		}
+	}
+
+	focus = {
+		id = LEP_AF_ground_service
+		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		cost = 5
+		prerequisite = {
+			focus = LEP_aviation_committee
+		}
+		relative_position_id = LEP_aviation_committee
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
+			
+		}
+	}
+
+	focus = {
+		id = LEP_AF_ace_
+		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		cost = 5
+		prerequisite = {
+			focus = LEP_aviation_committee
+		}
+		relative_position_id = LEP_aviation_committee
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
+			
 		}
 	}
 
