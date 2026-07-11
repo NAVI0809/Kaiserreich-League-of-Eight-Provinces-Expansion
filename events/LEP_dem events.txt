@@ -2,6 +2,7 @@ add_namespace = league_mid
 add_namespace = league_rebuild
 add_namespace = league_generic
 add_namespace = league_endgame
+add_namespace = league_military
 
 country_event = { #test
 	id = league_mid.999
@@ -14,7 +15,9 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		activate_targeted_decision = { target = LEP decision = LEP_organization_act }		
+		LEP_li_erkang = {
+			unit_leader_event = { id = league_military.1 days = 1 }
+		}
 	}
 }
 
@@ -3695,6 +3698,46 @@ country_event = { #新建铝热法铬冶炼工厂
 			amount = -1
 			state = 613 #南京
 		}
+	}
+}
+
+#军事相关事件
+unit_leader_event = { #激活国防动员体系
+	id = league_military.1
+	title = league_military.1.t
+	desc = league_military.1.d
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			every_other_country = {
+			if = {
+				limit = {
+					has_character = QIE_jiang_baili
+					}
+					QIE_jiang_baili = {
+				        set_nationality = ROOT
+			        }
+				}
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_military.1 option league_military.1.a"
+		name = league_military.1.a
+		complete_national_focus = LEP_war_comes_from_the_north
+		custom_effect_tooltip = tooltip_white_line
+		army_experience = 20
+		add_command_power = 15
+		custom_effect_tooltip = tooltip_white_line
+		unlock_decision_category_tooltip = military_mobilization_category
+		custom_effect_tooltip = tooltip_white_line
+		QIE_jiang_baili = { custom_effect_tooltip = character_becomes_a_general }
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_military_preparation_tt
+
 	}
 }
 
