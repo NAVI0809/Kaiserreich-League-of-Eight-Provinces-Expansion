@@ -10822,8 +10822,8 @@ focus_tree = {
 		icon = GFX_focus_generic_paratrooper
 		cost = 5
 
-		relative_position_id = LEP_artillery_of_the_sky
-		x = -2
+		relative_position_id = LEP_nanjing_air_academy
+		x = 2
 		y = 1
 
 		ai_will_do = {
@@ -10834,6 +10834,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = LEP_artillery_of_the_sky }
+		prerequisite = { focus = LEP_nanjing_air_academy }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_cult_of_aviation"
 			LEP_ma_shigong = { custom_effect_tooltip = character_becomes_a_general }
@@ -10924,9 +10925,16 @@ focus_tree = {
 		cost = 5
 
 		relative_position_id = LEP_kongshu_trooper
-		x = 0
+		x = -1
 		y = 1
 
+		#allow_branch = {
+		#	OR = {
+		#		china_is_the_unifier_of_china_trigger = yes
+		#	}
+		#	has_completed_focus = LEP_CNAF_regroup 
+		#	has_completed_focus = LEP_kongshu_trooper
+		#}
 		
 		ai_will_do = {
 			base = 30
@@ -10935,11 +10943,15 @@ focus_tree = {
 				add = 15
 			}
 		}
-		prerequisite = { focus = LEP_kongshu_trooper }
+		prerequisite = { 
+			focus = LEP_kongshu_trooper 
+			focus = LEP_cult_of_aviation
+		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_huhanmin_copter"
 			custom_effect_tooltip = LEP_COPTER_tt
 			custom_effect_tooltip = LEP_get_copter
+			custom_effect_tooltip = tooltip_dash_line
 			effect_tooltip = {		
 				custom_effect_tooltip = GER_else_tt
 				complete_special_project = {
@@ -10947,6 +10959,7 @@ focus_tree = {
 		            scientist = LEP_zhu_jiaren
 	            }
 			}
+			custom_effect_tooltip = tooltip_dash_line
 			hidden_effect = {
 				if = {
 				    limit = { NOT = { is_special_project_completed = sp:sp_air_helicopter } }
@@ -11111,7 +11124,7 @@ focus_tree = {
 		cost = 6
 
 		relative_position_id = LEP_china_air_fleet
-		x = 0
+		x = 1
 		y = 1
 
 		available = {
@@ -11170,7 +11183,7 @@ focus_tree = {
 				    QIE_liu_muqun = { set_nationality = ROOT }
 			    }
 			}
-			CHI = {
+			CHI = {		
 				custom_effect_tooltip = characters_will_be_recruited
 			    character_list_tooltip = {
 				    limit = {
@@ -11182,12 +11195,13 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
+					CHI_chen_changzu = { CHN_recruit_character_effect = yes }
 				    CHI_zhou_zhirou = { set_nationality = ROOT }
 				    CHI_mao_bangchu = { set_nationality = ROOT }
 				    CHI_chen_changzu = { set_nationality = ROOT }
 			    }
 			}
-			HNN = {
+			SHX = {
 				custom_effect_tooltip = characters_will_be_recruited
 			    character_list_tooltip = {
 				    limit = {
@@ -11204,6 +11218,21 @@ focus_tree = {
 				    SHX_zhong_jihan = { set_nationality = ROOT }
 					SHX_xie_wenda = { set_nationality = ROOT }
 					SHX_shen_dexie = { set_nationality = ROOT }
+			    }
+			}
+			HNN = {
+				custom_effect_tooltip = characters_will_be_recruited
+			    character_list_tooltip = {
+				    limit = {
+					    OR = {
+				    		is_character = HNN_tang_duo
+				    		is_character = HNN_men_bingyue
+					    }
+				    }
+			    }
+			    hidden_effect = {
+				    HNN_tang_duo = { set_nationality = ROOT }
+				    HNN_men_bingyue = { set_nationality = ROOT }
 			    }
 			}
 			SZC = {
@@ -11349,24 +11378,31 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
-			
+			log = "[GetLogRoot]: Focus Completed LEP_AF_ground_service"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_airforce_6
+				add_idea = LEP_nanjing_airforce_7
+			}
+			add_manpower = -10000
 		}
 	}
 
 	focus = {
-		id = LEP_AF_ace_
-		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		id = LEP_AF_CAP
+		icon = GFX_focus_CHI_positional_advantage
 		cost = 5
 		prerequisite = {
-			focus = LEP_aviation_committee
+			focus = LEP_AF_ground_service
 		}
-		relative_position_id = LEP_aviation_committee
+		relative_position_id = LEP_AF_ground_service
 		x = 0
-		y = 1
+		y = 2
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
-			
+			log = "[GetLogRoot]: Focus Completed LEP_AF_CAP"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_airforce_7
+				add_idea = LEP_nanjing_airforce_8
+			}
 		}
 	}
 
@@ -11378,7 +11414,7 @@ focus_tree = {
 			focus = LEP_CNAF_regroup
 		}
 		relative_position_id = LEP_CNAF_regroup
-		x = -2
+		x = 2
 		y = 1
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_national_military_aviation_programme"
@@ -11395,19 +11431,117 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_AF_long_range
+		icon = GFX_focus_CHI_the_hump
+		cost = 5
+		prerequisite = {
+			focus = LEP_national_military_aviation_programme
+		}
+		relative_position_id = LEP_national_military_aviation_programme
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_long_range"
+			add_tech_bonus = {
+				name = RUS_enter_hundred
+				bonus = 1
+				uses = 1
+				category = mio_cat_all_medium_aircraft_and_modules
+			}
+			add_tech_bonus = {
+				name = RUS_enter_hundred
+				bonus = 1
+				uses = 1
+				category = mio_cat_all_heavy_aircraft_and_modules
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_AF_cas_dev
+		icon = GFX_goal_generic_air_CAS_german_new
+		cost = 5
+		prerequisite = {
+			focus = LEP_national_military_aviation_programme
+		}
+		relative_position_id = LEP_national_military_aviation_programme
+		x = -1
+		y = 2
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_AF_long_range"
+			add_tech_bonus = {
+				name = LEP_AF_cas_dev
+				bonus = 0.9
+				uses = 2
+				category = mio_cat_all_cas_and_modules
+			}
+		}
+	}
+
+	focus = {
+		id = LEP_AF_aircraft_manufacturing_for_navy
+		icon = GFX_focus_CHI_appropriate_design
+		cost = 5
+		prerequisite = {
+			focus = LEP_AF_long_range
+			focus = LEP_naval_air_dev
+		}
+		relative_position_id = LEP_AF_long_range
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed EP_AF_aircraft_manufacturing_for_navy"
+			mio:LEP_hongqiao_organisation = {
+				add_mio_funds = 800
+				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
+			}
+		}
+	}
+
+	focus = {
 		id = LEP_ready_jet_era
 		icon = GFX_goal_generic_air_jet_2
 		cost = 5
-		#prerequisite = { focus = LEP_national_military_aviation_programme }
+		prerequisite = { focus = LEP_AF_long_range }
 		relative_position_id = LEP_national_military_aviation_programme
 		x = 0
 		y = 3
+		available = {
+			date > 1943.06.01
+		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_ready_jet_era"
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.8
+			custom_effect_tooltip = LEP_focus_jet_tt
+			add_political_power = 100
+			add_war_support = 0.05
+			custom_effect_tooltip = tooltip_dash_line
+			custom_effect_tooltip = GER_else_tt
+			effect_tooltip = {
+				add_political_power = -100
+				add_breakthrough_progress = {
+				    specialization = specialization_air
+				    value = 0.8
+			    }	
 			}
+			hidden_effct = {
+				if = {
+				    limit = {
+					    NOT = {
+						    is_special_project_completed = sp:sp_air_jet_engine
+					    }									
+				    }
+				    add_political_power = -100
+				    add_breakthrough_progress = {
+				        specialization = specialization_air
+				        value = 0.8
+			        }							
+			    }		
+			    else = {
+				    add_political_power = 100
+				    add_war_support = 0.05
+			    }	
+			}		
+			custom_effect_tooltip = tooltip_dash_line	
 			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = {
@@ -11474,7 +11608,7 @@ focus_tree = {
 			focus = LEP_CNAF_regroup
 		}
 		relative_position_id = LEP_CNAF_regroup
-		x = 2
+		x = -2
 		y = 1
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_anti_air_tower"
@@ -11686,6 +11820,26 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_AF_AA_command"
+
+			create_equipment_variant = {
+				name = "Hongqiao Bf 110 C-7"
+				type = medium_plane_fighter_airframe_1
+				show_position = no
+				modules = {
+					fixed_main_weapon_slot = aircraft_cannon_1_2x			# 2 x 20mm cannons are represented by 8x MG
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x	# 4 x 7.92 MG
+					fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+					fixed_auxiliary_weapon_slot_3 = rocket_rails
+					engine_type_slot = engine_2_2x
+					special_type_slot_1 = lmg_defense_turret   		# 1 turret
+					special_type_slot_2 = self_sealing_fuel_tanks_medium
+					special_type_slot_3 = empty
+					special_type_slot_4 = empty
+			    }
+			    design_team = mio:LEP_hongqiao_organisation		# Bfw can't support heavy planes
+			    icon = GFX_GER_medium_1_bf110c_medium
+		    }
+			custom_effect_tooltip = tooltip_dash_line
 			add_tech_bonus = {
 				name = LEP_AF_AA_aircraft_command
 				bonus = 0.75

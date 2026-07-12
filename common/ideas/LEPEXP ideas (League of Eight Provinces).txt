@@ -9,7 +9,7 @@ ideas = {
 	country = {
 		LEP_nanjing_airforce_6 = { 
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
-			name = LEP_nanjing_airforce_1
+			name = LEP_nanjing_airforce_6
 			picture = SWE_formation_flying
 			allowed = { always = no }
 			modifier = {
@@ -32,9 +32,78 @@ ideas = {
 			}
 		}
 
+		LEP_nanjing_airforce_7 = { 
+			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
+			name = LEP_nanjing_airforce_6
+			picture = SWE_formation_flying
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_mission_efficiency = 0.1
+				ground_attack_factor = 0.05
+				air_ace_bonuses_factor = 0.15
+				ace_effectiveness_factor = 0.1
+				air_home_defence_factor = 0.10
+				air_accidents_factor = -0.1
+			}
+			equipment_bonus = {
+				mio_cat_all_light_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				mio_cat_all_medium_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				mio_cat_all_heavy_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		LEP_nanjing_airforce_8 = { 
+			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
+			name = LEP_nanjing_airforce_6
+			picture = SWE_formation_flying
+			allowed = { always = no }
+			modifier = {
+				air_training_xp_gain_factor = 0.1
+				air_mission_efficiency = 0.13
+				ground_attack_factor = 0.05
+				air_attack_factor = 0.05
+				air_superiority_efficiency = 0.05
+				air_ace_bonuses_factor = 0.15
+				ace_effectiveness_factor = 0.1
+				air_home_defence_factor = 0.13
+				air_accidents_factor = -0.1
+				air_night_penalty = -0.02
+			}
+			equipment_bonus = {
+				mio_cat_all_light_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				mio_cat_all_medium_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+				mio_cat_all_heavy_aircraft_and_modules = {
+					instant = yes
+					reliability = 0.05
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
 		LEP_nanjing_navy_2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_2" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -68,7 +137,7 @@ ideas = {
 
 		LEP_nanjing_navy_3 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_3" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -137,7 +206,7 @@ ideas = {
 
 		LEP_nanjing_navy_4 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_4" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -217,7 +286,7 @@ ideas = {
 
 		LEP_nanjing_navy_5 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_5" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -238,6 +307,7 @@ ideas = {
 				navy_submarine_attack_factor = 0.07
 				navy_submarine_defence_factor = 0.07
 				naval_torpedo_reveal_chance_factor = -0.25
+				strike_force_movement_org_loss = -0.1
 			}
 			equipment_bonus = {
 				ship_hull_submarine = {
@@ -298,7 +368,7 @@ ideas = {
 
 		LEP_nanjing_navy_6 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_6" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -322,6 +392,7 @@ ideas = {
 				navy_submarine_attack_factor = 0.07
 				navy_submarine_defence_factor = 0.07
 				naval_torpedo_reveal_chance_factor = -0.25
+				strike_force_movement_org_loss = -0.1
 			}
 			equipment_bonus = {
 				ship_hull_submarine = {
@@ -395,7 +466,7 @@ ideas = {
 
 		LEP_nanjing_navy_7 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_navy_7" }
-			name = LEP_nanjing_navy
+			name = LEP_nanjing_navy_2
 			picture = SWE_coastal_support
 			allowed = { always = no }
 			modifier = {
@@ -418,6 +489,7 @@ ideas = {
 				navy_submarine_attack_factor = 0.07
 				navy_submarine_defence_factor = 0.07
 				naval_torpedo_reveal_chance_factor = -0.25
+				strike_force_movement_org_loss = -0.1
 			}
 			equipment_bonus = {
 				ship_hull_submarine = {
