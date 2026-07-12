@@ -3,6 +3,7 @@ add_namespace = league_rebuild
 add_namespace = league_generic
 add_namespace = league_endgame
 add_namespace = league_military
+add_namespace = league_news
 
 country_event = { #test
 	id = league_mid.999
@@ -23,6 +24,95 @@ country_event = { #test
 		#add_ideas = LEP_military_disarray_idea1
 	}
 }
+
+country_event = { #封锁闽海?
+	id = league_war_events.19
+	title = league_war_events.19.t
+	picture = GFX_report_event_CHN_china_pinghai_cruiser
+	desc = league_war_events.19.d
+
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = LEP_war
+		country_exists = CHI
+	}
+
+	option = {#宁系海军
+		log = "[GetLogInfo]: event league_war_events.19 option 1"
+		name = league_war_events.19.a
+		navy_experience = 20
+		custom_effect_tooltip = tooltip_white_line
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = -0.05
+		}
+		custom_effect_tooltip = tooltip_white_line
+		CHI = {
+			add_timed_idea = {
+				idea = LEP_LEP_naval_blockade
+				days = 180
+			}
+		}
+	}
+
+	option = {#GEA海军
+		log = "[GetLogInfo]: event league_war_events.19 option 2"	
+		name = league_war_events.19.b
+		set_temp_variable = { LEP_market_liberal_pp_change = 0.1 }
+		LEP_modify_tsingtau_spirit = yes
+		custom_effect_tooltip = tooltip_white_line
+		CHI = {
+			add_timed_idea = {
+				idea = LEP_GEA_naval_blockade
+				days = 180
+			}
+		}
+		custom_effect_tooltip = tooltip_white_line
+		random_list = {
+			25 = {
+				country_event = { id = league_news.1 days = 5 }
+			}
+			75 = {
+
+			}
+		}
+	}
+
+	option = {#直系海军
+		log = "[GetLogInfo]: event league_war_events.19 option 3"
+		name = league_war_events.19.c
+		custom_effect_tooltip = LEP_QIE_blockade_tt
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.1
+		}
+		custom_effect_tooltip = tooltip_white_line
+		add_opinion_modifier = { target = QIE modifier = KR_approves_of_govt }
+		QIE = {
+			add_opinion_modifier = { target = LEP modifier = KR_approves_of_govt }
+		}
+		custom_effect_tooltip = tooltip_white_line
+		CHI = {
+			add_timed_idea = {
+				idea = LEP_QIE_naval_blockade
+				days = 180
+			}
+		}
+	}
+}
+
 
 country_event = { #明争暗斗
 	id = league_mid.1
@@ -3868,6 +3958,41 @@ news_event = {
 
 	option = {
 		name = china_events.323.a
+	}
+}
+
+news_event = {
+	id = league_news.1
+	immediate = { log = "[GetLogInfo]: event league_news.1" }
+	title = league_news.1.t
+	desc = league_news.1.d
+	picture = GFX_news_event_JAP_eastern_seas_war
+
+	trigger = { wants_world_news = yes } #Global news event
+
+	is_triggered_only = yes
+	fire_for_sender = yes
+	major = yes
+
+	option = {
+		name = league_news.1.a
+		hidden_effect = [
+			LEP = {
+				add_named_threat = {
+				    threat = 2
+				    name = LEP_naval_confrontation
+			    }
+			}
+		]
+	}
+
+	after = {
+		effect_tooltip = {
+			add_named_threat = {
+				threat = 2
+				name = LEP_naval_confrontation
+			}
+		}
 	}
 }
 

@@ -409,6 +409,9 @@ focus_tree = {
 			}
 
 			LEP_rescue_industry = yes
+			hidden_effect = {
+				country_event = { id = league_war_events.19 days = 15 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
