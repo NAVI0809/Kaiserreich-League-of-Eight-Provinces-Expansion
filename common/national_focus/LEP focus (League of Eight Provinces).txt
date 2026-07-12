@@ -10091,11 +10091,36 @@ focus_tree = {
 				category = marine_tech
 				category = tp_tech
 			}
-			add_doctrine_cost_reduction = {
-				name = LEP_marine_exp
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_marines_doctrine
+			if = {
+				limit = { has_dlc_aat = yes }
+				if = {
+					limit = {
+						OR = {
+							has_doctrine = marines_1
+							has_doctrine = marines_2
+						}
+					}
+					add_mastery_bonus = {
+						name = LEP_marine_exp
+						bonus = 0.1
+						days = 365
+						sub_doctrine = marines_1
+					}
+					add_mastery_bonus = {
+						name = LEP_marine_exp
+						bonus = 0.1
+						days = 365
+						sub_doctrine = marines_2
+					}
+				}
+				else = {
+					add_doctrine_cost_reduction = {
+						name = LEP_marine_exp
+						cost_reduction = 0.5
+						uses = 1
+						category = special_forces_doctrine
+					}
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_override_tooltip = {
@@ -10186,7 +10211,7 @@ focus_tree = {
 				remove_idea = LEP_nanjing_navy_3
 				add_idea = LEP_nanjing_navy_4
 			}
-			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			add_tech_bonus = {
 				name = LEP_wolf_pack_sub
 				ahead_reduction = 1
@@ -10325,6 +10350,7 @@ focus_tree = {
 				category = radar_tech
 			}
 			custom_effect_tooltip = CHI_coastal_defense_stratagems_tt
+			custom_effect_tooltip = tooltip_white_line
 			every_owned_state = {
 				limit = {
 					OR = {
@@ -10695,7 +10721,7 @@ focus_tree = {
 					version_name = "Kunlun Class"
 				}
 				name = "DN-01 昆仑舰"
-				progress = 0.25
+				progress = 0.85
 			}
 			add_equipment_production = {
 				equipment = {
@@ -10704,7 +10730,7 @@ focus_tree = {
 					version_name = "Kunlun Class"
 				}
 				name = "DN-02 长白舰"
-				progress = 0.25
+				progress = 0.55
 			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
@@ -10944,9 +10970,13 @@ focus_tree = {
 			}
 		}
 		prerequisite = { 
-			focus = LEP_kongshu_trooper 
 			focus = LEP_cult_of_aviation
+			focus = LEP_china_air_fleet
 		}
+		prerequisite = { 
+			focus = LEP_kongshu_trooper
+		}
+		
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_huhanmin_copter"
 			custom_effect_tooltip = LEP_COPTER_tt
