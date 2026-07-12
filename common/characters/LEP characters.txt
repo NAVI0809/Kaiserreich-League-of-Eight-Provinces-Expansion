@@ -1070,6 +1070,7 @@ characters = {
 			cost = 100
 
 			on_add = {
+	            custom_effect_tooltip = LEP_has_war_JAP_TT
 				if = {
 					limit = { 
 						ROOT = {
@@ -1078,13 +1079,14 @@ characters = {
 					}
 				}
 				ROOT = {
-					country_event = { id = league_generic.14 days = 3 }
-					add_tech_bonus = {
-						name = league_generic.14.t
-						bonus = 0.5
-						uses = 1
-						category = cat_strategic_bomber
-					}
+					country_event = { id = league_generic.14 days = 3 }				
+				}
+				custom_effect_tooltip = tooltip_white_line
+				add_tech_bonus = {
+					name = LEP_xu_huansheng
+					bonus = 0.5
+					uses = 1
+					category = cat_strategic_bomber
 				}
 			}
 		}
