@@ -64,17 +64,17 @@ country_event = { #封锁闽海?
 		random_list = {
 			25 = {
 				LEP_sa_shijun = {
-					unit_leader_event = { id = league_war_events.20  }
+					unit_leader_event = { id = league_war_events.20 days = 5 }
 				}
 			}
 			30 = {
 				LEP_wu_rengli = {
-					unit_leader_event = { id = league_war_events.21  }
+					unit_leader_event = { id = league_war_events.21 days = 5 }
 				}
 			}
 			30 = {
 				LEP_wu_zhennan = {
-					unit_leader_event = { id = league_war_events.22  }
+					unit_leader_event = { id = league_war_events.22 days = 5 }
 				}
 			}
 		}		
@@ -122,7 +122,7 @@ country_event = { #封锁闽海?
 				idea = LEP_QIE_naval_blockade
 				days = 180
 			}
-		}
+		}		
 	}
 }
 
@@ -163,12 +163,15 @@ unit_leader_event = {
 			amount = 30
 			producer = FRA
 		}
+		custom_effect_tooltip = tooltip_white_line
 		CHI = {
 			add_timed_idea = {
 				idea = wu_rengli_LEP_LEP_naval_blockade
 				days = 180
 			}
 		}
+		ENG = { add_opinion_modifier = { target = LEP modifier = KR_displeased } }
+		FRA = { add_opinion_modifier = { target = LEP modifier = KR_displeased } }
 	}
 }
 
@@ -199,12 +202,15 @@ unit_leader_event = {
 			amount = 40
 			producer = FRA
 		}
+		custom_effect_tooltip = tooltip_white_line
 		CHI = {
 			add_timed_idea = {
 				idea = LEP_LEP_naval_blockade
 				days = 180
 			}
 		}
+		ENG = { add_opinion_modifier = { target = LEP modifier = KR_hates_govt } }
+		FRA = { add_opinion_modifier = { target = LEP modifier = KR_hates_govt } }
 	}
 }
 
