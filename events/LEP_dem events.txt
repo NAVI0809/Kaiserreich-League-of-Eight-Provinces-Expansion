@@ -59,12 +59,25 @@ country_event = { #封锁闽海?
 			value = -0.05
 		}
 		custom_effect_tooltip = tooltip_white_line
-		CHI = {
-			add_timed_idea = {
-				idea = LEP_LEP_naval_blockade
-				days = 180
+		
+
+		random_list = {
+			25 = {
+				LEP_sa_shijun = {
+					unit_leader_event = { id = league_war_events.20  }
+				}
 			}
-		}
+			30 = {
+				LEP_wu_rengli = {
+					unit_leader_event = { id = league_war_events.21  }
+				}
+			}
+			30 = {
+				LEP_wu_zhennan = {
+					unit_leader_event = { id = league_war_events.22  }
+				}
+			}
+		}		
 	}
 
 	option = {#GEA海军
@@ -112,6 +125,89 @@ country_event = { #封锁闽海?
 		}
 	}
 }
+
+unit_leader_event = { 
+	id = league_war_events.20
+	title = league_war_events.20.t
+	desc = league_war_events.20.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_war_events.21 option league_war_events.20.a"
+		name = league_war_events.20.a
+		CHI = {
+			add_timed_idea = {
+				idea = sa_shijun_LEP_LEP_naval_blockade
+				days = 180
+			}
+		}
+	}
+}
+
+unit_leader_event = { 
+	id = league_war_events.21
+	title = league_war_events.21.t
+	desc = league_war_events.21.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_war_events.20 option league_war_events.21.a"
+		name = league_war_events.21.a
+		navy_experience = 5
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 30
+			producer = FRA
+		}
+		CHI = {
+			add_timed_idea = {
+				idea = wu_rengli_LEP_LEP_naval_blockade
+				days = 180
+			}
+		}
+	}
+}
+
+unit_leader_event = { 
+	id = league_war_events.22
+	title = league_war_events.22.t
+	desc = league_war_events.22.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_war_events.22 option league_war_events.22.a"
+		name = league_war_events.22.a
+		navy_experience = 10
+		add_equipment_to_stockpile = {
+			type = convoy
+			amount = 20
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 200
+			producer = FRA
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 40
+			producer = FRA
+		}
+		CHI = {
+			add_timed_idea = {
+				idea = LEP_LEP_naval_blockade
+				days = 180
+			}
+		}
+	}
+}
+
 
 
 country_event = { #明争暗斗
