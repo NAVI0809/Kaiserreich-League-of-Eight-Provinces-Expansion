@@ -1962,6 +1962,15 @@ news_event = {
 		text = city_capture_events.278.d.lep
 		trigger = {
 			FROM = { tag = LEP }
+			FROM = { has_country_leader = LEP_qi_xieyuan }
+			FROM.FROM = { tag = QIE }
+		}
+	}
+	desc = {
+		text = city_capture_events.278.d.lep_dem
+		trigger = {
+			FROM = { tag = LEP }
+			FROM = { has_country_flag = LEP_dem_gov }
 			FROM.FROM = { tag = QIE }
 		}
 	}
@@ -2071,6 +2080,9 @@ news_event = {
 			tag = FROM.FROM
 			tag = QIE
 			FROM = { tag = LEP }
+			FROM = {
+				has_country_leader = LEP_qi_xieyuan
+			}
 		}
 	}
 	option = { #We have avenged the Northern Zhili at last
@@ -2078,12 +2090,48 @@ news_event = {
 		trigger = {
 			tag = FROM
 			tag = LEP
+			has_country_leader = LEP_qi_xieyuan
 		}
 	}
 	option = { #The Zhili Clique has returned to Beijing
 		name = city_capture_events.278.c.lep
 		trigger = {
 			FROM = { tag = LEP }
+			FROM = {
+				has_country_leader = LEP_qi_xieyuan
+			}
+			NOT = {
+				tag = FROM
+				tag = FROM.FROM
+			}
+		}
+	}
+	option = { #北京终究还是失守了……
+		name = city_capture_events.278.a.lep_dem
+		trigger = {
+			tag = FROM.FROM
+			tag = QIE
+			FROM = { tag = LEP }
+			FROM = {
+				has_country_flag = LEP_dem_gov
+			}
+		}
+	}
+	option = { #共和终于重返北京！
+		name = city_capture_events.278.b.lep_dem
+		trigger = {
+			tag = FROM
+			tag = LEP
+			has_country_flag = LEP_dem_gov
+		}
+	}
+	option = { #统一只是开始。
+		name = city_capture_events.278.c.lep_dem
+		trigger = {
+			FROM = { tag = LEP }
+			FROM = {
+				has_country_flag = LEP_dem_gov
+			}
 			NOT = {
 				tag = FROM
 				tag = FROM.FROM

@@ -4,7 +4,7 @@ bookmarks = {
 		desc = KR_scenario_desc
 		date = 1936.1.1.1
 		picture = GFX_select_date_1936
-		default_country = GXC
+		default_country = LEP
 		default = yes
 
 		sort_unplayed_first = no
