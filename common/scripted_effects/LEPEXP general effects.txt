@@ -905,21 +905,21 @@ LEP_fujian_Factories = {
 		var:LEP_fujian_civilian_factory_chance_temp = {
 			set_temp_variable = { LEP_target_building = token:industrial_complex }
 			mio:LEP_fujian_organisation = {
-				add_to_variable = { total_campaign_civs = 1 }
+				add_to_variable = { LEP_total_campaign_civs = 1 }
 				add_to_array = { array = fujian_factory_list value = 1 index = 0 }
 			}
 		}
 		var:LEP_fujian_military_factory_chance_temp = {
 			set_temp_variable = { LEP_target_building = token:arms_factory }
 			mio:LEP_fujian_organisation = {
-				add_to_variable = { total_campaign_mils = 1 }
+				add_to_variable = { LEP_total_campaign_mils = 1 }
 				add_to_array = { array = fujian_factory_list value = 2 index = 0 }
 			}
 		}
 		var:LEP_fujian_dockyard_chance_temp = {
 			set_temp_variable = { LEP_target_building = token:dockyard }
 			mio:LEP_fujian_organisation = {
-				add_to_variable = { total_campaign_dockyards = 1 }
+				add_to_variable = { LEP_total_campaign_dockyards = 1 }
 				add_to_array = { array = fujian_factory_list value = 3 index = 0 }
 			}
 		}
@@ -952,17 +952,17 @@ LEP_fujian_Factories = {
 	}
 
 	mio:LEP_fujian_organisation = {
-		add_to_variable = { total_campaign_factory_progress = { value = 1 subtract = LEP_damage } }
+		add_to_variable = { LEP_total_campaign_factory_progress = { value = 1 subtract = LEP_damage } }
 
-		add_to_variable = { total_campaign_factories = 1 }
-		set_variable = { average_campaign_factory_progress = { value = total_campaign_factory_progress divide = total_campaign_factories } }
+		add_to_variable = { LEP_total_campaign_factories = 1 }
+		set_variable = { LEP_average_campaign_factory_progress = { value = LEP_total_campaign_factory_progress divide = LEP_total_campaign_factories } }
 
 		set_temp_variable = { LEP_factory_interval_min_temp = LEP_factory_interval_min }
 	}
 	# Default is 160 days as lower limit for random factory construction interval
 	# Reduced by 50 days by mio trait fujian_upgrade_1_4 and mio policy LEP_mio_policy_buy_out_land_holdings each
 	# Thus, value can either be 160, 110 or 60 days
-	country_event = { id = league_military.1001 = LEP_factory_interval_min_temp?160 random_days = 40 }
+	country_event = { id = league_military.1001 days = LEP_factory_interval_min_temp?160 random_days = 40 }
 }
 
 LEP_private_assistance = {

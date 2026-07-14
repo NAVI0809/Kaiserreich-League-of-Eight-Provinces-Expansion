@@ -2,12 +2,7 @@
 #zigai
 LEPEXP_DEBUG_CAT = {
 	icon = generic_economy
-	allowed = { 
-		OR = {
-			tag = LEP
-			tag = RUS
-		}
-	}
+	allowed = { original_tag = LEP }
 	visible = { 
 		is_debug = yes
 		is_ai = no 

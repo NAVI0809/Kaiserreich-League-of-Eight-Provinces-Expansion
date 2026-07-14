@@ -131,6 +131,7 @@ LEP_fujian_organisation = {
 			effect_tooltip = { LEP_Show_fujian_Notification_List = yes }
 			custom_effect_tooltip = tooltip_white_line
 			FROM = {
+				hidden_effect = { country_event = { id = league_military.1001 days = 4 } }
 				LEP_unlock_fujian_policies = yes # `unlock_mio_policy_tooltip` doesn't work in the MIO scope for some reason
 			}
 		}

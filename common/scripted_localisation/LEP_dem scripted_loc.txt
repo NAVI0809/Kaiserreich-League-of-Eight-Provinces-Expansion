@@ -269,3 +269,10 @@ defined_text = {
 		localization_key = GetMilitaryMobilizationVar0
 	}
 }
+
+define_text = {
+	name = LEP_fujian_Factory_Entry
+	text = {
+		localization_key = "LEP_fujian_[?current_factory]"
+	}
+}

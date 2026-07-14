@@ -325,14 +325,14 @@ mio:LEP_fujian_organisation = {
 	set_variable = { LEP_starting_construction_progress_max = 0.2 }
 	set_variable = { LEP_factory_interval_min = 160 }
 	set_variable = { LEP_factory_interval_max = 200 }
-	set_variable = { total_campaign_factories = 0 }
-	set_variable = { total_campaign_civs = 0 }
-	set_variable = { total_campaign_mils = 0 }
-	set_variable = { total_campaign_dockyards = 0 }
-	set_variable = { total_campaign_factory_progress = 0 }
-	set_variable = { average_campaign_factory_progress = 0 }
-	set_variable = { notification_list_maximum = 10 }
-	resize_array = { fujian_date_list = notification_list_maximum }
-	resize_array = { fujian_factory_list = notification_list_maximum }
-	resize_array = { fujian_state_list = notification_list_maximum }
+	set_variable = { LEP_total_campaign_factories = 0 }
+	set_variable = { LEP_total_campaign_civs = 0 }
+	set_variable = { LEP_total_campaign_mils = 0 }
+	set_variable = { LEP_total_campaign_dockyards = 0 }
+	set_variable = { LEP_total_campaign_factory_progress = 0 }
+	set_variable = { LEP_average_campaign_factory_progress = 0 }
+	set_variable = { LEP_notification_list_maximum = 10 }
+	resize_array = { fujian_date_list = LEP_notification_list_maximum }
+	resize_array = { fujian_factory_list = LEP_notification_list_maximum }
+	resize_array = { fujian_state_list = LEP_notification_list_maximum }
 }
