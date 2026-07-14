@@ -862,6 +862,134 @@ LEP_worsen_military_reorganization_effect = {
 	}
 }
 
+LEP_Show_fujian_Notification_List = {
+	# RECURSIVE scripted effect. EDIT WITH CAUTION!
+	set_temp_variable = { current_factory = fujian_factory_list^LEP_fujian_array_index }
+	set_temp_variable = { current_state = fujian_state_list^LEP_fujian_array_index }
+	set_temp_variable = { current_date = fujian_date_list^LEP_fujian_array_index }
+	if = {
+		limit = { check_variable = { current_factory = 0 } }
+		custom_effect_tooltip = LEP_fujian_Notification_None
+	}
+	else = {
+		custom_effect_tooltip = LEP_fujian_Notification_Entry
+	}
+	add_to_temp_variable = { LEP_fujian_array_index = 1 }
+	if = {
+		limit = { check_variable = { var:LEP_fujian_array_index < fujian_factory_list^num } }
+		LEP_Show_fujian_Notification_List = yes
+	}
+}
+
+LEP_fujian_Factories = {
+	mio:LEP_fujian_organisation = {
+		# Remove last element in arrays
+		remove_from_array = { array = fujian_factory_list }
+		remove_from_array = { array = fujian_state_list }
+		remove_from_array = { array = fujian_date_list }
+		# Add Date
+		add_to_array = { array = fujian_date_list value = global.date index = 0 }
+		# Handle factory starting progress
+		set_temp_variable = { LEP_starting_construction_progress_min_temp = LEP_starting_construction_progress_min }
+
+		# Get Factory chances
+		set_temp_variable = { LEP_fujian_civilian_factory_chance_temp = LEP_fujian_civilian_factory_chance }
+		set_temp_variable = { LEP_fujian_military_factory_chance_temp = LEP_fujian_military_factory_chance }
+		set_temp_variable = { LEP_fujian_dockyard_chance_temp = LEP_fujian_dockyard_chance }
+	}
+	set_temp_variable_to_random = { var = LEP_damage min = 0.8 max = 1 integer = no }
+	# LEP_starting_construction_progress_min affected by mio trait fujian_upgrade_1_3 and LEP_mio_policy_hire_state_construction_companies
+	# So, min damage is 0.40 (40%), while max damage is 0.60 (60%) with both upgrades.
+	subtract_from_temp_variable = { LEP_damage = LEP_starting_construction_progress_min_temp }
+	random_list = {
+		var:LEP_fujian_civilian_factory_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:industrial_complex }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { total_campaign_civs = 1 }
+				add_to_array = { array = fujian_factory_list value = 1 index = 0 }
+			}
+		}
+		var:LEP_fujian_military_factory_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:arms_factory }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { total_campaign_mils = 1 }
+				add_to_array = { array = fujian_factory_list value = 2 index = 0 }
+			}
+		}
+		var:LEP_fujian_dockyard_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:dockyard }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { total_campaign_dockyards = 1 }
+				add_to_array = { array = fujian_factory_list value = 3 index = 0 }
+			}
+		}
+	}
+	meta_effect = {
+		text = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					NOT = { has_state_flag = LEP_fujian_Recent_Building }
+					impassable = no
+					free_building_slots = { building = [BUILDING] size > 0 include_locked = no }
+					if = {
+						limit = { check_variable = { LEP_target_building = token:dockyard } }
+						is_coastal = yes
+					}
+				}
+				add_building_construction = {
+					type = [BUILDING]
+					level = 1
+					instant_build = yes
+				}
+				damage_building = { type = [BUILDING] damage = [LEP_DAMAGE] }
+				set_state_flag = { flag = LEP_fujian_Recent_Building days = 360 value = 1 }
+				PREV = { mio:LEP_fujian_organisation = { add_to_array = { array = fujian_state_list value = PREV.PREV index = 0 } } }
+			}
+		}
+		BUILDING = "[?LEP_target_building.GetTokenKey]"
+		LEP_DAMAGE = "[?LEP_damage|2]"
+	}
+
+	mio:LEP_fujian_organisation = {
+		add_to_variable = { total_campaign_factory_progress = { value = 1 subtract = LEP_damage } }
+
+		add_to_variable = { total_campaign_factories = 1 }
+		set_variable = { average_campaign_factory_progress = { value = total_campaign_factory_progress divide = total_campaign_factories } }
+
+		set_temp_variable = { LEP_factory_interval_min_temp = LEP_factory_interval_min }
+	}
+	# Default is 160 days as lower limit for random factory construction interval
+	# Reduced by 50 days by mio trait fujian_upgrade_1_4 and mio policy LEP_mio_policy_buy_out_land_holdings each
+	# Thus, value can either be 160, 110 or 60 days
+	country_event = { id = league_military.1001 = LEP_factory_interval_min_temp?160 random_days = 40 }
+}
+
+LEP_private_assistance = {
+	set_variable_to_random = {
+		var = LEP_MIO_Random_Funds
+		min = 100
+		max = 300
+		integer = yes
+	}
+	meta_effect = {
+		text = {
+			random_military_industrial_organization = {
+				limit = { is_mio_assigned_to_task = yes }
+				add_mio_funds = [FUNDS]
+			}
+		}
+		FUNDS = "[?LEP_MIO_Random_Funds]"
+	}
+}
+
+LEP_unlock_fujian_policies = {
+	custom_effect_tooltip = tooltip_white_line
+	unlock_mio_policy_tooltip = { policy = LEP_mio_policy_hire_state_construction_companies show_modifiers = no }
+	unlock_mio_policy_tooltip = { policy = LEP_mio_policy_buy_out_land_holdings show_modifiers = no }
+}
+
+
 
 
 

@@ -314,3 +314,25 @@ country_event = { id = league_events.210 days = 285 } #Dummy Zhou Xuan event
 ################
 LEP_add_plane_variants = yes
 
+#########
+### VAR ###
+###########
+mio:LEP_fujian_organisation = {
+	set_variable = { LEP_fujian_civilian_factory_chance = 33 }
+	set_variable = { LEP_fujian_military_factory_chance = 33 }
+	set_variable = { LEP_fujian_dockyard_chance = 33 }
+	set_variable = { LEP_starting_construction_progress_min = 0 }
+	set_variable = { LEP_starting_construction_progress_max = 0.2 }
+	set_variable = { LEP_factory_interval_min = 160 }
+	set_variable = { LEP_factory_interval_max = 200 }
+	set_variable = { total_campaign_factories = 0 }
+	set_variable = { total_campaign_civs = 0 }
+	set_variable = { total_campaign_mils = 0 }
+	set_variable = { total_campaign_dockyards = 0 }
+	set_variable = { total_campaign_factory_progress = 0 }
+	set_variable = { average_campaign_factory_progress = 0 }
+	set_variable = { notification_list_maximum = 10 }
+	resize_array = { fujian_date_list = notification_list_maximum }
+	resize_array = { fujian_factory_list = notification_list_maximum }
+	resize_array = { fujian_state_list = notification_list_maximum }
+}

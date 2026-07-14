@@ -11383,6 +11383,7 @@ focus_tree = {
 					limit = { has_mio_trait = LEP_mio_trait_research_air }
 					unlock_mio_trait_tooltip = LEP_mio_trait_research_air
 				}
+				custom_effect_tooltip = tooltip_white_line
 				mio:LEP_hongqiao_organisation = {
 					add_mio_size = 1
 					add_mio_funds_gain_factor = 0.25
@@ -11524,6 +11525,10 @@ focus_tree = {
 			mio:LEP_hongqiao_organisation = {
 				add_mio_funds = 800
 				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
+			}
+			mio:LEP_jianqiao_organisation = {
+				add_mio_funds = 800
+				unlock_mio_trait_tooltip = LEP_mio_trait_aid_navy
 			}
 		}
 	}

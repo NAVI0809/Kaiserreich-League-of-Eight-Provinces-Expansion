@@ -31,6 +31,10 @@
  LEPEXP_DEBUG_CAT: "§YLEP§!§CEXP§! §O调试§!"
  LEPEXP_MIO_debug_hongqiao: "上海虹桥航空工厂调试"
  LEPEXP_MIO_debug_jinling: "金陵兵工厂调试"
+ LEPEXP_MIO_debug_jianqiao: "笕桥调试"
+ LEPEXP_MIO_debug_fujian: "福建飞机调试"
+
+
  mio_jinling_organisation: "金陵兵工厂"
  LEP_jinling_mio_desc: "$jinling_LEP_MIO$\n§L$jinling_desc$§!\n"
  jinling_LEP_MIO: "军工龙头"
@@ -99,6 +103,36 @@
  LEP_mio_trait_heavy_fighter: "仿制BF-110"
  LEP_mio_trait_research_air: "航空委员会特批经费"
 
+ mio_jianqiao_organisation: "笕桥飞机制造厂"
+ LEP_jianqiao_mio_desc: "$jianqiao_LEP_MIO$\n§L$jianqiao_desc$§!\n"
+ jianqiao_LEP_MIO: "战略飞机开发与制造商"
+ jianqiao_LEP: "战略飞机开发与制造商"
+ jianqiao_desc: "笕桥飞机制造厂又称中央杭州飞机制造厂系中美德合资经营的军工企业，美方为道格拉斯公司，德方为巴伐利亚飞机制造厂公司。黄郛当时代表中国政府签订合作协议，场址位于笕桥镇，比邻笕桥机场与笕桥航校。直至1935年，笕桥厂已有能力生产少量BF109C，图纸和技术指导由德国提供，并且在美方技术指导下成功组装了DC-2客机，成为了美国以外唯一可以组装DC-2客机的工厂。直至1935年底，笕桥厂已经为自主制造大型军用飞机做好了技术积累。"
+ 
+
+
+ LEP_mio_trait_aid_navy: "协助海军飞机生产"
+
+ mio_fujian_organisation: "海军飞机制造厂"
+ LEP_fujian_mio_desc: "$fujian_LEP_MIO$\n§L$fujian_desc$§!\n"
+ fujian_LEP_MIO: "海军飞机制造商"
+ fujian_LEP: "海军飞机制造商"
+ fujian_desc: ""
+
+ KR_MIO_Trait_improved_fujian: "海军飞机制造厂研发部门扩展"
+ KR_MIO_Trait_fujian_private_investments: "寻求商帮投资"
+
+ LEP_mio_policy_hire_state_construction_companies: "聘请商帮建筑公司"
+ LEP_mio_policy_buy_out_land_holdings: "收购私人土地"
+
+ fujian_upgrade_1_3_tt: "§g初始建造进度将提高§G20%§!§!"
+ fujian_upgrade_1_4_tt: "§g随机建设建筑的时间间隔减少§G50§!日§!"
+ fujian_upgrade_2_3_tt: "§g建设1座§8民用工厂§!的概率提升§G27%§!§!"
+ fujian_upgrade_2_4_tt: "§g建设1座§G军用工厂§!的概率提升§G27%§!§!"
+ fujian_upgrade_2_5_tt: "§g建设1座§4海军船坞§!的概率提升§G27%§!§!"
+ LEP_fujian_random_factories_tt: "§g§Y$fujian$§!将协助执政政府，以随机时间间隔，在国内随机地区投资不同建筑：\n\n建设1座§8民用工厂§!的概率：[?LEP_fujian_civilian_factory_chance|W%%]\n建设1座§G军用工厂§!的概率：[?LEP_fujian_military_factory_chance|W%%]\n建设1座§4海军船坞§!的概率：[?LEP_fujian__dockyard_chance|W%%]\n\n初始建设进度：§W[?LEP_starting_construction_progress_min|%0]-[?LEP_starting_construction_progress_max|%0]§!\n间隔时间：§W[?LEP_factory_interval_min]-[?LEP_factory_interval_max]日§!\n\n已建设的工厂总数：[?total_campaign_factories|W0]\n已建设的§8民用工厂§!总数：[?total_campaign_civs|W0]\n已建设的§G军用工厂§!总数：[?total_campaign_mils|W0]\n已建设的§4海军船坞§!总数：[?total_campaign_dockyards|W0]\n初始建设进度平均值：[?average_campaign_factory_progress|W%]\n初始建设进度总值：[?total_campaign_factory_progress|W%]\n\n最近已建设的[?notification_list_maximum]座工厂：§!"
+ LEP_fujian_Notification_None: "§H无§!"
+ LEP_fujian_Notification_Entry: "[LEP_fujian_Factory_Entry]已建设在§H[?current_state.GetName]§!，[?current_date.GetDateStringNoHourLong]"
  ### 军事决议 ###
  #MIO投资决议
  LEP_MIO_jinling_investment: "投资金陵兵工厂"

@@ -68,12 +68,12 @@ country_event = { #封锁闽海?
 				}
 			}
 			30 = {
-				LEP_wu_rengli = {
+				LEP_wu_zhennan = {
 					unit_leader_event = { id = league_war_events.21 days = 5 }
 				}
 			}
 			30 = {
-				LEP_wu_zhennan = {
+				LEP_li_shijia = {
 					unit_leader_event = { id = league_war_events.22 days = 5 }
 				}
 			}
@@ -3933,6 +3933,19 @@ unit_leader_event = { #激活国防动员体系
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_military_preparation_tt
 
+	}
+}
+
+country_event = { #工厂
+	id = league_military.1001
+	picture = GFX_report_event_generic_diplomacy1
+	is_triggered_only = yes
+    hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.1001 option league_military.1001.a"
+		name = league_military.1001.a
+		LEP_fujian_Factories = yes
 	}
 }
 
