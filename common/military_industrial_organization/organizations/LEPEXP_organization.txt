@@ -81,6 +81,49 @@ LEP_fujian_organisation = {
 		}
 	}
 
+	add_trait = {
+		token = LEP_mio_trait_seaplane_tryout
+		name = LEP_mio_trait_seaplane_tryout
+		icon = GFX_generic_mio_trait_icon_detection
+		special_trait_background = yes
+
+		position = { x = 8 y = 4 }
+
+		available = {
+			LEP = { has_completed_focus = LEP_AF_aircraft_manufacturing_for_navy }
+		}
+
+		equipment_bonus = {
+			sub_detection = 0.05
+			surface_detection = 0.05
+			naval_strike_targetting = 0.1
+		}
+	}
+
+	add_trait = {
+		token = LEP_mio_trait_research_air
+		name = LEP_mio_trait_research_air
+		icon = GFX_generic_mio_department_icon_facilities
+		special_trait_background = yes
+
+		position = { x = 0 y = 4 }
+
+		available = {
+			LEP = { has_completed_focus = LEP_aviation_committee }
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.1
+			military_industrial_organization_size_up_requirement = -0.15
+		}
+		production_bonus = {
+			production_capacity_factor = 0.02
+			production_efficiency_gain_factor = 0.03
+		}
+
+		ai_will_do = { base = 2 }
+	}
+
 	trait = {
 		token = fujian_upgrade_1
 		name = KR_MIO_Trait_experimental_radar

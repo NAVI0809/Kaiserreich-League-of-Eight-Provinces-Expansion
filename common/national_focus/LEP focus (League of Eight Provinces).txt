@@ -11530,6 +11530,10 @@ focus_tree = {
 				add_mio_funds = 800
 				unlock_mio_trait_tooltip = LEP_mio_trait_aid_navy
 			}
+			mio:LEP_fujian_organisation = {
+				add_mio_funds = 800
+				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
+			}
 		}
 	}
 
