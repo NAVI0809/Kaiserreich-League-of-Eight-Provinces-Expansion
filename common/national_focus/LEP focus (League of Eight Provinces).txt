@@ -10326,7 +10326,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_wolf_pack_sub"
 			
-			add_ideas = RUS_attack_submarine_idea
+			add_ideas = LEP_wolfpacks
 			custom_effect_tooltip = tooltip_dash_line
 			add_tech_bonus = {
 				name = LEP_wolf_pack_sub
@@ -10432,6 +10432,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
 
+
 	focus = {
 		id = LEP_naval_mines_laying
 		icon = GFX_focus_generic_mine_warfare
@@ -10462,6 +10463,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_naval_guns_targeting"
+			add_ideas = LEP_wolfpacks_mines
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10499,6 +10501,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_naval_guns_targeting"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_4
+				add_idea = LEP_nanjing_navy_5
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10773,6 +10779,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_navy_dd_cl_attack"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_2
+				add_idea = LEP_nanjing_navy_3
+			}
+			add_tech_bonus = {
+				name = LEP_navy_captail_ship_building
+				bonus = 1
+				uses = 2
+				category = mio_cat_tech_all_screen_ship_and_modules
+				category = naval_equipment
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10807,6 +10824,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_navy_dd_cl_attack"
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_3
+				add_idea = LEP_nanjing_navy_4
+			}
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10858,13 +10879,26 @@ focus_tree = {
 		x = -1
 		y = 1
 		ai_will_do = { base = 100 }
+		available = {
+			has_completed_focus = LEP_naval_mines_laying
+		}
 		relative_position_id = LEP_wolf_pack_sub
 		prerequisite = { focus = LEP_wolf_pack_sub }
 		prerequisite = { focus = LEP_naval_guns_targeting }
 		prerequisite = { focus = LEP_navy_captail_ship_building }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_new_spirit_of_maritime_life"
+			hidden_effect = {
+				remove_ideas = LEP_nanjing_navy_5
+				remove_ideas = LEP_wolfpacks_mines
+				remove_ideas = LEP_wolfpack
+				remove_ideas = LEP_naval_air_2
+				add_ideas = LEP_nanjing_navy_6				
+			}				
 			add_ideas = GEA_pacific_rule_idea
+			custom_effect_tooltip = LEP_new_spirit_of_maritime_life_romove_tt
+			show_ideas_tooltip = LEP_nanjing_navy_6
+			
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10974,7 +11008,10 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
-			
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_6	
+				add_idea = LEP_nanjing_navy_8
+			}
 			
 			add_tech_bonus = {
 				name = LEP_beiyang_big_guns
@@ -10990,6 +11027,7 @@ focus_tree = {
 					project = sp:sp_naval_super_heavy_battleship
 					show_modifiers = no
 				}
+				
 			}
 			create_equipment_variant = {
 				name = "Kunlun Class"
@@ -11059,7 +11097,10 @@ focus_tree = {
 				add_coordination = 1
 			}
 			custom_effect_tooltip = tooltip_white_line
-			
+			swap_ideas = {
+				remove_idea = LEP_nanjing_navy_6	
+				add_idea = LEP_nanjing_navy_7
+			}
 			custom_effect_tooltip = tooltip_white_line
 			add_tech_bonus = {
 				name = LEP_new_and_young_thought_navy
