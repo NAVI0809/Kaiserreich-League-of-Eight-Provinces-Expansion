@@ -4002,6 +4002,28 @@ unit_leader_event = { #激活国防动员体系
 	}
 }
 
+country_event = { #造舰委员会
+	id = league_military.2
+	title = league_military.2.t
+	desc = league_military.2.d
+	picture = GFX_report_event_CHN_china_beiyang_navy_admirals
+	is_triggered_only = yes
+    hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.2 option league_military.2.a"
+		name = league_military.2.a
+		add_ideas = JAP_quality_shipbuilding_1
+		set_country_flag = LEP_NAVY_quality
+	}
+	option = {
+		log = "[GetLogInfo]: event league_military.2 option league_military.2.b"
+		name = league_military.2.b
+		add_ideas = JAP_mass_shipbuilding_1
+		set_country_flag = LEP_NAVY_mass_shipbuilding
+	}
+}
+
 country_event = { #工厂
 	id = league_military.1001
 	picture = GFX_report_event_generic_diplomacy1

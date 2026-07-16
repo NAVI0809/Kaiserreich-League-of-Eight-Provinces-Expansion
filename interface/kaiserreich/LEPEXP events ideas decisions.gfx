@@ -20,6 +20,10 @@ spriteTypes = {
 		name = "GFX_idea_devastation_strategic_bombing_disruption_2"
 		texturefile = "gfx/interface/ideas/LEP_tokyo_brunbrunbrun.png"
 	}
+	spriteType = {
+		name = "GFX_idea_LEP_naval_air"
+		texturefile = "gfx/interface/ideas/LEP_naval_air.png"
+	}
 	#decisons
 	spriteType = {
 		name = "GFX_decision_cat_picture_N38D_marching"
