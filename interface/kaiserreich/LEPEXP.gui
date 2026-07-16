@@ -128,12 +128,40 @@ guiTypes = {
 			name = "parliament_button"
 			spriteType = "GFX_goal_generic_parliament"
 			clicksound = click_ok
-			pdx_tooltip = "CLOSE"
+			pdx_tooltip = "LEP_parliament_button_tt"
 			position = { x = 200 y = 0 }
 			effect = {
 				LEP_showcase_laws_effect = yes
 			}
 
+		}
+	}
+
+	containerWindowType = {
+		name = "ui_industry"
+		position = { x = 100 y = 100 }
+		size = { width = 100% height = 110 }
+
+		buttonType = {
+			name = "industrial_construction_button"
+			spriteType = "GFX_idea_man_five_year_plan_industry"
+			clicksound = click_ok
+			pdx_tooltip = "LEP_industrial_construction_button_tt"
+			position = { x = 100 y = 20 }
+			effect = {
+				
+			}
+		}
+
+		buttonType = {
+			name = "resource_allocation_button"
+			spriteType = "GFX_idea_generic_loans"
+			clicksound = click_ok
+			pdx_tooltip = "LEP_resource_allocation_button_tt"
+			position = { x = 200 y = 20 }
+			effect = {
+				
+			}
 		}
 	}
 }

@@ -36,5 +36,19 @@ scripted_gui = {
 			}
 		}
 	}
+
+	ui_industry = {
+		context_type = decision_category
+		window_name = "ui_industry"
+		effects = {
+			industrial_construction_button_click = {
+				LEP_showcase_industrial_construction_effect = yes
+			}
+
+			resource_allocation_button_click = {
+				LEP_showcase_resource_allocation_effect = yes
+			}
+		}
+	}
 }
 

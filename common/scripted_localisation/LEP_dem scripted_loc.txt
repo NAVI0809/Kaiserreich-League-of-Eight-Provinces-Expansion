@@ -276,3 +276,29 @@ define_text = {
 		localization_key = "LEP_fujian_[?current_factory]"
 	}
 }
+
+define_text = {
+	name = LEP_national_reconstruction_bureau_loc
+	text = {
+		trigger = {
+			has_completed_focus = LEP_national_reconstruction_administration
+		}
+		localization_key = LEP_national_reconstruction_bureau_key
+	}
+	text = {
+		localization_key = LEP_industrial_general_committee
+	}
+}
+
+define_text = {
+	name = LEP_national_reconstruction_bureau_desc_loc
+	text = {
+		trigger = {
+			has_completed_focus = LEP_national_reconstruction_administration
+		}
+		localization_key = LEP_national_reconstruction_bureau_desc_key2
+	}
+	text = {
+		localization_key = LEP_national_reconstruction_bureau_desc_key1
+	}
+}

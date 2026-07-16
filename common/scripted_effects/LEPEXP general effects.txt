@@ -680,6 +680,11 @@ LEP_mili_var = {
 	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
 }
 
+LEP_cons_var = {
+	custom_effect_tooltip = LEP_add_cons_var_tt
+	add_to_variable = { LEP_construction_var = LEP_cons_var_change }
+}
+
 LEP_showcase_laws_effect = {
 	if = {
 		limit = {
@@ -693,6 +698,116 @@ LEP_showcase_laws_effect = {
 		clr_country_flag = LEP_chowcase_laws_on
 	}
 
+}
+
+LEP_showcase_industrial_construction_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_showcase_industrial_construction_on
+			}
+		}
+		set_country_flag = LEP_showcase_industrial_construction_on
+	}
+	else = {
+		clr_country_flag = LEP_showcase_industrial_construction_on
+	}
+
+}
+
+LEP_showcase_resource_allocation_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_showcase_resource_allocation_on
+			}
+		}
+		set_country_flag = LEP_showcase_resource_allocation_on
+	}
+	else = {
+		clr_country_flag = LEP_showcase_resource_allocation_on
+	}
+
+}
+
+LEP_setup_economic_devastation_effect = {
+	if = {
+		limit = { has_country_flag = LEP_setup_economic_devastation_early_flag }
+		if = {
+			limit = { has_idea = LEP_devastated_national_econ_idea }
+			#You get punished for starting reforms early but doing nothing
+			custom_effect_tooltip = CHN_activate_economic_devastation_no_additional_level_warning_tt
+			add_stability = -0.1
+		}
+		else_if = {
+			limit = { has_idea = LEP_devastated_national_econ2_idea }
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_devastated_national_econ2_idea
+				add_idea = 	LEP_devastated_national_econ_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = LEP_devastated_national_econ3_idea }
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_devastated_national_econ3_idea
+				add_idea = LEP_devastated_national_econ2_idea
+			}
+		}
+		else = {
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			add_ideas = LEP_devastated_national_econ3_idea
+		}
+	}
+	else = {
+		custom_effect_tooltip = CHN_activate_economic_devastation_normal_tt
+		set_country_flag = LEP_setup_economic_devastation_normal_flag
+		add_ideas = LEP_devastated_national_econ_idea
+	}
+	mark_focus_tree_layout_dirty = yes
+}
+
+LEP_setup_military_disarray_effect = {
+	if = {
+		limit = { has_country_flag = LEP_setup_military_disarray_early_flag }
+		if = {
+			limit = { has_idea = LEP_military_disarray_idea1 }
+			#You get punished for starting reforms early but doing nothing
+			custom_effect_tooltip = CHN_activate_military_disarray_no_additional_level_warning_tt
+			add_war_support = -0.10
+		}
+		else_if = {
+			limit = { has_idea = LEP_military_disarray_idea2 }
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_military_disarray_idea2
+				add_idea = LEP_military_disarray_idea1
+			}
+			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
+		}
+		else_if = {
+			limit = { has_idea = LEP_military_disarray_idea3 }
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_military_disarray_idea3
+				add_idea = LEP_military_disarray_idea2
+			}
+			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
+		}
+		else = {
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			add_ideas = LEP_military_disarray_idea3
+			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
+		}
+	}
+	else = {
+		custom_effect_tooltip = CHN_activate_military_disarray_normal_tt
+		set_country_flag = LEP_setup_military_disarray_normal_flag
+		add_ideas = LEP_military_disarray_idea1
+		set_variable = { CHN_military_disarray_fixes_needed_var = 3 }
+	}
+	mark_focus_tree_layout_dirty = yes
 }
 
 LEP_improve_economic_devastation_effect = {

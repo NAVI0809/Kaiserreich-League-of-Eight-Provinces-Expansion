@@ -301,6 +301,10 @@ set_party_name = {
 }
 
 set_variable = { country_intro_page_count = 3 }
+set_variable = {
+	var = LEP_construction_var
+	value = 0
+}
 # FLAVOR LEP
 country_event = { id = league_events.206 days = 1521 } #Chen Xuezhao
 country_event = { id = league_events.207 days = 762 } #Ju Peon event

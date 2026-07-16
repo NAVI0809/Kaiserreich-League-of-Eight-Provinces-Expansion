@@ -156,7 +156,8 @@ LEPEXP_parliament = {
 LEP_national_reconstruction_bureau = {
 	icon = generic_industry
 	picture = GFX_decision_cat_industry_KMT
-	priority = 1000
+	priority = 1001
+	scripted_gui = ui_industry
 	allowed = {
 		tag = LEP
 	}

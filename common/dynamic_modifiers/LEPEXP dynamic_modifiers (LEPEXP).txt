@@ -97,3 +97,12 @@ LEP_military_mobilization_modifier = {
     training_time_army_factor = LEP_mob_training_time_army_factor
     land_reinforce_rate = LEP_mob_land_reinforce_rate
 }
+
+LEP_national_reconstruction_bureau_modifier = {
+    production_factory_max_efficiency_factor = LEP_cons_production_factory_max_efficiency_factor
+    industrial_capacity_factory = LEP_cons_industrial_capacity_factory
+    consumer_goods_factor = LEP_cons_consumer_goods_factor
+    production_factory_efficiency_gain_factor = LEP_cons_production_factory_efficiency_gain_factor
+    production_factory_start_efficiency_factor = LEP_cons_production_factory_start_efficiency_factor
+    production_speed_buildings_factor = LEP_cons_production_speed_buildings_factor
+}

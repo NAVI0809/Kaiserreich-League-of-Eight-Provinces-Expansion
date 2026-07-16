@@ -4342,10 +4342,11 @@ focus_tree = {
 		x = 3
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_industrial_general_committee1
+			unlock_decision_category_tooltip = LEP_national_reconstruction_bureau
+			add_dynamic_modifier = { modifier = LEP_national_reconstruction_bureau_modifier }
 			add_one_random_civilian_factory = yes
-			add_one_random_military_factory = yes
 			hidden_effect = {
+
 			    country_event = { id = league_mid.38 days = 0 }
 			}
 		}

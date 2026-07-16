@@ -553,328 +553,8 @@ LEP_country_development = {
 			LEP_raise_funds = yes
 		}
 	}
-
-	#矿业
-	LEP_jianghuai_coal_power = {
-		icon = GFX_decision_coal
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		visible = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		cost = 50
-        days_remove = 40
-		fire_only_once = yes
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		remove_effect = {
-			add_resource = {
-				type = coal
-				amount = 25
-				state = 1050
-			}
-		}
-	}
-
-	LEP_gannan_tungsten_development = {
-		icon = GFX_decision_tungsten
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		visible = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		cost = 50
-        days_remove = 60
-		fire_only_once = yes
-		modifier = {
-			civilian_factory_use = 1
-		}
-		remove_effect = {
-			add_resource = {
-				type = tungsten
-				amount = 20
-				state = 600
-			}
-		}
-	}
-
-	LEP_maanshan_iron_mine = {
-		icon = GFX_decision_steel
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		visible = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		cost = 50
-        days_remove = 60
-		fire_only_once = yes
-		modifier = {
-			civilian_factory_use = 1
-		}
-		remove_effect = {
-			add_resource = {
-				type = steel
-				amount = 28
-				state = 606
-			}
-		}
-	}
-
-	LEPEXP_coal_jinling_arsenal_descison = {
-		visible = {
-			has_completed_focus = LEP_east_china_industry_mining
-			613 = { is_owned_and_controlled_by = ROOT }
-		}
-		highlight_states = {
-			highlight_state_targets = { state = 613 } #nanjing
-		}
-		allowed = { tag = LEP }
-		available = {
-			num_of_civilian_factories_available_for_projects > 3
-		}
-		fire_only_once = yes
-		icon = GFX_decision_generic_industry
-		priority = 30
-
-		cancel_if_not_visible = no
-		ai_will_do = { factor = 25 }
-		cost = 70
-
-		complete_effect = {
-			log = "[GetLogRoot]: Decision complete LEPEXP_coal_jinling_arsenal_descison"
-		}
-		days_remove = 100
-		modifier = {
-			civilian_factory_use = 4
-		}
-		remove_effect = {
-			log = "[GetLogRoot]: Decision remove LEPEXP_coal_jinling_arsenal_descison"
-			613 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_resource = {
-				type = coal
-				amount = 4
-			}
-			if = {
-				limit = { has_dlc_aat = yes }
-				mio:LEP_jinling_organisation = {
-					add_mio_funds = 500
-				}
-			}
-		}
-		fixed_random_seed = no
-	}
-
-	LEP_revitalize_jingdezhen_porcelain_industry = {
-		icon = GFX_decision_cement_mixer
-        allowed = {
-            tag = LEP
-        }
-		cost = 50
-        days_remove = 60
-		fire_only_once = yes
-		available = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		visible = {
-			has_completed_focus = LEP_east_china_industry_mining
-		}
-		modifier = {
-			civilian_factory_use = 1
-		}
-		remove_effect = {
-			1044 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-				    type =  industrial_complex
-				    level = 2
-				    instant_build = yes
-			    }
-			}
-		}
-	}
-
-	LEP_decision_shangli_reservoir = {
-		icon = GFX_decision_electrify
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		visible = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		
-        cost = 50
-        days_remove = 30
-		fire_only_once = yes
-
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		complete_effect = {
-			802 = { increase_state_category_by_two_levels = yes }
-			802 = {
-			    if = {
-				    limit = { dam > 0 }
-				    increase_state_category_by_one_level = yes
-			    }
-			    else = {
-				    add_extra_state_shared_building_slots = 1
-				    custom_effect_tooltip = tooltip_white_line
-				    add_building_construction = {
-					    type = dam
-					    level = 1
-					    province = 7071
-					    instant_build = yes
-				    }
-			    }
-			    prioritize_state = yes
-		    }
-			if = {
-			    limit = { 802 = { dam < 1 } } #separate due to tooltip indentation
-			    custom_effect_tooltip = {
-				    localization_key = building_state_modifier|dam
-				    INDENT = "    "
-			    }
-			    custom_effect_tooltip = tooltip_white_line
-		    }
-			add_one_random_civilian_factory = yes
-		}
-	}
-
-	LEP_decision_baimao_gate = {
-		icon = GFX_decision_hol_drain_water_lines
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		visible = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		
-        cost = 50
-        days_remove = 30
-		fire_only_once = yes
-
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		complete_effect = {
-			613 = { increase_state_category_by_two_levels = yes }
-			613 = {
-			    if = {
-				    limit = { dam > 0 }
-				    increase_state_category_by_one_level = yes
-			    }
-			    else = {
-				    add_extra_state_shared_building_slots = 1
-				    custom_effect_tooltip = tooltip_white_line
-				    add_building_construction = {
-					    type = dam
-					    level = 1
-					    province = 7120
-					    instant_build = yes
-				    }
-			    }
-			    prioritize_state = yes
-		    }
-			if = {
-			    limit = { 613 = { dam < 1 } } #separate due to tooltip indentation
-			    custom_effect_tooltip = {
-				    localization_key = building_state_modifier|dam
-				    INDENT = "    "
-			    }
-			    custom_effect_tooltip = tooltip_white_line
-		    }
-			add_one_random_civilian_factory = yes
-		}
-	}
-
-	LEP_decision_jiangzhe_seawall = {
-		icon = GFX_decision_generic_coastal_fortification
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		visible = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		
-        cost = 50
-        days_remove = 30
-		fire_only_once = yes
-
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		complete_effect = {
-			598 = { increase_state_category_by_two_levels = yes }
-			613 = { increase_state_category_by_two_levels = yes }
-			1047 = { increase_state_category_by_two_levels = yes }
-		}
-
-	}
-
-	LEP_decision_westlake_dredging = {
-		icon = GFX_decision_generic_construction
-        allowed = {
-            tag = LEP
-        }
-		available = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		visible = {
-			has_completed_focus = LEP_small_scale_waterworks
-		}
-		
-        cost = 30
-        days_remove = 30
-		fire_only_once = yes
-
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		complete_effect = {
-			596 = { increase_state_category_by_two_levels = yes }
-		}
-
-	}
 }
 
-LEPEXP_laws_CAT = {
-	
-
-}
 
 LEP_foreign_policy_decisions = {
 	LEP_join_the_reichspakt_decision = {
@@ -3075,8 +2755,9 @@ LEPEXP_parliament = {
 LEP_national_reconstruction_bureau = {
 	LEP_economic_recovery_ongoing = {
 		icon = generic_consumer_goods
+		priority = 999
 
-		available = { always = no }
+		allowed = { always = no }
 
 		days = 360
 		days_mission_timeout = 720
@@ -3085,15 +2766,14 @@ LEP_national_reconstruction_bureau = {
 			activate_mission = LEP_economic_recovery_ongoing
 		}
 	}
-	
-	
-	
-	
-	
+
 	LEP_military_reorganization_ongoing = {
 		icon = generic_reorganize_irregulars
+		priority = 999
 
 		available = { always = no }
+		allowed = { always = no }
+
 
 		days = 360
 		days_mission_timeout = 720
@@ -3101,5 +2781,422 @@ LEP_national_reconstruction_bureau = {
 			LEP_improve_military_reorganization_effect = yes
 			activate_mission = LEP_military_reorganization_ongoing
 		}
+	}
+
+	LEP_add_cons_var_1_decision = {
+		icon = generic_merge_plant_materiel
+		priority = 998
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		allowed = {
+            tag = LEP
+        }
+		fire_only_once = no
+		complete_effect = {
+			country_event = { id = league_industry.1 days = 0 }
+		}
+	}
+
+	LEP_add_cons_var_2_decision = {
+		icon = generic_merge_plant_materiel
+		priority = 997
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		allowed = {
+            tag = LEP
+        }
+		fire_only_once = no
+		complete_effect = {
+			country_event = { id = league_industry.2 days = 0 }
+		}
+	}
+
+	LEP_add_cons_var_4_decision = {
+		icon = generic_merge_plant_materiel
+		priority = 996
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		allowed = {
+            tag = LEP
+        }
+		fire_only_once = no
+		complete_effect = {
+			country_event = { id = league_industry.3 days = 0 }
+		}
+	}
+
+	LEP_withdraw_cons_var_1_decision = {
+		icon = eng_trade_unions_support
+		priority = 995
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		fire_only_once = no
+		allowed = {
+            tag = LEP
+        }
+		complete_effect = {
+			country_event = { id = league_industry.4 days = 0 }
+		}
+	}
+
+	LEP_withdraw_cons_var_2_decision = {
+		icon = eng_trade_unions_support
+		priority = 994
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		fire_only_once = no
+		allowed = {
+            tag = LEP
+        }
+		complete_effect = {
+			country_event = { id = league_industry.5 days = 0 }
+		}
+	}
+
+	LEP_withdraw_cons_var_4_decision = {
+		icon = eng_trade_unions_support
+		priority = 993
+		visible = {
+			has_country_flag = LEP_showcase_resource_allocation_on
+		}
+		fire_only_once = no
+		allowed = {
+            tag = LEP
+        }
+		complete_effect = {
+			country_event = { id = league_industry.6 days = 0 }
+		}
+	}
+
+
+	##建设决议
+	#矿业
+	LEP_jianghuai_coal_power = {
+		icon = GFX_decision_coal
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		cost = 50
+        days_remove = 40
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_resource = {
+				type = coal
+				amount = 25
+				state = 1050
+			}
+		}
+	}
+
+	LEP_gannan_tungsten_development = {
+		icon = GFX_decision_tungsten
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = tungsten
+				amount = 20
+				state = 600
+			}
+		}
+	}
+
+	LEP_maanshan_iron_mine = {
+		icon = GFX_decision_steel
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 28
+				state = 606
+			}
+		}
+	}
+
+	LEPEXP_coal_jinling_arsenal_descison = {
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			613 = { is_owned_and_controlled_by = ROOT }
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		highlight_states = {
+			highlight_state_targets = { state = 613 } #nanjing
+		}
+		allowed = { tag = LEP }
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		fire_only_once = yes
+		icon = GFX_decision_generic_industry
+		priority = 30
+
+		cancel_if_not_visible = no
+		ai_will_do = { factor = 25 }
+		cost = 70
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_coal_jinling_arsenal_descison"
+		}
+		days_remove = 100
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_coal_jinling_arsenal_descison"
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = coal
+				amount = 4
+			}
+			if = {
+				limit = { has_dlc_aat = yes }
+				mio:LEP_jinling_organisation = {
+					add_mio_funds = 500
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_revitalize_jingdezhen_porcelain_industry = {
+		icon = GFX_decision_cement_mixer
+        allowed = {
+            tag = LEP
+        }
+		cost = 50
+        days_remove = 60
+		fire_only_once = yes
+		available = {
+			has_completed_focus = LEP_east_china_industry_mining
+		}
+		visible = {
+			has_completed_focus = LEP_east_china_industry_mining
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			1044 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type =  industrial_complex
+				    level = 2
+				    instant_build = yes
+			    }
+			}
+		}
+	}
+
+	LEP_decision_shangli_reservoir = {
+		icon = GFX_decision_electrify
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			802 = { increase_state_category_by_two_levels = yes }
+			802 = {
+			    if = {
+				    limit = { dam > 0 }
+				    increase_state_category_by_one_level = yes
+			    }
+			    else = {
+				    add_extra_state_shared_building_slots = 1
+				    custom_effect_tooltip = tooltip_white_line
+				    add_building_construction = {
+					    type = dam
+					    level = 1
+					    province = 7071
+					    instant_build = yes
+				    }
+			    }
+			    prioritize_state = yes
+		    }
+			if = {
+			    limit = { 802 = { dam < 1 } } #separate due to tooltip indentation
+			    custom_effect_tooltip = {
+				    localization_key = building_state_modifier|dam
+				    INDENT = "    "
+			    }
+			    custom_effect_tooltip = tooltip_white_line
+		    }
+			add_one_random_civilian_factory = yes
+		}
+	}
+
+	LEP_decision_baimao_gate = {
+		icon = GFX_decision_hol_drain_water_lines
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			613 = { increase_state_category_by_two_levels = yes }
+			613 = {
+			    if = {
+				    limit = { dam > 0 }
+				    increase_state_category_by_one_level = yes
+			    }
+			    else = {
+				    add_extra_state_shared_building_slots = 1
+				    custom_effect_tooltip = tooltip_white_line
+				    add_building_construction = {
+					    type = dam
+					    level = 1
+					    province = 7120
+					    instant_build = yes
+				    }
+			    }
+			    prioritize_state = yes
+		    }
+			if = {
+			    limit = { 613 = { dam < 1 } } #separate due to tooltip indentation
+			    custom_effect_tooltip = {
+				    localization_key = building_state_modifier|dam
+				    INDENT = "    "
+			    }
+			    custom_effect_tooltip = tooltip_white_line
+		    }
+			add_one_random_civilian_factory = yes
+		}
+	}
+
+	LEP_decision_jiangzhe_seawall = {
+		icon = GFX_decision_generic_coastal_fortification
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		
+        cost = 50
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			598 = { increase_state_category_by_two_levels = yes }
+			613 = { increase_state_category_by_two_levels = yes }
+			1047 = { increase_state_category_by_two_levels = yes }
+		}
+
+	}
+
+	LEP_decision_westlake_dredging = {
+		icon = GFX_decision_generic_construction
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_small_scale_waterworks
+		}
+		visible = {
+			has_completed_focus = LEP_small_scale_waterworks
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		
+        cost = 30
+        days_remove = 30
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		complete_effect = {
+			596 = { increase_state_category_by_two_levels = yes }
+		}
+
 	}
 }
