@@ -9506,6 +9506,8 @@ focus_tree = {
 				}
 			}
 			enable_tech_anti_fortification_artillery = yes
+			
+			enable_tech_mountain_artillery = yes
 			custom_effect_tooltip = tooltip_white_line
 			every_unit_leader = {
 				random_select_amount = 2
@@ -9997,7 +9999,7 @@ focus_tree = {
 			if = {
 		       limit = { owns_state = 1075 } #南通
 		       1075 = {
-			       add_extra_state_shared_building_slots = 2
+			       add_extra_state_shared_building_slots = 1
 			       add_building_construction = {
 				       type = dockyard
 				       level = 1
@@ -10008,7 +10010,7 @@ focus_tree = {
 			if = {
 		       limit = { owns_state = 746 } #NB
 		       746 = {
-			       add_extra_state_shared_building_slots = 2
+			       add_extra_state_shared_building_slots = 1
 			       add_building_construction = {
 				       type = dockyard
 				       level = 1
@@ -10030,7 +10032,7 @@ focus_tree = {
 			if = {
 		       limit = { owns_state = 802 } #厦门
 		       802 = {
-			       add_extra_state_shared_building_slots = 2
+			       add_extra_state_shared_building_slots = 1
 			       add_building_construction = {
 				       type = dockyard
 				       level = 1
@@ -10041,7 +10043,7 @@ focus_tree = {
 			if = {
 		       limit = { owns_state = 803 } #温州
 		       803 = {
-			       add_extra_state_shared_building_slots = 2
+			       add_extra_state_shared_building_slots = 1
 			       add_building_construction = {
 				       type = dockyard
 				       level = 1
@@ -10440,12 +10442,9 @@ focus_tree = {
 		cost = 5
 		x = 1
 		y = 1
-		relative_position_id = LEP_wolf_pack_sub
+		relative_position_id = LEP_navy_ship_building_department
 		prerequisite = { 
-			focus = LEP_wolf_pack_sub
-		}
-		prerequisite = { 
-			focus = LEP_coast_radar
+			focus = LEP_navy_ship_building_department
 		}
 		ai_will_do = {
 			base = 50
@@ -10502,6 +10501,18 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_naval_guns_targeting"
+			every_navy_leader = {
+				random_select_amount = 3
+				add_trait = {
+					trait = spotter
+				}
+			}
+			add_tech_bonus = {
+				name = LEP_naval_guns_targeting
+				bonus = 1
+				uses = 1
+				category = radar_tech
+			}
 			swap_ideas = {
 				remove_idea = LEP_nanjing_navy_4
 				add_idea = LEP_nanjing_navy_5
@@ -10666,10 +10677,10 @@ focus_tree = {
 					is_coastal = yes
 					free_building_slots = { building = dockyard size > 1 include_locked = yes }
 				}
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -10679,10 +10690,49 @@ focus_tree = {
 					is_coastal = yes
 					free_building_slots = { building = dockyard size > 1 include_locked = yes }
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1065 } #威海
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1068 } #葫芦岛
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 } #大连
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -10876,8 +10926,8 @@ focus_tree = {
 		id = LEP_new_spirit_of_maritime_life
 		icon = GFX_focus_PHI_gunboat_diplomacy
 		#icon = GFX_goal_generic_sea_and_air
-		cost = 6
-		x = -1
+		cost = 7
+		x = 0
 		y = 1
 		ai_will_do = { base = 100 }
 		available = {
@@ -10894,12 +10944,11 @@ focus_tree = {
 				remove_ideas = LEP_wolfpacks_mines
 				remove_ideas = LEP_wolfpack
 				remove_ideas = LEP_naval_air_2
-				add_ideas = LEP_nanjing_navy_6				
+				add_ideas = LEP_nanjing_navy_6
 			}				
-			add_ideas = GEA_pacific_rule_idea
 			custom_effect_tooltip = LEP_new_spirit_of_maritime_life_romove_tt
-			show_ideas_tooltip = LEP_nanjing_navy_6
-			
+			custom_effect_tooltip = tooltip_dash_line
+			add_ideas = GEA_pacific_rule_idea
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -10990,12 +11039,15 @@ focus_tree = {
 			if = {
 				limit = {
 					LEP = {
-					    has_character = QIE_QIE_sa_zhenbing
+					    has_character = QIE_sa_zhenbing
 				    }
 				}
 				QIE_sa_zhenbing = {
 				    add_attack = 1
 				    add_maneuver = 1
+					add_trait = {
+						trait = ironside
+					}
 			    }
 			}
 			else = {
@@ -11004,11 +11056,24 @@ focus_tree = {
 						QIE_sa_zhenbing = {
 				           add_attack = 1
 				           add_maneuver = 1
+						   add_trait = {
+							   trait = ironside
+						   }
 			           }
 				    }					
 				}
 			}
+			LEP_wu_zhennan = {
+				add_attack = 1
+				add_maneuver = 1
+			}
 			custom_effect_tooltip = tooltip_white_line
+			every_navy_leader = {
+				random_select_amount = 2
+				add_trait = {
+					trait = ironside
+				}
+			}
 			swap_ideas = {
 				remove_idea = LEP_nanjing_navy_6	
 				add_idea = LEP_nanjing_navy_8
@@ -11096,6 +11161,43 @@ focus_tree = {
 			LEP_sa_shijun = {
 				add_attack = 1
 				add_coordination = 1
+				add_trait = {
+					trait = air_controller
+				}
+			}
+			LEP_wu_rengli = {
+				add_attack = 1
+				add_coordination = 1
+				add_trait = {
+					trait = air_controller
+				}
+			}
+			if = {
+				limit = {
+					LEP = {
+					    has_character = FNG_shen_honglie
+				    }
+				}
+				FNG_shen_honglie = {
+				    add_attack = 1
+				    add_maneuver = 1
+					add_trait = {
+					    trait = air_controller
+				    }
+			    }
+			}
+			else = {
+				effect_tooltip = {
+					FNG = {
+						FNG_shen_honglie = {
+				           add_attack = 1
+				           add_maneuver = 1
+						   add_trait = {
+				    	       trait = air_controller
+			        	   }
+			           }
+				    }					
+				}
 			}
 			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
@@ -11451,34 +11553,32 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = CHN_aviation_industry_organisation
 			mio:CHN_aviation_industry_organisation = {
 				set_mio_flag = CHN_mio_unlocked
 				add_mio_size = 1
 				add_mio_funds = 800
 			}
 			custom_effect_tooltip = tooltip_white_line
+			mio:LEP_jianqiao_organisation = {
+				add_mio_size = 1
+				add_mio_funds = 800
+			}
+			custom_effect_tooltip = tooltip_white_line
+			mio:LEP_fujian_organisation = {
+				add_mio_size = 1
+				add_mio_funds = 800
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
-				limit = { has_dlc_aat = yes }
-				if = {
-					limit = { mio:LEP_hongqiao_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_aviation_industry_organisation
+				limit = { 
+					has_dlc_aat = yes 
+					mio:LEP_hongqiao_organisation = { is_mio_available = yes }
 				}
 				mio:LEP_hongqiao_organisation = {
 					add_mio_size = 1
 					add_mio_funds = 800
 				}
-			}
-			else = {
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = CHN_aviation_industry_organisation
-				mio:CHN_aviation_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 1
-					add_mio_funds = 800
-				}
-			}
+			}		
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -11709,8 +11809,14 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_aviation_committee"
 			add_tech_bonus = {
 				name = LEP_aviation_committee
-				bonus = 1
+				bonus = 0.8
 				uses = 1
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = LEP_aviation_committee
+				uses = 1
+				ahead_reduction = 2
 				category = air_equipment
 			}
 			custom_effect_tooltip = tooltip_white_line
@@ -11888,9 +11994,9 @@ focus_tree = {
 	focus = {
 		id = LEP_AF_aircraft_manufacturing_for_navy
 		icon = GFX_focus_CHI_appropriate_design
-		cost = 5
+		cost = 3
 		prerequisite = {
-			focus = LEP_AF_long_range
+			focus = LEP_national_military_aviation_programme
 			focus = LEP_naval_air_dev
 		}
 		relative_position_id = LEP_AF_long_range
@@ -12011,6 +12117,13 @@ focus_tree = {
 				category = rocketry
 			}
 			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = LEP_ready_jet_era
+				uses = 1
+				ahead_reduction = 1.2
+				category = jet_technology
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_mastery_bonus = {
 				name = LEP_ready_jet_era
 				bonus = 0.1
@@ -12023,7 +12136,7 @@ focus_tree = {
 	focus = {
 		id = LEP_anti_air_tower
 		icon = GFX_focus_PRC_anti_air_effort
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = LEP_CNAF_regroup
 		}
@@ -12078,7 +12191,7 @@ focus_tree = {
 	focus = {
 		id = LEP_AF_radar_stations
 		icon = GFX_goal_generic_radar_instillation
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = LEP_anti_air_tower
 		}
@@ -12294,8 +12407,9 @@ focus_tree = {
 			add_tech_bonus = {
 				name = LEP_AF_AA_gun_pud
 				bonus = 1
-				uses = 1
+				uses = 2
 				category = cat_anti_air
+				category = radar_tech
 			}
 			add_ideas = GER_aa_proliferation
 		}	
@@ -12321,8 +12435,7 @@ focus_tree = {
 		prerequisite = { focus = LEP_thorough_logistics }
 		prerequisite = { 
 			focus = LEP_symphony_of_factory_and_firepower 
-			focus = LEP_seize_the_initiative
-		
+			focus = LEP_seize_the_initiative		
 		}
 		prerequisite = { focus = LEP_artillery_of_the_sky }
 		completion_reward = {
@@ -12390,6 +12503,8 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_the_pinnacle_of_chinese_soldiery"
 			custom_effect_tooltip = LEP_combine_army_ideas_tt
 			add_potential_special_forces_tree = yes
+			custom_effect_tooltip = tooltip_white_line
+			enable_tech_improved_recon_units = yes
 			custom_effect_tooltip = tooltip_white_line
 			china_add_research_slots = yes
 			hidden_effect = {

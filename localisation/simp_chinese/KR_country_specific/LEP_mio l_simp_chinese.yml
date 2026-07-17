@@ -2,6 +2,16 @@
 
  available_high_command: "§G启用§!§Y总司令§!:"
 
+ MODIFIER_XP_GAIN_NAVY: "海军经验增长"
+ MODIFIER_NAVAL_MORALE_FACTOR: "海军组织度恢复速率"
+ MODIFIER_INDUSTRIAL_REFIT_SPEED_FACTOR: "舰艇改装速度"
+ MODIFIER_NAVY_FUEL_CONSUMPTION_FACTOR: "海军燃料消耗"
+ MODIFIER_NAVAL_COORDINATION: "舰队协同性"
+ MODIFIER_NAVAL_NIGHT_ATTACK: "夜间攻击"
+ MODIFIER_NAVY_SCREEN_ATTACK_FACTOR: "屏卫舰攻击"
+ MODIFIER_NAVAL_CARRIER_AIR_AGILITY_FACTOR: "航母舰载机机动"
+ MODIFIER_NAVAL_CARRIER_AIR_ATTACK_FACTOR: "航母舰载机对空攻击"
+
  tech_LEP_combat_engineer: "战斗工兵连"
  tech_LEP_combat_engineer_desc: "一支装备了大量自动或半自动武器与防弹板甲的精英工兵连，掌握了构筑工事清理障碍能力的同时擅长小规模的近距离交战以及反坦克作战。"
  combat_engineer: "战斗工兵连"
@@ -105,8 +115,8 @@
 
  mio_jianqiao_organisation: "笕桥飞机制造厂"
  LEP_jianqiao_mio_desc: "$jianqiao_LEP_MIO$\n§L$jianqiao_desc$§!\n"
- jianqiao_LEP_MIO: "战略飞机开发与制造商"
- jianqiao_LEP: "战略飞机开发与制造商"
+ jianqiao_LEP_MIO: "航空工业联合体"
+ jianqiao_LEP: "航空工业联合体"
  jianqiao_desc: "笕桥飞机制造厂又称中央杭州飞机制造厂系中美德合资经营的军工企业，美方为道格拉斯公司，德方为巴伐利亚飞机制造厂公司。黄郛当时代表中国政府签订合作协议，场址位于笕桥镇，比邻笕桥机场与笕桥航校。直至1935年，笕桥厂已有能力生产少量BF109C，图纸和技术指导由德国提供，并且在美方技术指导下成功组装了DC-2客机，成为了美国以外唯一可以组装DC-2客机的工厂。直至1935年底，笕桥厂已经为自主制造大型军用飞机做好了技术积累。"
  
 
@@ -117,7 +127,7 @@
  LEP_fujian_mio_desc: "$fujian_LEP_MIO$\n§L$fujian_desc$§!\n"
  fujian_LEP_MIO: "海军飞机制造商"
  fujian_LEP: "海军飞机制造商"
- fujian_desc: ""
+ fujian_desc: "世界大战前，日、美在华争夺权益十分剧烈，为了抵制日本势力在华扩张，美国政府向中国政府建议扩大留学生的派遣。袁世凯答应了美国政府的要求，并拟向美国定制潜艇百艘、飞机千架作为交易，同时决定自制飞机。1913年袁即命令刘冠雄从舰队中挑选舰员、舰生魏子浩、韩玉衡等14人，派造舰专家魏瀚为监督，率员生赴美留学，经费从卖军舰款中支出。1917年，马德骥、巴玉藻、王助、曾贻经等人毕业回国，分配于海军船政局。次年经北洋政府国务院批准，于月正式在船政局附设飞机工程处。由曾贻经负责机务，巴玉藻负责设计。工程处设有木胁、铁壳、合拢等车间，工人约200多人，自此中国最早的一个飞机制造工厂成立。1919年8月，我国最早的一架水上飞机甲型一号在马尾飞机工程处制造成功，除此两次飞机失事外，其余均安全飞行。1928年9月，海军飞机工程处改为海军制造飞机处。制造的飞机在性能、时速方面由明显进步。如1928年7月造成的“海鹰”号和1929年3月造成的“海鹰”号，都是鱼雷轰炸机，座位比前几架都多，可乘6人，飞行时间可达5个半小时。1930年8月至10月，先后造成莱提式双桴水上飞机“江鸿”号、“江雁”号两架。两架机身宽1.88米，长8.29米，高3.78米，总重量1168公斤，功率165马力，时速177公里。1930年，由飞行员许成启驾驶“江鸿”号飞往武汉，这是海军制造飞机处所造飞机航程最长的一次飞行，飞可以说是中国飞机制造工业的萌芽，在中国航空史上具有重要意义。1931年，海军制造飞机处扩建为海军飞机制造厂。"
 
  KR_MIO_Trait_improved_fujian: "海军飞机制造厂研发部门扩展"
  KR_MIO_Trait_fujian_private_investments: "寻求商帮投资"
