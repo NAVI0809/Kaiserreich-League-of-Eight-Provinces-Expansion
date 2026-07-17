@@ -2786,6 +2786,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_add_cons_var_1_decision = {
 		icon = generic_merge_plant_materiel
 		priority = 998
+		available = {
+			can_add_1_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}
@@ -2801,6 +2804,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_add_cons_var_2_decision = {
 		icon = generic_merge_plant_materiel
 		priority = 997
+		available = {
+			can_add_2_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}
@@ -2816,6 +2822,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_add_cons_var_4_decision = {
 		icon = generic_merge_plant_materiel
 		priority = 996
+		available = {
+			can_add_4_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}
@@ -2831,6 +2840,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_withdraw_cons_var_1_decision = {
 		icon = eng_trade_unions_support
 		priority = 995
+		available = {
+			can_withdraw_1_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}
@@ -2846,6 +2858,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_withdraw_cons_var_2_decision = {
 		icon = eng_trade_unions_support
 		priority = 994
+		available = {
+			can_withdraw_2_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}
@@ -2861,6 +2876,9 @@ LEP_national_reconstruction_bureau = {
 	LEP_withdraw_cons_var_4_decision = {
 		icon = eng_trade_unions_support
 		priority = 993
+		available = {
+			can_withdraw_4_cons_var = yes
+		}
 		visible = {
 			has_country_flag = LEP_showcase_resource_allocation_on
 		}

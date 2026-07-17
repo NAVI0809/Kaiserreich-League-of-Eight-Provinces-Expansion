@@ -19,7 +19,7 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		set_temp_variable = { LEP_cons_var_change = 999 }
+		set_temp_variable = { LEP_cons_var_change = 76 }
 		LEP_cons_var = yes
 	}
 }
@@ -3207,7 +3207,192 @@ country_event = { #解放北京
 		name = league_national.1.a
 		LEP_setup_economic_devastation_effect = yes
 		LEP_setup_military_disarray_effect = yes
+		activate_mission = LEP_economic_recovery_ongoing
+		activate_mission = LEP_military_reorganization_ongoing
 		complete_national_focus = LEP_new_republic_with_old_ideals
+	}
+}
+
+country_event = { #王克敏事件
+	id = league_national.2
+	title = league_national.2.t
+	desc = league_national.2.d
+	picture = GFX_report_event_QIE_wang_kemin_desk
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.2 option league_national.2.a"
+		name = league_national.2.a
+		QIE = {
+			QIE_wang_kemin = {
+				set_nationality = ROOT
+			}
+		}
+		QIE_wang_kemin = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_replace_character_trait
+					ROLE = political_advisor
+					OLD_TRAIT = KR_bank_president
+					NEW_TRAIT = KR_conductor_of_the_banking_clans
+				}
+				remove_trait = {
+					character = QIE_wang_kemin
+					slot = political_advisor
+					trait = KR_bank_president
+				}
+				add_trait = {
+					character = QIE_wang_kemin
+					slot = political_advisor
+					trait = KR_conductor_of_the_banking_clans
+				}
+			}
+			effect_tooltip = {
+				set_temp_variable = { modifier_change_tt = 0.05 tooltip = political_power_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = -0.05 tooltip = consumer_goods_factor_tooltip }
+				set_temp_variable = { modifier_change_tt = 0.10 tooltip = production_speed_buildings_factor_tooltip }
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.2 option league_national.2.b"
+		name = league_national.2.b
+		add_political_power = 60
+		add_days_mission_timeout = {
+			mission = LEP_economic_recovery_ongoing
+			days = -20
+		}
+	}
+}
+
+country_event = { 
+	id = league_national.3
+	title = league_national.3.t
+	desc = league_national.3.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.3 option league_national.3.a"
+		name = league_national.3.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.4
+	title = league_national.4.t
+	desc = league_national.4.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.4 option league_national.4.a"
+		name = league_national.4.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.5
+	title = league_national.5.t
+	desc = league_national.5.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.5 option league_national.5.a"
+		name = league_national.5.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.6
+	title = league_national.6.t
+	desc = league_national.6.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.6 option league_national.6.a"
+		name = league_national.6.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.7
+	title = league_national.7.t
+	desc = league_national.7.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.7 option league_national.7.a"
+		name = league_national.7.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.8
+	title = league_national.8.t
+	desc = league_national.8.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.8 option league_national.8.a"
+		name = league_national.8.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.9
+	title = league_national.9.t
+	desc = league_national.9.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.9 option league_national.9.a"
+		name = league_national.9.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.10
+	title = league_national.10.t
+	desc = league_national.10.d
+	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.10 option league_national.10.a"
+		name = league_national.10.a
+		
 	}
 }
 
@@ -4299,6 +4484,13 @@ country_event = {#撤回1点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.a"
 	    name = league_industry.4.a
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.02
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4311,6 +4503,13 @@ country_event = {#撤回1点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.b"
 	    name = league_industry.4.b
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4323,6 +4522,13 @@ country_event = {#撤回1点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.c"
 	    name = league_industry.4.c
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.05
+		        compare = less_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4335,6 +4541,13 @@ country_event = {#撤回1点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.d"
 	    name = league_industry.4.d
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4347,6 +4560,13 @@ country_event = {#撤回1点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.e"
 	    name = league_industry.4.e
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4359,6 +4579,13 @@ country_event = {#撤回1点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.4 option league_industry.4.f"
 	    name = league_industry.4.f
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.02
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4383,6 +4610,13 @@ country_event = {#撤回2点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.a"
 	    name = league_industry.5.a
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.04
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4395,6 +4629,13 @@ country_event = {#撤回2点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.b"
 	    name = league_industry.5.b
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4407,6 +4648,13 @@ country_event = {#撤回2点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.c"
 	    name = league_industry.5.c
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.1
+		        compare = less_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4419,6 +4667,13 @@ country_event = {#撤回2点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.d"
 	    name = league_industry.5.d
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4431,6 +4686,13 @@ country_event = {#撤回2点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.e"
 	    name = league_industry.5.e
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4443,6 +4705,13 @@ country_event = {#撤回2点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.5 option league_industry.5.f"
 	    name = league_industry.5.f
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.04
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4467,6 +4736,13 @@ country_event = {#撤回4点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.a"
 	    name = league_industry.6.a
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.08
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4478,6 +4754,13 @@ country_event = {#撤回4点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.b"
 	    name = league_industry.6.b
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4490,6 +4773,13 @@ country_event = {#撤回4点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.c"
 	    name = league_industry.6.c
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.2
+		        compare = less_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4502,6 +4792,13 @@ country_event = {#撤回4点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.d"
 	    name = league_industry.6.d
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4514,6 +4811,13 @@ country_event = {#撤回4点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.e"
 	    name = league_industry.6.e
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -4526,6 +4830,13 @@ country_event = {#撤回4点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.6 option league_industry.6.f"
 	    name = league_industry.6.f
+		trigger = {
+			check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.08
+		        compare = greater_than_or_equals
+	        }
+		}
 		set_temp_variable = { LEP_cons_var_change = 4 }
 		LEP_cons_var = yes
 		add_to_variable = {

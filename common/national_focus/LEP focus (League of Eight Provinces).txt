@@ -2091,7 +2091,7 @@ focus_tree = {
 	focus = {
 		id = LEP_national_reconstruction_administration
 		
-		cost = 0
+		cost = 2
 		icon = GFX_goal_develop_provinces
 		prerequisite = {
 			focus = LEP_new_republic_with_old_ideals
@@ -2099,17 +2099,36 @@ focus_tree = {
 		relative_position_id = LEP_new_republic_with_old_ideals
 		x = 1
 		y = 1
+		completion_reward = {
+			add_political_power = 50
+			set_temp_variable = { LEP_cons_var_change = 20 }
+			LEP_cons_var = yes
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -20
+			}
+			custom_effect_tooltip = LEP_national_reconstruction_administration_tt
+		}
 	}
 	focus = {
 		id = LEP_curb_inflation
 		x = 0
 		y = 1
-		cost = 0
+		cost = 2
 		icon = GFX_goal_generic_austerity_measures
 		prerequisite = {
 			focus = LEP_national_reconstruction_administration
 		}
 		relative_position_id = LEP_national_reconstruction_administration
+		completion_reward = {
+			add_political_power = -20
+			add_stability = 0.05
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -20
+			}
+			LEP_improve_economic_devastation_effect = yes
+		}
 	}
 	focus = {
 		id = LEP_grasp_key_resources
@@ -2205,6 +2224,7 @@ focus_tree = {
 			focus = LEP_uphold_civilian_politics
 		}
 		prerequisite = {
+			focus = LEP_new_factory_law
 			focus = LEP_talk_more_about_issues
 		}
 		relative_position_id = LEP_talk_more_about_issues
@@ -2232,6 +2252,7 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = LEP_new_factory_law
+			focus = LEP_talk_more_about_issues
 		}
 		relative_position_id = LEP_new_factory_law
 	}
@@ -2311,12 +2332,18 @@ focus_tree = {
 		id = LEP_confiscate_noble_assets
 		x = 2
 		y = 1
-		cost = 0
+		cost = 2
 		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = {
 			focus = LEP_national_reconstruction_administration
 		}
 		relative_position_id = LEP_national_reconstruction_administration
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 70
+			LEP_improve_economic_devastation_effect = yes
+			country_event = { id = league_national.2 days = 0 }
+		}
 	}
 	focus = {
 		id = LEP_war_comes_from_the_north
@@ -2476,12 +2503,10 @@ focus_tree = {
 			focus = LEP_uphold_parliamentarism
 		}
 		prerequisite = {
-			focus = LEP_elite_republicanism
+			focus = LEP_nationalist_rhetoric
 			focus = LEP_uphold_civilian_politics
 		}
-		prerequisite = {
-			focus = LEP_nationalist_rhetoric
-		}
+		
 		relative_position_id = LEP_nationalist_rhetoric
 	}
 	focus = {
@@ -2564,9 +2589,7 @@ focus_tree = {
 			focus = LEP_uphold_civilian_politics
 			focus = LEP_nationalist_rhetoric
 		}
-		prerequisite = {
-			focus = LEP_civil_public_hearing
-		}
+		
 		relative_position_id = LEP_civil_public_hearing
 	}
 	focus = {
@@ -4345,6 +4368,8 @@ focus_tree = {
 			unlock_decision_category_tooltip = LEP_national_reconstruction_bureau
 			add_dynamic_modifier = { modifier = LEP_national_reconstruction_bureau_modifier }
 			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 10 }
+		    LEP_cons_var = yes
 			hidden_effect = {
 
 			    country_event = { id = league_mid.38 days = 0 }
@@ -4369,6 +4394,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			country_event = { id = league_mid.14 days = 0 }
+			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 5 }
+			LEP_cons_var = yes
 		}
 
 	}
@@ -4388,7 +4416,10 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_gannan_tungsten_development
 			unlock_decision_tooltip = LEP_maanshan_iron_mine
 			unlock_decision_tooltip = LEP_revitalize_jingdezhen_porcelain_industry
-			unlock_decision_tooltip = LEPEXP_coal_jinling_arsenal_descison 
+			unlock_decision_tooltip = LEPEXP_coal_jinling_arsenal_descison
+			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 5 } 
+			LEP_cons_var = yes
 			hidden_effect = {
 				country_event = { id = league_mid.37 days = 5 }
 			}
@@ -4425,6 +4456,8 @@ focus_tree = {
 				limit = { owns_state = 1066 }
 				1066 = { increase_state_category_by_one_level = yes }
 			}
+			set_temp_variable = { LEP_cons_var_change = 3 }
+			LEP_cons_var = yes
 			hidden_effect = { id = league_mid.59 days = 50 }
 		}
 
@@ -4441,10 +4474,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
 			add_one_random_civilian_factory = yes
-			add_one_random_military_factory = yes
-			add_one_random_military_factory = yes
-			add_one_random_military_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 8 }
+			LEP_cons_var = yes
 		}
 
 	}
@@ -4464,6 +4497,8 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 5 }
+			LEP_cons_var = yes
 		}
 
 	}
@@ -4498,6 +4533,8 @@ focus_tree = {
 		    add_one_random_military_factory = yes
 			custom_effect_tooltip = tooltip_white_line
 			LEP_improve_industry = yes
+			set_temp_variable = { LEP_cons_var_change = 5 }
+			LEP_cons_var = yes
 		}
 
 	}
@@ -4559,6 +4596,8 @@ focus_tree = {
 			add_ideas = LEP_professional_training
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 2 }
+			LEP_cons_var = yes
 		}
 
 	}
