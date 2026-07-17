@@ -61,6 +61,7 @@ LEP_add_plane_variants = {
 				special_type_slot_4 = empty
 			}
 			obsolete = yes
+			design_team = mio:LEP_jianqiao_organisation
 			icon = GFX_GER_medium_0_do23_medium
 		}
 	}	
@@ -119,6 +120,7 @@ LEP_pb4y_effect = {
 				special_type_slot_3 = lmg_defense_turret_2x #2 turrets with 2 ShKAS machine guns in each
 				special_type_slot_4 = lmg_defense_turret_2x #2 turrets with Oerlikon cannons in each
 			}
+			design_team = mio:LEP_fujian_organisation
 			icon = GFX_USA_large_2_pb4y_1_medium
 		}
 	}	
