@@ -9861,6 +9861,13 @@ focus_tree = {
 		    focus = LEP_artillery_of_the_sea
 	    }
 		
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_artillery_of_the_sea
+		}
+
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 			owns_state = 743
@@ -11076,7 +11083,6 @@ focus_tree = {
                     hours = 12
                 }
 			}
-
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -11461,13 +11467,13 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		#allow_branch = {
-		#	OR = {
-		#		china_is_the_unifier_of_china_trigger = yes
-		#	}
-		#	has_completed_focus = LEP_CNAF_regroup 
-		#	has_completed_focus = LEP_kongshu_trooper
-		#}
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_CNAF_regroup 
+			has_completed_focus = LEP_kongshu_trooper
+		}
 		
 		ai_will_do = {
 			base = 30
@@ -11667,13 +11673,13 @@ focus_tree = {
 			has_deployed_air_force_size = { size > 599 }
 	    }
 
-		#allow_branch = {
-		#	OR = {
-		#		china_is_the_unifier_of_china_trigger = yes
-		#	}
-		#	has_completed_focus = LEP_cult_of_aviation 
-		#	has_completed_focus = LEP_china_air_fleet
-		#}
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_cult_of_aviation 
+			has_completed_focus = LEP_china_air_fleet
+		}
 
 		ai_will_do = {
 			base = 20
