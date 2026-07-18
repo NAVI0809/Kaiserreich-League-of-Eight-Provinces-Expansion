@@ -19,8 +19,9 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		set_temp_variable = { LEP_cons_var_change = 76 }
-		LEP_cons_var = yes
+		QIE_huang_fu = {
+			unit_leader_event = { id = league_national.6 days = 0 }
+		}
 	}
 }
 
@@ -2988,7 +2989,7 @@ country_event = { #内阁总辞
 		mark_focus_tree_layout_dirty = yes
 		
 	}
-	option = {#荣宗敬领导的工商联成功组阁
+	option = {#荣宗敬领导的工商勇进党成功组阁
 		log = "[GetLogInfo]:event league_rebuild.12 option league_rebuild.12.b"
 		name = league_rebuild.12.b
 		set_politics = {
@@ -3268,7 +3269,7 @@ country_event = { #王克敏事件
 	}
 }
 
-country_event = { 
+country_event = { #外债
 	id = league_national.3
 	title = league_national.3.t
 	desc = league_national.3.d
@@ -3280,15 +3281,50 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.3 option league_national.3.a"
 		name = league_national.3.a
-		
+		add_political_power = 50
+		add_stability = -0.1
+		add_timed_idea = {
+			idea = LEP_defaulted_debt
+			days = 100
+		}
+		GER = {
+			add_opinion_modifier = { target = LEP modifier = KR_hates_govt }
+		}
+		add_opinion_modifier = { target = GER modifier = KR_hates_govt }
+		add_days_mission_timeout = {
+			mission = LEP_economic_recovery_ongoing
+			days = 50
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.3 option league_national.3.b"
+		name = league_national.3.b
+		add_stability = 0.1
+		add_timed_idea = {
+			idea = LEP_debt_lep
+			days = 70
+		}
+		GER = {
+			add_timed_idea = {
+				idea = LEP_debt_ger
+				days = 70
+			}
+			add_opinion_modifier = { target = LEP modifier = KR_approves_of_govt }
+		}
+		add_opinion_modifier = { target = GER modifier = KR_approves_of_govt }
+		add_days_mission_timeout = {
+			mission = LEP_economic_recovery_ongoing
+			days = -20
+		}
 	}
 }
 
-country_event = { 
+country_event = { #政团管理法
 	id = league_national.4
 	title = league_national.4.t
 	desc = league_national.4.d
-	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+	picture = GFX_report_event_CHN_china_CYP_YCP_zuo_shunsheng_chen_qitian
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3296,11 +3332,56 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.4 option league_national.4.a"
 		name = league_national.4.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.03
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_political_association_management_act_tt
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_when_act_pass
+		add_ideas = LEP_political_association_management_act_idea_1
+		hidden_effect = {
+			activate_targeted_decision = { target = LEP decision = LEP_political_association_management_act }
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.4 option league_national.4.b"
+		name = league_national.4.b
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.03
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_political_association_management_act_tt
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_when_act_pass
+		add_ideas = LEP_political_association_management_act_idea_2
+		hidden_effect = {
+			activate_targeted_decision = { target = LEP decision = LEP_political_association_management_act }
+		}
 		
 	}
 }
 
-country_event = { 
+unit_leader_event = { #民主科学社成立
 	id = league_national.5
 	title = league_national.5.t
 	desc = league_national.5.d
@@ -3312,11 +3393,32 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.5 option league_national.5.a"
 		name = league_national.5.a
-		
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		effect_tooltip = {
+			set_party_name = {
+			    ideology = social_liberal
+			    name = LEP_ZZH_party
+			    long_name = LEP_ZZH_party_long_fake
+		    }
+		}
+		hidden_effect = {
+			set_party_name = {
+			    ideology = social_liberal
+			    name = LEP_ZZH_party
+			    long_name = LEP_ZZH_party_long
+		    }
+			end_coalition = yes
+			QIE_huang_fu = {
+				unit_leader_event = { id = league_national.6 days = 2 }
+			}
+		}
 	}
 }
 
-country_event = { 
+unit_leader_event = { #国民党成立
 	id = league_national.6
 	title = league_national.6.t
 	desc = league_national.6.d
@@ -3328,11 +3430,32 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.6 option league_national.6.a"
 		name = league_national.6.a
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.05
+		}
+		effect_tooltip = {
+			set_party_name = {
+			    ideology = market_liberal
+			    name = LEP_ZXX_party
+			    long_name = LEP_ZXX_party_long_fake
+		    }
+		}
+		hidden_effect = {
+			set_party_name = {
+			    ideology = market_liberal
+			    name = LEP_ZXX_party
+			    long_name = LEP_ZXX_party_long
+		    }
+			LEP_rong_zongjing = {
+				unit_leader_event = { id = league_national.7 days = 2 }
+			}
+		}
 		
 	}
 }
 
-country_event = { 
+unit_leader_event = { #工商勇进党成立
 	id = league_national.7
 	title = league_national.7.t
 	desc = league_national.7.d
@@ -3344,6 +3467,25 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.7 option league_national.7.a"
 		name = league_national.7.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.05
+		}
+		effect_tooltip = {
+			set_party_name = {
+			    ideology = social_conservative
+			    name = LEP_JNSB_party
+			    long_name = LEP_JNSB_party_long_fake
+		    }
+		}
+
+		hidden_effect = {
+			set_party_name = {
+			    ideology = social_conservative
+			    name = LEP_JNSB_party
+			    long_name = LEP_JNSB_party_long
+		    }
+		}
 		
 	}
 }
@@ -3352,7 +3494,7 @@ country_event = {
 	id = league_national.8
 	title = league_national.8.t
 	desc = league_national.8.d
-	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+	picture = GFX_report_event_CHN_vote
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3360,7 +3502,46 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.8 option league_national.8.a"
 		name = league_national.8.a
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		hidden_effect = {
+			country_event = { id = league_national.9 days = 5 }
+		}
 		
+		
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.8 option league_national.8.b"
+		name = league_national.8.b
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		hidden_effect = {
+			country_event = { id = league_national.9 days = 5 }
+		}
+		
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.8 option league_national.8.c"
+		name = league_national.8.c
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		hidden_effect = {
+			country_event = { id = league_national.9 days = 5 }
+		}
 	}
 }
 
@@ -3368,7 +3549,7 @@ country_event = {
 	id = league_national.9
 	title = league_national.9.t
 	desc = league_national.9.d
-	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
+	picture = GFX_report_event_LEP_ma_xulun_speech
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3376,6 +3557,14 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.9 option league_national.9.a"
 		name = league_national.9.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
 		
 	}
 }
@@ -3427,7 +3616,7 @@ country_event = { #政学系
 	}
 }
 
-country_event = { #工商联
+country_event = { #工商勇进党
 	id = league_endgame.3
 	title = league_endgame.3.t
 	desc = league_endgame.3.d
@@ -4181,7 +4370,7 @@ unit_leader_event = { #激活国防动员体系
 		QIE_jiang_baili = { custom_effect_tooltip = character_becomes_a_general }
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_military_preparation_tt
-		hidden_effct = {
+		hidden_effect = {
 			add_dynamic_modifier = { modifier = LEP_military_mobilization_modifier }
 		}
 	}

@@ -3291,7 +3291,49 @@ ideas = {
 			}
 		}
 
-		
+		LEP_take_over_commissions_and_ministries_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_take_over_commissions_and_ministries_idea" }
+			picture = generic_scales
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.125
+				compliance_gain = 0.01
+			}
+		}
+
+		LEP_debt_lep = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_debt_lep" }
+			name = QIE_big_debt
+			picture = chi_hyper_inflation
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		LEP_debt_ger = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_debt_ger" }
+			name = QIE_big_debt
+			picture = chi_hyper_inflation
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+
+		LEP_defaulted_debt = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_defaulted_debt" }
+			picture = generic_democratic_opposition
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				trade_opinion_factor = -1
+			}
+		}
 	}
 	
 

@@ -2051,11 +2051,21 @@ focus_tree = {
 		allow_branch = {
 			has_country_flag = LEP_new_focus
 		}
+		completion_reward = {
+			hidden_effect = {
+				LEP_li_erkang = {
+					unit_leader_event = { id = league_military.1 days = 8 }
+				}
+				LEP_chu_fucheng = {
+					unit_leader_event = { id = league_national.5 days = 50 }
+				}
+			}
+		}
 	}
 	focus = {
 		id = LEP_take_over_commissions_and_ministries
 		
-		cost = 0
+		cost = 2
 		icon = GFX_goal_generic_parliament2
 		
 		prerequisite = {
@@ -2064,11 +2074,18 @@ focus_tree = {
 		relative_position_id = LEP_new_republic_with_old_ideals
 		x = -1
 		y = 1
+		completion_reward = {
+			add_stability = 0.03
+			add_timed_idea = {
+				idea = LEP_take_over_commissions_and_ministries_idea
+				days = 120
+			}
+		}
 	}
 	focus = {
 		id = LEP_release_political_prisoners
 		
-		cost = 0
+		cost = 2
 		icon = GFX_goal_RUS_never_another_savinkov
 		prerequisite = {
 			focus = LEP_take_over_commissions_and_ministries
@@ -2076,17 +2093,23 @@ focus_tree = {
 		relative_position_id = LEP_take_over_commissions_and_ministries
 		x = -2
 		y = 1
+		completion_reward = {
+			country_event = { id = league_national.4 days = 0 }
+		}
 	}
 	focus = {
 		id = LEP_handle_old_treaties
 		x = 0
 		y = 1
-		cost = 0
+		cost = 2
 		icon = GFX_goal_treaty_fails
 		prerequisite = {
 			focus = LEP_take_over_commissions_and_ministries
 		}
 		relative_position_id = LEP_take_over_commissions_and_ministries
+		completion_reward = {
+			country_event = { id = league_national.3 days = 0 }
+		}
 	}
 	focus = {
 		id = LEP_national_reconstruction_administration
@@ -2163,6 +2186,10 @@ focus_tree = {
 			focus = LEP_confiscate_noble_assets
 		}
 		relative_position_id = LEP_new_republic_with_old_ideals
+		completion_reward = {
+			LEP_improve_popular_support = yes
+			country_event = { id = league_national.8 days = 2 }
+		}
 	}
 	focus = {
 		id = LEP_legacy_of_southeast_mutual_protection
@@ -12088,7 +12115,7 @@ focus_tree = {
 				    value = 1
 			    }	
 			}
-			hidden_effct = {
+			hidden_effect = {
 				if = {
 				    limit = {
 					    NOT = {

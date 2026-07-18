@@ -65,6 +65,32 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.08
 			}
 		}
+
+		LEP_political_association_management_act_idea_1 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -0.01
+				stability_factor = 0.03
+				national_populist_drift = -0.01
+				totalist_drift = -0.01
+			}
+		}
+
+		LEP_political_association_management_act_idea_2 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -0.02
+				stability_factor = 0.08
+				national_populist_drift = -0.02
+				paternal_autocrat_drift = -0.01
+				totalist_drift = -0.02
+				radical_socialist_drift = -0.01
+			}
+		}
 	}
 
 	
