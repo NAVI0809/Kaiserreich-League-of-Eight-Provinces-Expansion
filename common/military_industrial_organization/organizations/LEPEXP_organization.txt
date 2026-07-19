@@ -526,7 +526,7 @@ LEP_jianqiao_organisation = { #笕桥飞机制造厂
 	available = {
 		OR = {
 			FROM = { owns_state = 596 } #杭州
-			743 = { owner = { is_subject_of = FROM } }
+			596 = { owner = { is_subject_of = FROM } }
 		}
 	}
 	equipment_type = {
