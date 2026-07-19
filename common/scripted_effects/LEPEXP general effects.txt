@@ -1106,6 +1106,16 @@ LEP_unlock_fujian_policies = {
 	unlock_mio_policy_tooltip = { policy = LEP_mio_policy_buy_out_land_holdings show_modifiers = no }
 }
 
+LEP_NSU_left = {
+	custom_effect_tooltip = LEP_NSU_left_tt
+	add_to_variable  = { LEP_NSU_direct_var = 1 }
+}
+
+LEP_NSU_right = {
+	custom_effect_tooltip = LEP_NSU_right_tt
+	add_to_variable  = { LEP_NSU_direct_var = -1 }
+}
+
 
 
 

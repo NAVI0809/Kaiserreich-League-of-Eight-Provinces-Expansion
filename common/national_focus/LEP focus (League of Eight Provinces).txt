@@ -2204,6 +2204,21 @@ focus_tree = {
 			focus = LEP_national_images_continuity
 		}
 		relative_position_id = LEP_national_images_continuity
+		completion_reward = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+			LEP_NSU_right = yes
+		}
 	}
 	focus = {
 		id = LEP_strive_towards_democratic_future
@@ -2218,6 +2233,21 @@ focus_tree = {
 			focus = LEP_national_images_continuity
 		}
 		relative_position_id = LEP_national_images_continuity
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.04
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.03
+			}
+			LEP_NSU_left = yes
+		}
 	}
 	focus = {
 		id = LEP_accelerate_military_reduction
@@ -2255,6 +2285,36 @@ focus_tree = {
 			focus = LEP_talk_more_about_issues
 		}
 		relative_position_id = LEP_talk_more_about_issues
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.03
+			}
+			QIE = {
+				QIE_zeng_qi = { CHN_recruit_character_effect = yes }
+				QIE_li_huang = {
+					CHN_recruit_character_effect = yes
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = QIE_li_huang_advisor
+							desc = QIE_li_huang_sic_desc
+							traits = { KR_pragmatic_statesman }
+						}
+					}
+				}
+			}
+			HNN = {
+				HNN_zuo_shunsheng = { CHN_recruit_character_effect = yes }
+			}
+			LEP_NSU_right = yes
+			
+			
+		}
 	}
 	focus = {
 		id = LEP_empower_the_supreme_judicial_court
@@ -2305,13 +2365,19 @@ focus_tree = {
 			focus = LEP_strive_towards_democratic_future
 		}
 		relative_position_id = LEP_legacy_of_southeast_mutual_protection
+		completion_reward = {
+			QIE = {
+				QIE_wellington_koo = { CHN_recruit_character_effect = yes }
+				QIE_bai_jianwu = { CHN_recruit_character_effect = yes }
+			}
+		}
 	}
 	focus = {
 		id = LEP_protect_private_property
 		x = 2
 		y = 1
 		cost = 0
-		icon = GFX_focus_CHI_registry_of_property
+		icon = GFX_goal_OTT_Loosen_Policy
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
 			focus = LEP_united_democratic_alliance
@@ -2319,11 +2385,11 @@ focus_tree = {
 		relative_position_id = LEP_new_beiyang_faction
 	}
 	focus = {
-		id = LEP_maintain_production_order
+		id = LEP_compile_civil_code
 		x = 2
 		y = 1
 		cost = 0
-		icon = GFX_focus_generic_steel_mill
+		icon = GFX_goal_OTT_constitution
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
 			focus = LEP_new_beiyang_faction
@@ -2335,7 +2401,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 0
-		icon = GFX_goal_china_beiyang_cooporation
+		icon = GFX_goal_collaborate_local_elites
 		prerequisite = {
 			focus = LEP_protect_private_property
 		}
@@ -2343,7 +2409,31 @@ focus_tree = {
 			focus = LEP_talk_more_about_issues
 		}
 		relative_position_id = LEP_protect_private_property
+		completion_reward = {
+			GXC = {
+				GXC_zhu_jiahua = { CHN_recruit_character_effect = yes }
+			}
+			
+		}
 	}
+	focus = {
+		id = LEP_maintain_production_order
+		x = 1
+		y = 1
+		cost = 0
+		icon = GFX_focus_generic_steel_mill
+		prerequisite = {
+			focus = LEP_protect_private_property
+		}
+		prerequisite = {
+			focus = LEP_talk_more_about_issues
+		}
+		relative_position_id = LEP_protect_private_property
+		completion_reward = {
+	
+		}
+	}
+
 	focus = {
 		id = LEP_long_trains_and_steel_horses
 		x = 0
@@ -2594,15 +2684,28 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_ally_with_local_factions
-		x = 2
+		x = 1
 		y = 1
 		cost = 0
 		icon = GFX_goal_China_twelve_symbols
 		prerequisite = {
-			focus = LEP_elite_republicanism
+			focus = LEP_maintain_production_order
 		}
-		relative_position_id = LEP_elite_republicanism
+		relative_position_id = LEP_maintain_production_order
 	}
+
+	focus = {
+		id = LEP_contact_civic_associations
+		x = -1
+		y = 1
+		cost = 0
+		icon = GFX_goal_LEP_patronize_xiangshen
+		prerequisite = {
+			focus = LEP_maintain_production_order
+		}
+		relative_position_id = LEP_maintain_production_order
+	}
+
 	focus = {
 		id = LEP_uphold_parliamentarism
 		x = 1
@@ -9861,13 +9964,6 @@ focus_tree = {
 		    focus = LEP_artillery_of_the_sea
 	    }
 		
-		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
-			has_completed_focus = LEP_artillery_of_the_sea
-		}
-
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 			owns_state = 743
@@ -11083,6 +11179,7 @@ focus_tree = {
                     hours = 12
                 }
 			}
+
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -11467,13 +11564,13 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
-			has_completed_focus = LEP_CNAF_regroup 
-			has_completed_focus = LEP_kongshu_trooper
-		}
+		#allow_branch = {
+		#	OR = {
+		#		china_is_the_unifier_of_china_trigger = yes
+		#	}
+		#	has_completed_focus = LEP_CNAF_regroup 
+		#	has_completed_focus = LEP_kongshu_trooper
+		#}
 		
 		ai_will_do = {
 			base = 30
@@ -11673,13 +11770,13 @@ focus_tree = {
 			has_deployed_air_force_size = { size > 599 }
 	    }
 
-		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
-			has_completed_focus = LEP_cult_of_aviation 
-			has_completed_focus = LEP_china_air_fleet
-		}
+		#allow_branch = {
+		#	OR = {
+		#		china_is_the_unifier_of_china_trigger = yes
+		#	}
+		#	has_completed_focus = LEP_cult_of_aviation 
+		#	has_completed_focus = LEP_china_air_fleet
+		#}
 
 		ai_will_do = {
 			base = 20
