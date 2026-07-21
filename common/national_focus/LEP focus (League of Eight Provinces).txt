@@ -8285,7 +8285,7 @@ focus_tree = {
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 20
+				LEP_max_dig_in = 10
 				tooltip = max_dig_in_tooltip
 			}
 			add_to_variable = {
@@ -8295,6 +8295,18 @@ focus_tree = {
 			add_to_variable = {
 				LEP_army_core_attack_factor = 0.05
 				tooltip = army_core_attack_factor_tooltip
+			}
+			add_to_variable = {
+				command_power_gain_mult = -0.05
+				tooltip = command_power_gain_mult_tooltip
+			}
+			add_to_variable = {
+				training_time_army_factor = 0.1
+				tooltip = training_time_army_factor_tooltip
+			}
+			add_to_variable = {
+				army_attack_factor = -0.05
+				tooltip = army_attack_factor_tooltip
 			}
 			if={
 				limit = {
@@ -8332,7 +8344,7 @@ focus_tree = {
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
-				LEP_army_org_factor = 0.1
+				LEP_army_org_factor = 0.05
 				tooltip = army_org_factor_tooltip
 			}	
 			add_to_variable = {
@@ -8340,11 +8352,11 @@ focus_tree = {
 				tooltip = training_time_army_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_dig_in_speed_factor = 0.2
+				LEP_dig_in_speed_factor = 0.1
 				tooltip = dig_in_speed_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 20
+				LEP_max_dig_in = 15
 				tooltip = max_dig_in_tooltip
 			}
 			
@@ -8548,7 +8560,7 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_experience_gain_army_unit_factor = 0.1
+				LEP_experience_gain_army_unit_factor = 0.06
 				tooltip = experience_gain_army_unit_factor_tooltip
 			}
 			add_to_variable = {
@@ -9963,6 +9975,12 @@ focus_tree = {
 		prerequisite = {
 		    focus = LEP_artillery_of_the_sea
 	    }
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_artillery_of_the_sea
+		}
 		
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
@@ -11564,13 +11582,13 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		#allow_branch = {
-		#	OR = {
-		#		china_is_the_unifier_of_china_trigger = yes
-		#	}
-		#	has_completed_focus = LEP_CNAF_regroup 
-		#	has_completed_focus = LEP_kongshu_trooper
-		#}
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_CNAF_regroup 
+			has_completed_focus = LEP_kongshu_trooper
+		}
 		
 		ai_will_do = {
 			base = 30
@@ -11770,13 +11788,13 @@ focus_tree = {
 			has_deployed_air_force_size = { size > 599 }
 	    }
 
-		#allow_branch = {
-		#	OR = {
-		#		china_is_the_unifier_of_china_trigger = yes
-		#	}
-		#	has_completed_focus = LEP_cult_of_aviation 
-		#	has_completed_focus = LEP_china_air_fleet
-		#}
+		allow_branch = {
+			OR = {
+				china_is_the_unifier_of_china_trigger = yes
+			}
+			has_completed_focus = LEP_cult_of_aviation 
+			has_completed_focus = LEP_china_air_fleet
+		}
 
 		ai_will_do = {
 			base = 20
@@ -12670,19 +12688,48 @@ focus_tree = {
 		prerequisite = { focus = LEP_disrupting_supply }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_the_pinnacle_of_chinese_soldiery"
-			custom_effect_tooltip = LEP_combine_army_ideas_tt
-			add_potential_special_forces_tree = yes
-			custom_effect_tooltip = tooltip_white_line
-			enable_tech_improved_recon_units = yes
-			custom_effect_tooltip = tooltip_white_line
-			china_add_research_slots = yes
-			hidden_effect = {
-				remove_ideas = {
-					LEP_eliteheer_9
-					LEP_engineering_corps_4
-					LEP_german_equipment_support_4
+			if = {
+				limit = {
+					LEP = {
+						NOT = {
+							has_country_flag = LEP_dem_gov
+						}
+					}
 				}
-				add_ideas = LEP_pinnacle_army
+				custom_effect_tooltip = LEP_combine_army_ideas_tt
+			    add_potential_special_forces_tree = yes
+			    custom_effect_tooltip = tooltip_white_line
+			    enable_tech_improved_recon_units = yes
+			    custom_effect_tooltip = tooltip_white_line
+			    china_add_research_slots = yes
+			    hidden_effect = {
+				    remove_ideas = {
+					    LEP_eliteheer_9
+					    LEP_engineering_corps_4
+					    LEP_german_equipment_support_4
+			    	}
+				    add_ideas = LEP_pinnacle_army
+			    }
+			}
+
+			if = {
+				limit = {
+					LEP = { has_country_flag = LEP_dem_gov }
+				}
+				custom_effect_tooltip = LEP_combine_army_ideas_2_tt
+			    add_potential_special_forces_tree = yes
+			    custom_effect_tooltip = tooltip_white_line
+			    enable_tech_improved_recon_units = yes
+			    custom_effect_tooltip = tooltip_white_line
+			    china_add_research_slots = yes
+			    hidden_effect = {
+				    remove_ideas = {
+					    LEP_eliteheer_9
+					    LEP_engineering_corps_4
+						LEP_military_industrial_cooperation
+					}	
+				    add_ideas = LEP_joint_staff
+			    }	
 			}
 		}
 		search_filters = {

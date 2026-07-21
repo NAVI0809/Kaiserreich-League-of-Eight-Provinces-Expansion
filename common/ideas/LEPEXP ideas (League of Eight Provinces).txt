@@ -7,6 +7,45 @@
 ideas = {
 	#zigai
 	country = {
+		LEP_joint_staff = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_joint_staff" }
+			name = LEP_joint_staff
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				experience_gain_infantry_combat_factor = 0.05
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+				army_org_regain = 0.05
+				recon_factor = 0.1
+				land_night_attack = 0.05
+				army_speed_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.15
+				special_forces_cap_flat = 8
+				org_loss_when_moving = -0.1
+				experience_gain_artillery_combat_factor = 0.10
+				dig_in_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
 		LEP_nanjing_airforce_6 = { 
 			on_add = { log = "[GetLogRoot]: add idea LEP_nanjing_airforce_6" }
 			name = LEP_nanjing_airforce_6
