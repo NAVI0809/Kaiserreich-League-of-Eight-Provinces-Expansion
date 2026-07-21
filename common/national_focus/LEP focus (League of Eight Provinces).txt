@@ -1016,7 +1016,9 @@ focus_tree = {
 			}
 			else_if = {
 				limit = { has_intelligence_agency = no }
-				create_intelligence_agency = yes
+				create_intelligence_agency = {
+                   name = "军事情报局"
+                }
 				upgrade_intelligence_agency = upgrade_anti_partisan
 			}
 			else_if = {
@@ -1029,7 +1031,7 @@ focus_tree = {
 			}
 			else = { add_political_power = 50 }
 			add_tech_bonus = {
-				name = QIE_flying_too_close_to_the_sun
+				name = LEP_police_reorganization
 				bonus = 2
 				uses = 1
 				category = military_police_tech
@@ -2158,7 +2160,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 0
-		icon = GFX_focus_CHI_effectivize_ground_crew_usage
+		icon = GFX_focus_generic_central_planning
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
 		}
@@ -2178,55 +2180,66 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			if = {
-				limit = {
-					has_country_flag = mid64_A
+			every_owned_state = {
+		        limit = {
+			    	OR = {
+		      			state = 592 #Guangzhou
+						state = 613 #Nanjing
+						state = 1048 #Wuhan
+						state = 1059 #Kaifeng
+					}
+					is_controlled_by_ROOT_or_subject = yes
+					free_building_slots = { building = arms_factory size > 0 include_locked = yes }
 				}
-				effect_tooltip = {
-					custom_effect_tooltip = tooltip_white_line
-       		 	    custom_effect_tooltip = available_political_advisor
-				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
-				    custom_effect_tooltip = tooltip_white_line
-				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
-				    custom_effect_tooltip = available_political_advisor
-				    show_ideas_tooltip = LEP_zhu_meixian_advisor
-				}						
+				display_individual_scopes = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
-			else_if = {
-				limit = {
-					has_country_flag = mid64_B
-				}
-				effect_tooltip = {
-				    custom_effect_tooltip = available_political_advisor
-		            show_ideas_tooltip = LEP_fang_yexian_advisor
-		            custom_effect_tooltip = tooltip_white_line
-		            custom_effect_tooltip = available_industrial_concern
-					show_ideas_tooltip = LEPEXP_CNCS_company
-				}	
-			}
-			else = {
-				custom_effect_tooltip = LEP_mid64_B_TT				
-				effect_tooltip = {
-       		 	    custom_effect_tooltip = available_political_advisor
-				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
-				    custom_effect_tooltip = tooltip_white_line
-				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
-				    custom_effect_tooltip = available_political_advisor
-				    show_ideas_tooltip = LEP_zhu_meixian_advisor
-				}
+			custom_effect_tooltip = tooltip_white_line
+			CHN_add_civilian_industry_effect = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_mid64_B_TT				
+			effect_tooltip = {
+       		 	custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip =LEP_lu_xiaobo_advisor
 				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = LEP_mid64_A_TT
-				effect_tooltip = {
-					custom_effect_tooltip = available_political_advisor
-		            show_ideas_tooltip = LEP_fang_yexian_advisor
-		            custom_effect_tooltip = tooltip_white_line
-		            custom_effect_tooltip = available_industrial_concern
-					show_ideas_tooltip = LEPEXP_CNCS_company
+				LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+				custom_effect_tooltip = available_political_advisor
+				show_ideas_tooltip = LEP_zhu_meixian_advisor
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_mid64_A_TT
+			effect_tooltip = {
+				custom_effect_tooltip = available_political_advisor
+		        show_ideas_tooltip = LEP_fang_yexian_advisor
+		        custom_effect_tooltip = tooltip_white_line
+		        custom_effect_tooltip = available_industrial_concern
+				show_ideas_tooltip = LEPEXP_CNCS_company
+			}
+			hidden_effect ={
+				if = {
+				    limit = {
+				     	has_country_flag = mid64_A
+				    }
+				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
 				}
+				if = {
+				    limit = {
+				     	has_country_flag = mid64_B
+				    }
+				    LEP_fang_yexian = { CHN_recruit_character_effect = yes }
+					set_country_flag = LEP_allow_CNCS_flag
+				}					
 			}
 			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = FROM decision = LEP_MIO_jinling_investment }
 			activate_targeted_decision = { target = FROM decision = LEP_MIO_hongqiao_investment }
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_jianqiao_investment }
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_fujian_investment }
 		}
 	}
 	focus = {
@@ -2316,7 +2329,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 0
-		icon = GFX_focus_generic_military_dictatorship
+		icon = GFX_focus_COG_force_publique_mutiny
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
 		}
@@ -2540,7 +2553,8 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 0
-		icon = GFX_goal_generic_army_high_command
+		icon = GFX_goal_China_Beiyang_Army
+		#icon = GFX_goal_generic_army_high_command
 		#icon = GFX_focus_CHI_military_mission
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
@@ -2800,7 +2814,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 0
-		icon = GFX_focus_ITA_bersaglieri
+		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = {
 			focus = LEP_preliminary_social_security
 		}

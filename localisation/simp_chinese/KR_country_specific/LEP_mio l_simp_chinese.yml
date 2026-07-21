@@ -1,5 +1,8 @@
 ﻿l_simp_chinese:
 
+ LEP_MIA_intelligence_agency: "军事情报局"
+ LEP_MIA_INTELLIGENCE_AGENCY: "军事情报局"
+
  available_high_command: "§G启用§!§Y总司令§!:"
 
  MODIFIER_XP_GAIN_NAVY: "海军经验增长"
@@ -153,7 +156,7 @@
  LEP_MIO_jinling_investment: "投资金陵兵工厂"
  LEP_MIO_hongqiao_investment: "投资上海虹桥航空工厂"
  LEP_MIO_jianqiao_investment: "投资笕桥飞机制造厂"
- LEP_MIO_fujianjian_investment: "投资$mio_fujian_organisation$"
+ LEP_MIO_fujian_investment: "投资$mio_fujian_organisation$"
  LEP_mio_investment: "投资进行中"
  LEPEXP_coal_jinling_arsenal_descison: "建设南京焦化厂"
  LEPEXP_coal_jinling_arsenal_descison_desc: "随着金陵兵工厂与南京周围各个工厂的产能不断扩大，对焦炭等炼焦化工产品的需求与日俱增，而南京周边并没有焦化设施，从国内其他地区购买焦炭或者从国外进口海运到南京又会大幅度提高成本，因此一座现代化的焦化厂建设迫在眉睫。"

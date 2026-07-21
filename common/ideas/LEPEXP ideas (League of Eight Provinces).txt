@@ -3385,7 +3385,7 @@ ideas = {
 	        allowed = { original_tag = LEP }
 			available = {
 				OR = {
-					has_completed_focus = LEP_establish_heavy_industry
+					has_completed_focus = LEP_develop_heavy_industry
 					has_country_flag = LEP_allow_CNCS_flag
 				}
 			}

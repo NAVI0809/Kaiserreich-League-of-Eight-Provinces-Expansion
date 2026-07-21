@@ -2140,7 +2140,7 @@ LEPEXP_military_defence_development_CAT = {
 	LEP_MIO_jinling_investment = { #投资金陵兵工厂
 	    icon = GFX_decision_generic_industry
 		visible = {
-			has_completed_focus = LEP_establish_heavy_industry
+			has_completed_focus = LEP_develop_heavy_industry
 			OR = {
 				owns_state = 613 #金陵
 				613 = { owner = { is_subject_of = LEP } }
@@ -2191,7 +2191,7 @@ LEPEXP_military_defence_development_CAT = {
 	LEP_MIO_hongqiao_investment = { #投资上海虹桥航空工厂
 	    icon = GFX_decision_generic_industry
 		visible = {
-			has_completed_focus = LEP_establish_heavy_industry
+			has_completed_focus = LEP_develop_heavy_industry
 			OR = {
 				owns_state = 743 #上海
 				743 = { owner = { is_subject_of = LEP } }
@@ -2242,7 +2242,7 @@ LEPEXP_military_defence_development_CAT = {
 	LEP_MIO_jianqiao_investment = { #投资笕桥飞机制造厂
 	    icon = GFX_decision_generic_industry
 		visible = {
-			has_completed_focus = LEP_establish_heavy_industry
+			has_completed_focus = LEP_develop_heavy_industry
 			OR = {
 				owns_state = 596 #杭州
 				596 = { owner = { is_subject_of = LEP } }
@@ -2294,7 +2294,7 @@ LEPEXP_military_defence_development_CAT = {
 	LEP_MIO_fujian_investment = { #投资海军飞机制造厂
 	    icon = GFX_decision_generic_industry
 		visible = {
-			has_completed_focus = LEP_establish_heavy_industry
+			has_completed_focus = LEP_develop_heavy_industry
 			OR = {
 				owns_state = 1066 
 				1066 = { owner = { is_subject_of = LEP } }
