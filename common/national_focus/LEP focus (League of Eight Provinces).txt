@@ -2168,6 +2168,68 @@ focus_tree = {
 		relative_position_id = LEP_long_trains_and_steel_horses
 	}
 	focus = {
+		id = LEP_develop_heavy_industry
+		icon = GFX_goal_industry_air
+		cost = 2.00
+		prerequisite = {
+			focus = LEP_grasp_key_resources
+		}
+		relative_position_id = LEP_grasp_key_resources
+		x = 1
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = mid64_A
+				}
+				effect_tooltip = {
+					custom_effect_tooltip = tooltip_white_line
+       		 	    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
+				    custom_effect_tooltip = tooltip_white_line
+				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+				    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip = LEP_zhu_meixian_advisor
+				}						
+			}
+			else_if = {
+				limit = {
+					has_country_flag = mid64_B
+				}
+				effect_tooltip = {
+				    custom_effect_tooltip = available_political_advisor
+		            show_ideas_tooltip = LEP_fang_yexian_advisor
+		            custom_effect_tooltip = tooltip_white_line
+		            custom_effect_tooltip = available_industrial_concern
+					show_ideas_tooltip = LEPEXP_CNCS_company
+				}	
+			}
+			else = {
+				custom_effect_tooltip = LEP_mid64_B_TT				
+				effect_tooltip = {
+       		 	    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip =LEP_lu_xiaobo_advisor
+				    custom_effect_tooltip = tooltip_white_line
+				    LEP_zhu_meixian = { CHN_recruit_character_effect = yes }
+				    custom_effect_tooltip = available_political_advisor
+				    show_ideas_tooltip = LEP_zhu_meixian_advisor
+				}
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = LEP_mid64_A_TT
+				effect_tooltip = {
+					custom_effect_tooltip = available_political_advisor
+		            show_ideas_tooltip = LEP_fang_yexian_advisor
+		            custom_effect_tooltip = tooltip_white_line
+		            custom_effect_tooltip = available_industrial_concern
+					show_ideas_tooltip = LEPEXP_CNCS_company
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_jinling_investment }
+			activate_targeted_decision = { target = FROM decision = LEP_MIO_hongqiao_investment }
+		}
+	}
+	focus = {
 		id = LEP_national_images_continuity
 		x = 0
 		y = 3
@@ -2464,7 +2526,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_war_comes_from_the_north
-		x = -6
+		x = -5
 		y = 1
 		cost = 0
 		icon = GFX_goal_generic_attack_fengtian
@@ -2487,7 +2549,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_seek_international_recognition
-		x = -2
+		x = -1
 		y = 1
 		cost = 0
 		icon = GFX_focus_generic_diplomatic_treaty
