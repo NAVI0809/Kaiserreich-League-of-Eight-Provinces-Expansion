@@ -2865,6 +2865,81 @@ LEPEXP_parliament = {
 		}
 
 	}
+
+	LEP_factory_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_social_security_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_company_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_collective_agreement_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
+	
+	LEP_land_act = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
 }
 
 LEP_national_reconstruction_bureau = {

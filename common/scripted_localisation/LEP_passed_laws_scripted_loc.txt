@@ -55,3 +55,38 @@ defined_text = {
 		localization_key = idea_desc|LEP_political_association_management_act_idea_2
 	}
 }
+
+defined_text = {
+	name = GetFactoryAct
+	text = {
+		localization_key = idea_desc|LEP_factory_act_idea
+	}
+}
+
+defined_text = {
+	name = GetSocialSecurityAct
+	text = {
+		localization_key = idea_desc|LEP_social_security_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCompanyAct
+	text = {
+		localization_key = idea_desc|LEP_company_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCollectiveAgreementAct
+	text = {
+		localization_key = idea_desc|LEP_collective_agreement_act_idea
+	}
+}
+
+defined_text = {
+	name = GetLandAct
+	text = {
+		localization_key = idea_desc|LEP_land_act_idea
+	}
+}

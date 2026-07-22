@@ -2422,12 +2422,34 @@ focus_tree = {
 		id = LEP_new_factory_law
 		x = 0
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_PRC_urbanization
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
 		}
 		relative_position_id = LEP_united_democratic_alliance
+		completion_reward = {
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_factory_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_factory_act_idea
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_factory_act }	
+			}
+		}
 	}
 	focus = {
 		id = LEP_new_beiyang_faction
@@ -2451,13 +2473,35 @@ focus_tree = {
 		id = LEP_protect_private_property
 		x = 2
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_OTT_Loosen_Policy
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
 			focus = LEP_united_democratic_alliance
 		}
 		relative_position_id = LEP_new_beiyang_faction
+		completion_reward = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_company_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_company_act_idea
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_company_act }
+			}
+		}
 	}
 	focus = {
 		id = LEP_compile_civil_code
@@ -2706,12 +2750,21 @@ focus_tree = {
 		id = LEP_liberate_working_farmers
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_CHI_students_to_the_countryside
 		prerequisite = {
 			focus = LEP_restore_infrastructure
 		}
 		relative_position_id = LEP_restore_infrastructure
+		completion_reward = {
+			custom_effect_tooltip = LEP_land_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_land_act_idea
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_land_act }
+			}
+		}
 	}
 	focus = {
 		id = LEP_public_health_system
@@ -2728,12 +2781,34 @@ focus_tree = {
 		id = LEP_preliminary_social_security
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_generic_solidarity
 		prerequisite = {
 			focus = LEP_empower_the_supreme_judicial_court
 		}
 		relative_position_id = LEP_empower_the_supreme_judicial_court
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_social_security_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_social_security_act_idea
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_social_security_act }	
+			}
+		}
 	}
 	focus = {
 		id = LEP_talk_more_about_issues
@@ -2750,13 +2825,35 @@ focus_tree = {
 		id = LEP_united_democratic_alliance
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_China_CDL
 		prerequisite = {
 			focus = LEP_strive_towards_democratic_future
 			focus = LEP_legacy_of_southeast_mutual_protection
 		}
 		relative_position_id = LEP_strive_towards_democratic_future
+		completion_reward = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_collective_agreement_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_collective_agreement_act_idea
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_collective_agreement_act }
+			}
+		}
 	}
 	focus = {
 		id = LEP_ally_with_local_factions

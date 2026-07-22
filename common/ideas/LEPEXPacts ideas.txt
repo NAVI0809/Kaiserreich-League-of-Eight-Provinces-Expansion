@@ -91,6 +91,60 @@ ideas = {
 				radical_socialist_drift = -0.01
 			}
 		}
+		
+		LEP_factory_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.025
+				production_factory_start_efficiency_factor = 0.075
+				industrial_capacity_factory = 0.025
+			}
+		}
+		
+		LEP_social_security_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.075
+				war_support_factor = 0.05
+			}
+		}
+		
+		LEP_company_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				research_speed_factor = 0.05
+			}
+		}
+		
+		LEP_collective_agreement_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.02
+				party_popularity_stability_factor = 0.1
+			}
+		}
+		
+		LEP_land_act_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = 0.025
+				consumer_goods_factor = -0.08
+				production_speed_infrastructure_factor = 0.075
+			}
+		}
 	}
 
 	
