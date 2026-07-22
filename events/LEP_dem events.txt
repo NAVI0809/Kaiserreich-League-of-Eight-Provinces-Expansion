@@ -3787,7 +3787,6 @@ unit_leader_event = { #王萼
 	option = {
 		name = league_generic.6.a
 		log = "[GetLogInfo]: event league_generic.6 option league_generic.6.a"
-		#enable_tech_marine_bonus = yes #陆战队国策给
 		add_tech_bonus = {
 			name = LEP_league_generic.6.t
 			bonus = 0.5
@@ -3799,8 +3798,7 @@ unit_leader_event = { #王萼
 			tooltip = {
 				localization_key = tooltip_create_division_template
 				NAME = "Luzhan Dui Huncheng Lü"
-				LINE_1 = { localization_key = line_battalion_tt NAME = marine ICON = GFX_unit_marine_icon_small COUNT = 4 }
-				LINE_2 = { localization_key = line_battalion_tt NAME = marine_commando  ICON = GFX_unit_marine_icon_small COUNT = 2 }
+				LINE_1 = { localization_key = line_battalion_tt NAME = marine_commando ICON = GFX_unit_marine_icon_small COUNT = 8 }
 				SUPPORT_1 = { localization_key = support_battalion_tt NAME = pioneer_support ICON = GFX_unit_engineer_icon_small }
 				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
 			}
@@ -3812,10 +3810,10 @@ unit_leader_event = { #王萼
 				name = "Luzhan Dui Huncheng Lü"
 				division_names_group = LEP_NMC_01
 				regiments = {
-					marine = { x = 0 y = 0 }
-				    marine = { x = 0 y = 1 }
-				    marine = { x = 1 y = 0 }
-				    marine = { x = 1 y = 1 }
+					marine_commando = { x = 0 y = 0 }
+				    marine_commando = { x = 0 y = 1 }
+				    marine_commando = { x = 1 y = 0 }
+				    marine_commando = { x = 1 y = 1 }
 					marine_commando = { x = 2 y = 0 }
 					marine_commando = { x = 2 y = 1 }
 				}
