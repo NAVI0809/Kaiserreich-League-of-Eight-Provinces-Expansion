@@ -2150,7 +2150,7 @@ focus_tree = {
 			add_stability = 0.05
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
-				days = -20
+				days = -100
 			}
 			LEP_improve_economic_devastation_effect = yes
 		}
@@ -2270,7 +2270,7 @@ focus_tree = {
 		id = LEP_legacy_of_southeast_mutual_protection
 		x = 13
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_industrialists
 		mutually_exclusive = {
 			focus = LEP_strive_towards_democratic_future
@@ -2280,6 +2280,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_national_images_continuity
 		completion_reward = {
+			add_stability = 0.08
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.04
@@ -2299,7 +2300,7 @@ focus_tree = {
 		id = LEP_strive_towards_democratic_future
 		x = 11
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_RUS_american_liberty
 		mutually_exclusive = {
 			focus = LEP_legacy_of_southeast_mutual_protection
@@ -2309,6 +2310,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_national_images_continuity
 		completion_reward = {
+			add_war_support = 0.1
 			add_popularity = {
 				ideology = social_democrat
 				popularity = 0.04
@@ -2339,7 +2341,7 @@ focus_tree = {
 		id = LEP_womens_rights
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_female_rights
 		prerequisite = {
 			focus = LEP_preliminary_social_security
@@ -2350,7 +2352,7 @@ focus_tree = {
 		id = LEP_nationalist_rhetoric
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_CHI_ally_the_young_china_party
 		mutually_exclusive = {
 			focus = LEP_uphold_civilian_politics
@@ -2369,9 +2371,10 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.03
 			}
+			custom_effect_tooltip = available_political_advisor
 			QIE = {
-				QIE_zeng_qi = { CHN_recruit_character_effect = yes }
-				QIE_li_huang = {
+				show_ideas_tooltip = QIE_zeng_qi_advisor
+			    QIE_li_huang = {
 					CHN_recruit_character_effect = yes
 					add_advisor_role = {
 						advisor = {
@@ -2384,30 +2387,51 @@ focus_tree = {
 				}
 			}
 			HNN = {
-				HNN_zuo_shunsheng = { CHN_recruit_character_effect = yes }
+				show_ideas_tooltip = HNN_zuo_shunsheng_advisor
 			}
 			LEP_NSU_right = yes
-			
-			
+			hidden_effect = {
+				QIE = {
+					QIE_zeng_qi = { CHN_recruit_character_effect = yes }
+				}
+				HNN = {
+					HNN_zuo_shunsheng = { CHN_recruit_character_effect = yes }
+				}
+			}
 		}
 	}
 	focus = {
 		id = LEP_empower_the_supreme_judicial_court
 		x = -2
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_court
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
 			focus = LEP_new_beiyang_faction
 		}
 		relative_position_id = LEP_united_democratic_alliance
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_timed_idea = {
+				idea = LEP_empower_the_supreme_judicial_court_idea
+				days = 120
+			}
+		}
 	}
 	focus = {
 		id = LEP_uphold_civilian_politics
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
 		mutually_exclusive = {
 			focus = LEP_nationalist_rhetoric
@@ -2417,6 +2441,31 @@ focus_tree = {
 			focus = LEP_talk_more_about_issues
 		}
 		relative_position_id = LEP_new_factory_law
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			CHI = {
+				show_ideas_tooltip = CHI_yi_peiji_advisor
+				show_ideas_tooltip = CHI_shi_cuntong_advisor
+				show_ideas_tooltip = CHI_zhang_bojun_advisor
+			}
+			LEP_NSU_left = yes
+			hidden_effect = {
+				CHI = {
+					CHI_yi_peiji = { CHN_recruit_character_effect = yes }
+					CHI_shi_cuntong = { CHN_recruit_character_effect = yes }
+					CHI_zhang_bojun = { CHN_recruit_character_effect = yes }
+				}
+			}
+		}
 	}
 	focus = {
 		id = LEP_new_factory_law
@@ -2455,7 +2504,7 @@ focus_tree = {
 		id = LEP_new_beiyang_faction
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_QIE_beijing_government
 		prerequisite = {
 			focus = LEP_legacy_of_southeast_mutual_protection
@@ -2463,9 +2512,54 @@ focus_tree = {
 		}
 		relative_position_id = LEP_legacy_of_southeast_mutual_protection
 		completion_reward = {
+			add_political_power = 30
+			add_popularity = {
+				ideology = social_conservative 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = market_liberal 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = available_political_advisor
 			QIE = {
-				QIE_wellington_koo = { CHN_recruit_character_effect = yes }
-				QIE_bai_jianwu = { CHN_recruit_character_effect = yes }
+				show_ideas_tooltip = QIE_wellington_koo_advisor
+				show_ideas_tooltip = QIE_bai_jianwu_advisor
+			}
+			hidden_effect = {
+				QIE = {
+					QIE_wellington_koo = { 
+						CHN_recruit_character_effect = yes 
+						add_advisor_role = {
+							advisor = {
+						        slot = political_advisor
+						        idea_token = QIE_wellington_koo_advisor
+						        available = {
+							        is_country_leader = no
+						        }
+						        visible = {
+							       always = yes
+						        }
+						        traits = { QIE_chinas_first_diplomat }
+					        }
+					    }
+				    }
+
+					QIE_bai_jianwu = {
+						CHN_recruit_character_effect = yes 
+						add_advisor_role = {
+							advisor = { 
+								slot = political_advisor
+								idea_token = QIE_bai_jianwu_advisor
+								traits = { QIE_wus_little_think_tank }
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2481,6 +2575,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_new_beiyang_faction
 		completion_reward = {
+			add_stability = 0.05
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.03
@@ -2498,6 +2593,10 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_when_act_pass
 			add_ideas = LEP_company_act_idea
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -100
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_company_act }
 			}
@@ -2507,19 +2606,22 @@ focus_tree = {
 		id = LEP_compile_civil_code
 		x = 2
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_OTT_constitution
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
 			focus = LEP_new_beiyang_faction
 		}
 		relative_position_id = LEP_united_democratic_alliance
+		completion_reward = {
+			custom_effect_tooltip = LEP_draft_civil_code_tt
+		}
 	}
 	focus = {
 		id = LEP_elite_republicanism
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_collaborate_local_elites
 		prerequisite = {
 			focus = LEP_protect_private_property
@@ -2529,17 +2631,52 @@ focus_tree = {
 		}
 		relative_position_id = LEP_protect_private_property
 		completion_reward = {
-			GXC = {
-				GXC_zhu_jiahua = { CHN_recruit_character_effect = yes }
+			add_political_power = 50
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
 			}
-			
+			add_popularity = {
+				ideology = market_liberal 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			GXC = {
+				show_ideas_tooltip = GXC_zhu_jiahua_advisor
+			}
+			hidden_effect = {
+				GXC = {
+					GXC_zhu_jiahua = { 
+						CHN_recruit_character_effect = yes 
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = GXC_zhu_jiahua_advisor
+								desc = GXC_zhu_jiahua_sic_desc
+								available = {
+									not_already_hired_except_as = political_advisor
+									is_country_leader = no
+								}
+								traits = { KR_technocrat }
+								cost = 150
+								ai_will_do = { base = 80 }
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = {
 		id = LEP_maintain_production_order
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_steel_mill
 		prerequisite = {
 			focus = LEP_protect_private_property
@@ -2549,7 +2686,11 @@ focus_tree = {
 		}
 		relative_position_id = LEP_protect_private_property
 		completion_reward = {
-	
+			add_stability = 0.08
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -100
+			}
 		}
 	}
 
@@ -2734,7 +2875,7 @@ focus_tree = {
 		id = LEP_empower_the_president
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_RUS_symphony_of_authorities
 		mutually_exclusive = {
 			focus = LEP_uphold_parliamentarism
@@ -2745,6 +2886,11 @@ focus_tree = {
 		}
 		
 		relative_position_id = LEP_nationalist_rhetoric
+		completion_reward = {
+			LEP_NSU_right = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_NSU_right_win_tt
+		}
 	}
 	focus = {
 		id = LEP_liberate_working_farmers
@@ -2814,12 +2960,22 @@ focus_tree = {
 		id = LEP_talk_more_about_issues
 		x = 0
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_QIE_president_hu
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
 		}
 		relative_position_id = LEP_new_beiyang_faction
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = available_political_advisor
+			QIE = {
+				show_ideas_tooltip = QIE_hu_shih_advisor
+			}
+			hidden_effect = {
+				QIE_hu_shih  = { CHN_recruit_character_effect = yes }
+			}
+		}
 	}
 	focus = {
 		id = LEP_united_democratic_alliance
@@ -2832,6 +2988,74 @@ focus_tree = {
 			focus = LEP_legacy_of_southeast_mutual_protection
 		}
 		relative_position_id = LEP_strive_towards_democratic_future
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = available_political_advisor
+			QIE = {
+				show_ideas_tooltip = QIE_shen_junru_advisor
+				show_ideas_tooltip = QIE_liu_chongyou_advisor
+			}
+			hidden_effect = {
+				QIE = {
+					QIE_shen_junru = { 
+						CHN_recruit_character_effect = yes 
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = QIE_shen_junru_advisor
+								visible = {
+									always = yes
+								}
+								traits = { KR_chief_justice }
+							}
+						}
+			   	 	}
+					QIE_liu_chongyou = {
+						CHN_recruit_character_effect = yes 
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = QIE_liu_chongyou_advisor
+								visible = {
+									always = yes
+								}
+								traits = { KR_leftist_lawyer }
+							}
+						}
+					}
+			    }
+			}
+		}
+	}
+	focus = {
+		id = LEP_ally_with_local_factions
+		x = 1
+		y = 1
+		cost = 3
+		icon = GFX_goal_China_twelve_symbols
+		prerequisite = {
+			focus = LEP_maintain_production_order
+		}
+		relative_position_id = LEP_maintain_production_order
+	}
+
+	focus = {
+		id = LEP_contact_civic_associations
+		x = -1
+		y = 1
+		cost = 3
+		icon = GFX_goal_LEP_patronize_xiangshen
+		prerequisite = {
+			focus = LEP_maintain_production_order
+		}
+		relative_position_id = LEP_maintain_production_order
 		completion_reward = {
 			add_popularity = {
 				ideology = social_conservative
@@ -2855,35 +3079,12 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = LEP_ally_with_local_factions
-		x = 1
-		y = 1
-		cost = 0
-		icon = GFX_goal_China_twelve_symbols
-		prerequisite = {
-			focus = LEP_maintain_production_order
-		}
-		relative_position_id = LEP_maintain_production_order
-	}
-
-	focus = {
-		id = LEP_contact_civic_associations
-		x = -1
-		y = 1
-		cost = 0
-		icon = GFX_goal_LEP_patronize_xiangshen
-		prerequisite = {
-			focus = LEP_maintain_production_order
-		}
-		relative_position_id = LEP_maintain_production_order
-	}
 
 	focus = {
 		id = LEP_uphold_parliamentarism
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_QIE_assembly
 		mutually_exclusive = {
 			focus = LEP_empower_the_president
@@ -2894,6 +3095,11 @@ focus_tree = {
 		}
 		
 		relative_position_id = LEP_civil_public_hearing
+		completion_reward = {
+			LEP_NSU_left = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_NSU_left_win_tt
+		}
 	}
 	focus = {
 		id = LEP_public_works_projects
@@ -2905,17 +3111,35 @@ focus_tree = {
 			focus = LEP_long_trains_and_steel_horses
 		}
 		relative_position_id = LEP_long_trains_and_steel_horses
+		completion_reward = {
+			add_manpower = -4000
+			add_one_random_civilian_factory = yes
+			set_temp_variable = { LEP_cons_var_change = 10 }
+		}
 	}
 	focus = {
 		id = LEP_audit_the_military
 		x = 1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = {
 			focus = LEP_preliminary_social_security
 		}
 		relative_position_id = LEP_preliminary_social_security
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			army_experience = -20
+			add_command_power = 25
+			retire_character = LEP_shi_yousan
+		}
 	}
 	focus = {
 		id = LEP_integrate_arsenal_factories
@@ -2932,7 +3156,7 @@ focus_tree = {
 		id = LEP_civil_public_hearing
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_AFG_parliamentary_democracy
 		prerequisite = {
 			focus = LEP_new_factory_law
@@ -4674,7 +4898,6 @@ focus_tree = {
 			set_temp_variable = { LEP_cons_var_change = 10 }
 		    LEP_cons_var = yes
 			hidden_effect = {
-
 			    country_event = { id = league_mid.38 days = 0 }
 			}
 		}

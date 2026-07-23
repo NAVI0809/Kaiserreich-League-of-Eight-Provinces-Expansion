@@ -3373,6 +3373,17 @@ ideas = {
 				trade_opinion_factor = -1
 			}
 		}
+
+		LEP_empower_the_supreme_judicial_court_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_empower_the_supreme_judicial_court_idea" }
+			picture = generic_democratic_opposition
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.01
+				compliance_gain = 0.03
+				consumer_goods_factor = -0.1
+			}
+		}
 	}
 	
 
