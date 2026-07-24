@@ -168,3 +168,21 @@ LEP_JFJ_01 = {
 		5 = { "Jiangfang Jun Di %d Shi" }
 	}
 }
+
+LEP_NG_01 = {
+	name = div_LEP_NG
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "省防军第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "省防军第%d师" }
+	}
+}

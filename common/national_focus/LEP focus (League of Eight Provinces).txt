@@ -2330,12 +2330,17 @@ focus_tree = {
 		id = LEP_accelerate_military_reduction
 		x = 1
 		y = 1
-		cost = 0
+		cost = 5
 		icon = GFX_focus_COG_force_publique_mutiny
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
 		}
 		relative_position_id = LEP_war_comes_from_the_north
+		completion_reward = {
+			army_experience = 50
+			custom_effect_tooltip = accelerate_military_reduction_tt
+			CHN_improve_military_disarray_effect = yes	
+		}
 	}
 	focus = {
 		id = LEP_womens_rights
@@ -2347,6 +2352,7 @@ focus_tree = {
 			focus = LEP_preliminary_social_security
 		}
 		relative_position_id = LEP_preliminary_social_security
+		
 	}
 	focus = {
 		id = LEP_nationalist_rhetoric
@@ -2698,12 +2704,63 @@ focus_tree = {
 		id = LEP_long_trains_and_steel_horses
 		x = 0
 		y = 1
-		cost = 0
+		cost = 5
 		icon = GFX_focus_generic_railroad
 		prerequisite = {
 			focus = LEP_economics_democratization
 		}
 		relative_position_id = LEP_economics_democratization
+		completion_reward = {
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = LEP_national_railway_corporation
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = CHN_railway_industry_organisation
+			mio:CHN_railway_industry_organisation = {
+				add_mio_size = 1
+				add_mio_funds = 800
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = ninner_railway_tt
+			hidden_effect = {
+				613 = {
+					build_railway = {
+						path = { 11913 1099 1171 11937 10044 1153 4185 4038 3992 }
+						start_state = 613 #Nanjing
+						target_state = 1044 #Nanchang
+						level = 2
+						fallback = yes
+					}
+				}
+				596 = {
+					build_railway = {
+						path = { 7191 10014 10086 11920 }
+						start_state = 596 #杭州
+						target_state = 1067 #金华
+						level = 2
+						fallback = yes
+					}
+				}
+				1067 = {
+					build_railway = {
+						path = { 11920 9944 1066 7054 }
+						start_state = 1067 #金华
+						target_state = 1044 #Nanchang
+						level = 2
+						fallback = yes
+					}
+				}
+				595 = {
+					build_railway = {
+						path = { 10012 4113 1138 10084 1006 }
+						start_state = 595 #南平
+						target_state = 1046 #龙岩
+						level = 2
+						fallback = yes
+					}
+				}
+			}
+		}
 	}
 	focus = {
 		id = LEP_confiscate_noble_assets
@@ -2726,12 +2783,21 @@ focus_tree = {
 		id = LEP_war_comes_from_the_north
 		x = -5
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_goal_generic_attack_fengtian
 		prerequisite = {
 			focus = LEP_national_images_continuity
 		}
 		relative_position_id = LEP_national_images_continuity
+		will_lead_to_war_with = FNG
+		will_lead_to_war_with = MAN
+		completion_reward = {
+			china_enable_all_demand_submission_decisions = yes
+			unlock_decision_tooltip = CHN_march_to_manchuria
+			activate_targeted_decision = { target = ROOT decision = CHN_evacuate_military_industry }
+			activate_targeted_decision = { target = ROOT decision = CHN_evacuate_civilian_industry }
+			set_variable = { CHN_evacuation_cost = 30 }
+		}
 	}
 	focus = {
 		id = LEP_national_defense_design_council
@@ -2783,13 +2849,58 @@ focus_tree = {
 		id = LEP_arm_national_guard
 		x = -1
 		y = 1
-		cost = 0
+		cost = 7
 		icon = GFX_focus_CHI_guerrilla_warfare
 		#icon = GFX_focus_ETH_freedom_at_gunpoint
 		prerequisite = {
 			focus = LEP_national_defense_design_council
 		}
 		relative_position_id = LEP_national_defense_design_council
+		completion_reward = {
+			add_ideas = LEP_national_guard_1
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "ShengFang Jun"
+					LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 3 }
+					LINE_2 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 3 }
+					LINE_3 = { localization_key = line_battalion_tt NAME = militia ICON = GFX_unit_militia_icon_small COUNT = 3 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = light_tank_recon ICON = GFX_unit_light_armor_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_4 = { localization_key = support_battalion_tt NAME = logistics_company ICON = GFX_unit_logistics_company_icon_small }
+				}
+				if = {
+					limit = { has_template = "ShengFang Jun" }
+					delete_unit_template_and_units = { division_template = "ShengFang Jun" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "ShengFang Jun"
+					division_names_group = LEP_NG_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						irregular_infantry = { x = 1 y = 0 }
+						irregular_infantry = { x = 1 y = 1 }
+						irregular_infantry = { x = 1 y = 2 }
+						militia = { x = 2 y = 0 }
+						militia = { x = 2 y = 1 }
+						militia = { x = 2 y = 2 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						light_tank_recon = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						logistics_company = { x = 0 y = 3 }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = sfj_deploy_tt
+			hidden_effect = { LEP_deploy_sfj_effect = yes }
+		}
 	}
 	focus = {
 		id = LEP_resume_higher_education
@@ -2870,6 +2981,11 @@ focus_tree = {
 			focus = LEP_seek_international_recognition
 		}
 		relative_position_id = LEP_seek_international_recognition
+		completion_reward = {
+			army_experience = 50
+			custom_effect_tooltip = accelerate_military_reduction_tt
+			CHN_improve_military_disarray_effect = yes	
+		}
 	}
 	focus = {
 		id = LEP_empower_the_president
@@ -3145,12 +3261,15 @@ focus_tree = {
 		id = LEP_integrate_arsenal_factories
 		x = 1
 		y = 1
-		cost = 0
+		cost = 6
 		icon = GFX_focus_AUS_raid_military_storages
 		prerequisite = {
 			focus = LEP_accelerate_military_reduction
 		}
 		relative_position_id = LEP_accelerate_military_reduction
+		completion_reward = {
+			CHN_build_military_industry_effect = yes
+		}	
 	}
 	focus = {
 		id = LEP_civil_public_hearing
@@ -3165,6 +3284,9 @@ focus_tree = {
 			focus = LEP_empower_the_supreme_judicial_court
 		}
 		relative_position_id = LEP_new_factory_law
+		completion_reward = {
+			custom_effect_tooltip = tooltip_white_line
+		}
 	}
 
 	focus = {
@@ -9813,24 +9935,13 @@ focus_tree = {
 				add_logistics = 1
 			}
 			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			if = {
 				limit = { has_dlc_aat = no }
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = faw_motors
 			}
-			else = {
-				if = {
-					limit = { mio:LEP_jinling_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = tooltip_white_line
-					custom_effect_tooltip = available_mio_tt
-				}
-				mio:LEP_jinling_organisation = {
-					add_mio_size = 1
-				    add_mio_funds = 400
-				}
-				
-				custom_effect_tooltip = tooltip_white_line
-				
+			else = {				
 				if = {
 					limit = { mio:CHN_transportation_industry_organisation = { is_mio_available = no } }
 					custom_effect_tooltip = tooltip_white_line
@@ -9842,7 +9953,20 @@ focus_tree = {
 					add_mio_size = 1
 					add_mio_funds = 400
 				}
+				custom_effect_tooltip = tooltip_white_line
+
+				if = {
+					limit = { mio:LEP_jinling_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = available_mio_tt
+					show_mio_tooltip = LEP_jinling_organisation
+				}
+				mio:LEP_jinling_organisation = {
+					add_mio_size = 1
+				    add_mio_funds = 400
+				}
 			}
+			custom_effect_tooltip = tooltip_dash_line
 			country_event = { id = league_mid.65 days = 2 } #罐头厂 flavor
 		}
 	}

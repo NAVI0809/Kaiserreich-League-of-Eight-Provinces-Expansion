@@ -127,6 +127,231 @@ LEP_pb4y_effect = {
 		
 }
 
+LEP_deploy_sfj_effect = {
+	#华东五省
+	if = {
+		limit = {
+			owns_state = 613
+			owns_state = 598
+			owns_state = 1047
+			owns_state = 606
+			owns_state = 596
+			owns_state = 1067
+			owns_state = 746
+			owns_state = 747
+			owns_state = 1046
+			owns_state = 1044
+		}
+		613 = {
+			create_unit = {
+				division = "name = \"省防军-南京守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		598 = {
+			create_unit = {
+				division = "name = \"省防军-江苏师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1047 = {
+			create_unit = {
+				division = "name = \"省防军-徐州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		606 = {
+			create_unit = {
+				division = "name = \"省防军-安徽师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		596 = {
+			create_unit = {
+				division = "name = \"省防军-浙江师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1067 = {
+			create_unit = {
+				division = "name = \"省防军-金华守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		746 = {
+			create_unit = {
+				division = "name = \"省防军-宁波守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		747 = {
+			create_unit = {
+				division = "name = \"省防军-福州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1046 = {
+			create_unit = {
+				division = "name = \"省防军-福建师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1044 = {
+			create_unit = {
+				division = "name = \"省防军-江西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#华南
+	if = {
+		limit = {
+			owns_state = 592 #广东
+			owns_state = 594 #广西
+			owns_state = 591 #海南
+			owns_state = 325 #云南
+			owns_state = 1051 #贵州
+			owns_state = 605 #四川
+			owns_state = 650 #重庆
+			owns_state = 601 #川边
+			owns_state = 602 #湖南
+		}
+		592 = {
+			create_unit = {
+				division = "name = \"省防军-广东师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		594 = {
+			create_unit = {
+				division = "name = \"省防军-广西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		591 = {
+			create_unit = {
+				division = "name = \"省防军-海南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		325 = {
+			create_unit = {
+				division = "name = \"省防军-云南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		816 = {
+			create_unit = {
+				division = "name = \"省防军-大理守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1051 = {
+			create_unit = {
+				division = "name = \"省防军-贵州师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		605 = {
+			create_unit = {
+				division = "name = \"省防军-四川师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		605 = {
+			create_unit = {
+				division = "name = \"省防军-成都守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		650 = {
+			create_unit = {
+				division = "name = \"省防军-重庆守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		601 = {
+			create_unit = {
+				division = "name = \"省防军-川边守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		601 = {
+			create_unit = {
+				division = "name = \"省防军-西康守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		602 = {
+			create_unit = {
+				division = "name = \"省防军-湖南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#华北
+	if = {
+		limit = {
+			owns_state = 597 #山东
+			owns_state = 1059 #开封
+			owns_state = 607 #洛阳
+			owns_state = 1072 #山西
+			owns_state = 1048 #武汉
+			owns_state = 799 #西安
+			owns_state = 608 #北京
+		}
+		597 = {
+			create_unit = {
+				division = "name = \"省防军-山东师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1059 = {
+			create_unit = {
+				division = "name = \"省防军-河南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		607 = {
+			create_unit = {
+				division = "name = \"省防军-洛阳守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1072 = {
+			create_unit = {
+				division = "name = \"省防军-山西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1048 = {
+			create_unit = {
+				division = "name = \"省防军-湖北师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		799 = {
+			create_unit = {
+				division = "name = \"省防军-陕西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		608= {
+			create_unit = {
+				division = "name = \"省防军-北京警备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1062 = {
+			create_unit = {
+				division = "name = \"省防军-保定守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#酌情西北与东北
+}
+
 #zigai
 
 LEP_rescue_industry = {
