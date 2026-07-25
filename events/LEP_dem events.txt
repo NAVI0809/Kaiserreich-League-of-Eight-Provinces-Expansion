@@ -3206,11 +3206,14 @@ country_event = { #解放北京
     option = {
 		log = "[GetLogInfo]: event league_national.1 option league_national.1.a"
 		name = league_national.1.a
+		set_country_flag = LEP_new_focus
 		LEP_setup_economic_devastation_effect = yes
 		LEP_setup_military_disarray_effect = yes
 		activate_mission = LEP_economic_recovery_ongoing
 		activate_mission = LEP_military_reorganization_ongoing
+		add_ideas = CHN_national_illiteracy1_idea
 		complete_national_focus = LEP_new_republic_with_old_ideals
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 

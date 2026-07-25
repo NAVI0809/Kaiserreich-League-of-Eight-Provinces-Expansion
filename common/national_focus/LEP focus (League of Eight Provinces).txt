@@ -994,6 +994,12 @@ focus_tree = {
 		relative_position_id = LEP_rebuild_administrative_system
 		x = -1
 		y = 1
+		completion_reward = {
+			add_political_power = 80
+			SZC = {
+				SZC_reduce_famine_medium = yes
+			}
+		}
 	}
 
 	
@@ -1055,9 +1061,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LEP_administrative_rectification3
-				add_idea = LEP_administrative_rectification4m
+			add_timed_idea = {
+				days = 120
+				idea = LEP_administrative_rectification3
 			}
 			LEP_strengthen_ZXX_small = yes
 		}
@@ -1098,9 +1104,20 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = LEP_administrative_rectification2
-				add_idea = LEP_administrative_rectification3
+			if = {
+				limit = {
+					has_idea = LEP_administrative_rectification3
+				}
+				modify_timed_idea = {
+					idea = LEP_administrative_rectification3
+					days = 120
+				}
+			}
+			else = {
+				add_timed_idea = {
+					days = 120
+					idea = LEP_administrative_rectification3
+				}
 			}
 			LEP_strengthen_ZXX_small = yes
 		}
@@ -1121,7 +1138,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_when_act_pass
 			add_ideas = LEP_provincial_county_organization_act_idea
-			LEP_strengthen_JNSB_small = yes
+			LEP_strengthen_ZXX_small = yes
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_provincial_county_organization_act }
@@ -2936,6 +2953,14 @@ focus_tree = {
 			focus = LEP_economics_democratization
 		}
 		relative_position_id = LEP_economics_democratization
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = CHN_national_illiteracy1_idea
+				}
+				remove_ideas = CHN_national_illiteracy1_idea
+			}
+		}
 	}
 	focus = {
 		id = LEP_stockpile_logistics_supplies
@@ -5293,7 +5318,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_professional_training
+			add_timed_idea = {
+				days = 180
+				idea = LEP_professional_training
+			}
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 			set_temp_variable = { LEP_cons_var_change = 2 }
@@ -5316,7 +5344,10 @@ focus_tree = {
 		x = 0
 		y = 7
 		completion_reward = {
-			add_ideas = LEP_southeast_prosperity
+			add_timed_idea = {
+				days = 180
+				idea = LEP_southeast_prosperity
+			}
 		}
 
 	}

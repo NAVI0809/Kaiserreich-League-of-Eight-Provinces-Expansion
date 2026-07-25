@@ -1972,10 +1972,13 @@ LEP_devastated_national_econ4_idea: "稳定的国民经济"
 LEP_recovering_national_econ_idea: "发展的国民经济"
 LEP_recovering_national_econ2_idea: "复兴的国民经济"
 LEP_recovering_national_econ3_idea: "繁荣的国民经济"
+LEP_improve_economic_devastation_effect_incomplete: "国民经济已恢复"
 LEP_military_disarray_idea1: "未开始军事编遣"
 LEP_military_disarray_idea2: "军事编遣进行中"
 LEP_military_disarray_idea3: "军事编遣进行中"
 LEP_military_disarray_idea4: "已完成军事编遣"
+LEP_improve_military_reorganization_effect_incomplete: "军事编遣已完成"
+
 LEP_national_illiteracy1_idea: "国民文盲"
 LEP_national_illiteracy1_idea: "部分教育空白"
 
