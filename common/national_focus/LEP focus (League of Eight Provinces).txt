@@ -2337,6 +2337,10 @@ focus_tree = {
 		}
 		relative_position_id = LEP_war_comes_from_the_north
 		completion_reward = {
+			set_temp_variable = { LEP_mili_var_change = 1 }
+			LEP_mili_var = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			army_experience = 50
 			custom_effect_tooltip = accelerate_military_reduction_tt
 			CHN_improve_military_disarray_effect = yes	
@@ -2857,6 +2861,10 @@ focus_tree = {
 		}
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
+			set_temp_variable = { LEP_mili_var_change = 3 }
+			LEP_mili_var = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			add_ideas = LEP_national_guard_1
 			custom_effect_tooltip = tooltip_white_line
 			custom_override_tooltip = {
@@ -2878,6 +2886,7 @@ focus_tree = {
 				division_template = {
 					name = "ShengFang Jun"
 					division_names_group = LEP_NG_01
+					is_locked = yes
 					regiments = {
 						infantry = { x = 0 y = 0 }
 						infantry = { x = 0 y = 1 }
@@ -2899,7 +2908,16 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = sfj_deploy_tt
-			hidden_effect = { LEP_deploy_sfj_effect = yes }
+			hidden_effect = { 
+				LEP_deploy_sfj_effect = yes 
+				activate_targeted_decision = { target = FROM decision = LEPEXP_sfj_deployment }
+				activate_targeted_decision = { target = FROM decision = LEPEXP_sfj_remove }
+			}
+			custom_effect_tooltip = tooltip_white_line
+			unlock_decision_tooltip = LEPEXP_sfj_deployment
+			unlock_decision_tooltip = LEPEXP_sfj_remove
+			set_country_flag = sfj_allowd_remove_flag
+			set_country_flag = sfj_deploy_flag	
 		}
 	}
 	focus = {
@@ -2970,6 +2988,20 @@ focus_tree = {
 			focus = LEP_integrate_arsenal_factories
 		}
 		relative_position_id = LEP_integrate_arsenal_factories
+		completion_reward = {
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_planning_speed = 0.15
+				tooltip = planning_speed_tooltip
+			}
+			add_to_variable = {
+				LEP_max_planning_factor = 0.1
+				tooltip = max_planning_factor_tooltip
+			}
+		}
 	}
 	focus = {
 		id = LEP_industrial_technology_transfer
@@ -3268,6 +3300,10 @@ focus_tree = {
 		}
 		relative_position_id = LEP_accelerate_military_reduction
 		completion_reward = {
+			set_temp_variable = { LEP_mili_var_change = 1 }
+			LEP_mili_var = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			CHN_build_military_industry_effect = yes
 		}	
 	}

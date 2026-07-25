@@ -1360,6 +1360,75 @@ LEP_liberation_of_asia_category = {
 }
 
 LEPEXP_military_defence_development_CAT = {
+	LEPEXP_sfj_deployment = {
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no } #
+
+		available = { #goal
+			NOT = {
+				has_country_flag = sfj_deploy_flag		
+			}
+		}
+
+		visible = {
+			has_completed_focus = LEP_arm_national_guard
+		}
+
+		custom_cost_text = LEP_CP_50_PP_10
+		custom_cost_trigger = {
+			NOT = { has_political_power < 10 }
+			NOT = { command_power < 50 }
+		}
+
+		is_good = no
+		days_remove = 180
+		days_re_enable = 30
+		priority = 500
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEPEXP_sfj_deployment"
+			set_country_flag = sfj_allowd_remove_flag
+		} 
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_sfj_deployment"
+			LEP_decision_add_sfj_effect = yes
+			set_country_flag = sfj_deploy_flag
+		}
+		fixed_random_seed = no
+	}
+	LEPEXP_sfj_remove = {
+		icon = GFX_decision_decision_generic_chinese_officers
+
+		allowed = { always = no } #manually activated
+
+		visible = {
+			has_completed_focus = LEP_arm_national_guard
+		}
+
+		available = { #goal
+		    has_completed_focus = LEP_arm_national_guard
+		    has_country_flag = sfj_allowd_remove_flag
+		}
+
+		is_good = no
+		priority = 500
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_sfj_remove"
+			LEP_remove_sfj_effect = yes
+		    clr_country_flag = sfj_deploy_flag
+			clr_country_flag = sfj_allowd_remove_flag
+			if = {
+				limit = { has_idea = LEP_national_guard_1 }
+				swap_ideas = {
+					remove_idea = LEP_national_guard_1	
+			        add_idea = LEP_national_guard_2
+				}
+			}			
+		}
+		fixed_random_seed = no
+	}
 	LEPEXP_east_coast_defence_readyness = {
 		icon = generic_military
 
@@ -1377,6 +1446,8 @@ LEPEXP_military_defence_development_CAT = {
 		is_good = no
 		days_mission_timeout = 720
 		priority = 200
+		fire_only_once = yes
+		cost = 50
 
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout LEPEXP_east_coast_defence_readyness"

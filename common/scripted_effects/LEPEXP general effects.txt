@@ -127,6 +127,70 @@ LEP_pb4y_effect = {
 		
 }
 
+LEP_remove_sfj_effect = {
+	if = {
+		limit = { has_template = "ShengFang Jun" }
+		delete_unit_template_and_units = { division_template = "ShengFang Jun" disband = yes } #no cheating
+	}
+}
+
+LEP_decision_add_sfj_effect = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_create_division_template
+			NAME = "ShengFang Jun"
+			LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 3 }
+			LINE_2 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 3 }
+			LINE_3 = { localization_key = line_battalion_tt NAME = militia ICON = GFX_unit_militia_icon_small COUNT = 3 }
+			SUPPORT_1 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+			SUPPORT_2 = { localization_key = support_battalion_tt NAME = light_tank_recon ICON = GFX_unit_light_armor_icon_small }
+			SUPPORT_3 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+			SUPPORT_4 = { localization_key = support_battalion_tt NAME = logistics_company ICON = GFX_unit_logistics_company_icon_small }
+		}
+		if = {
+			limit = { has_template = "ShengFang Jun" }
+			delete_unit_template_and_units = { division_template = "ShengFang Jun" disband = yes } #no cheating
+		}
+		division_template = {
+			name = "ShengFang Jun"
+			division_names_group = LEP_NG_01
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				irregular_infantry = { x = 1 y = 0 }
+				irregular_infantry = { x = 1 y = 1 }
+				irregular_infantry = { x = 1 y = 2 }
+				militia = { x = 2 y = 0 }
+				militia = { x = 2 y = 1 }
+				militia = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				light_tank_recon = { x = 0 y = 1 }
+				engineer = { x = 0 y = 2 }
+				logistics_company = { x = 0 y = 3 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_idea = LEP_national_guard_2
+		}
+		swap_ideas = {
+		    remove_idea = LEP_national_guard_2
+		    add_idea = LEP_national_guard_1
+	    }
+	}
+	custom_effect_tooltip = tooltip_white_line
+	custom_effect_tooltip = sfj_deploy_tt
+	custom_effect_tooltip = sfj_180_days_tt
+	hidden_effect = {
+		LEP_deploy_sfj_effect = yes
+	}	
+}
+
 LEP_deploy_sfj_effect = {
 	#华东五省
 	if = {
