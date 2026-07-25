@@ -696,13 +696,6 @@ LEP_recruit_PAC_endgame_advisors_effect = {
 
 LEP_dem_unification_effect = {
 	set_cosmetic_tag = united_china
-	if = {
-		limit = { 
-			NOT = {
-				has_country_flag = LEP_NSU_win 
-			}
-		}
-	}
 	country_event = { id = league_generic.1 days = 3 }
 }
 
