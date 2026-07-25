@@ -168,4 +168,20 @@ can_withdraw_4_cons_var = {
 	}
 }
 
+LEP_NSU_direct_var_JGH_win = {
+	check_variable = {
+		var = LEP_NSU_direct_var
+		value = 1
+		compare = greater_than_or_equals
+	}
+}
+
+LEP_NSU_direct_var_JXH_win = {
+	check_variable = {
+		var = LEP_NSU_direct_var
+		value = -1
+		compare = less_than_or_equals
+	}
+}
+
 

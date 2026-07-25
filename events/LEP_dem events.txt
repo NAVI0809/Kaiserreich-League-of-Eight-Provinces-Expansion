@@ -3114,47 +3114,22 @@ country_event = { #团结联盟解散
     option = {
 		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.a"
 		name = league_rebuild.16.a
-		complete_national_focus = LEP_from_national_salvation_to_state_building
-		set_politics = {
-			ruling_party = social_democrat
+		trigger = {
+			has_government = social_democrat
 		}
+		complete_national_focus = LEP_from_national_salvation_to_state_building
 	}
 	option = {
 		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.b"
 		name = league_rebuild.16.b
-		complete_national_focus = LEP_order_and_efficiency
-		set_politics = {
-			ruling_party = authoritarian_democrat
+		trigger = {
+			has_government = authoritarian_democrat
 		}
+		complete_national_focus = LEP_order_and_efficiency
 	}
 }
 
-country_event = { #团结联盟解散
-	id = league_rebuild.16
-	title = league_rebuild.16.t
-	desc = league_rebuild.16.d
-	picture = GFX_report_event_CHN_china_five_colour_confrence
 
-	is_triggered_only = yes
-	fire_only_once = yes
-
-    option = {
-		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.a"
-		name = league_rebuild.16.a
-		complete_national_focus = LEP_from_national_salvation_to_state_building
-		set_politics = {
-			ruling_party = social_democrat
-		}
-	}
-	option = {
-		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.b"
-		name = league_rebuild.16.b
-		complete_national_focus = LEP_order_and_efficiency
-		set_politics = {
-			ruling_party = authoritarian_democrat
-		}
-	}
-}
 
 country_event = { 
 	id = league_rebuild.17
@@ -3572,21 +3547,99 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #全国选举
 	id = league_national.10
 	title = league_national.10.t
-	desc = league_national.10.d
+	desc = league_national.10.desc
 	picture = GFX_report_event_CHN_China_five_colour_beijing_forbidden_city_speech
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
+	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.a"
 		name = league_national.10.a
-		
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}	
+		set_country_flag = LEP_DSP_win
+		complete_national_focus = LEP_DSP
+		mark_focus_tree_layout_dirty = yes
 	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.10 option league_national.10.b"
+		name = league_national.10.b
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		set_country_flag = LEP_ZXX_win
+		complete_national_focus = LEP_succession_of_the_regency_cabinet
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.10 option league_national.10.c"
+		name = league_national.10.c
+		
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"	
+		}
+		set_country_flag = LEP_JNSB_win
+		complete_national_focus = LEP_GSL
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.10 option league_national.10.d"
+		name = league_national.10.d
+		trigger = {
+			LEP_NSU_direct_var_JGH_win = yes
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+			
+		}
+		set_country_flag = LEP_NSU_win
+		complete_national_focus = LEP_solidarity_union
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.10 option league_national.10.e"
+		name = league_national.10.e
+		trigger = {
+			LEP_NSU_direct_var_JXH_win = yes
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 48
+		    elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+			
+		}
+		set_country_flag = LEP_NSU_win
+		complete_national_focus = LEP_solidarity_union
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	
 }
+
+	
+
 
 ##各路线特有事件
 country_event = { #民主科学社

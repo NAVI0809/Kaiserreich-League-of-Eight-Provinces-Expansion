@@ -1264,10 +1264,7 @@ ideas = {
 			allowed = { always = no }
 		
             modifier = {
-				mobilization_speed = 0.10
 				conscription = 0.002
-                industrial_capacity_factory = 0.1       # 民用工厂建造速度 +10%
-                local_resources_factor = 0.05           # 本地资源产出 +5%
                 population_growth = 0.02                # 人口增长率 +2%
                 stability_factor = 0.02
 				research_speed_factor = 0.05
@@ -2886,7 +2883,7 @@ ideas = {
 				}
 			}
 			modifier = {
-				industrial_capacity_factory = 0.2
+				industrial_capacity_factory = 0.08
 				industrial_capacity_dockyard = 0.1  
 			}
 			equipment_bonus = {
@@ -2904,7 +2901,7 @@ ideas = {
 				}
 			}
 			targeted_modifier = {
-				tag = CAN
+				tag = ENT
 				cic_to_target_factor = 0.15
 			}
 		}

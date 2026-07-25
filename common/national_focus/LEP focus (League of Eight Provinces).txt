@@ -107,6 +107,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_north_south_west"
 			add_command_power = 25
 			country_event = league_events.19
+			hidden_effect = {
+				country_event = { id = league_war_events.19 days = 10 }
+			}
 		}
 	}
 
@@ -409,9 +412,6 @@ focus_tree = {
 			}
 
 			LEP_rescue_industry = yes
-			hidden_effect = {
-				country_event = { id = league_war_events.19 days = 15 }
-			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -669,8 +669,9 @@ focus_tree = {
 				activate_targeted_decision = { target = LEP decision = LEP_organization_act }
 				recruit_character = LEP_Nanking_parliament
 				activate_advisor = LEP_Nanking_parliament
-				country_event = { id = league_mid.31 days = 3 }
+				country_event = { id = league_mid.31 days = 5 }
 				country_event = { id = league_mid.32 days = 35 }
+				country_event = { id = league_mid.11 days = 3 }
 				
 			}
 		}
@@ -2064,7 +2065,7 @@ focus_tree = {
 	focus = {
 		id = LEP_new_republic_with_old_ideals
 		x = 15
-		y = 14
+		y = 7
 		cost = 0
 		icon = GFX_focus_CHI_restore_the_old_republic
 		allow_branch = {
@@ -3077,8 +3078,6 @@ focus_tree = {
 		relative_position_id = LEP_nationalist_rhetoric
 		completion_reward = {
 			LEP_NSU_right = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_NSU_right_win_tt
 		}
 	}
 	focus = {
@@ -3286,9 +3285,48 @@ focus_tree = {
 		relative_position_id = LEP_civil_public_hearing
 		completion_reward = {
 			LEP_NSU_left = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_NSU_left_win_tt
+			
 		}
+	}
+	focus = {
+		id = LEP_new_election
+		x = 2
+		y = 1
+		cost = 3
+		icon = GFX_goal_generic_elections
+		available = { china_is_the_unifier_of_china_trigger = yes }
+		prerequisite = {
+			focus = LEP_uphold_parliamentarism
+			focus = LEP_empower_the_president
+		}
+		relative_position_id = LEP_uphold_parliamentarism
+		completion_reward = {
+			country_event = { id = league_national.10 days = 0 }
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					LEP_NSU_direct_var_JGH_win = yes
+				}
+				custom_effect_tooltip = LEP_NSU_left_win_tt
+			}
+			if = {
+				limit = {
+					LEP_NSU_direct_var_JXH_win = yes
+				}
+				custom_effect_tooltip = LEP_NSU_right_win_tt
+			}
+			else_if = {
+				limit = {
+					AND = {
+						LEP_NSU_direct_var_JXH_win = no
+						LEP_NSU_direct_var_JGH_win = no
+					}
+				}
+				custom_effect_tooltip = LEP_NSU_no_one_win_tt
+			}
+			
+		}
+
 	}
 	focus = {
 		id = LEP_public_works_projects
@@ -3371,7 +3409,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_social_liberal
 		cost = 4.00
 		x = 15
-		y = 15
+		y = 18
 		allow_branch = {
 			has_country_flag = LEP_DSP_win
 		}
@@ -3623,7 +3661,10 @@ focus_tree = {
 		x = 2
 		y = 2
 		completion_reward = {
-			add_ideas = LEP_beat_swords_into_plowshares
+			add_timed_idea = {
+				idea = LEP_beat_swords_into_plowshares
+				days = 180
+			}
 		}
 
 	}
@@ -3674,7 +3715,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_market_liberal
 		cost = 4.00
 		x = 15
-		y = 15
+		y = 18
 		allow_branch = {
 			has_country_flag = LEP_ZXX_win
 		}
@@ -3786,16 +3827,24 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			show_ideas_tooltip = YUN_zhang_qun_advisor
+			custom_effect_tooltip = available_political_advisor
+			
 			YUN = {
-				YUN_zhang_qun = {
-					set_nationality = ROOT
-				}
-				YUN_yang_yongtai = {
-					set_nationality = ROOT
-				}
-				YUN_li_genyuan = {
-					set_nationality = ROOT
+				show_ideas_tooltip = YUN_zhang_qun_advisor
+				show_ideas_tooltip = YUN_yang_yongtai_advisor
+				YUN_li_genyuan  = { custom_effect_tooltip = character_becomes_a_general }
+			}
+			hidden_effect = {
+				YUN = {
+					YUN_zhang_qun = {
+						CHN_recruit_character_effect = yes 
+					}
+					YUN_yang_yongtai = {
+						CHN_recruit_character_effect = yes 
+					}
+					YUN_li_genyuan = {
+						CHN_recruit_character_effect = yes 
+					}
 				}
 			}
 		}
@@ -3954,7 +4003,7 @@ focus_tree = {
 		icon = GFX_goal_ideology_social_conservative
 		cost = 4.00
 		x = 15
-		y = 15
+		y = 18
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		allow_branch = {
 			has_country_flag = LEP_JNSB_win
@@ -4076,7 +4125,11 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			remove_ideas = LEP_disappointment1
+			custom_effect_tooltip = available_political_advisor
 			FNG = {
+				show_ideas_tooltip = FNG_wang_yitang_advisor
+			}
+			hidden_effect = {
 				FNG_wang_yitang = { CHN_recruit_character_effect = yes }
 			}
 		}
@@ -4119,7 +4172,14 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_exploit_the_european_war_idea
+			add_timed_idea = {
+				idea = LEP_exploit_the_european_war_idea
+				days = 720
+			}
+			add_opinion_modifier = { target = ENT modifier = KR_approves_of_govt }
+			ENT = {
+				add_opinion_modifier = { target = LEP modifier = KR_approves_of_govt }
+			}
 		}
 
 	}
@@ -4254,7 +4314,7 @@ focus_tree = {
 		icon = GFX_goal_ARM_united_and_ready
 		cost = 0
 		x = 15
-		y = 15
+		y = 18
 		allow_branch = {
 			has_country_flag = LEP_NSU_win
 		}
@@ -4283,6 +4343,9 @@ focus_tree = {
 		id = LEP_proclaim_the_state_of_extraordinary_administration
 		icon = GFX_goal_NFA_end_parliamentarism
 		cost = 4.00
+		available = {
+			has_government = authoritarian_democrat
+		}
 		prerequisite = {
 			focus = LEP_financial_rectification
 		}
@@ -4303,6 +4366,9 @@ focus_tree = {
 		id = LEP_protect_democracy_procedure
 		icon = GFX_goal_RUS_streamline_autonomies
 		cost = 4.00
+		available = {
+			has_government = social_democrat
+		}
 		prerequisite = {
 			focus = LEP_financial_rectification
 		}
@@ -4361,6 +4427,9 @@ focus_tree = {
 		id = LEP_restrict_inflammatory_propaganda
 		icon = GFX_focus_generic_ban_right_wing
 		cost = 4.00
+		available = {
+			has_government = authoritarian_democrat
+		}
 		prerequisite = {
 			focus = LEP_press_regulation_bill_draft
 		}
@@ -4381,6 +4450,9 @@ focus_tree = {
 		id = LEP_encourage_freedom_discussion
 		icon = GFX_goal_KTG_Elections
 		cost = 4.00
+		available = {
+			has_government = social_democrat
+		}
 		prerequisite = {
 			focus = LEP_press_regulation_bill_draft
 		}
@@ -4417,7 +4489,6 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			country_event = { id = league_rebuild.16 days = 0 }
-			remove_dynamic_modifier = { modifier = LEP_conflict_and_struggle }
 		}
 
 	}
@@ -4783,7 +4854,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_centralized_unification
+			add_timed_idea = {
+				idea = LEP_centralized_unification
+				days = 270
+			}
 		}
 
 	}
@@ -5074,8 +5148,6 @@ focus_tree = {
 			}
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			add_one_random_military_factory = yes
 			add_one_random_military_factory = yes
 			country_event = { id = league_mid.66 days = 1 } #蔡司
 		}
@@ -5163,7 +5235,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_urban_expansion2
+			add_timed_idea = {
+				days = 120
+				idea = LEP_urban_expansion2
+			}
 			add_one_random_civilian_factory = yes
 			if = {
 				limit = { owns_state = 613 }

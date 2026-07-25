@@ -148,7 +148,161 @@ LEPEXP_DEBUG_CAT = {
 		}
 	}
 
-		LEP_add_dem_consensus_power_balance = {
+	LEP_load_ZZH_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_DSP_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_DSP_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_remove_ZZH_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_DSP_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_DSP_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_load_ZXX_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_ZXX_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_ZXX_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_remove_ZXX_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_ZXX_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_ZXX_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_load_JNSB_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_JNSB_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_JNSB_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+
+	LEP_remove_JNSB_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_JNSB_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_JNSB_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_load_NSU_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_NSU_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_NSU_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+
+	LEP_remove_NSU_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_NSU_win
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_NSU_win
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	LEP_add_dem_consensus_power_balance = {
 		fire_only_once = no
 		cost = 0
 		visible = {
