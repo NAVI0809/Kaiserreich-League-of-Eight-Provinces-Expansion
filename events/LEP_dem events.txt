@@ -31,7 +31,6 @@ country_event = { #封锁闽海?
 	picture = GFX_report_event_CHN_china_pinghai_cruiser
 	desc = league_war_events.19.d
 
-	hidden = yes
 	fire_only_once = yes
 	is_triggered_only = yes
 
