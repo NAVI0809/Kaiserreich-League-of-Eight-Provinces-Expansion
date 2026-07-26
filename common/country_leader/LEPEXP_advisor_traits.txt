@@ -108,7 +108,7 @@ leader_traits = {
 	}
 
 	LEPEXP_psychology_practitioner = { #心理学实践者
-	    sprite = 14
+	    sprite = 12
 
 		research_speed_factor = 0.03
 		compliance_gain = 0.04
