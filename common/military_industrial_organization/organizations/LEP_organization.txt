@@ -11,18 +11,11 @@ LEP_krupp_tank_organisation = {
 	name = krupp_ost_asien
 	icon = GFX_idea_krupp
 	allowed = { original_tag = LEP }
-	visible = {
-		NOT = {
-			has_character_flag = LEP_dem_gov
-		}
-	}
 	available = {
 		GER = { NOT = { has_war_with = FROM } }
-		NOT = {
-			has_character_flag = LEP_dem_gov
+		LEP = {
+			has_country_flag = LEP_is_pro_GER
 		}
-		
-		
 	}
 	on_design_team_assigned_to_tech = {
 		GER = { add_cic = 100 }

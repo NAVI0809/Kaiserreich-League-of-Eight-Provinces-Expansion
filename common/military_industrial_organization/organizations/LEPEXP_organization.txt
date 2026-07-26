@@ -1598,6 +1598,7 @@ LEP_jinling_organisation = { #金陵兵工厂（步兵装备与火炮工厂）
 		position = { x = 1 y = 0 }
 
 		limit_to_equipment_type = { 
+			infantry_equipment
 			artillery_equipment 
 			rocket_artillery_equipment 
 			anti_tank_equipment
