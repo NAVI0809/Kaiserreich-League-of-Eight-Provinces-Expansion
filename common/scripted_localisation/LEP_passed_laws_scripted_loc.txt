@@ -90,3 +90,25 @@ defined_text = {
 		localization_key = idea_desc|LEP_land_act_idea
 	}
 }
+
+defined_text = {
+	name = GetCivilCode
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_1
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_1
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_2
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_2
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_3
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_3
+	}
+}

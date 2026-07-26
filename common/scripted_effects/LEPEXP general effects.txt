@@ -1410,6 +1410,30 @@ LEP_NSU_right = {
 	add_to_variable  = { LEP_NSU_direct_var = -1 }
 }
 
+LEP_change_back_civil_clothes = {
+	custom_effect_tooltip = LEP_change_back_civil_clothes_tt
+	hidden_effect = {
+		LEP_chu_fucheng = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_chu_fucheng_civilian_large }
+			}
+		}
+
+		LEP_rong_zongjing = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_rong_zongjing_civilian_large }
+			}
+		}
+
+		QIE_huang_fu = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_QIE_huang_fu_civilian_large }
+			}
+		}
+	}
+
+}
+
 
 
 

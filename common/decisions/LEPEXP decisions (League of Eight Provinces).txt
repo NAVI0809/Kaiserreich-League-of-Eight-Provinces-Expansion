@@ -1020,431 +1020,6 @@ LEP_stride_towards_unification = {
     }
 }
 
-LEP_republican_administration = {
-	LEP_ZZH_decision = {
-		icon = GFX_social_liberal_texticon
-		priority = 500
-		available = { always = no }
-	}
-
-	LEP_hold_provincial_council = {
-		icon = GFX_decision_SOV_place_hq
-		priority = 499
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_autonomy_outline
-		}
-		visible = {
-			has_completed_focus = LEP_autonomy_outline
-		}
-		modifier = {
-			social_democrat_drft = 0.01
-			social_liberal_drift = 0.03
-			market_liberal_drift = 0.01
-			social_conservative_drift = 0.01
-		}
-		
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-
-	}
-	LEP_develop_local_education = {
-		icon = GFX_decision_generic_research
-		priority = 498
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_southeast_autonomy_academy
-		}
-		visible = {
-			has_completed_focus = LEP_southeast_autonomy_academy
-		}
-		modifier = {
-			research_speed_factor = 0.05
-		}
-
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-
-		complete_effect = {
-			LEP_strengthen_ZZH_small = yes
-		}
-	}
-
-	LEP_grassroots_autonomy_propaganda = {
-		icon = GFX_decision_generic_speech
-		priority = 497
-		cost = 50
-		days_remove = 5
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.05
-			}
-		}
-	}
-	LEP_rectify_party_discipline = {
-		icon = GFX_decision_SWI_dismiss_council
-		priority = 496
-		cost = 50
-		days_remove = 5
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.05
-			}
-		}
-	}
-	LEP_public_opinion_offensive = {
-		icon = GFX_decision_hol_radio_oranje
-		priority = 495
-		custom_cost_trigger = {
-			has_stability > 0.10
-		}
-		custom_cost_text = LEP_decision_cost_stb_3
-		cost = 50
-		days_remove = 15
-		days_re_enable = 10
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			social_liberal_drift = 0.01
-		}
-
-		complete_effect = {
-			add_stability = -0.03
-		}
-
-		
-	}
-	LEP_release_political_prisoners = {
-		icon = GFX_decision_freedom
-		priority = 494
-		days_remove = 5
-		days_re_enable = 15
-		custom_cost_trigger = {
-			has_stability > 0.10
-		}
-		custom_cost_text = LEP_decision_cost_stb_3
-		cost = 50
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		complete_effect = {
-			add_stability = -0.03
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.03
-			}
-			add_popularity = {
-				ideology = totalist
-				popularity = 0.01
-			}
-			add_popularity = {
-				ideology = syndicalist
-				popularity = 0.01
-			}
-			add_popularity = {
-				ideology = radical_socialist
-				popularity = 0.01
-			}
-			add_popularity = {
-				ideology = paternal_autocrat
-				popularity = 0.01
-			}
-			add_popularity = {
-				ideology = national_populist
-				popularity = 0.01
-			}
-		}
-	}
-
-	LEP_ZXX_decision = {
-		icon = GFX_market_liberal_texticon
-		priority = 450
-		available = { always = no }
-	}
-	LEP_salt_customs_special_supervision = {
-		icon = GFX_decision_hol_attract_foreign_investors
-		priority = 449
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_administrative_system
-		}
-		visible = {
-			has_completed_focus = LEP_administrative_system
-		}
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-
-		modifier = {
-			consumer_goods_factor = -0.15
-		}
-		complete_effect = {
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.04
-			}
-		}
-	}
-
-	LEP_crack_down_on_local_corruption = {
-		icon = GFX_decision_generic_arrest
-		priority = 448
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_board_of_audit
-		}
-		visible = {
-			has_completed_focus = LEP_board_of_audit
-		}
-
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-
-		modifier = {
-			political_power_factor = -0.15
-		}
-
-		complete_effect = {
-			add_stability = 0.05
-			add_manpower = -20
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.04
-			}
-		}
-	}
-
-	LEP_rectify_warzone_order = {
-		icon = GFX_decision_generic_protection
-		priority = 447
-		cost = 50
-		days_remove = 20
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			command_power_gain = 0.75
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.04
-			}
-		}
-	}
-	LEP_dispatch_inspection_commissioners = {
-		icon = GFX_decision_SWI_expand_covert_operations
-		priority = 446
-		cost = 50
-		days_remove = 20
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			political_power_factor = 0.05
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.04
-			}
-		}
-	}
-	LEP_national_defense_mobilization = {
-		icon = GFX_decision_generic_military
-		priority = 445
-		custom_cost_trigger = {
-			has_stability > 0.10
-		}
-		custom_cost_text = LEP_decision_cost_stb_3
-		cost = 50
-		days_remove = 50
-		days_re_enable = 5
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			mobilization_laws_cost_factor = -0.33
-			mobilization_speed = 0.25
-			dig_in_speed_factor = 0.20
-
-		}
-
-		complete_effect = {
-			add_stability = -0.03
-			add_popularity = {
-				ideology = market_liberal
-				popularity = 0.04
-			}
-		}
-	}
-
-	LEP_JNSB_decision = {
-		icon = GFX_social_conservative_texticon
-		priority = 400
-		available = { always = no }
-	}
-	LEP_local_industry_protection = {
-		icon = GFX_decision_generic_merge_plant_materiel
-		priority = 399
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_livelihood_equality
-		}
-		visible = {
-			has_completed_focus = LEP_livelihood_equality
-		}
-		modifier = {
-			production_factory_start_efficiency_factor = 0.1
-		}
-		complete_effect = {
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.04
-			}
-		}
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-	}
-	LEP_relax_chamber_commerce_autonomy = {
-		icon = GFX_decision_give_cash
-		priority = 398
-        allowed = {
-            tag = LEP
-		}
-		available = {
-			has_completed_focus = LEP_Commercial_Freedom
-		}
-		visible = {
-			has_completed_focus = LEP_Commercial_Freedom
-		}
-		modifier = {
-			industrial_capacity_factory = 0.05
-		}
-		complete_effect = {
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.04
-			}
-		}
-        cost = 20
-        days_remove = 30
-		days_re_enable = 10
-	}
-
-
-	LEP_engage_business_networks = {
-		icon = GFX_decision_generic_political_discourse
-		priority = 397
-		cost = 50
-		days_remove = 15
-		days_re_enable = 5
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			trade_laws_cost_factor = -0.33
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.04
-			}
-		}
-	}
-	LEP_coordinate_material_supply = {
-		icon = GFX_decision_generic_consumer_goods
-		priority = 396
-		cost = 50
-		days_remove = 20
-		days_re_enable = 5
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		modifier = {
-			consumer_goods_factor = -0.15
-		}
-
-		complete_effect = {
-			add_stability = 0.03
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.04
-			}
-		}
-	}
-	LEP_call_for_tax_relief = {
-		icon = GFX_decision_cash_flow
-		priority = 395
-		custom_cost_trigger = {
-			has_stability > 0.10
-		}
-		custom_cost_text = LEP_decision_cost_stb_3
-		cost = 50
-		days_remove = 5
-		days_re_enable = 15
-
-		visible = {
-			has_completed_focus = LEP_new_republic_old_ideals
-		}
-
-		complete_effect = {
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.04
-			}
-		}
-	}
-}
 
 LEP_liberation_of_asia_category = {
 	LEP_liberation_war_decision = {
@@ -3165,6 +2740,21 @@ LEPEXP_parliament = {
 		}
 
 	}
+
+	LEP_civil_code = {
+		icon = ger_mefo_bills
+		available = {
+			always = no
+		}
+		allowed = { always = no }
+		fire_only_once = no
+		cost = 0
+
+		visible = {
+			has_country_flag = LEP_chowcase_laws_on
+		}
+
+	}
 }
 
 LEP_national_reconstruction_bureau = {
@@ -3640,5 +3230,167 @@ LEP_national_reconstruction_bureau = {
 			596 = { increase_state_category_by_two_levels = yes }
 		}
 
+	}
+}
+
+LEPEXP_gov = {
+	LEP_hold_provincial_council = {
+		icon = GFX_decision_SOV_place_hq
+		priority = 499
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_autonomy_outline
+		}
+		visible = {
+			has_completed_focus = LEP_autonomy_outline
+		}
+		modifier = {
+			social_democrat_drft = 0.01
+			social_liberal_drift = 0.03
+			market_liberal_drift = 0.01
+			social_conservative_drift = 0.01
+		}
+		
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+	}
+
+	LEP_develop_local_education = {
+		icon = GFX_decision_generic_research
+		priority = 498
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_southeast_autonomy_academy
+		}
+		visible = {
+			has_completed_focus = LEP_southeast_autonomy_academy
+		}
+		modifier = {
+			research_speed_factor = 0.05
+		}
+
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		complete_effect = {
+			LEP_strengthen_ZZH_small = yes
+		}
+	}
+
+	LEP_salt_customs_special_supervision = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		priority = 449
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_rebuild_administrative_system
+		}
+		visible = {
+			has_completed_focus = LEP_rebuild_administrative_system
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			consumer_goods_factor = -0.15
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+
+	LEP_crack_down_on_local_corruption = {
+		icon = GFX_decision_generic_arrest
+		priority = 448
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_administrative_inspector
+		}
+		visible = {
+			has_completed_focus = LEP_administrative_inspector
+		}
+
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+
+		modifier = {
+			political_power_factor = -0.15
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			add_manpower = -20
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.04
+			}
+		}
+	}
+
+	LEP_local_industry_protection = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		priority = 399
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		visible = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		modifier = {
+			production_factory_start_efficiency_factor = 0.1
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
+	}
+
+	LEP_relax_chamber_commerce_autonomy = {
+		icon = GFX_decision_give_cash
+		priority = 398
+        allowed = {
+            tag = LEP
+		}
+		available = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		visible = {
+			has_completed_focus = LEP_livelihood_equality
+		}
+		modifier = {
+			industrial_capacity_factory = 0.05
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.04
+			}
+		}
+        cost = 20
+        days_remove = 30
+		days_re_enable = 10
 	}
 }

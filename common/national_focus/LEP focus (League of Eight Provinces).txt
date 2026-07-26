@@ -2079,6 +2079,9 @@ focus_tree = {
 				LEP_chu_fucheng = {
 					unit_leader_event = { id = league_national.5 days = 50 }
 				}
+				remove_dynamic_modifier = { modifier = LEP_ZZH_influence_modifier }
+				remove_dynamic_modifier = { modifier = LEP_JNSB_influence_modifier }
+				remove_dynamic_modifier = { modifier = LEP_ZXX_influence_modifier }
 			}
 		}
 	}
@@ -2282,6 +2285,20 @@ focus_tree = {
 		completion_reward = {
 			LEP_improve_popular_support = yes
 			country_event = { id = league_national.8 days = 2 }
+			hidden_effect = {
+				LEP_Nanking_parliament = {
+					add_advisor_role = {
+						advisor = {
+							slot = second_in_command
+							idea_token = LEP_Nanking_parliament
+							traits = { KR_elected_congress_sic }
+							cost = 0
+							can_be_fired = no
+						}
+					}
+				}
+				
+			}
 		}
 	}
 	focus = {
@@ -2643,6 +2660,44 @@ focus_tree = {
 		relative_position_id = LEP_united_democratic_alliance
 		completion_reward = {
 			custom_effect_tooltip = LEP_draft_civil_code_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_civil_code_tt
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_when_act_pass
+			if = {
+				limit = {
+					has_government = social_liberal
+				}
+				add_ideas = LEP_civil_code_idea_1
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = market_liberal
+				}
+				add_ideas = LEP_civil_code_idea_2
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.05
+				}
+			}
+			if = {
+				limit = {
+					has_government = social_conservative
+				}
+				add_ideas = LEP_civil_code_idea_3
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.05
+				}
+			}
+			hidden_effect = {
+				activate_targeted_decision = { target = LEP decision = LEP_civil_code }	
+			}
+			
 		}
 	}
 	focus = {
@@ -2984,18 +3039,68 @@ focus_tree = {
 		id = LEP_propaganda_offensive
 		x = 1
 		y = 1
-		cost = 4
+		cost = 1
 		icon = GFX_focus_generic_printing_press
 		prerequisite = {
 			focus = LEP_national_defense_design_council
 		}
+		available = {
+			has_war_with = JAP
+		}
 		relative_position_id = LEP_national_defense_design_council
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LEP_new_election
+					}
+					has_country_leader = { character = LEP_chu_fucheng }
+				}
+				custom_effect_tooltip = LEP_change_army_clothes_tt
+				custom_effect_tooltip = tooltip_white_line
+				hidden_effect = {
+					LEP_chu_fucheng = {
+						unit_leader_event = { id = league_mid.26 }
+					}
+				}
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LEP_new_election
+					}
+					has_country_leader = { character = QIE_huang_fu }
+				}
+				custom_effect_tooltip = LEP_change_army_clothes_tt
+				custom_effect_tooltip = tooltip_white_line
+				hidden_effect = {
+					QIE_huang_fu = {
+						unit_leader_event = { id = league_mid.25 }
+					}
+				}
+			
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = LEP_new_election
+					}
+					has_country_leader = { character = LEP_rong_zongjing }
+				}
+				custom_effect_tooltip = LEP_change_army_clothes_tt
+				custom_effect_tooltip = tooltip_white_line
+				hidden_effect = {
+					unit_leader_event = { id = league_mid.27 }
+				}
+			}
+		}
 	}
 	focus = {
 		id = LEP_appeal_for_international_support
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_league_of_nations
 		prerequisite = {
 			focus = LEP_seek_international_recognition
@@ -3299,6 +3404,7 @@ focus_tree = {
 			focus = LEP_uphold_parliamentarism
 			focus = LEP_empower_the_president
 		}
+		
 		relative_position_id = LEP_uphold_parliamentarism
 		completion_reward = {
 			country_event = { id = league_national.10 days = 0 }
@@ -3324,6 +3430,8 @@ focus_tree = {
 				}
 				custom_effect_tooltip = LEP_NSU_no_one_win_tt
 			}
+			custom_effect_tooltip = tooltip_white_line
+			LEP_change_back_civil_clothes = yes
 			
 		}
 
