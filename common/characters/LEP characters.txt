@@ -771,6 +771,267 @@ characters = {
 		#}
 	}
 
+	#余家菊
+	LEP_yu_jiaju = {
+		name = LEP_yu_jiaju
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_yu_jiaju_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_yu_jiaju_advisor_desc
+			idea_token = LEP_yu_jiaju_advisor
+			traits = { KR_nationalist_firebrand }
+		}
+	}
+
+	#张耀增
+	LEP_zhang_yaozeng = {
+		name = LEP_zhang_yaozeng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_zhang_yaozeng_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_zhang_yaozeng_advisor_desc
+			idea_token = LEP_zhang_yaozeng_advisor
+			traits = { LEPEXP_minister_justice }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZXX_small = yes
+				}
+			}
+		}
+	}
+
+	#王吉言
+	LEP_wang_jiyan = {
+		name = LEP_wang_jiyan
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_wang_jiyan_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_wang_jiyan_advisor_desc
+			idea_token = LEP_wang_jiyan_advisor
+			traits = { KR_pragmatic_statesman }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZXX_small = yes
+				}
+			}
+		}
+	}
+
+	#谷钟秀
+	LEP_gu_zhongxiu = {
+		name = LEP_gu_zhongxiu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_gu_zhongxiu_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_gu_zhongxiu_advisor_desc
+			idea_token = LEP_gu_zhongxiu_advisor
+			traits = { LEPEXP_hydrologist }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZXX_small = yes
+				}
+			}
+		}
+	}
+
+	#梁希
+	LEP_liang_xi = {
+		name = LEP_liang_xi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_liang_xi_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_liang_xi_advisor_desc
+			idea_token = LEP_liang_xi_advisor
+			traits = { KR_resource_industrialist }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#卢于道
+	LEP_lu_yudao = {
+		name = LEP_lu_yudao
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_lu_yudao_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_lu_yudao_advisor_desc
+			idea_token = LEP_lu_yudao_advisor
+			traits = { KR_gentleman_polymath }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#潘菽
+	LEP_pan_shu = {
+		name = LEP_pan_shu
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_pan_shu_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_pan_shu_advisor_desc
+			idea_token = LEP_pan_shu_advisor
+			traits = { LEPEXP_psychology_practitioner }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#吴藻溪
+	LEP_wu_zaoxi = {
+		name = LEP_wu_zaoxi
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_wu_zaoxi_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_wu_zaoxi_advisor_desc
+			idea_token = LEP_wu_zaoxi_advisor
+			traits = { LEPEXP_humble_educator }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#殷汝骊
+	LEP_yin_ruli = {
+		name = LEP_yin_ruli
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_yin_ruli_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_yin_ruli_advisor_desc
+			idea_token = LEP_yin_ruli_advisor
+			traits = { LEPEXP_fiscal_reformer }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}
+		}
+	}
+
+	#许德珩
+	LEP_xu_deheng = {
+		name = LEP_xu_deheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_xu_deheng_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_xu_deheng_advisor_desc
+			idea_token = LEP_xu_deheng_advisor
+			traits = { LEPEXP_king_of_cotton_yarn }
+			#on_add = {
+				#FROM = {
+					#LEP_strengthen_ZZH_small = yes
+					#LEP_strengthen_JNSB_small = yes
+				#}
+			#}	
+		}
+	}
+
+	#荣德生
+	LEP_rong_desheng = {
+		name = LEP_rong_desheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_rong_desheng_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_rong_desheng_advisor_desc
+			idea_token = LEP_rong_desheng_advisor
+			traits = { LEPEXP_king_of_cotton_yarn }
+			on_add = {
+				FROM = {
+					LEP_strengthen_JNSB_small = yes
+				}
+				if = {
+					limit = {
+						LEP_rong_zongjing = { is_political_advisor = yes }
+					}
+					add_political_power = 100
+				}
+				else_if = {
+					limit = {
+						has_country_leader = { character = LEP_rong_zongjing }
+					}
+					add_political_power = 200
+					#最好加一个leader技能 以后做
+				}
+			}
+		}
+	}
+
+	#虞洽卿
+	LEP_yu_qiaqing = {
+		name = LEP_yu_qiaqing
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_yu_qiaqing_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_yu_qiaqing_advisor_desc
+			idea_token = LEP_yu_qiaqing_advisor
+			traits = { LEPEXP_doubletitle_champion }
+			on_add = {
+				FROM = {
+					LEP_strengthen_JNSB_small = yes
+				}
+			}
+		}
+	}
+
     #方液仙
 	LEP_fang_yexian = {
 		name = LEP_fang_yexian
@@ -786,7 +1047,7 @@ characters = {
 			traits = { LEPEXP_king_of_chemical_industry }
 			on_add = {
 				FROM = {
-					LEP_strengthen_ZZH_small = yes
+					LEP_strengthen_JNSB_small = yes
 				}
 			}
 		}
@@ -1968,7 +2229,7 @@ characters = {
 			}
 		}
 		scientist = {
-			traits = { scientist_trait_aircraft_specialist scientist_trait_fast_learner }
+			traits = { scientist_trait_aircraft_specialist scientist_trait_helicopter_expert scientist_trait_fast_learner }
 			skills = { specialization_air = 2 }
 		}
 	}

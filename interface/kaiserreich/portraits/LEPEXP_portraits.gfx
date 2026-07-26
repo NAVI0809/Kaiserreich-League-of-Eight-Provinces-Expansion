@@ -83,7 +83,59 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_xu_huansheng_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_xu_huansheng_army_small.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yu_qiaqing_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yu_qiaqing_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_rong_desheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_rong_desheng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_deheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xu_deheng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yin_ruli_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yin_ruli_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_zaoxi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wu_zaoxi_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_pan_shu_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_pan_shu_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_yudao_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_lu_yudao_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liang_xi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_liang_xi_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_gu_zhongxiu_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_gu_zhongxiu_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_jiyan_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_jiyan_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhang_yaozeng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhang_yaozeng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yu_jiaju_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yu_jiaju_civilian_small.png"
+	}
 	#zigai 
+	spriteType = {
+		name = "GFX_portrait_ANQ_sa_benxin_scientist_large"
+		texturefile = "gfx/leaders/LEP/ANQ_sa_benxin_scientist_large.png"
+	}
 	spriteType = {
 		name = "GFX_portrait_LEP_xing_zhennan_army_large"
 		texturefile = "gfx/leaders/LEP/LEP_xing_zhennan_army_large.png"
