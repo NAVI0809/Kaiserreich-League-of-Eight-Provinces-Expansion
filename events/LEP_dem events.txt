@@ -19,9 +19,8 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		QIE_huang_fu = {
-			unit_leader_event = { id = league_national.6 days = 0 }
-		}
+		set_temp_variable = { LEP_mili_var_change = 100 }
+		LEP_mili_var = yes
 	}
 }
 
@@ -3181,10 +3180,23 @@ country_event = { #解放北京
 		name = league_national.1.a
 		set_country_flag = LEP_new_focus
 		LEP_setup_economic_devastation_effect = yes
+		custom_effect_tooltip = tooltip_white_line
 		LEP_setup_military_disarray_effect = yes
+		custom_effect_tooltip = tooltip_white_line
 		activate_mission = LEP_economic_recovery_ongoing
 		activate_mission = LEP_military_reorganization_ongoing
-		add_ideas = CHN_national_illiteracy1_idea
+		custom_effect_tooltip = tooltip_white_line
+		if = {
+			limit = {
+				has_completed_focus = LEP_compulsory_education
+			}
+			custom_effect_tooltip = LEP_improve_national_illiteracy_tt
+			add_ideas = LEP_national_illiteracy2_idea
+		}
+		else = {
+			add_ideas = LEP_national_illiteracy1_idea
+		}
+		custom_effect_tooltip = tooltip_white_line
 		complete_national_focus = LEP_new_republic_with_old_ideals
 		mark_focus_tree_layout_dirty = yes
 	}

@@ -962,6 +962,11 @@ LEP_add_to_ECT = {
 LEP_mili_var = {
 	custom_effect_tooltip = LEP_add_mili_var_tt
 	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+	clamp_variable = {
+		var = military_mobilization_var
+		min = 0
+		max = 100
+	}
 }
 
 LEP_cons_var = {
@@ -1073,7 +1078,6 @@ LEP_setup_military_disarray_effect = {
 				remove_idea = LEP_military_disarray_idea2
 				add_idea = LEP_military_disarray_idea1
 			}
-			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
 		}
 		else_if = {
 			limit = { has_idea = LEP_military_disarray_idea3 }
@@ -1083,13 +1087,11 @@ LEP_setup_military_disarray_effect = {
 				remove_idea = LEP_military_disarray_idea3
 				add_idea = LEP_military_disarray_idea2
 			}
-			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
 		}
 		else = {
 			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
 			set_country_flag = LEP_improve_military_reorganization_effect_incomplete
 			add_ideas = LEP_military_disarray_idea3
-			add_to_variable = { CHN_military_disarray_fixes_needed_var = 1 }
 		}
 	}
 	else = {
@@ -1097,7 +1099,6 @@ LEP_setup_military_disarray_effect = {
 		set_country_flag = LEP_setup_military_disarray_normal_flag
 		set_country_flag = LEP_improve_military_reorganization_effect_incomplete
 		add_ideas = LEP_military_disarray_idea1
-		set_variable = { CHN_military_disarray_fixes_needed_var = 3 }
 	}
 	mark_focus_tree_layout_dirty = yes
 }

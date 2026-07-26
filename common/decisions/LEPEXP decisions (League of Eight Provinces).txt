@@ -2151,10 +2151,10 @@ military_mobilization_category ={
 		}
 
 		fire_only_once = no
-		cost = 20
+		cost = 50
 		days_remove = 30
 
-		days_re_enable = 5
+		days_re_enable = 15
 
 		complete_effect = {
 			set_temp_variable = { LEP_mili_var_change = 5 }
@@ -2178,7 +2178,7 @@ military_mobilization_category ={
 		}
 
 		complete_effect = {
-			set_temp_variable = { LEP_mili_var_change = 10 }
+			set_temp_variable = { LEP_mili_var_change = 4 }
 			LEP_mili_var = yes
 		}
 	}
@@ -2189,17 +2189,21 @@ military_mobilization_category ={
 		available = {
 
 		}
+		visible = {
+			has_completed_focus = LEP_stockpile_logistics_supplies
+		}
 		
 		fire_only_once = no
 		cost = 20
 		days_remove = 30
+		days_re_enable = 50
 
 		modifier = {
 			consumer_goods_factor = -0.15
 		}
 
 		complete_effect = {
-			set_temp_variable = { LEP_mili_var_change = 10 }
+			set_temp_variable = { LEP_mili_var_change = 8 }
 			LEP_mili_var = yes
 		}
 	}
@@ -2208,6 +2212,9 @@ military_mobilization_category ={
 		icon = generic_confiscation
 		available = {
 
+		}
+		visible = {
+			has_completed_focus = LEP_stockpile_logistics_supplies
 		}
 		
 		fire_only_once = no
@@ -2220,7 +2227,7 @@ military_mobilization_category ={
 		}
 
 		complete_effect = {
-			set_temp_variable = { LEP_mili_var_change = 8 }
+			set_temp_variable = { LEP_mili_var_change = 3 }
 			LEP_mili_var = yes
 		}
 	}
@@ -2229,6 +2236,9 @@ military_mobilization_category ={
 		icon = generic_consumer_goods
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
+		}
+		visible = {
+			has_completed_focus = LEP_stockpile_logistics_supplies
 		}
 		
 		fire_only_once = no
@@ -2277,6 +2287,9 @@ military_mobilization_category ={
 		available = {
 
 		}
+		visible = {
+			has_completed_focus = LEP_industrial_technology_transfer
+		}
 		
 		fire_only_once = no
 		cost = 20
@@ -2292,16 +2305,15 @@ military_mobilization_category ={
 			LEP_mili_var = yes
 		}
     }
-
-    
-    
-
-    
+ 
 
     LEP_domestic_uniform_materials = {
 		icon = GFX_decision_decision_generic_chinese_officers
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
+		}
+		visible = {
+			has_completed_focus = LEP_accelerate_military_reduction
 		}
 		
 		fire_only_once = yes
@@ -2320,7 +2332,11 @@ military_mobilization_category ={
 				amount = 50
 				producer = LEP
 			}
-			set_temp_variable = { LEP_mili_var_change = -2 }
+			add_days_mission_timeout = {
+				mission = LEP_military_reorganization_ongoing
+				days = -50
+			}
+			set_temp_variable = { LEP_mili_var_change = 2 }
 			LEP_mili_var = yes
 		}
     }
@@ -2329,6 +2345,9 @@ military_mobilization_category ={
 		icon = generic_trucks
 		available = {
 			num_of_civilian_factories_available_for_projects > 3
+		}
+		visible = {
+			has_completed_focus = LEP_integrate_arsenal_factories
 		}
 
 		modifier = {
@@ -2348,7 +2367,7 @@ military_mobilization_category ={
 				amount = 150
 				producer = LEP
 			}
-			set_temp_variable = { LEP_mili_var_change = -3 }
+			set_temp_variable = { LEP_mili_var_change = -5 }
 			LEP_mili_var = yes
 		}
     }
@@ -2357,6 +2376,9 @@ military_mobilization_category ={
 		icon = GFX_decision_tank
 		available = {
 
+		}
+		visible = {
+			has_completed_focus = LEP_integrate_arsenal_factories
 		}
 		
 		fire_only_once = no
@@ -2373,7 +2395,7 @@ military_mobilization_category ={
 		}
 
 		complete_effect = {
-			set_temp_variable = { LEP_mili_var_change = -3 }
+			set_temp_variable = { LEP_mili_var_change = -5 }
 			LEP_mili_var = yes
 		}
     }
@@ -2382,6 +2404,9 @@ military_mobilization_category ={
 		icon = generic_reorganize_irregulars
 		available = {
 
+		}
+		visible = {
+			has_completed_focus = LEP_accelerate_military_reduction
 		}
 		
 		fire_only_once = yes
@@ -2431,12 +2456,23 @@ military_mobilization_category ={
 		available = {
 
 		}
+		visible = {
+			has_completed_focus = LEP_stockpile_logistics_supplies
+		}
 		
 		fire_only_once = no
-		cost = 20
+		cost = 50
+		days_remove = 50
+		days_re_enable = 20
+
+		modifier = {
+			factory_energy_consumption = -0.15
+			fuel_gain_factor = 0.1
+		}
 
 		complete_effect = {
-
+			set_temp_variable = { LEP_mili_var_change = -5 }
+			LEP_mili_var = yes
 		}
     }
 
@@ -2447,10 +2483,17 @@ military_mobilization_category ={
 		}
 		
 		fire_only_once = yes
-		cost = 20
+		cost = 50
+		days_remove = 50
+		days_re_enable = 20
+		modifier = {
+			production_factory_start_efficiency_factor = 0.075
+		}
 
 		complete_effect = {
-
+			add_stability = -0.05
+			set_temp_variable = { LEP_mili_var_change = 3 }
+			LEP_mili_var = yes
 		}
     }
 
@@ -2459,12 +2502,22 @@ military_mobilization_category ={
 		available = {
 
 		}
+		visible = {
+			has_completed_focus = LEP_industrial_technology_transfer
+		}
 		
 		fire_only_once = no
 		cost = 20
+		days_remove = 50
+		days_re_enable = 20
+		modifier = {
+			production_factory_efficiency_gain_factor = -0.03
+			research_speed_factor = -0.02
+		}
 
 		complete_effect = {
-
+			set_temp_variable = { LEP_mili_var_change = 3 }
+			LEP_mili_var = yes
 		}
 	}
 	military_mobilization_daily_add = {

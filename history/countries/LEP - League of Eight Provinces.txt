@@ -154,9 +154,8 @@ recruit_character = LEP_wu_zaoxi
 recruit_character = LEP_pan_shu
 recruit_character = LEP_lu_yudao
 recruit_character = LEP_liang_xi 
-recruit_character = LEP_gu_zhongxiu
-recruit_character = LEP_wang_jiyan
-recruit_character = LEP_zhang_yaozeng
+
+
 recruit_character = LEP_yu_jiaju
 
 ### Generals ###
@@ -277,6 +276,20 @@ LEP_fang_benren = {
 	retire = yes
 }
 LEP_chien_shiung_wu = {
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+
+LEP_zhang_yaozeng = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+LEP_wang_jiyan = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+
+LEP_gu_zhongxiu = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }

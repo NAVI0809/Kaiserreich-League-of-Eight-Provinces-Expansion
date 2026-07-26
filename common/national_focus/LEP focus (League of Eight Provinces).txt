@@ -736,6 +736,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_ideas = LEP_autonomy_outline_idea
+			
 			unlock_decision_tooltip = LEP_hold_provincial_council
 			LEP_strengthen_ZZH_small = yes
 			
@@ -997,8 +998,15 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_political_power = 80
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_gu_zhongxiu_advisor
+			custom_effect_tooltip = tooltip_white_line
 			SZC = {
 				SZC_reduce_famine_medium = yes
+			}
+			hidden_effect = {
+				recruit_character = LEP_gu_zhongxiu
 			}
 		}
 	}
@@ -1120,7 +1128,14 @@ focus_tree = {
 					idea = LEP_administrative_rectification3
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_wang_jiyan_advisor
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZXX_small = yes
+			hidden_effect = {
+				recruit_character = LEP_wang_jiyan
+			}
 		}
 	}
 	focus = {
@@ -2372,13 +2387,17 @@ focus_tree = {
 		}
 		relative_position_id = LEP_war_comes_from_the_north
 		completion_reward = {
-			set_temp_variable = { LEP_mili_var_change = 1 }
+			set_temp_variable = { LEP_mili_var_change = 2 }
 			LEP_mili_var = yes
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_dash_line
 			army_experience = 50
 			custom_effect_tooltip = accelerate_military_reduction_tt
-			CHN_improve_military_disarray_effect = yes	
+			add_days_mission_timeout = {
+				mission = LEP_military_reorganization_ongoing
+				days = -80
+			}
+			custom_effect_tooltip = tooltip_white_line
+			unlock_decision_tooltip = LEP_domestic_uniform_materials
+			unlock_decision_tooltip = LEP_enhance_troop_training
 		}
 	}
 	focus = {
@@ -2466,9 +2485,15 @@ focus_tree = {
 				popularity = 0.03
 			}
 			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_zhang_yaozeng_advisor
+			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				idea = LEP_empower_the_supreme_judicial_court_idea
 				days = 120
+			}
+			hidden_effect = {
+				recruit_character = LEP_zhang_yaozeng
 			}
 		}
 	}
@@ -3003,7 +3028,7 @@ focus_tree = {
 		id = LEP_resume_higher_education
 		x = -2
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_university_1
 		prerequisite = {
 			focus = LEP_economics_democratization
@@ -3012,9 +3037,15 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = CHN_national_illiteracy1_idea
+					has_idea = LEP_national_illiteracy1_idea
 				}
-				remove_ideas = CHN_national_illiteracy1_idea
+				remove_ideas = LEP_national_illiteracy1_idea
+			}
+			if = {
+				limit = {
+					has_idea = LEP_national_illiteracy2_idea
+				}
+				remove_ideas = LEP_national_illiteracy2_idea
 			}
 		}
 	}
@@ -3029,10 +3060,13 @@ focus_tree = {
 		}
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
-			set_temp_variable = { LEP_mili_var_change = 1 }
+			set_temp_variable = { LEP_mili_var_change = 2 }
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_dash_line
+			unlock_decision_tooltip = LEP_strategic_reserve_fund
+			unlock_decision_tooltip = LEP_research_substitute_materials
+			unlock_decision_tooltip = LEP_collect_scrap_materials
+			unlock_decision_tooltip = LEP_fuel_conservation_decree
 		}	
 	}
 	focus = {
@@ -3141,11 +3175,11 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_planning_speed = 0.15
+				LEP_planning_speed = 0.1
 				tooltip = planning_speed_tooltip
 			}
 			add_to_variable = {
-				LEP_max_planning_factor = 0.1
+				LEP_max_planning_factor = 0.05
 				tooltip = max_planning_factor_tooltip
 			}
 		}
@@ -3154,16 +3188,19 @@ focus_tree = {
 		id = LEP_industrial_technology_transfer
 		x = 0
 		y = 2
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_industrial_experts
 		prerequisite = {
 			focus = LEP_seek_international_recognition
 		}
 		relative_position_id = LEP_seek_international_recognition
 		completion_reward = {
-			army_experience = 50
-			custom_effect_tooltip = accelerate_military_reduction_tt
-			CHN_improve_military_disarray_effect = yes	
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -100
+			}
+			unlock_decision_tooltip = LEP_train_technical_talent
+			unlock_decision_tooltip = LEP_recall_skilled_workers
 		}
 	}
 	focus = {
@@ -3490,8 +3527,10 @@ focus_tree = {
 			set_temp_variable = { LEP_mili_var_change = 1 }
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_dash_line
 			CHN_build_military_industry_effect = yes
+			custom_effect_tooltip = tooltip_white_line
+			unlock_decision_tooltip = LEP_develop_motor_transport
+			unlock_decision_tooltip = LEP_replace_manpower_with_machinery
 		}	
 	}
 	focus = {
