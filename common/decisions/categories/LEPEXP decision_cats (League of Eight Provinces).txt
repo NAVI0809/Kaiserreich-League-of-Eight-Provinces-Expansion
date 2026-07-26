@@ -136,9 +136,6 @@ military_mobilization_category = {
 	allowed = {
 		tag = LEP
 	}
-	visible = {
-		is_debug = yes
-	}
 	visible_when_empty = yes
 }
 
@@ -150,7 +147,7 @@ LEPEXP_parliament = {
 		tag = LEP
 	}
 	visible = {
-		is_debug = yes
+		has_completed_focus = LEP_provisional_senate
 	}
 	visible_when_empty = yes
 
@@ -165,7 +162,7 @@ LEP_national_reconstruction_bureau = {
 		tag = LEP
 	}
 	visible = {
-		is_debug = yes
+		has_completed_focus = LEP_industrial_general_committee
 	}
 	visible_when_empty = yes
 }

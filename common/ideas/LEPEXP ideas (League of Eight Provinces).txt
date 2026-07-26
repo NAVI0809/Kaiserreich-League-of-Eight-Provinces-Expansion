@@ -847,6 +847,12 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_panel_of_consultants" }
 			picture = generic_officer
 			allowed = { always = no }
+			available = {
+			    OR = {
+				    has_war_with = CHI
+				    has_war_with = ANQ
+			    }
+		    }
 			modifier = {
 				experience_gain_army_factor = 0.1
 				power_balance_weekly = 0.01
