@@ -3054,7 +3054,8 @@ LEP_national_reconstruction_bureau = {
 			}
 			add_resource = {
 				type = coal
-				amount = 4
+				amount = 5
+				state = 613
 			}
 			if = {
 				limit = { has_dlc_aat = yes }
