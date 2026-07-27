@@ -1,16 +1,58 @@
+#####################################
+#####- LEP-EXP History File - #######
+#####################################
+########################################
+########- Table of Contents - ##########
+########################################
+#Section 01: Politics
+#Section 02: Technology
+#Section 03: Ideas and Events
+#Section 04: Characters
+#Section 05: Military Setup
+#Section 06: Foreign Policy
+#Section 07: Miscellaneous
+
+########################################
+#####- Section 01: Politics - ##########
+########################################
 capital = 613
-oob = "LEP"
 set_research_slots = 2
 set_stability = 0.2
 set_war_support = 0.3
-set_convoys = 10
-starting_train_buffer = 2
 
+set_popularities = {
+	totalist = 0
+	radical_socialist = 0
+	syndicalist = 0
+	social_democrat = 0
+	social_liberal = 8
+	market_liberal = 15
+	social_conservative = 7
+	authoritarian_democrat = 15
+	paternal_autocrat = 45
+	national_populist = 10
+}
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_party_name = {
+	ideology = syndicalist
+	name = LEP_yi_you_club_party
+	long_name = LEP_yi_you_club_party_long
+}
+
+
+########################################
+#####- Section 02: Technology - ########
+########################################
 set_technology = {
 	### Infantry ###
 	infantry_weapons = 1
 	tech_trucks = 1
-	tech_irregulars = 1
 
 	### Support ###
 	tech_support = 1
@@ -23,7 +65,311 @@ set_technology = {
 
 	### Trains ###
 	basic_train = 1
+	
+	### Navy ###
+
+	### Hulls ###
+	early_ship_hull_light = 1
+	early_ship_hull_cruiser = 1
+	coastal_defense_ships = 1
+
+	### Modules ###
+	basic_naval_mines = 1
+	basic_battery = 1
+	basic_torpedo = 1
 }
+enable_tech_irregulars = yes
+###- Tanks (NSB) -###
+if = {
+	limit = { has_dlc_nsb = yes }
+	set_technology = { gwtank_chassis = 1 }
+}
+
+###- Tanks (non-NSB) -###
+if = {
+	limit = { has_dlc_nsb = no }
+	set_technology = { gwtank = 1 }
+}
+###- Variants -###
+### AIR ###
+LEP_add_plane_variants = yes
+
+### NAVY ###
+QIE_starting_naval_variants_kr = yes #naval submod
+LEP_add_naval_variants = yes
+
+########################################
+#####- Section 03: Ideas and Events - ##
+########################################
+
+###- Ideas -###
+add_ideas = {
+	LEP_Conspicuous_Kleptocracy
+	LEP_Nanking_Kommission
+	LEP_Tsingtau_Collaboration2
+	LEP_eight_provinces_allied_armies
+
+	unequal_treaties
+}
+add_timed_idea = {
+	idea = LEP_Liu_rifle_idea
+	days = 1460
+}
+
+###- Events -###
+country_event = { id = league_collapse_events.1 days = 3 } # Sun Chuanfang meets with the governors
+
+# FLAVOR LEP
+country_event = { id = league_events.206 days = 1521 } #Chen Xuezhao
+country_event = { id = league_events.207 days = 762 } #Ju Peon event
+country_event = { id = league_events.208 days = 81 } #Tsen's Theorem
+country_event = { id = league_events.209 days = 285 } #Zhou Xuan
+country_event = { id = league_events.210 days = 285 } #Dummy Zhou Xuan event
+country_event = {
+	id = china_events.70 #National Day of the Republic of China
+	days = 282 #Should Fire 10/10
+}
+
+########################################
+#####- Section 04: Characters - ########
+########################################
+
+### Country Leaders ###
+recruit_character = LEP_board_of_directors
+recruit_character = LEP_dai_chunfeng_dummy
+recruit_character = LEP_song_qingling_dummy
+recruit_character = LEP_chen_duxiu_dummy
+recruit_character = LEP_ma_xulun
+recruit_character = LEP_chu_fucheng
+recruit_character = LEP_li_linsi
+recruit_character = LEP_li_baozhang
+recruit_character = LEP_rong_zongjing
+recruit_character = LEP_assorted_leaders
+
+recruit_character = LEP_sun_chuanfang
+recruit_character = LEP_qi_xieyuan
+recruit_character = LEP_lu_xiangting
+
+activate_advisor = LEP_lu_xiangting_sic
+recruit_character = LEP_gu_zhun
+
+### Advisors ###
+recruit_character = LEP_tian_wenbing
+recruit_character = LEP_zhang_xinyi
+recruit_character = LEP_ding_wenjiang
+recruit_character = LEP_wei_daofeng
+recruit_character = LEP_tang_erhe
+recruit_character = LEP_li_erkang
+recruit_character = LEP_yang_wenkai
+recruit_character = LEP_ouyang_wu
+recruit_character = LEP_li_chenggan
+recruit_character = LEP_hermann_kriebel
+
+recruit_character = LEP_leighton_stuart
+recruit_character = LEP_tang_qunying
+recruit_character = LEP_fang_yexian 
+recruit_character = LEP_lu_xiaobo
+recruit_character = LEP_zhu_meixian
+recruit_character = LEP_xu_huansheng
+
+recruit_character = LEP_yu_qiaqing
+recruit_character = LEP_rong_desheng
+recruit_character = LEP_xu_deheng
+
+recruit_character = LEP_yu_jiaju
+recruit_character = LEP_yin_ruli
+recruit_character = LEP_wu_zaoxi
+recruit_character = LEP_pan_shu
+recruit_character = LEP_lu_yudao
+recruit_character = LEP_liang_xi 
+
+### Generals ###
+recruit_character = LEP_liu_zongji
+recruit_character = LEP_chen_yi
+recruit_character = LEP_zheng_junyan
+recruit_character = LEP_deng_ruzhuo
+recruit_character = LEP_zhou_yinren
+recruit_character = LEP_shangguan_yunxiang
+recruit_character = LEP_zhou_fengqi
+recruit_character = LEP_tang_enbo
+recruit_character = LEP_ma_yuren
+recruit_character = LEP_xie_hongxun
+recruit_character = LEP_meng_zhaoyue
+recruit_character = LEP_shi_yousan
+recruit_character = LEP_qian_zongze
+recruit_character = LEP_wang_haoji
+recruit_character = LEP_ge_jingen
+recruit_character = LEP_lin_wei
+recruit_character = LEP_guo_chan
+recruit_character = LEP_zhou_yan
+recruit_character = LEP_li_rentao
+recruit_character = LEP_xu_peigen
+recruit_character = LEP_fang_benren
+#zigai LEPEXP
+recruit_character = LEP_wang_yulan
+recruit_character = LEP_yu_huancheng
+recruit_character = LEP_yuan_xiluo
+recruit_character = LEP_gao_fengqian
+recruit_character = LEP_Nanking_parliament
+
+recruit_character = LEP_li_siguang
+recruit_character = LEP_huang_qun
+recruit_character = LEP_jing_yaoyue
+
+recruit_character = LEP_yuan_xiluo
+recruit_character = LEP_zhao_fengchang
+recruit_character = LEP_jiang_qian
+
+recruit_character = LEP_wang_e
+recruit_character = LEP_huang_baitao 
+recruit_character = LEP_li_yutang
+recruit_character = LEP_ma_shigong
+recruit_character = LEP_shi_beiheng
+recruit_character = LEP_xing_zhennan
+
+### Admirals ###
+recruit_character = LEP_li_shijia
+recruit_character = LEP_wu_zhennan
+recruit_character = LEP_wang_shouting
+recruit_character = LEP_shen_jingchen
+
+recruit_character = ANQ_sa_benxin
+
+recruit_character = LEP_sa_shijun
+recruit_character = LEP_wu_rengli
+### air staff ###
+recruit_character = LEP_chen_qixia
+recruit_character = LEP_wang_tianxiang
+
+### theorists ###
+recruit_character = LEP_nanjing_clique_theorist
+recruit_character = LEP_zhejun_officers_theorist
+recruit_character = LEP_german_trained_officers_theorist
+
+### scientists ###
+recruit_character = LEP_chien_shiung_wu
+recruit_character = LEP_ye_zaifu
+recruit_character = LEP_zhu_jiaren
+recruit_character = LEP_liu_qingeng
+
+### Character Setup ###
+# LEPEXP 
+LEP_chu_fucheng = { china_set_character_alignment_chinese_southern_republican = yes }
+
+LEP_gu_zhongxiu = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+LEP_lu_yudao = { #recruit only by focus
+	retire = yes	
+}
+LEP_liang_xi = { #recruit only by focus
+	retire = yes
+}
+LEP_pan_shu = { #recruit only by focus
+	retire = yes
+}
+LEP_wu_zaoxi = { #recruit only by focus
+	retire = yes
+}
+LEP_yin_ruli = { #recruit only by focus
+	retire = yes
+}
+LEP_zhang_jvsheng = {
+	retire = yes
+}
+LEP_lu_xiaobo  = { #recruit only by league_
+	retire = yes
+}
+LEP_zhu_meixian = { #recruit only by league_mid.64
+	retire = yes
+}
+LEP_fang_yexian  = { #recruit only by league_mid.64
+	retire = yes
+}
+LEP_shi_beiheng = { #recruit only by league_mid.52
+	retire = yes
+}
+LEP_xing_zhennan = { #recruit only by league_mid.52
+	retire = yes
+}
+LEP_tang_qunying = { #recruit only by league_mid.33
+	retire = yes
+}
+LEP_ma_shigong = { #recruit only by paratrooper focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_li_yutang = { #recruit only by league_mid.54
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_wang_e = { #recruit only by league_mid.52
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_huang_baitao = { #recruit only by league_mid.52
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_lin_wei = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_guo_chan = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_zhou_yan = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_li_rentao = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_xu_peigen = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_fang_benren = {
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_chien_shiung_wu = {
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_zhang_yaozeng = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_wang_jiyan = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+
+promote_character = {
+	character = LEP_gu_zhun
+	ideology = syndicalist_subtype
+}
+
+#--------------------------------------#
+
+# KR
+LEP_sun_chuanfang = { china_set_character_alignment_southern_zhili = yes }
+LEP_qi_xieyuan = { china_set_character_alignment_southern_zhili = yes }
+promote_character = {
+	character = LEP_li_linsi
+	ideology = authoritarian_democrat_subtype
+}
+
+########################################
+#####- Section 05: Military Setup - ####
+########################################
+oob = "LEP"
+china_add_poor_army = yes
+country_lock_all_division_template = yes
 
 ### Planes - has BBA ###
 if = {
@@ -50,10 +396,13 @@ if = {
 	}
 }
 
-set_cosmetic_tag = LEP_LEP
-set_country_flag = LEP_is_pro_GER
-country_lock_all_division_template = yes
+### Civil ###
+set_convoys = 10
+starting_train_buffer = 2
 
+########################################
+#####- Section 06: Foreign Policy - ####
+########################################
 declare_war_on = {
 	target = CHI
 	type = civil_war
@@ -62,312 +411,20 @@ add_civil_war_target = CHI
 
 diplomatic_relation = { country = GEA relation = non_aggression_pact }
 
-set_politics = {
-	ruling_party = paternal_autocrat
-	last_election = "1888.6.15"
-	election_frequency = 48
-	elections_allowed = no
-}
+########################################
+#####- Section 07: Miscellaneous - #####
+########################################
+###- Game Flags -###
+set_cosmetic_tag = LEP_LEP
+set_country_flag = LEP_is_pro_GER
 
-set_popularities = {
-	totalist = 0
-	radical_socialist = 0
-	syndicalist = 0
-	social_democrat = 0
-	social_liberal = 8
-	market_liberal = 15
-	social_conservative = 7
-	authoritarian_democrat = 15
-	paternal_autocrat = 45
-	national_populist = 10
-}
-
-add_ideas = {
-	LEP_Conspicuous_Kleptocracy
-	LEP_Nanking_Kommission
-	LEP_Tsingtau_Collaboration2
-	LEP_eight_provinces_allied_armies
-
-	unequal_treaties
-}
-add_timed_idea = {
-	idea = LEP_Liu_rifle_idea
-	days = 1460
-}
-china_add_poor_army = yes
-
-#tsingtau collab level
-set_variable = {
-	var = LEP_tsingtau_level
-	value = 2
-}
-
-country_event = { id = league_collapse_events.1 days = 3 } # Sun Chuanfang meets with the governors
-country_event = {
-	id = china_events.70 #National Day of the Republic of China
-	days = 282 #Should Fire 10/10
-}
-
-### Country Leaders ###
-recruit_character = LEP_board_of_directors
-recruit_character = LEP_dai_chunfeng_dummy
-recruit_character = LEP_song_qingling_dummy
-recruit_character = LEP_chen_duxiu_dummy
-recruit_character = LEP_ma_xulun
-recruit_character = LEP_chu_fucheng
-recruit_character = LEP_li_linsi
-recruit_character = LEP_li_baozhang
-recruit_character = LEP_rong_zongjing
-recruit_character = LEP_assorted_leaders
-
-
-recruit_character = LEP_sun_chuanfang
-recruit_character = LEP_qi_xieyuan
-recruit_character = LEP_lu_xiangting
-
-activate_advisor = LEP_lu_xiangting_sic
-
-### Advisors ###
-recruit_character = LEP_tian_wenbing
-recruit_character = LEP_zhang_xinyi
-recruit_character = LEP_ding_wenjiang
-recruit_character = LEP_wei_daofeng
-recruit_character = LEP_tang_erhe
-recruit_character = LEP_li_erkang
-recruit_character = LEP_yang_wenkai
-recruit_character = LEP_ouyang_wu
-recruit_character = LEP_li_chenggan
-recruit_character = LEP_hermann_kriebel
-
-recruit_character = LEP_leighton_stuart
-recruit_character = LEP_tang_qunying
-recruit_character = LEP_fang_yexian 
-recruit_character = LEP_lu_xiaobo
-recruit_character = LEP_zhu_meixian
-recruit_character = LEP_xu_huansheng
-
-recruit_character = LEP_yu_qiaqing
-recruit_character = LEP_rong_desheng
-recruit_character = LEP_xu_deheng
-
-
-
-
-
-
-
-recruit_character = LEP_yu_jiaju
-
-### Generals ###
-recruit_character = LEP_liu_zongji
-recruit_character = LEP_chen_yi
-recruit_character = LEP_zheng_junyan
-recruit_character = LEP_deng_ruzhuo
-recruit_character = LEP_zhou_yinren
-recruit_character = LEP_shangguan_yunxiang
-recruit_character = LEP_zhou_fengqi
-recruit_character = LEP_tang_enbo
-recruit_character = LEP_ma_yuren
-recruit_character = LEP_xie_hongxun
-recruit_character = LEP_meng_zhaoyue
-recruit_character = LEP_shi_yousan
-recruit_character = LEP_qian_zongze
-recruit_character = LEP_wang_haoji
-recruit_character = LEP_ge_jingen
-recruit_character = LEP_lin_wei
-recruit_character = LEP_guo_chan
-recruit_character = LEP_zhou_yan
-recruit_character = LEP_li_rentao
-recruit_character = LEP_xu_peigen
-recruit_character = LEP_fang_benren
-#zigai
-recruit_character = LEP_wang_yulan
-recruit_character = LEP_yu_huancheng
-recruit_character = LEP_yuan_xiluo
-recruit_character = LEP_gao_fengqian
-recruit_character = LEP_Nanking_parliament
-
-recruit_character = LEP_li_siguang
-recruit_character = LEP_huang_qun
-recruit_character = LEP_jing_yaoyue
-
-recruit_character = LEP_yuan_xiluo
-recruit_character = LEP_zhao_fengchang
-recruit_character = LEP_jiang_qian
-
-recruit_character = LEP_wang_e
-recruit_character = LEP_huang_baitao 
-recruit_character = LEP_li_yutang
-recruit_character = LEP_ma_shigong
-recruit_character = LEP_shi_beiheng
-recruit_character = LEP_xing_zhennan
-### theorists ###
-recruit_character = LEP_nanjing_clique_theorist
-recruit_character = LEP_zhejun_officers_theorist
-recruit_character = LEP_german_trained_officers_theorist
-
-### scientists ###
-recruit_character = LEP_chien_shiung_wu
-recruit_character = LEP_ye_zaifu
-recruit_character = LEP_zhu_jiaren
-recruit_character = LEP_liu_qingeng
-
-LEP_zhang_jvsheng = {
-	retire = yes
-}
-
-LEP_lu_xiaobo  = { #recruit only by league_
-	retire = yes
-}
-LEP_zhu_meixian = { #recruit only by league_mid.64
-	retire = yes
-}
-LEP_fang_yexian  = { #recruit only by league_mid.64
-	retire = yes
-}
-LEP_shi_beiheng = { #recruit only by league_mid.52
-	retire = yes
-}
-LEP_xing_zhennan = { #recruit only by league_mid.52
-	retire = yes
-}
-LEP_tang_qunying = { #recruit only by league_mid.33
-	retire = yes
-}
-LEP_ma_shigong = { #recruit only by paratrooper focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_li_yutang = { #recruit only by league_mid.54
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_wang_e = { #recruit only by league_mid.52
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_huang_baitao = { #recruit only by league_mid.52
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_lin_wei = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_guo_chan = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_zhou_yan = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_li_rentao = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_xu_peigen = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-
-LEP_fang_benren = {
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_chien_shiung_wu = {
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-
-LEP_zhang_yaozeng = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_wang_jiyan = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-
-LEP_gu_zhongxiu = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_lu_yudao = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes	
-}
-LEP_liang_xi = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_pan_shu = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_wu_zaoxi = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-LEP_yin_ruli = { #recruit only by focus
-	set_character_flag = CHI_original_unit_leader
-	retire = yes
-}
-
-
-### Admirals ###
-recruit_character = LEP_li_shijia
-recruit_character = LEP_wu_zhennan
-recruit_character = LEP_wang_shouting
-recruit_character = LEP_shen_jingchen
-
-recruit_character = ANQ_sa_benxin
-
-recruit_character = LEP_sa_shijun
-recruit_character = LEP_wu_rengli
-### air staff ###
-recruit_character = LEP_chen_qixia
-recruit_character = LEP_wang_tianxiang
-
-### Character Setup ###
-LEP_sun_chuanfang = { china_set_character_alignment_southern_zhili = yes }
-LEP_qi_xieyuan = { china_set_character_alignment_southern_zhili = yes }
-promote_character = {
-	character = LEP_li_linsi
-	ideology = authoritarian_democrat_subtype
-}
-recruit_character = LEP_gu_zhun
-promote_character = {
-	character = LEP_gu_zhun
-	ideology = syndicalist_subtype
-}
-set_party_name = {
-	ideology = syndicalist
-	name = LEP_yi_you_club_party
-	long_name = LEP_yi_you_club_party_long
-}
-
+###- Game Variables -###
 set_variable = { country_intro_page_count = 3 }
 set_variable = {
 	var = LEP_construction_var
 	value = 0
 }
-# FLAVOR LEP
-country_event = { id = league_events.206 days = 1521 } #Chen Xuezhao
-country_event = { id = league_events.207 days = 762 } #Ju Peon event
-country_event = { id = league_events.208 days = 81 } #Tsen's Theorem
-country_event = { id = league_events.209 days = 285 } #Zhou Xuan
-country_event = { id = league_events.210 days = 285 } #Dummy Zhou Xuan event
-
-
-################
-### Variants ###
-################
-LEP_add_plane_variants = yes
-
-#########
-### VAR ###
-###########
+#MIO VAR
 mio:LEP_fujian_organisation = {
 	set_variable = { LEP_fujian_civilian_factory_chance = 33 }
 	set_variable = { LEP_fujian_military_factory_chance = 33 }
@@ -386,4 +443,9 @@ mio:LEP_fujian_organisation = {
 	resize_array = { fujian_date_list = LEP_notification_list_maximum }
 	resize_array = { fujian_factory_list = LEP_notification_list_maximum }
 	resize_array = { fujian_state_list = LEP_notification_list_maximum }
+}
+#tsingtau collab level
+set_variable = {
+	var = LEP_tsingtau_level
+	value = 2
 }
