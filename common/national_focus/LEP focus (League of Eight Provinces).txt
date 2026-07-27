@@ -2202,7 +2202,6 @@ focus_tree = {
 				mission = LEP_economic_recovery_ongoing
 				days = -100
 			}
-			LEP_improve_economic_devastation_effect = yes
 		}
 	}
 	focus = {
@@ -2223,7 +2222,7 @@ focus_tree = {
 				mission = LEP_economic_recovery_ongoing
 				days = -30
 			}
-			set_temp_variable = { LEP_cons_var_change = 2 }
+			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
 		}
 	}
@@ -3542,7 +3541,7 @@ focus_tree = {
 			}
 			add_manpower = -4000
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 2 }
+			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
 		}
 	}
@@ -5396,7 +5395,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			country_event = { id = league_mid.14 days = 0 }
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 5 }
+			set_temp_variable = { LEP_cons_var_change = 3 }
 			LEP_cons_var = yes
 		}
 
@@ -5422,7 +5421,7 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_revitalize_jingdezhen_porcelain_industry
 			unlock_decision_tooltip = LEPEXP_coal_jinling_arsenal_descison
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 5 } 
+			set_temp_variable = { LEP_cons_var_change = 3 } 
 			LEP_cons_var = yes
 			hidden_effect = {
 				country_event = { id = league_mid.37 days = 5 }
@@ -5504,7 +5503,7 @@ focus_tree = {
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 5 }
+			set_temp_variable = { LEP_cons_var_change = 3 }
 			LEP_cons_var = yes
 		}
 
@@ -5540,7 +5539,7 @@ focus_tree = {
 		    add_one_random_military_factory = yes
 			custom_effect_tooltip = tooltip_white_line
 			LEP_improve_industry = yes
-			set_temp_variable = { LEP_cons_var_change = 5 }
+			set_temp_variable = { LEP_cons_var_change = 4 }
 			LEP_cons_var = yes
 		}
 
@@ -5609,7 +5608,6 @@ focus_tree = {
 			set_temp_variable = { LEP_cons_var_change = 2 }
 			LEP_cons_var = yes
 		}
-
 	}
 	focus = {
 		id = LEP_qiantang_prosperity

@@ -2424,8 +2424,6 @@ country_event = { #《告国民书》
 	title =league_mid.1000.t
 	desc = league_mid.1000.d
 
-	hidden = yes
-
 	picture = GFX_report_event_QIE_huang_fu_speech
 
 	is_triggered_only = yes
@@ -3202,6 +3200,9 @@ country_event = { #解放北京
 		custom_effect_tooltip = tooltip_white_line
 		complete_national_focus = LEP_new_republic_with_old_ideals
 		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			country_event = { id = league_mid.1000 days = 3 }
+		}
 	}
 }
 

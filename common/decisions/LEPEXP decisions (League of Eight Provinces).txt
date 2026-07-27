@@ -616,6 +616,9 @@ LEP_country_development = {
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
 		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
         cost = 50
@@ -637,6 +640,9 @@ LEP_country_development = {
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
 		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
         cost = 50
@@ -657,6 +663,9 @@ LEP_country_development = {
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
 		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
         cost = 50
@@ -674,6 +683,9 @@ LEP_country_development = {
             tag = LEP
         }
 		available = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
 		visible = {
@@ -697,6 +709,9 @@ LEP_country_development = {
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
 		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
 			has_completed_focus = LEP_relieve_funding_shortage
 		}
         cost = 50
