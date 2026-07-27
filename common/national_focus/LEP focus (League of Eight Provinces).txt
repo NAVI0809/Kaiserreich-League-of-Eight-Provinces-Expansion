@@ -736,9 +736,16 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_ideas = LEP_autonomy_outline_idea
-			
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_yin_ruli_advisor
+			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = LEP_hold_provincial_council
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
+			hidden_effect = {
+				recruit_character = LEP_yin_ruli
+			}
 			
 		}
 	}
@@ -799,8 +806,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_jiang_qian_advisor
 			custom_effect_tooltip = tooltip_white_line
-			unlock_decision_tooltip = LEP_southeast_autonomy_academy
-			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = {
 					has_idea = LEP_autonomy_outline_idea1m
@@ -820,7 +825,6 @@ focus_tree = {
 				}
 			}
 			country_event = { id = league_mid.44 days = 0 }
-			LEP_improve_popular_support = yes
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
 				recruit_character = LEP_jiang_qian
@@ -1372,8 +1376,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-		    show_ideas_tooltip = LEP_zhang_jvsheng_advisor
+			LEP_improve_popular_support = yes
 			country_event = { id = league_mid.45 days = 0 }
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
@@ -2312,6 +2315,7 @@ focus_tree = {
 						}
 					}
 				}
+				activate_advisor = LEP_Nanking_parliament
 				
 			}
 		}
@@ -3047,6 +3051,15 @@ focus_tree = {
 				}
 				remove_ideas = LEP_national_illiteracy2_idea
 			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_liang_xi_advisor
+			show_ideas_tooltip = LEP_pan_shu_advisor
+			show_ideas_tooltip = LEP_wu_zaoxi_advisor
+			hidden_effect = {
+				recruit_character = LEP_liang_xi
+				recruit_character = LEP_pan_shu
+				recruit_character = LEP_wu_zaoxi
+			}
 		}
 	}
 	focus = {
@@ -3246,12 +3259,19 @@ focus_tree = {
 		id = LEP_public_health_system
 		x = -1
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_bad_medical
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
 		}
 		relative_position_id = LEP_long_trains_and_steel_horses
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_lu_yudao_advisor
+			hidden_effect = {
+				recruit_character = LEP_lu_yudao
+			}
+		}
 	}
 	focus = {
 		id = LEP_preliminary_social_security

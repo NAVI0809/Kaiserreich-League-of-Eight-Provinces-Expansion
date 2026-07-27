@@ -149,11 +149,11 @@ recruit_character = LEP_xu_huansheng
 recruit_character = LEP_yu_qiaqing
 recruit_character = LEP_rong_desheng
 recruit_character = LEP_xu_deheng
-recruit_character = LEP_yin_ruli
-recruit_character = LEP_wu_zaoxi
-recruit_character = LEP_pan_shu
-recruit_character = LEP_lu_yudao
-recruit_character = LEP_liang_xi 
+
+
+
+
+
 
 
 recruit_character = LEP_yu_jiaju
@@ -293,6 +293,27 @@ LEP_gu_zhongxiu = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes
 }
+LEP_lu_yudao = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes	
+}
+LEP_liang_xi = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+LEP_pan_shu = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+LEP_wu_zaoxi = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+LEP_yin_ruli = { #recruit only by focus
+	set_character_flag = CHI_original_unit_leader
+	retire = yes
+}
+
 
 ### Admirals ###
 recruit_character = LEP_li_shijia
