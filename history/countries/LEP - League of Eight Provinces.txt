@@ -348,11 +348,40 @@ LEP_wang_jiyan = { #recruit only by focus
 	set_character_flag = CHN_original_unit_leader
 	retire = yes
 }
+LEP_rong_desheng = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_yu_qiaqing = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_jiang_qian = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_huang_qun = { #recruit only by league_mid.38
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_jing_yaoyue = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_li_siguang = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+LEP_zhao_fengchang = { #recruit only by focus
+	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
 
-promote_character = {
+promote_character = { #recruit only by league_mid.52
 	character = LEP_gu_zhun
 	ideology = syndicalist_subtype
 }
+
 
 #--------------------------------------#
 

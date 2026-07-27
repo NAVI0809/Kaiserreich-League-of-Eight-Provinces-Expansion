@@ -158,6 +158,9 @@ characters = {
 					}
 				}
 			}
+			available = {
+				is_country_leader = no
+			}
 		}
 		country_leader = {
 			desc = LEP_ma_xulun_leader_desc
@@ -212,6 +215,9 @@ characters = {
 						}
 					}
 				}
+			}
+			available = {
+				is_country_leader = no
 			}
 		}
 		country_leader = {
@@ -268,6 +274,9 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_rong_zongjing_advisor
 			traits = { KR_flour_king }
+			available = {
+				is_country_leader = no
+			}
 		}
 		country_leader = {
 			desc = LEP_rong_zongjing_leader_desc
@@ -380,9 +389,6 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_huang_qun_advisor
 			traits = { KR_industrialist }
-			available = {
-				has_completed_focus = LEP_industrial_general_committee
-			}
 		}
 	}
 
@@ -429,9 +435,6 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_jing_yaoyue_advisor
 			traits = { KR_education_reformer  }
-			available = {
-				has_completed_focus = LEP_compulsory_education
-			}
 		}
 	}
 	#李四光
@@ -446,9 +449,6 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_li_siguang_advisor
 			traits = { KR_geologist }
-			available = {
-				has_completed_focus = LEP_east_china_industry_mining
-			}
 		}
 	}
 	#唐群英
@@ -533,9 +533,6 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_zhao_fengchang_advisor
 			traits = { KR_zhuge_of_republic }
-			available = {
-				has_completed_focus = LEP_clean_governance_stable_society
-			}
 		}
 	}
 	#高凤谦

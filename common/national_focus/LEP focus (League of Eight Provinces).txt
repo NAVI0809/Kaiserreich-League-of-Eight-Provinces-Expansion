@@ -1180,11 +1180,22 @@ focus_tree = {
 		x = 5
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_livelihood_equality_idea
+			add_timed_idea = {
+				idea = LEP_livelihood_equality_idea
+				days = 180
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_rong_desheng_advisor
+			show_ideas_tooltip = LEP_yu_qiaqing_advisor
+			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = LEP_local_industry_protection
 			unlock_decision_tooltip = LEP_relax_chamber_commerce_autonomy
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
+				recruit_character = LEP_rong_desheng
+				recruit_character = LEP_yu_qiaqing
 				country_event = { id = league_mid.58 days = 40 }
 			}
 		}
@@ -2198,7 +2209,7 @@ focus_tree = {
 		id = LEP_grasp_key_resources
 		x = 1
 		y = 1
-		cost = 0
+		cost = 2
 		icon = GFX_focus_generic_central_planning
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
@@ -2207,6 +2218,14 @@ focus_tree = {
 			focus = LEP_restore_infrastructure
 		}
 		relative_position_id = LEP_long_trains_and_steel_horses
+		completion_reward = {
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -30
+			}
+			set_temp_variable = { LEP_cons_var_change = 2 }
+			LEP_cons_var = yes
+		}
 	}
 	focus = {
 		id = LEP_develop_heavy_industry
@@ -2939,18 +2958,27 @@ focus_tree = {
 		id = LEP_restore_infrastructure
 		x = 2
 		y = 1
-		cost = 0
+		cost = 3
 		icon = GFX_focus_generic_hydroelectric_energy
 		prerequisite = {
 			focus = LEP_economics_democratization
 		}
 		relative_position_id = LEP_economics_democratization
+		completion_reward = {
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+			add_one_random_infrastructure = yes
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -50
+			}
+		}
 	}
 	focus = {
 		id = LEP_economics_democratization
 		x = 2
 		y = 1
-		cost = 0
+		cost = 2
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = {
 			focus = LEP_national_images_continuity
@@ -3266,6 +3294,10 @@ focus_tree = {
 		}
 		relative_position_id = LEP_long_trains_and_steel_horses
 		completion_reward = {
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -50
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_lu_yudao_advisor
 			hidden_effect = {
@@ -3504,9 +3536,14 @@ focus_tree = {
 		}
 		relative_position_id = LEP_long_trains_and_steel_horses
 		completion_reward = {
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -50
+			}
 			add_manpower = -4000
 			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 10 }
+			set_temp_variable = { LEP_cons_var_change = 2 }
+			LEP_cons_var = yes
 		}
 	}
 	focus = {
@@ -5376,6 +5413,9 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_political_power = 50
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = LEP_li_siguang_advisor
 			unlock_decision_tooltip = LEP_jianghuai_coal_power
 			unlock_decision_tooltip = LEP_gannan_tungsten_development
 			unlock_decision_tooltip = LEP_maanshan_iron_mine

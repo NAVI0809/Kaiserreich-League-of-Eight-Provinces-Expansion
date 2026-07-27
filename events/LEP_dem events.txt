@@ -1330,6 +1330,9 @@ country_event = { #鼓励实业
 			ideology = social_liberal
 			popularity = 0.03
 		}
+		hidden_effect = {
+			recruit_character = LEP_huang_qun
+		}
 	}
 }
 
