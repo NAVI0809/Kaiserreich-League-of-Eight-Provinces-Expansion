@@ -226,6 +226,7 @@ recruit_character = LEP_li_yutang
 recruit_character = LEP_ma_shigong
 recruit_character = LEP_shi_beiheng
 recruit_character = LEP_xing_zhennan
+recruit_character = LEP_gu_zhongxiu
 
 ### Admirals ###
 recruit_character = LEP_li_shijia

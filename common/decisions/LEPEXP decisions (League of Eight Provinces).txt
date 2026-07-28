@@ -3271,6 +3271,182 @@ LEP_national_reconstruction_bureau = {
 		}
 
 	}
+
+	LEP_qixin_cement = {
+		icon = GFX_decision_cement_mixer
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			controls_state = 614
+		}
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 6
+				state = 614
+			}
+		}
+	}
+	LEP_huaji_cement = {
+		icon = GFX_decision_cement_mixer
+        allowed = {
+            tag = LEP
+        }
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		available = {
+			controls_state = 1048
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 1048
+			}
+		}
+	}
+	LEP_luanzhou_coal = {
+		icon = GFX_decision_coal
+        allowed = {
+            tag = LEP
+        }
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		available = {
+			controls_state = 614
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = coal
+				amount = 8
+				state = 614
+			}
+		}
+	}
+	LEP_hanyeping = {
+		icon = GFX_decision_steel
+        allowed = {
+            tag = LEP
+        }
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		available = {
+			controls_state = 1048
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 1048
+			}
+			add_resource = {
+				type = coal
+				amount = 3
+				state = 1048
+			}
+		}
+	}
+	LEP_yangzi_machine = {
+		icon = GFX_decision_steel
+        allowed = {
+            tag = LEP
+        }
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		allowed = {
+            tag = LEP
+        }
+		visible = {
+			#has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		available = {
+			controls_state = 1048
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 2
+				state = 1048
+			}
+		}
+	}
+	LEP_longyan_iron = {
+		icon = GFX_decision_steel
+        allowed = {
+            tag = LEP
+        }
+		visible = {
+			has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		allowed = {
+            tag = LEP
+        }
+		visible = {
+			#has_completed_focus = LEP_grasp_key_resources
+			has_country_flag = LEP_showcase_industrial_construction_on
+		}
+		available = {
+			controls_state = 608
+		}
+		cost = 30
+        days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 1
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+				amount = 3
+				state = 608
+			}
+		}
+	}
 }
 
 LEPEXP_gov = {

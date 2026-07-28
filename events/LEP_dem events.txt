@@ -19,9 +19,25 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		set_temp_variable = { LEP_mili_var_change = 100 }
-		LEP_mili_var = yes
-	}
+		GER = {
+			add_opinion_modifier = { target = LEP modifier = KR_approves_of_govt }
+		}
+		GER = {
+			country_event = {id = league_national.11 days = 0 }
+		}
+		RUS = {
+			country_event = {id = league_national.11 days = 0 }
+		}
+		NFA = {
+			country_event = {id = league_national.11 days = 0 }
+		}
+		CAN = {
+			country_event = {id = league_national.11 days = 0 }
+		}
+		USA = {
+			country_event = {id = league_national.11 days = 0 }
+		}
+    }
 }
 
 country_event = { #封锁闽海?
@@ -104,6 +120,11 @@ country_event = { #封锁闽海?
 	option = {#直系海军
 		log = "[GetLogInfo]: event league_war_events.19 option 3"
 		name = league_war_events.19.c
+		trigger = {
+			QIE = {
+				has_country_flag = wu_intervenes_proLEP
+			}
+		}
 		custom_effect_tooltip = LEP_QIE_blockade_tt
 		add_popularity = {
 			ideology = market_liberal
@@ -3648,8 +3669,128 @@ country_event = { #全国选举
 		complete_national_focus = LEP_solidarity_union
 		mark_focus_tree_layout_dirty = yes
 	}
+}
 
-	
+
+country_event = { #寻求承认
+	id = league_national.11
+	title = league_national.11.t
+	desc = league_national.11.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+    option = {
+		log = "[GetLogInfo]: event league_national.11 option league_national.11.a"
+		name = league_national.11.a
+		ai_chance = { base = 80 }
+		FROM = {
+			country_event = { id = league_national.12 days = 2 }
+		}
+		add_timed_idea = {
+			days = 100
+			idea = LEP_international_recognition_idea
+		}
+		
+	}
+	option = {
+		log = "[GetLogInfo]: event league_national.11 option league_national.11.b"
+		name = league_national.11.b
+		ai_chance = { base = 20 }
+		FROM = {
+			country_event = { id = league_national.13 days = 2 }
+		}
+	}
+}
+
+country_event = { #承认我们
+	id = league_national.12
+	title = league_national.12.t
+	desc = league_national.12.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+    option = {
+		log = "[GetLogInfo]: event league_national.12 option league_national.12.a"
+		name = league_national.12.a
+		add_opinion_modifier
+		FROM = {
+			add_opinion_modifier = { target = LEP modifier = KR_approves_of_govt }
+		}
+		add_opinion_modifier = { target = FROM modifier = KR_approves_of_govt }
+		if = {
+			limit = {
+				NOT = {
+					has_idea = LEP_international_recognition_idea
+				}
+			}
+			add_timed_idea = {
+				days = 60
+				idea = LEP_international_recognition_idea
+			}
+		}
+		if = {
+			limit = {
+				has_idea = LEP_international_recognition_idea
+			}
+			modify_timed_idea = {
+				idea = LEP_international_recognition_idea
+				days = 20
+			}
+		}
+		
+	}
+}
+
+country_event = { #不承认我们
+	id = league_national.13
+	title = league_national.13.t
+	desc = league_national.13.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+    option = {
+		log = "[GetLogInfo]: event league_national.13 option league_national.13.a"
+		name = league_national.13.a
+		add_political_power = -2
+	}
+}
+
+country_event = { 
+	id = league_national.14
+	title = league_national.14.t
+	desc = league_national.14.d
+	picture = GFX_report_event_LEP_ma_xulun_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.14 option league_national.14.a"
+		name = league_national.14.a
+		
+	}
+}
+
+country_event = { 
+	id = league_national.15
+	title = league_national.15.t
+	desc = league_national.15.d
+	picture = GFX_report_event_LEP_ma_xulun_speech
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.15 option league_national.15.a"
+		name = league_national.15.a
+		
+	}
 }
 
 	

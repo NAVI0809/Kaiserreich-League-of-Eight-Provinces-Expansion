@@ -1451,13 +1451,17 @@ focus_tree = {
 				popularity = 0.1
 			}
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_socia_solidarity
+			add_timed_idea = {
+				days = 200
+				idea = LEP_socia_solidarity
+			}
 			custom_effect_tooltip = tooltip_white_line
 			
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
 			add_to_coalition = yes
 			custom_effect_tooltip = tooltip_white_line
 			country_event = { id = league_mid.50 days = 0 }
+			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_JNSB_small = yes
 		}
 
@@ -2222,8 +2226,7 @@ focus_tree = {
 				mission = LEP_economic_recovery_ongoing
 				days = -30
 			}
-			set_temp_variable = { LEP_cons_var_change = 1 }
-			LEP_cons_var = yes
+			
 			if = {
 				limit = {
 					614 = {
@@ -2274,7 +2277,12 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = QIE_kailuan_mining_bureau_idea
+			unlock_decision_tooltip = LEP_qixin_cement
+			unlock_decision_tooltip = LEP_huaji_cement
+			unlock_decision_tooltip = LEP_luanzhou_coal
+			unlock_decision_tooltip = LEP_hanyeping
+			unlock_decision_tooltip = LEP_yangzi_machine
+			unlock_decision_tooltip = LEP_longyan_iron
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = QIE_kaiping_mines_upgrade_tt
 			show_ideas_tooltip = kaiping_mines_2
@@ -2505,6 +2513,25 @@ focus_tree = {
 			focus = LEP_preliminary_social_security
 		}
 		relative_position_id = LEP_preliminary_social_security
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democrat 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_liberal 
+				popularity = 0.03
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_timed_idea = {
+				idea = LEP_womens_rights_idea
+				days = 120
+			}
+		}
 		
 	}
 	focus = {
@@ -2890,6 +2917,18 @@ focus_tree = {
 		relative_position_id = LEP_protect_private_property
 		completion_reward = {
 			add_stability = 0.08
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = market_liberal 
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat 
+				popularity = 0.03
+			}
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
 				days = -100
@@ -3019,12 +3058,29 @@ focus_tree = {
 		id = LEP_seek_international_recognition
 		x = -1
 		y = 1
-		cost = 0
+		cost = 7
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = {
 			focus = LEP_national_images_continuity
 		}
 		relative_position_id = LEP_national_images_continuity
+		completion_reward = {
+			GER = {
+				country_event = {id = league_national.11 days = 0 }
+			}
+			RUS = {
+				country_event = {id = league_national.11 days = 0 }
+			}
+			NFA = {
+				country_event = {id = league_national.11 days = 0 }
+			}
+			CAN = {
+				country_event = {id = league_national.11 days = 0 }
+			}
+			USA = {
+				country_event = {id = league_national.11 days = 0 }
+			}
+		}
 	}
 	focus = {
 		id = LEP_restore_infrastructure
@@ -5508,7 +5564,6 @@ focus_tree = {
 				days = 720
 			}
 			custom_effect_tooltip = tooltip_white_line
-			country_event = { id = league_mid.14 days = 0 }
 			add_one_random_civilian_factory = yes
 			set_temp_variable = { LEP_cons_var_change = 3 }
 			LEP_cons_var = yes

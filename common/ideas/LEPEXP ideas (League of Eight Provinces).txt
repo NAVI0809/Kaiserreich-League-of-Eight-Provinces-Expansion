@@ -1559,9 +1559,9 @@ ideas = {
 		
             modifier = {
 				stability_factor = 0.02
-				war_support_factor = 0.5
-				drift_defence_factor = 0.8
-				army_morale_factor = 0.8
+				war_support_factor = 0.05
+				drift_defence_factor = 0.08
+				army_morale_factor = 0.08
 				consumer_goods_factor = -0.1
 			}
 		}
@@ -1588,11 +1588,11 @@ ideas = {
 			allowed = { always = no }
 		
             modifier = {
-				consumer_goods_factor = -0.15
-				stability_factor = 0.1
-				industry_repair_factor = 0.25
-				conversion_cost_mil_to_civ_factor = -0.25
-				industry_air_damage_factor = -0.2
+				consumer_goods_factor = -0.08
+				stability_factor = 0.05
+				industry_repair_factor = 0.15
+				conversion_cost_mil_to_civ_factor = -0.1
+				industry_air_damage_factor = -0.12
 			}
 		}
 
@@ -3420,6 +3420,31 @@ ideas = {
 				modifier_army_sub_unit_militia_defence_factor = 0.1
 				modifier_army_sub_unit_militia_attack_factor = 0.05
 				modifier_army_sub_unit_militia_max_org_factor = 0.05
+			}
+		}
+
+		LEP_womens_rights_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_womens_rights_idea" }
+			picture = UoB_women_soldiers
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.1
+				mobilization_speed = 0.05
+				production_factory_start_efficiency_factor = 0.03
+				social_democrat_drift = 0.01
+				social_liberal_drift = 0.01
+				market_liberal_drift = 0.01
+			}
+		}
+
+		LEP_international_recognition_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_international_recognition_idea" }
+			picture = FNG_china_money
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.08
 			}
 		}
 	}
