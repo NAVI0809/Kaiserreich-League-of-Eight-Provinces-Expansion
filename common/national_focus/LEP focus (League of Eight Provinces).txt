@@ -2224,6 +2224,79 @@ focus_tree = {
 			}
 			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
+			if = {
+				limit = {
+					614 = {
+						is_owned_by = ROOT
+						NOT = { has_state_flag = QIE_steel_mines_developed }
+					}
+				}
+				614 = {
+					set_state_flag = QIE_steel_mines_developed
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					for_each_scope_loop = {
+						array = global.china_tags_array
+						THIS = { remove_targeted_decision = { target = 614 decision = QIE_develop_tangshan_steel_decision } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					1060 = {
+						is_owned_by = ROOT
+						NOT = { has_state_flag = QIE_steel_mines_developed }
+					}
+				}
+				1060 = {
+					set_state_flag = QIE_steel_mines_developed
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				hidden_effect = {
+					
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_ideas = QIE_kailuan_mining_bureau_idea
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = QIE_kaiping_mines_upgrade_tt
+			show_ideas_tooltip = kaiping_mines_2
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_idea = kaiping_mines_2 
+						}
+					}
+					add_ideas = kaiping_mines_2
+				}
+				if = {
+					limit = { has_idea = kaiping_mines }
+					add_ideas = kaiping_mines_2
+				}
+				for_each_scope_loop = {
+					array = global.china_tags_array
+					THIS = { remove_targeted_decision = { target = 614 decision = QIE_develop_zhili_steel_decision } }
+				}
+			}
+		    search_filters = { FOCUS_FILTER_INDUSTRY }
 		}
 	}
 	focus = {
@@ -2983,6 +3056,13 @@ focus_tree = {
 			focus = LEP_national_images_continuity
 		}
 		relative_position_id = LEP_national_images_continuity
+		completion_reward = {
+			add_political_power = -50
+			add_days_mission_timeout = {
+				mission = LEP_economic_recovery_ongoing
+				days = -100
+			}
+		}
 	}
 	focus = {
 		id = LEP_arm_national_guard
@@ -3425,6 +3505,41 @@ focus_tree = {
 			focus = LEP_maintain_production_order
 		}
 		relative_position_id = LEP_maintain_production_order
+		available = {
+			1048 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed QIE_court_hubei_generals"
+			1048 = {
+				add_dynamic_modifier = { modifier = QIE_hubei_generals_dynamic_modifier }
+				prioritize_state = yes
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_one_random_military_factory = yes
+			add_one_random_military_factory = yes
+			if = {
+				limit = { has_dlc_aat = yes }
+				mio:CHN_support_equipment_industry_organisation = {
+					add_mio_funds_gain_factor = 0.10
+					complete_mio_trait = China_mio_trait_integrated_hanyang
+					set_mio_flag = integrated_hanyang
+				}
+			}
+			else = {
+				add_one_random_military_factory = yes
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
+			QIE = {
+				show_ideas_tooltip = QIE_xiao_yaonan_advisor
+			}
+			hidden_effect = {
+				QIE_xiao_yaonan = {
+					CHN_recruit_character_effect = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 
 	focus = {
