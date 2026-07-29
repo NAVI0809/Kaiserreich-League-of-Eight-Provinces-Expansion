@@ -1003,14 +1003,27 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 80
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = LEP_gu_zhongxiu_advisor
-			custom_effect_tooltip = tooltip_white_line
+			QIE = {
+				QIE_gu_zhongxiu = {
+					CHN_recruit_character_effect = yes
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							desc = QIE_gu_zhongxiu_advisor_desc
+							idea_token = LEP_gu_zhongxiu_advisor
+							traits = { LEPEXP_hydrologist }
+							on_add = {
+								FROM = {
+									LEP_strengthen_ZXX_small = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			
 			SZC = {
 				SZC_reduce_famine_medium = yes
-			}
-			hidden_effect = {
-				recruit_character = LEP_gu_zhongxiu
 			}
 		}
 	}
@@ -2721,7 +2734,10 @@ focus_tree = {
 			QIE = {
 				show_ideas_tooltip = QIE_wellington_koo_advisor
 				show_ideas_tooltip = QIE_bai_jianwu_advisor
+				show_ideas_tooltip = QIE_yan_huiqing_advisor
 			}
+			custom_effect_tooltip = tooltip_white_line
+			country_event = { id = league_national.15 days = 0 }
 			hidden_effect = {
 				QIE = {
 					QIE_wellington_koo = { 
@@ -2750,6 +2766,9 @@ focus_tree = {
 								traits = { QIE_wus_little_think_tank }
 							}
 						}
+					}
+					QIE_yan_huiqing = {
+						CHN_recruit_character_effect = yes 
 					}
 				}
 			}
@@ -3517,6 +3536,8 @@ focus_tree = {
 				show_ideas_tooltip = QIE_shen_junru_advisor
 				show_ideas_tooltip = QIE_liu_chongyou_advisor
 			}
+			custom_effect_tooltip = tooltip_white_line
+			country_event = { id = league_national.14 days = 0 }
 			hidden_effect = {
 				QIE = {
 					QIE_shen_junru = { 

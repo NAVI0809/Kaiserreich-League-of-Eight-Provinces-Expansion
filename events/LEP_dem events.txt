@@ -274,7 +274,7 @@ country_event = { #轨上浩劫
 	id = league_mid.3
 	title = league_mid.3.t
 	desc = league_mid.3.d
-	picture = GFX_report_event_USA_train
+	picture = GFX_report_event_CHN_china_generic_train_1
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3765,7 +3765,7 @@ country_event = {
 	id = league_national.14
 	title = league_national.14.t
 	desc = league_national.14.d
-	picture = GFX_report_event_LEP_ma_xulun_speech
+	picture = GFX_report_event_CHN_china_QIE_seven_gentlemen
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3773,7 +3773,7 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.14 option league_national.14.a"
 		name = league_national.14.a
-		
+		add_political_power = 5
 	}
 }
 
@@ -3781,7 +3781,7 @@ country_event = {
 	id = league_national.15
 	title = league_national.15.t
 	desc = league_national.15.d
-	picture = GFX_report_event_LEP_ma_xulun_speech
+	picture = GFX_report_event_QIE_wellington_koo_figure
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3789,7 +3789,7 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.15 option league_national.15.a"
 		name = league_national.15.a
-		
+		add_political_power = 5
 	}
 }
 
