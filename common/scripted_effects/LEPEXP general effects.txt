@@ -17,6 +17,71 @@ enable_tech_livens_gas_projector = {
 	}
 }
 
+LEPEXP_call_back_GMJ_officers_effect = {
+	SHX_deng_xiaoping = { set_nationality = ROOT }
+	every_unit_leader ={
+		limit = {
+    	    has_trait = CHN_gmj_officer_trait
+		}
+		remove_second_in_command_role = yes
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}	
+
+LEPEXP_call_back_SHX_officers_effect = {
+	SHX_fu_zuoyi = { CHN_recruit_character_effect = yes }
+	SHX_shang_zhen = {
+		CHN_recruit_character_effect = yes
+		remove_second_in_command_role = yes
+	}
+	SHX_xu_yongchang= { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_HNN_FED_officers_effect = {
+	HNN_recruit_federalist_generals_effect = yes
+	every_unit_leader ={
+		limit = {
+    	    OR = {
+				has_character_flag = HNN_fed_loyalist_flag
+			}
+		}
+		remove_second_in_command_role = yes
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}	
+
+	 = {
+	GXC_weng_shiliang = { CHN_recruit_character_effect = yes }
+	GXC_ma_yuhang = { CHN_recruit_character_effect = yes }
+	GXC_luo_xianxiang = { CHN_recruit_character_effect = yes }
+	GXC_xiong_lue = { CHN_recruit_character_effect = yes }
+	GXC_yang_kunru = { CHN_recruit_character_effect = yes }
+	GXC_ge_zhaohuang = { CHN_recruit_character_effect = yes }
+	GXC_sun_baogang = { CHN_recruit_character_effect = yes }
+	GXC_li_minxin = { CHN_recruit_character_effect = yes }
+	GXC_li_zhangda = { CHN_recruit_character_effect = yes }
+	GXC_xie_wenbing = { CHN_recruit_character_effect = yes }
+	every_unit_leader ={
+		limit = {
+    	    OR = {
+				has_character_flag = GXC_LJS_character_flag
+				has_trait = CHN_GRA_officer
+				has_trait = CHN_CDL_officer
+			}
+			NOT = {
+				is_character = GXC_ye_ju
+			}
+		}
+		hidden_effect = {
+			remove_second_in_command_role = yes
+	    }
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}
+
 LEP_add_naval_variants = {
 	if = {
 		limit = { has_dlc_mtg = yes }
