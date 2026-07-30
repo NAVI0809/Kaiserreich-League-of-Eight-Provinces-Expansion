@@ -92,8 +92,8 @@ LEP_military_mobilization_modifier = {
     industry_air_damage_factor = LEP_mob_industry_air_damage_factor
     dig_in_speed_factor = LEP_mob_dig_in_speed_factor
     supply_consumption_factor = LEP_mob_supply_consumption_factor
-    army_core_attack_factor = LEP_mob_army_core_attack_factor
-    army_core_defence_factor = LEP_mob_army_core_defence_factor
+    army_attack_factor = LEP_mob_army_attack_factor
+    army_defence_factor = LEP_mob_army_defence_factor
     training_time_army_factor = LEP_mob_training_time_army_factor
     land_reinforce_rate = LEP_mob_land_reinforce_rate
 }

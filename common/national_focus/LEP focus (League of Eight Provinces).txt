@@ -672,7 +672,38 @@ focus_tree = {
 				country_event = { id = league_mid.31 days = 5 }
 				country_event = { id = league_mid.32 days = 35 }
 				country_event = { id = league_mid.11 days = 3 }
-				
+				if = {
+					limit = {
+						QIE = {
+							has_country_flag = wu_intervenes_proANQ
+						}
+					}
+					country_event = { id = league_mid.60 days = 8 }
+				}
+				if = {
+					limit = {
+						QIE = {
+							has_country_flag = wu_intervenes_proLEP
+						}
+					}
+					country_event = { id = league_mid.61 days = 8 }
+				}
+				if = {
+					limit = {
+						QIE = {
+							has_completed_focus = QIE_let_the_five_banner_flag_fly
+						}
+					}
+					country_event = { id = league_mid.63 days = 8 }
+				}
+				if = {
+					limit = {
+						QIE = {
+							has_completed_focus = QIE_purge_zhili
+						}
+					}
+					country_event = { id = league_mid.62 days = 8 }
+				}	
 			}
 		}
 	}
@@ -962,6 +993,7 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
+			
 		}
 	}
 	focus = {
@@ -980,9 +1012,24 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = LEP_salt_customs_special_supervision
 			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					has_idea = LEP_administrative_rectification3
+				}
+				modify_timed_idea = {
+					idea = LEP_administrative_rectification3
+					days = 120
+				}
+			}
+			else = {
+				add_timed_idea = {
+					days = 120
+					idea = LEP_administrative_rectification3
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			LEP_improve_popular_support = yes
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_administrative_rectification1
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
 				country_event = { id = league_mid.48 days = 30 }
@@ -1087,9 +1134,20 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
-			add_timed_idea = {
-				days = 120
-				idea = LEP_administrative_rectification3
+			if = {
+				limit = {
+					has_idea = LEP_administrative_rectification3
+				}
+				modify_timed_idea = {
+					idea = LEP_administrative_rectification3
+					days = 120
+				}
+			}
+			else = {
+				add_timed_idea = {
+					days = 120
+					idea = LEP_administrative_rectification3
+				}
 			}
 			LEP_strengthen_ZXX_small = yes
 		}
@@ -2185,6 +2243,9 @@ focus_tree = {
 		
 		cost = 2
 		icon = GFX_goal_develop_provinces
+		available = {
+			has_completed_focus = LEP_industrial_general_committee
+		}
 		prerequisite = {
 			focus = LEP_new_republic_with_old_ideals
 		}
@@ -3272,7 +3333,10 @@ focus_tree = {
 			focus = LEP_national_defense_design_council
 		}
 		available = {
-			has_war_with = JAP
+			OR = {
+				has_war_with = JAP
+				has_war_with = FNG
+			}		
 		}
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
@@ -3336,6 +3400,23 @@ focus_tree = {
 			focus = LEP_war_comes_from_the_north
 		}
 		relative_position_id = LEP_seek_international_recognition
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1600
+				producer = GEA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 300
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = USA
+			}
+		}
 	}
 	focus = {
 		id = LEP_appoint_republican_officers

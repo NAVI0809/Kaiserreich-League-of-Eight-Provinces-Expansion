@@ -2166,14 +2166,14 @@ country_event = { #南北两京——吴佩孚支持宁系
 		log = "[GetLogInfo]: eventleague_mid.61 option league_mid.61.a"
 		name = league_mid.61.a
 		QIE = {
-			diplomatic_relation = {
-			    country = 1
-			    relation = gurantee
-			    active = no
-		    }
 		    add_opinion_modifier = {
 			    target = QIE
 			    modifier = KR_outraged
+			}
+			diplomatic_relation = { 
+				country = LEP
+				relation = guarantee 
+				active = no 
 			}	
 		}
 		QIE = {

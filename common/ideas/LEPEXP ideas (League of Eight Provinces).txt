@@ -1154,10 +1154,10 @@ ideas = {
 			picture = eng_steady_as_she_goes
 			allowed = { always = no }
 			modifier = {
-				political_power_gain = 0.05
+				political_power_gain = 0.02
 				min_export = 0.05
-				trade_opinion_factor = 0.5
-				industrial_capacity_dockyard = 0.1
+				trade_opinion_factor = 0.25
+				industrial_capacity_dockyard = 0.08
 			}
 		}
 

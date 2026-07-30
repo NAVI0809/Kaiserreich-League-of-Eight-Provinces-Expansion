@@ -161,20 +161,20 @@ on_actions = {
 				}
 
 				set_variable = {
-					var = LEP_mob_army_core_attack_factor
+					var = LEP_mob_army_attack_factor
 					value = military_mobilization_var
 				}
 				multiply_variable = {
-					var = LEP_mob_army_core_attack_factor
+					var = LEP_mob_army_attack_factor
 					value = 0.0000125
 				}
 
 				set_variable = {
-					var = LEP_mob_army_core_defence_factor
+					var = LEP_mob_army_defence_factor
 					value = military_mobilization_var
 				}
 				multiply_variable = {
-					var = LEP_mob_army_core_defence_factor
+					var = LEP_mob_army_defence_factor
 					value = 0.0000125
 				}
 
