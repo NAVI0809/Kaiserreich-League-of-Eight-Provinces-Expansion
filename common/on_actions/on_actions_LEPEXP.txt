@@ -25,5 +25,32 @@ on_actions = {
 		}
 	}
 
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = LEP
+							FROM = {
+								is_major = yes
+								NOT = { tag = CUF }
+							}
+						}
+						AND = {
+							NOT = { tag = CUF }
+							is_major = yes
+							FROM = { tag = LEP }
+						}
+					}
+				}
+				LEP = {
+					LEP_change_president_clothes_effect = yes
+					LEP_war_with_jap_effect = yes
+				}
+			}
+		}
+	}
+
 	
 }

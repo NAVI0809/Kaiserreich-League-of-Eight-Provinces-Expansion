@@ -449,7 +449,7 @@ set_cosmetic_tag = LEP_LEP
 set_country_flag = LEP_is_pro_GER
 
 ###- Game Variables -###
-set_variable = { country_intro_page_count = 3 }
+set_variable = { country_intro_page_count = 5 }
 set_variable = {
 	var = LEP_construction_var
 	value = 0

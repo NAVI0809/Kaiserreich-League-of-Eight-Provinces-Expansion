@@ -962,6 +962,9 @@ LEP_stride_towards_unification = {
 		targets = { UPC }
 		
 		visible = {
+			UPC = {
+				exists = yes
+			}
 			has_country_flag = LEP_dem_gov
 		}
 		
@@ -976,10 +979,7 @@ LEP_stride_towards_unification = {
 					is_neighbor_of = ROOT
 					any_neighbor_country = { is_subject_of = ROOT }
 				}
-				has_country_leader = {
-					character = GXC_chen_jiongming
-					ruling_only = yes
-				}
+				tag = UPC
 			}
 		}
 	
@@ -998,6 +998,168 @@ LEP_stride_towards_unification = {
 	    }
 	    fixed_random_seed = no
 	}
+	LEP_in_alliance_with_HNN = {
+		priority = 200
+        allowed = {
+            always = no
+		}
+		visible = {
+			HNN = {
+				exists = yes
+				has_country_leader = { character = HNN_zhao_hengti }
+			}
+		}
+		available = {
+			HNN = {
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						HNN = { has_country_flag = CHN_SCW_neutral_flag }
+					}
+					CHN_south_china_war_over_trigger = yes
+					date > 1938.1.1
+					YUN = { is_subject = yes }
+					GXC = { is_subject = yes }
+				}
+				has_country_leader = { character = HNN_zhao_hengti }
+			}
+		}
+		cost = 40
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_HNN"
+			FROM = {
+				country_event = china_events.7
+				set_country_flag = {
+					flag = CHN_tag_is_hearing_alliance_offer_flag #Block multiple tags from demanding submission/offering alliance at once
+					days = 7
+					value = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = { china_puppet_FROM_effect = yes }
+		}
+		fixed_random_seed = no
+	}
+	LEP_in_alliance_with_GXC = {
+		priority = 199
+        allowed = {
+            always = no
+		}
+		visible = {
+			GXC = {
+				exists = yes
+				has_country_leader = { character = GXC_lu_yuguang }
+			}
+		}
+		available = {
+			GXC = {
+				has_civil_war = no
+				GXC_is_phase_1_trigger = no
+				OR = {
+					AND = {
+						has_global_flag = CHN_south_china_war_started
+						GXC = { has_country_flag = CHN_SCW_neutral_flag }
+					}
+					CHN_south_china_war_over_trigger = yes
+					date > 1938.1.1
+				}
+				has_country_leader = { character = GXC_lu_yuguang }
+			}
+			
+		}
+		cost = 40
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_GXC"
+			FROM = {
+				country_event = china_events.7
+				set_country_flag = {
+					flag = CHN_tag_is_hearing_alliance_offer_flag #Block multiple tags from demanding submission/offering alliance at once
+					days = 7
+					value = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = { china_puppet_FROM_effect = yes }
+		}
+		fixed_random_seed = no
+	}
+	LEP_in_alliance_with_YUN = {
+		priority = 198
+        allowed = {
+            always = no
+		}
+		visible = {
+			exists = yes
+			YUN = {
+				has_completed_focus = YUN_the_federalist_revival
+			}
+		}
+		available = {
+			YUN_is_phase_1_trigger = no
+			OR = {
+				CHN_south_china_war_over_trigger = yes
+				date > 1938.1.1
+			}
+			has_completed_focus = YUN_the_federalist_revival
+		}
+		cost = 40
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_YUN"
+			FROM = {
+				country_event = china_events.7
+				set_country_flag = {
+					flag = CHN_tag_is_hearing_alliance_offer_flag #Block multiple tags from demanding submission/offering alliance at once
+					days = 7
+					value = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = { china_puppet_FROM_effect = yes }
+		}
+		fixed_random_seed = no
+	}
+	LEP_in_alliance_with_SZC = {
+		priority = 197
+        allowed = {
+            always = no
+		}
+		visible = {
+			exists = yes
+			OR = {
+				SZC = { has_country_leader = { character = SZC_xiong_kewu } }
+				SZC = { has_country_leader = { character = SZC_li_jiayu } }
+			}
+		}
+		available = {
+			OR = {
+				SZC = { has_country_leader = { character = SZC_xiong_kewu } }
+				SZC = { has_country_leader = { character = SZC_li_jiayu } }
+			}
+		}
+		cost = 40
+		fire_only_once = yes
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_YUN"
+			FROM = {
+				country_event = china_events.7
+				set_country_flag = {
+					flag = CHN_tag_is_hearing_alliance_offer_flag #Block multiple tags from demanding submission/offering alliance at once
+					days = 7
+					value = 1
+				}
+			}
+			custom_effect_tooltip = if_they_accept_newline_tt
+			effect_tooltip = { china_puppet_FROM_effect = yes }
+		}
+		fixed_random_seed = no
+	}
 
 	
 
@@ -1005,6 +1167,9 @@ LEP_stride_towards_unification = {
 		allowed = { always = no }
 
 		visible = {
+			UPC = {
+				exists = yes
+			}
 			has_country_flag = LEP_dem_gov
 			
 		}
@@ -3609,4 +3774,6 @@ LEPEXP_gov = {
         days_remove = 30
 		days_re_enable = 10
 	}
+
+	
 }

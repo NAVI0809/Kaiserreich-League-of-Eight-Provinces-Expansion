@@ -993,7 +993,9 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
-			
+			activate_targeted_decision = { target = GXC decision = LEP_in_alliance_with_GXC }
+			activate_targeted_decision = { target = SZC decision = LEP_in_alliance_with_SZC }
+			activate_targeted_decision = { target = YUN decision = LEP_in_alliance_with_YUN }
 		}
 	}
 	focus = {
@@ -3383,6 +3385,18 @@ focus_tree = {
 				custom_effect_tooltip = tooltip_white_line
 				hidden_effect = {
 					unit_leader_event = { id = league_mid.27 }
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							JAP = { has_government = social_democrat }
+							JAP = { has_government = social_liberal }
+							JAP = { has_government = social_democrat }
+						}
+						
+					}
 				}
 			}
 		}

@@ -1598,6 +1598,77 @@ LEP_change_back_civil_clothes = {
 
 }
 
+LEP_change_president_clothes_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = LEP_chu_fucheng }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			LEP_chu_fucheng = {
+				unit_leader_event = { id = league_mid.26 days = 3 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = QIE_huang_fu }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			QIE_huang_fu = {
+				unit_leader_event = { id = league_mid.25 days = 3 }
+			}
+		}
+	
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = LEP_rong_zongjing }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			unit_leader_event = { id = league_mid.27 days = 3 }
+		}
+	}
+}
+
+LEP_war_with_jap_effect = {
+	if = {
+		limit = {
+			OR = {
+				JAP = { has_government = social_democrat }
+				JAP = { has_government = social_liberal }
+				JAP = { has_government = market_liberal }
+				JAP = { has_government = social_conservative }
+				JAP = { has_government = authoritarian_democrat }
+			}
+		}
+		country_event = { id = league_national.16 days = 0 }
+	}
+	if = {
+		limit = {
+			OR = {
+				JAP = { has_government = paternal_autocrat }
+				JAP = { has_government = national_populist }
+			}
+		}
+		country_event = { id = league_national.17 days = 0 }
+	}
+}
+
 
 
 
