@@ -2631,9 +2631,11 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.03
 			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
-			QIE = {
+			QIE = {				
 				show_ideas_tooltip = QIE_zeng_qi_advisor
+				custom_effect_tooltip = tooltip_white_line
 			    QIE_li_huang = {
 					CHN_recruit_character_effect = yes
 					add_advisor_role = {
@@ -2646,6 +2648,8 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = available_political_advisor
 			HNN = {
 				show_ideas_tooltip = HNN_zuo_shunsheng_advisor
 			}
@@ -3207,6 +3211,7 @@ focus_tree = {
 		cost = 7
 		icon = GFX_focus_CHI_guerrilla_warfare
 		#icon = GFX_focus_ETH_freedom_at_gunpoint
+		available = { has_completed_focus = LEP_army_nationalization }
 		prerequisite = {
 			focus = LEP_national_defense_design_council
 		}
@@ -3316,6 +3321,12 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = { LEP_mili_var_change = 2 }
 			LEP_mili_var = yes
+			custom_effect_tooltip = tooltip_white_line
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = LEP
+			}
 			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = LEP_strategic_reserve_fund
 			unlock_decision_tooltip = LEP_research_substitute_materials
@@ -11137,23 +11148,21 @@ focus_tree = {
 		
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
-			owns_state = 743
-			owns_state = 746
-			owns_state = 747
-			owns_state = 591
-			owns_state = 745
-			owns_state = 744
+			743 = { is_owned_by_ROOT_or_subject = yes } #上海
+			746 = { is_owned_by_ROOT_or_subject = yes } #宁波
+			747 = { is_owned_by_ROOT_or_subject = yes } #福州
+			591 = { is_owned_by_ROOT_or_subject = yes } #海南
+			745 = { is_owned_by_ROOT_or_subject = yes } #大连
+			744 = { is_owned_by_ROOT_or_subject = yes } #青岛
+			592 = { is_owned_by_ROOT_or_subject = yes } #广州
 	    }
 		ai_will_do = { factor = 10 }
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"
-
-			
+			log = "[GetLogRoot]: Focus Completed LEP_recruit_beiyang_admiralty"			
 			swap_ideas = {
 				remove_idea = LEP_nanjing_navy
 				add_idea = LEP_nanjing_navy_2
 			}
-			custom_effect_tooltip = tooltip_white_line
 
 			if = {
 			    limit = { NOT = { has_tech = early_ship_hull_light } }
@@ -11183,7 +11192,6 @@ focus_tree = {
 			    limit = { NOT = { has_tech = basic_torpedo } }
 			    set_technology = { basic_torpedo = 1 }
 		    }
-			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 1
@@ -11234,7 +11242,7 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { NOT = { country_exists = YUN} }
+				limit = { NOT = { country_exists = YUN } }
 				YUN = {
 					custom_effect_tooltip = characters_will_be_recruited
 					character_list_tooltip = {
@@ -11273,15 +11281,15 @@ focus_tree = {
 						}	
 					}
 					hidden_effect = {
-						GXC_chen_weizhou = { set_nationality = ROOT }
-						GXC_chen_ce = { set_nationality = ROOT }
-						GXC_li_qingwen = { set_nationality = ROOT }
-						GXC_tang_tingguang = { set_nationality = ROOT }
-						GXC_zhou_tianlu = { set_nationality = ROOT }
+						GXC_chen_weizhou = { CHN_recruit_character_effect = yes }
+						GXC_chen_ce = { CHN_recruit_character_effect = yes }
+						GXC_li_qingwen = { CHN_recruit_character_effect = yes }
+						GXC_tang_tingguang = { CHN_recruit_character_effect = yes }
+						GXC_zhou_tianlu = { CHN_recruit_character_effect = yes }
 					}
 				}
 			}
-			else_if = {
+			if = {
 			    limit = { CHI = { has_character = CHI_chen_shaokuan } }
 			    CHI = {
 				    custom_effect_tooltip = characters_will_be_recruited
@@ -11292,7 +11300,19 @@ focus_tree = {
 					    CHI_chen_shaokuan = { set_nationality = ROOT }
 				    }
 			    }
-		    }	
+		    }
+			if = {
+				limit = { ANQ = { has_character = ANQ_sa_benxin } }
+				ANQ = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+					    limit = { is_character = ANQ_sa_benxin }
+				    }
+					hidden_effect = {
+					    ANQ_sa_benxin = { set_nationality = ROOT }
+				    }
+				}	
+			}	
 			hidden_effect = { 
 				country_event = league_rebuild.18		
 			}
@@ -12986,10 +13006,10 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    QIE_wang_guanyi = { set_nationality = ROOT }
-				    QIE_ren_yunge = { set_nationality = ROOT }
-				    QIE_shi_bangfan = { set_nationality = ROOT }
-				    QIE_liu_muqun = { set_nationality = ROOT }
+				    QIE_wang_guanyi = { CHN_recruit_character_effect = yes }
+				    QIE_ren_yunge = { CHN_recruit_character_effect = yes }
+				    QIE_shi_bangfan = { CHN_recruit_character_effect = yes }
+				    QIE_liu_muqun = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			CHI = {		
@@ -13005,9 +13025,9 @@ focus_tree = {
 			    }
 			    hidden_effect = {
 					CHI_chen_changzu = { CHN_recruit_character_effect = yes }
-				    CHI_zhou_zhirou = { set_nationality = ROOT }
-				    CHI_mao_bangchu = { set_nationality = ROOT }
-				    CHI_chen_changzu = { set_nationality = ROOT }
+				    CHI_zhou_zhirou = { CHN_recruit_character_effect = yes }
+				    CHI_mao_bangchu = { CHN_recruit_character_effect = yes }
+				    CHI_chen_changzu = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			SHX = {
@@ -13023,10 +13043,10 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    SHX_cao_baoqing = { set_nationality = ROOT }
-				    SHX_zhong_jihan = { set_nationality = ROOT }
-					SHX_xie_wenda = { set_nationality = ROOT }
-					SHX_shen_dexie = { set_nationality = ROOT }
+				    SHX_cao_baoqing = { CHN_recruit_character_effect = yes }
+				    SHX_zhong_jihan = { CHN_recruit_character_effect = yes }
+					SHX_xie_wenda = { CHN_recruit_character_effect = yes }
+					SHX_shen_dexie = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			HNN = {
@@ -13040,8 +13060,8 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    HNN_tang_duo = { set_nationality = ROOT }
-				    HNN_men_bingyue = { set_nationality = ROOT }
+				    HNN_tang_duo = { CHN_recruit_character_effect = yes }
+				    HNN_men_bingyue = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			SZC = {
@@ -13056,9 +13076,9 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    SZC_jiang_kui = { set_nationality = ROOT }
-				    SZC_zheng_shaoyu = { set_nationality = ROOT }
-					SZC_yue_yiqin = { set_nationality = ROOT }
+				    SZC_jiang_kui = { CHN_recruit_character_effect = yes }
+				    SZC_zheng_shaoyu = { CHN_recruit_character_effect = yes }
+					SZC_yue_yiqin = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			YUN = {
@@ -13073,9 +13093,9 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    YUN_qian_dajun = { set_nationality = ROOT }
-				    YUN_zhang_jingyu = { set_nationality = ROOT }
-					YUN_liu_peiquan = { set_nationality = ROOT }
+				    YUN_qian_dajun = { CHN_recruit_character_effect = yes }
+				    YUN_zhang_jingyu = { CHN_recruit_character_effect = yes }
+					YUN_liu_peiquan = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			GXC = {
@@ -13090,9 +13110,9 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    GXC_huang_guangrui = { set_nationality = ROOT }
-				    GXC_ding_jixu = { set_nationality = ROOT }
-					GXC_feng_huang = { set_nationality = ROOT }
+				    GXC_huang_guangrui = { CHN_recruit_character_effect = yes }
+				    GXC_ding_jixu = { CHN_recruit_character_effect = yes }
+					GXC_feng_huang = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			FNG = {
@@ -13107,9 +13127,9 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    FNG_li_guidani = { set_nationality = ROOT }
-				    FNG_tong_yanbo = { set_nationality = ROOT }
-					FNG_gao_zhihang = { set_nationality = ROOT }
+				    FNG_li_guidani = { CHN_recruit_character_effect = yes }
+				    FNG_tong_yanbo = { CHN_recruit_character_effect = yes }
+					FNG_gao_zhihang = { CHN_recruit_character_effect = yes }
 			    }
 			}
 			SHD = {
@@ -13124,9 +13144,9 @@ focus_tree = {
 				    }
 			    }
 			    hidden_effect = {
-				    SHD_robert_short = { set_nationality = ROOT }
-				    SHD_vincent_schmidt = { set_nationality = ROOT }
-					SHD_antonio_riva = { set_nationality = ROOT }
+				    SHD_robert_short = { CHN_recruit_character_effect = yes }
+				    SHD_vincent_schmidt = { CHN_recruit_character_effect = yes }
+					SHD_antonio_riva = { CHN_recruit_character_effect = yes }
 			    }
 			}
 		}
