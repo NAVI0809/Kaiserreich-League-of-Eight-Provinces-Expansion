@@ -3346,70 +3346,11 @@ focus_tree = {
 			focus = LEP_national_defense_design_council
 		}
 		available = {
-			OR = {
-				has_war_with = JAP
-				has_war_with = FNG
-			}		
+			has_war_with = FNG	
 		}
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = LEP_new_election
-					}
-					has_country_leader = { character = LEP_chu_fucheng }
-				}
-				custom_effect_tooltip = LEP_change_army_clothes_tt
-				custom_effect_tooltip = tooltip_white_line
-				hidden_effect = {
-					LEP_chu_fucheng = {
-						unit_leader_event = { id = league_mid.26 }
-					}
-				}
-				
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = LEP_new_election
-					}
-					has_country_leader = { character = QIE_huang_fu }
-				}
-				custom_effect_tooltip = LEP_change_army_clothes_tt
-				custom_effect_tooltip = tooltip_white_line
-				hidden_effect = {
-					QIE_huang_fu = {
-						unit_leader_event = { id = league_mid.25 }
-					}
-				}
-			
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = LEP_new_election
-					}
-					has_country_leader = { character = LEP_rong_zongjing }
-				}
-				custom_effect_tooltip = LEP_change_army_clothes_tt
-				custom_effect_tooltip = tooltip_white_line
-				hidden_effect = {
-					unit_leader_event = { id = league_mid.27 }
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						OR = {
-							JAP = { has_government = social_democrat }
-							JAP = { has_government = social_liberal }
-							JAP = { has_government = social_democrat }
-						}
-						
-					}
-				}
-			}
+			country_event = { id = league_national.18 days = 0 }
 		}
 	}
 	focus = {

@@ -1656,7 +1656,7 @@ LEP_war_with_jap_effect = {
 				JAP = { has_government = authoritarian_democrat }
 			}
 		}
-		country_event = { id = league_national.16 days = 0 }
+		country_event = { id = league_national.16 days = 15 }
 	}
 	if = {
 		limit = {
@@ -1665,7 +1665,7 @@ LEP_war_with_jap_effect = {
 				JAP = { has_government = national_populist }
 			}
 		}
-		country_event = { id = league_national.17 days = 0 }
+		country_event = { id = league_national.17 days = 15 }
 	}
 }
 
