@@ -1,0 +1,114 @@
+defined_text = {
+	name = GetOrganizationAct
+	text = {
+		localization_key = idea_desc|LEP_organization_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCompulsoryEducationAct
+	text = {
+		localization_key = idea_desc|LEP_compulsory_education_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCivilServiceAct
+	text = {
+		localization_key = idea_desc|LEP_civil_service_act_idea
+	}
+}
+
+defined_text = {
+	name = GetProvincialCountyOrganizationAct
+	text = {
+		localization_key = idea_desc|LEP_provincial_county_organization_act_idea
+	}
+}
+
+defined_text = {
+	name = GetFactoryInspectionAct
+	text = {
+		localization_key = idea_desc|LEP_factory_inspection_act_idea
+	}
+}
+
+defined_text = {
+	name = GetMassLayoffProtectionAct
+	text = {
+		localization_key = idea_desc|LEP_mass_layoff_protection_act_idea
+	}
+}
+
+defined_text = {
+	name = GetPoliticalAssociationManagementAct
+	text = {
+		trigger = {
+			has_idea = LEP_political_association_management_act_idea_1
+		}
+		localization_key = idea_desc|LEP_political_association_management_act_idea_1
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_political_association_management_act_idea_2
+		}
+		localization_key = idea_desc|LEP_political_association_management_act_idea_2
+	}
+}
+
+defined_text = {
+	name = GetFactoryAct
+	text = {
+		localization_key = idea_desc|LEP_factory_act_idea
+	}
+}
+
+defined_text = {
+	name = GetSocialSecurityAct
+	text = {
+		localization_key = idea_desc|LEP_social_security_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCompanyAct
+	text = {
+		localization_key = idea_desc|LEP_company_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCollectiveAgreementAct
+	text = {
+		localization_key = idea_desc|LEP_collective_agreement_act_idea
+	}
+}
+
+defined_text = {
+	name = GetLandAct
+	text = {
+		localization_key = idea_desc|LEP_land_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCivilCode
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_1
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_1
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_2
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_2
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_3
+		}
+		localization_key = idea_desc|LEP_civil_code_idea_3
+	}
+}

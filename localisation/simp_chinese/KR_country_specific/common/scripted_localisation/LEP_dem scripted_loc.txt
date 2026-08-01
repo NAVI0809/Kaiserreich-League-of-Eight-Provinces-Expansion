@@ -1,0 +1,304 @@
+defined_text = {
+	name = LEP_republican_administration_loc
+	text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_republican_administration_regional_stage
+	}
+	text = {
+		localization_key = LEP_republican_administration_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_ZZH_decision_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_ZZH_decision_regional_stage
+	}
+	text = {
+		localization_key = LEP_ZZH_decision_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_ZXX_decision_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_ZXX_decision_regional_stage
+	}
+	text = {
+		localization_key = LEP_ZXX_decision_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_JNSB_decision_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_JNSB_decision_regional_stage
+	}
+	text = {
+		localization_key = LEP_JNSB_decision_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_ZZH_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_ZZH_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_ZZH_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_ZXX_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_ZXX_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_ZXX_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_JNSB_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_JNSB_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_JNSB_small_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_ZZH_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_ZZH_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_ZZH_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_ZXX_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_ZXX_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_ZXX_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_add_JNSB_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_add_JNSB_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_add_JNSB_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_sub_ZZH_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_ZZH_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_ZZH_small_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_sub_ZXX_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_ZXX_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_ZXX_small_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_sub_JNSB_small_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_JNSB_small_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_JNSB_small_national_stage
+	}
+}
+
+
+defined_text = {
+    name = LEP_sub_ZZH_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_ZZH_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_ZZH_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_sub_ZXX_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_ZXX_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_ZXX_large_national_stage
+	}
+}
+
+defined_text = {
+    name = LEP_sub_JNSB_large_loc
+    text = {
+        trigger = {
+            NOT = {
+                has_country_flag = LEP_RA_national_stage
+            }
+        }
+		localization_key = LEP_sub_JNSB_large_regional_stage
+	}
+	text = {
+		localization_key = LEP_sub_JNSB_large_national_stage
+	}
+}
+
+defined_text = {
+	name = GetMilitaryMobilizationVar
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 99 }
+		}
+		localization_key = GetMilitaryMobilizationVar99
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 75 }
+		}
+		localization_key = GetMilitaryMobilizationVar75
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 50 }
+		}
+		localization_key = GetMilitaryMobilizationVar50
+	}
+	text = {
+		trigger = {
+			check_variable = { military_mobilization_var > 25 }
+		}
+		localization_key = GetMilitaryMobilizationVar25
+	}
+    text = {
+		localization_key = GetMilitaryMobilizationVar0
+	}
+}
+
+define_text = {
+	name = LEP_fujian_Factory_Entry
+	text = {
+		localization_key = "LEP_fujian_[?current_factory]"
+	}
+}
+
+define_text = {
+	name = LEP_national_reconstruction_bureau_loc
+	text = {
+		trigger = {
+			has_completed_focus = LEP_national_reconstruction_administration
+		}
+		localization_key = LEP_national_reconstruction_bureau_key
+	}
+	text = {
+		localization_key = LEP_industrial_general_committee
+	}
+}
+
+define_text = {
+	name = LEP_national_reconstruction_bureau_desc_loc
+	text = {
+		trigger = {
+			has_completed_focus = LEP_national_reconstruction_administration
+		}
+		localization_key = LEP_national_reconstruction_bureau_desc_key2
+	}
+	text = {
+		localization_key = LEP_national_reconstruction_bureau_desc_key1
+	}
+}

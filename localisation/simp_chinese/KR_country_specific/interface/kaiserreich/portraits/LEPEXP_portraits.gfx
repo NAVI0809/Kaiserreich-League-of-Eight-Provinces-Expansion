@@ -1,0 +1,628 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_LEP_sun_chuanfang_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_sun_chuanfang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_sun_chuanfang_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_sun_chuanfang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_qi_xieyuan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_qi_xieyuan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_qi_xieyuan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_qi_xieyuan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_linsi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_linsi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tian_wenbing_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_tian_wenbing.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhang_xinyi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhang_xinyi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ding_wenjiang_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ding_wenjiang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wei_daofeng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wei_daofeng.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_erhe_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_tang_erhe.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_erkang_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_erkang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yang_wenkai_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yang_wenkai.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ouyang_wu_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ouyang_wu.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_chenggan_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_chenggan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_baozhang_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_baozhang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_rong_zongjing_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_rong_zongjing.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_liu_qingeng.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_yutang_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_yutang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_leighton_stuart_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_leighton_stuart.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_shigong_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ma_shigong_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_huansheng_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xu_huansheng_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yu_qiaqing_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yu_qiaqing_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_rong_desheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_rong_desheng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_deheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xu_deheng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yin_ruli_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yin_ruli_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_zaoxi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wu_zaoxi_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_pan_shu_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_pan_shu_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_yudao_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_lu_yudao_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liang_xi_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_liang_xi_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_gu_zhongxiu_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_gu_zhongxiu_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_jiyan_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_jiyan_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhang_yaozeng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhang_yaozeng_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yu_jiaju_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yu_jiaju_civilian_small.png"
+	}
+	#zigai 
+	spriteType = {
+		name = "GFX_portrait_ANQ_sa_benxin_scientist_large"
+		texturefile = "gfx/leaders/LEP/ANQ_sa_benxin_scientist_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xing_zhennan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_xing_zhennan_army_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shi_beiheng_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_shi_beiheng_army_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_shigong_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_ma_shigong_army_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_CHI_peng_xuefeng_dem"
+		texturefile = "gfx/leaders/LEP/CHI_peng_xuefeng_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_yutang_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_yutang_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_ANQ_sun_liren_dem"
+		texturefile = "gfx/leaders/LEP/ANQ_sun_liren_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_CHI_li_jishen_dem"
+		texturefile = "gfx/leaders/LEP/CHI_li_jishen_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_liu_qingeng_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_liu_qingeng_dem_army_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_qingeng_scientist_large"
+		texturefile = "gfx/leaders/LEP/LEP_liu_qingeng_scientist.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_rong_zongjing_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_rong_zongjing_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_rong_zongjing_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_rong_zongjing_army.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chu_fucheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_chu_fucheng.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chu_fucheng_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_chu_fucheng_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chu_fucheng_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_chu_fucheng_army.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_fang_shengtao_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_fang_shengtao_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_fang_shengtao_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_fang_shengtao_army.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_gu_zhun_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_gu_zhun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_gu_zhun_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_gu_zhun_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_erkang_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_erkang_army.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chen_yi_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_chen_yi_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_enbo_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_tang_enbo_army_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_fengqi_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zhou_fengqi_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ge_jingen_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_ge_jingen_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_qian_zongze_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_qian_zongze_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shi_yousan_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_shi_yousan_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lin_wei_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_lin_wei_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_yan_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zhou_yan_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_guo_chan_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_guo_chan_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_hao_guoxi_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_hao_guoxi_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_jiang_zungui_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_jiang_zungui_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_peigen_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_xu_peigen_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_rentao_dem_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_rentao_dem.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_linsi_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_Li_Linsi_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_xulun_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_ma_xulun_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_e_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_wang_e_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_huang_baitao_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_huang_baitao_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_sa_shijun_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_sa_shijun_army_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_rengli_navy_large"
+		texturefile = "gfx/leaders/LEP/LEP_wu_rengli_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_xiaobo_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_lu_xiaobo_army_large.png"
+	}
+	##zigai-advisors
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_xiaobo_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_lu_xiaobo_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhu_meixian_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhu_meixian_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_fang_yexian_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_fang_yexian_civilian_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xing_zhennan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xing_zhennan_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shi_beiheng_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_shi_beiheng_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_sa_shijun_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_sa_shijun_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_rengli_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wu_rengli_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_e_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_e_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_huang_baitao_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_huang_baitao_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_Nanking_parliament_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_Nanking_parliament.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_huang_qun_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_huang_qun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_jiang_qian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_jiang_qian.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_jing_yaoyue_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_jing_yaoyue.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_siguang_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_siguang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_qunying_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_tang_qunying.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_youlan_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_youlan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yu_huancheng_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yu_huancheng.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_yuan_xiluo_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_yuan_xiluo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhang_jvsheng_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhang_jvsheng.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhao_fengchang_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhao_fengchang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_gao_fengqian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_gao_fengqian.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_xulun_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ma_xulun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_hermann_kriebel_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_hermann_kriebel.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_qian_zongze_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_qian_zongze.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_qian_zongze_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_qian_zongze.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_shijia_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_shijia.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_shijia_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_shijia.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_zhennan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wu_zhennan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wu_zhennan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_wu_zhennan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_shouting_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_shouting.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shen_jingchen_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_shen_jingchen.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chen_qixia_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_chen_qixia.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_tianxiang_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_tianxiang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_zongji_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_liu_zongji.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_liu_zongji_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_liu_zongji.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_xiangting_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_lu_xiangting.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lu_xiangting_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_lu_xiangting.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chen_yi_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_chen_yi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_chen_yi_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_chen_yi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zheng_junyan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zheng_junyan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zheng_junyan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zheng_junyan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_deng_ruzhuo_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_deng_ruzhuo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_deng_ruzhuo_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_deng_ruzhuo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_yinren_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhou_yinren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_yinren_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zhou_yinren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shangguan_yunxiang_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_shangguan_yunxiang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shangguan_yunxiang_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_shangguan_yunxiang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_fengqi_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhou_fengqi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_fengqi_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zhou_fengqi.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_enbo_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_tang_enbo.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_enbo_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_tang_enbo_army.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_enbo_army_large_kuomintang"
+		texturefile = "gfx/leaders/LEP/LEP_tang_enbo_kuomintang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_tang_enbo_army_small_kuomintang"
+		texturefile = "gfx/interface/advisors/LEP/LEP_tang_enbo_kuomintang.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xie_hongxun_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xie_hongxun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xie_hongxun_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_xie_hongxun.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_meng_zhaoyue_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_meng_zhaoyue.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_meng_zhaoyue_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_meng_zhaoyue.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shi_yousan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_shi_yousan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_shi_yousan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_shi_yousan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_haoji_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_wang_haoji.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_wang_haoji_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_wang_haoji.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ge_jingen_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ge_jingen.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ge_jingen_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_ge_jingen.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lin_wei_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_lin_wei.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_lin_wei_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_lin_wei.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_guo_chan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_guo_chan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_guo_chan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_guo_chan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_yan_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhou_yan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_yan_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_zhou_yan.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_rentao_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_rentao.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_rentao_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_rentao.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_peigen_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_xu_peigen.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_xu_peigen_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_xu_peigen.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_fang_benren_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_fang_benren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_fang_benren_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_fang_benren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_yuren_army_large"
+		texturefile = "gfx/leaders/LEP/LEP_ma_yuren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ma_yuren_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_ma_yuren.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_zhejun_officers"
+		texturefile = "gfx/interface/officer_corp/spirits/zhejun_officers.png"
+	}
+	#Scientists
+	spriteType = {
+		name = "GFX_portrait_LEP_chien_shiung_wu_scientist_large"
+		texturefile = "gfx/leaders/LEP/scientists/LEP_chien_shiung_wu.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhu_jiaren_scientist_large"
+		texturefile = "gfx/leaders/LEP/scientists/LEP_zhu_jiaren.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_ye_zaifu_scientist_large"
+		texturefile = "gfx/leaders/LEP/scientists/LEP_ye_zaifu.png"
+	}
+	
+	
+
+}

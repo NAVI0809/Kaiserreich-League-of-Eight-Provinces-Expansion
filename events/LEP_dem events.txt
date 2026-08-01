@@ -575,6 +575,7 @@ country_event = { #旗帜问题
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = tooltip_dash_line
         custom_effect_tooltip = tooltip_white_line
+		set_country_flag = LEP_five_races_flag_chocie
 	}
 
 	option = {
@@ -594,6 +595,7 @@ country_event = { #旗帜问题
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = tooltip_dash_line
         custom_effect_tooltip = tooltip_white_line
+		set_country_flag = LEP_shanghai_flag_choice
 	}
 
 	option = {
@@ -613,6 +615,7 @@ country_event = { #旗帜问题
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = tooltip_dash_line
         custom_effect_tooltip = tooltip_white_line
+		set_country_flag = LEP_jiangsu_flag_choice
 	}
 
 	option = {
@@ -620,6 +623,7 @@ country_event = { #旗帜问题
 		name = league_mid.11.e
 		add_political_power = 20
 		add_stability = 0.05
+		set_country_flag = LEP_jiangsu_flag_choice
 	}
 }
 
@@ -4525,6 +4529,167 @@ country_event = { #效果平平
 		}
 				
 	}	
+}
+
+country_event = { #新国旗
+	id = league_generic.500
+	title = league_generic.500.t
+	desc = league_generic.500.d
+	picture = GFX_report_event_CHN_China_five_colour_flags
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = league_generic.500.a
+		log = "[GetLogInfo]: event league_generic.500 option league_generic.500.a"
+		clr_country_flag = LEP_nanjing_flag_choice
+		clr_country_flag = LEP_shanghai_flag_choice
+		clr_country_flag = LEP_jiangsu_flag_choice
+		set_country_flag = LEP_five_races_flag_chocie
+		add_war_support = 0.02
+	}
+	option = {
+		name = league_generic.500.b
+		log = "[GetLogInfo]: event league_generic.500 option league_generic.500.b"
+		add_political_power = 10
+	}
+}
+
+country_event = { #新国号
+	id = league_generic.501
+	title = league_generic.501.t
+	desc = league_generic.501.d
+	picture = GFX_report_event_CHN_china_five_colour_confrence
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = league_generic.501.a
+		log = "[GetLogInfo]: event league_generic.501 option league_generic.501.a"
+		if = {
+			limit = {
+				has_country_flag = LEP_five_races_flag_chocie
+			}
+			set_cosmetic_tag = LEP_five_races_flag_ROC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_shanghai_flag_choice
+			}
+			set_cosmetic_tag = LEP_shanghai_flag_ROC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_jiangsu_flag_choice
+			}
+			set_cosmetic_tag = LEP_jiangsu_flag_ROC_name
+		}
+		
+		
+	}
+	option = {
+		name = league_generic.501.b
+		log = "[GetLogInfo]: event league_generic.501 option league_generic.501.b"
+		if = {
+			limit = {
+				has_country_flag = LEP_five_races_flag_chocie
+			}
+			set_cosmetic_tag = LEP_five_races_flag_FRC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_shanghai_flag_choice
+			}
+			set_cosmetic_tag = LEP_shanghai_flag_FRC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_jiangsu_flag_choice
+			}
+			set_cosmetic_tag = LEP_jiangsu_flag_FRC_name
+		}
+	}
+	option = {
+		name = league_generic.501.c
+		log = "[GetLogInfo]: event league_generic.501 option league_generic.501.c"
+		if = {
+			limit = {
+				has_country_flag = LEP_five_races_flag_chocie
+			}
+			set_cosmetic_tag = LEP_five_races_flag_DRC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_shanghai_flag_choice
+			}
+			set_cosmetic_tag = LEP_shanghai_flag_DRC_name
+		}
+		if = {
+			limit = {
+				has_country_flag = LEP_jiangsu_flag_choice
+			}
+			set_cosmetic_tag = LEP_jiangsu_flag_DRC_name
+		}
+	}
+}
+
+country_event = { 
+	id = league_generic.502
+	title = league_generic.502.t
+	desc = league_generic.502.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.502.a
+		log = "[GetLogInfo]: event league_generic.502 option league_generic.502.a"
+	}
+}
+
+country_event = { 
+	id = league_generic.503
+	title = league_generic.503.t
+	desc = league_generic.503.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.503.a
+		log = "[GetLogInfo]: event league_generic.503 option league_generic.503.a"
+	}
+}
+
+country_event = { 
+	id = league_generic.504
+	title = league_generic.504.t
+	desc = league_generic.504.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.504.a
+		log = "[GetLogInfo]: event league_generic.504 option league_generic.504.a"
+	}
+}
+
+country_event = { 
+	id = league_generic.505
+	title = league_generic.505.t
+	desc = league_generic.505.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.505.a
+		log = "[GetLogInfo]: event league_generic.505 option league_generic.505.a"
+	}
 }
 
 country_event = { #电解铝生产线

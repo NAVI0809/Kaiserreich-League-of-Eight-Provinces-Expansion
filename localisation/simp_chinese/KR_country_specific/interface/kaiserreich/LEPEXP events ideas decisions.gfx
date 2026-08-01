@@ -1,0 +1,41 @@
+spriteTypes = {
+	#ideas
+	spriteType = {
+		name = "GFX_idea_LEP_Liu_rifle_idea"
+		texturefile = "gfx/interface/ideas/LEP_Liu_rifle.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_Liu_rifle_2_idea"
+		texturefile = "gfx/interface/ideas/LEP_Liu_rifle.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_idea_tide_of_steel"
+		texturefile = "gfx/interface/ideas/LEP_idea_tide_of_steel.png"
+	}
+	spriteType = {
+		name = "GFX_idea_devastation_strategic_bombing_disruption"
+		texturefile = "gfx/interface/ideas/LEP_tokyo_brunbrunbrun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_devastation_strategic_bombing_disruption_2"
+		texturefile = "gfx/interface/ideas/LEP_tokyo_brunbrunbrun.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_naval_air"
+		texturefile = "gfx/interface/ideas/LEP_naval_air.png"
+	}
+	#decisons
+	spriteType = {
+		name = "GFX_decision_cat_picture_N38D_marching"
+		texturefile = "gfx/interface/decisions/decisions_categories_pictures/N38D_marching.png"
+	}
+	#country events
+	spriteType = {
+		name = "GFX_report_event_LEP_rusheng"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_rusheng_event.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_cn_zisse"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_cn_zisse_event.png"
+	}
+}

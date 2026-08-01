@@ -1,0 +1,62 @@
+spriteTypes = {
+	
+	#MIOs
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_hongqiao"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_hongqiao.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_jinling"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_jinling.png"
+	}
+	spriteType = {
+		name = "GFX_idea_LEP_MIO_zeiss"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEP_MIO_zeiss.png"
+	}
+
+	#companies
+	spriteType = {
+		name = "GFX_idea_LEPEXP_CNCS_company"
+		texturefile = "gfx/interface/companies/LEP_EXP/LEPEXP_CNCS_company.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_LEP_national_railway_corporation"
+		texturefile = "gfx/interface/companies/CHI/CHI_national_railway_corporation.png"
+	}
+
+	#MIO trait
+	spriteType = {
+		name = "GFX_LEP_MIO_trait_jinling"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_MIO_trait_jinling.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_icon_zeiss"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_mio_trait_icon_zeiss.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_long_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_mio_trait_long_art.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_cold_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_mio_trait_cold_art.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_tight_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/LEP_mio_trait_tight_art.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_light_shield_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/KR_LEP_mio_trait_light_shield_art.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_heavy_shield_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/KR_LEP_mio_trait_heavy_shield_art.png"
+	}
+	spriteType = {
+		name = "GFX_KR_LEP_mio_trait_APDS_art"
+		texturefile = "gfx/interface/military_industrial_organization/trait_icons/LEP/KR_LEP_mio_trait_APDS_art.png"
+	}
+}
+

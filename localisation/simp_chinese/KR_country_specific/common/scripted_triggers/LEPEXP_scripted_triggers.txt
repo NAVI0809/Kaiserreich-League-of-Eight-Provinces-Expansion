@@ -1,0 +1,188 @@
+is_controlled_by_jap_or_its_puppet = {
+	custom_trigger_tooltip = {
+		tooltip = is_controlled_by_jap_or_its_puppet_tt
+		controller = {
+			OR = {
+				is_puppet_of = JAP
+				TAG = JAP
+			}
+		}
+	}
+}
+
+ZZH_winning_1_trigger = {
+	FROM = {
+		social_liberal > 0.05
+	}
+	FROM = {
+		NOT = {
+			social_liberal > 0.10
+		} 
+	}
+}
+
+can_add_1_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_add_1_cons_var_tt
+	    check_variable = {
+		    var = LEP_construction_var
+		    value = 1
+		    compare = greater_than_or_equals
+	    }
+	}
+}
+
+can_add_2_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_add_2_cons_var_tt
+	    check_variable = {
+		    var = LEP_construction_var
+		    value = 2
+		    compare = greater_than_or_equals
+	    }
+	}
+}
+
+can_add_4_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_add_4_cons_var_tt
+	    check_variable = {
+		    var = LEP_construction_var
+		    value = 4
+		    compare = greater_than_or_equals
+	    }
+	}	
+}
+
+can_withdraw_1_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_withdraw_1_cons_var_tt
+	    OR = {
+		    check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.01
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.05
+		        compare = less_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.02
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.015
+		        compare = greater_than_or_equals
+	        }
+		}
+	}
+}
+
+can_withdraw_2_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_withdraw_2_cons_var_tt
+	    OR = {
+		    check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.02
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.1
+		        compare = less_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.04
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.03
+		        compare = greater_than_or_equals
+	        }
+		}
+	}
+}
+
+can_withdraw_4_cons_var = {
+	custom_trigger_tooltip = {
+		tooltip = can_withdraw_4_cons_var_tt
+	    OR = {
+		    check_variable = {
+		        var = LEP_cons_production_factory_max_efficiency_factor
+		        value = 0.04
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_industrial_capacity_factory
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_consumer_goods_factor
+		        value = -0.2
+		        compare = less_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_start_efficiency_factor
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_speed_buildings_factor
+		        value = 0.08
+		        compare = greater_than_or_equals
+	        }
+		    check_variable = {
+		        var = LEP_cons_production_factory_efficiency_gain_factor
+		        value = 0.06
+		        compare = greater_than_or_equals
+	        }
+		}
+	}
+}
+
+LEP_NSU_direct_var_JGH_win = {
+	check_variable = {
+		var = LEP_NSU_direct_var
+		value = 1
+		compare = greater_than_or_equals
+	}
+}
+
+LEP_NSU_direct_var_JXH_win = {
+	check_variable = {
+		var = LEP_NSU_direct_var
+		value = -1
+		compare = less_than_or_equals
+	}
+}
+
+
+

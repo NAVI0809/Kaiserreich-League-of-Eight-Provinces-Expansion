@@ -1,0 +1,39 @@
+technologies = {
+
+	tech_LEP_combat_engineer = {
+
+		research_cost = 1
+
+		#only added by effect
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			combat_engineer
+		}
+	}
+
+	tech_livens_gas_projector = {
+		allow = { always = no } #only added by effect
+
+		on_research_complete = {
+			custom_effect_tooltip = tech_livens_gas_projector_effect #TODO: remove if tech_effect terrain tooltips are fixed
+		}
+		show_effect_as_desc = yes
+
+		category_light_infantry = {
+			fort = {
+				attack = 0.10
+				defence = 0.05
+			}
+			jungle = {
+				attack = 0.10
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.10
+				defence = 0.20
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+LEPEXP_mio_field_repair_tool_kit = { #战地维护套件
+	name = LEPEXP_mio_field_repair_tool_kit_desc
+	icon =  GFX_mio_policy_ordnance_factory_board
+	allowed = {
+		has_dlc_nsb = yes
+		is_military_industrial_organization = LEP_jinling_organisation
+	}
+	available = {
+		has_mio_size > 5
+	}
+	equipment_bonus = {
+		same_as_mio = {
+			reliability = 0.15
+			defense = 0.1
+		}
+	}
+	ai_will_do = { base = 10 }
+}
+
+LEP_mio_policy_hire_state_construction_companies = {
+	name = LEP_mio_policy_hire_state_construction_companies
+	icon = GFX_idea_ARG_invest_in_roads
+	allowed = {
+		has_dlc_nsb = yes
+		is_military_industrial_organization = LEP_fujian_organisation
+	}
+	available = {
+		is_mio_trait_completed = fujian_upgrade_3
+		has_mio_size > 1
+	}
+	organization_modifier = {
+		military_industrial_organization_funds_gain = 0.05
+	}
+	on_add = {
+		add_to_variable = { LEP_starting_construction_progress_min = 0.20 }
+		add_to_variable = { LEP_starting_construction_progress_max = 0.20 }
+		custom_effect_tooltip = fujian_upgrade_1_3_tt
+	}
+	on_remove = {
+		subtract_from_variable = { LEP_starting_construction_progress_min = 0.20 }
+		subtract_from_variable = { LEP_starting_construction_progress_max = 0.20 }
+	}
+	ai_will_do = { base = 1000 }
+}
+
+LEP_mio_policy_buy_out_land_holdings = {
+	name = LEP_mio_policy_buy_out_land_holdings
+	icon = GFX_idea_ETH_corrupt_bureaucracy
+	allowed = {
+		has_dlc_nsb = yes
+		is_military_industrial_organization = LEP_fujian_organisation
+	}
+	available = {
+		is_mio_trait_completed = fujian_upgrade_3
+		has_mio_size > 1
+	}
+	organization_modifier = {
+		military_industrial_organization_funds_gain = 0.05
+	}
+	on_add = {
+		subtract_from_variable = { LEP_factory_interval_min = 50 }
+		subtract_from_variable = { LEP_factory_interval_max = 50 }
+		custom_effect_tooltip = fujian_upgrade_1_4_tt
+	}
+	on_remove = {
+		add_to_variable = { LEP_factory_interval_min = 50 }
+		add_to_variable = { LEP_factory_interval_max = 50 }
+	}
+	ai_will_do = { base = 1000 }
+}
