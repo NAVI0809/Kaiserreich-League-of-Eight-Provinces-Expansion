@@ -3394,6 +3394,16 @@ focus_tree = {
 			focus = LEP_accelerate_military_reduction
 		}
 		relative_position_id = LEP_accelerate_military_reduction
+		completion_reward = {
+			unlock_decision_tooltip = LEPEXP_call_back_GMJ_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_HNN_FED_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_GXC_FED_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_LKMT_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_RKMT_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_warlords_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_SZC_officers_desicion
+			unlock_decision_tooltip = LEPEXP_call_back_SHX_officers_desicion
+		}
 	}
 	focus = {
 		id = LEP_divide_war_zones
