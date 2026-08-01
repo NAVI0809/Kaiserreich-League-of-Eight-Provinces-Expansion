@@ -52,7 +52,7 @@ LEPEXP_call_back_HNN_FED_officers_effect = {
     }
 }	
 
-	 = {
+LEPEXP_call_back_GXC_FED_officers_effect = {
 	GXC_weng_shiliang = { CHN_recruit_character_effect = yes }
 	GXC_ma_yuhang = { CHN_recruit_character_effect = yes }
 	GXC_luo_xianxiang = { CHN_recruit_character_effect = yes }
@@ -81,6 +81,48 @@ LEPEXP_call_back_HNN_FED_officers_effect = {
 	    demote_to_general = yes
     }
 }
+
+LEPEXP_call_back_LKMT_officers_effect = {
+	CHI_du_yuming = { CHN_recruit_character_effect = yes }
+	CHI_dai_anlan = { CHN_recruit_character_effect = yes }
+	CHI_wang_lingyun = { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_RKMT_officers_effect = {
+	YUN_xu_tingyao = { CHN_recruit_character_effect = yes }
+	YUN_li_genyuan = { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_warlords_officers_effect = {
+	GXC_liu_zhenhuan = { CHN_recruit_character_effect = yes }
+    SHD_jin_yune = { CHN_recruit_character_effect = yes }
+	SHD_qu_tongfeng = { CHN_recruit_character_effect = yes }
+	SIK_niu_shi = { CHN_recruit_character_effect = yes }
+	SIK_zhang_peiyuan = { CHN_recruit_character_effect = yes }
+	SIK_yang_feixia = { CHN_recruit_character_effect = yes }
+	SIK_li_hairu = { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_SZC_officers_effect = {
+	SZC_xiong_kewu
+	every_unit_leader ={
+		limit = {
+    	    OR = {
+				has_character_flag = GXC_LJS_character_flag
+				has_trait = CHN_GRA_officer
+			}
+			NOT = {
+				is_character = GXC_ye_ju
+			}
+		}
+		hidden_effect = {
+			remove_second_in_command_role = yes
+	    }
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}
+
 
 LEP_add_naval_variants = {
 	if = {
