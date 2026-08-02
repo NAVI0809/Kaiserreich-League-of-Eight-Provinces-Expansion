@@ -1574,7 +1574,7 @@ country_event = { #文化复兴运动
 
 	immediate = {
 		hidden_effect = {
-			recruit_character = LEP_zhang_jvsheng
+			LEP_zhang_jvsheng = { CHN_recruit_character_effect = yes }
 		}
 	}
 

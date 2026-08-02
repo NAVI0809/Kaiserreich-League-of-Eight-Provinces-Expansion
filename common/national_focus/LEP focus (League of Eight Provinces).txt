@@ -11141,72 +11141,15 @@ focus_tree = {
 				remove_idea = LEP_nanjing_navy
 				add_idea = LEP_nanjing_navy_2
 			}
+			custom_effect_tooltip = tooltip_white_line
 
-			if = {
-			    limit = { NOT = { has_tech = early_ship_hull_light } }
-			    set_technology = { early_ship_hull_light = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = early_ship_hull_cruiser } }
-			    set_technology = { early_ship_hull_cruiser = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = coastal_defense_ships } }
-			    set_technology = { coastal_defense_ships = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = coastal_defense_ships } }
-			    set_technology = { coastal_defense_ships = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = basic_naval_mines } }
-			    set_technology = { basic_naval_mines = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = basic_battery } }
-			    set_technology = { basic_battery = 1 }
-		    }
-		    if = {
-			    limit = { NOT = { has_tech = basic_torpedo } }
-			    set_technology = { basic_torpedo = 1 }
-		    }
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 1
 			}
 			
 			custom_effect_tooltip = tooltip_white_line
-			QIE = {
-			    custom_effect_tooltip = characters_will_be_recruited
-			    character_list_tooltip = {
-				    limit = {
-					    OR = {
-				    		is_character = QIE_sa_zhenbing
-				    		is_character = QIE_du_xigui
-				    		is_character = QIE_wu_yulin
-				    		is_character = QIE_yang_shuzhuang
-					    }
-				    }
-			    }
-			    hidden_effect = {
-				    QIE_sa_zhenbing = { set_nationality = ROOT }
-				    QIE_du_xigui = { set_nationality = ROOT }
-				    QIE_wu_yulin = { set_nationality = ROOT }
-				    QIE_yang_shuzhuang = { set_nationality = ROOT }
-			    }
-			}	
-			if = {
-				limit = { NOT = { country_exists = FNG } }
-				FNG = {
-					custom_effect_tooltip = characters_will_be_recruited
-					character_list_tooltip = {
-						limit = { is_character = FNG_shen_honglie }
-					}
-					hidden_effect = {
-						FNG_shen_honglie = { set_nationality = ROOT }
-					}
-				}
-			}
+			CHN_inherit_beiyang_fleet_effect = yes
 			if = {
 				limit = { NOT = { country_exists = HNN } }
 				HNN = {
@@ -11215,7 +11158,7 @@ focus_tree = {
 						limit = { is_character = HNN_yang_xuancheng}
 					}
 					hidden_effect = {
-						HNN_yang_xuancheng = { set_nationality = ROOT }
+						HNN_yang_xuancheng = { CHN_recruit_character_effect = yes }
 					}
 				}
 			}
@@ -11227,7 +11170,7 @@ focus_tree = {
 						limit = { is_character = YUN_ouyang_ge}
 					}
 					hidden_effect = {
-						YUN_ouyang_ge = { set_nationality = ROOT }
+						YUN_ouyang_ge = { CHN_recruit_character_effect = yes }
 					}
 				}
 			}
@@ -11239,7 +11182,7 @@ focus_tree = {
 						limit = { is_character = SHD_lin_jianzhang}
 					}
 					hidden_effect = {
-						SHD_lin_jianzhang = { set_nationality = ROOT }
+						SHD_lin_jianzhang = { CHN_recruit_character_effect = yes }
 					}
 				}
 			}
@@ -11272,10 +11215,14 @@ focus_tree = {
 			    CHI = {
 				    custom_effect_tooltip = characters_will_be_recruited
 				    character_list_tooltip = {
-					    limit = { is_character = CHI_chen_shaokuan }
+					    limit = { 
+							is_character = CHI_chen_shaokuan 
+							is_character = CHI_chen_jiliang
+						}
 				    }
 				    hidden_effect = {
-					    CHI_chen_shaokuan = { set_nationality = ROOT }
+					    CHI_chen_shaokuan = { CHN_recruit_character_effect = yes }
+						CHI_chen_jiliang = { CHN_recruit_character_effect = yes }
 				    }
 			    }
 		    }
