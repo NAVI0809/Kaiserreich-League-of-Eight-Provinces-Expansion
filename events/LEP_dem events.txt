@@ -1319,7 +1319,7 @@ country_event = { #李四光
 
 	immediate = {
 		hidden_effect = {
-			recruit_character = LEP_li_siguang
+			LEP_li_siguang = { CHN_recruit_character_effect = yes }
 		}
 	}
 
@@ -1342,7 +1342,7 @@ country_event = { #鼓励实业
 
 	immediate = {
 		hidden_effect = {
-			recruit_character = LEP_huang_qun
+			LEP_huang_qun = { CHN_recruit_character_effect = yes }
 		}
 	}
 
@@ -1356,7 +1356,7 @@ country_event = { #鼓励实业
 			popularity = 0.03
 		}
 		hidden_effect = {
-			recruit_character = LEP_huang_qun
+			LEP_huang_qun = { CHN_recruit_character_effect = yes }
 		}
 	}
 }
@@ -4014,7 +4014,7 @@ country_event = { #曾琦演讲
 	}
 }
 
-country_event = { 
+country_event = { #第一次市民公听会
 	id = league_national.23
 	title = league_national.23.t
 	desc = league_national.23.d
@@ -4026,6 +4026,36 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.23 option league_national.23.a"
 		name = league_national.23.a
+		add_stability = -0.02
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.02
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event league_national.23 option league_national.23.b"
+		name = league_national.23.b
+		add_political_power = 10
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.02
+		}
 	}
 }
 

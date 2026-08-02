@@ -775,7 +775,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
-				recruit_character = LEP_yin_ruli
+				LEP_yin_ruli = { CHN_recruit_character_effect = yes }
 			}
 			
 		}
@@ -858,7 +858,7 @@ focus_tree = {
 			country_event = { id = league_mid.44 days = 0 }
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
-				recruit_character = LEP_jiang_qian
+				LEP_jiang_qian = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -1211,7 +1211,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
-				recruit_character = LEP_wang_jiyan
+				LEP_wang_jiyan = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -1267,8 +1267,8 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
-				recruit_character = LEP_rong_desheng
-				recruit_character = LEP_yu_qiaqing
+				LEP_rong_desheng = { CHN_recruit_character_effect = yes }
+				LEP_yu_qiaqing = { CHN_recruit_character_effect = yes }
 				country_event = { id = league_mid.58 days = 40 }
 			}
 		}
@@ -1397,7 +1397,7 @@ focus_tree = {
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_compulsory_education_act }
-				recruit_character = LEP_jing_yaoyue
+				LEP_jing_yaoyue = { CHN_recruit_character_effect = yes }
 			}
 		}
 
@@ -1443,7 +1443,7 @@ focus_tree = {
 			LEP_improve_popular_support = yes
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
-				recruit_character = LEP_zhao_fengchang
+				LEP_zhao_fengchang = { CHN_recruit_character_effect = yes }
 				country_event = { id = league_mid.29 days = 30 }
 			}
 		}
@@ -1463,9 +1463,6 @@ focus_tree = {
 			LEP_improve_popular_support = yes
 			country_event = { id = league_mid.45 days = 0 }
 			LEP_strengthen_ZZH_small = yes
-			hidden_effect = {
-				recruit_character = LEP_zhang_jvsheng
-			}
 		}
 	}
 	focus = {
@@ -2696,7 +2693,7 @@ focus_tree = {
 				days = 120
 			}
 			hidden_effect = {
-				recruit_character = LEP_zhang_yaozeng
+				LEP_zhang_yaozeng = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -3313,9 +3310,9 @@ focus_tree = {
 			show_ideas_tooltip = LEP_pan_shu_advisor
 			show_ideas_tooltip = LEP_wu_zaoxi_advisor
 			hidden_effect = {
-				recruit_character = LEP_liang_xi
-				recruit_character = LEP_pan_shu
-				recruit_character = LEP_wu_zaoxi
+				LEP_liang_xi = { CHN_recruit_character_effect = yes }
+				LEP_pan_shu = { CHN_recruit_character_effect = yes }
+				LEP_wu_zaoxi = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -3522,7 +3519,7 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_lu_yudao_advisor
 			hidden_effect = {
-				recruit_character = LEP_lu_yudao
+				LEP_lu_yudao = { CHN_recruit_character_effect = yes }
 			}
 		}
 	}
@@ -3863,7 +3860,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_new_factory_law
 		completion_reward = {
-			custom_effect_tooltip = tooltip_white_line
+			country_event = { id = league_national.23 days = 0 }
 		}
 	}
 
