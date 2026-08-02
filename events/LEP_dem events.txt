@@ -1572,17 +1572,18 @@ country_event = { #文化复兴运动
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	immediate = {
-		hidden_effect = {
-			LEP_zhang_jvsheng = { CHN_recruit_character_effect = yes }
-		}
-	}
+	
+		
+	
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.45 option league_mid.45.a"
 		name = league_mid.45.a
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = LEP_zhang_jvsheng_advisor
+		hidden_effect = {
+			LEP_zhang_jvsheng = { CHN_recruit_character_effect = yes }
+		}
 	}
 }
 
@@ -4018,7 +4019,7 @@ country_event = { #第一次市民公听会
 	id = league_national.23
 	title = league_national.23.t
 	desc = league_national.23.d
-	picture = GFX_report_event_QIE_wellington_koo_figure
+	picture = GFX_report_event_QIE_beiyang_assembly
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -4039,6 +4040,7 @@ country_event = { #第一次市民公听会
 			ideology = market_liberal
 			popularity = 0.02
 		}
+		LEP_NSU_left = yes
 	}
 	option = {
 		log = "[GetLogInfo]: event league_national.23 option league_national.23.b"
@@ -4056,6 +4058,7 @@ country_event = { #第一次市民公听会
 			ideology = market_liberal
 			popularity = 0.02
 		}
+		LEP_NSU_right = yes
 	}
 }
 

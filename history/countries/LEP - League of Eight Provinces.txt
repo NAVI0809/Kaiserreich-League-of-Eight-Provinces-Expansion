@@ -206,6 +206,7 @@ recruit_character = LEP_li_rentao
 recruit_character = LEP_xu_peigen
 recruit_character = LEP_fang_benren
 #zigai LEPEXP
+recruit_character = LEP_zhang_jvsheng
 recruit_character = LEP_wang_yulan
 recruit_character = LEP_yu_huancheng
 recruit_character = LEP_yuan_xiluo
