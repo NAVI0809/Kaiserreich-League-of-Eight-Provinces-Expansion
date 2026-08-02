@@ -85,6 +85,20 @@ leader_traits = {
 
 	#政治顾问
 
+	LEPEXP_dem_act = { #民主活动家
+		sprite = 15
+
+		social_liberal_drift = 0.01
+		political_power_factor = 0.05
+		research_speed_factor = 0.03
+		compliance_gain = 0.02
+		stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	LEPEXP_minister_justice = { #司法
 		sprite = 10
 

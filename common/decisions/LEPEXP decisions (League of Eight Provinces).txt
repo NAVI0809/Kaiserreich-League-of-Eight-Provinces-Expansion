@@ -1571,12 +1571,14 @@ LEPEXP_military_defence_development_CAT = {
 
 		is_good = no
 		days_remove = 180
-		days_re_enable = 30
 		priority = 500
 
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout LEPEXP_sfj_deployment"
 			set_country_flag = sfj_allowd_remove_flag
+			hidden_effect = {
+				FROM = { country_event = { id = league_military.1002 hours = 1 } }
+			}
 		} 
 
 		complete_effect = {
@@ -2420,6 +2422,7 @@ LEPEXP_military_defence_development_CAT = {
 		ai_will_do = { factor = 25 }
 		cost = 50
 		days_remove = 70
+		days_re_enable = 30
 
 		modifier = {
 			civilian_factory_use = 2
@@ -2471,6 +2474,7 @@ LEPEXP_military_defence_development_CAT = {
 		ai_will_do = { factor = 25 }
 		cost = 50
 		days_remove = 70
+		days_re_enable = 30
 
 		modifier = {
 			civilian_factory_use = 2
@@ -2522,6 +2526,7 @@ LEPEXP_military_defence_development_CAT = {
 		ai_will_do = { factor = 25 }
 		cost = 50
 		days_remove = 70
+		days_re_enable = 30
 
 		modifier = {
 			civilian_factory_use = 2
@@ -2571,9 +2576,11 @@ LEPEXP_military_defence_development_CAT = {
 		
 		priority = 30
 		cancel_if_not_visible = no
+		
 		ai_will_do = { factor = 25 }
 		cost = 50
 		days_remove = 70
+		days_re_enable = 30
 
 		modifier = {
 			civilian_factory_use = 2
@@ -2595,8 +2602,10 @@ LEPEXP_military_defence_development_CAT = {
 			add_tech_bonus = {
 				name = LEP_MIO_fujian_investment
 				bonus = 1
-				uses = 2
-				category = cv_small_plane_naval_bomber_airframe
+				uses = 3
+				category = light_fighter
+				category = cat_heavy_fighter
+				category = air_equipment
 			}
 		}
 		fixed_random_seed = no

@@ -964,13 +964,12 @@ characters = {
 			slot = political_advisor
 			desc = LEP_xu_deheng_advisor_desc
 			idea_token = LEP_xu_deheng_advisor
-			traits = { LEPEXP_king_of_cotton_yarn }
-			#on_add = {
-				#FROM = {
-					#LEP_strengthen_ZZH_small = yes
-					#LEP_strengthen_JNSB_small = yes
-				#}
-			#}	
+			traits = { LEPEXP_dem_act }
+			on_add = {
+				FROM = {
+					LEP_strengthen_ZZH_small = yes
+				}
+			}	
 		}
 	}
 

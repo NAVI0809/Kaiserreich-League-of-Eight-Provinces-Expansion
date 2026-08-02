@@ -385,7 +385,12 @@ LEP_decision_add_sfj_effect = {
 		    add_idea = LEP_national_guard_1
 	    }
 	}
-	else = {
+	if = {
+		limit = {
+			NOT = { 
+				has_idea = LEP_national_guard_2 
+			}
+		}
 		add_idea = LEP_national_guard_1
 	}
 	custom_effect_tooltip = tooltip_white_line
@@ -399,17 +404,25 @@ LEP_decision_add_sfj_effect = {
 LEP_deploy_sfj_effect = {
 	#华东五省
 	if = {
+		limit = { 747 = { is_owned_by_ROOT_or_subject = yes } FU}
+		747 = {
+			create_unit = {
+				division = "name = \"省防军-福州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	if = {
 		limit = {
-			owns_state = 613
-			owns_state = 598
-			owns_state = 1047
-			owns_state = 606
-			owns_state = 596
-			owns_state = 1067
-			owns_state = 746
-			owns_state = 747
-			owns_state = 1046
-			owns_state = 1044
+			613 = { is_owned_by_ROOT_or_subject = yes }
+			598 = { is_owned_by_ROOT_or_subject = yes }
+			1047 = { is_owned_by_ROOT_or_subject = yes }
+			606 = { is_owned_by_ROOT_or_subject = yes }
+			596 = { is_owned_by_ROOT_or_subject = yes }
+			1067 = { is_owned_by_ROOT_or_subject = yes }
+			746 = { is_owned_by_ROOT_or_subject = yes }			
+			1046 = { is_owned_by_ROOT_or_subject = yes }
+			1044 = { is_owned_by_ROOT_or_subject = yes }
 		}
 		613 = {
 			create_unit = {
@@ -453,12 +466,7 @@ LEP_deploy_sfj_effect = {
 				owner = ROOT
 			}
 		}
-		747 = {
-			create_unit = {
-				division = "name = \"省防军-福州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
-				owner = ROOT
-			}
-		}
+		
 		1046 = {
 			create_unit = {
 				division = "name = \"省防军-福建师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
@@ -475,15 +483,15 @@ LEP_deploy_sfj_effect = {
 	#华南
 	if = {
 		limit = {
-			owns_state = 592 #广东
-			owns_state = 594 #广西
-			owns_state = 591 #海南
-			owns_state = 325 #云南
-			owns_state = 1051 #贵州
-			owns_state = 605 #四川
-			owns_state = 650 #重庆
-			owns_state = 601 #川边
-			owns_state = 602 #湖南
+			592 = { is_owned_by_ROOT_or_subject = yes } #广东
+			594 = { is_owned_by_ROOT_or_subject = yes } #广西
+			591 = { is_owned_by_ROOT_or_subject = yes } #海南
+			325 = { is_owned_by_ROOT_or_subject = yes } #云南
+			1051 = { is_owned_by_ROOT_or_subject = yes } #贵州
+			605 = { is_owned_by_ROOT_or_subject = yes } #四川
+			650 = { is_owned_by_ROOT_or_subject = yes } #重庆
+			601 = { is_owned_by_ROOT_or_subject = yes } #川边
+			602 = { is_owned_by_ROOT_or_subject = yes } #湖南
 		}
 		592 = {
 			create_unit = {
@@ -561,13 +569,13 @@ LEP_deploy_sfj_effect = {
 	#华北
 	if = {
 		limit = {
-			owns_state = 597 #山东
-			owns_state = 1059 #开封
-			owns_state = 607 #洛阳
-			owns_state = 1072 #山西
-			owns_state = 1048 #武汉
-			owns_state = 799 #西安
-			owns_state = 608 #北京
+			597 = { is_owned_by_ROOT_or_subject = yes } #山东
+			1059 = { is_owned_by_ROOT_or_subject = yes } #开封
+			607 = { is_owned_by_ROOT_or_subject = yes } #洛阳
+			1072 = { is_owned_by_ROOT_or_subject = yes } #山西
+			1048 = { is_owned_by_ROOT_or_subject = yes } #武汉
+			799 = { is_owned_by_ROOT_or_subject = yes } #西安
+			608 = { is_owned_by_ROOT_or_subject = yes } #北京
 		}
 		597 = {
 			create_unit = {
