@@ -1004,9 +1004,11 @@ LEP_stride_towards_unification = {
             always = no
 		}
 		visible = {
-			HNN = {
-				exists = yes
-				has_country_leader = { character = HNN_zhao_hengti }
+			AND = {
+				country_exists = HNN
+				HNN = {
+					has_country_leader = { character = HNN_zhao_hengti }
+				}
 			}
 		}
 		available = {
