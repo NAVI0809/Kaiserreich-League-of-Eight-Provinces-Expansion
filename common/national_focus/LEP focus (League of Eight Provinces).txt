@@ -2633,6 +2633,7 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.03
 			}
+			country_event = { id = league_national.22 days = 0 }
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
 			QIE = {				
@@ -2722,6 +2723,7 @@ focus_tree = {
 				ideology = social_democrat
 				popularity = 0.05
 			}
+			country_event = { id = league_national.21 days = 0 }
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = available_political_advisor
 			CHI = {
@@ -3351,6 +3353,9 @@ focus_tree = {
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
 			country_event = { id = league_national.18 days = 0 }
+			hidden_effect = {
+				country_event = { id = league_national.20 days = 20 }
+			}
 		}
 	}
 	focus = {
@@ -3563,6 +3568,7 @@ focus_tree = {
 			QIE = {
 				show_ideas_tooltip = QIE_hu_shih_advisor
 			}
+			country_event = { id = league_national.19 days = 0 }
 			hidden_effect = {
 				QIE_hu_shih  = { CHN_recruit_character_effect = yes }
 			}

@@ -3765,7 +3765,7 @@ country_event = { #不承认我们
 	}
 }
 
-country_event = { 
+country_event = { #民主政团同盟
 	id = league_national.14
 	title = league_national.14.t
 	desc = league_national.14.d
@@ -3781,7 +3781,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #北洋派
 	id = league_national.15
 	title = league_national.15.t
 	desc = league_national.15.d
@@ -3798,7 +3798,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #日本民主
 	id = league_national.16
 	title = league_national.16.t
 	desc = league_national.16.d
@@ -3814,7 +3814,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #日本独裁
 	id = league_national.17
 	title = league_national.17.t
 	desc = league_national.17.d
@@ -3830,7 +3830,7 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #宣传攻势
 	id = league_national.18
 	title = league_national.18.t
 	desc = league_national.18.d
@@ -3871,11 +3871,11 @@ country_event = {
 	}
 }
 
-country_event = { 
+country_event = { #胡博士的讲话
 	id = league_national.19
 	title = league_national.19.t
 	desc = league_national.19.d
-	picture = GFX_report_event_QIE_wellington_koo_figure
+	picture = GFX_report_event_QIE_hu_shih_speech
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -3883,6 +3883,177 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.19 option league_national.19.a"
 		name = league_national.19.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
+	}
+	 option = {
+		log = "[GetLogInfo]: event league_national.19 option league_national.19.b"
+		name = league_national.19.b
+		
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #口诛笔伐
+	id = league_national.20
+	title = league_national.20.t
+	desc = league_national.20.d
+	picture = GFX_report_event_CHN_student_protest_1
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.20 option league_national.20.a"
+		name = league_national.20.a
+		add_war_support = 0.05
+		JAP = {
+			add_opinion_modifier = {
+				target = LEP
+				modifier = KR_hates_govt
+			}
+		}
+		add_opinion_modifier = {
+			target = JAP
+			modifier = KR_hates_govt
+		}
+		set_temp_variable = { FNG_JAP_days_temp_var = -50 }
+	    FNG_JAP_mech_add_time_effect = yes
+	}
+	option = {
+		log = "[GetLogInfo]: event league_national.20 option league_national.20.b"
+		name = league_national.20.b
+		add_stability = 0.03
+		set_temp_variable = { FNG_JAP_days_temp_var = 70 }
+	    FNG_JAP_mech_add_time_effect = yes
+	}
+}
+
+country_event = { #孙科演讲
+	id = league_national.21
+	title = league_national.21.t
+	desc = league_national.21.d
+	picture = GFX_report_event_CHI_sun_fo_speech_2
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.21 option league_national.21.a"
+		name = league_national.21.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event league_national.21 option league_national.21.b"
+		name = league_national.21.b
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #曾琦演讲
+	id = league_national.22
+	title = league_national.22.t
+	desc = league_national.22.d
+	picture = GFX_report_event_CHN_china_CYP_YCP_zuo_shunsheng_chen_qitian_zeng_qi_li_huang_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.22 option league_national.22.a"
+		name = league_national.22.a
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.03
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event league_national.22 option league_national.22.b"
+		name = league_national.22.b
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { 
+	id = league_national.23
+	title = league_national.23.t
+	desc = league_national.23.d
+	picture = GFX_report_event_QIE_wellington_koo_figure
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.23 option league_national.23.a"
+		name = league_national.23.a
+	}
+}
+
+country_event = { 
+	id = league_national.24
+	title = league_national.24.t
+	desc = league_national.24.d
+	picture = GFX_report_event_QIE_wellington_koo_figure
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.24 option league_national.24.a"
+		name = league_national.24.a
+	}
+}
+
+country_event = { 
+	id = league_national.25
+	title = league_national.25.t
+	desc = league_national.25.d
+	picture = GFX_report_event_QIE_wellington_koo_figure
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+    option = {
+		log = "[GetLogInfo]: event league_national.25 option league_national.25.a"
+		name = league_national.25.a
 	}
 }
 
