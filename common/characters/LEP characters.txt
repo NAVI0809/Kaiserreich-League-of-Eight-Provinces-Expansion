@@ -1957,6 +1957,7 @@ characters = {
 			desc = LEP_huang_baitao_high_command_desc
 			traits = { 
 				career_officer
+				trait_reckless
 				brilliant_strategist
 				skilled_staffer
 				trait_engineer
