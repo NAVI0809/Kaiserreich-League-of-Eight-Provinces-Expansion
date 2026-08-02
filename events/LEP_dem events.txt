@@ -5035,7 +5035,7 @@ country_event = { #造舰委员会
 	}
 }
 
-unit_leader_event = { #failsafe
+country_event = { #failsafe
 	id = league_military.1002
 	title = league_military.1002.t
 	desc = league_military.1002.d
