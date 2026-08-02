@@ -156,7 +156,7 @@ leader_traits = {
 		political_power_gain = 0.02
 		political_power_cost = -0.05
 		trade_laws_cost_factor = -0.5
-		resource_trade_cost_bonus_per_factory = 0.05
+		resource_trade_cost_bonus_per_factory = 3
 		economy_cost_factor = -0.15
 
 		ai_will_do = {

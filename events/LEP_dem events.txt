@@ -4236,7 +4236,10 @@ unit_leader_event = { #黄百韬
 	option = {
 		name = league_generic.5.a
 		log = "[GetLogInfo]: event league_generic.5 option league_generic.5.a"
-		LEP_huang_baitao = { add_unit_leader_trait = rising_star }
+		LEP_huang_baitao = { 
+			add_unit_leader_trait = rising_star 
+			add_unit_leader_trait = harsh_leader
+		}
 		hidden_effect = {
 			random_owned_controlled_state = {
 				prioritize = { 613 }

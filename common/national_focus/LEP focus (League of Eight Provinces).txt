@@ -3056,6 +3056,15 @@ focus_tree = {
 						fallback = yes
 					}
 				}
+				613 = {
+					build_railway = {
+						path = { 11913 996 10101 7191 }
+						start_state = 613 #Nanjing
+						target_state = 596 #杭州
+						level = 2
+						fallback = yes
+					}
+				}
 				596 = {
 					build_railway = {
 						path = { 7191 10014 10086 11920 }
