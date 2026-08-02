@@ -447,6 +447,7 @@ unit_leader_event = { #商帮的支持
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = LEP_rong_zongjing_advisor
 		hidden_effect = {
+			LEP_rong_zongjing = { china_set_character_alignment_chinese_southern_republican = yes }
 			complete_national_focus = LEP_unite_gentry_merchants
 			QIE_huang_fu = {
 				unit_leader_event = { id = league_mid.8 days = 1 }
@@ -489,6 +490,7 @@ unit_leader_event = { #黄郛南下
 		custom_effect_tooltip = tooltip_white_line
 		add_ideas = LEP_popular_support_0
 		hidden_effect = {
+			QIE_huang_fu = { china_set_character_alignment_chinese_southern_republican = yes }
 			activate_advisor = LEP_Nanking_parliament
 			complete_national_focus = LEP_unite_national_liberals
 			country_event = { id = league_mid.9 days = 2 }
