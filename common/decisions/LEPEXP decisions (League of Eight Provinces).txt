@@ -962,6 +962,9 @@ LEP_stride_towards_unification = {
 		targets = { UPC }
 		
 		visible = {
+			
+		}
+		available = {
 			UPC = {
 				exists = yes
 			}
@@ -999,18 +1002,28 @@ LEP_stride_towards_unification = {
 	    fixed_random_seed = no
 	}
 	LEP_in_alliance_with_HNN = {
+		icon = peace_dove
 		priority = 200
         allowed = {
-            always = no
+           
 		}
+
 		visible = {
 			AND = {
 				country_exists = HNN
 				HNN = {
 					has_country_leader = { character = HNN_zhao_hengti }
-				}
+			    }
 			}
 		}
+
+		target_trigger = {
+			FROM = {
+				tag = HNN
+			}
+		}
+
+
 		available = {
 			HNN = {
 				OR = {
@@ -1026,6 +1039,7 @@ LEP_stride_towards_unification = {
 				has_country_leader = { character = HNN_zhao_hengti }
 			}
 		}
+		
 		cost = 40
 		fire_only_once = yes
 
@@ -1042,16 +1056,23 @@ LEP_stride_towards_unification = {
 			custom_effect_tooltip = if_they_accept_newline_tt
 			effect_tooltip = { china_puppet_FROM_effect = yes }
 		}
-		fixed_random_seed = no
+		
 	}
 	LEP_in_alliance_with_GXC = {
+		icon = peace_dove
 		priority = 199
         allowed = {
-            always = no
+           
+		}
+
+		target_trigger = {
+			FROM = {
+				tag = GXC
+			}
 		}
 		visible = {
+			GXC = { exists = yes }
 			GXC = {
-				exists = yes
 				has_country_leader = { character = GXC_lu_yuguang }
 			}
 		}
@@ -1090,12 +1111,21 @@ LEP_stride_towards_unification = {
 		fixed_random_seed = no
 	}
 	LEP_in_alliance_with_YUN = {
+		icon = peace_dove
 		priority = 198
         allowed = {
-            always = no
+           
+		}
+		target_trigger = {
+			FROM = {
+				tag = YUN
+			}
 		}
 		visible = {
-			exists = yes
+			YUN = {
+				exists = yes
+				
+			}
 			YUN = {
 				has_completed_focus = YUN_the_federalist_revival
 			}
@@ -1106,7 +1136,10 @@ LEP_stride_towards_unification = {
 				CHN_south_china_war_over_trigger = yes
 				date > 1938.1.1
 			}
-			has_completed_focus = YUN_the_federalist_revival
+			YUN = {
+				has_completed_focus = YUN_the_federalist_revival
+			}
+			
 		}
 		cost = 40
 		fire_only_once = yes
@@ -1127,18 +1160,28 @@ LEP_stride_towards_unification = {
 		fixed_random_seed = no
 	}
 	LEP_in_alliance_with_SZC = {
+		icon = peace_dove
 		priority = 197
         allowed = {
-            always = no
+           
+		}
+		target_trigger = {
+			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
+				tag = SZC
+			}
 		}
 		visible = {
-			exists = yes
 			OR = {
 				SZC = { has_country_leader = { character = SZC_xiong_kewu } }
 				SZC = { has_country_leader = { character = SZC_li_jiayu } }
 			}
 		}
 		available = {
+			SZC = { exists = yes }
 			OR = {
 				SZC = { has_country_leader = { character = SZC_xiong_kewu } }
 				SZC = { has_country_leader = { character = SZC_li_jiayu } }
@@ -1169,6 +1212,7 @@ LEP_stride_towards_unification = {
 			SHX = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
+		
 
 		cost = 20
 		fire_only_once = yes
@@ -1191,6 +1235,9 @@ LEP_stride_towards_unification = {
 	LEPEXP_call_back_HNN_FED_officers_desicion = {
 		icon = UPC_PIP_flag
 		visible = {
+			
+		}
+		available = {
 			controls_state = 602
 			controls_state = 1013
 			HNN = { exists = no }
@@ -1232,6 +1279,7 @@ LEP_stride_towards_unification = {
 			has_completed_focus = LEP_appoint_republican_officers
 		}
 		
+		
 
 		cost = 20
 		fire_only_once = yes
@@ -1265,6 +1313,7 @@ LEP_stride_towards_unification = {
 			LKT = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
+		
 
 		cost = 20
 		fire_only_once = yes
@@ -1302,9 +1351,12 @@ LEP_stride_towards_unification = {
 			controls_state = 1056
 			controls_state = 602
 			controls_state = 1013
-			RKT = { exists = no }
+			YUN = { exists = no }
+			HNN = { exists = no }
+			GXC = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
+		
 		
 
 		cost = 20
@@ -1344,9 +1396,12 @@ LEP_stride_towards_unification = {
 			controls_state = 1056
 			controls_state = 602
 			controls_state = 1013
-			RKT = { exists = no }
+			YUN = { exists = no }
+			HNN = { exists = no }
+			GXC = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
+		
 		
 
 		cost = 20
@@ -1382,11 +1437,8 @@ LEP_stride_towards_unification = {
 			SZC = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
-		target_trigger = {
-			FROM = {
-				tag = SZC
-			}
-		}
+		
+		
 
 		cost = 20
 		fire_only_once = yes
@@ -1417,11 +1469,8 @@ LEP_stride_towards_unification = {
 			SHX = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
-		target_trigger = {
-			FROM = {
-				tag = SHX
-			}
-		}
+		
+		
 
 		cost = 20
 		fire_only_once = yes
