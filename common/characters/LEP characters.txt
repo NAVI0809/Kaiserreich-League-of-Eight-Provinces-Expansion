@@ -970,7 +970,11 @@ characters = {
 					LEP_strengthen_ZZH_small = yes
 				}
 			}	
+			visible = {
+				has_completed_focus = LEP_national_images_continuity
+			}
 		}
+		
 	}
 
 	#荣德生
