@@ -3234,7 +3234,6 @@ focus_tree = {
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = tooltip_dash_line
-			#add_ideas = LEP_national_guard_1
 			custom_effect_tooltip = tooltip_white_line
 			custom_override_tooltip = {
 				tooltip = {
@@ -3276,11 +3275,10 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
-			#custom_effect_tooltip = sfj_deploy_tt
 			hidden_effect = { 
-				#LEP_deploy_sfj_effect = yes 
 				activate_targeted_decision = { target = FROM decision = LEPEXP_sfj_deployment }
 				activate_targeted_decision = { target = FROM decision = LEPEXP_sfj_remove }
+				set_country_flag = LEPEXP_sfj_1ST_TIME
 			}
 			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = LEPEXP_sfj_deployment

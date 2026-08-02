@@ -376,26 +376,9 @@ LEP_decision_add_sfj_effect = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_idea = LEP_national_guard_2
-		}
-		swap_ideas = {
-		    remove_idea = LEP_national_guard_2
-		    add_idea = LEP_national_guard_1
-	    }
-	}
-	if = {
-		limit = {
-			NOT = { 
-				has_idea = LEP_national_guard_2 
-			}
-		}
-		add_idea = LEP_national_guard_1
-	}
 	custom_effect_tooltip = tooltip_white_line
 	custom_effect_tooltip = sfj_deploy_tt
-	custom_effect_tooltip = sfj_180_days_tt
+	#custom_effect_tooltip = sfj_180_days_tt
 	hidden_effect = {
 		LEP_deploy_sfj_effect = yes
 	}	

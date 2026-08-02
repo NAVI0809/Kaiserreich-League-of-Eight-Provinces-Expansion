@@ -5037,21 +5037,6 @@ country_event = { #造舰委员会
 	}
 }
 
-country_event = { #failsafe
-	id = league_military.1002
-	title = league_military.1002.t
-	desc = league_military.1002.d
-	picture = GFX_report_event_generic_diplomacy1
-	is_triggered_only = yes
-	hidden = yes
-
-	option = {
-		log = "[GetLogInfo]: event league_military.1 option league_military.1002.a"
-		name = league_military.1002.a
-		set_country_flag = sfj_allowd_remove_flag
-	}
-}
-
 country_event = { #工厂
 	id = league_military.1001
 	picture = GFX_report_event_generic_diplomacy1

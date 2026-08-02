@@ -1555,7 +1555,7 @@ LEPEXP_military_defence_development_CAT = {
 
 		available = { #goal
 			NOT = {
-				has_country_flag = sfj_deploy_flag		
+				has_country_flag = sfj_deploy_flag
 			}
 		}
 
@@ -1570,21 +1570,35 @@ LEPEXP_military_defence_development_CAT = {
 		}
 
 		is_good = no
-		days_remove = 180
 		priority = 500
-
-		timeout_effect = {
-			log = "[GetLogRoot]: Decision timeout LEPEXP_sfj_deployment"
-			set_country_flag = sfj_allowd_remove_flag
-			hidden_effect = {
-				FROM = { country_event = { id = league_military.1002 hours = 1 } }
-			}
-		} 
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete LEPEXP_sfj_deployment"
 			LEP_decision_add_sfj_effect = yes
 			set_country_flag = sfj_deploy_flag
+			set_country_flag = {
+				flag = LEPEXP_sfj_cant_remove
+				days = 30
+				value = 1
+			}
+			if = {
+    	    	limit = {
+	        		has_idea = LEP_national_guard_2
+		        }
+		        swap_ideas = {
+		            remove_idea = LEP_national_guard_2
+		            add_idea = LEP_national_guard_1
+	            }
+	        }
+	    	if = {
+				limit = { has_country_flag = LEPEXP_sfj_1ST_TIME }
+			    add_ideas = LEP_national_guard_1
+				clr_country_flag = LEPEXP_sfj_1ST_TIME
+		    }
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -10
+			}
 		}
 		fixed_random_seed = no
 	}
@@ -1599,25 +1613,31 @@ LEPEXP_military_defence_development_CAT = {
 
 		available = { #goal
 		    has_completed_focus = LEP_arm_national_guard
-		    has_country_flag = sfj_allowd_remove_flag
+			has_country_flag = sfj_deploy_flag
+		    NOT = { has_country_flag = LEPEXP_sfj_cant_remove }
 		}
 
 		is_good = no
 		priority = 500
 		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision timeout LEPEXP_sfj_deployment"
+			clr_country_flag = sfj_deploy_flag
+			custom_effect_tooltip = LEPEXP_sfj_deploy_time_out_tt
+		} 
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete LEPEXP_sfj_remove"
-			LEP_remove_sfj_effect = yes
-		    clr_country_flag = sfj_deploy_flag
-			clr_country_flag = sfj_allowd_remove_flag
+			LEP_remove_sfj_effect = yes		    
 			if = {
 				limit = { has_idea = LEP_national_guard_1 }
 				swap_ideas = {
 					remove_idea = LEP_national_guard_1	
 			        add_idea = LEP_national_guard_2
 				}
-			}			
+			}	
 		}
 		fixed_random_seed = no
 	}
