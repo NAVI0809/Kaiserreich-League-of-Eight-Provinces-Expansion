@@ -2563,7 +2563,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_war_comes_from_the_north
 		completion_reward = {
-			set_temp_variable = { LEP_mili_var_change = 2 }
+			set_temp_variable = { LEP_mili_var_change = 5 }
 			LEP_mili_var = yes
 			army_experience = 50
 			custom_effect_tooltip = accelerate_military_reduction_tt
@@ -3425,7 +3425,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_integrate_arsenal_factories
 		completion_reward = {
-			set_temp_variable = { LEP_mili_var_change = 2 }
+			set_temp_variable = { LEP_mili_var_change = 4 }
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = tooltip_dash_line
@@ -3837,7 +3837,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_accelerate_military_reduction
 		completion_reward = {
-			set_temp_variable = { LEP_mili_var_change = 1 }
+			set_temp_variable = { LEP_mili_var_change = 3 }
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
 			CHN_build_military_industry_effect = yes
