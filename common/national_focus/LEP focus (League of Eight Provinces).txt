@@ -11372,7 +11372,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_navy_dd_cl_attack"
-			country_event = league_military.2 
+			country_event = { id = League_military.2 days = 0 }
 			custom_effect_tooltip = tooltip_dash_line
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_navy_ship_building_department_if_1_tt
