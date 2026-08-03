@@ -993,9 +993,9 @@ focus_tree = {
 					type = annex_everything
 				}
 			}
-			activate_targeted_decision = { target = GXC decision = LEP_in_alliance_with_GXC }
-			activate_targeted_decision = { target = SZC decision = LEP_in_alliance_with_SZC }
-			activate_targeted_decision = { target = YUN decision = LEP_in_alliance_with_YUN }
+			unlock_decision_tooltip = LEP_in_alliance_with_GXC 
+			unlock_decision_tooltip = LEP_in_alliance_with_SZC
+			unlock_decision_tooltip = LEP_in_alliance_with_YUN
 		}
 	}
 	focus = {

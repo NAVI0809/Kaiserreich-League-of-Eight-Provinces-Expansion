@@ -1009,12 +1009,11 @@ LEP_stride_towards_unification = {
 		}
 
 		visible = {
-			AND = {
-				country_exists = HNN
-				HNN = {
-					has_country_leader = { character = HNN_zhao_hengti }
-			    }
-			}
+			has_completed_focus = LEP_End_Local_Warlordism
+			country_exists = HNN
+			HNN = {
+				has_country_leader = { character = HNN_zhao_hengti }
+			}	
 		}
 
 		target_trigger = {
@@ -1071,6 +1070,7 @@ LEP_stride_towards_unification = {
 			}
 		}
 		visible = {
+			has_completed_focus = LEP_End_Local_Warlordism
 			GXC = { exists = yes }
 			GXC = {
 				has_country_leader = { character = GXC_lu_yuguang }
@@ -1122,6 +1122,7 @@ LEP_stride_towards_unification = {
 			}
 		}
 		visible = {
+			has_completed_focus = LEP_End_Local_Warlordism
 			YUN = {
 				exists = yes
 				
@@ -1175,6 +1176,7 @@ LEP_stride_towards_unification = {
 			}
 		}
 		visible = {
+			has_completed_focus = LEP_End_Local_Warlordism
 			OR = {
 				SZC = { has_country_leader = { character = SZC_xiong_kewu } }
 				SZC = { has_country_leader = { character = SZC_li_jiayu } }
@@ -1235,14 +1237,12 @@ LEP_stride_towards_unification = {
 	LEPEXP_call_back_HNN_FED_officers_desicion = {
 		icon = UPC_PIP_flag
 		visible = {
-			
-		}
-		available = {
 			controls_state = 602
 			controls_state = 1013
 			HNN = { exists = no }
 			has_completed_focus = LEP_appoint_republican_officers
 		}
+		
 		
 
 		cost = 20
@@ -1500,6 +1500,7 @@ LEP_stride_towards_unification = {
 				exists = yes
 			}
 			has_country_flag = LEP_dem_gov
+			has_completed_focus = LEP_End_Local_Warlordism
 			
 		}
 		target_trigger = {
