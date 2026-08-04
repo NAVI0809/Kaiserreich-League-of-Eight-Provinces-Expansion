@@ -2948,7 +2948,7 @@ military_mobilization_category ={
 			has_completed_focus = LEP_accelerate_military_reduction
 		}
 		
-		fire_only_once = yes
+		fire_only_once = no
 		custom_cost_text = CP_20
 		cost = 80
 		custom_cost_trigger = {
@@ -3064,7 +3064,7 @@ military_mobilization_category ={
 		}
 	}
 	LEP_industrial_conversion_plan = {
-		icon = generic_wreckers
+		icon = wrenches
 		available = {
 
 		}
@@ -3087,7 +3087,7 @@ military_mobilization_category ={
 	}
 
 	LEP_demobilization = {
-		icon = generic_wreckers
+		icon = SWE_set_army_budget
 		available = {
 
 		}
@@ -3112,7 +3112,7 @@ military_mobilization_category ={
 	}
 
 	LEP_lift_martial_law = {
-		icon = generic_wreckers
+		icon = generic_flags
 		available = {
 
 		}
@@ -3134,7 +3134,7 @@ military_mobilization_category ={
 	}
 
 	LEP_streamline_defense_agencies = {
-		icon = generic_wreckers
+		icon = government_down
 		available = {
 
 		}

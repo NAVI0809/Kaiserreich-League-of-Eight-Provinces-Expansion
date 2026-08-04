@@ -2491,7 +2491,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_legacy_of_southeast_mutual_protection
-		x = 13
+		x = 7
 		y = 1
 		cost = 3
 		icon = GFX_focus_generic_industrialists
@@ -2521,7 +2521,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_strive_towards_democratic_future
-		x = 11
+		x = 5
 		y = 1
 		cost = 3
 		icon = GFX_goal_RUS_american_liberty
@@ -2558,6 +2558,10 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
 		}
+		available = {
+			has_country_flag = LEP_improve_military_reorganization_effect_incomplete
+		}
+		bypass_if_unavailable = yes
 		relative_position_id = LEP_war_comes_from_the_north
 		completion_reward = {
 			set_temp_variable = { LEP_mili_var_change = 5 }
@@ -3108,13 +3112,14 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_war_comes_from_the_north
-		x = -5
+		x = -11
 		y = 1
 		cost = 3
 		icon = GFX_goal_generic_attack_fengtian
-		prerequisite = {
-			focus = LEP_national_images_continuity
+		allow_branch = {
+			has_country_flag = LEP_mili_focus_on_flag
 		}
+		
 		relative_position_id = LEP_national_images_continuity
 		will_lead_to_war_with = FNG
 		will_lead_to_war_with = MAN
@@ -3150,7 +3155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_seek_international_recognition
-		x = -1
+		x = -7
 		y = 1
 		cost = 7
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -3198,7 +3203,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_economics_democratization
-		x = 2
+		x = -4
 		y = 1
 		cost = 2
 		icon = GFX_focus_generic_the_giant_wakes
@@ -3356,7 +3361,7 @@ focus_tree = {
 		}
 		relative_position_id = LEP_national_defense_design_council
 		completion_reward = {
-			country_event = { id = league_national.18 days = 0 }
+			country_event = { id = league_military.3 days = 0 }
 			hidden_effect = {
 				country_event = { id = league_national.20 days = 20 }
 			}
@@ -3371,9 +3376,7 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_seek_international_recognition
 		}
-		prerequisite = {
-			focus = LEP_war_comes_from_the_north
-		}
+		
 		relative_position_id = LEP_seek_international_recognition
 		completion_reward = {
 			add_equipment_to_stockpile = {
@@ -4773,7 +4776,7 @@ focus_tree = {
 		id = LEP_solidarity_union
 		icon = GFX_goal_ARM_united_and_ready
 		cost = 0
-		x = 15
+		x = 11
 		y = 16
 		allow_branch = {
 			has_country_flag = LEP_NSU_win

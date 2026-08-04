@@ -3840,7 +3840,7 @@ country_event = { #日本独裁
 	}
 }
 
-country_event = { #宣传攻势
+country_event = { #
 	id = league_national.18
 	title = league_national.18.t
 	desc = league_national.18.d
@@ -3852,32 +3852,7 @@ country_event = { #宣传攻势
     option = {
 		log = "[GetLogInfo]: event league_national.18 option league_national.18.a"
 		name = league_national.18.a
-		FNG = {
-			set_party_name = {
-			    ideology = social_liberal
-			    name = FNG_LEP_soclib
-				long_name = FNG_LEP_soclib
-		    }
-			set_party_name = {
-			    ideology = national_populist
-			    name = FNG_LEP_natpop
-				long_name = FNG_LEP_natpop
-		    }
-			add_popularity = {
-				ideology = social_liberal
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = national_populist
-				popularity = 0.05
-			}
-			add_ideas = LEP_propaganda_offensive_idea
-			effect_tooltip = {
-				FNG_JAP_spend_medium = yes
-			}
-			set_temp_variable = { FNG_JAP_days_temp_var = -80 }
-	        FNG_JAP_mech_add_time_effect = yes
-		}
+		
 	}
 }
 
@@ -5029,7 +5004,7 @@ unit_leader_event = { #激活国防动员体系
 					has_character = QIE_jiang_baili
 					}
 					QIE_jiang_baili = {
-				        set_nationality = ROOT
+				        CHN_recruit_character_effect = yes
 			        }
 				}
 			}
@@ -5049,6 +5024,8 @@ unit_leader_event = { #激活国防动员体系
 		QIE_jiang_baili = { custom_effect_tooltip = character_becomes_a_general }
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_military_preparation_tt
+		set_country_flag = LEP_mili_focus_on_flag
+		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 			add_dynamic_modifier = { modifier = LEP_military_mobilization_modifier }
 		}
@@ -5074,6 +5051,47 @@ country_event = { #造舰委员会
 		name = league_military.2.b
 		add_ideas = JAP_mass_shipbuilding_1
 		set_country_flag = LEP_NAVY_mass_shipbuilding
+	}
+}
+
+country_event = { #宣传攻势
+	id = league_military.3
+	title = league_military.3.t
+	desc = league_military.3.d
+	picture = GFX_report_event_FNG_anguojun_soldiers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.3 option league_military.3.a"
+		name = league_military.3.a
+		FNG = {
+			set_party_name = {
+			    ideology = social_liberal
+			    name = FNG_LEP_soclib
+				long_name = FNG_LEP_soclib
+		    }
+			set_party_name = {
+			    ideology = national_populist
+			    name = FNG_LEP_natpop
+				long_name = FNG_LEP_natpop
+		    }
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.05
+			}
+			add_ideas = LEP_propaganda_offensive_idea
+			effect_tooltip = {
+				FNG_JAP_spend_medium = yes
+			}
+			set_temp_variable = { FNG_JAP_days_temp_var = -80 }
+	        FNG_JAP_mech_add_time_effect = yes
+		}
 	}
 }
 
