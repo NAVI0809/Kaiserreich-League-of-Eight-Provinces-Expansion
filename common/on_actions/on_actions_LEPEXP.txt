@@ -32,14 +32,29 @@ on_actions = {
 					OR = {
 						AND = {
 							tag = LEP
-							FROM = {
-								is_major = yes
-								NOT = { tag = CUF }
-							}
+							FROM = { tag = FNG }
 						}
 						AND = {
-							NOT = { tag = CUF }
-							is_major = yes
+							tag = FNG
+							FROM = { tag = LEP }
+						}
+					}
+				}
+				LEP = {
+					LEP_li_erkang = {
+						unit_leader_event = { id = league_military.1 days = 3 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = LEP
+							FROM = { tag = JAP }
+						}
+						AND = {
+							tag = JAP
 							FROM = { tag = LEP }
 						}
 					}
@@ -51,6 +66,4 @@ on_actions = {
 			}
 		}
 	}
-
-	
 }

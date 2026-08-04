@@ -844,6 +844,13 @@ country_event = { #陈炯明加入我方
 		UPC = {
 			set_cosmetic_tag = GXC_UPC_warlord_cosmetic
 		}
+		custom_effect_tooltip = LEP_provincial_authority_act_tt
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_when_act_pass
+		add_ideas = LEP_provincial_authority_act_idea
+		hidden_effect = {
+			activate_targeted_decision = { target = LEP decision = LEP_provincial_authority_act }
+		}
 	}
 }
 

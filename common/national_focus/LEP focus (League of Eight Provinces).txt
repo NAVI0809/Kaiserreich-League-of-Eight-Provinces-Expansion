@@ -2176,9 +2176,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				LEP_li_erkang = {
-					unit_leader_event = { id = league_military.1 days = 8 }
-				}
 				LEP_chu_fucheng = {
 					unit_leader_event = { id = league_national.5 days = 50 }
 				}
@@ -3145,7 +3142,10 @@ focus_tree = {
 			set_temp_variable = { LEP_mili_var_change = 2 }
 			LEP_mili_var = yes
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_dash_line
+			unlock_decision_tooltip = LEP_industrial_conversion_plan
+			unlock_decision_tooltip = LEP_demobilization
+			unlock_decision_tooltip = LEP_lift_martial_law
+			unlock_decision_tooltip = LEP_streamline_defense_agencies
 		}	
 	}
 	focus = {
@@ -4774,7 +4774,7 @@ focus_tree = {
 		icon = GFX_goal_ARM_united_and_ready
 		cost = 0
 		x = 15
-		y = 18
+		y = 16
 		allow_branch = {
 			has_country_flag = LEP_NSU_win
 		}
@@ -5902,7 +5902,7 @@ focus_tree = {
 		icon = GFX_goal_generic_globe
 		cost = 3
 		x = 15
-		y = 25
+		y = 26
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		allow_branch = { china_is_the_unifier_of_china_trigger = yes }
 		

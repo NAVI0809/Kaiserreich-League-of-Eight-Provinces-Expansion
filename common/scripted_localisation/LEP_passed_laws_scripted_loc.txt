@@ -112,3 +112,10 @@ defined_text = {
 		localization_key = idea_desc|LEP_civil_code_idea_3
 	}
 }
+
+defined_text = {
+	name = GetProvincialAuthorityAct
+	text = {
+		localization_key = idea_desc|LEP_provincial_authority_act_idea
+	}
+}
