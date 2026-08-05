@@ -1799,13 +1799,13 @@ country_event = {
 			subtract_from_temp_variable = { lep_kmt_random_delay = -0.5 }
 			multiply_temp_variable = { lep_kmt_random_delay = 15 }
 			add_to_variable = { lep_suppress_kmt_mission_timeout = lep_kmt_random_delay }
-			activate_mission = LEP_temp_suppress_kmt
+			
 
 			set_temp_variable = { LEP_rural_banditry_random_delay = random }
 			subtract_from_temp_variable = { LEP_rural_banditry_random_delay = -0.5 }
 			multiply_temp_variable = { LEP_rural_banditry_random_delay = 15 }
 			add_to_variable = { lep_suppress_rural_banditry_mission_timeout = LEP_rural_banditry_random_delay }
-			activate_mission = LEP_temp_suppress_rural_banditry
+			
 
 			LEC = { country_event = { id = legation_cities_events.92 days = 1 random_days = 3 } }
 			GER = { country_event = { id = germany_foreign_events_new.88 days = 1 } }

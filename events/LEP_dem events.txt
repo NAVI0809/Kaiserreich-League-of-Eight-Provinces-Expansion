@@ -427,6 +427,8 @@ country_event = { #联帅
 		log = "[GetLogInfo]: event league_mid.6 option league_mid.6.a"
 		name = league_mid.6.a
 		complete_national_focus = LEP_the_marshal_stands_triumphant
+		activate_mission = LEP_temp_suppress_kmt
+		activate_mission = LEP_temp_suppress_rural_banditry
 	}
 }
 

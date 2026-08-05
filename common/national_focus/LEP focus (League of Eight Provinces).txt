@@ -895,16 +895,8 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_active_mission = LEP_temp_suppress_rural_banditry }
-				remove_mission = LEP_temp_suppress_rural_banditry
-			}
+			
 			activate_targeted_decision = { target = THIS decision = LEP_decision_lower_bandit_unrest }
-			
-			custom_effect_tooltip = tooltip_white_line
-			remove_mission = LEP_temp_suppress_kmt
-			remove_mission = LEP_temp_suppress_rural_banditry
-			
 			activate_targeted_decision = { target = THIS decision = LEP_decision_lower_kmt_unrest }
 			LEP_strengthen_ZXX_small = yes
 		}
