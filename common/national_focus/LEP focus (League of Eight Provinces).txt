@@ -9999,6 +9999,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = LEP_innovation_breeds_victory }
+		prerequisite = { focus = LEP_staff_officer_school }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_thorough_logistics"
 			enable_tech_improved_logistics = yes
@@ -12083,9 +12084,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_dash_line
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_naval_air_1
-			
-			
+			add_ideas = LEP_naval_air_1		
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
