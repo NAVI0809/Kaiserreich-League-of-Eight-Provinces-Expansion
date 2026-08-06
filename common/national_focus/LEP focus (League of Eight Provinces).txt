@@ -2483,7 +2483,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_legacy_of_southeast_mutual_protection
-		x = 7
+		x = 9
 		y = 1
 		cost = 3
 		icon = GFX_focus_generic_industrialists
@@ -2513,7 +2513,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_strive_towards_democratic_future
-		x = 5
+		x = 7
 		y = 1
 		cost = 3
 		icon = GFX_goal_RUS_american_liberty
@@ -3104,7 +3104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_war_comes_from_the_north
-		x = -10
+		x = -8
 		y = 1
 		cost = 3
 		icon = GFX_goal_generic_attack_fengtian
@@ -3147,7 +3147,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_seek_international_recognition
-		x = -6
+		x = -4
 		y = 1
 		cost = 7
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -3195,7 +3195,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_economics_democratization
-		x = -3
+		x = -1
 		y = 1
 		cost = 2
 		icon = GFX_focus_generic_the_giant_wakes
@@ -11090,6 +11090,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			navy_experience = 50
 			add_ideas = LEP_nanjing_navy
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_NAVY_BONUS
@@ -11113,8 +11114,8 @@ focus_tree = {
 		allow_branch = {
 			OR = {
 				china_is_the_unifier_of_china_trigger = yes
+				has_completed_focus = LEP_artillery_of_the_sea
 			}
-			has_completed_focus = LEP_artillery_of_the_sea
 		}
 		
 		available = {
