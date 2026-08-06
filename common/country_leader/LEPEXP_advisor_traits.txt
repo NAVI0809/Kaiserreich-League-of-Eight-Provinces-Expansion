@@ -91,7 +91,7 @@ leader_traits = {
 		social_liberal_drift = 0.01
 		political_power_factor = 0.05
 		research_speed_factor = 0.03
-		compliance_gain = 0.02
+		compliance_gain = 0.005
 		stability_factor = 0.1
 
 		ai_will_do = {
@@ -125,7 +125,7 @@ leader_traits = {
 	    sprite = 12
 
 		research_speed_factor = 0.03
-		compliance_gain = 0.04
+		compliance_gain = 0.008
 		resistance_damage_to_garrison = -0.15
 		resistance_growth = -0.05
 		social_liberal_drift = 0.01
@@ -285,7 +285,7 @@ leader_traits = {
 		sprite = 13
 		random = no
 		research_speed_factor = 0.1
-		compliance_growth = 0.02
+		compliance_growth = 0.004
 
 		ai_will_do = { factor = 1 }
 	}
