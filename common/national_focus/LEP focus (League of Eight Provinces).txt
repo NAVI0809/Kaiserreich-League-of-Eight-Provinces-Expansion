@@ -10467,6 +10467,7 @@ focus_tree = {
 				modifier = KR_pleased
 			}
 			hidden_effect = {
+				LEP_change_clothes_of_generals = yes
 				remove_trait = {
 					character = LEP_zhejun_officers_theorist
 					slot = theorist
