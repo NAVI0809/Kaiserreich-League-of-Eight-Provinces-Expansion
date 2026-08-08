@@ -897,13 +897,10 @@ LEP_foreign_policy_decisions = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
+					is_in_faction_with = ROOT
 				}
 				NOT = {
 					has_war_with = ROOT
-					is_in_faction_with = INT
-					is_in_faction_with = ENT
-					is_in_faction_with = JAP
-					is_in_faction_with = GER
 				}
 			}
 		}
@@ -924,14 +921,10 @@ LEP_foreign_policy_decisions = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
+					is_in_faction_with = ROOT
 				}
 				NOT = {
 					has_war_with = ROOT
-					is_in_faction_with = INT
-					is_in_faction_with = ENT
-					is_in_faction_with = JAP
-					is_in_faction_with = GER
-					has_country_flag = RUS_refused_moscow_treaty
 				}
 			}
 		}
