@@ -10472,6 +10472,7 @@ focus_tree = {
 				modifier = KR_pleased
 			}
 			hidden_effect = {
+				LEP_change_clothes_of_generals = yes
 				remove_trait = {
 					character = LEP_zhejun_officers_theorist
 					slot = theorist
@@ -11120,10 +11121,8 @@ focus_tree = {
 		    focus = LEP_artillery_of_the_sea
 	    }
 		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-				has_completed_focus = LEP_artillery_of_the_sea
-			}
+			china_is_the_unifier_of_china_trigger = yes
+			has_completed_focus = LEP_artillery_of_the_sea
 		}
 		
 		available = {
@@ -12887,9 +12886,7 @@ focus_tree = {
 	    }
 
 		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
+			china_is_the_unifier_of_china_trigger = yes
 			has_completed_focus = LEP_cult_of_aviation 
 			has_completed_focus = LEP_china_air_fleet
 		}
@@ -13592,22 +13589,6 @@ focus_tree = {
 				}
 			}
 		}
-	}
-
-	focus = {
-		id = LEP_AF_night_fighters
-		icon = GFX_goal_HOL_night_fighter
-		cost = 5
-		prerequisite = {
-			focus = LEP_AF_radar_stations
-		}
-		relative_position_id = LEP_AF_radar_stations
-		x = -1
-		y = 1
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_AF_night_fighters"
-			add_ideas = GER_night_attack
-		}	
 	}
 
 	focus = {
