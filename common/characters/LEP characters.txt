@@ -695,6 +695,81 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_li_erkang_advisor
 			traits = { KR_reformist_soldier }
+			on_add = {
+				custom_effect_tooltip = LEP_li_erkang_on_add_tt
+				hidden_effect = {
+					reduce_focus_completion_cost = {
+						focus = LEP_ningbo_autonomy_army
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_unified_training
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_army_nationalization
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_southeast_iron_army
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_looking_to_the_west
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_material_mobilization
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_strengthen_fire_support
+						cost = 14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_seize_the_initiative
+						cost = 14
+					}
+				}
+				
+			}
+			on_remove = {
+				custom_effect_tooltip = LEP_li_erkang_on_remove_tt
+				hidden_effect = {
+					reduce_focus_completion_cost = {
+						focus = LEP_ningbo_autonomy_army
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_unified_training
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_army_nationalization
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_southeast_iron_army
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_looking_to_the_west
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_material_mobilization
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_strengthen_fire_support
+						cost = -14
+					}
+					reduce_focus_completion_cost = {
+						focus = LEP_seize_the_initiative
+						cost = -14
+					}
+				}
+			}
 		}
 		corps_commander = {
 			desc = LEP_li_erkang_advisor_desc

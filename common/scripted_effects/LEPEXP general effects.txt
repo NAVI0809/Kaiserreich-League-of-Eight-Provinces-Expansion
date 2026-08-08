@@ -894,6 +894,13 @@ LEP_dem_unification_effect = {
 	country_event = { id = league_generic.500 days = 0 }
 	country_event = { id = league_generic.501 days = 2 }
 	country_event = { id = league_generic.1 days = 5 }
+	every_other_country = {
+		limit = {
+			is_subject_of = LEP
+			is_chinese_tag = yes
+		}
+		country_event = { id = china_events.2200 days = 0 }
+	}
 }
 
 LEP_strengthen_ZZH_small = {
