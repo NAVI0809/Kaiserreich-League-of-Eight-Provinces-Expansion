@@ -6,7 +6,7 @@ add_namespace = league_military
 add_namespace = league_news
 add_namespace = league_national
 add_namespace = league_industry
-
+add_namespace = league_jap
 
 country_event = { #test
 	id = league_mid.999
@@ -5109,6 +5109,472 @@ country_event = { #工厂
 	}
 }
 
+#日本事件
+unit_leader_event = { #日本共和国：派遣总督
+	id = league_jap.1
+	title = league_jap.1.t
+	desc = league_jap.1.d
+	picture = GFX_report_event_JAP_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		JAP = {
+			is_subject_of = LEP
+		}
+	}
+	option = {#任命吴振南
+		name = league_jap.1.a
+		log = "[GetLogInfo]: event league_jap.1 option league_jap.1.a"
+		add_manpower = -4000
+		custom_effect_tooltip = LEP_establish_military_force_tt
+		hidden_effect = {
+			LEP = {
+				LEP_wu_zhennan = {
+					set_nationality = JAP
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = paternal_autocrat_subtype
+						}
+						promote_leader = yes
+					}
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = authoritarian_democrat_subtype
+						}
+						promote_leader = yes
+					}
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = national_populist_subtype
+						}
+						promote_leader = yes
+					}
+				}
+				country_event = { id = league_jap.2 days = 1 }
+			}
+			JAP = {
+				add_manpower = 4000
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				promote_character = {
+					character = LEP_wu_rengli
+					ideology = paternal_autocrat_subtype
+				}
+				promote_character = {
+					character = LEP_wu_rengli
+					ideology = authoritarian_democrat_subtype
+				}
+				promote_character = {
+					character = LEP_wu_rengli
+					ideology = national_populist_subtype
+				}
+				swap_ideas = {
+					remove_idea = LEP_military_occupation_forces_in_Japan1
+					add_idea = LEP_military_occupation_forces_in_Japan2
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = national_populist
+					popularity = 0.1
+				}
+			}
+			
+		}
+	}
+	option = {#保留冈村宁次
+		name = league_jap.1.b
+		log = "[GetLogInfo]: event league_jap.1 option league_jap.1.b"
+		add_stability = 0.1
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = { id = league_jap.2 days = 100 }
+		}
+		
+	}
+}
+
+country_event = { #日本共和国：第一次大选
+	id = league_jap.2
+	title = league_jap.2.t
+	desc = league_jap.2.desc
+	picture = GFX_report_event_JAP_diet
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		JAP = {
+			is_subject_of = LEP
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_character = LEP_wu_rengli
+				}
+				JAP = {
+					LEP_wu_rengli = {
+						set_nationality = LEP
+					}
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = league_jap.2.a
+		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.a"
+		JAP = {
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.2
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.2.b
+		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.b"
+		JAP = {
+			set_politics = {
+				ruling_party = social_liberal
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.2.c
+		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.c"
+		JAP = {
+			set_politics = {
+				ruling_party = market_liberal
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.2.d
+		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.d"
+		JAP = {
+			set_politics = {
+				ruling_party = social_conservative
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.2.e
+		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.e"
+		JAP = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+}
+
+unit_leader_event = { #日本国：派遣总督
+	id = league_jap.3
+	title = league_jap.3.t
+	desc = league_jap.3.d
+	picture = GFX_report_event_JAP_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_jap.3.a
+		log = "[GetLogInfo]: event league_jap.3 option league_jap.3.a"
+		add_manpower = -4000
+		custom_effect_tooltip = LEP_establish_military_force_tt
+		hidden_effect = {
+			LEP = {
+				LEP_wu_zhennan = {
+					set_nationality = JAP
+				}
+				country_event = { id = league_jap.4 days = 1 }
+			}
+			JAP = {
+				add_manpower = 4000
+				set_party_name = {
+					ideology = paternal_autocrat
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				set_party_name = {
+					ideology = authoritarian_democrat
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = LEP_occupation_forces
+					long_name = LEP_occupation_forces
+				}
+				swap_ideas = {
+					remove_idea = LEP_military_occupation_forces_in_Japan1
+					add_idea = LEP_military_occupation_forces_in_Japan2
+				}
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = national_populist
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	option = {
+		name = league_jap.3.b
+		log = "[GetLogInfo]: event league_jap.3 option league_jap.3.b"
+		add_stability = 0.1
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.1
+		}
+		country_event = { id = league_jap.4 days = 100 }
+	}
+}
+
+country_event = { #日本国：第一次大选
+	id = league_jap.4
+	title = league_jap.4.t
+	desc = league_jap.4.desc
+	picture = GFX_report_event_JAP_diet
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_character = LEP_wu_rengli
+				}
+				JAP = {
+					LEP_wu_rengli = {
+						set_nationality = LEP
+					}
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = league_jap.4.a
+		log = "[GetLogInfo]: event league_jap.4 option league_jap.4.a"
+		JAP = {
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.2
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.4.b
+		log = "[GetLogInfo]: event league_jap.4 option league_jap.4.b"
+		JAP = {
+			set_politics = {
+				ruling_party = social_liberal
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.4.c
+		log = "[GetLogInfo]: event league_jap.4 option league_jap.4.c"
+		JAP = {
+			set_politics = {
+				ruling_party = market_liberal
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.4.d
+		log = "[GetLogInfo]: event league_jap.4 option league_jap.4.d"
+		JAP = {
+			set_politics = {
+				ruling_party = social_conservative
+				election_frequency = 48
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+	option = {
+		name = league_jap.4.e
+		log = "[GetLogInfo]: event league_jap.4 option league_jap.4.e"
+		JAP = {
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			hidden_effect = {
+				LEP_jap_cancel_occupation_effect = yes
+			}
+		}
+	}
+}
+
+country_event = { #日本：工业转移
+	id = league_jap.5
+	title = league_jap.5.t
+	desc = league_jap.5.d
+	picture = GFX_report_event_JAP_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_jap.5.a
+		log = "[GetLogInfo]: event league_jap.5 option league_jap.5.a"
+	}
+	option = {
+		name = league_jap.5.b
+		log = "[GetLogInfo]: event league_jap.5 option league_jap.5.b"
+	}
+}
+
+country_event = { #日本：军备限制
+	id = league_jap.6
+	title = league_jap.6.t
+	desc = league_jap.6.d
+	picture = GFX_report_event_JAP_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_jap.6.a
+		log = "[GetLogInfo]: event league_jap.6 option league_jap.6.a"
+	}
+	option = {
+		name = league_jap.6.b
+		log = "[GetLogInfo]: event league_jap.6 option league_jap.6.b"
+	}
+}
+
 ##实业发展委员会相关事件
 country_event = {#投入1点
 	id = league_industry.1
@@ -5737,6 +6203,8 @@ country_event = {#撤回4点
 	    name = league_industry.6.g
     }
 }
+
+
 
 
 #各派系掌权新闻

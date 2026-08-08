@@ -3460,6 +3460,32 @@ ideas = {
 				ai_focus_aggressive_factor = -0.1
 			}
 		}
+
+		LEP_military_occupation_forces_in_Japan1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_occupation_forces_in_Japan" }
+			picture = big_entente_idea
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.001
+				required_garrison_factor = 0.02
+				resistance_growth = -0.08
+				paternal_autocrat_drift = 0.01
+			}
+		}
+
+		LEP_military_occupation_forces_in_Japan2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_military_occupation_forces_in_Japan2" }
+			picture = big_entente_idea
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = 0.003
+				required_garrison_factor = 0.05
+				resistance_growth = -0.1
+				paternal_autocrat_drift = 0.03
+				authoritarian_democrat_drift = 0.01
+				national_populist_drift = 0.01
+			}
+		}
 	}
 	
 

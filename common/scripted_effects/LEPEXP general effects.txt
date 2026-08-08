@@ -1710,6 +1710,39 @@ LEP_war_with_jap_effect = {
 	}
 }
 
+LEP_jap_cancel_occupation_effect = {
+	remove_ideas = LEP_military_occupation_forces_in_Japan1
+	remove_ideas = LEP_military_occupation_forces_in_Japan2
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = social_liberal
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = market_liberal
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = social_conservative
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = paternal_autocrat
+		popularity = -1
+	}
+	add_popularity = {
+		ideology = national_populist
+		popularity = -1
+	}
+	add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = -0.15
+	}
+}
+
 
 
 

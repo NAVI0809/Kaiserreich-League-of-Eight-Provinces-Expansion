@@ -1247,6 +1247,18 @@ characters = {
 			maneuvering_skill = 2
 			coordination_skill = 1
 		}
+		country_leader = {
+			desc = LEP_wu_zhennan_navy_chief_desc
+			ideology = authoritarian_democrat_subtype
+		}
+		country_leader = {
+			desc = LEP_wu_zhennan_navy_chief_desc
+			ideology = paternal_autocrat_subtype
+		}
+		country_leader = {
+			desc = LEP_wu_zhennan_navy_chief_desc
+			ideology = national_populist_subtype
+		}
 	}
 
 	#王壽廷
