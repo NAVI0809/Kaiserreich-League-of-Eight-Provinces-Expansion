@@ -9713,7 +9713,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				LEP_army_core_attack_factor = 0.05
-				tooltip = army_defence_factor_tooltip
+				tooltip = army_core_attack_factor_tooltip
 			}
 			add_to_variable = {
 				LEP_army_core_defence_factor = 0.1

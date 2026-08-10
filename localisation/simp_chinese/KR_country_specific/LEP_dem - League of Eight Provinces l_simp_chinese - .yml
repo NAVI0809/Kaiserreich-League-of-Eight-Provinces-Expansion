@@ -2258,6 +2258,8 @@ LEP_country_intro_header_4: "$CHN_country_intro_header_1$"
 LEP_country_intro_content_4: "$CHN_country_intro_content_1$"
 LEP_country_intro_header_5: "$CHN_country_intro_header_2$"
 LEP_country_intro_content_5: "$CHN_country_intro_content_2$"
+
+CSR_set_leader_tt: "§e$CHN_assume_tt$南方共和派的全国领导权。§!"
 china_faction_tenets_southern_republicans_desc: "§L南方共和派是辛亥革命遗留下来的最后火种。其成员来自旧国会、地方自治运动、南方革命派以及部分开明官僚，他们共同继承了一个理想：通过宪法与民主，而非枪杆子，建立一个真正属于人民的共和国。\n\n然而，与国民党的革命纪律不同，南方共和派从未拥有一个强大的中央组织；与联省派的地方主义不同，他们又不愿放弃国家统一的目标。这个松散的联盟内部充满了自由派、自治派、实业家和技术官僚，他们唯一共同的信念，或许只是拒绝让中国再次回到军阀与独裁的时代。\n\n南京政府的建立证明，共和主义并未随着北洋时代的终结而消亡。如今，南方共和派必须证明，议会政治不仅能够存在于理想之中，也能够在一个经历多年战争与分裂的中国真正运转。\n\n但如果他们无法调和派系之间的分歧，无法在自由与秩序、地方与中央之间找到平衡，那么这个脆弱的共和国或许仍会成为历史洪流中的又一次短暂尝试。§!"
 
 LEP_li_erkang_on_add_tt: "§Y§c自治军改革§!相关国策所需时间将§G减少§!§!"

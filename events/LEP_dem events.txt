@@ -354,7 +354,7 @@ unit_leader_event = { #民主政变
 		complete_national_focus = LEP_provisional_senate
 		set_cosmetic_tag = LEP_dem
 		mark_focus_tree_layout_dirty = yes
-		
+		set_potential_national_government = yes
 		hidden_effect = {
 			QIE = {
 				QIE_huang_fu = {
@@ -386,6 +386,8 @@ unit_leader_event = { #民主政变
 				unit_leader_event = { id = league_mid.7 days = 1 }
 			}
 			set_country_flag = LEP_dem_gov
+			clear_global_event_target = SZH_leader
+			CSR_set_leader_effect = yes
 		}
 	}
 }
@@ -2076,7 +2078,7 @@ country_event = { #西湖的解放
 	id = league_mid.58
 	title = league_mid.58.t
 	desc = league_mid.58.d
-	picture = GFX_report_event_generic_east_china_map
+	picture = GFX_report_event_LEP_west_lake
 
 	is_triggered_only = yes
 	fire_only_once = yes
