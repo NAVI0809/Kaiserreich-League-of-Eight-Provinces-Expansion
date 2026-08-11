@@ -4726,6 +4726,318 @@ country_event = { #效果平平
 	}	
 }
 
+country_event = { #开放傀儡国选举
+	id = league_generic.17
+	title = league_generic.17.t
+	desc = league_generic.17.desc
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = {
+		is_ally_with = FROM
+	}
+	immediate = {
+		country_event = { id = league_generic.17 days = 1460 }
+	}
+	option = {#威民
+		name = league_generic.17.a
+		log = "[GetLogInfo]: event league_generic.17 option league_generic.17.a"
+		trigger = {
+			OR = {
+				FROM = { has_completed_focus = LEP_order_and_efficiency }
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 10
+				FROM = { has_government = authoritarian_democrat }
+			}
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.25
+		}
+	}	
+
+	option = {#社保
+		name = league_generic.17.b
+		log = "[GetLogInfo]: event league_generic.17 option league_generic.17.b"
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				FROM = {
+					has_government = social_conservative
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.2
+		}
+		random_list = {
+			33 = {
+				add_popularity = {
+					ideology = paternal_autocrat
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = authoritarian_democrat
+					popularity = 0.1
+				}
+			}
+			33 = {
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+			}
+			33 = {
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
+			}
+		}			
+	}	
+
+	option = {#市自
+		name = league_generic.17.c
+		log = "[GetLogInfo]: event league_generic.17 option league_generic.17.c"		
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				FROM = {
+					has_government = market_liberal
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.2
+		}
+		random_list = {
+			50 = {
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+			}
+			50 = {
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
+			}
+		}	
+	}
+
+	option = {#社自
+		name = league_generic.17.d
+		log = "[GetLogInfo]: event league_generic.17 option league_generic.17.d"	
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				FROM = {
+					has_government = social_liberal
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.2
+		}
+		random_list = {
+			50 = {
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.1
+				}
+			}
+			50 = {
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
+			}
+		}		
+	}
+	option = {#社民
+		name = league_generic.17.e
+		log = "[GetLogInfo]: event league_generic.17 option league_generic.17.e"	
+		trigger = {
+			NOT = {
+				tag = VIN
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				add = 30
+				FROM = {
+					has_government = social_democrat
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.2
+		}
+		random_list = {
+			33 = {
+				add_popularity = {
+					ideology = radical_socialist
+					popularity = 0.1
+				}
+			}
+			33 = {
+				add_popularity = {
+					ideology = social_conservative
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.1
+				}
+			}
+			33 = {
+				add_popularity = {
+					ideology = market_liberal
+					popularity = 0.1
+				}
+				add_popularity = {
+					ideology = social_liberal
+					popularity = 0.1
+				}
+			}
+		}
+	}	
+}
+
+country_event = { #军事演习
+	id = league_generic.18
+	title = league_generic.18.t
+	desc = league_generic.18.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = {
+	}
+	option = {
+		name = league_generic.18.a
+		log = "[GetLogInfo]: event league_generic.18 option league_generic.18.a"
+		add_ideas = LEP_joint_military_exercises_idea
+	}	
+}
+
+country_event = { #分工协作
+	id = league_generic.19
+	title = league_generic.19.t
+	desc = league_generic.19.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = no
+	trigger = {
+	}
+	option = {
+		name = league_generic.19.a
+		log = "[GetLogInfo]: event league_generic.19 option league_generic.19.a"
+		add_ideas = LEP_regional_division_of_labor_idea
+	}	
+}
+
+country_event = { 
+	id = league_generic.20
+	title = league_generic.20.t
+	desc = league_generic.20.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.20.a
+		log = "[GetLogInfo]: event league_generic.20 option league_generic.20.a"
+	}	
+
+	option = {
+		name = league_generic.20.b
+		log = "[GetLogInfo]: event league_generic.20 option league_generic.20.b"			
+	}	
+}
+
+country_event = { 
+	id = league_generic.21
+	title = league_generic.21.t
+	desc = league_generic.21.d
+	picture = GFX_report_event_USA_bombing_run
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+	}
+	option = {
+		name = league_generic.21.a
+		log = "[GetLogInfo]: event league_generic.21 option league_generic.21.a"
+	}	
+
+	option = {
+		name = league_generic.21.b
+		log = "[GetLogInfo]: event league_generic.21 option league_generic.21.b"			
+	}	
+}
+
 country_event = { #新国旗
 	id = league_generic.500
 	title = league_generic.500.t
@@ -5242,6 +5554,9 @@ country_event = { #日本共和国：第一次大选
 		}
 	}
 	immediate = {
+		country_event = { id = league_generic.17 days = 1460 }
+	}
+	immediate = {
 		hidden_effect = {
 			if = {
 				limit = {
@@ -5447,6 +5762,7 @@ country_event = { #日本国：第一次大选
 			}
 			
 		}
+		country_event = { id = league_generic.17 days = 1460 }
 	}
 	option = {
 		name = league_jap.4.a

@@ -950,7 +950,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		mio_cat_eq_all_small_plane
 		maritime_patrol_plane
 		helicopter_equipment
-		mio_cat_eq_all_medium_plane
+		mio_cat_all_medium_aircraft_and_modules
 	}
 	#equipment_type = {
 	#	small_plane_airframe
@@ -1009,7 +1009,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = {
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 		all_parents = { generic_mio_trait_expanded_production_facilities }
 
@@ -1031,7 +1031,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1054,7 +1054,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1076,7 +1076,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1096,7 +1096,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1118,7 +1118,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1140,7 +1140,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		organization_modifier = {
@@ -1165,7 +1165,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		mutually_exclusive = { generic_mio_trait_maximum_wing_loads generic_mio_trait_gun_pods }
@@ -1193,7 +1193,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1217,7 +1217,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1242,7 +1242,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1267,7 +1267,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1291,7 +1291,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1313,7 +1313,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1336,7 +1336,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {
@@ -1359,7 +1359,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		limit_to_equipment_type = { 
 			mio_cat_eq_all_small_plane
 			maritime_patrol_plane
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 		
 		equipment_bonus = {
@@ -1429,7 +1429,7 @@ LEP_hongqiao_organisation = { #虹桥航空工厂（飞行器研究与开发）
 		}
 
 		limit_to_equipment_type = { 
-			mio_cat_eq_all_medium_plane
+			mio_cat_all_medium_aircraft_and_modules
 		}
 
 		equipment_bonus = {

@@ -6289,6 +6289,9 @@ focus_tree = {
 			add_ideas = LEP_regional_division_of_labor_idea
 			every_other_country = {
 				limit = {
+					NOT = {
+						has_idea = LEP_regional_division_of_labor_idea
+					}
 					OR = {
 						is_subject_of = ROOT
 						is_in_faction_with = ROOT
@@ -6316,6 +6319,9 @@ focus_tree = {
 			add_ideas = LEP_joint_military_exercises_idea
 			every_other_country = {
 				limit = {
+					NOT = {
+						has_idea = LEP_joint_military_exercises_idea
+					}
 					OR = {
 						is_subject_of = ROOT
 						is_in_faction_with = ROOT

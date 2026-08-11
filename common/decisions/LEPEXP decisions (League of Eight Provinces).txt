@@ -874,77 +874,7 @@ LEP_foreign_policy_decisions = {
 		fixed_random_seed = no
 	}
 
-	LEP_invite_to_economic_council = {
-		icon = GFX_decision_global_trade
-
-		available = {
-			if = {
-				has_completed_focus = LEP_multilateral_trade_pact
-			}
-			else = {
-				is_faction_leader = yes
-			}
-			num_of_owned_factories > 100
-			FROM = { both_socialist_or_both_not_socialist = yes }
-		}
-
-		visible = {
-			has_idea = LEP_ECT_idea_LEP
-			FROM = {
-				is_in_economic_sphere = no
-				both_socialist_or_both_not_socialist = yes
-				has_capitulated = no
-				OR = {
-					is_subject = no
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		
-		target_array = subjects
-		target_array = faction_members
-
-		target_root_trigger = {
-			has_idea = LEP_ECT_idea_LEP
-		}
-		target_trigger = {
-			has_idea = LEP_ECT_idea_LEP
-			FROM = {
-				is_in_economic_sphere = no
-				both_socialist_or_both_not_socialist = yes
-				has_capitulated = no
-				OR = {
-					is_subject = no
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 10
-				has_political_power > 100
-			}
-		}
-
-		complete_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
-			FROM = { country_event = league_generic.4 }
-		}
-		fixed_random_seed = no
-	}
+	
 
 }
 
@@ -1589,6 +1519,282 @@ LEP_liberation_of_asia_category = {
 		}
 		fixed_random_seed = no
 	}
+
+	LEP_establish_elected_gov = {
+		icon = GFX_decision_generic_political_rally
+
+		available = {
+			if = {
+				has_elected_government = yes
+			}
+			else = {
+				is_faction_leader = yes
+			}
+			FROM = { both_socialist_or_both_not_socialist = yes }
+		}
+
+		visible = {
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		
+		target_array = subjects
+		target_array = faction_members
+
+		target_root_trigger = {
+			
+		}
+		target_trigger = {
+			
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					tag = KOR
+					tag = JAP
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
+			FROM = { country_event = league_generic.17 }
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_invite_to_economic_council = {
+		icon = GFX_decision_global_trade
+
+		available = {
+			if = {
+				has_completed_focus = LEP_multilateral_trade_pact
+			}
+			else = {
+				is_faction_leader = yes
+			}
+			num_of_owned_factories > 100
+			FROM = { both_socialist_or_both_not_socialist = yes }
+		}
+
+		visible = {
+			has_idea = LEP_ECT_idea_LEP
+			FROM = {
+				is_in_economic_sphere = no
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		
+		target_array = subjects
+		target_array = faction_members
+
+		target_root_trigger = {
+			has_idea = LEP_ECT_idea_LEP
+		}
+		target_trigger = {
+			has_idea = LEP_ECT_idea_LEP
+			FROM = {
+				is_in_economic_sphere = no
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
+			FROM = { country_event = league_generic.4 }
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_joint_military_exercise_with_others = {
+		icon = GFX_decision_generic_tank
+
+		available = {
+			is_faction_leader = yes
+			has_completed_focus = LEP_multilateral_trade_pact
+			FROM = { both_socialist_or_both_not_socialist = yes }
+		}
+
+		visible = {
+			has_idea = LEP_joint_military_exercises_idea
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		
+		target_array = subjects
+		target_array = faction_members
+
+		target_root_trigger = {
+			has_idea = LEP_joint_military_exercises_idea
+		}
+		target_trigger = {
+			has_idea = LEP_joint_military_exercises_idea
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_idea = LEP_joint_military_exercises_idea
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
+			FROM = { country_event = league_generic.18 }
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_regional_division_of_labor_with_others = {
+		icon = factories
+
+		available = {
+			is_faction_leader = yes
+			FROM = { both_socialist_or_both_not_socialist = yes }
+			has_completed_focus = LEP_regional_division_of_labor
+		}
+
+		visible = {
+			has_idea = LEP_regional_division_of_labor_idea
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		
+		target_array = subjects
+		target_array = faction_members
+
+		target_root_trigger = {
+			has_idea = LEP_regional_division_of_labor_idea
+		}
+		target_trigger = {
+			has_idea = LEP_regional_division_of_labor_idea
+			FROM = {
+				both_socialist_or_both_not_socialist = yes
+				has_capitulated = no
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT
+					is_in_faction_with = ROOT
+				}
+				NOT = {
+					has_idea = LEP_regional_division_of_labor_idea
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 100
+			}
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_invite_to_economic_council"
+			FROM = { country_event = league_generic.19 }
+		}
+		fixed_random_seed = no
+	}
+
+
 }
 
 LEPEXP_military_defence_development_CAT = {
