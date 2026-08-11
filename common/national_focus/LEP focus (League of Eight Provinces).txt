@@ -11251,6 +11251,7 @@ focus_tree = {
 			hidden_effect = { 
 				country_event = league_rebuild.18		
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_NAVY_BONUS
@@ -12093,7 +12094,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_dash_line
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_naval_air_1		
+			add_ideas = LEP_naval_air_1
+			mark_focus_tree_layout_dirty = yes		
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -12672,6 +12674,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_better_paratroopers = yes
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -12795,6 +12798,7 @@ focus_tree = {
 				callsign = "Fortune"
 				type = fighter_genius
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -12868,7 +12872,8 @@ focus_tree = {
 					add_mio_size = 1
 					add_mio_funds = 800
 				}
-			}		
+			}	
+			mark_focus_tree_layout_dirty = yes	
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13079,6 +13084,7 @@ focus_tree = {
 					SHD_antonio_riva = { CHN_recruit_character_effect = yes }
 			    }
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13244,6 +13250,7 @@ focus_tree = {
 				    category = mio_cat_all_heavy_aircraft_and_modules
 			    }
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -13288,6 +13295,12 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_national_military_aviation_programme
 			focus = LEP_naval_air_dev
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = LEP_national_military_aviation_programme
+			    has_completed_focus = LEP_naval_air_dev
+			}		
 		}
 		relative_position_id = LEP_AF_long_range
 		x = 1
