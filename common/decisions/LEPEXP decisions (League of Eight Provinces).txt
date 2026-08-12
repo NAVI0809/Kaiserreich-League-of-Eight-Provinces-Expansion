@@ -1540,7 +1540,6 @@ LEP_liberation_of_asia_category = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
-					is_in_faction_with = ROOT
 				}
 				NOT = {
 					has_war_with = ROOT
@@ -1563,7 +1562,6 @@ LEP_liberation_of_asia_category = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
-					is_in_faction_with = ROOT
 				}
 				NOT = {
 					tag = KOR

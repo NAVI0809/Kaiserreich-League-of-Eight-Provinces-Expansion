@@ -3784,7 +3784,7 @@ focus_tree = {
 		id = LEP_public_works_projects
 		x = 0
 		y = 2
-		cost = 0
+		cost = 3
 		icon = GFX_GBR_fate_of_unions
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
@@ -6144,6 +6144,12 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			activate_targeted_decision = { decision = CHN_found_our_faction_decision target = ROOT }
+			if = {
+				limit = {
+					has_country_flag = LEP_dem_gov
+				}
+				custom_effect_tooltip = LEP_establish_elected_gov_tt
+			}
 		}
 
 	}
@@ -6257,7 +6263,7 @@ focus_tree = {
 			}
 			LEP_found_economic_cooperation_treaty = yes
 			custom_effect_tooltip = tooltip_white_line
-			unlock_decision_tooltip = LEP_invite_to_economic_council
+			custom_effect_tooltip = LEP_invite_to_economic_council_tt
 			hidden_effect = {
 				every_other_country = {
 					limit = {
@@ -6299,6 +6305,7 @@ focus_tree = {
 				}
 				add_ideas = LEP_regional_division_of_labor_idea
 			}
+			custom_effect_tooltip = LEP_regional_division_of_labor_with_others_tt
 		}
 
 	}
@@ -6329,6 +6336,7 @@ focus_tree = {
 				}
 				add_ideas = LEP_joint_military_exercises_idea
 			}
+			custom_effect_tooltip = LEP_joint_military_exercise_with_others_tt
 		}
 
 	}
@@ -7539,9 +7547,460 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_establish_national_defense_union
+		relative_position_id = LEP_the_new_beiyang
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_the_new_beiyang
+		}
+
+	}
+	focus = {
+		id = LEP_political_committee
+		relative_position_id = LEP_the_new_beiyang
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_the_new_beiyang
+		}
+	}
+	
+	focus = {
+		id = LEP_target_ten_provinces_united
+		relative_position_id = LEP_the_new_beiyang
+		x = 0
+		y = 2
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_establish_national_defense_union
+		}
+		prerequisite = {
+			focus = LEP_political_committee
+		}
+	}
+	focus = {
+		id = LEP_sun_successor
+		relative_position_id = LEP_target_ten_provinces_united
+		x = 0
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_target_ten_provinces_united
+		}
+	}
+	focus = {
+		id = LEP_three_loves_doctrine
+		relative_position_id = LEP_unite_middle_class
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		mutually_exclusive = {
+			focus = LEP_qixieyuan_personality_cult
+		}
+		prerequisite = {
+			focus = LEP_unite_middle_class
+		}
+	}
+	focus = {
+		id = LEP_greater_shanghai_plan
+		relative_position_id = LEP_treaty_port_administrative_office
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_treaty_port_administrative_office
+		}
+	}
+	focus = {
+		id = LEP_courtesy_to_scholars
+		relative_position_id = LEP_national_salvation_alliance
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_national_salvation_alliance
+		}
+	}
+	focus = {
+		id = LEP_national_salvation_alliance
+		relative_position_id = LEP_sun_successor
+		x = 2
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_sun_successor
+		}
+	}
+	focus = {
+		id = LEP_balance_german_influence
+		relative_position_id = LEP_support_local_enterprises
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_support_local_enterprises
+		}
+		prerequisite = {
+			focus = LEP_greater_shanghai_plan
+		}
+	}
+	focus = {
+		id = LEP_support_local_enterprises
+		relative_position_id = LEP_treaty_port_administrative_office
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_treaty_port_administrative_office
+		}
+	}
+	focus = {
+		id = LEP_qixieyuan_personality_cult
+		relative_position_id = LEP_courtesy_to_scholars
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		mutually_exclusive = {
+			focus = LEP_traditional_values_return
+			focus = LEP_three_loves_doctrine
+		}
+		prerequisite = {
+			focus = LEP_courtesy_to_scholars
+		}
+		prerequisite = {
+			focus = LEP_unite_middle_class
+		}
+	}
+	focus = {
+		id = LEP_nationalist_military
+		relative_position_id = LEP_target_ten_provinces_united
+		x = -7
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_target_ten_provinces_united
+		}
+	}
+	focus = {
+		id = LEP_five_color_flag
+		relative_position_id = LEP_jinling_military_academy_expansion
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_jinling_military_academy_expansion
+		}
+	}
+	focus = {
+		id = LEP_education_rights_recovery
+		relative_position_id = LEP_awakening_lion_youth_corps
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_five_color_flag
+		}
+		prerequisite = {
+			focus = LEP_economic_regulation_enhancement
+		}
+	}
+	focus = {
+		id = LEP_jinling_military_academy_expansion
+		relative_position_id = LEP_nationalist_military
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_nationalist_military
+		}
+	}
+	focus = {
+		id = LEP_firm_anti_red
+		relative_position_id = LEP_economic_regulation_enhancement
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_economic_regulation_enhancement
+		}
+		prerequisite = {
+			focus = LEP_five_color_flag
+		}
+		prerequisite = {
+			focus = LEP_awakening_lion_youth_corps
+		}
+	}
+	focus = {
+		id = LEP_tariff_barriers
+		relative_position_id = LEP_nationalist_military
+		x = -2
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_nationalist_military
+		}
+	}
+	focus = {
+		id = LEP_economic_regulation_enhancement
+		relative_position_id = LEP_tariff_barriers
+		x = 0
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_tariff_barriers
+		}
+	}
+	focus = {
+		id = LEP_young_and_modern_china
+		relative_position_id = LEP_education_rights_recovery
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_firm_anti_red
+		}
+		prerequisite = {
+			focus = LEP_education_rights_recovery
+		}
+	}
+	focus = {
+		id = LEP_under_germans_influence
+		relative_position_id = LEP_target_ten_provinces_united
+		x = 8
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_target_ten_provinces_united
+		}
+	}
+	focus = {
+		id = LEP_security_pacification_campaign
+		relative_position_id = LEP_consultative_council
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_consultative_council
+		}
+	}
+	focus = {
+		id = LEP_german_advisors_stationed
+		relative_position_id = LEP_under_germans_influence
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_under_germans_influence
+		}
+	}
+	focus = {
+		id = LEP_currency_peg_to_mark
+		relative_position_id = LEP_german_advisors_stationed
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_german_advisors_stationed
+		}
+	}
+	focus = {
+		id = LEP_imperial_enterprise_privileges
+		relative_position_id = LEP_german_advisors_stationed
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_german_advisors_stationed
+		}
+	}
+	focus = {
+		id = LEP_break_with_germany
+		relative_position_id = LEP_council_new_order
+		x = 3
+		y = 1
+		cost = 3
+		icon = unknow
+	}
+	focus = {
+		id = LEP_von_seekct
+	    relative_position_id = LEP_security_pacification_campaign
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_security_pacification_campaign
+		}
+	}
+	focus = {
+		id = LEP_awakening_lion_youth_corps
+		relative_position_id = LEP_jinling_military_academy_expansion
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_jinling_military_academy_expansion
+		}
+	}
+	focus = {
+		id = LEP_prussian_constitutionalism
+		relative_position_id = LEP_consultative_council
+		x = 0
+		y = 2
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_consultative_council
+		}
+	}
+	focus = {
+		id = LEP_treaty_port_administrative_office
+		relative_position_id = LEP_sun_successor
+		x = -2
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_sun_successor
+		}
+	}
+	focus = {
+		id = LEP_unite_middle_class
+		relative_position_id = LEP_national_salvation_alliance
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_national_salvation_alliance
+		}
+	}
+	focus = {
+		id = LEP_behind_the_scenes
+		relative_position_id = LEP_balance_german_influence
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		mutually_exclusive = {
+			focus = LEP_new_military_ministry
+		}
+		prerequisite = {
+			focus = LEP_balance_german_influence
+		}
+		prerequisite = {
+			focus = LEP_traditional_values_return
+			focus = LEP_qixieyuan_personality_cult
+			focus = LEP_three_loves_doctrine
+		}
+	}
+	focus = {
+		id = LEP_traditional_values_return
+		relative_position_id = LEP_courtesy_to_scholars
+		x = -1
+		y = 1
+		cost = 3
+		icon = unknow
+		mutually_exclusive = {
+			focus = LEP_qixieyuan_personality_cult
+		}
+		prerequisite = {
+			focus = LEP_courtesy_to_scholars
+		}
+	}
+	focus = {
+		id = LEP_council_new_order
+		relative_position_id = LEP_imperial_enterprise_privileges
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_imperial_enterprise_privileges
+		}
+		prerequisite = {
+			focus = LEP_currency_peg_to_mark
+		}
+	}
+	
+	focus = {
+		id = LEP_consultative_council
+		relative_position_id = LEP_under_germans_influence
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_under_germans_influence
+		}
+	}
+	focus = {
+		id = LEP_german_eastern_bastion
+		relative_position_id = LEP_council_new_order
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		prerequisite = {
+			focus = LEP_prussian_constitutionalism
+		}
+		prerequisite = {
+			focus = LEP_von_seekct
+		}
+		prerequisite = {
+			focus = LEP_council_new_order
+		}
+	}
+	focus = {
+		id = LEP_new_military_ministry
+		relative_position_id = LEP_traditional_values_return
+		x = 1
+		y = 1
+		cost = 3
+		icon = unknow
+		mutually_exclusive = {
+			focus = LEP_behind_the_scenes
+		}
+		prerequisite = {
+			focus = LEP_qixieyuan_personality_cult
+		}
+		prerequisite = {
+			focus = LEP_balance_german_influence
+		}
+	}
+
+	focus = {
 		id = LEP_government_by_coercion
 		icon = GFX_goal_LEP_coercion
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_suns_year_of_glory
 		x = 6
@@ -7573,8 +8032,7 @@ focus_tree = {
 	focus = {
 		id = LEP_finish_sun_investigation
 		icon = GFX_goal_generic_investigation
-		cost = 5
-
+		cost = 2
 		relative_position_id = LEP_government_by_coercion
 		x = 0
 		y = 1
@@ -7590,7 +8048,7 @@ focus_tree = {
 	focus = {
 		id = LEP_undermine_sun_loyalists
 		icon = GFX_goal_generic_political_purge
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_finish_sun_investigation
 		x = -2
@@ -7638,7 +8096,7 @@ focus_tree = {
 	focus = {
 		id = LEP_university_oversight_board
 		icon = GFX_goal_generic_controlled_board
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_finish_sun_investigation
 		x = 0
@@ -7687,7 +8145,7 @@ focus_tree = {
 	focus = {
 		id = LEP_governor_question
 		icon = GFX_goal_LEP_governor_question
-		cost = 5
+		cost = 2
 		dynamic = yes
 
 		relative_position_id = LEP_finish_sun_investigation
@@ -7712,7 +8170,7 @@ focus_tree = {
 	focus = {
 		id = LEP_track_down_kmt
 		icon = GFX_goal_LEP_kmt_encirclement
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_undermine_sun_loyalists
 		x = 1
@@ -7737,7 +8195,7 @@ focus_tree = {
 	focus = {
 		id = LEP_crack_down_rural_bandits
 		icon = GFX_goal_LEP_against_yiguandao
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_track_down_kmt
 		x = 0
@@ -7759,7 +8217,7 @@ focus_tree = {
 	focus = {
 		id = LEP_reconstitute_baojia_system
 		icon = GFX_goal_army_guy_2
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_governor_question
 		x = -1
@@ -7785,7 +8243,7 @@ focus_tree = {
 	focus = {
 		id = LEP_xiangyong_inspections
 		icon = GFX_focus_generic_little_entente
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_reconstitute_baojia_system
 		x = 0
@@ -7809,7 +8267,7 @@ focus_tree = {
 	focus = {
 		id = LEP_water_infrastructure_commission
 		icon = GFX_focus_generic_land_reclamation
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_crack_down_rural_bandits
 		x = -1
@@ -7854,7 +8312,7 @@ focus_tree = {
 	focus = {
 		id = LEP_peace_in_countryside
 		icon = GFX_goal_generic_rice_field
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_crack_down_rural_bandits
 		x = 1
@@ -7873,7 +8331,7 @@ focus_tree = {
 	focus = {
 		id = LEP_selective_enforcement
 		icon = GFX_goal_LEP_selective_enforcement
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_xiangyong_inspections
 		x = 1
@@ -7895,7 +8353,7 @@ focus_tree = {
 	focus = {
 		id = LEP_reform_public_security
 		icon = GFX_goal_secret_agents
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_water_infrastructure_commission
 		x = 1
@@ -7922,7 +8380,7 @@ focus_tree = {
 	focus = {
 		id = LEP_redoubts_for_revenue
 		icon = GFX_goal_skull_fortification
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_selective_enforcement
 		x = -1
@@ -7944,7 +8402,7 @@ focus_tree = {
 	focus = {
 		id = LEP_tackle_local_corruption
 		icon = GFX_goal_generic_tackle_corruption
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_reform_public_security
 		x = -1
@@ -7969,7 +8427,7 @@ focus_tree = {
 	focus = {
 		id = LEP_green_gang_dealings
 		icon = GFX_goal_generic_spy_connections
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_reform_public_security
 		x = 1
@@ -7987,7 +8445,7 @@ focus_tree = {
 	focus = {
 		id = LEP_public_media_campaigns
 		icon = GFX_goal_generic_propaganda
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_redoubts_for_revenue
 		x = 1
@@ -8012,7 +8470,7 @@ focus_tree = {
 	focus = {
 		id = LEP_appoint_civilian_magistrates
 		icon = GFX_goal_generic_civilian_oversight
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_tackle_local_corruption
 		x = -3
@@ -8042,7 +8500,7 @@ focus_tree = {
 	focus = {
 		id = LEP_public_repression
 		icon = GFX_focus_generic_oppression
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_appoint_civilian_magistrates
 		x = -1
@@ -8076,7 +8534,7 @@ focus_tree = {
 	focus = {
 		id = LEP_shut_down_intellectual_circles
 		icon = GFX_focus_prc_infiltration
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_appoint_civilian_magistrates
 		x = 1
@@ -8118,7 +8576,7 @@ focus_tree = {
 	focus = {
 		id = LEP_crush_urban_unions
 		icon = GFX_goal_generic_crush_unions
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_public_repression
 		x = 1
@@ -8145,7 +8603,7 @@ focus_tree = {
 	focus = {
 		id = LEP_pacification_commissioner_qi
 		icon = GFX_goal_LEP_commissioner_qi
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_crush_urban_unions
 		x = 0
@@ -8170,7 +8628,7 @@ focus_tree = {
 	focus = {
 		id = LEP_pressure_jiangzhe_caifa
 		icon = GFX_goal_LEP_jiangzhe_bank
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_tackle_local_corruption
 		x = 0
@@ -8197,7 +8655,7 @@ focus_tree = {
 	focus = {
 		id = LEP_solicit_legations_investments
 		icon = GFX_goal_LEP_lec_investments
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_green_gang_dealings
 		x = 0
@@ -8222,7 +8680,7 @@ focus_tree = {
 	focus = {
 		id = LEP_expand_jiangnan_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 2
 
 		relative_position_id = LEP_pressure_jiangzhe_caifa
 		x = 0
@@ -8267,7 +8725,7 @@ focus_tree = {
 	focus = {
 		id = LEP_lower_yangtze_development
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10
+		cost = 2
 
 		relative_position_id = LEP_solicit_legations_investments
 		x = 0
@@ -8312,7 +8770,7 @@ focus_tree = {
 	focus = {
 		id = LEP_eastern_railway_construction
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_expand_jiangnan_arsenal
 		x = 1
@@ -8340,7 +8798,7 @@ focus_tree = {
 	focus = {
 		id = LEP_heavy_industrial_investments
 		icon = GFX_goal_factory_complex
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_eastern_railway_construction
 		x = -1
@@ -8388,7 +8846,7 @@ focus_tree = {
 	focus = {
 		id = LEP_new_economic_development
 		icon = GFX_goal_generic_construction
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_eastern_railway_construction
 		x = 1
@@ -8428,7 +8886,7 @@ focus_tree = {
 	focus = {
 		id = LEP_subsidize_local_communities
 		icon = GFX_goal_LEP_subsidize_villages
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_public_media_campaigns
 		x = 0
@@ -8452,7 +8910,7 @@ focus_tree = {
 	focus = {
 		id = LEP_revitalize_the_tea_trade
 		icon = GFX_goal_LEP_tea_trade
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_subsidize_local_communities
 		x = 0
@@ -8476,7 +8934,7 @@ focus_tree = {
 	focus = {
 		id = LEP_patronize_xiangshen
 		icon = GFX_goal_LEP_patronize_xiangshen
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_revitalize_the_tea_trade
 		x = -1
@@ -8502,7 +8960,7 @@ focus_tree = {
 	focus = {
 		id = LEP_modern_agriculture
 		icon = GFX_goal_generic_agriculture2
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_patronize_xiangshen
 		x = 1
@@ -8526,7 +8984,7 @@ focus_tree = {
 	focus = {
 		id = LEP_dubious_practices
 		icon = GFX_goal_shadow_government
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_public_media_campaigns
 		x = 3
@@ -8553,7 +9011,7 @@ focus_tree = {
 	focus = {
 		id = LEP_tsingtau_collaboration
 		icon = GFX_goal_align_germany
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_government_by_coercion
 		x = 6
@@ -8589,7 +9047,7 @@ focus_tree = {
 	focus = {
 		id = LEP_german_reconstruction_crews
 		icon = GFX_goal_generic_german_construction
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_tsingtau_collaboration
 		x = -1
@@ -8642,7 +9100,7 @@ focus_tree = {
 	focus = {
 		id = LEP_krupp_industrial_methods
 		icon = GFX_goal_LEP_krupp_industial
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_tsingtau_collaboration
 		x = 1
@@ -8677,7 +9135,7 @@ focus_tree = {
 	focus = {
 		id = LEP_german_research_aid
 		icon = GFX_goal_double_research
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_german_reconstruction_crews
 		x = 1
@@ -8711,7 +9169,7 @@ focus_tree = {
 	focus = {
 		id = LEP_nanjing_university_expansion
 		icon = GFX_focus_research2
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_german_research_aid
 		x = -1
@@ -8729,7 +9187,7 @@ focus_tree = {
 	focus = {
 		id = LEP_westernized_school_curriculum
 		icon = GFX_focus_generic_treaty
-		cost = 6
+		cost = 2
 
 		relative_position_id = LEP_german_research_aid
 		x = 1
@@ -8752,7 +9210,7 @@ focus_tree = {
 	focus = {
 		id = LEP_deutsch_asiatische_loans
 		icon = GFX_goal_LEP_deutschasiatische
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_nanjing_university_expansion
 		x = 1
@@ -8791,7 +9249,7 @@ focus_tree = {
 	focus = {
 		id = LEP_opening_the_interior
 		icon = GFX_focus_DEN_no_regulations
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_deutsch_asiatische_loans
 		x = 0
@@ -8829,7 +9287,7 @@ focus_tree = {
 	focus = {
 		id = LEP_improved_tungsten_extraction
 		icon = GFX_focus_generic_tungsten
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_opening_the_interior
 		x = -1
@@ -8858,7 +9316,7 @@ focus_tree = {
 	focus = {
 		id = LEP_schantung_eisenbahn_expansion
 		icon = GFX_goal_LEP_schantung_eisenbahn
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_opening_the_interior
 		x = 1
@@ -8903,7 +9361,7 @@ focus_tree = {
 	focus = {
 		id = LEP_eastern_resources_commission
 		icon = GFX_all_resource
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_schantung_eisenbahn_expansion
 		x = 0
@@ -8945,7 +9403,7 @@ focus_tree = {
 	focus = {
 		id = LEP_tolerate_vice
 		icon = GFX_goal_opium
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_eastern_resources_commission
 		x = -3
@@ -8971,7 +9429,7 @@ focus_tree = {
 	focus = {
 		id = LEP_facilitate_german_prospecting
 		icon = GFX_focus_generic_steel
-		cost = 5
+		cost = 2
 
 		relative_position_id = LEP_eastern_resources_commission
 		x = -1
@@ -9003,7 +9461,7 @@ focus_tree = {
 	focus = {
 		id = LEP_inland_development_zones
 		icon = GFX_goal_new_treaty
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_tolerate_vice
 		x = 1
@@ -9038,7 +9496,7 @@ focus_tree = {
 	focus = {
 		id = LEP_friendly_monopolies
 		icon = GFX_focus_DEN_limited_regulations
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_inland_development_zones
 		x = 0
@@ -9065,7 +9523,7 @@ focus_tree = {
 	focus = {
 		id = LEP_cult_of_personality
 		icon = GFX_goal_LEP_personality_cult
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_heavy_industrial_investments
 		x = 1
@@ -9096,7 +9554,7 @@ focus_tree = {
 	focus = {
 		id = LEP_network_of_allegiances
 		icon = GFX_goal_generic_debt_negotiations
-		cost = 8
+		cost = 2
 
 		relative_position_id = LEP_modern_agriculture
 		x = -1
@@ -9125,7 +9583,7 @@ focus_tree = {
 	focus = {
 		id = LEP_five_provinces_one_marshal
 		icon = GFX_goal_LEP_marshal_qi
-		cost = 10
+		cost = 2
 
 		relative_position_id = LEP_cult_of_personality
 		x = 1

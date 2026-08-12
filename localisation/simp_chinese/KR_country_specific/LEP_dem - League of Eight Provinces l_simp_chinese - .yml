@@ -1916,9 +1916,12 @@
  LEP_invite_to_economic_council: "邀请[FROM.GetNameDef]加入经济合作协定"
  LEP_invite_to_economic_council_tt: "$unlocks_decision$ §Y邀请加入经济合作协定§!"
  LEP_establish_elected_gov: "在[FROM.GetNameDef]组织自由选举"
+ LEP_establish_elected_gov_tt: "$unlocks_decision$ §Y在我们的附属国§!组织自由选举"
  
  LEP_joint_military_exercise_with_others: "与[FROM.GetNameDef]军队组织联合军演"
+ LEP_joint_military_exercise_with_others_tt: "$unlocks_decision$ §Y与我们的附属国§!军队组织联合军演"
  LEP_regional_division_of_labor_with_others: "与[FROM.GetNameDef]的产业协作"
+ LEP_regional_division_of_labor_with_others_tt: "$unlocks_decision$ §Y与我们的附属国§!进行产业协作"
  #flags
  LEP_dem_gov: "已建立§l民§!§m主§!§c政府§!"
  LEP_dem_national_stage: "已建立全国政府"
