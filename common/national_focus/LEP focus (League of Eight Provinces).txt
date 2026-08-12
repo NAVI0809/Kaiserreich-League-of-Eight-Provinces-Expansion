@@ -11589,7 +11589,6 @@ focus_tree = {
 		    focus = LEP_artillery_of_the_sea
 	    }
 		allow_branch = {
-			china_is_the_unifier_of_china_trigger = yes
 			has_completed_focus = LEP_artillery_of_the_sea
 		}
 		
@@ -11710,6 +11709,7 @@ focus_tree = {
 			hidden_effect = { 
 				country_event = league_rebuild.18		
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_NAVY_BONUS
@@ -12552,7 +12552,8 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_dash_line
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_naval_air_1		
+			add_ideas = LEP_naval_air_1
+			mark_focus_tree_layout_dirty = yes		
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
@@ -13131,6 +13132,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_better_paratroopers = yes
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13148,9 +13150,6 @@ focus_tree = {
 		y = 1
 
 		allow_branch = {
-			OR = {
-				china_is_the_unifier_of_china_trigger = yes
-			}
 			has_completed_focus = LEP_CNAF_regroup 
 			has_completed_focus = LEP_kongshu_trooper
 		}
@@ -13257,6 +13256,7 @@ focus_tree = {
 				callsign = "Fortune"
 				type = fighter_genius
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13330,7 +13330,8 @@ focus_tree = {
 					add_mio_size = 1
 					add_mio_funds = 800
 				}
-			}		
+			}	
+			mark_focus_tree_layout_dirty = yes	
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13342,22 +13343,23 @@ focus_tree = {
 	focus = { #整合全国空军
 		id = LEP_CNAF_regroup
 		icon = GFX_goal_FNG_chinese_flying_corps
-		cost = 6
-
+		cost = 4
+        ai_will_do = { base = 100 }
 		relative_position_id = LEP_china_air_fleet
 		x = 1
 		y = 1
+
+		allow_branch = {
+			OR = {
+				has_completed_focus = LEP_china_air_fleet	
+			    has_completed_focus = LEP_cult_of_aviation
+			}		
+		}
 
 		available = {
 		    china_is_the_unifier_of_china_trigger = yes
 			has_deployed_air_force_size = { size > 599 }
 	    }
-
-		allow_branch = {
-			china_is_the_unifier_of_china_trigger = yes
-			has_completed_focus = LEP_cult_of_aviation 
-			has_completed_focus = LEP_china_air_fleet
-		}
 
 		ai_will_do = {
 			base = 20
@@ -13366,6 +13368,7 @@ focus_tree = {
 				factor = 2
 			}
 		}
+
 		prerequisite = { focus = LEP_china_air_fleet }
 		prerequisite = { focus = LEP_cult_of_aviation }
 		completion_reward = {
@@ -13539,6 +13542,7 @@ focus_tree = {
 					SHD_antonio_riva = { CHN_recruit_character_effect = yes }
 			    }
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_AIRFORCE_BONUS
@@ -13704,6 +13708,7 @@ focus_tree = {
 				    category = mio_cat_all_heavy_aircraft_and_modules
 			    }
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -13749,6 +13754,12 @@ focus_tree = {
 			focus = LEP_national_military_aviation_programme
 			focus = LEP_naval_air_dev
 		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = LEP_national_military_aviation_programme
+			    has_completed_focus = LEP_naval_air_dev
+			}		
+		}
 		relative_position_id = LEP_AF_long_range
 		x = 1
 		y = 1
@@ -13761,14 +13772,17 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			mio:LEP_hongqiao_organisation = {
 				add_mio_funds = 800
+				add_mio_size = 1
 				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
 			}
 			mio:LEP_jianqiao_organisation = {
 				add_mio_funds = 800
+				add_mio_size = 1
 				unlock_mio_trait_tooltip = LEP_mio_trait_aid_navy
 			}
 			mio:LEP_fujian_organisation = {
 				add_mio_funds = 800
+				add_mio_size = 1
 				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
 			}
 		}
