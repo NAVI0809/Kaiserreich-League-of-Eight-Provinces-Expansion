@@ -186,3 +186,26 @@ LEP_NG_01 = {
 		1 = { "省防军第%d师" }
 	}
 }
+
+LEP_MEC_02 = {
+	name = div_LEP_MEC_new
+
+	for_countries = { LEP }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "机械化步兵第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "第78军机械化步兵第36师" }
+		2 = { "第71军机械化步兵第87师" }
+		3 = { "第72军机械化步兵第88师" }
+		4 = { "机械化步兵第%d师" }
+		5 = { "机械化步兵第%d师" }
+	}
+}

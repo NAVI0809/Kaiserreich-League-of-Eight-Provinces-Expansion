@@ -39,6 +39,7 @@
  div_paratrooper_unit_LEPEXP: "空输部队"
  div_LEP_JFJ: "江防军"
  div_LEP_NG: "省防军"
+ div_LEP_MEC_new: "机械化步兵师"
 
  LEP_railway_gun_production_TT: "§L两门德制克虏伯列车炮将被部署§!"
  LEP_railway_gun_Wuchang_tt: "§L部署§! §O武昌号§! §L列车炮§!"

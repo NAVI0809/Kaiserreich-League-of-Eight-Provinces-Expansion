@@ -10194,6 +10194,7 @@ focus_tree = {
 			else = {
 				add_ideas = LEP_eliteheer_1
 			}
+			custom_effect_tooltip = tooltip_white_line
 			china_army_reform_increase_step = yes
 			#country_event = { id = league_mid.64 days = 1 } #国防线
 			#set_country_flag = LEP_east_coast_defence_readyness1_incomplete
@@ -13075,8 +13076,7 @@ focus_tree = {
 					NAME = "Kongshu Budui"
 					LINE_1 = { localization_key = line_battalion_tt NAME = paratrooper ICON = GFX_unit_paratrooper_icon_small COUNT = 8 }
 					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_engineer_icon_small }
-					SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
-					SUPPORT_3 = { localization_key = support_battalion_tt NAME = airborne_light_armor ICON = GFX_unit_light_armor_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = airborne_light_armor ICON = GFX_unit_light_armor_icon_small }
 				}
 				if = {
 					limit = { has_template = "Kongshu Budui" }
@@ -13097,8 +13097,7 @@ focus_tree = {
 					}
 					support = {
 						combat_engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-						airborne_light_armor = { x = 0 y = 2 }
+						airborne_light_armor = { x = 0 y = 1 }
 					}
 				}
 			}
@@ -14320,7 +14319,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_tide_of_steel"
 			add_command_power = -10
-			add_ideas = GER_self_propelled_artillery
+			#add_ideas = GER_self_propelled_artillery
 			add_ideas = LEP_idea_tide_of_steel
 			if = {
 				limit = { has_tech = basic_medium_tank_chassis }
@@ -14462,5 +14461,838 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
 		}
+	}
+
+	focus = {
+		id = LEP_80D_plan_complete_focus 
+		icon = GFX_focus_AFG_adopt_nufus
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_tide_of_steel
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_tide_of_steel }
+		prerequisite = { focus = LEP_the_pinnacle_of_chinese_soldiery }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
+			
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_battlion_combat_team
+		icon = GFX_focus_AUS_frontmiliz_focus
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_80D_plan_complete_focus
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_80D_plan_complete_focus }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
+			
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_mechanized_deployment
+		icon = GFX_focus_CHI_200th_division
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_80D_plan_complete_focus
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_80D_plan_complete_focus }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
+			if = {
+				limit = { has_tech = mechanised_infantry }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_create_division_template
+						NAME = "Jixiehua Bubing Shi"
+						LINE_1 = { localization_key = line_battalion_tt NAME = mechanized ICON = GFX_unit_mechanized_icon_small COUNT = 9 }
+						SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+						SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+						SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+					}
+					if = {
+						limit = { has_template = "Jixiehua Bubing Shi" }
+						delete_unit_template_and_units = { division_template = "Jixiehua Bubing Shi" disband = yes } #no cheating
+					}
+					division_template = {
+						name = "Jixiehua Bubing Shi"
+						division_names_group = LEP_MEC_02
+						regiments = {
+							mechanized = { x = 0 y = 0 }
+							mechanized = { x = 0 y = 1 }
+							mechanized = { x = 0 y = 2 }
+							mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+							mechanized = { x = 1 y = 2 }
+							mechanized = { x = 2 y = 0 }
+							mechanized = { x = 2 y = 1 }
+							mechanized = { x = 2 y = 2 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = LEP
+						valid_state_for_spawning_friendly_unit = yes
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_spawn_unit
+							TYPE = "Jixiehua Bubing Shi"
+						}
+						create_unit = {
+							division = "name = \"新编机械化第38师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							owner = ROOT
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = LEP
+						valid_state_for_spawning_friendly_unit = yes
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_spawn_unit
+							TYPE = "Jixiehua Bubing Shi"
+						}			
+						create_unit = {
+							division = "name = \"新编机械化第22师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							owner = ROOT
+						}
+					}
+				}
+			}
+			else = {
+				custom_effect_tooltip = GER_mechanised_infantry_tt
+				custom_effect_tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Jixiehua Bubing Shi"
+					LINE_1 = { localization_key = line_battalion_tt NAME = mechanized ICON = GFX_unit_mechanized_icon_small COUNT = 9 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = mot_recon ICON = GFX_unit_mot_recon_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				}
+				effect_tooltip = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = LEP
+							valid_state_for_spawning_friendly_unit = yes
+						}
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = tooltip_spawn_unit
+								TYPE = "Jixiehua Bubing Shi"
+							}
+							create_unit = {
+								division = "name = \"新编机械化第38师\"division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+								owner = ROOT
+							}
+							
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = LEP
+							valid_state_for_spawning_friendly_unit = yes
+						}
+						custom_override_tooltip = {
+							tooltip = {
+								localization_key = tooltip_spawn_unit
+								TYPE = "Jixiehua Bubing Shi"
+							}
+							create_unit = {
+							    division = "name = \"新编机械化第22师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							    owner = ROOT
+						    }
+						}
+					}
+				}
+				custom_effect_tooltip = GER_else_tt
+				add_tech_bonus = {
+					name = GER_mechanised_infantry
+					bonus = 1.0
+					ahead_reduction = 1
+					uses = 1
+					category = cat_mechanized_equipment
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_SPG_deployment
+		icon = GFX_goal_generic_mobile_artillery_medium
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_mechanized_deployment
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_mechanized_deployment }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_SPG_deployment"
+			add_ideas = GER_self_propelled_artillery
+			add_tech_bonus = {
+				name = LEP_SPG_deployment
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_rain_of_fire
+		icon = GFX_goal_generic_rocket_artillery
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_battlion_combat_team
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { 
+			focus = LEP_mechanized_deployment
+			focus = LEP_battlion_combat_team
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_rain_of_fire"
+			add_ideas = GER_rocket_designs
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = GER_rocket_development
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				category = rocketry
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_best_infantry_on_earth
+		icon = GFX_focus_CHI_protracted_warfare
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_battlion_combat_team
+		x = 0
+		y = 2
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { 
+			focus = LEP_battlion_combat_team
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_rain_of_fire"
+			add_ideas = GER_rocket_designs
+			custom_effect_tooltip = tooltip_white_line
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = GER_rocket_development
+				ahead_reduction = 1
+				bonus = 1
+				uses = 1
+				category = rocketry
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_2nd_front
+		icon = GFX_goal_SZC_improvised_farming_machinery
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_80D_plan_complete_focus 
+		x = 2
+		y = 2
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_battlion_combat_team }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_2nd_front"
+			add_ideas = {
+				idea = GER_food_supply_idea
+				days = 400
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_recon_units
+		icon = GFX_focus_CHI_start_looking_outwards
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_80D_plan_complete_focus 
+		x = -2
+		y = 2
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { focus = LEP_battlion_combat_team }
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_2nd_front"
+			enable_tech_extensive_reconnaissance = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_artillery_kills_all
+		icon = GFX_goal_generic_artillery_factories
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_best_infantry_on_earth
+		x = 2
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			focus = LEP_tanks_vs_ap
+		}
+		prerequisite = { 
+			focus = LEP_best_infantry_on_earth 
+			focus = LEP_SPG_deployment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_artillery_kills_all"
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_tanks_vs_ap
+		icon = GFX_focus_ger_heavy_tanks 
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_best_infantry_on_earth
+		x = 4
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			focus = LEP_artillery_kills_all
+		}
+		prerequisite = { 
+			focus = LEP_best_infantry_on_earth 
+			focus = LEP_SPG_deployment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_tanks_vs_ap"
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_communication_equipment
+		icon = GFX_focus_generic_radio_equipment
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_best_infantry_on_earth
+		x = 0
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		prerequisite = { 
+			focus = LEP_best_infantry_on_earth 
+			focus = LEP_SPG_deployment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_communication_equipment"
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_tech_bonus = {
+				name = LEP_communication_equipment
+				bonus = 0.75
+				uses = 2
+				technology = radio
+				technology = improved_radio
+				technology = advanced_radio
+				category = radar_tech
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_anytime_anywhere
+		icon = GFX_focus_SMB_special_forces_option_3
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_communication_equipment
+		x = -1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			focus = LEP_dare_to_attack
+		}
+		prerequisite = { 
+			focus = LEP_communication_equipment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_anytime_anywhere"
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_dare_to_attack
+		icon = GFX_goal_CHN_china_beiyang_militarism
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_communication_equipment
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			focus = LEP_dare_to_attack
+		}
+		mutually_exclusive = {
+			focus = LEP_anytime_anywhere
+		}
+		prerequisite = { 
+			focus = LEP_communication_equipment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_dare_to_attack"
+			enable_tech_strengthened_support_companies = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_disguise_ground_units
+		icon = GFX_focus_SWE_beneath_sticks_and_stone
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_communication_equipment
+		x = 3
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			#focus = LEP_tanks_vs_ap
+		}
+		prerequisite = { 
+			focus = LEP_communication_equipment
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_disguise_ground_units"
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_joint_ops_to_victory
+		icon = GFX_EGY_Operation_Abu
+		dynamic = yes
+		cost = 4
+
+		relative_position_id = LEP_anytime_anywhere
+		x = 1
+		y = 1
+
+		ai_will_do = {
+			base = 25
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+		mutually_exclusive = {
+			#focus = LEP_tanks_vs_ap
+		}
+		prerequisite = { 
+			focus = LEP_anytime_anywhere
+			focus = LEP_dare_to_attack
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_disguise_ground_units"
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_BONUS
+			FOCUS_FILTER_RESEARCH
+		}
+	}
+
+	focus = {
+		id = LEP_enigma_machine
+		icon = GFX_goal_machine
+		cost = 6
+
+		relative_position_id = LEP_seize_the_initiative
+		x = -3
+		y = 1
+
+		prerequisite = {
+			focus = LEP_symphony_of_factory_and_firepower
+			focus = LEP_seize_the_initiative
+		}
+		prerequisite = {
+			focus = LEP_thorough_logistics
+		}		
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				date < 1941.1.1
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_enigma_machine"
+			if = {
+				limit = {
+					has_dlc_lar = yes
+				}
+				gain_random_cryptology_dept_upgrade = yes
+				add_ideas = GER_enigma_rotors
+				custom_effect_tooltip = GER_enigma_machine_tt
+			}
+			else = {
+				add_tech_bonus = {
+					name = LEP_enigma_machine
+					bonus = 1.0
+					uses = 2
+					category = encryption_tech
+				}
+				add_ideas = GER_enigma_rotors_vanilla
+			}
+		}
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = LEP_top_tire_machine_dev
+		icon = GFX_goal_GER_Zuse_Computer
+		cost = 6
+
+		relative_position_id = LEP_enigma_machine
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = LEP_enigma_machine
+		}		
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				date < 1941.1.1
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_top_tire_machine_dev"
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.7
+			}
+			add_tech_bonus = {
+				name = LEP_top_tire_machine_dev
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+			if = {
+				limit = {
+					controls_province = 4925 #成都
+					605 = { #成都
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = air_facility
+					}
+				}
+				605 = { #成都
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						province = 4925 #成都
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 1047 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = air_facility
+					}
+					construct_building_in_random_province = { air_facility = 1 }
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = LEP_touch_the_sun
+		icon = GFX_focus_wonderweapons
+		cost = 6
+
+		relative_position_id = LEP_top_tire_machine_dev
+		x = 0
+		y = 1
+
+		prerequisite = {
+			focus = LEP_top_tire_machine_dev
+		}		
+
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				date < 1941.1.1
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_touch_the_sun"
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.7
+			}
+			if = {
+				limit = {
+					NOT = {
+						is_researching_technology = atomic_research
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = LEP_touch_the_sun
+					bonus = 0.5
+					uses = 1
+					ahead_reduction = 1
+					category = nuclear
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { is_special_project_completed = sp:sp_nuclear_reactor } }
+					sp:sp_nuclear_reactor = { add_project_progress_ratio = 0.1 }
+				}
+				if = { #second nuclear facility after russia_flavour_events.23
+					limit = {
+						controls_province = 13390 #罗布泊
+						287 = { 
+							is_owned_and_controlled_by = ROOT
+							can_construct_building = nuclear_facility
+						}
+					}
+					287 = { 
+						custom_override_tooltip = {
+							add_building_construction = {
+								type = nuclear_facility
+								level = 1
+								province = 13390 #罗布泊
+								instant_build = yes
+							}
+							tooltip = {
+								localization_key = tooltip_add_building_on_victory_point
+								BUILDING = nuclear_facility
+								NUMBER = 1
+								VP = 13390 #罗布泊
+							}
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 1015 600 1050 }
+						limit = {
+							is_core_of = ROOT
+							can_construct_building = nuclear_facility
+						}
+						construct_building_in_random_province = { nuclear_facility = 1 }
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH }
 	}
 }
