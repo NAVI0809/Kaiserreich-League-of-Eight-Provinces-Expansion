@@ -21,11 +21,149 @@ ideas = {
 				recon_factor = 0.1
 				land_night_attack = 0.05
 				army_speed_factor = 0.10
+				breakthrough_factor = 0.1
 				conversion_cost_civ_to_mil_factor = -0.15
 				special_forces_cap_flat = 8
 				org_loss_when_moving = -0.1
 				experience_gain_artillery_combat_factor = 0.10
 				dig_in_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		LEP_joint_staff_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_joint_staff_1" }
+			name = LEP_joint_staff
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				command_abilities_cost_factor = -0.15
+				industrial_capacity_factory = 0.05
+				experience_gain_infantry_combat_factor = 0.05
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+				army_org_regain = 0.05
+				recon_factor = 0.1
+				land_night_attack = 0.05
+				army_speed_factor = 0.10
+				breakthrough_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.15
+				special_forces_cap_flat = 8
+				org_loss_when_moving = -0.1
+				experience_gain_artillery_combat_factor = 0.10
+				dig_in_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		LEP_joint_staff_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_joint_staff_2" }
+			name = LEP_joint_staff
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				command_abilities_cost_factor = -0.15
+				industrial_capacity_factory = 0.05
+				experience_gain_infantry_combat_factor = 0.05
+				max_command_power = 25
+				command_power_gain_mult = 0.15
+				army_org_regain = 0.08
+				recon_factor = 0.1
+				land_night_attack = 0.05
+				army_speed_factor = 0.10
+				breakthrough_factor = 0.1
+				combat_width_factor = -0.07
+				army_morale_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.15
+				special_forces_cap_flat = 8
+				org_loss_when_moving = -0.1
+				experience_gain_artillery_combat_factor = 0.10
+				dig_in_speed_factor = 0.1
+				modifier_army_sub_unit_marine_max_org_factor = 0.03
+				modifier_army_sub_unit_mountaineers_max_org_factor = 0.03
+				modifier_army_sub_unit_paratrooper_max_org_factor = 0.03
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				support_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEP_joint_staff_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_joint_staff_3" }
+			name = LEP_joint_staff
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				command_abilities_cost_factor = -0.15
+				industrial_capacity_factory = 0.05
+				experience_gain_infantry_combat_factor = 0.05
+				max_command_power = 25
+				command_power_gain_mult = 0.15
+				army_org_regain = 0.1
+				recon_factor = 0.12
+				land_night_attack = 0.05
+				army_speed_factor = 0.13
+				breakthrough_factor = 0.15
+				combat_width_factor = -0.07
+				army_morale_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.15
+				special_forces_cap_flat = 8
+				org_loss_when_moving = -0.15
+				experience_gain_artillery_combat_factor = 0.10
+				dig_in_speed_factor = 0.1
+				modifier_army_sub_unit_marine_max_org_factor = 0.05
+				modifier_army_sub_unit_mountaineers_max_org_factor = 0.05
+				modifier_army_sub_unit_paratrooper_max_org_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_defence_factor = 0.05
+				modifier_army_sub_unit_category_mobile_infantry_max_org_factor = 0.05
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -2973,12 +3111,139 @@ ideas = {
 		}
 
 		LEP_idea_tide_of_steel = { 
+			name = LEP_idea_tide_of_steel
 			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel " }
 			picture = GFX_idea_LEP_idea_tide_of_steel
 			modifier = {
 				army_armor_attack_factor = 0.1
 				army_armor_defence_factor = 0.1
 				additional_brigade_column_size = 1
+			}
+			equipment_bonus = {
+				armor = {
+					armor_value = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEP_idea_tide_of_steel_1 = { 
+			name = LEP_idea_tide_of_steel
+			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel_1 " }
+			picture = GFX_idea_LEP_idea_tide_of_steel
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+				additional_brigade_column_size = 1
+			}
+			equipment_bonus = {
+				armor = {
+					armor_value = 0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					maximum_speed = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEP_idea_tide_of_steel_2 = { 
+			name = LEP_idea_tide_of_steel
+			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel_2 " }
+			picture = GFX_idea_LEP_idea_tide_of_steel
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				mechanized_attack_factor = 0.1
+				mechanized_defence_factor = 0.1
+				additional_brigade_column_size = 1
+			}
+			equipment_bonus = {
+				armor = {
+					armor_value = 0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					maximum_speed = 0.05
+					instant = yes
+				}
+				mio_cat_eq_all_artillery_tanks = {
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					maximum_speed = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEP_idea_tide_of_steel_3 = { 
+			name = LEP_idea_tide_of_steel
+			on_add = { log = "[GetLogRoot]: add idea LEP_idea_tide_of_steel_3 " }
+			picture = GFX_idea_LEP_idea_tide_of_steel
+			modifier = {
+				army_armor_attack_factor = 0.12
+				army_armor_defence_factor = 0.12
+				mechanized_attack_factor = 0.12
+				mechanized_defence_factor = 0.12
+				additional_brigade_column_size = 1
+				unit_light_armor_design_cost_factor = -1
+				unit_medium_armor_design_cost_factor = -1
+				unit_modern_armor_design_cost_factor = -1
+				unit_heavy_armor_design_cost_factor = -1
+				unit_mechanized_design_cost_factor = -1
+			}
+			equipment_bonus = {
+				armor = {
+					armor_value = 0.15
+					hard_attack = 0.05
+			        ap_attack = 0.05
+					instant = yes
+				}
+				mechanized_equipment = {
+					armor_value = 0.03
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					maximum_speed = 0.05
+					instant = yes
+				}
+				mio_cat_eq_all_artillery_tanks = {
+					armor_value = 0.05
+					build_cost_ic = -0.1
+					soft_attack = 0.1
+					maximum_speed = 0.05
+					instant = yes
+				}
+			}
+		}
+
+		LEPEXP_artillery_kills_all_idea = { 
+			name = LEPEXP_artillery_kills_all_idea 
+			on_add = { log = "[GetLogRoot]: add idea LEPEXP_artillery_kills_all_idea " }
+			picture = generic_artillery_regiments
+			modifier = {
+				unit_artillery_brigade_design_cost_factor = -1
+				unit_artillery_design_cost_factor = -1
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					breakthrough = 0.10
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					breakthrough = 0.05
+					instant = yes
+				}
+				mio_cat_eq_all_artillery_tanks = {
+					breakthrough = 0.05
+					instant = yes
+				}
 			}
 		}
 

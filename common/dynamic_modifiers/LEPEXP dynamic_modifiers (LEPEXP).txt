@@ -55,6 +55,11 @@ LEP_national_autonomy_army = {
     trait_trickster_xp_gain_factor = LEP_trait_trickster_xp_gain_factor
     trait_infantry_leader_xp_gain_factor = LEP_trait_infantry_leader_xp_gain_factor
     trait_commando_xp_gain_factor = LEP_trait_commando_xp_gain_factor
+    land_night_attack = LEP_land_night_attack
+    initiative_factor = LEP_initiative_factor
+    recon_factor = LEP_recon_factor
+    coordination_bonus = LEP_coordination_bonus
+    cas_damage_reduction = LEP_cas_damage_reduction
 }	
 LEP_conflict_and_struggle = {
     icon = "GFX_idea_generic_broken_champagne"

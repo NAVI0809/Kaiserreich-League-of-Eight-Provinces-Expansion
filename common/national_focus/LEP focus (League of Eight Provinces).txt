@@ -9882,7 +9882,15 @@ focus_tree = {
 			
 			add_dynamic_modifier = { modifier = LEP_national_autonomy_army }
 			add_to_variable = {
-				LEP_attrition = -0.05
+				LEP_experience_gain_army_unit_factor = -0.05
+				tooltip = experience_gain_army_unit_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_army_org_factor = -0.05
+				tooltip = army_org_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_attrition = 0.05
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
@@ -9902,7 +9910,7 @@ focus_tree = {
 				tooltip = command_power_gain_mult_tooltip
 			}
 			add_to_variable = {
-				training_time_army_factor = 0.1
+				training_time_army_factor = 0.05
 				tooltip = training_time_army_factor_tooltip
 			}
 			add_to_variable = {
@@ -9936,6 +9944,10 @@ focus_tree = {
 			custom_effect_tooltip = {
 				localization_key = tooltip_modify_dynmod
 				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_experience_gain_army_unit_factor = 0.03
+				tooltip = experience_gain_army_unit_factor_tooltip
 			}
 			add_to_variable = {
 				LEP_experience_gain_army_factor = 0.1
@@ -10129,7 +10141,7 @@ focus_tree = {
 				tooltip = experience_gain_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_command_power_gain_mult = 0.2
+				LEP_command_power_gain_mult = 0.15
 				tooltip = command_power_gain_mult_tooltip
 			}
 			add_to_variable = {
@@ -10924,7 +10936,7 @@ focus_tree = {
 				DYNMOD = LEP_national_autonomy_army
 			}
 			add_to_variable = {
-				LEP_army_org_factor = 0.03
+				LEP_army_org_factor = 0.05
 				tooltip = army_org_factor_tooltip
 			}
 			add_to_variable = {
@@ -12757,6 +12769,18 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_fortifying_our_positions_effect = yes
             custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					has_country_flag = LEP_dem_gov
+				}
+				activate_targeted_decision = { target = THIS decision = LEP_fortify_xuzhou }
+	    		activate_targeted_decision = { target = THIS decision = LEP_fujian_inland_defences }
+	    		activate_targeted_decision = { target = THIS decision = LEP_fortify_hangzhou_bay }
+		    	activate_targeted_decision = { target = THIS decision = LEP_jiangxi_mountain_strongholds }
+	    		activate_targeted_decision = { target = THIS decision = LEP_anhui_border_forts }
+			}
+			
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_fort_nantong_tt
 			LEP_wu_rengli = {
                 unit_leader_event = {
@@ -13579,14 +13603,12 @@ focus_tree = {
 				every_military_industrial_organization = {
 					display_individual_scopes = yes
 					limit = { has_mio_trait = LEP_mio_trait_research_air }
-					unlock_mio_trait_tooltip = LEP_mio_trait_research_air
-				}
-				custom_effect_tooltip = tooltip_white_line
-				mio:LEP_hongqiao_organisation = {
 					add_mio_size = 1
+					complete_mio_trait = LEP_mio_trait_research_air
 					add_mio_funds_gain_factor = 0.25
 					add_mio_research_bonus = 0.025
 				}
+				custom_effect_tooltip = tooltip_white_line
 				mio:CHN_aviation_industry_organisation = {
 					add_mio_size = 1
 					add_mio_funds_gain_factor = 0.25
@@ -13770,19 +13792,17 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			mio:LEP_hongqiao_organisation = {
-				add_mio_funds = 800
 				add_mio_size = 1
-				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
+				complete_mio_trait = LEP_mio_trait_seaplane_tryout
 			}
 			mio:LEP_jianqiao_organisation = {
-				add_mio_funds = 800
 				add_mio_size = 1
-				unlock_mio_trait_tooltip = LEP_mio_trait_aid_navy
+				complete_mio_trait = LEP_mio_trait_aid_navy
 			}
 			mio:LEP_fujian_organisation = {
 				add_mio_funds = 800
 				add_mio_size = 1
-				unlock_mio_trait_tooltip = LEP_mio_trait_seaplane_tryout
+				complete_mio_trait = LEP_mio_trait_seaplane_tryout
 			}
 		}
 	}
@@ -14134,7 +14154,7 @@ focus_tree = {
 			}
 			mio:LEP_hongqiao_organisation = {
 				add_mio_size = 1
-				unlock_mio_trait_tooltip = LEP_mio_trait_heavy_fighter
+				complete_mio_trait =  LEP_mio_trait_heavy_fighter
 			}
 		}	
 	}
@@ -14484,7 +14504,39 @@ focus_tree = {
 		prerequisite = { focus = LEP_the_pinnacle_of_chinese_soldiery }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
-			
+			custom_effect_tooltip = LEPEXP_ARMY_RENAME_TT
+			custom_effect_tooltip = tooltip_dash_line
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = CHN_activate_military_disarray_early_warning_tt
+			add_timed_idea = {
+				idea = CHN_military_disarray_idea1
+				days = 90
+			}			
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_max_planning_factor = 0.05
+				tooltip = max_planning_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_army_attack_factor = 0.03
+				tooltip = army_attack_factor_tooltip
+			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = LEP_joint_staff
+				add_idea = LEP_joint_staff_1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_doctrine_cost_reduction = {
+				name = LEP_80D_plan_complete_focus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14512,7 +14564,14 @@ focus_tree = {
 		prerequisite = { focus = LEP_80D_plan_complete_focus }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
-			
+			swap_ideas = {
+				remove_idea = LEP_joint_staff_1
+				add_idea = LEP_joint_staff_2
+			}
+			add_timed_idea = {
+				idea = GXC_local_officer_initiative_idea
+				days = 400
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14540,6 +14599,11 @@ focus_tree = {
 		prerequisite = { focus = LEP_80D_plan_complete_focus }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_80D_plan_complete_focus"
+			swap_ideas = {
+				remove_idea = LEP_idea_tide_of_steel
+				add_idea = LEP_idea_tide_of_steel_1
+			}
+			custom_effect_tooltip = tooltip_white_line
 			if = {
 				limit = { has_tech = mechanised_infantry }
 				custom_override_tooltip = {
@@ -14690,13 +14754,17 @@ focus_tree = {
 		prerequisite = { focus = LEP_mechanized_deployment }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_SPG_deployment"
-			add_ideas = GER_self_propelled_artillery
 			add_tech_bonus = {
 				name = LEP_SPG_deployment
 				bonus = 1.0
 				uses = 1
 				category = artillery
 			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = LEP_idea_tide_of_steel_1
+				add_idea = LEP_idea_tide_of_steel_2
+			}				
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14770,19 +14838,29 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_rain_of_fire"
-			add_ideas = GER_rocket_designs
-			custom_effect_tooltip = tooltip_white_line
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 1
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
 			}
-			custom_effect_tooltip = tooltip_white_line
-			add_tech_bonus = {
-				name = GER_rocket_development
-				ahead_reduction = 1
-				bonus = 1
-				uses = 1
-				category = rocketry
+			add_to_variable = {
+				LEP_land_night_attack = 0.1
+				tooltip = land_night_attack_tooltip
+			}
+			add_to_variable = {
+				LEP_org_loss_when_moving = -0.05
+				tooltip = org_loss_when_moving_tooltip
+			}
+			add_to_variable = {
+				LEP_experience_loss_factor = -0.05
+				tooltip = experience_loss_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_attrition = -0.05
+				tooltip = attrition_tooltip
+			}
+			add_to_variable = {
+				LEP_initiative_factor = 0.03
+				tooltip = initiative_factor_tooltip
 			}
 		}
 		search_filters = {
@@ -14811,9 +14889,9 @@ focus_tree = {
 		prerequisite = { focus = LEP_battlion_combat_team }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_2nd_front"
-			add_ideas = {
+			add_timed_idea = {
 				idea = GER_food_supply_idea
-				days = 400
+				days = 800
 			}
 		}
 		search_filters = {
@@ -14841,7 +14919,16 @@ focus_tree = {
 		}
 		prerequisite = { focus = LEP_battlion_combat_team }
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed LEP_2nd_front"
+			log = "[GetLogRoot]: Focus Completed LEP_recon_units"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_recon_factor = 0.1
+				tooltip = recon_factor_tooltip
+			}
+			custom_effect_tooltip = tooltip_white_line
 			enable_tech_extensive_reconnaissance = yes
 		}
 		search_filters = {
@@ -14876,6 +14963,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_artillery_kills_all"
+			add_ideas = LEPEXP_artillery_kills_all_idea
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14909,6 +14997,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_tanks_vs_ap"
+			swap_ideas = {
+				remove_idea = LEP_idea_tide_of_steel_2
+				add_idea = LEP_idea_tide_of_steel_3
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14939,6 +15031,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_communication_equipment"
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_initiative_factor = 0.02
+				tooltip = initiative_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_land_reinforce_rate = 0.02
+				tooltip = land_reinforce_rate_tooltip
+			}
+			add_to_variable = {
+				LEP_coordination_bonus = 0.05
+				tooltip = coordination_bonus_tooltip
+			}
+			custom_effect_tooltip = tooltip_white_line
+			every_army_leader = {
+				add_timed_unit_leader_trait = {
+					trait = flexible_mindset_temp_trait
+					days = 120
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_naval
 				value = 0.25
@@ -14989,6 +15105,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_anytime_anywhere"
+			every_army_leader = {
+				random_select_amount = 5
+				add_trait = {
+					trait = adaptable
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -15025,6 +15147,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_dare_to_attack"
 			enable_tech_strengthened_support_companies = yes
+			custom_effect_tooltip = tooltip_white_line
+			every_army_leader = {
+				random_select_amount = 5
+				add_timed_unit_leader_trait = {
+					trait = offensive_mindset_temp_trait
+					days = 365
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -15057,6 +15187,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_disguise_ground_units"
+			add_ideas = RUS_deception 
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -15090,6 +15221,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_disguise_ground_units"
+			swap_ideas = {
+				remove_idea = LEP_joint_staff_2
+				add_idea = LEP_joint_staff_3
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -15141,6 +15276,7 @@ focus_tree = {
 				}
 				add_ideas = GER_enigma_rotors_vanilla
 			}
+			
 		}
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH }
 	}
@@ -15156,7 +15292,7 @@ focus_tree = {
 
 		prerequisite = {
 			focus = LEP_enigma_machine
-		}		
+		}	
 
 		ai_will_do = {
 			factor = 50
@@ -15205,6 +15341,7 @@ focus_tree = {
 					construct_building_in_random_province = { air_facility = 1 }
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_RESEARCH }
 	}
@@ -15221,6 +15358,14 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_top_tire_machine_dev
 		}		
+
+		available = {
+			china_is_the_unifier_of_china_trigger = yes
+		}
+
+		allow_branch = {
+			has_completed_focus = LEP_top_tire_machine_dev	
+		}
 
 		ai_will_do = {
 			factor = 50
@@ -15249,6 +15394,41 @@ focus_tree = {
 					uses = 1
 					ahead_reduction = 1
 					category = nuclear
+				}
+				if = { #second nuclear facility after russia_flavour_events.23
+					limit = {
+						controls_province = 13390 #罗布泊
+						287 = { 
+							is_owned_and_controlled_by = ROOT
+							can_construct_building = nuclear_facility
+						}
+					}
+					287 = { 
+						custom_override_tooltip = {
+							add_building_construction = {
+								type = nuclear_facility
+								level = 1
+								province = 13390 #罗布泊
+								instant_build = yes
+							}
+							tooltip = {
+								localization_key = tooltip_add_building_on_victory_point
+								BUILDING = nuclear_facility
+								NUMBER = 1
+								VP = 13390 #罗布泊
+							}
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						prioritize = { 1015 600 1050 }
+						limit = {
+							is_core_of = ROOT
+							can_construct_building = nuclear_facility
+						}
+						construct_building_in_random_province = { nuclear_facility = 1 }
+					}
 				}
 			}
 			else = {

@@ -302,3 +302,17 @@ define_text = {
 		localization_key = LEP_national_reconstruction_bureau_desc_key1
 	}
 }
+
+
+define_text = {
+	name = LEP_national_autonomy_army_loc
+	text = {
+		trigger = {
+			has_completed_focus = LEP_80D_plan_complete_focus
+		}
+		localization_key = LEP_national_autonomy_army_loc_key2
+	}
+	text = {
+		localization_key = LEP_national_autonomy_army_loc_key1
+	}
+}
