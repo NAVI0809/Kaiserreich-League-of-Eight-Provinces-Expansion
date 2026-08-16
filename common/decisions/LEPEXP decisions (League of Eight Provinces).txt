@@ -302,6 +302,45 @@ LEPEXP_DEBUG_CAT = {
 		}
 	}
 
+	LEP_load_Qi_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+			NOT = {
+				has_country_flag = LEP_qi_national_focus
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			set_country_flag = LEP_qi_national_focus
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+
+	LEP_remove_Qi_focus = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			AND = {
+				is_debug = yes
+				has_country_flag = LEP_qi_national_focus
+			}
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			clr_country_flag = LEP_qi_national_focus
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
 	LEP_add_dem_consensus_power_balance = {
 		fire_only_once = no
 		cost = 0

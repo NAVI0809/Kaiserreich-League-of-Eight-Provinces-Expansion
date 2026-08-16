@@ -403,7 +403,7 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = LEP_leighton_stuart_advisor
-			traits = { KR_venerable_diplomat }
+			traits = { LEPEXP_venerable_diplomat }
 		}
 	}
 	#江谦

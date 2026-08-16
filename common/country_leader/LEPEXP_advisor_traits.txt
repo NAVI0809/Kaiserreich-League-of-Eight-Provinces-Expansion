@@ -250,6 +250,34 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 
+	LEPEXP_venerable_diplomat = {#可敬的外交官
+		sprite = 13
+		random = no
+		war_support_factor = 0.05
+		opinion_gain_monthly_factor = 0.25
+		send_volunteer_size = 1
+		social_liberal_acceptance = 20
+		market_liberal_acceptance =20
+		ai_will_do = { factor = 1 }
+	}
+
+	LEPEXP_moderate_mediator = {#温和的调停者
+		sprite = 13
+		random = no
+		political_power_gain = 0.01
+		war_support_factor = 0.05
+		opinion_gain_monthly_factor = 0.25
+		send_volunteer_size = 1
+			targeted_modifier = {
+			tag = USA
+			extra_trade_to_target_factor = 0.3
+			trade_cost_for_target_factor = -0.3
+		}
+		social_democrat_acceptance = 20
+		radical_socialist_acceptance = 20
+		ai_will_do = { factor = 1 }
+	}
+
 	KR_temporary_congress_sic = {
 		sprite = 13
 		random = no

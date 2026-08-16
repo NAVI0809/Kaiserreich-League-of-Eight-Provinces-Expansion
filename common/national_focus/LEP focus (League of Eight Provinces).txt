@@ -7552,7 +7552,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_China_Beiyang_Mass_Assault
+		allow_branch = {
+			has_country_flag = LEP_qi_national_focus
+		}
 		prerequisite = {
 			focus = LEP_the_new_beiyang
 		}
@@ -7564,7 +7567,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_agency
+		allow_branch = {
+			has_country_flag = LEP_qi_national_focus
+		}
 		prerequisite = {
 			focus = LEP_the_new_beiyang
 		}
@@ -7576,7 +7582,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_LEP_generic_flag
 		prerequisite = {
 			focus = LEP_establish_national_defense_union
 		}
@@ -7590,7 +7596,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_SZC_zhili_army
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
 		}
@@ -7601,9 +7607,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_chi_towards_true_love
 		mutually_exclusive = {
 			focus = LEP_qixieyuan_personality_cult
+		}
+		mutually_exclusive = {
+			focus = LEP_traditional_values_return
 		}
 		prerequisite = {
 			focus = LEP_unite_middle_class
@@ -7615,7 +7624,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_model_cities
 		prerequisite = {
 			focus = LEP_treaty_port_administrative_office
 		}
@@ -7623,10 +7632,10 @@ focus_tree = {
 	focus = {
 		id = LEP_courtesy_to_scholars
 		relative_position_id = LEP_national_salvation_alliance
-		x = -1
+		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_ANQ_convince_intellectuals
 		prerequisite = {
 			focus = LEP_national_salvation_alliance
 		}
@@ -7637,7 +7646,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_China_five_colour_beiyang_star_auth
 		prerequisite = {
 			focus = LEP_sun_successor
 		}
@@ -7648,7 +7657,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_GER_break_down_the_rules_of_legislation
 		prerequisite = {
 			focus = LEP_support_local_enterprises
 		}
@@ -7662,7 +7671,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_bag_of_money
 		prerequisite = {
 			focus = LEP_treaty_port_administrative_office
 		}
@@ -7673,7 +7682,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_authority
 		mutually_exclusive = {
 			focus = LEP_traditional_values_return
 			focus = LEP_three_loves_doctrine
@@ -7691,7 +7700,7 @@ focus_tree = {
 		x = -7
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_QIE_ycp
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
 		}
@@ -7702,7 +7711,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_beiyang_flags
 		prerequisite = {
 			focus = LEP_jinling_military_academy_expansion
 		}
@@ -7713,7 +7722,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_social_reforms
 		prerequisite = {
 			focus = LEP_five_color_flag
 		}
@@ -7727,7 +7736,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_LEP_officer_initiative
 		prerequisite = {
 			focus = LEP_nationalist_military
 		}
@@ -7738,7 +7747,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_HOL_crackdown_radsoc
 		prerequisite = {
 			focus = LEP_economic_regulation_enhancement
 		}
@@ -7755,7 +7764,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_ANQ_patriotic_contributions
 		prerequisite = {
 			focus = LEP_nationalist_military
 		}
@@ -7766,7 +7775,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_state_economy
 		prerequisite = {
 			focus = LEP_tariff_barriers
 		}
@@ -7777,7 +7786,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_DOM_The_Phoenix
 		prerequisite = {
 			focus = LEP_firm_anti_red
 		}
@@ -7791,7 +7800,7 @@ focus_tree = {
 		x = 8
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_Reichstag
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
 		}
@@ -7802,7 +7811,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_Woe_to_the_Vanquished
 		prerequisite = {
 			focus = LEP_consultative_council
 		}
@@ -7813,7 +7822,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_Tarnow_Baade_Plan
 		prerequisite = {
 			focus = LEP_under_germans_influence
 		}
@@ -7824,7 +7833,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_Empower_the_Reichsbank
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
 		}
@@ -7835,7 +7844,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_German_Investements
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
 		}
@@ -7846,7 +7855,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_Syndicalist_Blow
 	}
 	focus = {
 		id = LEP_von_seekct
@@ -7854,7 +7863,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_Republic_Armed_Forces
 		prerequisite = {
 			focus = LEP_security_pacification_campaign
 		}
@@ -7865,7 +7874,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_generic_paramilitary
 		prerequisite = {
 			focus = LEP_jinling_military_academy_expansion
 		}
@@ -7876,7 +7885,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_Pursue_Equal_Suffrage_in_Prussia
 		prerequisite = {
 			focus = LEP_consultative_council
 		}
@@ -7887,7 +7896,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_generic_loans
 		prerequisite = {
 			focus = LEP_sun_successor
 		}
@@ -7895,10 +7904,10 @@ focus_tree = {
 	focus = {
 		id = LEP_unite_middle_class
 		relative_position_id = LEP_national_salvation_alliance
-		x = 1
+		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_generic_build_housing
 		prerequisite = {
 			focus = LEP_national_salvation_alliance
 		}
@@ -7909,7 +7918,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_rolling_the_dice
 		mutually_exclusive = {
 			focus = LEP_new_military_ministry
 		}
@@ -7918,19 +7927,21 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = LEP_traditional_values_return
-			focus = LEP_qixieyuan_personality_cult
 			focus = LEP_three_loves_doctrine
 		}
 	}
 	focus = {
 		id = LEP_traditional_values_return
-		relative_position_id = LEP_courtesy_to_scholars
+		relative_position_id = LEP_unite_middle_class
 		x = -1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_SHD_confucianism
 		mutually_exclusive = {
 			focus = LEP_qixieyuan_personality_cult
+		}
+		mutually_exclusive = {
+			focus = LEP_three_loves_doctrine
 		}
 		prerequisite = {
 			focus = LEP_courtesy_to_scholars
@@ -7942,7 +7953,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_colonial_administration
 		prerequisite = {
 			focus = LEP_imperial_enterprise_privileges
 		}
@@ -7957,7 +7968,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_RUS_symphony_of_authorities
 		prerequisite = {
 			focus = LEP_under_germans_influence
 		}
@@ -7968,7 +7979,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_GER_Pax_Germanica
 		prerequisite = {
 			focus = LEP_prussian_constitutionalism
 		}
@@ -7982,10 +7993,10 @@ focus_tree = {
 	focus = {
 		id = LEP_new_military_ministry
 		relative_position_id = LEP_traditional_values_return
-		x = 1
+		x = 2
 		y = 1
 		cost = 3
-		icon = unknow
+		icon = GFX_goal_generic_corporatism
 		mutually_exclusive = {
 			focus = LEP_behind_the_scenes
 		}
@@ -14311,6 +14322,7 @@ focus_tree = {
 				    add_ideas = LEP_joint_staff
 			    }	
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14477,6 +14489,7 @@ focus_tree = {
 					}
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
@@ -14498,6 +14511,12 @@ focus_tree = {
 			modifier = {
 				has_war = yes
 				factor = 2
+			}
+		}
+		allow_branch = {
+			AND = {
+				has_completed_focus = LEP_tide_of_steel
+				has_completed_focus = LEP_the_pinnacle_of_chinese_soldiery
 			}
 		}
 		prerequisite = { focus = LEP_tide_of_steel }

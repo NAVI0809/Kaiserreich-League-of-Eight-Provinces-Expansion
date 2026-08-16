@@ -316,3 +316,13 @@ define_text = {
 		localization_key = LEP_national_autonomy_army_loc_key1
 	}
 }
+
+define_text = {
+	name = GetStuartDescDem
+	text = {
+		trigger = {
+			has_country_flag = LEP_dem_gov
+		}
+		localization_key = LEP_Stuart_dem_desc
+	}
+}
