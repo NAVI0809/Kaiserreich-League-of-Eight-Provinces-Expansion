@@ -10272,7 +10272,7 @@ focus_tree = {
 				tooltip = army_core_defence_factor_tooltip
 			}	
 			add_to_variable = {
-				LEP_experience_loss_factor = 0.05
+				LEP_experience_loss_factor = -0.05
 				tooltip = experience_loss_factor_tooltip
 			}	
 			add_to_variable = {
