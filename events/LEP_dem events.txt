@@ -19,10 +19,10 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		activate_targeted_decision = { target = HNN decision = LEP_in_alliance_with_HNN }
-		activate_targeted_decision = { target = GXC decision = LEP_in_alliance_with_GXC }
-		activate_targeted_decision = { target = SZC decision = LEP_in_alliance_with_SZC }
-		activate_targeted_decision = { target = YUN decision = LEP_in_alliance_with_YUN }
+		every_possible_country = {
+			limit = { is_chinese_tag = yes }
+		    LEPEXP_call_back_LKMT_officers_effect = yes
+	    }
 
     }
 }
@@ -1859,86 +1859,10 @@ country_event = { #谈判成功
 					CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
 				}
 			}
-			ANQ = {
-				if = {
-				    limit = {
-					    has_character = ANQ_sun_liren
-				    }
-				    ANQ_sun_liren = {
-				       set_nationality = ROOT
-					   set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-			    }
-			}
-			GXC = {
+			every_possible_country = {
 				if = {
 					limit = {
-						has_character = CHI_li_jishen
-					}
-					CHI_li_jishen = {
-				        set_nationality = ROOT
-						set_portraits = {
-					        army = { large = GFX_portrait_CHI_li_jishen_dem }
-				        }
-			        }
-				}
-				if = {
-				    limit = {
-					    has_character = ANQ_sun_liren
-				    }
-				    ANQ_sun_liren = {
-				       set_nationality = ROOT
-					   set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-			    }
-			}
-			QIE = {
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren
-					}
-					ANQ_sun_liren = {
-				        set_nationality = ROOT
-						set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-				}
-			}
-			HNN = {
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren
-					}
-					ANQ_sun_liren = {
-				        set_nationality = ROOT
-						set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-				}
-			}
-			SZC = {
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren
-					}
-					ANQ_sun_liren = {
-				        set_nationality = ROOT
-						set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-				}
-			}
-			every_other_country = {
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren
+						has_character = { character = ANQ_sun_liren }
 					}
 					ANQ_sun_liren = {
 				        set_nationality = ROOT

@@ -32,6 +32,7 @@ LEP_national_autonomy_army = {
     icon = "GFX_idea_china_five_races_soldier"
     attrition = LEP_attrition
     army_org_factor = LEP_army_org_factor
+    supply_consumption_factor = LEP_supply_consumption_factor
     army_core_defence_factor = LEP_army_core_defence_factor
     army_core_attack_factor = LEP_army_core_attack_factor 
     command_power_gain_mult = LEP_command_power_gain_mult

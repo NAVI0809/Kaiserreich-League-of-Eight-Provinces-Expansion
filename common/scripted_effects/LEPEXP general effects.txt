@@ -35,7 +35,10 @@ LEPEXP_call_back_SHX_officers_effect = {
 		CHN_recruit_character_effect = yes
 		remove_second_in_command_role = yes
 	}
-	SHX_xu_yongchang= { CHN_recruit_character_effect = yes }
+	SHX_xu_yongchang = { CHN_recruit_character_effect = yes }
+	SHX_zhao_chengshou = { CHN_recruit_character_effect = yes }
+	SHX_wang_jingguo = { CHN_recruit_character_effect = yes }
+	SHX_yang_aiyuan = { CHN_recruit_character_effect = yes }
 }
 
 LEPEXP_call_back_HNN_FED_officers_effect = {
@@ -86,11 +89,14 @@ LEPEXP_call_back_LKMT_officers_effect = {
 	CHI_du_yuming = { CHN_recruit_character_effect = yes }
 	CHI_dai_anlan = { CHN_recruit_character_effect = yes }
 	CHI_wang_lingyun = { CHN_recruit_character_effect = yes }
+	CHI_wang_yaowu = { CHN_recruit_character_effect = yes }
+	HNN_peng_dehuai = { CHN_recruit_character_effect = yes }
 }
 
 LEPEXP_call_back_RKMT_officers_effect = {
 	YUN_xu_tingyao = { CHN_recruit_character_effect = yes }
 	YUN_li_genyuan = { CHN_recruit_character_effect = yes }
+	SZC_lu_chao = { CHN_recruit_character_effect = yes }	
 }
 
 LEPEXP_call_back_warlords_officers_effect = {
@@ -101,26 +107,46 @@ LEPEXP_call_back_warlords_officers_effect = {
 	SIK_zhang_peiyuan = { CHN_recruit_character_effect = yes }
 	SIK_yang_feixia = { CHN_recruit_character_effect = yes }
 	SIK_li_hairu = { CHN_recruit_character_effect = yes }
+	SZC_li_jiayu = { CHN_recruit_character_effect = yes }
+	SZC_lai_xinhui = { CHN_recruit_character_effect = yes }
+	SZC_chen_lanting = { CHN_recruit_character_effect = yes }
+	SZC_chen_li = { CHN_recruit_character_effect = yes }
+	SZC_peng_shifu = { CHN_recruit_character_effect = yes }
+	SZC_kuang_jixun = { CHN_recruit_character_effect = yes }
+	SZC_fan_shaozeng = { CHN_recruit_character_effect = yes }
+	SZC_he_guoguang = { CHN_recruit_character_effect = yes }
+	SZC_guo_rudong = { CHN_recruit_character_effect = yes }	
+	HNN_chen_quzhen = { CHN_recruit_character_effect = yes }
+	HNN_long_yunfei = { CHN_recruit_character_effect = yes }	
+	HNN_zhou_xicheng = { CHN_recruit_character_effect = yes }	
+	HNN_dai_jitao = { CHN_recruit_character_effect = yes }	
 }
 
 LEPEXP_call_back_SZC_officers_effect = {
-	SZC_xiong_kewu
-	every_unit_leader ={
-		limit = {
-    	    OR = {
-				has_character_flag = GXC_LJS_character_flag
-				has_trait = CHN_GRA_officer
-			}
-			NOT = {
-				is_character = GXC_ye_ju
-			}
-		}
-		hidden_effect = {
-			remove_second_in_command_role = yes
-	    }
-	    set_nationality = FROM
-	    demote_to_general = yes
-    }
+	SZC_xiong_kewu = { CHN_recruit_character_effect = yes }
+	SZC_dan_maoxin = { CHN_recruit_character_effect = yes }
+	SZC_yu_peidi = { CHN_recruit_character_effect = yes }
+	SZC_yu_jitang = { CHN_recruit_character_effect = yes }
+	SZC_zhao_weibin = { CHN_recruit_character_effect = yes }
+	SZC_xiao_yisu = { CHN_recruit_character_effect = yes }
+	SZC_bian_zhishan = { CHN_recruit_character_effect = yes }
+	SZC_deng_xihou = { CHN_recruit_character_effect = yes }
+	SZC_tian_songyao = { CHN_recruit_character_effect = yes }
+	SZC_huang_yin = { CHN_recruit_character_effect = yes }
+	SZC_chen_dingxun = { CHN_recruit_character_effect = yes }
+	SZC_sun_zhen = { CHN_recruit_character_effect = yes }
+	SZC_wang_mingzhang = { CHN_recruit_character_effect = yes }
+	SZC_liu_wenhui = { CHN_recruit_character_effect = yes }
+	SZC_xia_shouxun = { CHN_recruit_character_effect = yes }
+	SZC_xiang_chuanyi = { CHN_recruit_character_effect = yes }
+	SZC_wang_yunxiang = { CHN_recruit_character_effect = yes }
+	SZC_leng_yindong = { CHN_recruit_character_effect = yes }
+	SZC_liu_xiang = { CHN_recruit_character_effect = yes }
+	SZC_pan_wenhua = { CHN_recruit_character_effect = yes }
+	SZC_tang_shizun = { CHN_recruit_character_effect = yes }
+	SZC_guo_xunqi = { CHN_recruit_character_effect = yes }
+	SZC_wang_lingji = { CHN_recruit_character_effect = yes }
+	SZC_wang_zuanxu = { CHN_recruit_character_effect = yes }
 }
 
 
