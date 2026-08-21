@@ -11164,6 +11164,10 @@ focus_tree = {
 					complete_mio_trait = China_mio_trait_integrated_jinling
 					set_mio_flag = integrated_jinling
 				}
+				mio:LEP_jinling_organisation = {
+					add_mio_funds_gain_factor = 0.10
+					add_mio_size = 1	
+				}
 			}
 			else = {
 				add_one_random_military_factory = yes
