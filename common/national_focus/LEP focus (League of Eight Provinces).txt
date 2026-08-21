@@ -14426,6 +14426,50 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_tide_of_steel"
 			add_command_power = -10
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = LEP_lkmt_mili_flag_1
+						has_country_flag = LEP_lkmt_mili_flag_2
+						has_country_flag = LEP_lkmt_mili_flag_3
+					}
+					NOT = { country_exists = CHI }
+				}
+				CHI = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { 
+							is_character = CHI_du_yuming
+							is_character = CHI_dai_anlan
+						}
+					}
+					custom_effect_tooltip = tooltip_white_line
+					CHI_du_yuming = { custom_effect_tooltip = character_becomes_a_general }
+					custom_effect_tooltip = tooltip_white_line
+					CHI_dai_anlan = { custom_effect_tooltip = character_becomes_a_general }
+					hidden_effect = {
+						CHI_du_yuming = { CHN_recruit_character_effect = yes }
+						CHI_dai_anlan = { CHN_recruit_character_effect = yes }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { country_exists = HNN} }
+				HNN = {
+					custom_effect_tooltip = characters_will_be_recruited
+					character_list_tooltip = {
+						limit = { is_character = HNN_jiang_chuou}
+					}
+					custom_effect_tooltip = tooltip_white_line
+					HNN_jiang_chuou = { custom_effect_tooltip = character_becomes_a_general }
+					hidden_effect = {
+						HNN_jiang_chuou = { CHN_recruit_character_effect = yes }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_dash_line
+			custom_effect_tooltip = tooltip_white_line
 			#add_ideas = GER_self_propelled_artillery
 			add_ideas = LEP_idea_tide_of_steel
 			if = {
@@ -14462,6 +14506,8 @@ focus_tree = {
 				SUPPORT_2 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
 				SUPPORT_3 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = tooltip_dash_line
 			custom_effect_tooltip = GER_else_tt
 			custom_effect_tooltip = {
 				localization_key = tooltip_create_division_template
@@ -14531,7 +14577,6 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = tooltip_white_line
 			random_owned_controlled_state = {
 				limit = {
 					is_core_of = LEP
@@ -14540,7 +14585,7 @@ focus_tree = {
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = tooltip_spawn_unit
-						TYPE = "Panzer-Division"
+						TYPE = "实验性装甲"
 					}
 					create_unit = {
 						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
@@ -14556,7 +14601,7 @@ focus_tree = {
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = tooltip_spawn_unit
-						TYPE = "Panzer-Division"
+						TYPE = "实验性装甲"
 					}
 					create_unit = {
 						division = "division_template = \"Panzer-Division\" start_experience_factor = 0.5"
@@ -14594,6 +14639,9 @@ focus_tree = {
 				has_completed_focus = LEP_the_pinnacle_of_chinese_soldiery
 			}
 		}
+		available = {
+            num_divisions > 80
+        }
 		prerequisite = { focus = LEP_tide_of_steel }
 		prerequisite = { focus = LEP_the_pinnacle_of_chinese_soldiery }
 		completion_reward = {
