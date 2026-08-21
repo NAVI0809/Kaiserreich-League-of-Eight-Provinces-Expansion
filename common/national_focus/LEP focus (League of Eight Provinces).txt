@@ -7868,7 +7868,7 @@ focus_tree = {
 		cost = 3
 		icon = GFX_goal_GER_Syndicalist_Blow
 		prerequisite = {
-			focus = LEP_von_seekct
+			focus = LEP_prussian_constitutionalism
 		}
 	}
 	focus = {
@@ -9923,7 +9923,7 @@ focus_tree = {
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 3
+				LEP_max_dig_in = 2
 				tooltip = max_dig_in_tooltip
 			}
 			add_to_variable = {
@@ -9953,7 +9953,7 @@ focus_tree = {
 				}
 				remove_ideas = LEP_the_disunited_armies_1
 			}
-
+			custom_effect_tooltip = tooltip_white_line
 			if={
 				limit = {
 					has_idea = LEP_unstable_morale
@@ -9963,7 +9963,6 @@ focus_tree = {
 				    days = -20
 			    }
 			}			
-			
 		}
 		
 	}
@@ -9981,7 +9980,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_recoup_the_lost_divisions"
-
 			if={
 				limit = {
 					has_idea = LEP_unstable_morale
@@ -10269,7 +10267,7 @@ focus_tree = {
 			add_to_variable = {
 				LEP_army_core_defence_factor = 0.1
 				tooltip = army_core_defence_factor_tooltip
-			}
+			}			
 			add_to_variable = {
 				LEP_max_dig_in = 4
 				tooltip = max_dig_in_tooltip

@@ -19,10 +19,10 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		every_possible_country = {
-			limit = { is_chinese_tag = yes }
-		    LEPEXP_call_back_LKMT_officers_effect = yes
-	    }
+		activate_targeted_decision = { target = HNN decision = LEP_in_alliance_with_HNN }
+		activate_targeted_decision = { target = GXC decision = LEP_in_alliance_with_GXC }
+		activate_targeted_decision = { target = SZC decision = LEP_in_alliance_with_SZC }
+		activate_targeted_decision = { target = YUN decision = LEP_in_alliance_with_YUN }
 
     }
 }
@@ -363,7 +363,6 @@ unit_leader_event = { #民主政变
 			idea = LEP_unstable_morale
 			days = 190
 		}
-		custom_effect_tooltip = tooltip_white_line
 		hidden_effect = {
 			QIE = {
 				QIE_huang_fu = {
@@ -1772,7 +1771,7 @@ country_event = { #闽赣问题
 	id = league_mid.53
 	title = league_mid.53.t
 	desc = league_mid.53.d
-	picture = GFX_report_event_GXC_chen_mingshu_gov
+	picture = GFX_report_event_CHI_cai_yuanpei
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1780,14 +1779,7 @@ country_event = { #闽赣问题
     option = {
 		log = "[GetLogInfo]: eventleague_mid.53 option league_mid.53.a"
 		name = league_mid.53.a
-		random_list = {
-			75 = {
-				country_event = { id = league_mid.54 days = 3  }
-			}
-			25 = {
-				country_event = { id = league_mid.55 days = 3  }
-			}
-		}
+		country_event = { id = league_mid.69 days = 3  }
 	}
 
 	option = {
@@ -1806,126 +1798,21 @@ country_event = { #谈判成功
 	id = league_mid.54
 	title = league_mid.54.t
 	desc = league_mid.54.d
-	picture = GFX_report_event_CHI_song_qingling_on_air
+	picture = GFX_report_event_CHI_cai_yuanpei
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	immediate = {
 		hidden_effect = {
-			
-			ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
-			CHI = {
-				CHI_recruit_PAC_endgame_advisors_effect = yes
-				CHI_recruit_peng_xuefeng_effect = yes
-				if = {
-					limit = {
-						has_character = CHI_li_jishen
-					}
-					CHI_li_jishen = {
-				    	set_nationality = ROOT
-						set_portraits = {
-					        army = { large = GFX_portrait_CHI_li_jishen_dem }
-				        }
-			    	}
-				}
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren
-					}
-					ANQ_sun_liren = {
-				    	set_nationality = ROOT
-						set_portraits = {
-					        army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			    	}
-				}
-				if = {
-					limit = {
-						has_character = CHI_chen_shaokuan
-					}
-					CHI_chen_shaokuan= {
-				    	set_nationality = ROOT
-			    	}
-				}
-				if = {
-					limit = {
-						has_character = CHI_peng_xuefeng
-					}
-					CHI_peng_xuefeng = {
-				    	set_nationality = ROOT
-						set_portraits = {
-					        army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
-				        }
-			    	}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_character = CHI_peng_xuefeng
-						}						
-					}
-					CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
-				}
-			}
-			every_possible_country = {
-				if = {
-					limit = {
-						has_character = ANQ_sun_liren 
-					}
-					ANQ_sun_liren = {
-				        set_nationality = ROOT
-						set_portraits = {
-					       army = { large = GFX_portrait_ANQ_sun_liren_dem }
-				        }
-			        }
-				}
-			}
+			LEP_lkmt_mili_immediate_effect = yes
 		}
 	}
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.54 option league_mid.54.a"
 		name = league_mid.54.a
-		remove_ideas = LEP_kuomintang
-		if = {
-			limit = { has_active_mission = LEP_temp_suppress_kmt }
-			remove_mission = LEP_temp_suppress_kmt
-		}
-		add_popularity = {
-			ideology = radical_socialist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = social_democrat
-			popularity = 0.05
-		}
-		add_popularity = {
-			ideology = totalist
-			popularity = 0.01
-		}
-		custom_effect_tooltip = tooltip_white_line
-		CHI = {
-			CHI_song_qingling = {
-				set_nationality = ROOT
-			}
-		}
-		custom_effect_tooltip = tooltip_white_line
-		CHI_li_jishen = { custom_effect_tooltip = character_becomes_a_general }
-		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
-		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
-		custom_effect_tooltip = league_mid_54_ANQ_sun_liren_tt
-		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
-		hidden_effect = {
-			CHI = {
-				CHI_peng_xuefeng = {
-				    set_nationality = ROOT
-					set_portraits = {
-					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
-				    }
-			    }
-			}
-		}		
+		LEP_lkmt_conference_result_effect = yes
 	}
 }
 
@@ -1933,7 +1820,7 @@ country_event = { #谈判失败
 	id = league_mid.55
 	title = league_mid.55.t
 	desc = league_mid.55.d
-	picture = GFX_report_event_CHI_mission_204_jiangxi
+	picture = GFX_report_event_CHI_cai_yuanpei
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2387,6 +2274,198 @@ country_event = { #pb4y
 		}
 	}
 }	
+
+country_event = { #国民党和谈：会议缘起
+	id = league_mid.69
+	title = league_mid.69.t
+	desc = league_mid.69.d
+	picture = GFX_report_event_CHI_song_qingling_speech_world_peace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.69 option league_mid.69.a"
+		name = league_mid.69.a
+		custom_effect_tooltip = LEP_lkmt_conference_begin_tt
+		set_variable = {
+			var = LEP_lkmt_conference_var
+			value = 0
+		}
+		country_event = { id = league_mid.70 days = 0 }
+	}
+}
+
+country_event = {  #国民党和谈：政治
+	id = league_mid.70
+	title = league_mid.70.t
+	desc = league_mid.70.d
+	picture = GFX_report_event_CHI_song_qingling_speech_world_peace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.70 option league_mid.70.a"
+		name = league_mid.70.a
+		add_LEP_lkmt_conference_var_3_effect = yes
+		set_country_flag = LEP_lkmt_politic_flag_3
+		country_event = { id = league_mid.71 days = 3 }
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.70 option league_mid.70.b"
+		name = league_mid.70.b
+		add_LEP_lkmt_conference_var_2_effect = yes
+		set_country_flag = LEP_lkmt_politic_flag_2
+		country_event = { id = league_mid.71 days = 3 }
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.70 option league_mid.70.c"
+		name = league_mid.70.c
+		add_LEP_lkmt_conference_var_1_effect = yes
+		set_country_flag = LEP_lkmt_politic_flag_1
+		country_event = { id = league_mid.71 days = 3 }
+	}
+}
+
+country_event = { #国民党和谈：经济
+	id = league_mid.71
+	title = league_mid.71.t
+	desc = league_mid.71.d
+	picture = GFX_report_event_CHI_song_qingling_speech_world_peace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.71 option league_mid.71.a"
+		name = league_mid.71.a
+		add_LEP_lkmt_conference_var_3_effect = yes
+		set_country_flag = LEP_lkmt_econ_flag_3
+		country_event = { id = league_mid.72 days = 3 }
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.71 option league_mid.71.b"
+		name = league_mid.71.b
+		add_LEP_lkmt_conference_var_2_effect = yes
+		set_country_flag = LEP_lkmt_econ_flag_2
+		country_event = { id = league_mid.72 days = 3 }
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.71 option league_mid.71.c"
+		name = league_mid.71.c
+		add_LEP_lkmt_conference_var_1_effect = yes
+		set_country_flag = LEP_lkmt_econ_flag_1
+		country_event = { id = league_mid.72 days = 3 }
+	}
+}
+
+country_event = {  #国民党和谈：军事
+	id = league_mid.72
+	title = league_mid.72.t
+	desc = league_mid.72.d
+	picture = GFX_report_event_CHI_song_qingling_speech_world_peace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.a"
+		name = league_mid.72.a
+		add_LEP_lkmt_conference_var_3_effect = yes
+		set_country_flag = LEP_lkmt_mili_flag_3
+		hidden_effect = {
+			check_LEP_lkmt_conference_var_effect = yes
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.b"
+		name = league_mid.72.b
+		add_LEP_lkmt_conference_var_2_effect = yes
+		set_country_flag = LEP_lkmt_mili_flag_2
+		hidden_effect = {
+			check_LEP_lkmt_conference_var_effect = yes
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.c"
+		name = league_mid.72.c
+		add_LEP_lkmt_conference_var_1_effect = yes
+		set_country_flag = LEP_lkmt_mili_flag_1
+		hidden_effect = {
+			check_LEP_lkmt_conference_var_effect = yes
+		}
+	}
+}
+
+country_event = { 
+	id = league_mid.73
+	title = league_mid.73.t
+	desc = league_mid.73.d
+	picture = GFX_report_event_QIE_hu_shih_yan_huiqing
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.a"
+		name = league_mid.73.a
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.b"
+		name = league_mid.73.b
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.c"
+		name = league_mid.73.c
+	}
+}
+
+country_event = { 
+	id = league_mid.74
+	title = league_mid.74.t
+	desc = league_mid.74.d
+	picture = GFX_report_event_QIE_hu_shih_yan_huiqing
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.74 option league_mid.74.a"
+		name = league_mid.74.a
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.74 option league_mid.74.b"
+		name = league_mid.74.b
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.74 option league_mid.74.c"
+		name = league_mid.74.c
+	}
+}
+
+country_event = { 
+	id = league_mid.75
+	title = league_mid.75.t
+	desc = league_mid.75.d
+	picture = GFX_report_event_QIE_hu_shih_yan_huiqing
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.75 option league_mid.75.a"
+		name = league_mid.75.a
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.75 option league_mid.75.b"
+		name = league_mid.75.b
+	}
+	option = {
+		log = "[GetLogInfo]: event league_mid.75 option league_mid.75.c"
+		name = league_mid.75.c
+	}
+}
 
 
 country_event = { #《告国民书》

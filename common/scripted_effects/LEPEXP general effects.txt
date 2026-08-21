@@ -2176,7 +2176,7 @@ LEP_lkmt_mili_immediate_effect = {
 				ANQ_sun_liren = {
 					set_nationality = ROOT
 					set_portraits = {
-					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					    army = { large = GFX_portrait_ANQ_sun_liren_dem }
 					}
 				}
 			}
