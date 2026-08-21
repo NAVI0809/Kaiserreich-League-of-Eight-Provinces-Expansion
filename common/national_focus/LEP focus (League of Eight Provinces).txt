@@ -3123,7 +3123,7 @@ focus_tree = {
 		cost = 3
 		icon = GFX_goal_generic_attack_fengtian
 		allow_branch = {
-			#has_country_flag = LEP_mili_focus_on_flag
+			has_country_flag = LEP_mili_focus_on_flag
 		}
 		
 		relative_position_id = LEP_national_images_continuity
@@ -5364,6 +5364,7 @@ focus_tree = {
 			has_idea = LEP_funding_shortage1
 		}
 		completion_reward = {
+			add_political_power = 100
 			unlock_decision_tooltip = LEP_decision_reduce_expenditure
 			unlock_decision_tooltip = LEP_decision_issue_bonds
 			unlock_decision_tooltip = LEP_decision_xihu_expo
@@ -9945,13 +9946,24 @@ focus_tree = {
 				army_attack_factor = -0.05
 				tooltip = army_attack_factor_tooltip
 			}
+			custom_effect_tooltip = tooltip_white_line
 			if={
 				limit = {
 					has_idea = LEP_the_disunited_armies_1
 				}
 				remove_ideas = LEP_the_disunited_armies_1
 			}
-			custom_effect_tooltip = tooltip_white_line
+
+			if={
+				limit = {
+					has_idea = LEP_unstable_morale
+				}
+				modify_timed_idea = {
+				    idea = LEP_unstable_morale
+				    days = -20
+			    }
+			}			
+			
 		}
 		
 	}
@@ -9969,6 +9981,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_recoup_the_lost_divisions"
+
+			if={
+				limit = {
+					has_idea = LEP_unstable_morale
+				}
+				modify_timed_idea = {
+				    idea = LEP_unstable_morale
+				    days = -30
+			    }
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = {
 				localization_key = tooltip_modify_dynmod
 				DYNMOD = LEP_national_autonomy_army
@@ -10160,6 +10183,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 50
+			if={
+				limit = {
+					has_idea = LEP_unstable_morale
+				}
+				modify_timed_idea = {
+				    idea = LEP_unstable_morale
+				    days = -30
+			    }
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = {
 				localization_key = tooltip_modify_dynmod
 				DYNMOD = LEP_national_autonomy_army
@@ -10202,6 +10235,16 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.05
+			custom_effect_tooltip = tooltip_white_line
+			if={
+				limit = {
+					has_idea = LEP_unstable_morale
+				}
+				modify_timed_idea = {
+				    idea = LEP_unstable_morale
+				    days = -30
+			    }
+			}
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = {
 				localization_key = tooltip_modify_dynmod
@@ -15422,6 +15465,7 @@ focus_tree = {
 
 		allow_branch = {
 			has_completed_focus = LEP_top_tire_machine_dev	
+			china_is_the_unifier_of_china_trigger = yes
 		}
 
 		ai_will_do = {

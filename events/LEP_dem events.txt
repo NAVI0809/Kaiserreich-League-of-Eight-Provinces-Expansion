@@ -348,13 +348,22 @@ unit_leader_event = { #民主政变
 		log = "[GetLogInfo]: event league_mid.4 option league_mid.4.a"
 		name = league_mid.4.a
 		LEP_qi_xieyuan = { kill_character = yes }
+		custom_effect_tooltip = tooltip_white_line
 		set_politics = {
 			ruling_party = social_liberal
 		}
+		custom_effect_tooltip = tooltip_white_line
 		complete_national_focus = LEP_provisional_senate
 		set_cosmetic_tag = LEP_dem
 		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = tooltip_white_line
 		set_potential_national_government = yes
+		custom_effect_tooltip = tooltip_white_line
+		add_timed_idea = {
+			idea = LEP_unstable_morale
+			days = 190
+		}
+		custom_effect_tooltip = tooltip_white_line
 		hidden_effect = {
 			QIE = {
 				QIE_huang_fu = {
@@ -1862,7 +1871,7 @@ country_event = { #谈判成功
 			every_possible_country = {
 				if = {
 					limit = {
-						has_character = { character = ANQ_sun_liren }
+						has_character = ANQ_sun_liren 
 					}
 					ANQ_sun_liren = {
 				        set_nationality = ROOT
