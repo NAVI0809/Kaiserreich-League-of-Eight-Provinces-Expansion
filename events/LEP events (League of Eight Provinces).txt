@@ -2132,6 +2132,7 @@ country_event = {
 			has_war_with = FNG
 			NOT = { controls_state = 608 }
 		}
+		has_country_leader = { character = LEP_qi_xieyuan }
 	}
 
 	option = {

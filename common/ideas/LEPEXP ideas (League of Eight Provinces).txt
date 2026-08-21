@@ -3751,6 +3751,47 @@ ideas = {
 				national_populist_drift = 0.01
 			}
 		}
+
+		LEP_lkmt_cooperation_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_lkmt_cooperation_1" }
+			picture = CHI_support_kmt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.03
+				stability_factor = -0.05
+				experience_gain_army_unit_factor = 0.04
+				global_building_slots_factor = 0.05
+			}
+		}
+
+		LEP_lkmt_cooperation_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_lkmt_cooperation_2" }
+			picture = CHI_support_kmt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.08
+				experience_gain_army_unit_factor = 0.08
+				global_building_slots_factor = 0.07
+				production_factory_start_efficiency_factor = 0.02
+				local_resources_factor = 0.03
+			}
+		}
+
+		LEP_lkmt_cooperation_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_lkmt_cooperation_3" }
+			picture = CHI_support_kmt
+			allowed = { always = no }
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.11
+				experience_gain_army_unit_factor = 0.12
+				global_building_slots_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				local_resources_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 	
 

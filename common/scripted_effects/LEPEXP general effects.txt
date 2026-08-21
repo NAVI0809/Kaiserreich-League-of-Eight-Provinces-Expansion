@@ -35,7 +35,10 @@ LEPEXP_call_back_SHX_officers_effect = {
 		CHN_recruit_character_effect = yes
 		remove_second_in_command_role = yes
 	}
-	SHX_xu_yongchang= { CHN_recruit_character_effect = yes }
+	SHX_xu_yongchang = { CHN_recruit_character_effect = yes }
+	SHX_zhao_chengshou = { CHN_recruit_character_effect = yes }
+	SHX_wang_jingguo = { CHN_recruit_character_effect = yes }
+	SHX_yang_aiyuan = { CHN_recruit_character_effect = yes }
 }
 
 LEPEXP_call_back_HNN_FED_officers_effect = {
@@ -86,11 +89,14 @@ LEPEXP_call_back_LKMT_officers_effect = {
 	CHI_du_yuming = { CHN_recruit_character_effect = yes }
 	CHI_dai_anlan = { CHN_recruit_character_effect = yes }
 	CHI_wang_lingyun = { CHN_recruit_character_effect = yes }
+	CHI_wang_yaowu = { CHN_recruit_character_effect = yes }
+	HNN_peng_dehuai = { CHN_recruit_character_effect = yes }
 }
 
 LEPEXP_call_back_RKMT_officers_effect = {
 	YUN_xu_tingyao = { CHN_recruit_character_effect = yes }
 	YUN_li_genyuan = { CHN_recruit_character_effect = yes }
+	SZC_lu_chao = { CHN_recruit_character_effect = yes }	
 }
 
 LEPEXP_call_back_warlords_officers_effect = {
@@ -101,26 +107,46 @@ LEPEXP_call_back_warlords_officers_effect = {
 	SIK_zhang_peiyuan = { CHN_recruit_character_effect = yes }
 	SIK_yang_feixia = { CHN_recruit_character_effect = yes }
 	SIK_li_hairu = { CHN_recruit_character_effect = yes }
+	SZC_li_jiayu = { CHN_recruit_character_effect = yes }
+	SZC_lai_xinhui = { CHN_recruit_character_effect = yes }
+	SZC_chen_lanting = { CHN_recruit_character_effect = yes }
+	SZC_chen_li = { CHN_recruit_character_effect = yes }
+	SZC_peng_shifu = { CHN_recruit_character_effect = yes }
+	SZC_kuang_jixun = { CHN_recruit_character_effect = yes }
+	SZC_fan_shaozeng = { CHN_recruit_character_effect = yes }
+	SZC_he_guoguang = { CHN_recruit_character_effect = yes }
+	SZC_guo_rudong = { CHN_recruit_character_effect = yes }	
+	HNN_chen_quzhen = { CHN_recruit_character_effect = yes }
+	HNN_long_yunfei = { CHN_recruit_character_effect = yes }	
+	HNN_zhou_xicheng = { CHN_recruit_character_effect = yes }	
+	HNN_dai_jitao = { CHN_recruit_character_effect = yes }	
 }
 
 LEPEXP_call_back_SZC_officers_effect = {
-	SZC_xiong_kewu
-	every_unit_leader ={
-		limit = {
-    	    OR = {
-				has_character_flag = GXC_LJS_character_flag
-				has_trait = CHN_GRA_officer
-			}
-			NOT = {
-				is_character = GXC_ye_ju
-			}
-		}
-		hidden_effect = {
-			remove_second_in_command_role = yes
-	    }
-	    set_nationality = FROM
-	    demote_to_general = yes
-    }
+	SZC_xiong_kewu = { CHN_recruit_character_effect = yes }
+	SZC_dan_maoxin = { CHN_recruit_character_effect = yes }
+	SZC_yu_peidi = { CHN_recruit_character_effect = yes }
+	SZC_yu_jitang = { CHN_recruit_character_effect = yes }
+	SZC_zhao_weibin = { CHN_recruit_character_effect = yes }
+	SZC_xiao_yisu = { CHN_recruit_character_effect = yes }
+	SZC_bian_zhishan = { CHN_recruit_character_effect = yes }
+	SZC_deng_xihou = { CHN_recruit_character_effect = yes }
+	SZC_tian_songyao = { CHN_recruit_character_effect = yes }
+	SZC_huang_yin = { CHN_recruit_character_effect = yes }
+	SZC_chen_dingxun = { CHN_recruit_character_effect = yes }
+	SZC_sun_zhen = { CHN_recruit_character_effect = yes }
+	SZC_wang_mingzhang = { CHN_recruit_character_effect = yes }
+	SZC_liu_wenhui = { CHN_recruit_character_effect = yes }
+	SZC_xia_shouxun = { CHN_recruit_character_effect = yes }
+	SZC_xiang_chuanyi = { CHN_recruit_character_effect = yes }
+	SZC_wang_yunxiang = { CHN_recruit_character_effect = yes }
+	SZC_leng_yindong = { CHN_recruit_character_effect = yes }
+	SZC_liu_xiang = { CHN_recruit_character_effect = yes }
+	SZC_pan_wenhua = { CHN_recruit_character_effect = yes }
+	SZC_tang_shizun = { CHN_recruit_character_effect = yes }
+	SZC_guo_xunqi = { CHN_recruit_character_effect = yes }
+	SZC_wang_lingji = { CHN_recruit_character_effect = yes }
+	SZC_wang_zuanxu = { CHN_recruit_character_effect = yes }
 }
 
 
@@ -1742,6 +1768,455 @@ LEP_jap_cancel_occupation_effect = {
 		popularity = -0.15
 	}
 }
+
+check_LEP_lkmt_conference_var_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		country_event = { id = league_mid.54 days = 3 }
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = less_than
+			}
+		}
+		country_event = { id = league_mid.55 days = 3 }
+	}
+}
+
+add_LEP_lkmt_conference_var_3_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_3_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 3
+	}
+}
+
+add_LEP_lkmt_conference_var_2_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_2_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 2
+	}
+}
+
+add_LEP_lkmt_conference_var_1_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_1_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 1
+	}
+}
+
+LEP_lkmt_conference_result_effect = {
+	CHI = {
+		CHI_song_qingling = {
+			set_nationality = ROOT
+		}
+	}
+	remove_ideas = LEP_kuomintang
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = equals
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_1
+			days = 120
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 6
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 7
+					compare = less_than_or_equals
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_2
+			days = 120
+		}
+	}
+	
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 8
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_3
+			days = 120
+		}
+	}
+	#各项选择-政治
+	custom_effect_tooltip = tooltip_white_line
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_politic_3_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.01
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_appease_general_labor_union
+			cost = 4
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_eradicate_bad_customs
+			cost = 4
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_politic_2_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_politic_1_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.02
+		}
+		add_manpower = 50
+	}
+	#各项选择-经济
+	custom_effect_tooltip = tooltip_white_line
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_econ_3_tt
+		add_stability = -0.1
+		add_political_power = -30
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_gonghe_cooperative_movement
+			cost = 7
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_cooperative_network
+			cost = 7
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_econ_2_tt
+		add_stability = -0.05
+		add_political_power = -10
+		reduce_focus_completion_cost = {
+			focus = LEP_gonghe_cooperative_movement
+			cost = 4
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_cooperative_network
+			cost = 4
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_econ_1_tt
+		add_stability = 0.03
+		add_political_power = -5
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		
+	}
+	custom_effect_tooltip = tooltip_white_line
+	#各项选择-军事
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_mili_3_tt
+		CHI_li_jishen = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			CHI = {
+				CHI_peng_xuefeng = {
+				    set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				    }
+			    }
+			}
+		}		
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_mili_2_tt
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			CHI = {
+				CHI_peng_xuefeng = {
+				    set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				    }
+			    }
+			}
+		}		
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_mili_1_tt
+		add_manpower = 1000
+		army_experience = 50
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 800
+			producer = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 50
+			producer = CHI
+		}
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+	}
+}
+
+LEP_lkmt_mili_immediate_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			CHI_recruit_PAC_endgame_advisors_effect = yes
+			CHI_recruit_peng_xuefeng_effect = yes
+			if = {
+				limit = {
+					has_character = CHI_li_jishen
+				}
+				CHI_li_jishen = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_li_jishen_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_chen_shaokuan
+				}
+				CHI_chen_shaokuan= {
+					set_nationality = ROOT
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_peng_xuefeng
+				}
+				CHI_peng_xuefeng = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_character = CHI_peng_xuefeng
+					}						
+				}
+				CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			CHI_recruit_peng_xuefeng_effect = yes
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_peng_xuefeng
+				}
+				CHI_peng_xuefeng = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_character = CHI_peng_xuefeng
+					}						
+				}
+				CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+}
+
+
 
 
 

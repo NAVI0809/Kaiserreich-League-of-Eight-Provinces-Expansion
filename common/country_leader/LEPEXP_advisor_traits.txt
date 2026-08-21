@@ -411,7 +411,8 @@ leader_traits = {
 		experience_loss_factor = -0.2
 		resistance_growth_on_our_occupied_states = 0.15
 		army_morale_factor = 0.15
-		planning_speed = 0.15   
+		planning_speed = 0.10
+		superior_firepower_mastery_gain_factor = 0.05
 
 		ai_will_do = { factor = 1 }
 	}
