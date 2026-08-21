@@ -2057,6 +2057,300 @@ LEP_lkmt_conference_result_effect = {
 	}
 }
 
+LEP_lkmt_troops_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_3_TT
+        LEP_LKMT_troops_temp_effect = yes
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"第10军-第3师\" division_template = \"Tiao Zheng Shi\" start_equipment_factor = 1 start_experience_factor = 0.4"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-第190师\" division_template = \"Duli Shi\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-预备第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+	}	
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_2_TT
+		LEP_LKMT_troops_temp_effect = yes
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"第10军-第3师\" division_template = \"Tiao Zheng Shi\" start_equipment_factor = 1 start_experience_factor = 0.4"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-预备第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+		custom_effect_tooltip = tooltip_dash_line
+		army_experience = 10
+		add_manpower = 6000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1500
+			amount = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 100
+			producer = FRA
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_1_TT
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"独立第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+		custom_effect_tooltip = tooltip_dash_line
+		army_experience = 25
+		add_manpower = 20000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 3000
+			amount = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 400
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 200
+			producer = FRA
+		}
+	}
+}
+
+LEP_LKMT_troops_temp_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "调整师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 7 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Tiao Zheng Shi" }
+				delete_unit_template_and_units = { division_template = "Tiao Zheng Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Tiao Zheng Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 3 }
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 3 }
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "调整师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 7 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Tiao Zheng Shi" }
+				delete_unit_template_and_units = { division_template = "Tiao Zheng Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Tiao Zheng Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 3 }
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 3 }
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 3 }
+				}
+			}
+		}
+	}
+}
+
 LEP_lkmt_mili_immediate_effect = {
 	if = {
 		limit = {

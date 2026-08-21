@@ -1247,8 +1247,7 @@ LEP_stride_towards_unification = {
 					}
 					LEPEXP_call_back_GMJ_officers_effect = yes
 				}
-			}
-			
+			}		
 		}
 	}
 	
@@ -1276,11 +1275,12 @@ LEP_stride_towards_unification = {
 			}
 			hidden_effect = {
 				every_possible_country = {
-					limit = { is_chinese_tag = yes }
+					limit = {
+					    is_chinese_tag = yes
+					}
 					LEPEXP_call_back_HNN_FED_officers_effect = yes
 				}
-			}
-			
+			}			
 		}
 	}
 	LEPEXP_call_back_GXC_FED_officers_desicion = {
@@ -1297,8 +1297,6 @@ LEP_stride_towards_unification = {
 			has_completed_focus = LEP_appoint_republican_officers
 		}
 		
-		
-
 		cost = 20
 		fire_only_once = yes
 
@@ -1314,7 +1312,9 @@ LEP_stride_towards_unification = {
 			}
 			hidden_effect = {
 				every_possible_country = {
-					limit = { is_chinese_tag = yes }
+					limit = {
+					    is_chinese_tag = yes
+					}
 					LEPEXP_call_back_GXC_FED_officers_effect = yes
 				}
 			}
@@ -1349,7 +1349,9 @@ LEP_stride_towards_unification = {
 			}
 			hidden_effect = {
 				every_possible_country = {
-					limit = { is_chinese_tag = yes }
+					limit = {
+					    is_chinese_tag = yes
+					}
 					LEPEXP_call_back_LKMT_officers_effect = yes
 				}
 			}
@@ -1394,7 +1396,9 @@ LEP_stride_towards_unification = {
 				popularity = 0.03
 			}
 			every_possible_country = {
-				limit = { is_chinese_tag = yes }
+				limit = {
+					is_chinese_tag = yes
+				}
 				LEPEXP_call_back_RKMT_officers_effect = yes
 			}			
 		}
@@ -1438,7 +1442,9 @@ LEP_stride_towards_unification = {
 				popularity = 0.03
 			}
 			every_possible_country = {
-				limit = { is_chinese_tag = yes }
+				limit = {
+					is_chinese_tag = yes
+				}
 				LEPEXP_call_back_warlords_officers_effect = yes
 			}		
 		}
@@ -1473,7 +1479,9 @@ LEP_stride_towards_unification = {
 			}
 			hidden_effect = {
 				every_possible_country = {
-				    limit = { is_chinese_tag = yes }
+				    limit = {
+					    is_chinese_tag = yes
+				    }
 					LEPEXP_call_back_SZC_officers_effect = yes
 				}
 			}
@@ -1502,9 +1510,12 @@ LEP_stride_towards_unification = {
 			}
 			hidden_effect = {
 				every_possible_country = {
-				limit = { is_chinese_tag = yes }
-				LEPEXP_call_back_SHX_officers_effect = yes
-			}
+				    limit = {
+					    is_chinese_tag = yes
+				    }    
+				    LEPEXP_call_back_SHX_officers_effect = yes
+			    }
+			}	
 		}
 	}
 
@@ -4608,7 +4619,7 @@ LEP_national_reconstruction_bureau = {
 }
 
 LEPEXP_gov = {
-	LEP_hold_provincial_council = {
+    LEP_hold_provincial_council = {
 		icon = GFX_decision_SOV_place_hq
 		priority = 499
         allowed = {
@@ -4766,7 +4777,5 @@ LEPEXP_gov = {
         cost = 20
         days_remove = 30
 		days_re_enable = 10
-	}
-
-	
+	}	
 }

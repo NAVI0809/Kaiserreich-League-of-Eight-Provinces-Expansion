@@ -1813,6 +1813,8 @@ country_event = { #谈判成功
 		log = "[GetLogInfo]: eventleague_mid.54 option league_mid.54.a"
 		name = league_mid.54.a
 		LEP_lkmt_conference_result_effect = yes
+		custom_effect_tooltip = tooltip_dash_line
+		LEP_lkmt_troops_effect = yes
 	}
 }
 
@@ -2372,6 +2374,7 @@ country_event = {  #国民党和谈：军事
 	option = {
 		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.a"
 		name = league_mid.72.a
+		add_command_power = -50
 		add_LEP_lkmt_conference_var_3_effect = yes
 		set_country_flag = LEP_lkmt_mili_flag_3
 		hidden_effect = {
@@ -2381,6 +2384,7 @@ country_event = {  #国民党和谈：军事
 	option = {
 		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.b"
 		name = league_mid.72.b
+		add_command_power = -25
 		add_LEP_lkmt_conference_var_2_effect = yes
 		set_country_flag = LEP_lkmt_mili_flag_2
 		hidden_effect = {
@@ -2390,6 +2394,7 @@ country_event = {  #国民党和谈：军事
 	option = {
 		log = "[GetLogInfo]: event league_mid.72 option league_mid.72.c"
 		name = league_mid.72.c
+		add_command_power = -15
 		add_LEP_lkmt_conference_var_1_effect = yes
 		set_country_flag = LEP_lkmt_mili_flag_1
 		hidden_effect = {
@@ -4221,7 +4226,6 @@ country_event = { #军心不和
 		log = "[GetLogInfo]: eventleague_generic.3 option league_generic.3.a"
 		name = league_generic.3.a
 		add_ideas = LEP_unstable_morale
-
 	}
 }
 

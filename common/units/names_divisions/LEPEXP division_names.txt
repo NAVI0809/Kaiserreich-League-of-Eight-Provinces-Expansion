@@ -20,6 +20,28 @@ LEP_LTB_01 = {
 	}
 }
 
+LEP_ND_01 = {
+	name = div_tiaozheng_unit
+
+	for_countries = { LEP }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "新编第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "新编第%d师" }
+		2 = { "新编第%d师" }
+		3 = { "新编第%d师" }
+		4 = { "新编第%d师" }
+	}
+}
+
 LEP_GAR_01 = {
 	name = div_jingbei_unit
 
@@ -54,6 +76,27 @@ LEP_GAR_01 = {
 		17 = { "Jingbei Di %d Xie" }
 		18 = { "Jingbei Di %d Xie" }
 		19 = { "Jingbei Di %d Xie" }
+	}
+}
+
+LEP_GAR_02 = {
+	name = div_jingbei_unit_2
+
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry"}
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "警备第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "首都警备师" }
+		2 = { "保安司令部"}
+		3 = { "警备第%d师" }
 	}
 }
 

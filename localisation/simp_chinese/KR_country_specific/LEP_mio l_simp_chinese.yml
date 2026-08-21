@@ -33,6 +33,8 @@
 
  div_qingxing_unit: "轻型步兵师"
  div_jingbei_unit: "警备协"
+ div_jingbei_unit_2: "警备师"
+ div_tiaozheng_unit: "调整师"
  div_fujianluzhandui_unit: "陆战队混成旅"
  div_armoured_unit_2: "装甲师（新）"
  div_marine_new_unit: "陆战队师"
