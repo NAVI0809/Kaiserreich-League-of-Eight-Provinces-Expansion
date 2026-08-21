@@ -970,6 +970,15 @@ focus_tree = {
 					add_to_array = { china_possible_allies_array = YUN }
 					effect_tooltip = { activate_targeted_decision = { target = YUN decision = china_demand_submission } }
 				}
+				if = {
+					limit = {
+						country_exists = SHX
+						NOT = { is_ally_with = SHX }
+					}
+					add_to_array = { ROOT.china_possible_targets_array = SHX }
+					add_to_array = { china_possible_allies_array = SHX }
+					effect_tooltip = { activate_targeted_decision = { target = SHX decision = china_demand_submission } }
+				}
 			}
 			if = {
 				limit = {
@@ -988,6 +997,7 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_in_alliance_with_GXC 
 			unlock_decision_tooltip = LEP_in_alliance_with_SZC
 			unlock_decision_tooltip = LEP_in_alliance_with_YUN
+			unlock_decision_tooltip = LEP_in_alliance_with_SHX
 		}
 	}
 	focus = {
@@ -3113,7 +3123,7 @@ focus_tree = {
 		cost = 3
 		icon = GFX_goal_generic_attack_fengtian
 		allow_branch = {
-			has_country_flag = LEP_mili_focus_on_flag
+			#has_country_flag = LEP_mili_focus_on_flag
 		}
 		
 		relative_position_id = LEP_national_images_continuity
@@ -7856,6 +7866,9 @@ focus_tree = {
 		y = 1
 		cost = 3
 		icon = GFX_goal_GER_Syndicalist_Blow
+		prerequisite = {
+			focus = LEP_von_seekct
+		}
 	}
 	focus = {
 		id = LEP_von_seekct
@@ -9893,7 +9906,7 @@ focus_tree = {
 			
 			add_dynamic_modifier = { modifier = LEP_national_autonomy_army }
 			add_to_variable = {
-				LEP_experience_gain_army_unit_factor = -0.05
+				LEP_experience_gain_army_unit_factor = 0.02
 				tooltip = experience_gain_army_unit_factor_tooltip
 			}
 			add_to_variable = {
@@ -9901,11 +9914,15 @@ focus_tree = {
 				tooltip = army_org_factor_tooltip
 			}
 			add_to_variable = {
+				LEP_training_time_army_factor = 0.1
+				tooltip = training_time_army_factor_tooltip
+			}
+			add_to_variable = {
 				LEP_attrition = 0.05
 				tooltip = attrition_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 10
+				LEP_max_dig_in = 3
 				tooltip = max_dig_in_tooltip
 			}
 			add_to_variable = {
@@ -9973,7 +9990,7 @@ focus_tree = {
 				tooltip = army_org_factor_tooltip
 			}	
 			add_to_variable = {
-				LEP_training_time_army_factor = 0.05
+				LEP_training_time_army_factor = -0.05
 				tooltip = training_time_army_factor_tooltip
 			}
 			add_to_variable = {
@@ -9981,7 +9998,7 @@ focus_tree = {
 				tooltip = dig_in_speed_factor_tooltip
 			}
 			add_to_variable = {
-				LEP_max_dig_in = 15
+				LEP_max_dig_in = 3
 				tooltip = max_dig_in_tooltip
 			}
 			
@@ -10156,8 +10173,12 @@ focus_tree = {
 				tooltip = command_power_gain_mult_tooltip
 			}
 			add_to_variable = {
-				LEP_org_loss_when_moving = -0.1
+				LEP_org_loss_when_moving = -0.05
 				tooltip = org_loss_when_moving_tooltip
+			}
+			add_to_variable = {
+				LEP_supply_consumption_factor = -0.05
+				tooltip = supply_consumption_factor_tooltip
 			}
 			country_event = { id = league_mid.43 days = 15 }
 			country_event = { id = league_mid.64 days = 1 } #国防线
@@ -10205,6 +10226,10 @@ focus_tree = {
 			add_to_variable = {
 				LEP_army_core_defence_factor = 0.1
 				tooltip = army_core_defence_factor_tooltip
+			}
+			add_to_variable = {
+				LEP_max_dig_in = 4
+				tooltip = max_dig_in_tooltip
 			}			
 			custom_effect_tooltip = tooltip_white_line
 			if = {
@@ -10269,7 +10294,7 @@ focus_tree = {
 				tooltip = army_core_defence_factor_tooltip
 			}	
 			add_to_variable = {
-				LEP_experience_loss_factor = 0.05
+				LEP_experience_loss_factor = -0.05
 				tooltip = experience_loss_factor_tooltip
 			}	
 			add_to_variable = {
@@ -10996,6 +11021,15 @@ focus_tree = {
 		completion_reward = {
 			LEP_li_erkang = { custom_effect_tooltip = character_becomes_a_general }
 			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = {
+				localization_key = tooltip_modify_dynmod
+				DYNMOD = LEP_national_autonomy_army
+			}
+			add_to_variable = {
+				LEP_supply_consumption_factor = -0.05
+				tooltip = supply_consumption_factor_tooltip
+			}
+			custom_effect_tooltip = tooltip_white_line
 			hidden_effect = {
 				LEP_li_erkang = {
                     unit_leader_event = {
@@ -11129,6 +11163,10 @@ focus_tree = {
 					add_mio_funds_gain_factor = 0.10
 					complete_mio_trait = China_mio_trait_integrated_jinling
 					set_mio_flag = integrated_jinling
+				}
+				mio:LEP_jinling_organisation = {
+					add_mio_funds_gain_factor = 0.10
+					add_mio_size = 1	
 				}
 			}
 			else = {
@@ -11326,7 +11364,7 @@ focus_tree = {
 			
 			enable_tech_mountain_artillery = yes
 			custom_effect_tooltip = tooltip_white_line
-			every_unit_leader = {
+			every_army_leader = {
 				random_select_amount = 2
 				add_trait = {
 					trait = artillery_specialist
