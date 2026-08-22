@@ -5330,15 +5330,13 @@ unit_leader_event = { #激活国防动员体系
 
 	immediate = {
 		hidden_effect = {
-			every_other_country = {
-			if = {
-				limit = {
-					has_character = QIE_jiang_baili
-					}
-					QIE_jiang_baili = {
-				        CHN_recruit_character_effect = yes
-			        }
-				}
+			every_possible_country = {
+			    if = {
+				    limit = {
+					    has_character = QIE_jiang_baili
+				    }
+				    QIE_jiang_baili = { CHN_recruit_character_effect = yes }
+			    }
 			}
 		}
 	}
