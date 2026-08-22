@@ -11026,16 +11026,6 @@ focus_tree = {
 				modifier = KR_pleased
 			}
 			hidden_effect = {
-				LEP_xu_peigen = {
-					set_portraits = {
-						army = { large = GFX_portrait_LEP_xu_peigen_dem_army_large }
-					}
-				}
-				LEP_li_rentao = {
-					set_portraits = {
-						army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
-					}
-				}
 				remove_trait = {
 					character = LEP_zhejun_officers_theorist
 					slot = theorist
@@ -11046,8 +11036,18 @@ focus_tree = {
 					slot = theorist
 					trait = LEP_professional_nco_system
 				}
-				LEP_li_rentao = { CHN_recruit_character_effect = yes }
-				LEP_xu_peigen = { CHN_recruit_character_effect = yes }
+				LEP_li_rentao = { 
+					CHN_recruit_character_effect = yes 
+					set_portraits = {
+						army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
+					}
+				}
+				LEP_xu_peigen = { 
+					CHN_recruit_character_effect = yes 
+					set_portraits = {
+						army = { large = GFX_portrait_LEP_xu_peigen_dem_army_large }
+					}
+				}
 			}
 			country_event = league_generic.10
 		}
