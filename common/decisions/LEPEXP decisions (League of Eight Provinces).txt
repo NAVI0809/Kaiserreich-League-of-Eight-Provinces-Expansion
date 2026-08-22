@@ -1080,7 +1080,7 @@ LEP_stride_towards_unification = {
 		}
 		target_trigger = {
 			FROM = {
-				tag = YUN
+				tag = SHX
 			}
 		}
 		visible = {
@@ -1103,7 +1103,7 @@ LEP_stride_towards_unification = {
 		fire_only_once = yes
 
 		complete_effect = {
-			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_YUN"
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEP_in_alliance_with_SHX"
 			FROM = {
 				country_event = china_events.7
 				set_country_flag = {
