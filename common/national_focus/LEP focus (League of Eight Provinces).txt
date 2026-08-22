@@ -11026,7 +11026,16 @@ focus_tree = {
 				modifier = KR_pleased
 			}
 			hidden_effect = {
-				LEP_change_clothes_of_generals = yes
+				LEP_xu_peigen = {
+					set_portraits = {
+						army = { large = GFX_portrait_LEP_xu_peigen_dem_army_large }
+					}
+				}
+				LEP_li_rentao = {
+					set_portraits = {
+						army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
+					}
+				}
 				remove_trait = {
 					character = LEP_zhejun_officers_theorist
 					slot = theorist
