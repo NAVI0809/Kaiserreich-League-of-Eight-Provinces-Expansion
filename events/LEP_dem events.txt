@@ -5695,7 +5695,7 @@ unit_leader_event = { #日本国：派遣总督
 				LEP_wu_zhennan = {
 					set_nationality = JAP
 				}
-				country_event = { id = league_jap.4 days = 1 }
+				country_event = { id = league_jap.4 days = 100 }
 			}
 			JAP = {
 				add_manpower = 4000
@@ -5763,19 +5763,6 @@ country_event = { #日本国：第一次大选
 	trigger = {
 	}
 	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_character = LEP_wu_rengli
-				}
-				JAP = {
-					LEP_wu_rengli = {
-						set_nationality = LEP
-					}
-				}
-			}
-			
-		}
 		country_event = { id = league_generic.17 days = 1460 }
 	}
 	option = {
@@ -5793,6 +5780,14 @@ country_event = { #日本国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+			    	limit = {
+			    		has_character = LEP_wu_zhennan
+				    }
+					LEP_wu_zhennan = {
+						set_nationality = LEP
+					}
+				}
 			}
 		}
 	}
@@ -5811,6 +5806,14 @@ country_event = { #日本国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+			    	limit = {
+			    		has_character = LEP_wu_zhennan
+				    }
+					LEP_wu_zhennan = {
+						set_nationality = LEP
+					}
+				}
 			}
 		}
 	}
@@ -5829,6 +5832,14 @@ country_event = { #日本国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+			    	limit = {
+			    		has_character = LEP_wu_zhennan
+				    }
+					LEP_wu_zhennan = {
+						set_nationality = LEP
+					}
+				}
 			}
 		}
 	}
@@ -5847,6 +5858,14 @@ country_event = { #日本国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+			    	limit = {
+			    		has_character = LEP_wu_zhennan
+				    }
+					LEP_wu_zhennan = {
+						set_nationality = LEP
+					}
+				}
 			}
 		}
 	}
@@ -5863,7 +5882,8 @@ country_event = { #日本国：第一次大选
 				popularity = 0.1
 			}
 			hidden_effect = {
-				LEP_jap_cancel_occupation_effect = yes
+			#	LEP_jap_cancel_occupation_effect = yes
+			    country_event = { id = league_generic.17 days = 365 }
 			}
 		}
 	}
