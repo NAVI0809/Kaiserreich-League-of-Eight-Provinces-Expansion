@@ -12803,7 +12803,7 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = LEP_nanjing_navy_5
 				remove_ideas = LEP_wolfpacks_mines
-				remove_ideas = LEP_wolfpack
+				remove_ideas = LEP_wolfpacks
 				remove_ideas = LEP_naval_air_2
 				add_ideas = LEP_nanjing_navy_6
 			}				
