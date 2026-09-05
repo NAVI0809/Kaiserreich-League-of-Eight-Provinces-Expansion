@@ -1902,6 +1902,331 @@ LEP_liberation_of_asia_category = {
 }
 
 LEPEXP_military_defence_development_CAT = {
+	LEPEXP_training_mountain_warfare_decision = { #山地
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_mountain_warfare_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_mountain_warfare_decision"
+			enable_tech_mountain_warfare = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_ski_infantry_decision = { #山地丘陵
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 6
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 7
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_ski_infantry_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_ski_infantry_decision"
+			enable_tech_ski_infantry = yes			
+			enable_tech_marsh_warfare = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_forest_jungle_warfare_decision = { #林地
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_forest_jungle_warfare_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_forest_jungle_warfare_decision"
+			enable_tech_jungle_warfare = yes
+			enable_tech_forest_warfare = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_urban_warfare_decision = { #城市
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_urban_warfare_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_urban_warfare_decision"
+			enable_tech_urban_warfare = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_desert_warfare_decision = { #沙漠
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_desert_warfare_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_desert_warfare_decision"
+			enable_tech_desert_warfare = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_AT_warfare_decision = { #反坦克
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 2
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_AT_warfare_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_AT_warfare_decision"
+			enable_tech_anti_armour_tactics = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
+	LEPEXP_training_integrated_specialists_decision = { #特种部队
+		icon = GFX_decision_decision_generic_chinese_officers
+		allowed = { always = no }			# Activated by focus
+		available = {
+			has_army_experience > 29
+			command_power > 29
+			num_of_civilian_factories_available_for_projects > 6
+			NOT = {
+				has_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+		priority = 50
+
+		modifier = {
+			civilian_factory_use = 7	
+		}
+
+		custom_cost_text = LEP_30XP_30CP
+
+		custom_cost_trigger = {
+			NOT = { has_army_experience < 30 }
+			NOT = { command_power < 30 }
+		}
+
+		ai_will_do = { factor = 800 }
+
+		complete_effect = {
+			log = "[GetLogRoot]: Decision complete LEPEXP_training_integrated_specialists_decision"
+			hidden_effect = {
+				army_experience = -30
+				add_command_power = -30
+				set_country_flag = LEPEXP_TRAINING_FLAG
+			}
+		}
+
+		remove_effect = {
+			log = "[GetLogRoot]: Decision remove LEPEXP_training_integrated_specialists_decision"
+			enable_tech_integrated_specialists = yes
+			enable_tech_arctic_commando = yes
+			clr_country_flag = LEPEXP_TRAINING_FLAG
+		}
+		fixed_random_seed = no
+	}
+
 	LEPEXP_sfj_deployment = {
 		icon = GFX_decision_decision_generic_chinese_officers
 		allowed = { always = no } #
@@ -2260,6 +2585,7 @@ LEPEXP_military_defence_development_CAT = {
 		allowed = { always = no }			# Activated by focus 
 		available = {
 			num_of_civilian_factories_available_for_projects > 2
+			command_power > 29
 		}
 
 		cost = 40
@@ -2283,7 +2609,7 @@ LEPEXP_military_defence_development_CAT = {
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete LEPEXP_coast_guards_decision"
 			hidden_effect = {
-				add_equipment_to_stockpile = { type = motorized_equipment amount = -4000 }
+				add_equipment_to_stockpile = { type = infantry_equipment amount = -1000 }
 				add_manpower = -50000
 				add_command_power = -30
 			}

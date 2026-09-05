@@ -15013,6 +15013,14 @@ focus_tree = {
 				LEP_initiative_factor = 0.03
 				tooltip = initiative_factor_tooltip
 			}
+			custom_effect_tooltip = tooltip_white_line
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_mountain_warfare_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_ski_infantry_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_forest_jungle_warfare_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_urban_warfare_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_desert_warfare_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_AT_warfare_decision }
+			activate_targeted_decision = { target = FROM decision = LEPEXP_training_integrated_specialists_decision }
 		}
 		search_filters = {
 			FOCUS_FILTER_ARMY_BONUS
