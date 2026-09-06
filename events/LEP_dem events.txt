@@ -19,11 +19,17 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		activate_targeted_decision = { target = HNN decision = LEP_in_alliance_with_HNN }
-		activate_targeted_decision = { target = GXC decision = LEP_in_alliance_with_GXC }
-		activate_targeted_decision = { target = SZC decision = LEP_in_alliance_with_SZC }
-		activate_targeted_decision = { target = YUN decision = LEP_in_alliance_with_YUN }
-
+        every_possible_country = {
+			QIE_qian_xuesen = { set_nationality = ROOT } 
+			QIE_wu_dayou = { set_nationality = ROOT } 
+			QIE_wang_pu = { set_nationality = ROOT } 
+			QIE_xing_qixin = { set_nationality = ROOT } 
+			SHD_wang_ganchang = { set_nationality = ROOT } 
+			LEP_zhu_jiaren = { set_nationality = ROOT } 
+			LEP_ye_zaifu = { set_nationality = ROOT } 
+			SHX_zhang_kai = { set_nationality = ROOT } 
+			FNG_li_yichun = { set_nationality = ROOT } 
+		}
     }
 }
 
@@ -5481,7 +5487,7 @@ unit_leader_event = { #日本共和国：派遣总督
 						promote_leader = yes
 					}
 				}
-				country_event = { id = league_jap.2 days = 1 }
+				country_event = { id = league_jap.2 days = 365 }
 			}
 			JAP = {
 				add_manpower = 4000
@@ -5501,15 +5507,15 @@ unit_leader_event = { #日本共和国：派遣总督
 					long_name = LEP_occupation_forces
 				}
 				promote_character = {
-					character = LEP_wu_rengli
+					character = LEP_wu_zhennan
 					ideology = paternal_autocrat_subtype
 				}
 				promote_character = {
-					character = LEP_wu_rengli
+					character = LEP_wu_zhennan
 					ideology = authoritarian_democrat_subtype
 				}
 				promote_character = {
-					character = LEP_wu_rengli
+					character = LEP_wu_zhennan
 					ideology = national_populist_subtype
 				}
 				swap_ideas = {
@@ -5549,7 +5555,7 @@ unit_leader_event = { #日本共和国：派遣总督
 			popularity = 0.1
 		}
 		hidden_effect = {
-			country_event = { id = league_jap.2 days = 100 }
+			country_event = { id = league_jap.2 days = 365 }
 		}
 		
 	}
@@ -5570,21 +5576,6 @@ country_event = { #日本共和国：第一次大选
 	immediate = {
 		country_event = { id = league_generic.17 days = 1460 }
 	}
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_character = LEP_wu_rengli
-				}
-				JAP = {
-					LEP_wu_rengli = {
-						set_nationality = LEP
-					}
-				}
-			}
-			
-		}
-	}
 	option = {
 		name = league_jap.2.a
 		log = "[GetLogInfo]: event league_jap.2 option league_jap.2.a"
@@ -5600,6 +5591,18 @@ country_event = { #日本共和国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+				    limit = {
+					    JAP = {
+					       has_character = LEP_wu_zhennan
+					    }	
+				    }
+				    JAP = {
+					    LEP_wu_zhennan = {
+						    set_nationality = LEP
+					    }
+				    }
+			    }
 			}
 		}
 	}
@@ -5618,6 +5621,18 @@ country_event = { #日本共和国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+				    limit = {
+					    JAP = {
+					       has_character = LEP_wu_zhennan
+					    }	
+				    }
+				    JAP = {
+					    LEP_wu_zhennan = {
+						    set_nationality = LEP
+					    }
+				    }
+			    }
 			}
 		}
 	}
@@ -5636,6 +5651,18 @@ country_event = { #日本共和国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+				    limit = {
+					    JAP = {
+					       has_character = LEP_wu_zhennan
+					    }	
+				    }
+				    JAP = {
+					    LEP_wu_zhennan = {
+						    set_nationality = LEP
+					    }
+				    }
+			    }
 			}
 		}
 	}
@@ -5654,6 +5681,18 @@ country_event = { #日本共和国：第一次大选
 			}
 			hidden_effect = {
 				LEP_jap_cancel_occupation_effect = yes
+				if = {
+				    limit = {
+					    JAP = {
+					       has_character = LEP_wu_zhennan
+					    }	
+				    }
+				    JAP = {
+					    LEP_wu_zhennan = {
+						    set_nationality = LEP
+					    }
+				    }
+			    }
 			}
 		}
 	}
@@ -5694,6 +5733,27 @@ unit_leader_event = { #日本国：派遣总督
 			LEP = {
 				LEP_wu_zhennan = {
 					set_nationality = JAP
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = paternal_autocrat_subtype
+						}
+						promote_leader = yes
+					}
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = authoritarian_democrat_subtype
+						}
+						promote_leader = yes
+					}
+					add_country_leader_role = {
+						country_leader = {
+							desc = LEP_wu_zhennan_navy_chief_desc
+							ideology = national_populist_subtype
+						}
+						promote_leader = yes
+					}
 				}
 				country_event = { id = league_jap.4 days = 100 }
 			}
@@ -5713,6 +5773,18 @@ unit_leader_event = { #日本国：派遣总督
 					ideology = national_populist
 					name = LEP_occupation_forces
 					long_name = LEP_occupation_forces
+				}
+				promote_character = {
+					character = LEP_wu_zhennan
+					ideology = paternal_autocrat_subtype
+				}
+				promote_character = {
+					character = LEP_wu_zhennan
+					ideology = authoritarian_democrat_subtype
+				}
+				promote_character = {
+					character = LEP_wu_zhennan
+					ideology = national_populist_subtype
 				}
 				swap_ideas = {
 					remove_idea = LEP_military_occupation_forces_in_Japan1
