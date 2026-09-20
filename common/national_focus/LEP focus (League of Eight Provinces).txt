@@ -2385,7 +2385,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_develop_heavy_industry
-		icon = GFX_goal_industry_air
+		icon = GFX_goal_ENG_federative_economic_commission
 		cost = 2.00
 		prerequisite = {
 			focus = LEP_grasp_key_resources
@@ -5624,7 +5624,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_industrial_general_committee
-		icon = GFX_goal_generic_improve_industry
+		icon = GFX_goal_generic_industry_reallocation
 		cost = 3.00
 		prerequisite = {
 			focus = LEP_yangtze_economic_belt
@@ -5668,7 +5668,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_east_china_industry_mining
-		icon = GFX_goal_construction_engineering
+		icon = GFX_goal_Copper_Mining
 		cost = 3.00
 		prerequisite = {
 			focus = LEP_expand_east_china_network
@@ -5792,7 +5792,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_east_china_machine_factory
-		icon = GFX_goal_generic_industry_reallocation
+		icon = GFX_generic_heavy_industry
 		cost = 3.00
 		prerequisite = {
 			focus = LEP_gonghe_cooperative_movement
@@ -5818,7 +5818,7 @@ focus_tree = {
 			focus = LEP_cooperative_network
 		}
 		relative_position_id = LEP_cooperative_network
-		x = 0
+		x = 1
 		y = 1
 		completion_reward = {
 			add_tech_bonus = {
@@ -5862,7 +5862,7 @@ focus_tree = {
 			focus = LEP_east_china_machine_factory
 		}
 		relative_position_id = LEP_east_china_machine_factory
-		x = 0
+		x = -1
 		y = 1
 		completion_reward = {
 			add_timed_idea = {
@@ -10214,7 +10214,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_southeast_iron_army
-		icon = GFX_goal_FNG_fengtian_army
+		icon = GFX_goal_LEP_governor_question
 		cost = 5
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_ningbo_autonomy_army
@@ -10297,7 +10297,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_new_model_officer
-		icon = GFX_focus_CHI_meritocratic_principles
+		icon = GFX_goal_ANQ_invite_governors
 		cost = 6
 
 		relative_position_id = LEP_eliteheer_model
@@ -15030,7 +15030,7 @@ focus_tree = {
 
 	focus = {
 		id = LEP_2nd_front
-		icon = GFX_goal_SZC_improvised_farming_machinery
+		icon = GFX_focus_AUS_agriculture
 		dynamic = yes
 		cost = 4
 
