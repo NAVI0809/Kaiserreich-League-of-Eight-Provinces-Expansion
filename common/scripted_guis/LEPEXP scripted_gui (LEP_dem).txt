@@ -29,10 +29,128 @@ scripted_gui = {
 	ui_parliament = {
 		context_type = decision_category
 		window_name = "ui_parliament"
-		effects = {
-			parliament_button_click = {
-				LEP_showcase_laws_effect = yes
 
+		# 不用 dirty：默认每 tick 重建界面，点击选中后立刻生效。
+		# （之前写 dirty = LEP_law_gui_dirty，但那变量开局不存在，引擎认为它从未变化 → 界面不刷新，
+		#   表现就是「点击有响应但什么都没发生」。要省性能再启用 dirty 时，记得在 history 里先初始化它。）
+
+		effects = {
+
+			# 点整行 → 展示该法案详情。编号写死在每个热区自己的 effect 里，
+			# 不读 dynamic_lists 的 value 变量（那个变量在点击那一刻可能已失效 → 之前闪退就是这么来的）
+			LEP_law_click_1_click = {
+				set_variable = { LEP_law_detail = 1 }
+			}
+			LEP_law_click_2_click = {
+				set_variable = { LEP_law_detail = 2 }
+			}
+			LEP_law_click_3_click = {
+				set_variable = { LEP_law_detail = 3 }
+			}
+			LEP_law_click_4_click = {
+				set_variable = { LEP_law_detail = 4 }
+			}
+			LEP_law_click_5_click = {
+				set_variable = { LEP_law_detail = 5 }
+			}
+			LEP_law_click_6_click = {
+				set_variable = { LEP_law_detail = 6 }
+			}
+			LEP_law_click_7_click = {
+				set_variable = { LEP_law_detail = 7 }
+			}
+			LEP_law_click_8_click = {
+				set_variable = { LEP_law_detail = 8 }
+			}
+			LEP_law_click_9_click = {
+				set_variable = { LEP_law_detail = 9 }
+			}
+			LEP_law_click_10_click = {
+				set_variable = { LEP_law_detail = 10 }
+			}
+			LEP_law_click_11_click = {
+				set_variable = { LEP_law_detail = 11 }
+			}
+			LEP_law_click_12_click = {
+				set_variable = { LEP_law_detail = 12 }
+			}
+			LEP_law_click_13_click = {
+				set_variable = { LEP_law_detail = 13 }
+			}
+			LEP_law_click_14_click = {
+				set_variable = { LEP_law_detail = 14 }
+			}
+
+			# ✕ = 清除内容：清空所选法案，详情区回到提示语
+			LEP_law_detail_close_click = {
+				set_variable = { LEP_law_detail = 0 }
+			}
+		}
+
+		dynamic_lists = {
+			LEP_passed_laws_grid = {
+				array = LEP_passed_law_ids          # 已通过法案的编号数组（on_add 里追加）
+				index = LEP_law_index               # 行号 0,1,2…（= 第几个通过）
+				value = LEP_law_id                  # 该行的法案编号
+				entry_container = LEP_passed_law_entry
+			}
+		}
+
+		# 图标多帧贴图取第几帧 = 该行的法案编号
+		# 现在用的是单帧统一图标，所以整段先注释掉；等 14 帧的 GFX_LEP_law_icons 做好后把下面放开
+		#properties = {
+		#	LEP_law_icon = {
+		#		frame = LEP_law_id
+		#	}
+		#}
+
+		triggers = {
+			# 列表常显（原来靠议会按钮切换，按钮改成装饰图标后就一直显示了）
+			LEP_passed_laws_container_visible = {
+				always = yes
+			}
+			# 每行只留下与自己法案匹配的那个点击热区
+			LEP_law_click_1_visible = {
+				check_variable = { LEP_law_id = 1 }
+			}
+			LEP_law_click_2_visible = {
+				check_variable = { LEP_law_id = 2 }
+			}
+			LEP_law_click_3_visible = {
+				check_variable = { LEP_law_id = 3 }
+			}
+			LEP_law_click_4_visible = {
+				check_variable = { LEP_law_id = 4 }
+			}
+			LEP_law_click_5_visible = {
+				check_variable = { LEP_law_id = 5 }
+			}
+			LEP_law_click_6_visible = {
+				check_variable = { LEP_law_id = 6 }
+			}
+			LEP_law_click_7_visible = {
+				check_variable = { LEP_law_id = 7 }
+			}
+			LEP_law_click_8_visible = {
+				check_variable = { LEP_law_id = 8 }
+			}
+			LEP_law_click_9_visible = {
+				check_variable = { LEP_law_id = 9 }
+			}
+			LEP_law_click_10_visible = {
+				check_variable = { LEP_law_id = 10 }
+			}
+			LEP_law_click_11_visible = {
+				check_variable = { LEP_law_id = 11 }
+			}
+			LEP_law_click_12_visible = {
+				check_variable = { LEP_law_id = 12 }
+			}
+			LEP_law_click_13_visible = {
+				check_variable = { LEP_law_id = 13 }
+			}
+			LEP_law_click_14_visible = {
+				check_variable = { LEP_law_id = 14 }
 			}
 		}
 	}

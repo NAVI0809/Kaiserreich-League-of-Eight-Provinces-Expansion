@@ -122,19 +122,22 @@ guiTypes = {
 	containerWindowType = {
 		name = "ui_parliament"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 620 }
+		size = { width = 100% height = 420 }
 
-		# 只作装饰的议会徽章（原来那个「显示/隐藏已通过法案」的按钮已取消，列表常显）
-		iconType = {
+		buttonType = {
 			name = "parliament_button"
 			spriteType = "GFX_goal_generic_parliament"
-			position = { x = 6 y = 4 }
-			scale = 0.85
+			clicksound = click_ok
+			pdx_tooltip = "LEP_parliament_button_tt"
+			position = { x = 0 y = 0 }
+			effect = {
+				LEP_showcase_laws_effect = yes
+			}
 		}
 
 		instantTextBoxType = {
 			name = "LEP_passed_laws_title"
-			position = { x = 108 y = 30 }
+			position = { x = 70 y = 5 }
 			font = "hoi_24header"
 			text = "LEP_passed_laws_title"
 			maxWidth = 300
@@ -145,8 +148,8 @@ guiTypes = {
 		# 承接 gridbox 的容器：滚动条挂这里，只滚列表，不会带着按钮一起滚
 		containerWindowType = {
 			name = "LEP_passed_laws_container"
-			position = { x = 6 y = 98 }
-			size = { width = 490 height = 300 }
+			position = { x = 6 y = 42 }
+			size = { width = 490 height = 370 }
 			margin = { top = 6 bottom = 6 }
 			Orientation = upper_left
 			verticalScrollbar = "right_vertical_slider"
@@ -165,50 +168,6 @@ guiTypes = {
 				add_horizontal = no
 			}
 		}
-
-		# ── 详情区（属于 ui_parliament：只有它的元素才会渲染到决议面板里）──
-		containerWindowType = {
-			name = "LEP_law_detail_container"
-			position = { x = 6 y = 406 }
-			size = { width = 490 height = 200 }
-			Orientation = upper_left
-			clipping = yes
-
-			background = {
-				name = "Background"
-				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
-			}
-
-			instantTextBoxType = {
-				name = "LEP_law_detail_name"
-				position = { x = 14 y = 10 }
-				font = "hoi_24header"
-				text = "[LEP_GetLawDetailName]"
-				maxWidth = 380
-				maxHeight = 30
-				format = left
-			}
-
-			buttonType = {
-				name = "LEP_law_detail_close"
-				position = { x = -40 y = 8 }
-				spriteType = "GFX_NV_btn_close"
-				clicksound = click_close
-				pdx_tooltip = "CLOSE"
-				orientation = UPPER_RIGHT
-			}
-
-			instantTextBoxType = {
-				name = "LEP_law_detail_body"
-				position = { x = 14 y = 46 }
-				font = "hoi_16mbs"
-				text = "[LEP_GetLawDetailBody]"
-				maxWidth = 460
-				maxHeight = 146
-				format = left
-			}
-		}
-
 	}
 
 	containerWindowType = {
@@ -216,139 +175,51 @@ guiTypes = {
 		size = { width = 470 height = 46 }
 		clipping = yes
 
+		# 背景做成 iconType 而不是 background，这样能挂整行 tooltip
 		iconType = {
 			name = "LEP_law_bg"
 			spriteType = "GFX_diplo_countrylist_entry"
 			position = { x = 0 y = 0 }
+			pdx_tooltip = "LEP_GetPassedLawTooltip"
 		}
 
 		iconType = {
 			name = "LEP_law_icon"
-			spriteType = "GFX_decision_ger_mefo_bills"
+			spriteType = "GFX_LEP_law_icons"        # 14 帧的法案图标贴图；没做好就先换成 GFX_goal_generic_parliament 之类
 			position = { x = 8 y = 7 }
 			alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
 			name = "LEP_law_name"
-			position = { x = 52 y = 14 }
+			position = { x = 52 y = 6 }
 			font = "hoi_16mbs"
-			text = "[LEP_GetPassedLawName]"
-			maxWidth = 250
-			maxHeight = 22
+			text = "LEP_GetPassedLawName"
+			maxWidth = 260
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "LEP_law_seq"
+			position = { x = 318 y = 6 }
+			font = "hoi_16mbs"
+			text = "LEP_GetPassedLawSeq"
+			maxWidth = 70
+			maxHeight = 20
 			fixedsize = yes
 			format = left
 		}
 
 		instantTextBoxType = {
 			name = "LEP_law_date"
-			position = { x = 310 y = 14 }
+			position = { x = 318 y = 24 }
 			font = "hoi_16mbs"
-			text = "[LEP_GetPassedLawDate]"
-			maxWidth = 150
+			text = "LEP_GetPassedLawDate"
+			maxWidth = 145
 			maxHeight = 20
 			format = left
-		}
-
-		# ── 整行点击热区：每个法案一个（编号写死在 scripted_gui 的 effect 里，不读 value 变量，避免失效变量导致崩溃）──
-		# 贴图几乎全透明，视觉上就是行本身；放在最上层，所以点行内任何地方都能触发。
-		# 用 <元素名>_visible 只留下与本行法案匹配的那个。
-		buttonType = {
-			name = "LEP_law_click_1"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_2"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_3"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_4"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_5"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_6"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_7"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_8"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_9"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_10"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_11"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_12"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_13"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
-		}
-
-		buttonType = {
-			name = "LEP_law_click_14"
-			position = { x = 0 y = 0 }
-			spriteType = "GFX_LEPEXP_law_click_area"
-			clicksound = click_action
 		}
 	}
 
@@ -363,6 +234,9 @@ guiTypes = {
 			clicksound = click_ok
 			pdx_tooltip = "LEP_industrial_construction_button_tt"
 			position = { x = 100 y = 20 }
+			effect = {
+				
+			}
 		}
 
 		buttonType = {
@@ -371,6 +245,9 @@ guiTypes = {
 			clicksound = click_ok
 			pdx_tooltip = "LEP_resource_allocation_button_tt"
 			position = { x = 200 y = 20 }
+			effect = {
+				
+			}
 		}
 	}
 }

@@ -211,7 +211,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 7 } }
-		localization_key = LEP_political_association_management_act_desc_tip
+		localization_key = LEP_political_association_management_act_desc
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 8 } }
@@ -235,7 +235,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 13 } }
-		localization_key = LEP_civil_code_desc_tip
+		localization_key = LEP_civil_code_desc
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 14 } }
@@ -250,59 +250,59 @@ defined_text = {
 	name = LEP_GetPassedLawDate
 	text = {
 		trigger = { check_variable = { LEP_law_id = 1 } }
-		localization_key = "[?LEP_law_date_1.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_1.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 2 } }
-		localization_key = "[?LEP_law_date_2.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_2.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 3 } }
-		localization_key = "[?LEP_law_date_3.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_3.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 4 } }
-		localization_key = "[?LEP_law_date_4.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_4.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 5 } }
-		localization_key = "[?LEP_law_date_5.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_5.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 6 } }
-		localization_key = "[?LEP_law_date_6.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_6.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 7 } }
-		localization_key = "[?LEP_law_date_7.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_7.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 8 } }
-		localization_key = "[?LEP_law_date_8.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_8.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 9 } }
-		localization_key = "[?LEP_law_date_9.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_9.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 10 } }
-		localization_key = "[?LEP_law_date_10.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_10.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 11 } }
-		localization_key = "[?LEP_law_date_11.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_11.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 12 } }
-		localization_key = "[?LEP_law_date_12.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_12.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 13 } }
-		localization_key = "[?LEP_law_date_13.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_13.GetDateStringNoHour]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 14 } }
-		localization_key = "[?LEP_law_date_14.GetDateStringNoHour] 通过"
+		localization_key = "[?LEP_law_date_14.GetDateStringNoHour]"
 	}
 	text = {
 		localization_key = ""
@@ -312,168 +312,5 @@ defined_text = {
 ### 序号：第几个通过（行号拼键，需要 LEP_law_seq_0 … LEP_law_seq_13，见 05 片段）
 defined_text = {
 	name = LEP_GetPassedLawSeq
-	text = {
-		localization_key = "LEP_law_seq_[?LEP_law_index]"
-	}
-}
-
-### 「已通过法案」详情区专用：不依赖 has_idea（GUI 文本求值上下文没有国家作用域，has_idea 会报错返回空）
-defined_text = {
-	name = LEP_GetActTip7
-	text = {
-		trigger = { check_variable = { LEP_pa_level = 1 } }
-		localization_key = idea_desc|LEP_political_association_management_act_idea_1
-	}
-	text = {
-		trigger = { check_variable = { LEP_pa_level = 2 } }
-		localization_key = idea_desc|LEP_political_association_management_act_idea_2
-	}
-	text = {
-		localization_key = idea_desc|LEP_political_association_management_act_idea_1
-	}
-}
-defined_text = {
-	name = LEP_GetActTip13
-	text = {
-		trigger = { check_variable = { LEP_civil_code_level = 1 } }
-		localization_key = idea_desc|LEP_civil_code_idea_1
-	}
-	text = {
-		trigger = { check_variable = { LEP_civil_code_level = 2 } }
-		localization_key = idea_desc|LEP_civil_code_idea_2
-	}
-	text = {
-		trigger = { check_variable = { LEP_civil_code_level = 3 } }
-		localization_key = idea_desc|LEP_civil_code_idea_3
-	}
-	text = {
-		localization_key = idea_desc|LEP_civil_code_idea_1
-	}
-}
-
-### 供「已通过法案」列表的详情区用（点某一行后展示）
-defined_text = {
-	name = LEP_GetLawDetailName
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 1 } }
-		localization_key = LEP_organization_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 2 } }
-		localization_key = LEP_compulsory_education_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 3 } }
-		localization_key = LEP_civil_service_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 4 } }
-		localization_key = LEP_provincial_county_organization_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 5 } }
-		localization_key = LEP_factory_inspection_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 6 } }
-		localization_key = LEP_mass_layoff_protection_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 7 } }
-		localization_key = LEP_political_association_management_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 8 } }
-		localization_key = LEP_factory_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 9 } }
-		localization_key = LEP_social_security_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 10 } }
-		localization_key = LEP_company_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 11 } }
-		localization_key = LEP_collective_agreement_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 12 } }
-		localization_key = LEP_land_act
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 13 } }
-		localization_key = LEP_civil_code
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 14 } }
-		localization_key = LEP_provincial_authority_act
-	}
-	text = {
-		localization_key = LEP_law_detail_hint
-	}
-}
-
-defined_text = {
-	name = LEP_GetLawDetailBody
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 1 } }
-		localization_key = LEP_organization_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 2 } }
-		localization_key = LEP_compulsory_education_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 3 } }
-		localization_key = LEP_civil_service_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 4 } }
-		localization_key = LEP_provincial_county_organization_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 5 } }
-		localization_key = LEP_factory_inspection_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 6 } }
-		localization_key = LEP_mass_layoff_protection_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 7 } }
-		localization_key = LEP_political_association_management_act_desc_tip
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 8 } }
-		localization_key = LEP_factory_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 9 } }
-		localization_key = LEP_social_security_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 10 } }
-		localization_key = LEP_company_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 11 } }
-		localization_key = LEP_collective_agreement_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 12 } }
-		localization_key = LEP_land_act_desc
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 13 } }
-		localization_key = LEP_civil_code_desc_tip
-	}
-	text = {
-		trigger = { check_variable = { LEP_law_detail = 14 } }
-		localization_key = LEP_provincial_authority_act_desc
-	}
-	text = {
-		localization_key = ""
-	}
+	localization_key = "LEP_law_seq_[?LEP_law_index]"
 }

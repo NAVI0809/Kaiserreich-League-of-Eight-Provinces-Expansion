@@ -1,9 +1,18 @@
 ideas = {
 	hidden_ideas = {
 		LEP_compulsory_education_act_idea = {
-			on_add = { log = "[GetLogRoot]: add idea LEP_compulsory_education_act_idea" }
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				log = "[GetLogRoot]: add idea LEP_compulsory_education_act_idea"
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_2 } }
+					set_variable = { LEP_law_seen_2 = 1 }
+					add_to_array = { LEP_passed_law_ids = 2 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_2 = global.date }
+				}
 			}
 			modifier = {
 				stability_factor = 0.02
@@ -16,6 +25,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_1 } }
+					set_variable = { LEP_law_seen_1 = 1 }
+					add_to_array = { LEP_passed_law_ids = 1 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_1 = global.date }
+				}
+			}
 			modifier = {
 				political_power_gain = 0.01
 				stability_factor = 0.02
@@ -25,6 +43,15 @@ ideas = {
 		LEP_civil_service_act_idea = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_3 } }
+					set_variable = { LEP_law_seen_3 = 1 }
+					add_to_array = { LEP_passed_law_ids = 3 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_3 = global.date }
+				}
 			}
 			modifier = {
 				stability_factor = 0.02
@@ -40,6 +67,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_4 } }
+					set_variable = { LEP_law_seen_4 = 1 }
+					add_to_array = { LEP_passed_law_ids = 4 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_4 = global.date }
+				}
+			}
 			modifier = {
 				stability_factor = 0.02
 				local_supplies = 0.05
@@ -49,6 +85,15 @@ ideas = {
 		LEP_factory_inspection_act_idea = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_5 } }
+					set_variable = { LEP_law_seen_5 = 1 }
+					add_to_array = { LEP_passed_law_ids = 5 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_5 = global.date }
+				}
 			}
 			modifier = {
 				political_power_gain = -0.02
@@ -60,6 +105,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_6 } }
+					set_variable = { LEP_law_seen_6 = 1 }
+					add_to_array = { LEP_passed_law_ids = 6 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_6 = global.date }
+				}
+			}
 			modifier = {
 				consumer_goods_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.08
@@ -69,6 +123,16 @@ ideas = {
 		LEP_political_association_management_act_idea_1 = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				set_variable = { LEP_pa_level = 1 }
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_7 } }
+					set_variable = { LEP_law_seen_7 = 1 }
+					add_to_array = { LEP_passed_law_ids = 7 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_7 = global.date }
+				}
 			}
 			modifier = {
 				political_power_gain = -0.01
@@ -81,6 +145,16 @@ ideas = {
 		LEP_political_association_management_act_idea_2 = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				set_variable = { LEP_pa_level = 2 }
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_7 } }
+					set_variable = { LEP_law_seen_7 = 1 }
+					add_to_array = { LEP_passed_law_ids = 7 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_7 = global.date }
+				}
 			}
 			modifier = {
 				political_power_gain = -0.02
@@ -96,6 +170,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_8 } }
+					set_variable = { LEP_law_seen_8 = 1 }
+					add_to_array = { LEP_passed_law_ids = 8 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_8 = global.date }
+				}
+			}
 			modifier = {
 				stability_factor = 0.025
 				production_factory_start_efficiency_factor = 0.075
@@ -106,6 +189,15 @@ ideas = {
 		LEP_social_security_act_idea = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_9 } }
+					set_variable = { LEP_law_seen_9 = 1 }
+					add_to_array = { LEP_passed_law_ids = 9 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_9 = global.date }
+				}
 			}
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -118,6 +210,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_10 } }
+					set_variable = { LEP_law_seen_10 = 1 }
+					add_to_array = { LEP_passed_law_ids = 10 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_10 = global.date }
+				}
+			}
 			modifier = {
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = 0.075
@@ -129,6 +230,15 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_11 } }
+					set_variable = { LEP_law_seen_11 = 1 }
+					add_to_array = { LEP_passed_law_ids = 11 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_11 = global.date }
+				}
+			}
 			modifier = {
 				political_power_gain = 0.02
 				party_popularity_stability_factor = 0.1
@@ -138,6 +248,15 @@ ideas = {
 		LEP_land_act_idea = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_12 } }
+					set_variable = { LEP_law_seen_12 = 1 }
+					add_to_array = { LEP_passed_law_ids = 12 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_12 = global.date }
+				}
 			}
 			modifier = {
 				monthly_population = 0.025
@@ -150,6 +269,16 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				set_variable = { LEP_civil_code_level = 1 }
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_13 } }
+					set_variable = { LEP_law_seen_13 = 1 }
+					add_to_array = { LEP_passed_law_ids = 13 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_13 = global.date }
+				}
+			}
 			modifier = {
 				production_factory_start_efficiency_factor = 0.075
 				production_speed_buildings_factor = 0.025
@@ -159,6 +288,16 @@ ideas = {
 		LEP_civil_code_idea_2 = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				set_variable = { LEP_civil_code_level = 2 }
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_13 } }
+					set_variable = { LEP_law_seen_13 = 1 }
+					add_to_array = { LEP_passed_law_ids = 13 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_13 = global.date }
+				}
 			}
 			modifier = {
 				industrial_capacity_factory = 0.06
@@ -170,6 +309,16 @@ ideas = {
 			allowed = {
 				always = yes
 			}
+			on_add = {
+				set_variable = { LEP_civil_code_level = 3 }
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_13 } }
+					set_variable = { LEP_law_seen_13 = 1 }
+					add_to_array = { LEP_passed_law_ids = 13 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_13 = global.date }
+				}
+			}
 			modifier = {
 				stability_factor = 0.08
 				consumer_goods_factor = -0.1
@@ -179,6 +328,15 @@ ideas = {
 		LEP_provincial_authority_act_idea = {
 			allowed = {
 				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_14 } }
+					set_variable = { LEP_law_seen_14 = 1 }
+					add_to_array = { LEP_passed_law_ids = 14 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_14 = global.date }
+				}
 			}
 			modifier = {
 				required_garrison_factor = -0.1
