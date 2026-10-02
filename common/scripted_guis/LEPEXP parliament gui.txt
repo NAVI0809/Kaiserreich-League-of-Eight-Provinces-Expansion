@@ -1,0 +1,331 @@
+### LEP 国会席位图（274 席）
+### 按钮：politics_tab，南京临时政府成立后出现（LEP_seat_enabled）
+### 面板：top_bar，政治页外侧；点击按钮显示/收起（LEP_seat_view_on），面板右上角 × 单独关闭
+### 每席图标用 image 属性按 LEP_seat_party^N 选 sprite（绕开 frame） 0 totalist / 1 syndicalist / 2 radical_socialist / 3 social_democrat / 4 social_liberal
+###                   5 market_liberal / 6 social_conservative / 7 authoritarian_democrat / 8 paternal_autocrat / 9 national_populist
+scripted_gui = {
+
+	LEP_seat_button_gui = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "LEP_seat_button_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = LEP_seat_enabled
+		}
+
+		effects = {
+			LEP_seat_toggle_button_click = {
+				if = {
+					limit = { has_country_flag = LEP_seat_view_on }
+					clr_country_flag = LEP_seat_view_on
+				}
+				else = {
+					set_country_flag = LEP_seat_view_on
+				}
+			}
+		}
+	}
+
+	LEP_seat_panel_gui = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "LEP_seat_panel_container"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = LEP_seat_view_on
+		}
+
+		effects = {
+			LEP_seat_close_button_click = {
+				clr_country_flag = LEP_seat_view_on
+			}
+		}
+
+		properties = {
+			LEP_seat_icon_0 = { image = "[LEP_seat_gfx_0]" }
+			LEP_seat_icon_1 = { image = "[LEP_seat_gfx_1]" }
+			LEP_seat_icon_2 = { image = "[LEP_seat_gfx_2]" }
+			LEP_seat_icon_3 = { image = "[LEP_seat_gfx_3]" }
+			LEP_seat_icon_4 = { image = "[LEP_seat_gfx_4]" }
+			LEP_seat_icon_5 = { image = "[LEP_seat_gfx_5]" }
+			LEP_seat_icon_6 = { image = "[LEP_seat_gfx_6]" }
+			LEP_seat_icon_7 = { image = "[LEP_seat_gfx_7]" }
+			LEP_seat_icon_8 = { image = "[LEP_seat_gfx_8]" }
+			LEP_seat_icon_9 = { image = "[LEP_seat_gfx_9]" }
+			LEP_seat_icon_10 = { image = "[LEP_seat_gfx_10]" }
+			LEP_seat_icon_11 = { image = "[LEP_seat_gfx_11]" }
+			LEP_seat_icon_12 = { image = "[LEP_seat_gfx_12]" }
+			LEP_seat_icon_13 = { image = "[LEP_seat_gfx_13]" }
+			LEP_seat_icon_14 = { image = "[LEP_seat_gfx_14]" }
+			LEP_seat_icon_15 = { image = "[LEP_seat_gfx_15]" }
+			LEP_seat_icon_16 = { image = "[LEP_seat_gfx_16]" }
+			LEP_seat_icon_17 = { image = "[LEP_seat_gfx_17]" }
+			LEP_seat_icon_18 = { image = "[LEP_seat_gfx_18]" }
+			LEP_seat_icon_19 = { image = "[LEP_seat_gfx_19]" }
+			LEP_seat_icon_20 = { image = "[LEP_seat_gfx_20]" }
+			LEP_seat_icon_21 = { image = "[LEP_seat_gfx_21]" }
+			LEP_seat_icon_22 = { image = "[LEP_seat_gfx_22]" }
+			LEP_seat_icon_23 = { image = "[LEP_seat_gfx_23]" }
+			LEP_seat_icon_24 = { image = "[LEP_seat_gfx_24]" }
+			LEP_seat_icon_25 = { image = "[LEP_seat_gfx_25]" }
+			LEP_seat_icon_26 = { image = "[LEP_seat_gfx_26]" }
+			LEP_seat_icon_27 = { image = "[LEP_seat_gfx_27]" }
+			LEP_seat_icon_28 = { image = "[LEP_seat_gfx_28]" }
+			LEP_seat_icon_29 = { image = "[LEP_seat_gfx_29]" }
+			LEP_seat_icon_30 = { image = "[LEP_seat_gfx_30]" }
+			LEP_seat_icon_31 = { image = "[LEP_seat_gfx_31]" }
+			LEP_seat_icon_32 = { image = "[LEP_seat_gfx_32]" }
+			LEP_seat_icon_33 = { image = "[LEP_seat_gfx_33]" }
+			LEP_seat_icon_34 = { image = "[LEP_seat_gfx_34]" }
+			LEP_seat_icon_35 = { image = "[LEP_seat_gfx_35]" }
+			LEP_seat_icon_36 = { image = "[LEP_seat_gfx_36]" }
+			LEP_seat_icon_37 = { image = "[LEP_seat_gfx_37]" }
+			LEP_seat_icon_38 = { image = "[LEP_seat_gfx_38]" }
+			LEP_seat_icon_39 = { image = "[LEP_seat_gfx_39]" }
+			LEP_seat_icon_40 = { image = "[LEP_seat_gfx_40]" }
+			LEP_seat_icon_41 = { image = "[LEP_seat_gfx_41]" }
+			LEP_seat_icon_42 = { image = "[LEP_seat_gfx_42]" }
+			LEP_seat_icon_43 = { image = "[LEP_seat_gfx_43]" }
+			LEP_seat_icon_44 = { image = "[LEP_seat_gfx_44]" }
+			LEP_seat_icon_45 = { image = "[LEP_seat_gfx_45]" }
+			LEP_seat_icon_46 = { image = "[LEP_seat_gfx_46]" }
+			LEP_seat_icon_47 = { image = "[LEP_seat_gfx_47]" }
+			LEP_seat_icon_48 = { image = "[LEP_seat_gfx_48]" }
+			LEP_seat_icon_49 = { image = "[LEP_seat_gfx_49]" }
+			LEP_seat_icon_50 = { image = "[LEP_seat_gfx_50]" }
+			LEP_seat_icon_51 = { image = "[LEP_seat_gfx_51]" }
+			LEP_seat_icon_52 = { image = "[LEP_seat_gfx_52]" }
+			LEP_seat_icon_53 = { image = "[LEP_seat_gfx_53]" }
+			LEP_seat_icon_54 = { image = "[LEP_seat_gfx_54]" }
+			LEP_seat_icon_55 = { image = "[LEP_seat_gfx_55]" }
+			LEP_seat_icon_56 = { image = "[LEP_seat_gfx_56]" }
+			LEP_seat_icon_57 = { image = "[LEP_seat_gfx_57]" }
+			LEP_seat_icon_58 = { image = "[LEP_seat_gfx_58]" }
+			LEP_seat_icon_59 = { image = "[LEP_seat_gfx_59]" }
+			LEP_seat_icon_60 = { image = "[LEP_seat_gfx_60]" }
+			LEP_seat_icon_61 = { image = "[LEP_seat_gfx_61]" }
+			LEP_seat_icon_62 = { image = "[LEP_seat_gfx_62]" }
+			LEP_seat_icon_63 = { image = "[LEP_seat_gfx_63]" }
+			LEP_seat_icon_64 = { image = "[LEP_seat_gfx_64]" }
+			LEP_seat_icon_65 = { image = "[LEP_seat_gfx_65]" }
+			LEP_seat_icon_66 = { image = "[LEP_seat_gfx_66]" }
+			LEP_seat_icon_67 = { image = "[LEP_seat_gfx_67]" }
+			LEP_seat_icon_68 = { image = "[LEP_seat_gfx_68]" }
+			LEP_seat_icon_69 = { image = "[LEP_seat_gfx_69]" }
+			LEP_seat_icon_70 = { image = "[LEP_seat_gfx_70]" }
+			LEP_seat_icon_71 = { image = "[LEP_seat_gfx_71]" }
+			LEP_seat_icon_72 = { image = "[LEP_seat_gfx_72]" }
+			LEP_seat_icon_73 = { image = "[LEP_seat_gfx_73]" }
+			LEP_seat_icon_74 = { image = "[LEP_seat_gfx_74]" }
+			LEP_seat_icon_75 = { image = "[LEP_seat_gfx_75]" }
+			LEP_seat_icon_76 = { image = "[LEP_seat_gfx_76]" }
+			LEP_seat_icon_77 = { image = "[LEP_seat_gfx_77]" }
+			LEP_seat_icon_78 = { image = "[LEP_seat_gfx_78]" }
+			LEP_seat_icon_79 = { image = "[LEP_seat_gfx_79]" }
+			LEP_seat_icon_80 = { image = "[LEP_seat_gfx_80]" }
+			LEP_seat_icon_81 = { image = "[LEP_seat_gfx_81]" }
+			LEP_seat_icon_82 = { image = "[LEP_seat_gfx_82]" }
+			LEP_seat_icon_83 = { image = "[LEP_seat_gfx_83]" }
+			LEP_seat_icon_84 = { image = "[LEP_seat_gfx_84]" }
+			LEP_seat_icon_85 = { image = "[LEP_seat_gfx_85]" }
+			LEP_seat_icon_86 = { image = "[LEP_seat_gfx_86]" }
+			LEP_seat_icon_87 = { image = "[LEP_seat_gfx_87]" }
+			LEP_seat_icon_88 = { image = "[LEP_seat_gfx_88]" }
+			LEP_seat_icon_89 = { image = "[LEP_seat_gfx_89]" }
+			LEP_seat_icon_90 = { image = "[LEP_seat_gfx_90]" }
+			LEP_seat_icon_91 = { image = "[LEP_seat_gfx_91]" }
+			LEP_seat_icon_92 = { image = "[LEP_seat_gfx_92]" }
+			LEP_seat_icon_93 = { image = "[LEP_seat_gfx_93]" }
+			LEP_seat_icon_94 = { image = "[LEP_seat_gfx_94]" }
+			LEP_seat_icon_95 = { image = "[LEP_seat_gfx_95]" }
+			LEP_seat_icon_96 = { image = "[LEP_seat_gfx_96]" }
+			LEP_seat_icon_97 = { image = "[LEP_seat_gfx_97]" }
+			LEP_seat_icon_98 = { image = "[LEP_seat_gfx_98]" }
+			LEP_seat_icon_99 = { image = "[LEP_seat_gfx_99]" }
+			LEP_seat_icon_100 = { image = "[LEP_seat_gfx_100]" }
+			LEP_seat_icon_101 = { image = "[LEP_seat_gfx_101]" }
+			LEP_seat_icon_102 = { image = "[LEP_seat_gfx_102]" }
+			LEP_seat_icon_103 = { image = "[LEP_seat_gfx_103]" }
+			LEP_seat_icon_104 = { image = "[LEP_seat_gfx_104]" }
+			LEP_seat_icon_105 = { image = "[LEP_seat_gfx_105]" }
+			LEP_seat_icon_106 = { image = "[LEP_seat_gfx_106]" }
+			LEP_seat_icon_107 = { image = "[LEP_seat_gfx_107]" }
+			LEP_seat_icon_108 = { image = "[LEP_seat_gfx_108]" }
+			LEP_seat_icon_109 = { image = "[LEP_seat_gfx_109]" }
+			LEP_seat_icon_110 = { image = "[LEP_seat_gfx_110]" }
+			LEP_seat_icon_111 = { image = "[LEP_seat_gfx_111]" }
+			LEP_seat_icon_112 = { image = "[LEP_seat_gfx_112]" }
+			LEP_seat_icon_113 = { image = "[LEP_seat_gfx_113]" }
+			LEP_seat_icon_114 = { image = "[LEP_seat_gfx_114]" }
+			LEP_seat_icon_115 = { image = "[LEP_seat_gfx_115]" }
+			LEP_seat_icon_116 = { image = "[LEP_seat_gfx_116]" }
+			LEP_seat_icon_117 = { image = "[LEP_seat_gfx_117]" }
+			LEP_seat_icon_118 = { image = "[LEP_seat_gfx_118]" }
+			LEP_seat_icon_119 = { image = "[LEP_seat_gfx_119]" }
+			LEP_seat_icon_120 = { image = "[LEP_seat_gfx_120]" }
+			LEP_seat_icon_121 = { image = "[LEP_seat_gfx_121]" }
+			LEP_seat_icon_122 = { image = "[LEP_seat_gfx_122]" }
+			LEP_seat_icon_123 = { image = "[LEP_seat_gfx_123]" }
+			LEP_seat_icon_124 = { image = "[LEP_seat_gfx_124]" }
+			LEP_seat_icon_125 = { image = "[LEP_seat_gfx_125]" }
+			LEP_seat_icon_126 = { image = "[LEP_seat_gfx_126]" }
+			LEP_seat_icon_127 = { image = "[LEP_seat_gfx_127]" }
+			LEP_seat_icon_128 = { image = "[LEP_seat_gfx_128]" }
+			LEP_seat_icon_129 = { image = "[LEP_seat_gfx_129]" }
+			LEP_seat_icon_130 = { image = "[LEP_seat_gfx_130]" }
+			LEP_seat_icon_131 = { image = "[LEP_seat_gfx_131]" }
+			LEP_seat_icon_132 = { image = "[LEP_seat_gfx_132]" }
+			LEP_seat_icon_133 = { image = "[LEP_seat_gfx_133]" }
+			LEP_seat_icon_134 = { image = "[LEP_seat_gfx_134]" }
+			LEP_seat_icon_135 = { image = "[LEP_seat_gfx_135]" }
+			LEP_seat_icon_136 = { image = "[LEP_seat_gfx_136]" }
+			LEP_seat_icon_137 = { image = "[LEP_seat_gfx_137]" }
+			LEP_seat_icon_138 = { image = "[LEP_seat_gfx_138]" }
+			LEP_seat_icon_139 = { image = "[LEP_seat_gfx_139]" }
+			LEP_seat_icon_140 = { image = "[LEP_seat_gfx_140]" }
+			LEP_seat_icon_141 = { image = "[LEP_seat_gfx_141]" }
+			LEP_seat_icon_142 = { image = "[LEP_seat_gfx_142]" }
+			LEP_seat_icon_143 = { image = "[LEP_seat_gfx_143]" }
+			LEP_seat_icon_144 = { image = "[LEP_seat_gfx_144]" }
+			LEP_seat_icon_145 = { image = "[LEP_seat_gfx_145]" }
+			LEP_seat_icon_146 = { image = "[LEP_seat_gfx_146]" }
+			LEP_seat_icon_147 = { image = "[LEP_seat_gfx_147]" }
+			LEP_seat_icon_148 = { image = "[LEP_seat_gfx_148]" }
+			LEP_seat_icon_149 = { image = "[LEP_seat_gfx_149]" }
+			LEP_seat_icon_150 = { image = "[LEP_seat_gfx_150]" }
+			LEP_seat_icon_151 = { image = "[LEP_seat_gfx_151]" }
+			LEP_seat_icon_152 = { image = "[LEP_seat_gfx_152]" }
+			LEP_seat_icon_153 = { image = "[LEP_seat_gfx_153]" }
+			LEP_seat_icon_154 = { image = "[LEP_seat_gfx_154]" }
+			LEP_seat_icon_155 = { image = "[LEP_seat_gfx_155]" }
+			LEP_seat_icon_156 = { image = "[LEP_seat_gfx_156]" }
+			LEP_seat_icon_157 = { image = "[LEP_seat_gfx_157]" }
+			LEP_seat_icon_158 = { image = "[LEP_seat_gfx_158]" }
+			LEP_seat_icon_159 = { image = "[LEP_seat_gfx_159]" }
+			LEP_seat_icon_160 = { image = "[LEP_seat_gfx_160]" }
+			LEP_seat_icon_161 = { image = "[LEP_seat_gfx_161]" }
+			LEP_seat_icon_162 = { image = "[LEP_seat_gfx_162]" }
+			LEP_seat_icon_163 = { image = "[LEP_seat_gfx_163]" }
+			LEP_seat_icon_164 = { image = "[LEP_seat_gfx_164]" }
+			LEP_seat_icon_165 = { image = "[LEP_seat_gfx_165]" }
+			LEP_seat_icon_166 = { image = "[LEP_seat_gfx_166]" }
+			LEP_seat_icon_167 = { image = "[LEP_seat_gfx_167]" }
+			LEP_seat_icon_168 = { image = "[LEP_seat_gfx_168]" }
+			LEP_seat_icon_169 = { image = "[LEP_seat_gfx_169]" }
+			LEP_seat_icon_170 = { image = "[LEP_seat_gfx_170]" }
+			LEP_seat_icon_171 = { image = "[LEP_seat_gfx_171]" }
+			LEP_seat_icon_172 = { image = "[LEP_seat_gfx_172]" }
+			LEP_seat_icon_173 = { image = "[LEP_seat_gfx_173]" }
+			LEP_seat_icon_174 = { image = "[LEP_seat_gfx_174]" }
+			LEP_seat_icon_175 = { image = "[LEP_seat_gfx_175]" }
+			LEP_seat_icon_176 = { image = "[LEP_seat_gfx_176]" }
+			LEP_seat_icon_177 = { image = "[LEP_seat_gfx_177]" }
+			LEP_seat_icon_178 = { image = "[LEP_seat_gfx_178]" }
+			LEP_seat_icon_179 = { image = "[LEP_seat_gfx_179]" }
+			LEP_seat_icon_180 = { image = "[LEP_seat_gfx_180]" }
+			LEP_seat_icon_181 = { image = "[LEP_seat_gfx_181]" }
+			LEP_seat_icon_182 = { image = "[LEP_seat_gfx_182]" }
+			LEP_seat_icon_183 = { image = "[LEP_seat_gfx_183]" }
+			LEP_seat_icon_184 = { image = "[LEP_seat_gfx_184]" }
+			LEP_seat_icon_185 = { image = "[LEP_seat_gfx_185]" }
+			LEP_seat_icon_186 = { image = "[LEP_seat_gfx_186]" }
+			LEP_seat_icon_187 = { image = "[LEP_seat_gfx_187]" }
+			LEP_seat_icon_188 = { image = "[LEP_seat_gfx_188]" }
+			LEP_seat_icon_189 = { image = "[LEP_seat_gfx_189]" }
+			LEP_seat_icon_190 = { image = "[LEP_seat_gfx_190]" }
+			LEP_seat_icon_191 = { image = "[LEP_seat_gfx_191]" }
+			LEP_seat_icon_192 = { image = "[LEP_seat_gfx_192]" }
+			LEP_seat_icon_193 = { image = "[LEP_seat_gfx_193]" }
+			LEP_seat_icon_194 = { image = "[LEP_seat_gfx_194]" }
+			LEP_seat_icon_195 = { image = "[LEP_seat_gfx_195]" }
+			LEP_seat_icon_196 = { image = "[LEP_seat_gfx_196]" }
+			LEP_seat_icon_197 = { image = "[LEP_seat_gfx_197]" }
+			LEP_seat_icon_198 = { image = "[LEP_seat_gfx_198]" }
+			LEP_seat_icon_199 = { image = "[LEP_seat_gfx_199]" }
+			LEP_seat_icon_200 = { image = "[LEP_seat_gfx_200]" }
+			LEP_seat_icon_201 = { image = "[LEP_seat_gfx_201]" }
+			LEP_seat_icon_202 = { image = "[LEP_seat_gfx_202]" }
+			LEP_seat_icon_203 = { image = "[LEP_seat_gfx_203]" }
+			LEP_seat_icon_204 = { image = "[LEP_seat_gfx_204]" }
+			LEP_seat_icon_205 = { image = "[LEP_seat_gfx_205]" }
+			LEP_seat_icon_206 = { image = "[LEP_seat_gfx_206]" }
+			LEP_seat_icon_207 = { image = "[LEP_seat_gfx_207]" }
+			LEP_seat_icon_208 = { image = "[LEP_seat_gfx_208]" }
+			LEP_seat_icon_209 = { image = "[LEP_seat_gfx_209]" }
+			LEP_seat_icon_210 = { image = "[LEP_seat_gfx_210]" }
+			LEP_seat_icon_211 = { image = "[LEP_seat_gfx_211]" }
+			LEP_seat_icon_212 = { image = "[LEP_seat_gfx_212]" }
+			LEP_seat_icon_213 = { image = "[LEP_seat_gfx_213]" }
+			LEP_seat_icon_214 = { image = "[LEP_seat_gfx_214]" }
+			LEP_seat_icon_215 = { image = "[LEP_seat_gfx_215]" }
+			LEP_seat_icon_216 = { image = "[LEP_seat_gfx_216]" }
+			LEP_seat_icon_217 = { image = "[LEP_seat_gfx_217]" }
+			LEP_seat_icon_218 = { image = "[LEP_seat_gfx_218]" }
+			LEP_seat_icon_219 = { image = "[LEP_seat_gfx_219]" }
+			LEP_seat_icon_220 = { image = "[LEP_seat_gfx_220]" }
+			LEP_seat_icon_221 = { image = "[LEP_seat_gfx_221]" }
+			LEP_seat_icon_222 = { image = "[LEP_seat_gfx_222]" }
+			LEP_seat_icon_223 = { image = "[LEP_seat_gfx_223]" }
+			LEP_seat_icon_224 = { image = "[LEP_seat_gfx_224]" }
+			LEP_seat_icon_225 = { image = "[LEP_seat_gfx_225]" }
+			LEP_seat_icon_226 = { image = "[LEP_seat_gfx_226]" }
+			LEP_seat_icon_227 = { image = "[LEP_seat_gfx_227]" }
+			LEP_seat_icon_228 = { image = "[LEP_seat_gfx_228]" }
+			LEP_seat_icon_229 = { image = "[LEP_seat_gfx_229]" }
+			LEP_seat_icon_230 = { image = "[LEP_seat_gfx_230]" }
+			LEP_seat_icon_231 = { image = "[LEP_seat_gfx_231]" }
+			LEP_seat_icon_232 = { image = "[LEP_seat_gfx_232]" }
+			LEP_seat_icon_233 = { image = "[LEP_seat_gfx_233]" }
+			LEP_seat_icon_234 = { image = "[LEP_seat_gfx_234]" }
+			LEP_seat_icon_235 = { image = "[LEP_seat_gfx_235]" }
+			LEP_seat_icon_236 = { image = "[LEP_seat_gfx_236]" }
+			LEP_seat_icon_237 = { image = "[LEP_seat_gfx_237]" }
+			LEP_seat_icon_238 = { image = "[LEP_seat_gfx_238]" }
+			LEP_seat_icon_239 = { image = "[LEP_seat_gfx_239]" }
+			LEP_seat_icon_240 = { image = "[LEP_seat_gfx_240]" }
+			LEP_seat_icon_241 = { image = "[LEP_seat_gfx_241]" }
+			LEP_seat_icon_242 = { image = "[LEP_seat_gfx_242]" }
+			LEP_seat_icon_243 = { image = "[LEP_seat_gfx_243]" }
+			LEP_seat_icon_244 = { image = "[LEP_seat_gfx_244]" }
+			LEP_seat_icon_245 = { image = "[LEP_seat_gfx_245]" }
+			LEP_seat_icon_246 = { image = "[LEP_seat_gfx_246]" }
+			LEP_seat_icon_247 = { image = "[LEP_seat_gfx_247]" }
+			LEP_seat_icon_248 = { image = "[LEP_seat_gfx_248]" }
+			LEP_seat_icon_249 = { image = "[LEP_seat_gfx_249]" }
+			LEP_seat_icon_250 = { image = "[LEP_seat_gfx_250]" }
+			LEP_seat_icon_251 = { image = "[LEP_seat_gfx_251]" }
+			LEP_seat_icon_252 = { image = "[LEP_seat_gfx_252]" }
+			LEP_seat_icon_253 = { image = "[LEP_seat_gfx_253]" }
+			LEP_seat_icon_254 = { image = "[LEP_seat_gfx_254]" }
+			LEP_seat_icon_255 = { image = "[LEP_seat_gfx_255]" }
+			LEP_seat_icon_256 = { image = "[LEP_seat_gfx_256]" }
+			LEP_seat_icon_257 = { image = "[LEP_seat_gfx_257]" }
+			LEP_seat_icon_258 = { image = "[LEP_seat_gfx_258]" }
+			LEP_seat_icon_259 = { image = "[LEP_seat_gfx_259]" }
+			LEP_seat_icon_260 = { image = "[LEP_seat_gfx_260]" }
+			LEP_seat_icon_261 = { image = "[LEP_seat_gfx_261]" }
+			LEP_seat_icon_262 = { image = "[LEP_seat_gfx_262]" }
+			LEP_seat_icon_263 = { image = "[LEP_seat_gfx_263]" }
+			LEP_seat_icon_264 = { image = "[LEP_seat_gfx_264]" }
+			LEP_seat_icon_265 = { image = "[LEP_seat_gfx_265]" }
+			LEP_seat_icon_266 = { image = "[LEP_seat_gfx_266]" }
+			LEP_seat_icon_267 = { image = "[LEP_seat_gfx_267]" }
+			LEP_seat_icon_268 = { image = "[LEP_seat_gfx_268]" }
+			LEP_seat_icon_269 = { image = "[LEP_seat_gfx_269]" }
+			LEP_seat_icon_270 = { image = "[LEP_seat_gfx_270]" }
+			LEP_seat_icon_271 = { image = "[LEP_seat_gfx_271]" }
+			LEP_seat_icon_272 = { image = "[LEP_seat_gfx_272]" }
+			LEP_seat_icon_273 = { image = "[LEP_seat_gfx_273]" }
+		}
+
+	}
+}

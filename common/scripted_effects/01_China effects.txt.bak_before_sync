@@ -775,61 +775,52 @@ china_update_morale = {
 				is_neighbor_of = ROOT
 			}
 		}
-		add_to_variable = {
-			china_league_war_morale = {
-				value = change_league_war_morale_by
-				clamp = { min = { value = china_league_war_morale multiply = -1 } max = { value = 100 subtract = china_league_war_morale } }
-			}
-		}
+		add_to_variable = { china_league_war_morale = change_league_war_morale_by }
 		custom_effect_tooltip = china_morale_will_change_by
 
-		set_variable = {
-			china_league_war_flame_frame_var = {
-				value = 1
-				if = { limit = { value = china_league_war_morale greater_than = 60 } add = 2 } #3
-				else_if = { limit = { value = china_league_war_morale greater_than = 30 } add = 1 } #2
-			}
+		clamp_variable = {
+			var = china_league_war_morale
+			min = 0
+			max = 100
+		}
+		if = {
+			limit = { check_variable = { china_league_war_morale > 60 } }
+			set_variable = { china_league_war_flame_frame_var = 3 }
+		}
+		if = {
+			limit = { check_variable = { china_league_war_morale > 30 } }
+			set_variable = { china_league_war_flame_frame_var = 2 }
+		}
+		else = {
+			set_variable = { china_league_war_flame_frame_var = 1 }
 		}
 
 		# Calculate Political Power Gain
-		set_variable = {
-			china_morale_dm_political_power_gain = {
-				value = china_league_war_morale
-				add = -50
-				multiply = 0.005
-			}
-		}
+		set_variable = { china_morale_dm_political_power_gain = china_league_war_morale }
+		add_to_variable = { china_morale_dm_political_power_gain = -50 }
+		multiply_variable = { china_morale_dm_political_power_gain = 0.5 }
+		multiply_variable = { china_morale_dm_political_power_gain = 0.01 }
 
 		# Calculate War Support
-		set_variable = {
-			china_morale_dm_war_support_factor = {
-				value = china_league_war_morale
-				add = -50
-				multiply = 0.003
-			}
-		}
+		set_variable = { china_morale_dm_war_support_factor = china_league_war_morale }
+		add_to_variable = { china_morale_dm_war_support_factor = -50 }
+		multiply_variable = { china_morale_dm_war_support_factor = 0.3 }
+		multiply_variable = { china_morale_dm_war_support_factor = 0.01 }
 
 		# Calculate Surrender Limit
-		set_variable = {
-			china_morale_dm_surrender_limit = {
-				value = china_league_war_morale
-				multiply = 0.4
-				add = -30
-				multiply = 0.01
-			}
-		}
+		set_variable = { china_morale_dm_surrender_limit = china_league_war_morale }
+		multiply_variable = { china_morale_dm_surrender_limit = 0.4 }
+		add_to_variable = { china_morale_dm_surrender_limit = -30 }
+		multiply_variable = { china_morale_dm_surrender_limit = 0.01 }
 
 		# Calculate Breakthrough Factor
-		set_variable = {
-			china_morale_dm_breakthrough_factor = {
-				value = china_league_war_morale
-				multiply = 0.0025
-			}
-		}
+		set_variable = { china_morale_dm_breakthrough_factor = china_league_war_morale }
+		multiply_variable = { china_morale_dm_breakthrough_factor = 0.25 }
+		multiply_variable = { china_morale_dm_breakthrough_factor = 0.01 }
 
 		hidden_effect = {
 			if = {
-				limit = { check_variable = { china_league_war_morale < 30 } }
+				limit = { check_variable = { china_league_war_morale < 30 }}
 				activate_mission = china_collapsing_morale
 			}
 		}

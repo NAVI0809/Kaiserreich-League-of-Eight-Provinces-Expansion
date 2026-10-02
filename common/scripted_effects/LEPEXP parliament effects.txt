@@ -1,0 +1,255 @@
+### LEP 国会席位图 · 数据层（274 席）
+### 调用 LEP_hold_election_seats：请求重排席位（延迟 1 天执行，见文件末尾说明）
+### 实际计算在 LEP_do_count_seats：按各党支持率把席位分下去，产出帧数组 LEP_seat_party
+### 帧号 = 政治光谱序（10 个意识形态）：
+###   0 totalist (#770F00)
+###   1 syndicalist (#E30613)
+###   2 radical_socialist (#EA5153)
+###   3 social_democrat (#C71748)
+###   4 social_liberal (#EF7D00)
+###   5 market_liberal (#FFED00)
+###   6 social_conservative (#005D95)
+###   7 authoritarian_democrat (#878787)
+###   8 paternal_autocrat (#1D1D1B)
+###   9 national_populist (#005321)
+### 门槛：支持率不足 0.5% 的党不计席位 —— 界面上显示 0% 的党就不会有席位
+### 归一化：有效党派按比例分摊，保证总数恰好 274
+### 席位坐标写死在 interface/kaiserreich/LEPEXP_parliament.gui
+
+LEP_do_count_seats = {
+
+	# ① 取 10 个意识形态的支持率（KR 里一个意识形态对应一个政党）
+	#    注意 party_popularity@xxx 必须包在 { value = ... } 里，否则会被读成 0
+	set_temp_variable = { s0 = { value = party_popularity@totalist } }
+	set_temp_variable = { s1 = { value = party_popularity@syndicalist } }
+	set_temp_variable = { s2 = { value = party_popularity@radical_socialist } }
+	set_temp_variable = { s3 = { value = party_popularity@social_democrat } }
+	set_temp_variable = { s4 = { value = party_popularity@social_liberal } }
+	set_temp_variable = { s5 = { value = party_popularity@market_liberal } }
+	set_temp_variable = { s6 = { value = party_popularity@social_conservative } }
+	set_temp_variable = { s7 = { value = party_popularity@authoritarian_democrat } }
+	set_temp_variable = { s8 = { value = party_popularity@paternal_autocrat } }
+	set_temp_variable = { s9 = { value = party_popularity@national_populist } }
+
+	# ② 参选资格
+	#    常驻：社会民主(3) 社会自由(4) 市场自由(5) 社会保守(6) 威权民主(7)
+	#    总体主义(0) 永不参选 —— 国民党(十人团)是特务机构，不适合进入议会
+	#    默认禁、只有「政治解冻及其后果」选宽容才开：
+	#    工团主义(1) 激进社会主义(2) 家长制独裁(8) 国家民粹主义(9)
+	set_temp_variable = { s0 = 0 }
+	if = {
+		limit = { NOT = { has_country_flag = LEP_thaw_broad } }
+		set_temp_variable = { s1 = 0 }
+		set_temp_variable = { s8 = 0 }
+		set_temp_variable = { s9 = 0 }
+		# 激进社会主义（国民党）：与闽赣国民党和谈成功使其合法化
+		if = {
+			limit = { NOT = { has_country_flag = LEP_lkmt_legalized } }
+			set_temp_variable = { s2 = 0 }
+		}
+	}
+
+	# ③ 门槛：不足 0.5% 的党直接不计（界面显示 0% 就真的 0 席）
+	if = {
+		limit = { check_variable = { s0 < 0.005 } }
+		set_temp_variable = { s0 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s1 < 0.005 } }
+		set_temp_variable = { s1 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s2 < 0.005 } }
+		set_temp_variable = { s2 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s3 < 0.005 } }
+		set_temp_variable = { s3 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s4 < 0.005 } }
+		set_temp_variable = { s4 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s5 < 0.005 } }
+		set_temp_variable = { s5 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s6 < 0.005 } }
+		set_temp_variable = { s6 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s7 < 0.005 } }
+		set_temp_variable = { s7 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s8 < 0.005 } }
+		set_temp_variable = { s8 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s9 < 0.005 } }
+		set_temp_variable = { s9 = 0 }
+	}
+
+	# ④ 汇总有效支持率
+	set_temp_variable = { total = 0 }
+	add_to_temp_variable = { total = s0 }
+	add_to_temp_variable = { total = s1 }
+	add_to_temp_variable = { total = s2 }
+	add_to_temp_variable = { total = s3 }
+	add_to_temp_variable = { total = s4 }
+	add_to_temp_variable = { total = s5 }
+	add_to_temp_variable = { total = s6 }
+	add_to_temp_variable = { total = s7 }
+	add_to_temp_variable = { total = s8 }
+	add_to_temp_variable = { total = s9 }
+
+	# ⑤ 归一化并按 274 席换算
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s0 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s1 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s2 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s3 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s4 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s5 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s6 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s7 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s8 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s9 = total }
+	}
+
+	multiply_temp_variable = { s0 = 274 }
+	multiply_temp_variable = { s1 = 274 }
+	multiply_temp_variable = { s2 = 274 }
+	multiply_temp_variable = { s3 = 274 }
+	multiply_temp_variable = { s4 = 274 }
+	multiply_temp_variable = { s5 = 274 }
+	multiply_temp_variable = { s6 = 274 }
+	multiply_temp_variable = { s7 = 274 }
+	multiply_temp_variable = { s8 = 274 }
+	multiply_temp_variable = { s9 = 274 }
+
+	# ⑥ 累加边界（席位 0 号 = 政治光谱最左翼）
+	set_temp_variable = { b0 = s0 }
+	set_temp_variable = { b1 = b0 }
+	add_to_temp_variable = { b1 = s1 }
+	set_temp_variable = { b2 = b1 }
+	add_to_temp_variable = { b2 = s2 }
+	set_temp_variable = { b3 = b2 }
+	add_to_temp_variable = { b3 = s3 }
+	set_temp_variable = { b4 = b3 }
+	add_to_temp_variable = { b4 = s4 }
+	set_temp_variable = { b5 = b4 }
+	add_to_temp_variable = { b5 = s5 }
+	set_temp_variable = { b6 = b5 }
+	add_to_temp_variable = { b6 = s6 }
+	set_temp_variable = { b7 = b6 }
+	add_to_temp_variable = { b7 = s7 }
+	set_temp_variable = { b8 = b7 }
+	add_to_temp_variable = { b8 = s8 }
+	set_temp_variable = { b9 = b8 }
+	add_to_temp_variable = { b9 = s9 }
+
+	# ⑦ 逐席填帧
+	clear_array = LEP_seat_party
+	set_temp_variable = { si = 0 }
+	while_loop_effect = {
+		limit = { check_variable = { si < 274 } }
+		if = {
+			limit = { check_variable = { si < b0 } }
+			add_to_array = { LEP_seat_party = 0 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b1 } }
+			add_to_array = { LEP_seat_party = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b2 } }
+			add_to_array = { LEP_seat_party = 2 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b3 } }
+			add_to_array = { LEP_seat_party = 3 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b4 } }
+			add_to_array = { LEP_seat_party = 4 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b5 } }
+			add_to_array = { LEP_seat_party = 5 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b6 } }
+			add_to_array = { LEP_seat_party = 6 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b7 } }
+			add_to_array = { LEP_seat_party = 7 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b8 } }
+			add_to_array = { LEP_seat_party = 8 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b9 } }
+			add_to_array = { LEP_seat_party = 9 }
+		}
+		add_to_temp_variable = { si = 1 }
+	}
+
+	# ⑧ 调试：把各党席位数列出来（面板底部会显示），确认无误后可删
+	set_variable = { LEP_seat_n0 = s0 }
+	set_variable = { LEP_seat_n1 = s1 }
+	set_variable = { LEP_seat_n2 = s2 }
+	set_variable = { LEP_seat_n3 = s3 }
+	set_variable = { LEP_seat_n4 = s4 }
+	set_variable = { LEP_seat_n5 = s5 }
+	set_variable = { LEP_seat_n6 = s6 }
+	set_variable = { LEP_seat_n7 = s7 }
+	set_variable = { LEP_seat_n8 = s8 }
+	set_variable = { LEP_seat_n9 = s9 }
+}
+
+### ─────────────────────────────────────────────────────────
+### 请求重排席位。
+### 为什么不直接算：调用点常常在同一个效果块里先做 add_popularity /
+### set_party_name / add_to_coalition，而同一块内 party_popularity@X 读到的
+### 仍是变化前的旧值，当场结算会漏掉刚落下的支持率变化。
+### 因此这里只发一个延迟 1 天的事件，等支持率落定后再实际计算。
+### 全 mod 的调用点都走这里，故各调用点无需关心顺序问题。
+### ─────────────────────────────────────────────────────────
+LEP_hold_election_seats = {
+	if = {
+		limit = { has_country_flag = LEP_seat_enabled }
+		country_event = { id = LEP_seat_recount.1 days = 1 }
+	}
+}

@@ -4867,7 +4867,7 @@ chinese_unification = {
 
 		targets = { KUM } #special exception for Manchu puppet Khanate
 		target_array = global.china_tags_array
-		target_root_trigger = { has_global_flag = LEP_collapse_happened }
+		has_global_flag = LEP_collapse_happened
 		target_trigger = {
 			has_subject = FROM
 			FROM = { china_is_governorate = yes }

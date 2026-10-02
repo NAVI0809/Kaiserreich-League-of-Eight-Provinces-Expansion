@@ -1,0 +1,103 @@
+### LEP 席位图例党名 —— 按 LEP_phase_late（league_national.8 解放北京后选举）分阶段取键
+
+defined_text = {
+	name = LEP_seat_name_1
+	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
+		localization_key = LEP_seat_banned_1
+	}
+	text = {
+		localization_key = LEP_yi_you_club_party
+	}
+}
+defined_text = {
+	name = LEP_seat_name_2
+	text = {
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = LEP_thaw_broad
+					has_country_flag = LEP_lkmt_legalized
+				}
+			}
+		}
+		localization_key = LEP_seat_banned_2
+	}
+	text = {
+		localization_key = LEP_radical_socialist_party
+	}
+}
+defined_text = {
+	name = LEP_seat_name_3
+	text = {
+		trigger = { has_country_flag = LEP_people_salvation }
+		localization_key = LEP_people_salvation_association
+	}
+	text = {
+		localization_key = LEP_social_democrat_party
+	}
+}
+defined_text = {
+	name = LEP_seat_name_4
+	text = {
+		trigger = { has_country_flag = LEP_phase_late }
+		localization_key = LEP_ZZH_party
+	}
+	text = {
+		localization_key = LEP_social_liberal_party_new
+	}
+}
+defined_text = {
+	name = LEP_seat_name_5
+	text = {
+		trigger = { has_country_flag = LEP_phase_late }
+		localization_key = LEP_ZXX_party
+	}
+	text = {
+		localization_key = LEP_Old_PSC_party_new
+	}
+}
+defined_text = {
+	name = LEP_seat_name_6
+	text = {
+		trigger = { has_country_flag = LEP_phase_late }
+		localization_key = LEP_JNSB_party
+	}
+	text = {
+		localization_key = LEP_social_conservative_party
+	}
+}
+defined_text = {
+	name = LEP_seat_name_7
+	text = {
+		localization_key = LEP_authoritarian_democrat_party
+	}
+}
+defined_text = {
+	name = LEP_seat_name_8
+	text = {
+		trigger = { has_country_flag = LEP_thaw_broad has_country_flag = LEP_seat_enabled }
+		localization_key = LEP_veterans_association
+	}
+	text = {
+		trigger = { has_country_flag = LEP_thaw_broad }
+		localization_key = LEP_paternal_autocrat_party
+	}
+	text = {
+		trigger = { has_country_flag = LEP_seat_enabled }
+		localization_key = LEP_seat_banned_8_new
+	}
+	text = {
+		localization_key = LEP_seat_banned_8
+	}
+}
+defined_text = {
+	name = LEP_seat_name_9
+	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
+		localization_key = LEP_seat_banned_9
+	}
+	text = {
+		localization_key = LEP_national_populist_party
+	}
+}

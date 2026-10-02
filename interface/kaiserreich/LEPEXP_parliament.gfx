@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_LEP_seat_p0"
+		texturefile = "gfx/interface/parliament/LEP_seat_p0.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p1"
+		texturefile = "gfx/interface/parliament/LEP_seat_p1.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p2"
+		texturefile = "gfx/interface/parliament/LEP_seat_p2.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p3"
+		texturefile = "gfx/interface/parliament/LEP_seat_p3.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p4"
+		texturefile = "gfx/interface/parliament/LEP_seat_p4.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p5"
+		texturefile = "gfx/interface/parliament/LEP_seat_p5.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p6"
+		texturefile = "gfx/interface/parliament/LEP_seat_p6.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p7"
+		texturefile = "gfx/interface/parliament/LEP_seat_p7.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p8"
+		texturefile = "gfx/interface/parliament/LEP_seat_p8.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p9"
+		texturefile = "gfx/interface/parliament/LEP_seat_p9.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_button"
+		texturefile = "gfx/interface/parliament/LEP_seat_button.png"
+	}
+}

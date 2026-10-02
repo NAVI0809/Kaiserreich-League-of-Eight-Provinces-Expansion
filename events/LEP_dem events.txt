@@ -7,7 +7,7 @@ add_namespace = league_news
 add_namespace = league_national
 add_namespace = league_industry
 add_namespace = league_jap
-
+add_namespace = LEP_seat_recount
 country_event = { #test
 	id = league_mid.999
 	title = league_mid.999.t
@@ -340,6 +340,11 @@ unit_leader_event = { #民主政变
 			    name = LEP_social_liberal_party_new
 			    long_name = LEP_social_liberal_party_new_long
 		    }
+			set_party_name = {          # 家长制独裁：南直系 → 退伍军人协会
+			    ideology = paternal_autocrat
+			    name = LEP_veterans_association
+			    long_name = LEP_veterans_association_long
+		    }
 			LEP_chen_yi = {
 			    promote_leader = yes
 		    }
@@ -358,9 +363,15 @@ unit_leader_event = { #民主政变
 		set_politics = {
 			ruling_party = social_liberal
 		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.1
+		}
 		custom_effect_tooltip = tooltip_white_line
 		complete_national_focus = LEP_provisional_senate
 		set_cosmetic_tag = LEP_dem
+
+		
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = tooltip_white_line
 		set_potential_national_government = yes
@@ -513,6 +524,8 @@ unit_leader_event = { #黄郛南下
 			complete_national_focus = LEP_unite_national_liberals
 			country_event = { id = league_mid.9 days = 2 }
 		}
+		set_country_flag = LEP_seat_enabled		# 议会席位按钮出现
+		LEP_hold_election_seats = yes		# 首次结算国会席位
 	}
 }
 
@@ -557,6 +570,7 @@ country_event = { #人民救国会成立
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.10 option league_mid.10.a"
+		set_country_flag = LEP_people_salvation		# 社会民主党已改称「人民救国会」
 		name = league_mid.10.a
 		set_party_name = {
 			ideology = social_democrat
@@ -2781,6 +2795,8 @@ country_event = { #政治解冻及其后果
     option = { #宽容
 		log = "[GetLogInfo]: event league_rebuild.5 option league_rebuild.5.a"
 		name = league_rebuild.5.a
+		set_country_flag = LEP_thaw_broad        # 宽容解冻：议会图上给工团党/国民党/中国青年党席位
+		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.03
@@ -2793,7 +2809,7 @@ country_event = { #政治解冻及其后果
 		}
 		add_popularity = {
 			ideology = radical_socialist
-			popularity = 0.01
+			popularity = 0.03
 		}
 		add_popularity = {
 			ideology = syndicalist
@@ -2813,6 +2829,8 @@ country_event = { #政治解冻及其后果
 	option = { #严格
 		log = "[GetLogInfo]: event league_rebuild.5 option league_rebuild.5.b"
 		name = league_rebuild.5.b
+		set_country_flag = LEP_thaw_strict       # 严格解冻：议会图上不给那三家席位
+		LEP_hold_election_seats = yes
 		LEP_weaken_ZZH_small = yes
 		add_popularity = {
 			ideology = social_conservative
@@ -3384,6 +3402,9 @@ country_event = { #政团管理法
     option = {
 		log = "[GetLogInfo]: event league_national.4 option league_national.4.a"
 		name = league_national.4.a
+		set_country_flag = LEP_thaw_broad
+
+		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.02
@@ -3413,6 +3434,9 @@ country_event = { #政团管理法
 	option = {
 		log = "[GetLogInfo]: event league_national.4 option league_national.4.b"
 		name = league_national.4.b
+		set_country_flag = LEP_thaw_strict
+
+		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.03
@@ -3560,6 +3584,8 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
+		set_country_flag = LEP_phase_late		# 阶段二：解放北京后的选举，党派改称
 		hidden_effect = {
 			country_event = { id = league_national.9 days = 5 }
 		}
@@ -3576,6 +3602,8 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
+		set_country_flag = LEP_phase_late		# 阶段二：解放北京后的选举，党派改称
 		hidden_effect = {
 			country_event = { id = league_national.9 days = 5 }
 		}
@@ -3591,6 +3619,8 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
+		set_country_flag = LEP_phase_late		# 阶段二：解放北京后的选举，党派改称
 		hidden_effect = {
 			country_event = { id = league_national.9 days = 5 }
 		}
@@ -3638,7 +3668,8 @@ country_event = { #全国选举
 			election_frequency = 48
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
-		}	
+		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		set_country_flag = LEP_DSP_win
 		complete_national_focus = LEP_DSP
 		mark_focus_tree_layout_dirty = yes
@@ -3653,6 +3684,7 @@ country_event = { #全国选举
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		set_country_flag = LEP_ZXX_win
 		complete_national_focus = LEP_succession_of_the_regency_cabinet
 		mark_focus_tree_layout_dirty = yes
@@ -3668,6 +3700,7 @@ country_event = { #全国选举
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"	
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		set_country_flag = LEP_JNSB_win
 		complete_national_focus = LEP_GSL
 		mark_focus_tree_layout_dirty = yes
@@ -3685,6 +3718,7 @@ country_event = { #全国选举
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		set_country_flag = LEP_NSU_win
 		complete_national_focus = LEP_solidarity_union
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
@@ -3705,6 +3739,7 @@ country_event = { #全国选举
 			last_election = "[CURRENT_DATE]"
 			
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		set_country_flag = LEP_NSU_win
 		complete_national_focus = LEP_solidarity_union
 		set_temp_variable = { coalition_partner_var = token:social_democrat }
@@ -4781,6 +4816,7 @@ country_event = { #开放傀儡国选举
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.25
@@ -4804,6 +4840,7 @@ country_event = { #开放傀儡国选举
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.2
@@ -4859,6 +4896,7 @@ country_event = { #开放傀儡国选举
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.2
@@ -4904,6 +4942,7 @@ country_event = { #开放傀儡国选举
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.2
@@ -4953,6 +4992,7 @@ country_event = { #开放傀儡国选举
 			election_frequency = 48
 			elections_allowed = yes
 		}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.2
@@ -5585,6 +5625,7 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_democrat
 				popularity = 0.2
@@ -5615,6 +5656,7 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.1
@@ -5645,6 +5687,7 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = market_liberal
 				popularity = 0.1
@@ -5675,6 +5718,7 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.1
@@ -5846,6 +5890,7 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_democrat
 				popularity = 0.2
@@ -5872,6 +5917,7 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_liberal
 				popularity = 0.1
@@ -5898,6 +5944,7 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = market_liberal
 				popularity = 0.1
@@ -5924,6 +5971,7 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.1
@@ -6773,17 +6821,14 @@ news_event = {
 
 	option = {
 		name = league_news.1.a
-		hidden_effect = [
+		hidden_effect = {
 			LEP = {
 				add_named_threat = {
 				    threat = 2
 				    name = LEP_naval_confrontation
 			    }
 			}
-		]
-	}
-
-	after = {
+		}
 		effect_tooltip = {
 			add_named_threat = {
 				threat = 2
@@ -6793,6 +6838,15 @@ news_event = {
 	}
 }
 
+country_event = { #国会席位：延迟结算（由 LEP_hold_election_seats 触发）
+	id = LEP_seat_recount.1
+	title = LEP_seat_recount.t.1
+	desc = LEP_seat_recount.d.1
+	hidden = yes
+	is_triggered_only = yes
 
-
-
+	option = {
+		name = LEP_seat_recount.a
+		LEP_do_count_seats = yes
+	}
+}
