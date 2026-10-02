@@ -1,32 +1,21 @@
-### LEP 席位图例党名 —— 按 LEP_phase_late（league_national.8 解放北京后选举）分阶段取键
+### LEP 国会席位图 · 图例文本层
+### name_N：党名（按阶段/改名切换）
+### mark_N：状态标记（执政党 / 执政联盟 / 已查禁），与党名分开，便于并排显示
 
 defined_text = {
 	name = LEP_seat_name_1
 	text = {
-		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
-		localization_key = LEP_seat_banned_1
-	}
-	text = {
 		localization_key = LEP_yi_you_club_party
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_2
-	text = {
-		trigger = {
-			NOT = {
-				OR = {
-					has_country_flag = LEP_thaw_broad
-					has_country_flag = LEP_lkmt_legalized
-				}
-			}
-		}
-		localization_key = LEP_seat_banned_2
-	}
 	text = {
 		localization_key = LEP_radical_socialist_party
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_3
 	text = {
@@ -37,6 +26,7 @@ defined_text = {
 		localization_key = LEP_social_democrat_party
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_4
 	text = {
@@ -47,6 +37,7 @@ defined_text = {
 		localization_key = LEP_social_liberal_party_new
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_5
 	text = {
@@ -57,6 +48,7 @@ defined_text = {
 		localization_key = LEP_Old_PSC_party_new
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_6
 	text = {
@@ -67,37 +59,209 @@ defined_text = {
 		localization_key = LEP_social_conservative_party
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_7
 	text = {
 		localization_key = LEP_authoritarian_democrat_party
 	}
 }
+
 defined_text = {
 	name = LEP_seat_name_8
 	text = {
-		trigger = { has_country_flag = LEP_thaw_broad has_country_flag = LEP_seat_enabled }
+		trigger = { has_country_flag = LEP_seat_enabled }
 		localization_key = LEP_veterans_association
 	}
 	text = {
-		trigger = { has_country_flag = LEP_thaw_broad }
 		localization_key = LEP_paternal_autocrat_party
 	}
-	text = {
-		trigger = { has_country_flag = LEP_seat_enabled }
-		localization_key = LEP_seat_banned_8_new
-	}
-	text = {
-		localization_key = LEP_seat_banned_8
-	}
 }
+
 defined_text = {
 	name = LEP_seat_name_9
 	text = {
-		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
-		localization_key = LEP_seat_banned_9
+		localization_key = LEP_national_populist_party
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_0
+	text = {
+		trigger = { has_government = totalist }
+		localization_key = LEP_seat_mark_ruling
 	}
 	text = {
-		localization_key = LEP_national_populist_party
+		trigger = { is_in_coalition_with_totalist = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_banned
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_1
+	text = {
+		trigger = { has_government = syndicalist }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_syndicalist = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
+		localization_key = LEP_seat_mark_banned
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_2
+	text = {
+		trigger = { has_government = radical_socialist }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_radical_socialist = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		trigger = { NOT = { OR = { has_country_flag = LEP_thaw_broad has_country_flag = LEP_lkmt_legalized } } }
+		localization_key = LEP_seat_mark_banned
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_3
+	text = {
+		trigger = { has_government = social_democrat }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_social_democrat = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_4
+	text = {
+		trigger = { has_government = social_liberal }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_social_liberal = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_5
+	text = {
+		trigger = { has_government = market_liberal }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_market_liberal = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_6
+	text = {
+		trigger = { has_government = social_conservative }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_social_conservative = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_7
+	text = {
+		trigger = { has_government = authoritarian_democrat }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_authoritarian_democrat = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_8
+	text = {
+		trigger = { has_government = paternal_autocrat }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_paternal_autocrat = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
+		localization_key = LEP_seat_mark_banned
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+defined_text = {
+	name = LEP_seat_mark_9
+	text = {
+		trigger = { has_government = national_populist }
+		localization_key = LEP_seat_mark_ruling
+	}
+	text = {
+		trigger = { is_in_coalition_with_national_populist = yes }
+		localization_key = LEP_seat_mark_coalition
+	}
+	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
+		localization_key = LEP_seat_mark_banned
+	}
+	text = {
+		localization_key = LEP_seat_mark_none
+	}
+}
+
+### 执政联盟总席位：过半（≥138/274）绿、未过半红
+defined_text = {
+	name = LEP_seat_coalition_label
+	text = {
+		trigger = { check_variable = { LEP_coalition_seats > 137 } }
+		localization_key = LEP_seat_coalition_over
+	}
+	text = {
+		localization_key = LEP_seat_coalition_under
 	}
 }

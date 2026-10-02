@@ -472,6 +472,7 @@ unit_leader_event = { #商帮的支持
 		name = league_mid.7.a
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = LEP_rong_zongjing_advisor
@@ -516,6 +517,7 @@ unit_leader_event = { #黄郛南下
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
 		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		custom_effect_tooltip = tooltip_white_line
 		add_ideas = LEP_popular_support_0
 		hidden_effect = {
@@ -1700,6 +1702,10 @@ country_event = { #景星学会
 		log = "[GetLogInfo]: eventleague_mid.50 option league_mid.50.a"
 		name = league_mid.50.a
 		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.05
+		}
+		add_popularity = {
 			ideology = market_liberal
 			popularity = 0.03
 		}
@@ -1707,6 +1713,10 @@ country_event = { #景星学会
 			ideology = social_liberal
 			popularity = 0.03
 		}
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
+		
 	}
 
 	option = {
@@ -3120,6 +3130,7 @@ country_event = { #边缘派系的联合
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		custom_effect_tooltip = {
 			localization_key = tooltip_modify_dynmod
 			DYNMOD = LEP_conflict_and_struggle
@@ -3169,6 +3180,7 @@ country_event = { #进两步，退一步
 		}
 		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		add_popularity = {
 			ideology = paternal_autocrat
 			popularity = 0.15
@@ -3723,6 +3735,7 @@ country_event = { #全国选举
 		complete_national_focus = LEP_solidarity_union
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		mark_focus_tree_layout_dirty = yes
 	}
 

@@ -121,6 +121,7 @@ shared_focus = {
 			}
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 		else_if = {
 			limit = {
@@ -147,6 +148,7 @@ shared_focus = {
 			}
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -201,6 +203,7 @@ shared_focus = {
 			}
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 		else_if = {
 			limit = {
@@ -227,6 +230,7 @@ shared_focus = {
 			}
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 	}
 	search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
@@ -445,6 +449,7 @@ shared_focus = {
 		}
 		set_temp_variable = { coalition_partner_var = token:national_populist }
 		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		add_country_leader_role = {
 			character = country_leader
 			country_leader = {

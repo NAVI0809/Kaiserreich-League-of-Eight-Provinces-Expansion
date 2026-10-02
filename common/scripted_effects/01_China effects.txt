@@ -27,6 +27,9 @@ CSR_set_leader_effect = {
 	#南方共和派
 	custom_effect_tooltip = CSR_set_leader_tt
 	save_global_event_target_as = CSR_leader
+	# 声明阵营归属：把南方共和派角色写进 china_alignment 变量，
+	# 否则中国阵营面板的标题（[?country_leader:china_alignment.GetName]）取不到名字
+	china_set_character_alignment_chinese_southern_republican = yes
 }
 
 UPC_set_leader_effect = {
@@ -4316,6 +4319,21 @@ CHN_calculate_china_alignment_gui_effect = {
 		if = {
 			limit = { MAN = { is_ally_with = JAP } }
 			add_to_array = { RGC.china_alignment_members = THIS }
+		}
+	}
+
+	### Chinese Southern Republican (南方共和派) ###
+	# 它不是固定 tag，而是一种对齐状态：任何被标记该对齐的国家都可成为领袖
+	# （LEP 在民主政府成立后即进入此列）。故在此动态寻找当前领袖。
+	for_each_scope_loop = {
+		array = global.china_tags_array
+		if = {
+			limit = {
+				exists = yes
+				china_alignment_chinese_southern_republican = yes
+				is_subject = no
+			}
+			CHN_build_faction_alignment_array = yes
 		}
 	}
 

@@ -2444,3 +2444,7 @@ LEP_li_erkang_on_remove_tt: "§Y§c[LEP_national_autonomy_army_loc]改革§!相�
  LEP_seat_s7:0 "GFX_LEP_seat_p7"
  LEP_seat_s8:0 "GFX_LEP_seat_p8"
  LEP_seat_s9:0 "GFX_LEP_seat_p9"
+ chinese_southern_republican: "§G南方共和派§!"
+ china_alignment_chinese_southern_republican: "由§G南方共和派§!统治"
+ china_alignment_chinese_southern_republican_NOT: "不由§G南方共和派§!统治"
+ china_faction_tenets_southern_republicans: "南方共和派"

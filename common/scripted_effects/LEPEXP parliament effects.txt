@@ -237,6 +237,99 @@ LEP_do_count_seats = {
 	set_variable = { LEP_seat_n7 = s7 }
 	set_variable = { LEP_seat_n8 = s8 }
 	set_variable = { LEP_seat_n9 = s9 }
+
+	# ⑨ 执政联盟总席位：执政党 + 联盟伙伴。同一党只计一次（用 OR 合并两种身份）
+	set_variable = { LEP_coalition_seats = 0 }
+	if = {
+		limit = {
+			OR = {
+				has_government = totalist
+				is_in_coalition_with_totalist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n0 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = syndicalist
+				is_in_coalition_with_syndicalist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = radical_socialist
+				is_in_coalition_with_radical_socialist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n2 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_democrat
+				is_in_coalition_with_social_democrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n3 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_liberal
+				is_in_coalition_with_social_liberal = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n4 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = market_liberal
+				is_in_coalition_with_market_liberal = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n5 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_conservative
+				is_in_coalition_with_social_conservative = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n6 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = authoritarian_democrat
+				is_in_coalition_with_authoritarian_democrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n7 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = paternal_autocrat
+				is_in_coalition_with_paternal_autocrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n8 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = national_populist
+				is_in_coalition_with_national_populist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n9 }
+	}
 }
 
 ### ─────────────────────────────────────────────────────────

@@ -1531,6 +1531,7 @@ focus_tree = {
 			
 			set_temp_variable = { coalition_partner_var = token:social_democrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 			custom_effect_tooltip = tooltip_white_line
 			country_event = { id = league_mid.50 days = 0 }
 			custom_effect_tooltip = tooltip_white_line
@@ -5178,6 +5179,7 @@ focus_tree = {
 		completion_reward = {
 			set_temp_variable = { coalition_partner_var = token:radical_socialist }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 			add_ideas = LEP_social_revolution
 		}
 
@@ -5202,6 +5204,7 @@ focus_tree = {
 			add_ideas = LEP_demo_nego
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 
 	}
@@ -7111,6 +7114,7 @@ focus_tree = {
 			}
 			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
@@ -7148,6 +7152,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 			add_to_coalition = yes
+			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 			add_popularity = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
