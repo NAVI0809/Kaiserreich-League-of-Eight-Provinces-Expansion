@@ -1,0 +1,79 @@
+﻿ l_english:
+ 
+ lep_achievements: "League of Eight Provinces Expanded"
+ 
+ ### Titles and Conditions
+ 
+ LEP_unfinished_revolution_achievement_NAME: "The Unfinished Revolution"
+ LEP_unfinished_revolution_achievement_DESC: "As the League of Eight Provinces, establish the Nanjing Democratic Government and unify China."
+ LEP_unfinished_revolution_achievement_tooltip: "Has the Nanjing Democratic Government and has unified China."
+
+ LEP_loyal_opposition_achievement_NAME: "The Loyal Opposition"
+ LEP_loyal_opposition_achievement_DESC: "As the Nanjing Democratic Government, keep the government alive for over a year without a governing majority."
+ LEP_loyal_opposition_achievement_tooltip: "The Nanjing Democratic Government has stood for over a year with under 138 seats in the governing bloc."
+
+ LEP_hundred_schools_achievement_NAME: "A Hundred Schools"
+ LEP_hundred_schools_achievement_DESC: "As the Nanjing Democratic Government, give every ideology but Totalism a seat in the National Assembly."
+ LEP_hundred_schools_achievement_tooltip: "All nine contestable parties hold at least one seat."
+
+ LEP_bury_the_hatchet_achievement_NAME: "Bury the Hatchet"
+ LEP_bury_the_hatchet_achievement_DESC: "As the Nanjing Democratic Government, grant every demand in the negotiations with the Fujian-Jiangxi Kuomintang."
+ LEP_bury_the_hatchet_achievement_tooltip: "Accepted the broadest option on all three negotiation tracks."
+
+ LEP_second_revolution_achievement_NAME: "The Second Revolution"
+ LEP_second_revolution_achievement_DESC: "As the Nanjing Democratic Government, annex a rival Kuomintang national government."
+ LEP_second_revolution_achievement_tooltip: "A Kuomintang national government existed and has been annexed."
+
+ LEP_election_day_achievement_NAME: "Election Day"
+ LEP_election_day_achievement_DESC: "As the Nanjing Democratic Government, see the democratic path through to a new national election."
+ LEP_election_day_achievement_tooltip: "Completed the focus 'A New National Election'."
+
+ LEP_loyal_voter_achievement_NAME: "A Loyal Voter"
+ LEP_loyal_voter_achievement_DESC: "As the Nanjing Democratic Government, have the same party win both general elections."
+ LEP_loyal_voter_achievement_tooltip: "The same party won both general elections."
+
+ LEP_may_fourth_legacy_achievement_NAME: "May Fourth's Legacy"
+ LEP_may_fourth_legacy_achievement_DESC: "As the Nanjing Democratic Government, complete Chu Fucheng's path and achieve Peace, Democracy and Independence."
+ LEP_may_fourth_legacy_achievement_tooltip: "Completed the focus 'Peace, Democracy and Independence'."
+
+ LEP_return_to_the_origin_achievement_NAME: "Back to the Beginning"
+ LEP_return_to_the_origin_achievement_DESC: "As the Nanjing Democratic Government, complete Huang Fu's path and restore the constitutional spirit of 1912."
+ LEP_return_to_the_origin_achievement_tooltip: "Completed the focus 'The Founding Spirit Carried On'."
+
+ LEP_clothed_the_people_achievement_NAME: "Clothed the People"
+ LEP_clothed_the_people_achievement_DESC: "As the Nanjing Democratic Government, complete Rong Zongjing's path and keep politics and business clean."
+ LEP_clothed_the_people_achievement_tooltip: "Completed the focus 'Clean Hands in Politics and Business'."
+
+ LEP_scholars_take_office_achievement_NAME: "Scholars Take Office"
+ LEP_scholars_take_office_achievement_DESC: "As the Nanjing Democratic Government, complete Ma Xulun's path and open up China's third way."
+ LEP_scholars_take_office_achievement_tooltip: "Completed the focus 'China's Third Way'."
+
+ LEP_prussia_of_the_east_achievement_NAME: "Prussia of the East"
+ LEP_prussia_of_the_east_achievement_DESC: "As the Nanjing Democratic Government, complete Li Linsi's path and build a Bismarckian liberalism."
+ LEP_prussia_of_the_east_achievement_tooltip: "Completed the focus 'Bismarckian Liberalism'."
+
+ LEP_the_old_state_renewed_achievement_NAME: "The Old State Renewed"
+ LEP_the_old_state_renewed_achievement_DESC: "As the Nanjing Democratic Government, complete 'China Stands Majestically in the Cosmos' and bring all of Asia under your own, your puppets', or your allies' control."
+ LEP_the_old_state_renewed_achievement_tooltip: "Completed the focus, and every state in Asia is controlled by you, your subjects, or your allies."
+
+ LEP_rashomon_achievement_NAME: "Rashomon"
+ LEP_rashomon_achievement_DESC: "As the League of Eight Provinces, complete the investigation into Sun Chuanfang's assassination and reach any conclusion."
+ LEP_rashomon_achievement_tooltip: "The assassination investigation has reached its conclusion."
+
+ LEP_derailed_achievement_NAME: "Derailed"
+ LEP_derailed_achievement_DESC: "As the League of Eight Provinces, witness Qi Xieyuan's death in the explosion on the Zhejiang-Jiangxi railway."
+ LEP_derailed_achievement_tooltip: "Qi Xieyuan died on the rails, and the axis of power collapsed with him."
+
+ LEP_industrial_miracle_achievement_NAME: "Industrial Miracle"
+ LEP_industrial_miracle_achievement_DESC: "As the Nanjing Democratic Government, fill the construction progress bar to the top."
+ LEP_industrial_miracle_achievement_tooltip: "Construction progress has reached 100."
+
+ LEP_morale_maxed_achievement_NAME: "Morale Maxed"
+ LEP_morale_maxed_achievement_DESC: "As the League of Eight Provinces, push the civil war morale to its maximum."
+ LEP_morale_maxed_achievement_tooltip: "Civil war morale has reached 100."
+
+ LEP_desperate_army_wins_achievement_NAME: "The Desperate Win"
+ LEP_desperate_army_wins_achievement_DESC: "As the League of Eight Provinces, win the civil war with morale below 20."
+ LEP_desperate_army_wins_achievement_tooltip: "Won the League civil war with morale under 20."
+
+ LEP_ach_needs_lep: "Only available as the League of Eight Provinces."

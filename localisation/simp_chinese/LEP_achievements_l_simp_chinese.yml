@@ -1,0 +1,79 @@
+﻿ l_simp_chinese:
+ 
+ lep_achievements: "八省联合扩展"
+ 
+ ### Titles and Conditions
+ 
+ LEP_unfinished_revolution_achievement_NAME: "辛亥未竟之事"
+ LEP_unfinished_revolution_achievement_DESC: "作为八省联合，建立南京民主政府，并最终统一全国。"
+ LEP_unfinished_revolution_achievement_tooltip: "已建立南京民主政府，且已完成全国统一。"
+
+ LEP_loyal_opposition_achievement_NAME: "忠实的反对派"
+ LEP_loyal_opposition_achievement_DESC: "作为南京民主政府，在执政阵营席位不过半的情况下，让政府存续满一年。"
+ LEP_loyal_opposition_achievement_tooltip: "南京民主政府已存续一年以上，且执政阵营席位未达 138。"
+
+ LEP_hundred_schools_achievement_NAME: "百家争鸣"
+ LEP_hundred_schools_achievement_DESC: "作为南京民主政府，让国会里除总体主义之外的每一个意识形态都拿到席位。"
+ LEP_hundred_schools_achievement_tooltip: "除总体主义外的九个党派全部在国会中占有席位。"
+
+ LEP_bury_the_hatchet_achievement_NAME: "相逢一笑"
+ LEP_bury_the_hatchet_achievement_DESC: "作为南京民主政府，在与闽赣国民党的谈判中，政治、经济、军事三项全部答应到底。"
+ LEP_bury_the_hatchet_achievement_tooltip: "谈判中三项议程全部接受了对方的最宽方案。"
+
+ LEP_second_revolution_achievement_NAME: "二次革命"
+ LEP_second_revolution_achievement_DESC: "作为南京民主政府，将国民党左派或右派的全国政府彻底吞并。"
+ LEP_second_revolution_achievement_tooltip: "曾有一个国民党全国政府存在，且已被我方吞并。"
+
+ LEP_election_day_achievement_NAME: "投票日"
+ LEP_election_day_achievement_DESC: "作为南京民主政府，走完民主线，召开新一届全国大选。"
+ LEP_election_day_achievement_tooltip: "已完成国策“新一届全国大选”。"
+
+ LEP_loyal_voter_achievement_NAME: "从一而终"
+ LEP_loyal_voter_achievement_DESC: "作为南京民主政府，在解放北京后与统一全国后的两次大选中，都让同一个党派获胜。"
+ LEP_loyal_voter_achievement_tooltip: "两次大选由同一个党派胜出。"
+
+ LEP_may_fourth_legacy_achievement_NAME: "五四传承"
+ LEP_may_fourth_legacy_achievement_DESC: "作为南京民主政府，走完褚辅成一线，实现“和平、民主、独立”。"
+ LEP_may_fourth_legacy_achievement_tooltip: "已完成国策“和平、民主、独立”。"
+
+ LEP_return_to_the_origin_achievement_NAME: "返璞归真"
+ LEP_return_to_the_origin_achievement_DESC: "作为南京民主政府，走完黄郛一线，恢复民元宪政传统。"
+ LEP_return_to_the_origin_achievement_tooltip: "已完成国策“民元精神之传承”。"
+
+ LEP_clothed_the_people_achievement_NAME: "衣被苍生"
+ LEP_clothed_the_people_achievement_DESC: "作为南京民主政府，走完荣宗敬一线，做到政商清明。"
+ LEP_clothed_the_people_achievement_tooltip: "已完成国策“政商清明”。"
+
+ LEP_scholars_take_office_achievement_NAME: "学而优则仕"
+ LEP_scholars_take_office_achievement_DESC: "作为南京民主政府，走完马叙伦一线，开辟中国的第三道路。"
+ LEP_scholars_take_office_achievement_tooltip: "已完成国策“中国的第三道路”。"
+
+ LEP_prussia_of_the_east_achievement_NAME: "东方普鲁士"
+ LEP_prussia_of_the_east_achievement_DESC: "作为南京民主政府，走完厉麟似一线，建成俾斯麦式的自由主义。"
+ LEP_prussia_of_the_east_achievement_tooltip: "已完成国策“俾斯麦式自由主义”。"
+
+ LEP_the_old_state_renewed_achievement_NAME: "旧邦新命"
+ LEP_the_old_state_renewed_achievement_DESC: "作为南京民主政府，完成“中华雄立宇宙间”，并让整个亚洲处于我方、傀儡或盟友的控制之下。"
+ LEP_the_old_state_renewed_achievement_tooltip: "已完成国策“中华雄立宇宙间”，且亚洲全境均在我方阵营控制之下。"
+
+ LEP_rashomon_achievement_NAME: "罗生门"
+ LEP_rashomon_achievement_DESC: "作为八省联合，完成孙传芳遇刺案的调查，得出任何一种结论。"
+ LEP_rashomon_achievement_tooltip: "刺杀案的调查已得出最终结论。"
+
+ LEP_derailed_achievement_NAME: "崩坏铁道"
+ LEP_derailed_achievement_DESC: "作为八省联合，见证齐燮元死于浙赣铁路上的那次爆炸。"
+ LEP_derailed_achievement_tooltip: "齐燮元已命丧铁道，权力的轴心随之崩塌。"
+
+ LEP_industrial_miracle_achievement_NAME: "工业奇迹"
+ LEP_industrial_miracle_achievement_DESC: "作为南京民主政府，把建设积累推满。"
+ LEP_industrial_miracle_achievement_tooltip: "建设积累已达 100。"
+
+ LEP_morale_maxed_achievement_NAME: "士气如虹"
+ LEP_morale_maxed_achievement_DESC: "作为八省联合，把内战士气打到满值。"
+ LEP_morale_maxed_achievement_tooltip: "内战士气已达 100。"
+
+ LEP_desperate_army_wins_achievement_NAME: "哀兵必胜"
+ LEP_desperate_army_wins_achievement_DESC: "作为八省联合，在内战士气不足 20 的情况下赢下内战。"
+ LEP_desperate_army_wins_achievement_tooltip: "在士气低于 20 时赢得了联军内战。"
+
+ LEP_ach_needs_lep: "仅八省联合可获得。"

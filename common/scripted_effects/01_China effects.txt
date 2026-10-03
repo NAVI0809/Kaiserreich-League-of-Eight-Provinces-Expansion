@@ -355,10 +355,14 @@ set_potential_national_government = {
 		else_if = {
 			limit = { china_alignment_right_kuomintang = yes }
 			RKT_set_leader_effect = yes
+			save_global_event_target_as = LEP_rkt_gov		# 二次革命成就：记录国民党右派全国政府
+			set_global_flag = LEP_rkt_gov_existed
 		}
 		else_if = {
 			limit = { china_alignment_left_kuomintang = yes }
 			LKT_set_leader_effect = yes
+			save_global_event_target_as = LEP_lkt_gov		# 二次革命成就：记录国民党左派全国政府
+			set_global_flag = LEP_lkt_gov_existed
 		}
 		else_if = {
 			limit = { china_alignment_chinese_southern_republican = yes }
@@ -583,6 +587,11 @@ LEP_league_war_find_victor = {
 		limit = { has_variable = LEP.LEP_league_war_victor }
 		set_global_flag = LEP_league_war_over
 		clr_global_flag = LEP_war
+		# 哀兵必胜成就：内战结束时士气仍在低谷
+		if = {
+			limit = { LEP = { check_variable = { china_league_war_morale < 20 } } }
+			LEP = { set_country_flag = LEP_won_while_desperate }
+		}
 		ANQ = {
 			LEP_remove_collapse_dm = yes
 		}

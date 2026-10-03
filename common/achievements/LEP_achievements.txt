@@ -1,0 +1,730 @@
+unique_id = lep_achievements
+
+### 八省联合扩展 · 成就
+### 命名风格对齐 KR 原有成就：典故化用、双关、贴着史实的具体意象
+### possible 限定 original_tag = LEP；happened 的三段式与 KR 一致
+
+LEP_unfinished_revolution_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_unfinished_revolution_achievement_tooltip
+				has_country_flag = LEP_dem_gov
+				has_country_flag = LEP_dem_national_stage
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_loyal_opposition_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_loyal_opposition_achievement_tooltip
+				has_country_flag = { flag = LEP_dem_gov days > 365 }
+				check_variable = { LEP_coalition_seats < 138 }
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_hundred_schools_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_hundred_schools_achievement_tooltip
+				check_variable = { LEP_seat_n1 > 0 }
+				check_variable = { LEP_seat_n2 > 0 }
+				check_variable = { LEP_seat_n3 > 0 }
+				check_variable = { LEP_seat_n4 > 0 }
+				check_variable = { LEP_seat_n5 > 0 }
+				check_variable = { LEP_seat_n6 > 0 }
+				check_variable = { LEP_seat_n7 > 0 }
+				check_variable = { LEP_seat_n8 > 0 }
+				check_variable = { LEP_seat_n9 > 0 }
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_bury_the_hatchet_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_bury_the_hatchet_achievement_tooltip
+				has_country_flag = LEP_lkmt_politic_flag_3
+				has_country_flag = LEP_lkmt_econ_flag_3
+				has_country_flag = LEP_lkmt_mili_flag_3
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_second_revolution_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_second_revolution_achievement_tooltip
+				has_country_flag = LEP_dem_gov
+				OR = {
+					AND = {
+						has_global_flag = LEP_lkt_gov_existed
+						NOT = { event_target:LEP_lkt_gov = { exists = yes } }
+					}
+					AND = {
+						has_global_flag = LEP_rkt_gov_existed
+						NOT = { event_target:LEP_rkt_gov = { exists = yes } }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_election_day_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_election_day_achievement_tooltip
+				has_completed_focus = LEP_new_election
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_loyal_voter_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_loyal_voter_achievement_tooltip
+				has_country_flag = LEP_voted_same_twice
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_may_fourth_legacy_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_may_fourth_legacy_achievement_tooltip
+				has_completed_focus = LEP_peace_democracy_independence
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_return_to_the_origin_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_return_to_the_origin_achievement_tooltip
+				has_completed_focus = LEP_continuation_of_the_founding_republican_spirit
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_clothed_the_people_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_clothed_the_people_achievement_tooltip
+				has_completed_focus = LEP_upright_in_politics_and_business
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_scholars_take_office_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_scholars_take_office_achievement_tooltip
+				has_completed_focus = LEP_chinas_third_way
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_prussia_of_the_east_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_prussia_of_the_east_achievement_tooltip
+				has_completed_focus = LEP_bismarckian_liberalism
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_the_old_state_renewed_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_the_old_state_renewed_achievement_tooltip
+				has_completed_focus = LEP_China_Stands_Majestically_in_the_Cosmos
+				NOT = {
+					any_state = {
+						is_on_continent = asia
+						NOT = {
+							OR = {
+								is_controlled_by = ROOT
+								controller = { is_subject_of = ROOT }
+								controller = { is_in_faction_with = ROOT }
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_rashomon_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_rashomon_achievement_tooltip
+				OR = {
+					has_country_flag = LEP_sun_investigation_northern_zhili_guilty
+					has_country_flag = LEP_sun_investigation_kuomintang_guilty
+					has_country_flag = LEP_sun_investigation_chen_man_guilty
+					has_country_flag = LEP_sun_investigation_woman_revenge_guilty
+					has_country_flag = LEP_sun_investigation_suns_associate_guilty
+					has_country_flag = LEP_sun_investigation_germans_guilty
+				}
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_derailed_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_derailed_achievement_tooltip
+				has_country_flag = LEP_qi_killed_on_rails
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_industrial_miracle_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_industrial_miracle_achievement_tooltip
+				check_variable = { LEP_construction_var > 99 }
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_morale_maxed_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_morale_maxed_achievement_tooltip
+				check_variable = { china_league_war_morale > 99 }
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}
+
+LEP_desperate_army_wins_achievement = {
+	possible = {
+		custom_override_tooltip = {
+			tooltip = LEP_ach_needs_lep
+			original_tag = LEP
+		}
+	}
+
+	happened = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = disallow_achievements_flag }
+				OR = {
+					NOT = { has_global_flag = on_startup_completed }
+					is_ai = no
+				}
+			}
+			custom_override_tooltip = {
+				tooltip = LEP_desperate_army_wins_achievement_tooltip
+				has_country_flag = LEP_won_while_desperate
+			}
+		}
+		else_if = {
+			limit = { has_global_flag = disallow_achievements_flag }
+			custom_override_tooltip = {
+				tooltip = achievements_disabled
+				always = no
+			}
+		}
+		else = {
+			custom_override_tooltip = {
+				tooltip = achievements_disabled_observer
+				always = no
+			}
+		}
+	}
+}

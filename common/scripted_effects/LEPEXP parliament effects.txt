@@ -181,62 +181,83 @@ LEP_do_count_seats = {
 	# ⑦ 逐席填帧
 	clear_array = LEP_seat_party
 	set_temp_variable = { si = 0 }
+	# 同时统计每党实际拿到的席位数（整数），避免浮点四舍五入导致总和 ≠ 274
+	set_temp_variable = { c0 = 0 }
+	set_temp_variable = { c1 = 0 }
+	set_temp_variable = { c2 = 0 }
+	set_temp_variable = { c3 = 0 }
+	set_temp_variable = { c4 = 0 }
+	set_temp_variable = { c5 = 0 }
+	set_temp_variable = { c6 = 0 }
+	set_temp_variable = { c7 = 0 }
+	set_temp_variable = { c8 = 0 }
+	set_temp_variable = { c9 = 0 }
 	while_loop_effect = {
 		limit = { check_variable = { si < 274 } }
 		if = {
 			limit = { check_variable = { si < b0 } }
 			add_to_array = { LEP_seat_party = 0 }
+			add_to_temp_variable = { c0 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b1 } }
 			add_to_array = { LEP_seat_party = 1 }
+			add_to_temp_variable = { c1 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b2 } }
 			add_to_array = { LEP_seat_party = 2 }
+			add_to_temp_variable = { c2 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b3 } }
 			add_to_array = { LEP_seat_party = 3 }
+			add_to_temp_variable = { c3 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b4 } }
 			add_to_array = { LEP_seat_party = 4 }
+			add_to_temp_variable = { c4 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b5 } }
 			add_to_array = { LEP_seat_party = 5 }
+			add_to_temp_variable = { c5 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b6 } }
 			add_to_array = { LEP_seat_party = 6 }
+			add_to_temp_variable = { c6 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b7 } }
 			add_to_array = { LEP_seat_party = 7 }
+			add_to_temp_variable = { c7 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b8 } }
 			add_to_array = { LEP_seat_party = 8 }
+			add_to_temp_variable = { c8 = 1 }
 		}
 		else_if = {
 			limit = { check_variable = { si < b9 } }
 			add_to_array = { LEP_seat_party = 9 }
+			add_to_temp_variable = { c9 = 1 }
 		}
 		add_to_temp_variable = { si = 1 }
 	}
 
-	# ⑧ 调试：把各党席位数列出来（面板底部会显示），确认无误后可删
-	set_variable = { LEP_seat_n0 = s0 }
-	set_variable = { LEP_seat_n1 = s1 }
-	set_variable = { LEP_seat_n2 = s2 }
-	set_variable = { LEP_seat_n3 = s3 }
-	set_variable = { LEP_seat_n4 = s4 }
-	set_variable = { LEP_seat_n5 = s5 }
-	set_variable = { LEP_seat_n6 = s6 }
-	set_variable = { LEP_seat_n7 = s7 }
-	set_variable = { LEP_seat_n8 = s8 }
-	set_variable = { LEP_seat_n9 = s9 }
+	# ⑧ 各党实际席位数（整数，总和恒为 274）
+	set_variable = { LEP_seat_n0 = c0 }
+	set_variable = { LEP_seat_n1 = c1 }
+	set_variable = { LEP_seat_n2 = c2 }
+	set_variable = { LEP_seat_n3 = c3 }
+	set_variable = { LEP_seat_n4 = c4 }
+	set_variable = { LEP_seat_n5 = c5 }
+	set_variable = { LEP_seat_n6 = c6 }
+	set_variable = { LEP_seat_n7 = c7 }
+	set_variable = { LEP_seat_n8 = c8 }
+	set_variable = { LEP_seat_n9 = c9 }
 
 	# ⑨ 执政联盟总席位：执政党 + 联盟伙伴。同一党只计一次（用 OR 合并两种身份）
 	set_variable = { LEP_coalition_seats = 0 }

@@ -359,6 +359,7 @@ unit_leader_event = { #民主政变
 		log = "[GetLogInfo]: event league_mid.4 option league_mid.4.a"
 		name = league_mid.4.a
 		LEP_qi_xieyuan = { kill_character = yes }
+		set_country_flag = LEP_qi_killed_on_rails	# 崩坏铁道成就
 		custom_effect_tooltip = tooltip_white_line
 		set_politics = {
 			ruling_party = social_liberal
@@ -3590,6 +3591,7 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.8 option league_national.8.a"
 		name = league_national.8.a
+		set_variable = { LEP_first_vote = 4 }
 		set_politics = {
 			ruling_party = social_liberal
 			election_frequency = 48
@@ -3608,6 +3610,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event league_national.8 option league_national.8.b"
 		name = league_national.8.b
+		set_variable = { LEP_first_vote = 5 }
 		set_politics = {
 			ruling_party = market_liberal
 			election_frequency = 48
@@ -3625,6 +3628,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event league_national.8 option league_national.8.c"
 		name = league_national.8.c
+		set_variable = { LEP_first_vote = 6 }
 		set_politics = {
 			ruling_party = social_conservative
 			election_frequency = 48
@@ -3675,6 +3679,10 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.a"
 		name = league_national.10.a
+		if = {
+			limit = { check_variable = { LEP_first_vote = 4 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		set_politics = {
 			ruling_party = social_liberal
 			election_frequency = 48
@@ -3690,6 +3698,10 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.b"
 		name = league_national.10.b
+		if = {
+			limit = { check_variable = { LEP_first_vote = 5 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		set_politics = {
 			ruling_party = market_liberal
 			election_frequency = 48
@@ -3705,6 +3717,10 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.c"
 		name = league_national.10.c
+		if = {
+			limit = { check_variable = { LEP_first_vote = 6 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		
 		set_politics = {
 			ruling_party = social_conservative
