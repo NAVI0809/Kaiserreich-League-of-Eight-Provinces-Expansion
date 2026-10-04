@@ -54,6 +54,7 @@ LEPEXP_DEBUG_CAT = {
 
 		complete_effect = {
 			set_country_flag = LEP_dem_gov
+		set_country_flag = { flag = LEP_dem_gov_yr days = 366 value = 1 }	# 忠实的反对派：满一年后自动过期
 			mark_focus_tree_layout_dirty = yes
 		}
 	}

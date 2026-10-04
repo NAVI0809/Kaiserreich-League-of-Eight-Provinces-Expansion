@@ -362,8 +362,16 @@ LEP_do_count_seats = {
 ### 全 mod 的调用点都走这里，故各调用点无需关心顺序问题。
 ### ─────────────────────────────────────────────────────────
 LEP_hold_election_seats = {
+	# 席位结算延迟一天（避免同帧读到旧的 party_popularity）。
+	# 触发过程藏进 hidden_effect，界面上不露「将触发某事件」；改由下面一行统一提示。
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = LEP_seat_enabled }
+			country_event = { id = LEP_seat_recount.1 days = 1 }
+		}
+	}
 	if = {
 		limit = { has_country_flag = LEP_seat_enabled }
-		country_event = { id = LEP_seat_recount.1 days = 1 }
+		custom_effect_tooltip = LEP_seat_recount_tt
 	}
 }

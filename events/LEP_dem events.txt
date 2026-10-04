@@ -412,6 +412,7 @@ unit_leader_event = { #民主政变
 				unit_leader_event = { id = league_mid.7 days = 1 }
 			}
 			set_country_flag = LEP_dem_gov
+		set_country_flag = { flag = LEP_dem_gov_yr days = 366 value = 1 }	# 忠实的反对派：满一年后自动过期
 			clear_global_event_target = SZH_leader
 			CSR_set_leader_effect = yes
 		}
@@ -1846,6 +1847,17 @@ country_event = { #谈判成功
 		LEP_lkmt_conference_result_effect = yes
 		custom_effect_tooltip = tooltip_dash_line
 		LEP_lkmt_troops_effect = yes
+
+		# 相逢一笑成就：三项议程全部答应到底。在这里（结算事件）才盖章，
+		# 避免玩家刚选完第三项、谈判还没结算成就就提前判达成。
+		if = {
+			limit = {
+				has_country_flag = LEP_lkmt_politic_flag_3
+				has_country_flag = LEP_lkmt_econ_flag_3
+				has_country_flag = LEP_lkmt_mili_flag_3
+			}
+			set_country_flag = LEP_bury_the_hatchet_sealed
+		}
 	}
 }
 

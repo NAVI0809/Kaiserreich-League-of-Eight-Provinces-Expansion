@@ -4332,18 +4332,13 @@ CHN_calculate_china_alignment_gui_effect = {
 	}
 
 	### Chinese Southern Republican (南方共和派) ###
-	# 它不是固定 tag，而是一种对齐状态：任何被标记该对齐的国家都可成为领袖
-	# （LEP 在民主政府成立后即进入此列）。故在此动态寻找当前领袖。
-	for_each_scope_loop = {
-		array = global.china_tags_array
-		if = {
-			limit = {
-				exists = yes
-				china_alignment_chinese_southern_republican = yes
-				is_subject = no
-			}
-			CHN_build_faction_alignment_array = yes
-		}
+	# 它不是固定 tag，而是一种对齐状态 —— 有多个国家可能声明该对齐（ANQ/GXC/HNN/LEP/SHD/SHX/SZC/YUN
+	# 在 set_potential_national_government 里各自 declare）。但面板上只应出现"领袖"那一个：
+	# 领袖 = 真正成为全国政府、调用过 CSR_set_leader_effect 的那个国家（它把它自己存成了
+	# global event target `CSR_leader`）。所以这里只取 CSR_leader，不再遍历全部对齐国。
+	if = {
+		limit = { event_target:CSR_leader = { exists = yes } }
+		event_target:CSR_leader = { CHN_build_faction_alignment_array = yes }
 	}
 
 	### Build non-aligned tag array ###

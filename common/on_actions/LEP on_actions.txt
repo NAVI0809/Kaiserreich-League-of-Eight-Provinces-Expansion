@@ -1,0 +1,23 @@
+on_actions = {
+
+	# LEPEXP：德属东亚（GEA）的志愿军限制。
+	# KR 原版把 GEA 的这套限制整段注释掉了（见 on_actions_South_East_Asia.txt 第 7~12 行，
+	# 注释称 add_relation_rule_override 对动态 tag 不工作），结果 GEA 全无约束、连民主化的
+	# 中国都会派志愿军。这里照 MAF 的 MAF_restrict_volunteers_to_africa 范式重建：
+	# 默认禁止派志愿军，再对「未民主化的亚洲/澳洲国家」逐个开绿灯。
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = GEA }
+				GEA = {
+					set_rule = { can_send_volunteers = no }
+					add_relation_rule_override = {
+						can_send_volunteers = yes
+						trigger = GEA_can_send_volunteers_to_target
+						usage_desc = GEA_can_send_volunteers_to_target_tt
+					}
+				}
+			}
+		}
+	}
+}

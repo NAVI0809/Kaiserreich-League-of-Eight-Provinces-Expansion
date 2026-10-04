@@ -24,7 +24,7 @@ LEP_unfinished_revolution_achievement = {
 			custom_override_tooltip = {
 				tooltip = LEP_unfinished_revolution_achievement_tooltip
 				has_country_flag = LEP_dem_gov
-				has_country_flag = LEP_dem_national_stage
+				has_completed_decision = china_declare_unification
 			}
 		}
 		else_if = {
@@ -62,7 +62,8 @@ LEP_loyal_opposition_achievement = {
 			}
 			custom_override_tooltip = {
 				tooltip = LEP_loyal_opposition_achievement_tooltip
-				has_country_flag = { flag = LEP_dem_gov days > 365 }
+				has_country_flag = LEP_dem_gov
+				NOT = { has_country_flag = LEP_dem_gov_yr }   # 该 flag 满 366 天自动过期 = 满一年
 				check_variable = { LEP_coalition_seats < 138 }
 			}
 		}
@@ -147,9 +148,7 @@ LEP_bury_the_hatchet_achievement = {
 			}
 			custom_override_tooltip = {
 				tooltip = LEP_bury_the_hatchet_achievement_tooltip
-				has_country_flag = LEP_lkmt_politic_flag_3
-				has_country_flag = LEP_lkmt_econ_flag_3
-				has_country_flag = LEP_lkmt_mili_flag_3
+				has_country_flag = LEP_bury_the_hatchet_sealed
 			}
 		}
 		else_if = {
