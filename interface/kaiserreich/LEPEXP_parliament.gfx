@@ -43,4 +43,30 @@ spriteTypes = {
 		name = "GFX_LEP_seat_button"
 		texturefile = "gfx/interface/parliament/LEP_seat_button.png"
 	}
+
+	### ── 国会席位对比条（仿原版 balance of power 外观）────────────────────
+	### 填充为 28 帧横向拼图：第 i 帧 = 从左起 (i+1)/28 的填充，GUI 用 frame = LEP_seat_bar_frame 切帧。
+	spriteType = {
+		name = "GFX_LEP_seat_bar_majority"
+		texturefile = "gfx/interface/parliament/LEP_seat_bar_majority.dds"
+		noOfFrames = 29
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_minority"
+		texturefile = "gfx/interface/parliament/LEP_seat_bar_minority.dds"
+		noOfFrames = 29
+	}
+	# 以下三个直接复用游戏本体的 bop 素材
+	spriteType = {
+		name = "GFX_LEP_seat_bar_bg"
+		texturefile = "gfx/interface/bop/bop_bar_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_frame"
+		texturefile = "gfx/interface/bop/bop_bar_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_needle"
+		texturefile = "gfx/interface/bop/bop_needle.dds"
+	}
 }

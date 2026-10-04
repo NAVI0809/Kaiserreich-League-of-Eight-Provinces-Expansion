@@ -124,17 +124,93 @@ guiTypes = {
 		position = { x = 0 y = 0 }
 		size = { width = 100% height = 620 }
 
-		# 只作装饰的议会徽章（原来那个「显示/隐藏已通过法案」的按钮已取消，列表常显）
+		# 装饰性议会徽章 —— 已让位给上方的席位条，移到条下方并与「已通过法案」同行
 		iconType = {
 			name = "parliament_button"
 			spriteType = "GFX_goal_generic_parliament"
-			position = { x = 6 y = 4 }
-			scale = 0.85
+			position = { x = 20 y = 80 }
+			scale = 0.5
+		}
+
+
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观；放在徽章与标题下方、法案列表上方）──
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观）──
+		# 放在徽章右侧：徽章实际占 x=6~60，所以整体从 x=70 起，避免压字。
+		# frame 由 scripted_gui 的 properties 段给（GUI 里直接写 frame=变量 取不到值）。
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观）──
+		# 窗口宽 490、条 360 → 容器 x = (490-360)/2 = 65，整块居中。
+		# 容器宽收成 360，内部元素一律贴齐条的左右边缘。
+		containerWindowType = {
+			name = "LEP_seat_bar_container"
+			position = { x = 65 y = 6 }
+			size = { width = 360 height = 62 }
+			clipping = yes
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_title"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				text = "LEP_seat_bar_title"
+				maxWidth = 180
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_numbers"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				text = "[LEP_GetSeatBarNumbers]"
+				maxWidth = 360
+				maxHeight = 18
+				format = right
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_bg"
+				spriteType = "GFX_LEP_seat_bar_bg"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_fill_minority"
+				spriteType = "GFX_LEP_seat_bar_minority"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_fill_majority"
+				spriteType = "GFX_LEP_seat_bar_majority"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_needle"
+				spriteType = "GFX_LEP_seat_bar_needle"
+				position = { x = 170 y = 18 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_frame_icon"
+				spriteType = "GFX_LEP_seat_bar_frame"
+				position = { x = -4 y = 22 }
+			}
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_scale"
+				position = { x = 0 y = 44 }
+				font = "hoi_16mbs"
+				text = "LEP_seat_bar_scale"
+				maxWidth = 360
+				maxHeight = 16
+				format = center
+			}
 		}
 
 		instantTextBoxType = {
 			name = "LEP_passed_laws_title"
-			position = { x = 108 y = 30 }
+			# 与徽章同行，位置比席位条再靠左下一些
+			position = { x = 72 y = 84 }
 			font = "hoi_24header"
 			text = "LEP_passed_laws_title"
 			maxWidth = 300
@@ -145,8 +221,8 @@ guiTypes = {
 		# 承接 gridbox 的容器：滚动条挂这里，只滚列表，不会带着按钮一起滚
 		containerWindowType = {
 			name = "LEP_passed_laws_container"
-			position = { x = 6 y = 98 }
-			size = { width = 490 height = 300 }
+			position = { x = 6 y = 118 }
+			size = { width = 490 height = 290 }
 			margin = { top = 6 bottom = 6 }
 			Orientation = upper_left
 			verticalScrollbar = "right_vertical_slider"

@@ -1,4 +1,35 @@
 on_actions = {    
+
+	# ── 少数派政府：只负责「显示用」的天数递减 ─────────────────────
+	# 真正的 30 天扣罚循环由 mission（LEP_minority_government_timer）承担；
+	# 这里仅维护 LEP_minority_days 供界面显示（mission 的剩余时间引擎读不到）。
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = LEP_minority_gov
+					check_variable = { LEP_coalition_seats < 138 }
+				}
+				subtract_from_variable = { LEP_minority_days = 1 }
+				if = {
+					limit = { check_variable = { LEP_minority_days < 1 } }
+					set_variable = { LEP_minority_days = 30 }
+				}
+			}
+
+			# 席位条档位兜底：读旧档时变量可能还不存在，这里每天补算一次（很轻）
+			if = {
+				limit = { has_country_flag = LEP_seat_enabled }
+				set_variable = { LEP_seat_bar_frame = LEP_coalition_seats }
+				multiply_variable = { LEP_seat_bar_frame = 28 }
+				divide_variable = { LEP_seat_bar_frame = 274 }
+				round_variable = LEP_seat_bar_frame
+				if = { limit = { check_variable = { LEP_seat_bar_frame > 28 } } set_variable = { LEP_seat_bar_frame = 28 } }
+				if = { limit = { check_variable = { LEP_seat_bar_frame < 0 } } set_variable = { LEP_seat_bar_frame = 0 } }
+			}
+		}
+	}
+
     on_state_control_changed = {
 		effect = {
 			if = {

@@ -477,3 +477,11 @@ defined_text = {
 		localization_key = ""
 	}
 }
+
+### ── 席位条：右上角的「121 / 274（过半需 138）」 ──
+defined_text = {
+	name = LEP_GetSeatBarNumbers
+	text = {
+		localization_key = LEP_seat_bar_numbers_fmt
+	}
+}

@@ -880,10 +880,23 @@ country_event = { #陈炯明加入我方
 		UPC = {
 			set_cosmetic_tag = GXC_UPC_warlord_cosmetic
 		}
+		# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_act_will_pass_tt
+		}
+		else = {
+			custom_effect_tooltip = LEP_act_will_block_tt
+		}
+		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_provincial_authority_act_tt
 		custom_effect_tooltip = tooltip_white_line
-		custom_effect_tooltip = LEP_when_act_pass
-		add_ideas = LEP_provincial_authority_act_idea
+		# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_provincial_authority_act_idea
+		}
 		hidden_effect = {
 			activate_targeted_decision = { target = LEP decision = LEP_provincial_authority_act }
 		}
@@ -1136,6 +1149,26 @@ country_event = { #成立各部门
 
     option = {
 		log = "[GetLogInfo]: eventleague_mid.30 option league_mid.30.a"
+		# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_act_will_pass_tt
+		}
+		else = {
+			custom_effect_tooltip = LEP_act_will_block_tt
+		}
+		custom_effect_tooltip = tooltip_white_line
+		
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEP_organization_act_tt
+		# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_organization_act_idea
+		}
+		custom_effect_tooltip = tooltip_white_line
+		LEP_strengthen_ZZH_small = yes
 		name = league_mid.30.a
 		add_political_power = 10
 	}
@@ -3447,10 +3480,23 @@ country_event = { #政团管理法
 			popularity = 0.03
 		}
 		custom_effect_tooltip = tooltip_white_line
+		# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_act_will_pass_tt
+		}
+		else = {
+			custom_effect_tooltip = LEP_act_will_block_tt
+		}
+		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_political_association_management_act_tt
 		custom_effect_tooltip = tooltip_white_line
-		custom_effect_tooltip = LEP_when_act_pass
-		add_ideas = LEP_political_association_management_act_idea_1
+		# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_political_association_management_act_idea_1
+		}
 		hidden_effect = {
 			activate_targeted_decision = { target = LEP decision = LEP_political_association_management_act }
 		}
@@ -3471,10 +3517,23 @@ country_event = { #政团管理法
 			popularity = 0.03
 		}
 		custom_effect_tooltip = tooltip_white_line
+		# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_act_will_pass_tt
+		}
+		else = {
+			custom_effect_tooltip = LEP_act_will_block_tt
+		}
+		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_political_association_management_act_tt
 		custom_effect_tooltip = tooltip_white_line
-		custom_effect_tooltip = LEP_when_act_pass
-		add_ideas = LEP_political_association_management_act_idea_2
+		# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+		if = {
+			limit = { check_variable = { LEP_coalition_seats > 137 } }
+			custom_effect_tooltip = LEP_when_act_pass
+			add_ideas = LEP_political_association_management_act_idea_2
+		}
 		hidden_effect = {
 			activate_targeted_decision = { target = LEP decision = LEP_political_association_management_act }
 		}

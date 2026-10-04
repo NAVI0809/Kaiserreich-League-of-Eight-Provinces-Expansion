@@ -658,11 +658,24 @@ focus_tree = {
 
 		}
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_organization_act_tt
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_organization_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_organization_act_idea
+			}
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
@@ -1168,9 +1181,22 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_civil_service_act_tt
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_civil_service_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_civil_service_act_idea
+			}
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
@@ -1229,10 +1255,23 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_provincial_county_organization_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_provincial_county_organization_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_provincial_county_organization_act_idea
+			}
 			LEP_strengthen_ZXX_small = yes
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
@@ -1289,10 +1328,23 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_factory_inspection_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_factory_inspection_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_factory_inspection_act_idea
+			}
 			LEP_strengthen_JNSB_large = yes
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_factory_inspection_act }
@@ -1313,10 +1365,23 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_mass_layoff_protection_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_mass_layoff_protection_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_mass_layoff_protection_act_idea
+			}
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_mass_layoff_protection_act }
@@ -1387,10 +1452,23 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_compulsory_education_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_compulsory_education_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_compulsory_education_act_idea
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = LEP_jing_yaoyue_advisor
 			custom_effect_tooltip = tooltip_white_line
@@ -2757,6 +2835,15 @@ focus_tree = {
 		}
 		relative_position_id = LEP_united_democratic_alliance
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = syndicalist
 				popularity = 0.03
@@ -2772,8 +2859,12 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_factory_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_factory_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_factory_act_idea
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_factory_act }	
 			}
@@ -2860,6 +2951,15 @@ focus_tree = {
 		}
 		relative_position_id = LEP_new_beiyang_faction
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_stability = 0.05
 			add_popularity = {
 				ideology = social_conservative
@@ -2876,8 +2976,12 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_company_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_company_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_company_act_idea
+			}
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
 				days = -100
@@ -3502,10 +3606,23 @@ focus_tree = {
 		}
 		relative_position_id = LEP_restore_infrastructure
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_land_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_land_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_land_act_idea
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_land_act }
 			}
@@ -3544,6 +3661,15 @@ focus_tree = {
 		}
 		relative_position_id = LEP_empower_the_supreme_judicial_court
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = radical_socialist
 				popularity = 0.03
@@ -3559,8 +3685,12 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_social_security_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_social_security_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_social_security_act_idea
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_social_security_act }	
 			}
@@ -3705,6 +3835,15 @@ focus_tree = {
 		}
 		relative_position_id = LEP_maintain_production_order
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = social_conservative
 				popularity = 0.03
@@ -3720,8 +3859,12 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			custom_effect_tooltip = LEP_collective_agreement_act_tt
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_when_act_pass
-			add_ideas = LEP_collective_agreement_act_idea
+			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_collective_agreement_act_idea
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_collective_agreement_act }
 			}

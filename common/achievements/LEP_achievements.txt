@@ -24,7 +24,7 @@ LEP_unfinished_revolution_achievement = {
 			custom_override_tooltip = {
 				tooltip = LEP_unfinished_revolution_achievement_tooltip
 				has_country_flag = LEP_dem_gov
-				has_completed_decision = china_declare_unification
+				has_country_flag = LEP_the_unifier   # 统一决议 complete_effect 盖章（见 01 China decisions.txt）
 			}
 		}
 		else_if = {

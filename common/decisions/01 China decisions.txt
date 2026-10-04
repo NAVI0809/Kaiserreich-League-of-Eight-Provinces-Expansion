@@ -1836,6 +1836,9 @@ chinese_unification = {
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete china_declare_unification"
 			set_global_flag = china_united
+			# LEPEXP：「辛亥未竟之事」成就的判据。complete_effect 跑在**统一者本人**的 scope 里，
+			# 所以这个 flag 一定盖在统一者身上 —— 比通用的 china_united 精确得多（后者谁统一都会被设）。
+			set_country_flag = LEP_the_unifier
 			set_country_flag = {
 				flag = CHN_delay_integrating_subjects_flag #Delay tags integrating their subjects for a year just to allow any endgame event chains to play out.
 				days = 365

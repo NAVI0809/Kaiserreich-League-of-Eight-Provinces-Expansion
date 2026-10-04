@@ -81,9 +81,20 @@ scripted_gui = {
 				set_variable = { LEP_law_detail = 14 }
 			}
 
+
 			# ✕ = 清除内容：清空所选法案，详情区回到提示语
 			LEP_law_detail_close_click = {
 				set_variable = { LEP_law_detail = 0 }
+			}
+		}
+
+		# 多帧贴图取第几帧：必须走 properties（照原文件里那段被注释的 LEP_law_icon 示例）
+		properties = {
+			LEP_seat_bar_fill_minority = {
+				frame = LEP_seat_bar_frame
+			}
+			LEP_seat_bar_fill_majority = {
+				frame = LEP_seat_bar_frame
 			}
 		}
 
@@ -105,6 +116,22 @@ scripted_gui = {
 		#}
 
 		triggers = {
+			# 席位条：分类可见时就有（席位由 LEP_provisional_senate 开启）；两套填充按过半与否切换
+			LEP_seat_bar_container_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_title_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_numbers_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_bg_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_frame_icon_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_scale_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_needle_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_fill_minority_visible = {
+				has_country_flag = LEP_seat_enabled
+				check_variable = { LEP_coalition_seats < 138 }
+			}
+			LEP_seat_bar_fill_majority_visible = {
+				has_country_flag = LEP_seat_enabled
+				check_variable = { LEP_coalition_seats > 137 }
+			}
 			# 列表常显（原来靠议会按钮切换，按钮改成装饰图标后就一直显示了）
 			LEP_passed_laws_container_visible = {
 				always = yes

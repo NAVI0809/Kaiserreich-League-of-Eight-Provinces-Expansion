@@ -351,6 +351,38 @@ LEP_do_count_seats = {
 		}
 		add_to_variable = { LEP_coalition_seats = LEP_seat_n9 }
 	}
+
+	### ── 席位条：把执政联盟席次折算成 0~28 档（每档约 10 席）供 GUI 取帧 ──
+	set_variable = { LEP_seat_bar_frame = LEP_coalition_seats }
+	multiply_variable = { LEP_seat_bar_frame = 28 }
+	divide_variable = { LEP_seat_bar_frame = 274 }
+	round_variable = LEP_seat_bar_frame
+	if = { limit = { check_variable = { LEP_seat_bar_frame > 28 } } set_variable = { LEP_seat_bar_frame = 28 } }
+	if = { limit = { check_variable = { LEP_seat_bar_frame < 0 } } set_variable = { LEP_seat_bar_frame = 0 } }
+	set_variable_to_random = LEP_law_gui_dirty
+
+	### ── 少数派政府检查（席位每次重排后同步一次）────────────────
+	### 席位过半 → 清掉少数派状态与倒计时；未过半 → 进入/维持倒计时。
+	### 放在这里而不是选举事件里：拉拢党派后席位一变就会立刻重算，
+	### 玩家把席位凑过半的那一刻状态自动解除，不必再等下一次选举。
+	if = {
+		limit = {
+			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_seat_enabled
+		}
+		if = {
+			limit = { check_variable = { LEP_coalition_seats < 138 } }
+			if = {
+				limit = { NOT = { has_country_flag = LEP_minority_gov } }
+				set_country_flag = LEP_minority_gov
+				clr_country_flag = LEP_minority_gov_over   # 重新进入少数派：清掉上次的「已结束」标记
+				set_variable = { LEP_minority_days = 30 }
+				activate_mission = LEP_minority_government_timer
+			}
+		}
+		### 过半不自动解除 —— 由玩家在国会点击「组建政府」正式组阁后才清。
+		### （过半后 on_daily 会暂停扣罚，见 on_actions_LEPEXP.txt）
+	}
 }
 
 ### ─────────────────────────────────────────────────────────
