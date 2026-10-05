@@ -5714,7 +5714,30 @@ country_event = { #日本共和国：第一次大选
 		}
 	}
 	immediate = {
-		country_event = { id = league_generic.17 days = 1460 }
+		hidden_effect = {
+			JAP = {
+				# 「替换战时内阁」国策在民主树里会把石桥湛山退场（连领袖 role 一并移除），
+				# 于是社会自由这一路没人顶替裕仁。选举前把他召回来并扶上领袖位。
+				recruit_character = JAP_ishibashi_tanzan
+				if = {
+					limit = { JAP_ishibashi_tanzan = { has_ideology = social_liberal_subtype } }
+					JAP_ishibashi_tanzan = { promote_character = social_liberal_subtype }
+				}
+				else = {
+					# 照 JAP_regent_effect 的范式：没有对应 role 时补一个再扶上位
+					JAP_ishibashi_tanzan = {
+						add_country_leader_role = {
+							country_leader = {
+								desc = JAP_ishibashi_tanzan_leader_desc
+								ideology = social_liberal_subtype
+							}
+							promote_leader = yes
+						}
+					}
+				}
+				country_event = { id = league_generic.17 days = 1460 }
+			}
+		}
 	}
 	option = {
 		name = league_jap.2.a
@@ -5725,7 +5748,11 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
-		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_democrat
+				name = JAP_nihon_shakaito
+				long_name = JAP_nihon_shakaito_long
+			}
 			add_popularity = {
 				ideology = social_democrat
 				popularity = 0.2
@@ -5755,6 +5782,11 @@ country_event = { #日本共和国：第一次大选
 				ruling_party = social_liberal
 				election_frequency = 48
 				elections_allowed = yes
+			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_liberal
+				name = JAP_social_liberal_party
+				long_name = JAP_social_liberal_party_long
 			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
@@ -5787,6 +5819,11 @@ country_event = { #日本共和国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = market_liberal
+				name = JAP_nihon_jiyuto
+				long_name = JAP_nihon_jiyuto_long
+			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = market_liberal
@@ -5817,6 +5854,11 @@ country_event = { #日本共和国：第一次大选
 				ruling_party = social_conservative
 				election_frequency = 48
 				elections_allowed = yes
+			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_conservative
+				name = JAP_nihon_minshuto
+				long_name = JAP_nihon_minshuto_long
 			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
@@ -5979,7 +6021,30 @@ country_event = { #日本国：第一次大选
 	trigger = {
 	}
 	immediate = {
-		country_event = { id = league_generic.17 days = 1460 }
+		hidden_effect = {
+			JAP = {
+				# 「替换战时内阁」国策在民主树里会把石桥湛山退场（连领袖 role 一并移除），
+				# 于是社会自由这一路没人顶替裕仁。选举前把他召回来并扶上领袖位。
+				recruit_character = JAP_ishibashi_tanzan
+				if = {
+					limit = { JAP_ishibashi_tanzan = { has_ideology = social_liberal_subtype } }
+					JAP_ishibashi_tanzan = { promote_character = social_liberal_subtype }
+				}
+				else = {
+					# 照 JAP_regent_effect 的范式：没有对应 role 时补一个再扶上位
+					JAP_ishibashi_tanzan = {
+						add_country_leader_role = {
+							country_leader = {
+								desc = JAP_ishibashi_tanzan_leader_desc
+								ideology = social_liberal_subtype
+							}
+							promote_leader = yes
+						}
+					}
+				}
+				country_event = { id = league_generic.17 days = 1460 }
+			}
+		}
 	}
 	option = {
 		name = league_jap.4.a
@@ -5989,6 +6054,11 @@ country_event = { #日本国：第一次大选
 				ruling_party = social_democrat
 				election_frequency = 48
 				elections_allowed = yes
+			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_democrat
+				name = JAP_nihon_shakaito
+				long_name = JAP_nihon_shakaito_long
 			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
@@ -6017,6 +6087,11 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_liberal
+				name = JAP_social_liberal_party
+				long_name = JAP_social_liberal_party_long
+			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = social_liberal
@@ -6044,6 +6119,11 @@ country_event = { #日本国：第一次大选
 				election_frequency = 48
 				elections_allowed = yes
 			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = market_liberal
+				name = JAP_nihon_jiyuto
+				long_name = JAP_nihon_jiyuto_long
+			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {
 				ideology = market_liberal
@@ -6070,6 +6150,11 @@ country_event = { #日本国：第一次大选
 				ruling_party = social_conservative
 				election_frequency = 48
 				elections_allowed = yes
+			}
+			set_party_name = {   # 锁死党名，与选项文案一致
+				ideology = social_conservative
+				name = JAP_nihon_minshuto
+				long_name = JAP_nihon_minshuto_long
 			}
 		LEP_hold_election_seats = yes	# 选举结算：重排国会席位
 			add_popularity = {

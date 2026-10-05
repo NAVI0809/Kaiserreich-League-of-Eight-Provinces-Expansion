@@ -935,7 +935,7 @@ ideas = {
 
 		LEP_labor_discipline = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_labor_discipline" }
-			picture = TUS_recovering_syndies_economy
+			picture = TUS_syndie_economy
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -2623,7 +2623,7 @@ ideas = {
 
 		LEP_labor_capital_reconciliation_idea = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_labor_capital_reconciliation" }
-			picture = TUS_recovering_syndies_economy
+			picture = TUS_syndie_economy
 			allowed = { always = no }
 			modifier = {
 				consumer_goods_factor = 0.05
@@ -2633,7 +2633,7 @@ ideas = {
 
 		LEP_labor_capital_reconciliation_idea2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_labor_capital_reconciliation_idea2" }
-			picture = TUS_recovering_syndies_economy
+			picture = TUS_syndie_economy
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2678,7 +2678,7 @@ ideas = {
 
 		LEP_social_reform = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform" }
-			picture = GFX_idea_FRA_home_of_the_revolution
+			picture = FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -2689,7 +2689,7 @@ ideas = {
 
 		LEP_social_reform2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform2" }
-			picture = GFX_idea_FRA_home_of_the_revolution
+			picture = FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -2702,7 +2702,7 @@ ideas = {
 
 		LEP_social_reform3 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_reform3" }
-			picture = GFX_idea_FRA_home_of_the_revolution
+			picture = FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				local_resources_factor = 0.1
@@ -2717,7 +2717,7 @@ ideas = {
 
 		LEP_demo_edu = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu" }
-			picture = GFX_idea_FRA_communard_spirit
+			picture = FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2729,7 +2729,7 @@ ideas = {
 
 		LEP_demo_edu2 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu2" }
-			picture = GFX_idea_FRA_communard_spirit
+			picture = FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2743,7 +2743,7 @@ ideas = {
 
 		LEP_demo_edu3 = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_demo_edu3" }
-			picture = GFX_idea_FRA_communard_spirit
+			picture = FRA_communard_spirit
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -2760,7 +2760,7 @@ ideas = {
 
 		LEP_social_revolution = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_social_revolution" }
-			picture = GFX_idea_FRA_home_of_the_revolution
+			picture = FRA_home_of_the_revolution
 			allowed = { always = no }
 			modifier = {
 				political_power_factor = 0.05
@@ -3050,7 +3050,7 @@ ideas = {
 
 		LEP_Liu_rifle_idea = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_idea" }
-			picture = GFX_idea_LEP_Liu_rifle_idea
+			picture = LEP_Liu_rifle_idea
 			allowed = { always = no }
 			available = {
 				limit = { NOT = { has_tech = infantry_equipment_3 } }
@@ -3085,7 +3085,7 @@ ideas = {
 
 		LEP_Liu_rifle_2_idea = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Liu_rifle_2_idea" }
-			picture = GFX_idea_LEP_Liu_rifle_2_idea
+			picture = LEP_Liu_rifle_2_idea
 			allowed = { always = no }
 			available = {
 				limit = { NOT = { has_tech = infantry_equipment_3 } }
@@ -3249,7 +3249,7 @@ ideas = {
 
 		LEP_orphan_aid_idea = { 
 			on_add = { log = "[GetLogRoot]: add idea LEP_orphan_aid_idea " }
-			picture = GFX_idea_BEL_traditional_family_values
+			picture = BEL_traditional_family_values
 			modifier = {
 				stability_weekly = 0.005
 				war_support_weekly = 0.007
@@ -3411,7 +3411,7 @@ ideas = {
 
         #轰炸机恐慌
  		devastation_strategic_bombing_disruption = {
-			picture = GFX_idea_devastation_strategic_bombing_disruption
+			picture = devastation_strategic_bombing_disruption
 			
 			allowed = {
 				always = yes
@@ -3437,7 +3437,7 @@ ideas = {
 		}
 		
 		devastation_strategic_bombing_disruption_2 = {
-			picture = GFX_idea_devastation_strategic_bombing_disruption_2
+			picture = devastation_strategic_bombing_disruption_2
 			
 			allowed = {
 				always = yes

@@ -501,14 +501,45 @@ LEP_the_old_state_renewed_achievement = {
 			custom_override_tooltip = {
 				tooltip = LEP_the_old_state_renewed_achievement_tooltip
 				has_completed_focus = LEP_China_Stands_Majestically_in_the_Cosmos
+				# 东亚：sinosphere_states（汉字文化圈：中国全境+满洲+日本+朝鲜+台湾+蒙古+新疆+西藏+越老柬）
+				# 写法照 KR 的 CHINA_little_trouble_in_big_china_achievement
+				all_collection_elements = {
+					collection = {
+						input = constant:state_groups.sinosphere_states
+						name = LEP_the_old_state_renewed_achievement_tooltip
+					}
+					OR = {   # 自己 / 傀儡 / 盟友 控制皆可
+						is_controlled_by_ROOT_or_subject = yes
+						is_controlled_by_ROOT_or_ally = yes
+					}
+				}
+				# 其它外岛：沙巴(828)、北婆罗洲(333)、新几内亚西南(843)/西北(669)、南萨哈林(537)、千岛群岛(555)
 				NOT = {
 					any_state = {
-						is_on_continent = asia
+						OR = {
+							state = 828
+							state = 333
+							state = 843
+							state = 669
+							state = 537
+							state = 555
+						}
 						NOT = {
 							OR = {
-								is_controlled_by = ROOT
-								controller = { is_subject_of = ROOT }
-								controller = { is_in_faction_with = ROOT }
+								is_controlled_by_ROOT_or_subject = yes
+								is_controlled_by_ROOT_or_ally = yes
+							}
+						}
+					}
+				}
+				# 东南亚：不在 sinosphere 组里，逐个查（用现成的东南亚 trigger）
+				NOT = {
+					any_state = {
+						is_southeast_asia = yes
+						NOT = {
+							OR = {
+								is_controlled_by_ROOT_or_subject = yes
+								is_controlled_by_ROOT_or_ally = yes
 							}
 						}
 					}
@@ -633,7 +664,9 @@ LEP_industrial_miracle_achievement = {
 			}
 			custom_override_tooltip = {
 				tooltip = LEP_industrial_miracle_achievement_tooltip
-				check_variable = { LEP_construction_var > 99 }
+				# 建设积累曾经攒到 40，并且已经全部投资出去（余额归零）
+				has_country_flag = LEP_cons_var_reached_40
+				check_variable = { LEP_construction_var < 1 }
 			}
 		}
 		else_if = {
@@ -671,7 +704,8 @@ LEP_morale_maxed_achievement = {
 			}
 			custom_override_tooltip = {
 				tooltip = LEP_morale_maxed_achievement_tooltip
-				check_variable = { china_league_war_morale > 99 }
+				# 宁系赢得华东混战（league_events.100 结算时设的全局 flag）
+				has_global_flag = LEP_victory
 			}
 		}
 		else_if = {

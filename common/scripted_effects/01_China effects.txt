@@ -587,9 +587,9 @@ LEP_league_war_find_victor = {
 		limit = { has_variable = LEP.LEP_league_war_victor }
 		set_global_flag = LEP_league_war_over
 		clr_global_flag = LEP_war
-		# 哀兵必胜成就：内战结束时士气仍在低谷
+		# 哀兵必胜成就：曾在士气低谷中坚持（不要求赢的那一刻仍低于 20）
 		if = {
-			limit = { LEP = { check_variable = { china_league_war_morale < 20 } } }
+			limit = { LEP = { has_country_flag = LEP_morale_dipped_below_20 } }
 			LEP = { set_country_flag = LEP_won_while_desperate }
 		}
 		ANQ = {
@@ -843,6 +843,11 @@ china_update_morale = {
 			if = {
 				limit = { check_variable = { china_league_war_morale < 30 } }
 				activate_mission = china_collapsing_morale
+			}
+			# 哀兵必胜成就：士气曾经跌破 20（低谷记忆，之后回升也算）
+			if = {
+				limit = { check_variable = { china_league_war_morale < 20 } }
+				set_country_flag = LEP_morale_dipped_below_20
 			}
 		}
 	}

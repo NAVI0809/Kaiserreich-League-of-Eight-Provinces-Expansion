@@ -410,7 +410,6 @@ focus_tree = {
 					}
 				}
 			}
-
 			LEP_rescue_industry = yes
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -658,27 +657,11 @@ focus_tree = {
 
 		}
 		completion_reward = {
-			# 表决预览：席位过半 → 将通过；否则 → 将被否决（放在法案说明之前）
-			if = {
-				limit = { check_variable = { LEP_coalition_seats > 137 } }
-				custom_effect_tooltip = LEP_act_will_pass_tt
-			}
-			else = {
-				custom_effect_tooltip = LEP_act_will_block_tt
-			}
-			custom_effect_tooltip = tooltip_white_line
 			
-			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = LEP_organization_act_tt
-			# 表决：只有执政联盟过半，这项法案才真的通过（加上对应的法案 idea）
-			if = {
-				limit = { check_variable = { LEP_coalition_seats > 137 } }
-				custom_effect_tooltip = LEP_when_act_pass
-				add_ideas = LEP_organization_act_idea
-			}
-			custom_effect_tooltip = tooltip_white_line
-			LEP_strengthen_ZZH_small = yes
+			
 			hidden_effect = {
+				set_country_flag = LEP_seat_enabled		# 议会席位按钮出现
+				LEP_hold_election_seats = yes		# 首次结算国会席位
 				activate_targeted_decision = { target = LEP decision = LEP_organization_act }
 				recruit_character = LEP_Nanking_parliament
 				activate_advisor = LEP_Nanking_parliament

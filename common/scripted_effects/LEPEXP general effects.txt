@@ -413,7 +413,7 @@ LEP_decision_add_sfj_effect = {
 LEP_deploy_sfj_effect = {
 	#华东五省
 	if = {
-		limit = { 747 = { is_owned_by_ROOT_or_subject = yes } FU}
+		limit = { 747 = { is_owned_by_ROOT_or_subject = yes } }
 		747 = {
 			create_unit = {
 				division = "name = \"省防军-福州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
@@ -649,6 +649,13 @@ LEP_rescue_industry = {
 		}
 	}
 	else_if = {
+		limit = { has_idea = LEP_Crippled_Industry1 }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industry1
+			add_idea = LEP_Crippled_Industrym1
+		}
+	}
+	else_if = {
 		limit = { has_idea = LEP_Crippled_Industrym1 }
 		swap_ideas = {
 			remove_idea = LEP_Crippled_Industrym1
@@ -696,9 +703,11 @@ LEP_rebuild_order = {
 		remove_ideas = LEP_Rampant_Disorder3
 	}
 	else = {
-		add_political_power = 50
-		add_stability = 0.1
-		add_war_support = 0.05
+		# 照 KR 原版 LEP_suppress_student_unions：镇压学生必生骚乱，兜底给最低档
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder
+			add_idea = LEP_Rampant_Disorder1
+		}
 	}
 }
 
@@ -1202,6 +1211,13 @@ LEP_mili_var = {
 LEP_cons_var = {
 	custom_effect_tooltip = LEP_add_cons_var_tt
 	add_to_variable = { LEP_construction_var = LEP_cons_var_change }
+	# 工业奇迹成就：建设积累曾经攒到 40（之后全部投出去也算）
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { LEP_construction_var > 39 } }
+			set_country_flag = LEP_cons_var_reached_40
+		}
+	}
 }
 
 LEP_showcase_laws_effect = {

@@ -76,7 +76,7 @@ LEPEXP_parliament = {
 	LEP_invite_syndicalist_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -101,7 +101,7 @@ LEPEXP_parliament = {
 	LEP_invite_radical_socialist_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -126,7 +126,7 @@ LEPEXP_parliament = {
 	LEP_invite_social_democrat_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -151,7 +151,7 @@ LEPEXP_parliament = {
 	LEP_invite_social_liberal_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -176,7 +176,7 @@ LEPEXP_parliament = {
 	LEP_invite_market_liberal_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -201,7 +201,7 @@ LEPEXP_parliament = {
 	LEP_invite_social_conservative_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -226,7 +226,7 @@ LEPEXP_parliament = {
 	LEP_invite_authoritarian_democrat_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -251,7 +251,7 @@ LEPEXP_parliament = {
 	LEP_invite_paternal_autocrat_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }
@@ -276,7 +276,7 @@ LEPEXP_parliament = {
 	LEP_invite_national_populist_decision = {
 		# 拉拢用另一个图标，和「组建政府」区分开
 		icon = GFX_decision_generic_political_discourse
-		cost = 50
+		cost = 0
 		fire_only_once = no
 
 		visible = { has_country_flag = LEP_minority_gov }

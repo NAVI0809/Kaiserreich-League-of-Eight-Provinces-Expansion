@@ -65,16 +65,16 @@
  LEP_derailed_achievement_tooltip: "Qi Xieyuan died on the rails, and the axis of power collapsed with him."
 
  LEP_industrial_miracle_achievement_NAME: "Industrial Miracle"
- LEP_industrial_miracle_achievement_DESC: "As the Nanjing Democratic Government, fill the construction progress bar to the top."
- LEP_industrial_miracle_achievement_tooltip: "Construction progress has reached 100."
+ LEP_industrial_miracle_achievement_DESC: "As the Nanjing Democratic Government, stockpile 40 construction reserves and invest every one of them."
+ LEP_industrial_miracle_achievement_tooltip: "Stockpiled 40 construction reserves and invested them all."
 
- LEP_morale_maxed_achievement_NAME: "Morale Maxed"
- LEP_morale_maxed_achievement_DESC: "As the League of Eight Provinces, push the civil war morale to its maximum."
- LEP_morale_maxed_achievement_tooltip: "Civil war morale has reached 100."
+ LEP_morale_maxed_achievement_NAME: "The Marshal's Orders Pass Down"
+ LEP_morale_maxed_achievement_DESC: "As the Nanjing Clique, win the East China civil war."
+ LEP_morale_maxed_achievement_tooltip: "Won the East China civil war."
 
  LEP_desperate_army_wins_achievement_NAME: "The Desperate Win"
- LEP_desperate_army_wins_achievement_DESC: "As the League of Eight Provinces, win the civil war with morale below 20."
- LEP_desperate_army_wins_achievement_tooltip: "Won the League civil war with morale under 20."
+ LEP_desperate_army_wins_achievement_DESC: "As the League of Eight Provinces, win the civil war after morale has dropped below 20."
+ LEP_desperate_army_wins_achievement_tooltip: "Won the League civil war after morale had dropped below 20."
 
  LEP_seat_recount_tt: "Parliamentary seats will be updated."
  LEP_ach_needs_lep: "Only available as the League of Eight Provinces."

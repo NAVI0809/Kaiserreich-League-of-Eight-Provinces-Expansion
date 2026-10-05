@@ -42,6 +42,58 @@ LEPEXP_DEBUG_CAT = {
 		}
 	}
 
+	# 调试：一键达成「旧邦新命」成就
+	# （完成国策「中华雄立宇宙间」，并把东亚+东南亚的地块全部移转给我方）
+	LEPEXP_debug_old_state_renewed = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+
+		complete_effect = {
+			# 条件一：完成国策
+			complete_national_focus = LEP_China_Stands_Majestically_in_the_Cosmos
+
+			# 条件二（东亚）：sinosphere_states 州组整组移交
+			# 中国全境 + 满洲 + 蒙古 + 新疆 + 西藏 + 台湾 + 日本本土 + 朝鲜 + 越老柬 + 新加坡
+			every_collection_element = {
+				input = {
+					input = constant:state_groups.sinosphere_states
+					name = LEP_debug_old_state_renewed_east_asia
+				}
+				set_state_owner_to = ROOT
+				set_state_controller_to = ROOT
+			}
+
+			# 条件二（东南亚）：印度支那、暹罗、菲律宾、马来、缅甸、印尼
+			every_state = {
+				limit = { is_southeast_asia = yes }
+				set_state_owner_to = ROOT
+				set_state_controller_to = ROOT
+			}
+
+			# 条件二（其它外岛）：沙巴(828)、北婆罗洲(333)、新几内亚西南(843)/西北(669)、南萨哈林(537)、千岛群岛(555)
+			every_state = {
+				limit = {
+					OR = {
+						state = 828
+						state = 333
+						state = 843
+						state = 669
+						state = 537
+						state = 555
+					}
+				}
+				set_state_owner_to = ROOT
+				set_state_controller_to = ROOT
+			}
+		}
+	}
+
 	LEP_add_regional_stage_focus = {
 		fire_only_once = no
 		cost = 0
