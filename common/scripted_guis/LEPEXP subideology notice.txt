@@ -1,0 +1,16 @@
+### LEP 子意识形态名（政治页）
+### 做法仿创意工坊 3131170989：把 KR 原生 ideology 文本框注释掉（见 interface/countrypoliticsview.gui），
+### 由本叠窗在原位置显示「子意识形态名」，没有子意识形态时由 defined_text 兜底返回父名。
+### 因此这里不能加 visible 白名单——否则普通国家会在政治页失去意识形态名。
+scripted_gui = {
+
+	LEPEXP_subideology_notice = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "LEPEXP_subideology_container"
+
+		ai_enabled = {
+			always = no
+		}
+	}
+}

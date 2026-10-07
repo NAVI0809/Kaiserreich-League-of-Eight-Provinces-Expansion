@@ -222,6 +222,7 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_chu_fucheng_leader_desc
+			### 初始 / 民主政府成立时都是普通社会自由主义；完成「科学化公共行政」后才转为自由技术官僚主义
 			ideology = social_liberal_subtype
 			traits = { CHN_southern_republican_aligned }
 		}
@@ -280,7 +281,7 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_rong_zongjing_leader_desc
-			ideology = social_conservative_subtype
+			ideology = social_conservative_free_market_conservatism_subtype
 			traits = { CHN_southern_republican_aligned }
 		}
 		corps_commander = {

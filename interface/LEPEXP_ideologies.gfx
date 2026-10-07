@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_market_liberal_oligarchic_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/market_liberal_oligarchic_liberalism.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_liberal_liberal_technocracy_subtype"
+		texturefile = "gfx/interface/ideologies/social_liberal_liberal_technocracy.png"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_conservative_free_market_conservatism_subtype"
+		texturefile = "gfx/interface/ideologies/social_conservative_free_market_conservatism.png"
+	}
+}

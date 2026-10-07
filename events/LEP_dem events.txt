@@ -514,7 +514,7 @@ unit_leader_event = { #黄郛南下
 		
 		promote_character = {
 			character = QIE_huang_fu
-			ideology = market_liberal_subtype
+			ideology = market_liberal_oligarchic_liberalism_subtype
 		}
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
@@ -527,6 +527,8 @@ unit_leader_event = { #黄郛南下
 			activate_advisor = LEP_Nanking_parliament
 			complete_national_focus = LEP_unite_national_liberals
 			country_event = { id = league_mid.9 days = 2 }
+			clr_country_flag = LEP_minority_gov
+			set_country_flag = LEP_minority_gov_over 
 		}
 		set_country_flag = LEP_seat_enabled		# 议会席位按钮出现
 		LEP_hold_election_seats = yes		# 首次结算国会席位
@@ -550,7 +552,7 @@ country_event = { #德资撤离
 		
 		promote_character = {
 			character = QIE_huang_fu
-			ideology = market_liberal_subtype
+			ideology = market_liberal_oligarchic_liberalism_subtype
 		}
 		GER = {
 			send_embargo = LEP
@@ -3843,6 +3845,8 @@ country_event = { #全国选举
 		set_country_flag = LEP_NSU_win
 		complete_national_focus = LEP_solidarity_union
 		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		mark_focus_tree_layout_dirty = yes
 	}
 }

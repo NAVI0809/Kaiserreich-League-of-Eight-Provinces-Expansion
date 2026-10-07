@@ -1,0 +1,29 @@
+### 子意识形态名 / 释义（政治页 LEPEXP_subideology_notice 用）
+### 父意识形态文本框已在 interface/countrypoliticsview.gui 里注释掉，
+### 所以这里必须有兜底：没有子意识形态时返回父名，否则政治页会缺失意识形态名。
+defined_text = {
+	name = GetSubIdeologyName
+	### 自有子意识形态
+	text = { trigger = { has_country_leader_ideology = market_liberal_oligarchic_liberalism_subtype } localization_key = market_liberal_oligarchic_liberalism_subtype }	#寡头自由主义
+	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_technocracy_subtype } localization_key = social_liberal_liberal_technocracy_subtype }	#自由技术官僚主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_free_market_conservatism_subtype } localization_key = social_conservative_free_market_conservatism_subtype }	#自由市场保守主义
+	### 兜底：10 个父意识形态（没有子意识形态的国家照常显示父名）
+	### 顺序与 KR 意识形态序一致，靠前优先
+	text = { trigger = { has_country_leader_ideology = totalist_subtype } localization_key = totalist }
+	text = { trigger = { has_country_leader_ideology = syndicalist_subtype } localization_key = syndicalist }
+	text = { trigger = { has_country_leader_ideology = radical_socialist_subtype } localization_key = radical_socialist }
+	text = { trigger = { has_country_leader_ideology = social_democrat_subtype } localization_key = social_democrat }
+	text = { trigger = { has_country_leader_ideology = social_liberal_subtype } localization_key = social_liberal }
+	text = { trigger = { has_country_leader_ideology = market_liberal_subtype } localization_key = market_liberal }
+	text = { trigger = { has_country_leader_ideology = social_conservative_subtype } localization_key = social_conservative }
+	text = { trigger = { has_country_leader_ideology = authoritarian_democrat_subtype } localization_key = authoritarian_democrat }
+	text = { trigger = { has_country_leader_ideology = paternal_autocrat_subtype } localization_key = paternal_autocrat }
+	text = { trigger = { has_country_leader_ideology = national_populist_subtype } localization_key = national_populist }
+}
+
+defined_text = {
+	name = GetSubIdeologyDesc
+	text = { trigger = { has_country_leader_ideology = market_liberal_oligarchic_liberalism_subtype } localization_key = market_liberal_oligarchic_liberalism_subtype_desc }	#寡头自由主义
+	text = { trigger = { has_country_leader_ideology = social_liberal_liberal_technocracy_subtype } localization_key = social_liberal_liberal_technocracy_subtype_desc }	#自由技术官僚主义
+	text = { trigger = { has_country_leader_ideology = social_conservative_free_market_conservatism_subtype } localization_key = social_conservative_free_market_conservatism_subtype_desc }	#自由市场保守主义
+}

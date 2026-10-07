@@ -2,7 +2,7 @@
 # MAIN THEME
 music = {
 	name = "maintheme"
-	file = "chun_you.ogg"
+	file = "Jasmine.ogg"
 	volume = 0.95
 }
 

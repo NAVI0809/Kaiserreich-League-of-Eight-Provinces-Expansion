@@ -130,7 +130,7 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_huang_fu_leader_desc
-			ideology = market_liberal_subtype
+			ideology = market_liberal_oligarchic_liberalism_subtype
 			traits = { CHN_southern_republican_aligned }
 		}
 		corps_commander = {
