@@ -1440,6 +1440,24 @@ characters = {
 			}
 		}
 	}
+
+	#周训典
+	LEP_zhou_xundian = {
+		name = LEP_zhou_xundian
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_zhou_xundian_army_small
+			}
+		}
+		advisor = {
+			slot = high_command
+			desc = LEP_zhou_xundian_air_chief_desc
+			idea_token = LEP_zhou_xundian_air_chief_desc
+			ledger = air
+			traits = { LEPEXP_air_chief_ACE_fighter }
+			cost = 120
+		}
+	}
 	################
 	### Generals ###
 	################
@@ -2351,6 +2369,19 @@ characters = {
 			slot = political_advisor
 			idea_token = LEP_liu_qingeng_advisor
 			traits = { KR_semi_auto }
+		}
+	}
+
+	LEP_lin_shie = { #林士谔
+		name = LEP_lin_shie
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LEP_lin_shie_scientist_large
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_gifted_engineer scientist_trait_resourceful scientist_trait_electronics_specialist }
+			skills = { specialization_air = 1 }
 		}
 	}
 }

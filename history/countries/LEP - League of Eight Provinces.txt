@@ -183,6 +183,8 @@ recruit_character = LEP_pan_shu
 recruit_character = LEP_lu_yudao
 recruit_character = LEP_liang_xi 
 
+recruit_character = LEP_zhou_xundian
+
 ### Generals ###
 recruit_character = LEP_liu_zongji
 recruit_character = LEP_chen_yi
@@ -255,11 +257,17 @@ recruit_character = LEP_chien_shiung_wu
 recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
+recruit_character = LEP_lin_shie
 
 ### Character Setup ###
 # LEPEXP 
 LEP_chu_fucheng = { china_set_character_alignment_chinese_southern_republican = yes }
-
+LEP_zhou_xundian = { #recruit only by on action event
+	retire = yes
+}
+LEP_lin_shie = { #recruit only by focus
+	retire = yes	
+}
 LEP_gu_zhongxiu = { #recruit only by focus
 	set_character_flag = CHI_original_unit_leader
 	retire = yes

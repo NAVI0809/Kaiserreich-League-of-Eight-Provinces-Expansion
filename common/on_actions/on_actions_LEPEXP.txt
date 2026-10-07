@@ -1,4 +1,37 @@
-on_actions = {    
+on_actions = {  
+
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = LEP
+                    has_war_with = JAP
+                }
+
+                random = {
+                    chance = 1
+
+                    country_event = {
+                        id = league_military.10
+                    }
+                }
+            }
+        }
+    }
+
+	on_ace_killed = {
+		effect = {
+            if = {
+                limit = {
+                    FROM = { name = "Zhou" surname = "Xundian" }
+                }
+
+                country_event = {
+                    id = league_military.11
+                }
+            }
+        }
+	}
 
 	# ── 少数派政府：只负责「显示用」的天数递减 ─────────────────────
 	# 真正的 30 天扣罚循环由 mission（LEP_minority_government_timer）承担；

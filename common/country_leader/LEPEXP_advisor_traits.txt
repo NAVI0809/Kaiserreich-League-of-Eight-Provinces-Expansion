@@ -20,8 +20,26 @@ leader_traits = {
 		compliance_gain = 0.05
 		stability_factor = 0.1
 	}
+	
 
     #司令部
+	LEPEXP_air_chief_ACE_fighter = { #战斗机主导
+		sprite = 2
+		air_superiority_efficiency = 0.1
+		air_accidents_factor = -0.05
+		air_weather_penalty = -0.1
+		army_bonus_air_superiority_factor = 0.05
+		experience_gain_air = 0.02
+
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0.1
+				has_deployed_air_force_size = { size < 200 }
+			}
+		}
+	}
+
 	LEPEXP_Grassroots_General = { #草根将军
 		sprite = 5
 		army_infantry_attack_factor = 0.1

@@ -19,16 +19,12 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-        every_possible_country = {
-			QIE_qian_xuesen = { set_nationality = ROOT } 
-			QIE_wu_dayou = { set_nationality = ROOT } 
-			QIE_wang_pu = { set_nationality = ROOT } 
-			QIE_xing_qixin = { set_nationality = ROOT } 
-			SHD_wang_ganchang = { set_nationality = ROOT } 
-			LEP_zhu_jiaren = { set_nationality = ROOT } 
-			LEP_ye_zaifu = { set_nationality = ROOT } 
-			SHX_zhang_kai = { set_nationality = ROOT } 
-			FNG_li_yichun = { set_nationality = ROOT } 
+		add_ace = {
+			name = "Zhou"
+			surname = "Xundian"
+			callsign = "Flying Tiger"
+			type = fighter_genius
+			is_female = no
 		}
     }
 }
@@ -5570,6 +5566,47 @@ country_event = { #宣传攻势
 			}
 			set_temp_variable = { FNG_JAP_days_temp_var = -80 }
 	        FNG_JAP_mech_add_time_effect = yes
+		}
+	}
+}
+
+country_event = { #周训典
+	id = league_military.10
+	picture = GFX_report_event_ace_zhou
+	is_triggered_only = yes
+	title = league_military.10.t
+	desc = league_military.10.d
+
+	option = {
+		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
+		name = league_military.10.a
+		LEP_zhou_xundian = {
+			CHN_recruit_character_effect = yes
+		}
+		add_ace = {
+			name = "Zhou"
+			surname = "Xundian"
+			callsign = "Flying Tiger"
+			type = fighter_genius
+			is_female = no
+		}		
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = LEP_zhou_xundian_air_chief		
+	}
+}
+
+country_event = { #周训典
+	id = league_military.11
+	picture = GFX_report_event_ace_died
+	is_triggered_only = yes
+	title = league_military.11.t
+	desc = league_military.11.d
+
+	option = {
+		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
+		name = league_military.11.a
+		LEP_zhou_xundian = {
+			kill_character = yes
 		}
 	}
 }

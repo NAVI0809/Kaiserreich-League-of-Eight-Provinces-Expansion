@@ -137,6 +137,10 @@ spriteTypes = {
 		texturefile = "gfx/leaders/LEP/ANQ_sa_benxin_scientist_large.png"
 	}
 	spriteType = {
+		name = "GFX_portrait_LEP_lin_shie_scientist_large"
+		texturefile = "gfx/leaders/LEP/LEP_lin_shie_scientist_large.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_LEP_xing_zhennan_army_large"
 		texturefile = "gfx/leaders/LEP/LEP_xing_zhennan_army_large.png"
 	}
@@ -312,6 +316,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_LEP_xing_zhennan_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_xing_zhennan_army_small.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zhou_xundian_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_zhou_xundian_army_small.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_shi_beiheng_army_small"
@@ -622,7 +630,12 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_ye_zaifu_scientist_large"
 		texturefile = "gfx/leaders/LEP/scientists/LEP_ye_zaifu.png"
 	}
-	
+
+
+	spriteType = {
+        name = "GFX_LEP_ace_Zhou_Xundian"
+        texturefile = "gfx/aces/LEP_Zhou_Xundian_ace.dds"
+    }
 	
 
 }
