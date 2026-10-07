@@ -1849,6 +1849,12 @@ LEP_lkmt_conference_result_effect = {
 			}
 		}
 		set_country_flag = LEP_lkmt_legalized
+		### 合法化后，闽赣国民党以「国民党（革委会）」名义参与议会，以别于黄郛在北京重建的国民党
+		set_party_name = {
+			ideology = radical_socialist
+			name = LEP_radical_socialist_party_legalized
+			long_name = LEP_radical_socialist_party_legalized_long
+		}
 		# 若国会已成立，立即按新资格重算席位
 		if = {
 			limit = { has_country_flag = LEP_seat_enabled }

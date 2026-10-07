@@ -11,6 +11,11 @@ defined_text = {
 
 defined_text = {
 	name = LEP_seat_name_2
+	### 闽赣国民党和谈合法化后 → 改称「国民党（革委会）」（与 set_country_flag = LEP_lkmt_legalized 联动）
+	text = {
+		trigger = { has_country_flag = LEP_lkmt_legalized }
+		localization_key = LEP_radical_socialist_party_legalized
+	}
 	text = {
 		localization_key = LEP_radical_socialist_party
 	}
