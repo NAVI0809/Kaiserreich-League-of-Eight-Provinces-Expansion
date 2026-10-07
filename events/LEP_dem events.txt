@@ -5580,6 +5580,8 @@ country_event = { #周训典
 	option = {
 		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
 		name = league_military.10.a
+		air_experience = 25
+		add_war_support = 0.03
 		LEP_zhou_xundian = {
 			CHN_recruit_character_effect = yes
 		}

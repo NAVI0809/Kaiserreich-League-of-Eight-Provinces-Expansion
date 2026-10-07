@@ -46,4 +46,8 @@ spriteTypes = {
 		name = "GFX_report_event_LEP_nanjing_city"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_nanjing_city_event.png"
 	}
-}
+	spriteType = {
+		name = "GFX_report_event_ace_zhou"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_ace_zhou_event.png"
+	}
+}	
