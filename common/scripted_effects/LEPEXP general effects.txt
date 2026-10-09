@@ -1201,6 +1201,98 @@ LEP_add_to_ECT = {
 LEP_mili_var = {
 	custom_effect_tooltip = LEP_add_mili_var_tt
 	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+	set_variable = {
+		var = LEP_mob_political_power_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_political_power_factor
+		value = -0.002
+	}
+
+	set_variable = {
+		var = LEP_mob_war_support_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_war_support_factor
+		value = 0.003
+	}
+	add_to_variable = {
+		var = LEP_mob_war_support_factor
+		value = -0.1
+	}
+
+	set_variable = {
+		var = LEP_mob_conversion_cost_civ_to_mil_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_conversion_cost_civ_to_mil_factor
+		value = -0.004
+	}
+	add_to_variable = {
+		var = LEP_mob_conversion_cost_civ_to_mil_factor
+		value = 0.15
+	}
+
+	set_variable = {
+		var = LEP_mob_industry_air_damage_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_industry_air_damage_factor
+		value = -0.0025
+	}
+
+	set_variable = {
+		var = LEP_mob_supply_consumption_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_supply_consumption_factor
+		value = -0.0000125
+	}
+
+	set_variable = {
+		var = LEP_mob_army_attack_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_army_attack_factor
+		value = 0.0000125
+	}
+
+	set_variable = {
+		var = LEP_mob_army_defence_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_army_defence_factor
+		value = 0.0000125
+	}
+
+	set_variable = {
+		var = LEP_mob_training_time_army_factor
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_training_time_army_factor
+		value = -0.0025
+	}
+	add_to_variable = {
+		var = LEP_mob_training_time_army_factor
+		value = 0.1
+	}
+
+	set_variable = {
+		var = LEP_mob_land_reinforce_rate
+		value = military_mobilization_var
+	}
+	multiply_variable = {
+		var = LEP_mob_land_reinforce_rate
+		value = 0.0005
+	}
 	clamp_variable = {
 		var = military_mobilization_var
 		min = 0

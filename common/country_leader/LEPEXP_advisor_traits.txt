@@ -331,7 +331,10 @@ leader_traits = {
 		sprite = 13
 		random = no
 		research_speed_factor = 0.1
-		compliance_growth = 0.004
+		### 顺从度增长速度：原为 compliance_growth = 0.004 —— 值太小（0.4%），而 compliance_growth 按官方文档是
+		### 「0 decimal places」修饰符，UI 取整后显示成 0%。改用 0.1，与 KR 本体同类政治顾问
+		### （KR_pious_intellectual / KR_reformer_of_the_interior / KR_leftist_lawyer）一致，UI 显示 10%
+		compliance_growth = 0.1
 
 		ai_will_do = { factor = 1 }
 	}
