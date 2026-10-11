@@ -1,0 +1,51 @@
+######################################################
+### LEP Expanded - Custom Country Path               
+### 八省联合路线预设                                 
+######################################################
+
+LEP_path = {
+	name = LEP_PATH
+	group = RULE_GROUP_KAISERREICH_RULES_EAST_ASIA
+	default = {
+		name = DEFAULT
+		text = RULE_OPTION_LEP_PATH_RANDOM
+		desc = RULE_OPTION_LEP_PATH_RANDOM_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_QI
+		text = RULE_OPTION_LEP_PATH_QI
+		desc = RULE_OPTION_LEP_PATH_QI_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_DSP
+		text = RULE_OPTION_LEP_PATH_DSP
+		desc = RULE_OPTION_LEP_PATH_DSP_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_JGH
+		text = RULE_OPTION_LEP_PATH_JGH
+		desc = RULE_OPTION_LEP_PATH_JGH_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_JXH
+		text = RULE_OPTION_LEP_PATH_JXH
+		desc = RULE_OPTION_LEP_PATH_JXH_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_JNSB
+		text = RULE_OPTION_LEP_PATH_JNSB
+		desc = RULE_OPTION_LEP_PATH_JNSB_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = LEP_PATH_ZXX
+		text = RULE_OPTION_LEP_PATH_ZXX
+		desc = RULE_OPTION_LEP_PATH_ZXX_DESC
+		allow_achievements = yes
+	}
+}

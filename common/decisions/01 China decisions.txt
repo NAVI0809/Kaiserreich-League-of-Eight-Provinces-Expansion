@@ -7370,6 +7370,9 @@ china_league_collapse_decisions = {
 	# Missions
 	china_control_nanjing = {
 		icon = GFX_decision_shield
+		ai_will_do = {
+			base = 100
+		}
 		allowed = {
 			OR = {
 				tag = ANQ
@@ -7421,6 +7424,9 @@ china_league_collapse_decisions = {
 	}
 	china_take_nanjing = {
 		icon = GFX_decision_generic_ignite_civil_war
+		ai_will_do = {
+			base = 100
+		}
 		allowed = {
 			OR = {
 				tag = ANQ

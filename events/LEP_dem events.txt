@@ -241,6 +241,27 @@ country_event = { #明争暗斗
 			right_side = LEP_qi_side
 			set_value = -0.10
 		}
+		if = {
+			limit = {
+				is_ai = yes
+				has_game_rule = { rule = LEP_path option = LEP_PATH_QI }
+			}
+			add_power_balance_value = {
+				id = LEP_power_balance
+				value = 1.10
+			}
+		}
+		if = {
+			limit = {
+				is_ai = yes
+				NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+				NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_QI } }
+			}
+			add_power_balance_value = {
+				id = LEP_power_balance
+				value = -0.90
+			}
+		}
 	}
 }
 
@@ -2850,7 +2871,6 @@ country_event = { #政治解冻及其后果
 		log = "[GetLogInfo]: event league_rebuild.5 option league_rebuild.5.a"
 		name = league_rebuild.5.a
 		set_country_flag = LEP_thaw_broad        # 宽容解冻：议会图上给工团党/国民党/中国青年党席位
-		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = social_liberal
 			popularity = 0.03
@@ -2884,7 +2904,6 @@ country_event = { #政治解冻及其后果
 		log = "[GetLogInfo]: event league_rebuild.5 option league_rebuild.5.b"
 		name = league_rebuild.5.b
 		set_country_flag = LEP_thaw_strict       # 严格解冻：议会图上不给那三家席位
-		LEP_hold_election_seats = yes
 		LEP_weaken_ZZH_small = yes
 		add_popularity = {
 			ideology = social_conservative
@@ -3460,7 +3479,6 @@ country_event = { #政团管理法
 		name = league_national.4.a
 		set_country_flag = LEP_thaw_broad
 
-		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = totalist
 			popularity = 0.02
@@ -3505,7 +3523,6 @@ country_event = { #政团管理法
 		name = league_national.4.b
 		set_country_flag = LEP_thaw_strict
 
-		LEP_hold_election_seats = yes
 		add_popularity = {
 			ideology = social_conservative
 			popularity = 0.03
@@ -3748,6 +3765,13 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.a"
 		name = league_national.10.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		if = {
 			limit = { check_variable = { LEP_first_vote = 4 } }
 			set_country_flag = LEP_voted_same_twice	# 从一而终成就
@@ -3767,6 +3791,13 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.b"
 		name = league_national.10.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+		}
 		if = {
 			limit = { check_variable = { LEP_first_vote = 5 } }
 			set_country_flag = LEP_voted_same_twice	# 从一而终成就
@@ -3786,6 +3817,13 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.c"
 		name = league_national.10.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+		}
 		if = {
 			limit = { check_variable = { LEP_first_vote = 6 } }
 			set_country_flag = LEP_voted_same_twice	# 从一而终成就
@@ -3806,6 +3844,13 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.d"
 		name = league_national.10.d
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+		}
 		trigger = {
 			LEP_NSU_direct_var_JGH_win = yes
 		}
@@ -3827,6 +3872,13 @@ country_event = { #全国选举
 	option = {
 		log = "[GetLogInfo]: event league_national.10 option league_national.10.e"
 		name = league_national.10.e
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		trigger = {
 			LEP_NSU_direct_var_JXH_win = yes
 		}

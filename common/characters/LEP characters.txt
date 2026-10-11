@@ -373,6 +373,13 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = LEP_Nanking_parliament
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_temporary_congress_sic }
 			cost = 0
 			can_be_fired = no
@@ -581,6 +588,13 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = LEP_tian_wenbing_sic
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_political_protege_sic }
 			cost = 0
 			can_be_fired = no
@@ -608,6 +622,13 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = LEP_lu_xiangting_sic
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_prince_of_zhejiang }
 			cost = 0
 			can_be_fired = no
@@ -616,6 +637,13 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = LEP_lu_xiangting_army_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_army_chief_offensive_3 }
 			cost = 150
 		}
@@ -872,6 +900,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_zhang_yaozeng_advisor_desc
 			idea_token = LEP_zhang_yaozeng_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX } }
+				}
+			}
 			traits = { LEPEXP_minister_justice }
 			on_add = {
 				FROM = {
@@ -893,6 +929,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_wang_jiyan_advisor_desc
 			idea_token = LEP_wang_jiyan_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX } }
+				}
+			}
 			traits = { KR_pragmatic_statesman }
 			on_add = {
 				FROM = {
@@ -914,6 +958,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_gu_zhongxiu_advisor_desc
 			idea_token = LEP_gu_zhongxiu_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX } }
+				}
+			}
 			traits = { LEPEXP_hydrologist }
 			on_add = {
 				FROM = {
@@ -935,6 +987,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_liang_xi_advisor_desc
 			idea_token = LEP_liang_xi_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { KR_resource_industrialist }
 			on_add = {
 				FROM = {
@@ -956,6 +1016,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_lu_yudao_advisor_desc
 			idea_token = LEP_lu_yudao_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { KR_gentleman_polymath }
 			on_add = {
 				FROM = {
@@ -977,6 +1045,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_pan_shu_advisor_desc
 			idea_token = LEP_pan_shu_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { LEPEXP_psychology_practitioner }
 			on_add = {
 				FROM = {
@@ -998,6 +1074,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_wu_zaoxi_advisor_desc
 			idea_token = LEP_wu_zaoxi_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { LEPEXP_humble_educator }
 			on_add = {
 				FROM = {
@@ -1019,6 +1103,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_yin_ruli_advisor_desc
 			idea_token = LEP_yin_ruli_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { LEPEXP_fiscal_reformer }
 			on_add = {
 				FROM = {
@@ -1040,6 +1132,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_xu_deheng_advisor_desc
 			idea_token = LEP_xu_deheng_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_DSP } }
+				}
+			}
 			traits = { LEPEXP_dem_act }
 			on_add = {
 				FROM = {
@@ -1065,6 +1165,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_rong_desheng_advisor_desc
 			idea_token = LEP_rong_desheng_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB } }
+				}
+			}
 			traits = { LEPEXP_king_of_cotton_yarn }
 			on_add = {
 				FROM = {
@@ -1099,6 +1207,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_yu_qiaqing_advisor_desc
 			idea_token = LEP_yu_qiaqing_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB } }
+				}
+			}
 			traits = { LEPEXP_doubletitle_champion }
 			on_add = {
 				FROM = {
@@ -1120,6 +1236,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_fang_yexian_advisor_desc
 			idea_token = LEP_fang_yexian_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB } }
+				}
+			}
 			traits = { LEPEXP_king_of_chemical_industry }
 			on_add = {
 				FROM = {
@@ -1141,6 +1265,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_zhu_meixian_advisor_desc
 			idea_token = LEP_zhu_meixian_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB } }
+				}
+			}
 			traits = { LEPEXP_shipping_king }
 			on_add = {
 				#add_timed_idea = {
@@ -1170,6 +1302,14 @@ characters = {
 			slot = political_advisor
 			desc = LEP_lu_xiaobo_advisor_desc
 			idea_token = LEP_lu_xiaobo_advisor
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+					NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB } }
+				}
+			}
 			traits = { LEPEXP_patriotic_businessman }
 			visible = { has_country_flag = allow_luxiaobo_advisor }
 			on_add = { 
@@ -1210,6 +1350,13 @@ characters = {
 		advisor = {
 			slot = navy_chief
 			idea_token = LEP_li_shijia_navy_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_navy_chief_commerce_raiding_1 }
 			cost = 50
 		}
@@ -1236,6 +1383,13 @@ characters = {
 		advisor = {
 			slot = navy_chief
 			idea_token = LEP_wu_zhennan_navy_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_navy_chief_decisive_battle_2 }
 			cost = 100
 		}
@@ -1273,6 +1427,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_wang_shouting_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = navy
 			traits = { KR_MHC_capital_ship_1 }
 			cost = 50
@@ -1290,6 +1451,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_shen_jingchen_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = navy
 			traits = { KR_MHC_carrier_1 }
 			cost = 50
@@ -1308,6 +1476,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_sa_shijun_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_MHC_naval_air_defence_3 }
 			cost = 120
 		}
@@ -1342,6 +1517,13 @@ characters = {
 			slot = navy_chief
 			desc = LEP_wu_rengli_high_command_desc
 			idea_token = LEP_wu_rengli_navy_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_opportunistic_naval_reformer }
 			cost = 120
 		}
@@ -1377,6 +1559,13 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = LEP_chen_qixia_air_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_air_chief_safety_1 }
 			cost = 50
 		}
@@ -1393,6 +1582,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_wang_tianxiang_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = air
 			traits = { KR_MHC_air_combat_training_1 }
 			cost = 50
@@ -1414,6 +1610,13 @@ characters = {
 				has_deployed_air_force_size = { size > 999 }
 			}
 			idea_token = LEP_LEP_xu_huansheng_air_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = air
 			traits = { KR_air_chief_strategic_bomber }
 			cost = 100
@@ -1453,6 +1656,13 @@ characters = {
 			slot = high_command
 			desc = LEP_zhou_xundian_air_chief_desc
 			idea_token = LEP_zhou_xundian_air_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = air
 			traits = { LEPEXP_air_chief_ACE_fighter }
 			cost = 120
@@ -1482,6 +1692,13 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = LEP_liu_zongji_army_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_army_chief_planning_2 }
 			cost = 100
 		}
@@ -1508,6 +1725,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_chen_yi_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_artillery_2 }
 			cost = 100
@@ -1559,6 +1783,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_zheng_junyan_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_army_staffer_2 }
 			cost = 100
@@ -1586,6 +1817,13 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = LEP_deng_ruzhuo_army_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_army_chief_morale_2 }
 			cost = 150
 		}
@@ -1712,6 +1950,13 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = LEP_xie_hongxun_army_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_army_chief_defensive_2 }
 			cost = 100
 		}
@@ -1738,6 +1983,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_meng_zhaoyue_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_entrenchment_1 }
 			cost = 50
@@ -1840,6 +2092,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_wang_haoji_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_cavalry_2 }
 			cost = 100
@@ -1867,6 +2126,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_ge_jingen_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_army_regrouping_2 }
 			cost = 100
@@ -1958,6 +2224,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_zhou_yan_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_army_logistics_1 }
 			cost = 50
@@ -1985,6 +2258,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_li_rentao_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_army_surveyor_2 }
 			cost = 100
@@ -2013,6 +2293,13 @@ characters = {
 		advisor = {
 			slot = air_chief
 			idea_token = LEP_xu_peigen_air_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { KR_air_chief_reform_2 }
 			cost = 100
 		}
@@ -2045,6 +2332,13 @@ characters = {
 			slot = high_command
 			ledger = navy
 			idea_token = LEP_wang_e_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			traits = { LEPEXP_coastline_defender }
 			cost = 120
 		}
@@ -2081,6 +2375,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_huang_baitao_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEPEXP_Grassroots_General }
 			cost = 150
@@ -2117,6 +2418,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_li_yutang_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEPEXP_maneuver_warfare }
 			cost = 150
@@ -2151,6 +2459,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_ma_shigong_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_airborne_2 }
 			cost = 100
@@ -2205,6 +2520,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_shi_beiheng_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEPEXP_fort_destroyer }
 			cost = 120
@@ -2243,6 +2565,13 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = LEP_xing_zhennan_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { KR_MHC_irregular_3 }
 			cost = 150
@@ -2266,6 +2595,13 @@ characters = {
 		advisor = {
 			slot = theorist
 			idea_token = LEP_nanjing_clique_theorist
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEP_den_of_the_smiling_tiger }
 			cost = 100
@@ -2281,6 +2617,13 @@ characters = {
 		advisor = {
 			slot = theorist
 			idea_token = LEP_zhejun_officers_theorist
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEP_national_defence_and_supplies }
 			cost = 100
@@ -2296,6 +2639,13 @@ characters = {
 		advisor = {
 			slot = theorist
 			idea_token = LEP_german_trained_officers_theorist
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
 			ledger = army
 			traits = { LEP_german_military_mission }
 			cost = 100

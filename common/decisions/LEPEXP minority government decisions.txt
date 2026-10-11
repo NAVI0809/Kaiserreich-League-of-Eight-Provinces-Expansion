@@ -70,7 +70,9 @@ LEPEXP_parliament = {
 			add_stability = 0.03
 			add_political_power = 20
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			factor = 5000
+		}
 	}
 
 	LEP_invite_syndicalist_decision = {
@@ -95,7 +97,21 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = radical_socialist
+			}
+			modifier = {
+				factor = 5
+				has_government = social_democrat
+			}
+			modifier = {
+				factor = 5
+				has_government = social_liberal
+			}
+		}
 	}
 
 	LEP_invite_radical_socialist_decision = {
@@ -120,7 +136,21 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = social_democrat
+			}
+			modifier = {
+				factor = 5
+				has_government = syndicalist
+			}
+			modifier = {
+				factor = 5
+				has_government = social_liberal
+			}
+		}
 	}
 
 	LEP_invite_social_democrat_decision = {
@@ -145,7 +175,21 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = radical_socialist
+			}
+			modifier = {
+				factor = 5
+				has_government = syndicalist
+			}
+			modifier = {
+				factor = 5
+				has_government = social_liberal
+			}
+		}
 	}
 
 	LEP_invite_social_liberal_decision = {
@@ -170,7 +214,17 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = social_democrat
+			}
+			modifier = {
+				factor = 5
+				has_government = market_liberal
+			}
+		}
 	}
 
 	LEP_invite_market_liberal_decision = {
@@ -195,7 +249,17 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = social_conservative
+			}
+			modifier = {
+				factor = 5
+				has_government = authoritarian_democrat
+			}
+		}
 	}
 
 	LEP_invite_social_conservative_decision = {
@@ -220,7 +284,17 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = market_liberal
+			}
+			modifier = {
+				factor = 5
+				has_government = authoritarian_democrat
+			}
+		}
 	}
 
 	LEP_invite_authoritarian_democrat_decision = {
@@ -245,7 +319,21 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = market_liberal
+			}
+			modifier = {
+				factor = 5
+				has_government = social_conservative
+			}
+			modifier = {
+				factor = 5
+				has_government = paternal_autocrat
+			}
+		}
 	}
 
 	LEP_invite_paternal_autocrat_decision = {
@@ -270,7 +358,17 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = authoritarian_democrat
+			}
+			modifier = {
+				factor = 5
+				has_government = national_populist
+			}
+		}
 	}
 
 	LEP_invite_national_populist_decision = {
@@ -295,7 +393,17 @@ LEPEXP_parliament = {
 			add_to_coalition = yes
 			LEP_hold_election_seats = yes
 		}
-		ai_will_do = { factor = 0 }
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = paternal_autocrat
+			}
+			modifier = {
+				factor = 5
+				has_government = authoritarian_democrat
+			}
+		}
 	}
 
 }

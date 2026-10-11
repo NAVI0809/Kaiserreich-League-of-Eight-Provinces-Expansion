@@ -194,7 +194,12 @@ focus_tree = {
 		x = 4
 		y = 1
 
-		ai_will_do = { factor = 1000 }
+		ai_will_do = { factor = 1000
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+		}
 		prerequisite = { focus = LEP_north_south_west }
 		available = {
 			OR = {
@@ -267,6 +272,9 @@ focus_tree = {
 		id = LEP_establish_staff_council
 		icon = GFX_goal_consolidating_coalitionv2
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_enforce_officer_loyalty
 		}
@@ -290,6 +298,9 @@ focus_tree = {
 		id = LEP_student_volunteer_corps
 		icon = GFX_goal_IRE_PLP
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_jiangnan_loans
 		}
@@ -315,6 +326,21 @@ focus_tree = {
 		id = LEP_support_federalist_movement
 		icon = GFX_goal_RUS_streamline_autonomies
 		cost = 1
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+		}
 		prerequisite = {
 			focus = LEP_jiangnan_loans
 		}
@@ -354,6 +380,9 @@ focus_tree = {
 		id = LEP_chamber_parliament
 		icon = GFX_goal_ANQ_convince_intellectuals
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_support_federalist_movement
 		}
@@ -450,6 +479,9 @@ focus_tree = {
 		id = LEP_crackdown_union_leaders
 		icon = GFX_goal_UK_ban_unions
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_price_controls
 			focus = LEP_enforce_media_controls
@@ -481,6 +513,9 @@ focus_tree = {
 		id = LEP_restore_union_rights
 		icon = GFX_goal_workers_rights
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_enforce_media_controls
 			focus = LEP_price_controls
@@ -550,6 +585,9 @@ focus_tree = {
 		id = LEP_raise_chamber_funds
 		icon = GFX_goal_generic_privatization
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_restore_union_rights
 			focus = LEP_crackdown_union_leaders
@@ -707,6 +745,9 @@ focus_tree = {
 		id = LEP_unite_gentry_merchants
 		icon = GFX_focus_CHI_connections_with_shanghai_elites
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_provisional_senate
 		}
@@ -727,6 +768,9 @@ focus_tree = {
 		id = LEP_unite_national_liberals
 		icon = GFX_focus_generic_industrialists
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_provisional_senate
 		}
@@ -752,6 +796,9 @@ focus_tree = {
 		id = LEP_autonomy_outline
 		icon = GFX_goal_constitutional_guarantees
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_unite_gentry_merchants
 		}
@@ -780,6 +827,9 @@ focus_tree = {
 		id = LEP_organize_defense_corps
 		icon = GFX_goal_generic_drafted_army
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_autonomy_outline
 		}
@@ -801,6 +851,9 @@ focus_tree = {
 		id = LEP_disband_warlords_reduce_army
 		icon = GFX_goal_focus_chain_army
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_autonomy_outline
 		}
@@ -822,6 +875,9 @@ focus_tree = {
 		id = LEP_southeast_autonomy_academy
 		icon = GFX_goal_China_GRA
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_disband_warlords_reduce_army
 			focus = LEP_organize_defense_corps
@@ -862,6 +918,9 @@ focus_tree = {
 		id = LEP_establish_pacification_office
 		icon = GFX_focus_FIN_parmis_devils
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_autonomy_outline
 		}
@@ -901,6 +960,9 @@ focus_tree = {
 		id = LEP_End_Local_Warlordism
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_establish_pacification_office
 		}
@@ -1000,6 +1062,9 @@ focus_tree = {
 		id = LEP_rebuild_administrative_system
 		icon = GFX_goal_agency
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_unite_gentry_merchants
 		}
@@ -1041,6 +1106,9 @@ focus_tree = {
 		id = LEP_disaster_relief_fundraising
 		icon = GFX_goal_PAL_Irrigation_Program
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rebuild_administrative_system
 		}
@@ -1080,6 +1148,9 @@ focus_tree = {
 		id = LEP_police_reorganization
 		icon = GFX_goal_generic_police_state
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rebuild_administrative_system
 		}
@@ -1126,6 +1197,9 @@ focus_tree = {
 		id = LEP_administrative_inspector
 		icon = GFX_focus_ETH_support_from_the_japanese_communists
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_police_reorganization
 		}
@@ -1157,6 +1231,9 @@ focus_tree = {
 		id = LEP_personnel_bureau
 		icon = GFX_goal_civil_service
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rebuild_administrative_system
 		}
@@ -1191,6 +1268,9 @@ focus_tree = {
 		id = LEP_independent_audit_office
 		icon = GFX_goal_generic_controlled_board
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_completed_focus = LEP_police_reorganization
 		}
@@ -1230,6 +1310,9 @@ focus_tree = {
 		id = LEP_decentralization_support
 		icon = GFX_goal_Fight_for_Freedom
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_personnel_bureau
 		}
@@ -1267,6 +1350,9 @@ focus_tree = {
 		id = LEP_livelihood_equality
 		icon = GFX_goal_Winterhilfe
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_unite_gentry_merchants
 		}
@@ -1301,6 +1387,9 @@ focus_tree = {
 		id = LEP_factory_welfare_reform
 		icon = GFX_goal_workers_for_business
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_livelihood_equality
 		}
@@ -1338,6 +1427,13 @@ focus_tree = {
 		id = LEP_appease_general_labor_union
 		icon = GFX_goal_China_CSP
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		prerequisite = {
 			focus = LEP_livelihood_equality
 		}
@@ -1383,6 +1479,9 @@ focus_tree = {
 		id = LEP_new_citizen
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_factory_welfare_reform
 			focus = LEP_appease_general_labor_union
@@ -1407,6 +1506,9 @@ focus_tree = {
 		id = LEP_eradicate_bad_customs
 		icon = GFX_goal_generic_prohibition
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_completed_focus = LEP_new_citizen
 		}
@@ -1428,6 +1530,9 @@ focus_tree = {
 		id = LEP_compulsory_education
 		icon = GFX_goal_KTG_Educate_natives
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_eradicate_bad_customs
 		}
@@ -1469,6 +1574,9 @@ focus_tree = {
 		id = LEP_clean_governance_stable_society
 		icon = GFX_goal_generic_stable_government
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_administrative_inspector
 		}
@@ -1516,6 +1624,9 @@ focus_tree = {
 		id = LEP_Cultural_Renaissance_Movement
 		icon = GFX_goal_generic_culture2
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_southeast_autonomy_academy
 		}
@@ -1532,6 +1643,9 @@ focus_tree = {
 		id = LEP_peace_declaration
 		icon = GFX_goal_COS_Peace
 		cost = 2.00
+		ai_will_do = {
+			factor = 0
+		}
 		prerequisite = {
 			focus = LEP_southeast_autonomy_academy
 		}
@@ -1569,6 +1683,18 @@ focus_tree = {
 		id = LEP_association_of_all_sectors
 		icon = GFX_goal_generic_solidarity
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+}
 		prerequisite = {
 			focus = LEP_new_citizen
 		}
@@ -1605,6 +1731,14 @@ focus_tree = {
 		icon = GFX_goal_FNG_Reclamation_War
 		dynamic = yes
 		cost = 2.00
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 100
+				date > 1938.1.1
+			}
+
+		}
 		prerequisite = {
 			focus = LEP_establish_pacification_office
 		}
@@ -1629,6 +1763,9 @@ focus_tree = {
 		id = LEP_new_republic_old_ideals
 		icon = GFX_goal_China_twelve_symbols
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		x = 15
 		y = 7
 		allow_branch = {
@@ -1648,6 +1785,9 @@ focus_tree = {
 		id = LEP_take_over_ministries_and_commissions
 		icon = GFX_focus_generic_improve_the_administration
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_new_republic_old_ideals
 		}
@@ -1682,6 +1822,9 @@ focus_tree = {
 		id = LEP_emphasize_unified_leadership
 		icon = GFX_focus_generic_workers
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_take_over_ministries_and_commissions
 		}
@@ -1720,6 +1863,9 @@ focus_tree = {
 		id = LEP_take_precautionary_measures
 		icon = GFX_goal_PAL_Food_Import
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_emphasize_unified_leadership
 		}
@@ -1758,6 +1904,9 @@ focus_tree = {
 		id = LEP_expand_coalition_cabinet
 		icon = GFX_goal_ANQ_convince_intellectuals
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_take_over_ministries_and_commissions
 		}
@@ -1805,6 +1954,9 @@ focus_tree = {
 		id = LEP_reduce_red_tape
 		icon = GFX_goal_generic_dissolve_parliament1
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_emphasize_unified_leadership
 			focus = LEP_expand_coalition_cabinet
@@ -1832,6 +1984,9 @@ focus_tree = {
 		id = LEP_national_image_continuity
 		icon = GFX_goal_China_five_races_flag
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_reduce_red_tape
 		}
@@ -1848,6 +2003,9 @@ focus_tree = {
 		id = LEP_military_reorganization
 		icon = GFX_goal_enlist_the_police
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_new_republic_old_ideals
 		}
@@ -1866,6 +2024,9 @@ focus_tree = {
 		id = LEP_actual_pay
 		icon = GFX_goal_ANQ_patriotic_contributions
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Whampoa_spirit
 			focus = LEP_support_from_guo_min_jun
@@ -1887,6 +2048,9 @@ focus_tree = {
 		id = LEP_take_over_war_factories
 		icon = GFX_focus_generic_military_equipment
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_actual_pay
 		}
@@ -1905,6 +2069,9 @@ focus_tree = {
 		id = LEP_Whampoa_spirit
 		icon = GFX_goal_CHI_soul_of_whampoa
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_military_reorganization
 		}
@@ -1926,6 +2093,9 @@ focus_tree = {
 		id = LEP_support_from_guo_min_jun
 		icon = GFX_goal_china_feng_yuxiang
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_military_reorganization
 		}
@@ -1945,6 +2115,9 @@ focus_tree = {
 		id = LEP_divide_military_regions
 		icon = GFX_goal_generic_army_grand_battleplan
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		
 		prerequisite = {
 			focus = LEP_actual_pay
@@ -1974,6 +2147,9 @@ focus_tree = {
 		id = LEP_restore_central_bank_authority
 		icon = GFX_goal_LEP_jiangzhe_bank
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_new_republic_old_ideals
 		}
@@ -1992,6 +2168,9 @@ focus_tree = {
 		id = LEP_ease_social_tensions
 		icon = GFX_goal_conspiracy
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_coalition_cabinet
 		}
@@ -2027,6 +2206,9 @@ focus_tree = {
 		id = LEP_economic_democratization
 		icon = GFX_focus_GER_autarky_achieved
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_new_republic_old_ideals
 		}
@@ -2046,6 +2228,9 @@ focus_tree = {
 		id = LEP_unify_national_market
 		icon = GFX_focus_GER_customs_union
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_restore_central_bank_authority
 		}
@@ -2066,6 +2251,9 @@ focus_tree = {
 		id = LEP_establish_heavy_industry
 		icon = GFX_goal_industry_air
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_new_republic_old_ideals
 		}
@@ -2128,6 +2316,9 @@ focus_tree = {
 		id = LEP_revitalize_frontier_and_barren_lands
 		icon = GFX_focus_generic_agricultural_subsidies
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_unify_national_market
 		}
@@ -2147,6 +2338,9 @@ focus_tree = {
 		id = LEP_resource_nationalization
 		icon = GFX_goal_generic_autarky
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_revitalize_frontier_and_barren_lands
 		}
@@ -2168,6 +2362,9 @@ focus_tree = {
 		id = LEP_preserve_market_regulation
 		icon = GFX_focus_generic_economic_recovery
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_revitalize_frontier_and_barren_lands
 		}
@@ -2188,6 +2385,9 @@ focus_tree = {
 		id = LEP_national_congress
 		icon = GFX_goal_generic_parliament2
 		cost = 10.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_resource_nationalization
 			focus = LEP_preserve_market_regulation
@@ -2234,6 +2434,9 @@ focus_tree = {
 		x = 15
 		y = 7
 		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_CHI_restore_the_old_republic
 		allow_branch = {
 			has_country_flag = LEP_new_focus
@@ -2253,6 +2456,9 @@ focus_tree = {
 		id = LEP_take_over_commissions_and_ministries
 		
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_parliament2
 		
 		prerequisite = {
@@ -2273,6 +2479,9 @@ focus_tree = {
 		id = LEP_release_political_prisoners
 		
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_RUS_never_another_savinkov
 		prerequisite = {
 			focus = LEP_take_over_commissions_and_ministries
@@ -2289,6 +2498,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_treaty_fails
 		prerequisite = {
 			focus = LEP_take_over_commissions_and_ministries
@@ -2302,6 +2514,9 @@ focus_tree = {
 		id = LEP_national_reconstruction_administration
 		
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_develop_provinces
 		available = {
 			has_completed_focus = LEP_industrial_general_committee
@@ -2328,6 +2543,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_austerity_measures
 		prerequisite = {
 			focus = LEP_national_reconstruction_administration
@@ -2347,6 +2565,9 @@ focus_tree = {
 		id = LEP_develop_heavy_industry
 		icon = GFX_goal_ENG_federative_economic_commission
 		cost = 2.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_grasp_key_resources
 		}
@@ -2421,6 +2642,9 @@ focus_tree = {
 		x = 0
 		y = 3
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_China_five_races_flag
 		prerequisite = {
 			focus = LEP_handle_old_treaties
@@ -2460,6 +2684,26 @@ focus_tree = {
 		x = 9
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+}
 		icon = GFX_focus_generic_industrialists
 		mutually_exclusive = {
 			focus = LEP_strive_towards_democratic_future
@@ -2490,6 +2734,26 @@ focus_tree = {
 		x = 7
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+}
 		icon = GFX_goal_RUS_american_liberty
 		mutually_exclusive = {
 			focus = LEP_legacy_of_southeast_mutual_protection
@@ -2520,6 +2784,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_COG_force_publique_mutiny
 		prerequisite = {
 			focus = LEP_war_comes_from_the_north
@@ -2548,6 +2815,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_focus_generic_female_rights
 		prerequisite = {
 			focus = LEP_preliminary_social_security
@@ -2579,6 +2857,18 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+}
 		icon = GFX_focus_CHI_ally_the_young_china_party
 		mutually_exclusive = {
 			focus = LEP_uphold_civilian_politics
@@ -2636,6 +2926,17 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_focus_generic_court
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
@@ -2669,6 +2970,18 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+}
 		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
 		mutually_exclusive = {
 			focus = LEP_nationalist_rhetoric
@@ -2710,6 +3023,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_focus_PRC_urbanization
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
@@ -2756,6 +3080,21 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		icon = GFX_goal_QIE_beijing_government
 		prerequisite = {
 			focus = LEP_legacy_of_southeast_mutual_protection
@@ -2825,6 +3164,21 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		icon = GFX_goal_OTT_Loosen_Policy
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
@@ -2877,6 +3231,21 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+		}
 		icon = GFX_goal_OTT_constitution
 		prerequisite = {
 			focus = LEP_united_democratic_alliance
@@ -2930,6 +3299,21 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		icon = GFX_goal_collaborate_local_elites
 		prerequisite = {
 			focus = LEP_protect_private_property
@@ -2985,6 +3369,21 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		icon = GFX_focus_generic_steel_mill
 		prerequisite = {
 			focus = LEP_protect_private_property
@@ -3020,6 +3419,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_DEN_heavy_regulations
 		prerequisite = {
 			focus = LEP_national_reconstruction_administration
@@ -3037,6 +3439,9 @@ focus_tree = {
 		x = -8
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_attack_fengtian
 		allow_branch = {
 			has_country_flag = LEP_mili_focus_on_flag
@@ -3058,6 +3463,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 4
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_China_Beiyang_Army
 		#icon = GFX_goal_generic_army_high_command
 		#icon = GFX_focus_CHI_military_mission
@@ -3080,6 +3488,9 @@ focus_tree = {
 		x = -4
 		y = 1
 		cost = 7
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_diplomatic_treaty
 		prerequisite = {
 			focus = LEP_national_images_continuity
@@ -3109,6 +3520,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_the_giant_wakes
 		prerequisite = {
 			focus = LEP_national_images_continuity
@@ -3127,6 +3541,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_railroad
 		prerequisite = {
 			focus = LEP_economics_democratization
@@ -3198,6 +3615,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 2
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_central_planning
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
@@ -3301,6 +3721,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_bad_medical
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
@@ -3323,6 +3746,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_hydroelectric_energy
 		prerequisite = {
 			focus = LEP_economics_democratization
@@ -3343,6 +3769,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_CHI_students_to_the_countryside
 		prerequisite = {
 			focus = LEP_restore_infrastructure
@@ -3376,6 +3805,9 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_university_1
 		prerequisite = {
 			focus = LEP_economics_democratization
@@ -3410,6 +3842,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 7
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_CHI_guerrilla_warfare
 		#icon = GFX_focus_ETH_freedom_at_gunpoint
 		available = { has_completed_focus = LEP_army_nationalization }
@@ -3479,6 +3914,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_reinforcing_the_supply_network
 		prerequisite = {
 			focus = LEP_national_defense_design_council
@@ -3505,6 +3943,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 1
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_printing_press
 		prerequisite = {
 			focus = LEP_national_defense_design_council
@@ -3525,6 +3966,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_league_of_nations
 		prerequisite = {
 			focus = LEP_seek_international_recognition
@@ -3554,6 +3998,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_CHI_meritocratic_principles
 		prerequisite = {
 			focus = LEP_accelerate_military_reduction
@@ -3575,6 +4022,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_CHI_prepare_war_zones
 		prerequisite = {
 			focus = LEP_integrate_arsenal_factories
@@ -3604,6 +4054,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_generic_industrial_experts
 		prerequisite = {
 			focus = LEP_seek_international_recognition
@@ -3623,6 +4076,18 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+}
 		icon = GFX_goal_RUS_symphony_of_authorities
 		mutually_exclusive = {
 			focus = LEP_uphold_parliamentarism
@@ -3644,6 +4109,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_goal_generic_solidarity
 		prerequisite = {
 			focus = LEP_empower_the_supreme_judicial_court
@@ -3690,6 +4166,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_QIE_president_hu
 		prerequisite = {
 			focus = LEP_new_beiyang_faction
@@ -3712,6 +4191,17 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_goal_China_CDL
 		prerequisite = {
 			focus = LEP_strive_towards_democratic_future
@@ -3771,6 +4261,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_China_twelve_symbols
 		prerequisite = {
 			focus = LEP_maintain_production_order
@@ -3818,6 +4311,21 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+			}
+		}
 		icon = GFX_goal_LEP_patronize_xiangshen
 		prerequisite = {
 			focus = LEP_maintain_production_order
@@ -3865,6 +4373,18 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+		
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+}
 		icon = GFX_goal_QIE_assembly
 		mutually_exclusive = {
 			focus = LEP_empower_the_president
@@ -3885,6 +4405,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_elections
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		prerequisite = {
@@ -3928,6 +4451,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_GBR_fate_of_unions
 		prerequisite = {
 			focus = LEP_long_trains_and_steel_horses
@@ -3949,6 +4475,17 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		icon = GFX_focus_generic_military_dictatorship
 		prerequisite = {
 			focus = LEP_preliminary_social_security
@@ -3973,6 +4510,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 6
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_AUS_raid_military_storages
 		prerequisite = {
 			focus = LEP_accelerate_military_reduction
@@ -3993,6 +4533,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_focus_AFG_parliamentary_democracy
 		prerequisite = {
 			focus = LEP_new_factory_law
@@ -4010,6 +4553,9 @@ focus_tree = {
 		id = LEP_DSP
 		icon = GFX_goal_ideology_social_liberal
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		x = 15
 		y = 18
 		allow_branch = {
@@ -4026,6 +4572,9 @@ focus_tree = {
 		id = LEP_guided_by_the_may_fourth_spirit
 		icon = GFX_goal_RUS_liberation_march
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_DSP
 		}
@@ -4045,6 +4594,9 @@ focus_tree = {
 		id = LEP_absolute_freedom_of_academic_thought
 		icon = GFX_goal_KTG_Bookstack
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_guided_by_the_may_fourth_spirit
 		}
@@ -4059,6 +4611,9 @@ focus_tree = {
 		id = LEP_human_rights_protection_commission
 		icon = GFX_focus_NOR_empower_sivorg
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_absolute_freedom_of_academic_thought
 		}
@@ -4077,6 +4632,9 @@ focus_tree = {
 		id = LEP_embrace_political_rationality
 		icon = GFX_goal_social_reforms
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_absolute_freedom_of_academic_thought
 		}
@@ -4092,6 +4650,9 @@ focus_tree = {
 		id = LEP_national_student_federation
 		icon = GFX_focus_generic_university_2
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_absolute_freedom_of_academic_thought
 		}
@@ -4104,6 +4665,9 @@ focus_tree = {
 		id = LEP_improve_public_servants_welfare
 		icon = GFX_goal_generic_controlled_board
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_human_rights_protection_commission
 		}
@@ -4131,6 +4695,9 @@ focus_tree = {
 		id = LEP_scientific_public_administration
 		icon = GFX_goal_ANQ_nationalist_credibility
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_human_rights_protection_commission
 		}
@@ -4164,6 +4731,9 @@ focus_tree = {
 		id = LEP_outline_for_national_reconstruction
 		icon = GFX_goal_construction
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_DSP
 		}
@@ -4183,6 +4753,9 @@ focus_tree = {
 		id = LEP_enhance_technological_conversion_rate
 		icon = GFX_goal_Automobile_Production
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_encourage_scientific_research
 		}
@@ -4201,6 +4774,9 @@ focus_tree = {
 		id = LEP_encourage_scientific_research
 		icon = GFX_focus_NORDIC_dem_capstone_research
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		
 		prerequisite = {
 			focus = LEP_outline_for_national_reconstruction
@@ -4218,6 +4794,9 @@ focus_tree = {
 		id = LEP_civilian_control_of_the_military
 		icon = GFX_goal_chinese_instructors
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_outline_for_national_reconstruction
 		}
@@ -4240,6 +4819,9 @@ focus_tree = {
 		id = LEP_rely_on_AA
 		icon = GFX_focus_ARG_march_to_la_casa_rosada
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_outline_for_national_reconstruction
 		}
@@ -4261,6 +4843,9 @@ focus_tree = {
 		id = LEP_swords_into_plowshares
 		icon = GFX_focus_SOV_breadbasket_of_the_union
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_civilian_control_of_the_military
 			focus = LEP_rely_on_AA
@@ -4280,6 +4865,9 @@ focus_tree = {
 		id = LEP_support_small_and_medium_enterprises
 		icon = GFX_goal_capitalist_system
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_enhance_technological_conversion_rate
 		}
@@ -4301,6 +4889,9 @@ focus_tree = {
 		id = LEP_peace_democracy_independence
 		icon = GFX_goal_liberty
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_improve_public_servants_welfare
 			focus = LEP_scientific_public_administration
@@ -4322,6 +4913,9 @@ focus_tree = {
 		id = LEP_succession_of_the_regency_cabinet
 		icon = GFX_goal_ideology_market_liberal
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		x = 15
 		y = 18
 		allow_branch = {
@@ -4338,6 +4932,9 @@ focus_tree = {
 		id = LEP_rule_of_national_experts_and_gentlemen
 		icon = GFX_focus_generic_industrialists
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_succession_of_the_regency_cabinet
 		}
@@ -4356,6 +4953,9 @@ focus_tree = {
 		id = LEP_multi_level_governance_system
 		icon = GFX_goal_generic_council
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rule_of_national_experts_and_gentlemen
 		}
@@ -4371,6 +4971,9 @@ focus_tree = {
 		id = LEP_diligence_frugality_loyalty_prudence
 		icon = GFX_goal_CHI_tigress_battalions
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rule_of_national_experts_and_gentlemen
 		}
@@ -4389,6 +4992,9 @@ focus_tree = {
 		id = LEP_model_the_british_parliament
 		icon = GFX_GBR_big_ben
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_succession_of_the_regency_cabinet
 		}
@@ -4407,6 +5013,9 @@ focus_tree = {
 		id = LEP_council_of_state
 		icon = GFX_goal_generic_government_deals
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_model_the_british_parliament
 		}
@@ -4428,6 +5037,9 @@ focus_tree = {
 		id = LEP_engaging_with_the_dangwai
 		icon = GFX_goal_QIE_assembly
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_succession_of_the_regency_cabinet
 		}
@@ -4462,6 +5074,9 @@ focus_tree = {
 		id = LEP_song_jiaoren_vision
 		icon = GFX_goal_GXC_rehabilitating_beiyang
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_model_the_british_parliament
 			focus = LEP_engaging_with_the_dangwai
@@ -4478,6 +5093,9 @@ focus_tree = {
 		id = LEP_praise_the_unknown_heroes
 		icon = GFX_goal_chi_three_principles
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_song_jiaoren_vision
 		}
@@ -4496,6 +5114,9 @@ focus_tree = {
 		id = LEP_supreme_economic_council
 		icon = GFX_focus_generic_currency_reforms
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_succession_of_the_regency_cabinet
 		}
@@ -4514,6 +5135,9 @@ focus_tree = {
 		id = LEP_bank_of_china
 		icon = GFX_LEC_Illegitimate_Economy
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_supreme_economic_council
 		}
@@ -4532,6 +5156,9 @@ focus_tree = {
 		id = LEP_new_china_construction_society
 		icon = GFX_focus_generic_public_works
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_supreme_economic_council
 		}
@@ -4550,6 +5177,9 @@ focus_tree = {
 		id = LEP_municipal_development
 		icon = GFX_ITA_urban
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_supreme_economic_council
 		}
@@ -4565,6 +5195,9 @@ focus_tree = {
 		id = LEP_compile_industrial_monographs
 		icon = GFX_focus_generic_university_1
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_municipal_development
 		}
@@ -4584,6 +5217,9 @@ focus_tree = {
 		id = LEP_continuation_of_the_founding_republican_spirit
 		icon = GFX_goal_beiyang_flags
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_diligence_frugality_loyalty_prudence
 		}
@@ -4610,6 +5246,9 @@ focus_tree = {
 		id = LEP_GSL
 		icon = GFX_goal_ideology_social_conservative
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		x = 15
 		y = 18
 		available = { china_is_the_unifier_of_china_trigger = yes }
@@ -4627,6 +5266,9 @@ focus_tree = {
 		id = LEP_modern_management_system
 		icon = GFX_goal_social_reforms
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_GSL
 		}
@@ -4642,6 +5284,9 @@ focus_tree = {
 		id = LEP_labor_capital_reconciliation
 		icon = GFX_goal_workers_rights
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_modern_management_system
 		}
@@ -4660,6 +5305,9 @@ focus_tree = {
 		id = LEP_depoliticize_trade_unions
 		icon = GFX_goal_Yellow_Union
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_modern_management_system
 		}
@@ -4678,6 +5326,9 @@ focus_tree = {
 		id = LEP_labor_autonomous_region
 		icon = GFX_goal_generic_union_agreement
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_labor_capital_reconciliation
 			focus = LEP_depoliticize_trade_unions
@@ -4707,6 +5358,9 @@ focus_tree = {
 		id = LEP_uphold_responsible_government
 		icon = GFX_goal_DOM_Call_Special_Election
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_GSL
 		}
@@ -4725,6 +5379,9 @@ focus_tree = {
 		id = LEP_alliance_with_the_civic_party
 		icon = GFX_goal_LEP_patronize_xiangshen
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_uphold_responsible_government
 		}
@@ -4747,6 +5404,9 @@ focus_tree = {
 		id = LEP_bribe_the_jiangzhe_cliques
 		icon = GFX_goal_LEC_triads
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_uphold_responsible_government
 		}
@@ -4768,6 +5428,9 @@ focus_tree = {
 		id = LEP_exploit_the_european_war
 		icon = GFX_GBR_westerminster_dec
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_GSL
 		}
@@ -4795,6 +5458,9 @@ focus_tree = {
 		id = LEP_dream_of_tianyuan
 		icon = GFX_focus_usa_guarantee_the_american_dream
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_GSL
 		}
@@ -4813,6 +5479,9 @@ focus_tree = {
 		id = LEP_institute_for_public_industry_and_commerce
 		icon = GFX_goal_generic_financial_markets
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_dream_of_tianyuan
 		}
@@ -4829,6 +5498,9 @@ focus_tree = {
 		id = LEP_tongren_savings_department
 		icon = GFX_goal_generic_loans
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_dream_of_tianyuan
 		}
@@ -4844,6 +5516,9 @@ focus_tree = {
 		id = LEP_ban_foreign_capital
 		icon = GFX_focus_HOL_abandon_gold_standard
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_institute_for_public_industry_and_commerce
 		}
@@ -4862,6 +5537,9 @@ focus_tree = {
 		id = LEP_grand_agricultural_plan
 		icon = GFX_goal_generic_farmer_and_worker
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_dream_of_tianyuan
 		}
@@ -4877,6 +5555,9 @@ focus_tree = {
 		id = LEP_agricultural_and_sideline_product_trade
 		icon = GFX_goal_DEI_focus_ban_rice_import
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_grand_agricultural_plan
 		}
@@ -4895,6 +5576,9 @@ focus_tree = {
 		id = LEP_upright_in_politics_and_business
 		icon = GFX_goal_generic_stable_government
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_labor_autonomous_region
 		}
@@ -4921,6 +5605,9 @@ focus_tree = {
 		id = LEP_solidarity_union
 		icon = GFX_goal_ARM_united_and_ready
 		cost = 0
+		ai_will_do = {
+			factor = 50
+		}
 		x = 11
 		y = 16
 		allow_branch = {
@@ -4932,6 +5619,9 @@ focus_tree = {
 		id = LEP_financial_rectification
 		icon = GFX_goal_generic_destruction_civil_war
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_solidarity_union
 		}
@@ -4951,6 +5641,9 @@ focus_tree = {
 		id = LEP_proclaim_the_state_of_extraordinary_administration
 		icon = GFX_goal_NFA_end_parliamentarism
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_government = authoritarian_democrat
 		}
@@ -4974,6 +5667,9 @@ focus_tree = {
 		id = LEP_protect_democracy_procedure
 		icon = GFX_goal_RUS_streamline_autonomies
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_government = social_democrat
 		}
@@ -4997,6 +5693,9 @@ focus_tree = {
 		id = LEP_restore_order_in_the_capital
 		icon = GFX_goal_RUS_oppression
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_solidarity_union
 		}
@@ -5016,6 +5715,9 @@ focus_tree = {
 		id = LEP_press_regulation_bill_draft
 		icon = GFX_goal_generic_seize_press
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_solidarity_union
 		}
@@ -5035,6 +5737,9 @@ focus_tree = {
 		id = LEP_restrict_inflammatory_propaganda
 		icon = GFX_focus_generic_ban_right_wing
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_government = authoritarian_democrat
 		}
@@ -5058,6 +5763,9 @@ focus_tree = {
 		id = LEP_encourage_freedom_discussion
 		icon = GFX_goal_KTG_Elections
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		available = {
 			has_government = social_democrat
 		}
@@ -5081,6 +5789,9 @@ focus_tree = {
 		id = LEP_restore_cabinet_authority
 		icon = GFX_goal_RUS_regency
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_proclaim_the_state_of_extraordinary_administration
 			focus = LEP_protect_democracy_procedure
@@ -5104,6 +5815,9 @@ focus_tree = {
 		id = LEP_from_national_salvation_to_state_building
 		icon = GFX_goal_ideology_social_democrat
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_restore_cabinet_authority
 		}
@@ -5129,6 +5843,9 @@ focus_tree = {
 		id = LEP_the_call_of_democracy_and_weekly
 		icon = GFX_goal_big_news
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_from_national_salvation_to_state_building
 		}
@@ -5144,6 +5861,9 @@ focus_tree = {
 		id = LEP_responsibility_of_the_intellectuals
 		icon = GFX_Socialist_Law
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_the_call_of_democracy_and_weekly
 		}
@@ -5162,6 +5882,9 @@ focus_tree = {
 		id = LEP_moderate_social_reform
 		icon = GFX_goal_generic_workers_democracy
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_from_national_salvation_to_state_building
 		}
@@ -5177,6 +5900,9 @@ focus_tree = {
 		id = LEP_safeguard_labor_rights
 		icon = GFX_goal_workers_rights
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_moderate_social_reform
 		}
@@ -5195,6 +5921,9 @@ focus_tree = {
 		id = LEP_order_and_efficiency
 		icon = GFX_goal_ideology_authoritarian_democrat
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_restore_cabinet_authority
 		}
@@ -5221,6 +5950,9 @@ focus_tree = {
 		id = LEP_administrative_orders_take_precedence
 		icon = GFX_focus_generic_authoritarian_government
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_order_and_efficiency
 		}
@@ -5236,6 +5968,9 @@ focus_tree = {
 		id = LEP_expand_the_national_planning_system
 		icon = GFX_focus_GER_prioritize_the_four_year_plan
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_order_and_efficiency
 		}
@@ -5251,6 +5986,9 @@ focus_tree = {
 		id = LEP_establish_the_central_policy_research_office
 		icon = GFX_goal_RUS_symphony_of_authorities
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_the_national_planning_system
 		}
@@ -5270,6 +6008,9 @@ focus_tree = {
 		id = LEP_recruit_engineers_and_economists
 		icon = GFX_goal_ANQ_Caifa_Contracts
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_the_national_planning_system
 		}
@@ -5286,6 +6027,9 @@ focus_tree = {
 		id = LEP_university_autonomy
 		icon = GFX_goal_brain
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_the_call_of_democracy_and_weekly
 			focus = LEP_moderate_social_reform
@@ -5302,6 +6046,9 @@ focus_tree = {
 		id = LEP_social_revolutionary_alliance
 		icon = GFX_goal_China_red_star
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_university_autonomy
 		}
@@ -5326,6 +6073,9 @@ focus_tree = {
 		id = LEP_democratic_united_front
 		icon = GFX_goal_HOL_CNA_restored_stability
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_university_autonomy
 		}
@@ -5350,6 +6100,9 @@ focus_tree = {
 		id = LEP_middle_class_unity
 		icon = GFX_focus_ITA_grande_rivolta_rurale
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_democratic_united_front
 		}
@@ -5368,6 +6121,9 @@ focus_tree = {
 		id = LEP_peoples_livelihood_revolution
 		icon = GFX_goal_CHI_economic_sphere
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_social_revolutionary_alliance
 		}
@@ -5386,6 +6142,9 @@ focus_tree = {
 		id = LEP_chinas_third_way
 		icon = GFX_goal_generic_solidarity
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_social_revolutionary_alliance
 			focus = LEP_democratic_united_front
@@ -5403,6 +6162,9 @@ focus_tree = {
 		id = LEP_military_sports_organization
 		icon = GFX_goal_generic_paramilitary
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_administrative_orders_take_precedence
 		}
@@ -5421,6 +6183,9 @@ focus_tree = {
 		id = LEP_mobilisation_of_society
 		icon = GFX_goal_social_reforms
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_military_sports_organization
 		}
@@ -5439,6 +6204,9 @@ focus_tree = {
 		id = LEP_resource_control
 		icon = GFX_goal_generic_corporatism
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_the_national_planning_system
 		}
@@ -5457,6 +6225,9 @@ focus_tree = {
 		id = LEP_eliminate_localism
 		icon = GFX_focus_ARG_keep_it_in_the_party
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_military_sports_organization
 		}
@@ -5475,6 +6246,9 @@ focus_tree = {
 		id = LEP_bismarckian_liberalism
 		icon = GFX_goal_GER_DNVB
 		cost = 4.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_mobilisation_of_society
 		}
@@ -5493,6 +6267,9 @@ focus_tree = {
 		id = LEP_relieve_funding_shortage
 		icon = GFX_goal_generic_cash_stimulus_plan
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		
 		x = 30
 		y = 0
@@ -5519,6 +6296,9 @@ focus_tree = {
 		id = LEP_agricultural_affairs_bureau
 		icon = GFX_goal_generic_agriculture2
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_yangtze_economic_belt
 		}
@@ -5541,6 +6321,9 @@ focus_tree = {
 		id = LEP_four_pillars_education
 		icon = GFX_goal_generic_farmer
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_agricultural_affairs_bureau
 		}
@@ -5572,6 +6355,9 @@ focus_tree = {
 		id = LEP_cooperative_network
 		icon = GFX_goal_agricultural_aid
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_four_pillars_education
 		}
@@ -5600,6 +6386,9 @@ focus_tree = {
 		id = LEP_small_scale_waterworks
 		icon = GFX_focus_PRC_construct_the_banqiao_dam
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_four_pillars_education
 		}
@@ -5618,6 +6407,9 @@ focus_tree = {
 		id = LEP_rationalize_taxation
 		icon = GFX_goal_generic_landowner_tax_cuts
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_agricultural_affairs_bureau
 		}
@@ -5634,6 +6426,9 @@ focus_tree = {
 		id = LEP_salt_administration_reform
 		icon = GFX_goal_SZC_salt
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_rationalize_taxation
 		}
@@ -5667,6 +6462,9 @@ focus_tree = {
 		id = LEP_ties_with_shanghai
 		icon = GFX_goal_LEP_lec_investments
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_relieve_funding_shortage
 		}
@@ -5690,6 +6488,9 @@ focus_tree = {
 		id = LEP_yangtze_economic_belt
 		icon = GFX_goal_USA_liberty_ships
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_relieve_funding_shortage
 		}
@@ -5708,6 +6509,9 @@ focus_tree = {
 		id = LEP_expand_nantong_port
 		icon = GFX_goal_generic_shipyard
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_yangtze_economic_belt
 		}
@@ -5746,6 +6550,9 @@ focus_tree = {
 		id = LEP_seizure_of_german_assets
 		icon = GFX_goal_RUS_exploit_german
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_relieve_funding_shortage
 		}
@@ -5767,6 +6574,9 @@ focus_tree = {
 		id = LEP_industrial_general_committee
 		icon = GFX_goal_generic_industry_reallocation
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_yangtze_economic_belt
 		}
@@ -5789,6 +6599,9 @@ focus_tree = {
 		id = LEP_expand_east_china_network
 		icon = GFX_goal_generic_road_construction
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_industrial_general_committee
 		}
@@ -5811,6 +6624,9 @@ focus_tree = {
 		id = LEP_east_china_industry_mining
 		icon = GFX_goal_Copper_Mining
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_east_china_network
 		}
@@ -5841,6 +6657,9 @@ focus_tree = {
 		id = LEP_Telephone_and_telegraph
 		icon = GFX_goal_generic_phone_crisis
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_east_china_industry_mining
 		}
@@ -5879,6 +6698,9 @@ focus_tree = {
 		id = LEP_gonghe_cooperative_movement
 		icon = GFX_focus_CHI_initiate_gung_ho_movement
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_industrial_general_committee
 		}
@@ -5898,6 +6720,9 @@ focus_tree = {
 		id = LEP_standardization_and_metrics
 		icon = GFX_goal_generic_design_equipment_standards
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_expand_east_china_network
 			focus = LEP_gonghe_cooperative_movement
@@ -5919,6 +6744,9 @@ focus_tree = {
 		id = LEP_East_China_Academy
 		icon = GFX_goal_double_research
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_east_china_industry_mining
 			focus = LEP_standardization_and_metrics
@@ -5935,6 +6763,9 @@ focus_tree = {
 		id = LEP_east_china_machine_factory
 		icon = GFX_generic_heavy_industry
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_gonghe_cooperative_movement
 		}
@@ -5955,6 +6786,9 @@ focus_tree = {
 		id = LEP_agricultural_technology_cooperation
 		icon = GFX_goal_SZC_improvised_farming_machinery
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_cooperative_network
 		}
@@ -5996,6 +6830,9 @@ focus_tree = {
 		id = LEP_workers_vocational_school
 		icon = GFX_goal_syndicalist_workers
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_standardization_and_metrics
 		}
@@ -6020,6 +6857,9 @@ focus_tree = {
 		id = LEP_qiantang_prosperity
 		icon = GFX_goal_model_cities
 		cost = 3.00
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_workers_vocational_school
 			focus = LEP_East_China_Academy
@@ -6052,6 +6892,9 @@ focus_tree = {
 		id = LEP_Return_to_the_World_Stage
 		icon = GFX_goal_generic_globe
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		x = 15
 		y = 26
 		available = { china_is_the_unifier_of_china_trigger = yes }
@@ -6068,6 +6911,9 @@ focus_tree = {
 		id = LEP_approach_berlin
 		icon = GFX_goal_GER_Master_of_the_World
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6102,6 +6948,9 @@ focus_tree = {
 		id = LEP_industrial_tech_assistance
 		icon = GFX_goal_align_germany
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_approach_berlin
 		}
@@ -6117,6 +6966,9 @@ focus_tree = {
 		id = LEP_east_asia_collective_defense
 		icon = GFX_GEA_Ostasiatische_Heer
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_approach_berlin
 		}
@@ -6135,6 +6987,9 @@ focus_tree = {
 		id = LEP_join_imperial_preferential_system
 		icon = GFX_goal_GER_Mitteleuropa_Cash
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_industrial_tech_assistance
 		}
@@ -6153,6 +7008,9 @@ focus_tree = {
 		id = LEP_visit_moscow
 		icon = GFX_focus_russian_cooperation
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6186,6 +7044,9 @@ focus_tree = {
 		id = LEP_eurasian_landbridge
 		icon = GFX_goal_RUS_moscow_economic_council
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_visit_moscow
 		}
@@ -6205,6 +7066,9 @@ focus_tree = {
 		id = LEP_russian_military_mission
 		icon = GFX_goal_RUS_entrench_kadets
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_visit_moscow
 		}
@@ -6220,6 +7084,9 @@ focus_tree = {
 		id = LEP_develop_siberia
 		icon = GFX_goal_RUS_siberia_industry
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_eurasian_landbridge
 		}
@@ -6276,6 +7143,9 @@ focus_tree = {
 		id = LEP_pan_asian_liberators
 		icon = GFX_goal_SHX_Destiny
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6309,6 +7179,9 @@ focus_tree = {
 		id = LEP_ottawa_mission
 		icon = GFX_GBR_lead_entente
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6342,6 +7215,9 @@ focus_tree = {
 		id = LEP_free_trade_memorandum
 		icon = GFX_goal_CAN_iedc
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_ottawa_mission
 		}
@@ -6357,6 +7233,9 @@ focus_tree = {
 		id = LEP_naval_construction_guidance
 		icon = GFX_goal_generic_naval_academy
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_ottawa_mission
 		}
@@ -6372,6 +7251,9 @@ focus_tree = {
 		id = LEP_expand_pacific_shipping
 		icon = GFX_goal_generic_canal
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_free_trade_memorandum
 		}
@@ -6393,6 +7275,9 @@ focus_tree = {
 		id = LEP_multilateral_trade_pact
 		icon = GFX_goal_LEP_jiangzhe_bank
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_pan_asian_liberators
 		}
@@ -6437,6 +7322,9 @@ focus_tree = {
 		id = LEP_regional_division_of_labor
 		icon = GFX_goal_generic_industry_reallocation
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_pan_asian_liberators
 		}
@@ -6465,6 +7353,9 @@ focus_tree = {
 		id = LEP_joint_military_exercises
 		icon = GFX_goal_generic_join_faction
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_multilateral_trade_pact
 		}
@@ -6496,6 +7387,9 @@ focus_tree = {
 		id = LEP_consolidate_the_frontiers
 		icon = GFX_goal_china_MON_banner
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6522,6 +7416,9 @@ focus_tree = {
 		id = LEP_secure_the_northern_frontier
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_consolidate_the_frontiers
 		}
@@ -6577,6 +7474,9 @@ focus_tree = {
 		id = LEP_beyond_macmahon_line
 		icon = GFX_goal_JAP_target_india
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_consolidate_the_frontiers
 		}
@@ -6646,6 +7546,9 @@ focus_tree = {
 		id = LEP_demand_concessions_return
 		icon = GFX_goal_QIE_destroy_LEC
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6681,6 +7584,9 @@ focus_tree = {
 		id = LEP_strike_german_east_asia
 		icon = GFX_goal_JAP_target_gea
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_demand_concessions_return
 		}
@@ -6700,6 +7606,9 @@ focus_tree = {
 		id = LEP_we_will_liberate_taiwan
 		icon = GFX_goal_reclaim_taiwan
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_Return_to_the_World_Stage
 		}
@@ -6731,6 +7640,9 @@ focus_tree = {
 		id = LEP_liberate_southeast_asia
 		icon = GFX_goal_JAP_target_indochina
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_demand_concessions_return
 		}
@@ -6843,6 +7755,9 @@ focus_tree = {
 		id = LEP_secure_the_southern_seas
 		icon = GFX_goal_JAP_target_australasia
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_strike_german_east_asia
 		}
@@ -6879,6 +7794,9 @@ focus_tree = {
 		id = LEP_Former_Enemies
 		icon = GFX_focus_attack_japan
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_we_will_liberate_taiwan
 		}
@@ -6952,6 +7870,9 @@ focus_tree = {
 		id = LEP_ensure_pacific_security
 		icon = GFX_goal_JAP_target_hawaii
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_liberate_southeast_asia
 		}
@@ -6993,6 +7914,9 @@ focus_tree = {
 		id = LEP_China_Stands_Majestically_in_the_Cosmos
 		icon = GFX_goal_FNG_unification_by_subjugation
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_beyond_macmahon_line
 		}
@@ -7229,6 +8153,18 @@ focus_tree = {
 				factor = 1.25
 				QIE = { has_completed_focus = QIE_restore_order_in_the_middle_kingdom }
 			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
 		}
 		prerequisite = {
 			focus = LEP_two_marshals_under_the_sky
@@ -7278,6 +8214,10 @@ focus_tree = {
 			modifier = {
 				factor = 1.25
 				QIE = { has_completed_focus = QIE_restore_order_in_the_middle_kingdom }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
 			}
 		}
 		prerequisite = { focus = LEP_deepen_the_zhili_schism }
@@ -7465,6 +8405,10 @@ focus_tree = {
 			modifier = {
 				factor = 1.25
 				QIE = { has_completed_focus = QIE_restore_order_in_the_middle_kingdom }
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
 			}
 		}
 		prerequisite = { focus = LEP_utilize_the_jingxing_society }
@@ -7706,6 +8650,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_China_Beiyang_Mass_Assault
 		allow_branch = {
 			has_country_flag = LEP_qi_national_focus
@@ -7721,6 +8668,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_agency
 		allow_branch = {
 			has_country_flag = LEP_qi_national_focus
@@ -7736,6 +8686,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_LEP_generic_flag
 		prerequisite = {
 			focus = LEP_establish_national_defense_union
@@ -7750,6 +8703,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_SZC_zhili_army
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
@@ -7761,6 +8717,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_chi_towards_true_love
 		mutually_exclusive = {
 			focus = LEP_qixieyuan_personality_cult
@@ -7778,6 +8737,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_model_cities
 		prerequisite = {
 			focus = LEP_treaty_port_administrative_office
@@ -7789,6 +8751,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_ANQ_convince_intellectuals
 		prerequisite = {
 			focus = LEP_national_salvation_alliance
@@ -7800,6 +8765,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_China_five_colour_beiyang_star_auth
 		prerequisite = {
 			focus = LEP_sun_successor
@@ -7811,6 +8779,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_GER_break_down_the_rules_of_legislation
 		prerequisite = {
 			focus = LEP_support_local_enterprises
@@ -7825,6 +8796,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_bag_of_money
 		prerequisite = {
 			focus = LEP_treaty_port_administrative_office
@@ -7836,6 +8810,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_authority
 		mutually_exclusive = {
 			focus = LEP_traditional_values_return
@@ -7854,6 +8831,9 @@ focus_tree = {
 		x = -7
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_QIE_ycp
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
@@ -7865,6 +8845,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_beiyang_flags
 		prerequisite = {
 			focus = LEP_jinling_military_academy_expansion
@@ -7876,6 +8859,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_social_reforms
 		prerequisite = {
 			focus = LEP_five_color_flag
@@ -7890,6 +8876,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_LEP_officer_initiative
 		prerequisite = {
 			focus = LEP_nationalist_military
@@ -7901,6 +8890,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_HOL_crackdown_radsoc
 		prerequisite = {
 			focus = LEP_economic_regulation_enhancement
@@ -7918,6 +8910,9 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_ANQ_patriotic_contributions
 		prerequisite = {
 			focus = LEP_nationalist_military
@@ -7929,6 +8924,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_state_economy
 		prerequisite = {
 			focus = LEP_tariff_barriers
@@ -7940,6 +8938,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_DOM_The_Phoenix
 		prerequisite = {
 			focus = LEP_firm_anti_red
@@ -7954,6 +8955,9 @@ focus_tree = {
 		x = 8
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_Reichstag
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
@@ -7965,6 +8969,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_Woe_to_the_Vanquished
 		prerequisite = {
 			focus = LEP_consultative_council
@@ -7976,6 +8983,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_Tarnow_Baade_Plan
 		prerequisite = {
 			focus = LEP_under_germans_influence
@@ -7987,6 +8997,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_Empower_the_Reichsbank
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
@@ -7998,6 +9011,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_German_Investements
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
@@ -8009,6 +9025,9 @@ focus_tree = {
 		x = 3
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_Syndicalist_Blow
 		prerequisite = {
 			focus = LEP_prussian_constitutionalism
@@ -8020,6 +9039,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_Republic_Armed_Forces
 		prerequisite = {
 			focus = LEP_security_pacification_campaign
@@ -8031,6 +9053,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_paramilitary
 		prerequisite = {
 			focus = LEP_jinling_military_academy_expansion
@@ -8042,6 +9067,9 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_Pursue_Equal_Suffrage_in_Prussia
 		prerequisite = {
 			focus = LEP_consultative_council
@@ -8053,6 +9081,9 @@ focus_tree = {
 		x = -2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_loans
 		prerequisite = {
 			focus = LEP_sun_successor
@@ -8064,6 +9095,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_build_housing
 		prerequisite = {
 			focus = LEP_national_salvation_alliance
@@ -8075,6 +9109,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_rolling_the_dice
 		mutually_exclusive = {
 			focus = LEP_new_military_ministry
@@ -8093,6 +9130,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_SHD_confucianism
 		mutually_exclusive = {
 			focus = LEP_qixieyuan_personality_cult
@@ -8110,6 +9150,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_colonial_administration
 		prerequisite = {
 			focus = LEP_imperial_enterprise_privileges
@@ -8125,6 +9168,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_RUS_symphony_of_authorities
 		prerequisite = {
 			focus = LEP_under_germans_influence
@@ -8136,6 +9182,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_GER_Pax_Germanica
 		prerequisite = {
 			focus = LEP_prussian_constitutionalism
@@ -8153,6 +9202,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		icon = GFX_goal_generic_corporatism
 		mutually_exclusive = {
 			focus = LEP_behind_the_scenes
@@ -10033,6 +11085,9 @@ focus_tree = {
 		id = LEP_ningbo_autonomy_army
 		icon = GFX_goal_China_Beiyang_soldier
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
 		relative_position_id = LEP_fallout_of_the_league_war
 		x = 4
@@ -10110,6 +11165,9 @@ focus_tree = {
 		id = LEP_unified_training
 		icon = GFX_goal_China_Beiyang_training
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_ningbo_autonomy_army
 		x = -1
@@ -10311,6 +11369,9 @@ focus_tree = {
 		id = LEP_army_nationalization
 		icon = GFX_goal_CHN_beiyang_militarism
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_ningbo_autonomy_army
 		x = 1
@@ -10359,6 +11420,9 @@ focus_tree = {
 		id = LEP_southeast_iron_army
 		icon = GFX_goal_LEP_governor_question
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_ningbo_autonomy_army
 		x = 0
@@ -10815,6 +11879,10 @@ focus_tree = {
 				has_war = yes
 				add = 15
 			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+			}
 		}
 		prerequisite = { focus = LEP_eliteheer_model }
 		completion_reward = {
@@ -10919,6 +11987,10 @@ focus_tree = {
 			modifier = {
 				has_war = yes
 				add = 15
+			}
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
 			}
 		}
 		prerequisite = { focus = LEP_overtures_to_berlin }
@@ -11128,6 +12200,13 @@ focus_tree = {
 		icon = GFX_focus_GER_european_confederation
 		#icon = GFX_goal_RUS_dominate_europe
 		cost = 5
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 10
+				has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+			}
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_southeast_iron_army
 		x = 0
@@ -11200,6 +12279,9 @@ focus_tree = {
 		id = LEP_material_mobilization
 		icon = GFX_goal_generic_support_equipment
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_looking_to_the_west
 		x = -1
@@ -11312,6 +12394,9 @@ focus_tree = {
 		id = LEP_strengthen_fire_support
 		icon = GFX_focus_SWE_let_fly_all_guns
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_looking_to_the_west
 		x = 1
@@ -11371,6 +12456,9 @@ focus_tree = {
 		icon = GFX_focus_PRC_raid_weapon_depots
 		#icon = GFX_focus_CHI_prepare_war_zones
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		overlay = GFX_focus_fast_overlay_generic_clock
         relative_position_id = LEP_looking_to_the_west
 		x = 0
@@ -13814,6 +14902,9 @@ focus_tree = {
 		id = LEP_aviation_committee
 		icon = GFX_goal_FNG_beiyang_airforce
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_CNAF_regroup
 		}
@@ -13860,6 +14951,9 @@ focus_tree = {
 		id = LEP_AF_ground_service
 		icon = GFX_focus_CHI_effectivize_ground_crew_usage
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_aviation_committee
 		}
@@ -13880,6 +14974,9 @@ focus_tree = {
 		id = LEP_AF_CAP
 		icon = GFX_focus_CHI_positional_advantage
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_AF_ground_service
 		}
@@ -13899,6 +14996,9 @@ focus_tree = {
 		id = LEP_national_military_aviation_programme
 		icon = GFX_focus_PRC_establish_domestic_aircraft_production
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_CNAF_regroup
 		}
@@ -13923,6 +15023,9 @@ focus_tree = {
 		id = LEP_AF_long_range
 		icon = GFX_focus_CHI_the_hump
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_national_military_aviation_programme
 		}
@@ -13975,6 +15078,9 @@ focus_tree = {
 		id = LEP_AF_cas_dev
 		icon = GFX_goal_generic_air_CAS_german_new
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_national_military_aviation_programme
 		}
@@ -14009,6 +15115,9 @@ focus_tree = {
 		id = LEP_AF_aircraft_manufacturing_for_navy
 		icon = GFX_focus_CHI_appropriate_design
 		cost = 3
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_national_military_aviation_programme
 			focus = LEP_naval_air_dev
@@ -14049,6 +15158,9 @@ focus_tree = {
 		id = LEP_ready_jet_era
 		icon = GFX_goal_generic_air_jet_2
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = { focus = LEP_AF_long_range }
 		relative_position_id = LEP_national_military_aviation_programme
 		x = 0
@@ -14158,6 +15270,9 @@ focus_tree = {
 		id = LEP_anti_air_tower
 		icon = GFX_focus_PRC_anti_air_effort
 		cost = 4
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_CNAF_regroup
 		}
@@ -14213,6 +15328,9 @@ focus_tree = {
 		id = LEP_AF_radar_stations
 		icon = GFX_goal_generic_radar_instillation
 		cost = 4
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_anti_air_tower
 		}
@@ -14334,6 +15452,9 @@ focus_tree = {
 		id = LEP_AF_night_fighters
 		icon = GFX_goal_HOL_night_fighter
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_AF_radar_stations
 		}
@@ -14350,6 +15471,9 @@ focus_tree = {
 		id = LEP_AF_AA_aircraft_command
 		icon = GFX_goal_generic_air_heavy_fighter_new
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_anti_air_tower
 		}
@@ -14401,6 +15525,9 @@ focus_tree = {
 		id = LEP_AF_AA_gun_pud
 		icon = GFX_goal_anti_air
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		prerequisite = {
 			focus = LEP_AF_radar_stations
 		}
