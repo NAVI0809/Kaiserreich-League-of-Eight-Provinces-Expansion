@@ -1,0 +1,223 @@
+### LEP 首次大选：竞选期分类
+### 90 天计票 mission + 三个党的拉票决议（可重复、30 天冷却）
+### 分值：事件 +10 / 拉票 +15（拉票要花 50 政治点）
+### 分类定义见 categories/LEPEXP decision_cats
+
+LEP_election_category = {
+
+	# ── 首次大选：竞选期 90 天，到期比对三党记分 ──
+	LEP_first_election_timer = {
+		icon = GFX_decision_generic_political_rally
+		priority = 999
+		allowed = { always = no }
+		available = { hidden_trigger = { always = no } }
+		selectable_mission = yes
+		is_good = no
+		fire_only_once = no
+		days_mission_timeout = 90
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_first_election_timer"
+			if = {
+				limit = {
+					NOT = { check_variable = { LEP_election_DSP_var < LEP_election_KMT_var } }
+					NOT = { check_variable = { LEP_election_DSP_var < LEP_election_JNSB_var } }
+				}
+				set_country_flag = LEP_first_election_DSP_win
+			}
+			else_if = {
+				limit = {
+					NOT = { check_variable = { LEP_election_KMT_var < LEP_election_DSP_var } }
+					NOT = { check_variable = { LEP_election_KMT_var < LEP_election_JNSB_var } }
+				}
+				set_country_flag = LEP_first_election_KMT_win
+			}
+			else = {
+				set_country_flag = LEP_first_election_JNSB_win
+			}
+			clr_country_flag = LEP_first_election_open
+			country_event = lep_election.2
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_campaign_for_KMT = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = { has_country_flag = LEP_first_election_open }
+		available = { has_country_flag = LEP_first_election_open }
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			LEP_election_boost_KMT = yes
+		}
+	}
+	LEP_campaign_for_DSP = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = { has_country_flag = LEP_first_election_open }
+		available = { has_country_flag = LEP_first_election_open }
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			LEP_election_boost_DSP = yes
+		}
+	}
+	LEP_campaign_for_JNSB = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = { has_country_flag = LEP_first_election_open }
+		available = { has_country_flag = LEP_first_election_open }
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			LEP_election_boost_JNSB = yes
+		}
+	}
+
+	### 第二次大选的拉票决议（四党；团结联盟按是否参选显示）
+
+
+
+
+}
+
+### LEP 第二次大选（统一全国后）：独立分类，四党
+LEP_second_election_category = {
+
+	LEP_second_election_timer = {
+		icon = GFX_decision_generic_political_rally
+		priority = 999
+		allowed = { always = no }
+		available = { hidden_trigger = { always = no } }
+		selectable_mission = yes
+		is_good = no
+		fire_only_once = no
+		days_mission_timeout = 90
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout LEP_second_election_timer"
+			if = {
+				limit = { check_variable = { LEP_NSU_direct_var = 0 } }
+				# 三党竞选：团结联盟未参选
+				if = {
+					limit = {
+						NOT = { check_variable = { LEP_election_DSP_var < LEP_election_KMT_var } }
+						NOT = { check_variable = { LEP_election_DSP_var < LEP_election_JNSB_var } }
+					}
+					set_country_flag = LEP_second_election_DSP_win
+				}
+				else_if = {
+					limit = {
+						NOT = { check_variable = { LEP_election_KMT_var < LEP_election_DSP_var } }
+						NOT = { check_variable = { LEP_election_KMT_var < LEP_election_JNSB_var } }
+					}
+					set_country_flag = LEP_second_election_KMT_win
+				}
+				else = {
+					set_country_flag = LEP_second_election_JNSB_win
+				}
+			}
+			else = {
+				# 四党竞选：团结联盟按 LEP_NSU_direct_var 的代表参选
+				if = {
+					limit = {
+						NOT = { check_variable = { LEP_election_NSU_var < LEP_election_DSP_var } }
+						NOT = { check_variable = { LEP_election_NSU_var < LEP_election_KMT_var } }
+						NOT = { check_variable = { LEP_election_NSU_var < LEP_election_JNSB_var } }
+					}
+					set_country_flag = LEP_second_election_NSU_win
+				}
+				else_if = {
+					limit = {
+						NOT = { check_variable = { LEP_election_DSP_var < LEP_election_KMT_var } }
+						NOT = { check_variable = { LEP_election_DSP_var < LEP_election_JNSB_var } }
+					}
+					set_country_flag = LEP_second_election_DSP_win
+				}
+				else_if = {
+					limit = {
+						NOT = { check_variable = { LEP_election_KMT_var < LEP_election_DSP_var } }
+						NOT = { check_variable = { LEP_election_KMT_var < LEP_election_JNSB_var } }
+					}
+					set_country_flag = LEP_second_election_KMT_win
+				}
+				else = {
+					set_country_flag = LEP_second_election_JNSB_win
+				}
+			}
+			clr_country_flag = LEP_second_election_open
+			country_event = lep_election.4
+		}
+		fixed_random_seed = no
+	}
+
+	LEP_campaign2_for_KMT = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			has_country_flag = LEP_second_election_open
+		}
+		available = { has_country_flag = LEP_second_election_open }
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			LEP_election2_boost_KMT = yes
+		}
+	}
+
+
+	LEP_campaign2_for_DSP = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			has_country_flag = LEP_second_election_open
+		}
+		available = { has_country_flag = LEP_second_election_open }
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			LEP_election2_boost_DSP = yes
+		}
+	}
+
+
+	LEP_campaign2_for_JNSB = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			has_country_flag = LEP_second_election_open
+		}
+		available = { has_country_flag = LEP_second_election_open }
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			LEP_election2_boost_JNSB = yes
+		}
+	}
+
+
+	LEP_campaign2_for_NSU = {
+		icon = GFX_decision_eng_propaganda_campaigns
+		cost = 50
+		days_re_enable = 30
+		visible = {
+			has_country_flag = LEP_second_election_open
+			has_variable = LEP_NSU_direct_var
+			NOT = { check_variable = { LEP_NSU_direct_var = 0 } }
+		}
+		available = {
+			has_country_flag = LEP_second_election_open
+			has_variable = LEP_NSU_direct_var
+			NOT = { check_variable = { LEP_NSU_direct_var = 0 } }
+		}
+		ai_will_do = { factor = 100 }
+		complete_effect = {
+			LEP_election2_boost_NSU = yes
+		}
+	}
+}

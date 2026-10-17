@@ -2651,3 +2651,239 @@ LEP_lkmt_mili_immediate_effect = {
 
 
 
+# ══ 竞选声势：更好 / 更糟（仿原版 RUS_boost_* / RUS_lower_*）══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election_boost_KMT = yes        （加分，tooltip：国民党在接下来的选举中将表现得更好！）
+#       LEP_election_lower_KMT = yes        （减分，tooltip：……将表现得更好！→ 更糟）
+# 仅在竞选期（LEP_first_election_open）生效；分值由 LEP_election_score_temp 决定
+
+### 「LEP_election_boost_KMT」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_boost_KMT
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+}
+
+### 「LEP_election_lower_KMT」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_lower_KMT
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+}
+
+### 「LEP_election_boost_DSP」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_boost_DSP
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+}
+
+### 「LEP_election_lower_DSP」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_lower_DSP
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+}
+
+### 「LEP_election_boost_JNSB」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_boost_JNSB
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+}
+
+### 「LEP_election_lower_JNSB」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		custom_effect_tooltip = LEP_election_lower_JNSB
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+}
+
+# ══ 第二次大选计分（含国家团结联盟）══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election2_boost_NSU = yes
+
+LEP_election2_boost_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_KMT
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_lower_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_lower_KMT
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_boost_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_DSP
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_lower_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_lower_DSP
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_boost_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_JNSB
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_lower_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_lower_JNSB
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_boost_NSU = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_NSU
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election2_lower_NSU = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_lower_NSU
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		subtract_from_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+	}
+}
+
+
+# ══ 国策积累竞选声势：大选已开始时直接计入，未开始时攒到下次 ══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election_pending_DSP = yes
+
+LEP_election_pending_KMT = {
+	# 第二次大选已开始：直接计入本次
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_KMT
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+	# 尚未开始：先攒着，留待下次大选
+	else = {
+		custom_effect_tooltip = LEP_election_pending_KMT_tt
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_KMT_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election_pending_DSP = {
+	# 第二次大选已开始：直接计入本次
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_DSP
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+	# 尚未开始：先攒着，留待下次大选
+	else = {
+		custom_effect_tooltip = LEP_election_pending_DSP_tt
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_DSP_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election_pending_JNSB = {
+	# 第二次大选已开始：直接计入本次
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_JNSB
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+	# 尚未开始：先攒着，留待下次大选
+	else = {
+		custom_effect_tooltip = LEP_election_pending_JNSB_tt
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_JNSB_var = LEP_election_score_temp }
+	}
+}
+
+
+LEP_election_pending_NSU = {
+	# 第二次大选已开始：直接计入本次
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		custom_effect_tooltip = LEP_election2_boost_NSU
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+	}
+	# 尚未开始：先攒着，留待下次大选
+	else = {
+		custom_effect_tooltip = LEP_election_pending_NSU_tt
+		set_temp_variable = { LEP_election_score_temp = 1 }
+		add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+	}
+}
+
+
+# ══ 国家团结联盟的先发优势：联盟内某一派已占据主导，全国动员时能借力 ══
+LEP_election_pending_NSU_left = {
+	custom_effect_tooltip = LEP_NSU_pending_left_tt
+	set_temp_variable = { LEP_election_score_temp = 1 }
+	add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+}
+
+
+LEP_election_pending_NSU_right = {
+	custom_effect_tooltip = LEP_NSU_pending_right_tt
+	set_temp_variable = { LEP_election_score_temp = 1 }
+	add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
+}
+

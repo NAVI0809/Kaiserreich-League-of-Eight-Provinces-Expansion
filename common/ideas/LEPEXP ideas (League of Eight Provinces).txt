@@ -7,6 +7,127 @@
 ideas = {
 	#zigai
 	country = {
+
+		LEP_Greater_Shanghai_Plan = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Greater_Shanghai_Plan" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				local_resources = 0.05
+			}
+		}
+		LEP_Seeckt_Mission = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Seeckt_Mission" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				max_command_power = 25
+				dig_in_speed_factor = 0.10
+			}
+		}
+		LEP_Jinling_Military_Academy = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Jinling_Military_Academy" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				command_power_gain_mult = 0.10
+			}
+		}
+		LEP_Consultative_Council = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Consultative_Council" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				improve_relations_cost_factor = -0.10
+			}
+		}
+
+		## 政治法统（照 FNG_popular_support_* 的范式）
+		LEP_popular_support_the_young_and_the_modern = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_the_young_and_the_modern" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+				political_power_factor = 0.10
+				research_speed_factor = 0.05
+				compliance_gain = 0.025
+			}
+		}
+		## 政治法统（照 FNG_popular_support_* 的范式）
+		LEP_popular_support_behind_the_throne = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_behind_the_throne" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+				political_power_factor = 0.15
+				compliance_gain = 0.030
+				party_popularity_stability_factor = 0.10
+			}
+		}
+		## 政治法统（照 FNG_popular_support_* 的范式）
+		LEP_popular_support_the_new_ministry = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_the_new_ministry" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				political_power_factor = 0.10
+				compliance_gain = 0.025
+				army_org_factor = 0.05
+				command_power_gain_mult = 0.10
+			}
+		}
+
+
+		### 齐燮元统一线：政治路线国策奖励
+		LEP_Three_Loves_Campaign = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Three_Loves_Campaign" }
+			name = LEP_Three_Loves_Campaign
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		### 齐燮元统一线：政治路线国策奖励
+		LEP_Cult_of_the_Marshal = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Cult_of_the_Marshal" }
+			name = LEP_Cult_of_the_Marshal
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.10
+				justify_wargoal_cost = -0.25
+			}
+		}
+		### 齐燮元统一线：政治路线国策奖励
+		LEP_Restored_Confucian_Order = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Restored_Confucian_Order" }
+			name = LEP_Restored_Confucian_Order
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.05
+				resistance_target = -0.10
+			}
+		}
 		LEP_joint_staff = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_joint_staff" }
 			name = LEP_joint_staff

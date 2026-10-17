@@ -1,0 +1,70 @@
+### LEP 大选：竞选期分数条（挂在决议分类头，仿 zhili_test 的「德方谈判意愿」）
+### context_type = decision_category，窗口名必须与 scripted_gui 的 window_name 一致
+### 字体 hoi_24header；每行两个文本框：党派名左对齐 / 分数右对齐成一列
+### ★ 数字的 y 比名字小 4：hoi_24header 的中文 override 是 24px、拉丁是 30px，基线不一致，需补偿
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "LEP_election_cats_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 460 height = 138 }
+
+		instantTextBoxType = {
+			name = "LEP_election_name_1"
+			position = { x = 20 y = 6 }
+			font = "hoi_30header"
+			text = "LEP_election_name_1"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election_num_1"
+			position = { x = 320 y = 2 }
+			font = "hoi_30header"
+			text = "LEP_election_num_1"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "LEP_election_name_2"
+			position = { x = 20 y = 50 }
+			font = "hoi_30header"
+			text = "LEP_election_name_2"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election_num_2"
+			position = { x = 320 y = 46 }
+			font = "hoi_30header"
+			text = "LEP_election_num_2"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "LEP_election_name_3"
+			position = { x = 20 y = 94 }
+			font = "hoi_30header"
+			text = "LEP_election_name_3"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election_num_3"
+			position = { x = 320 y = 90 }
+			font = "hoi_30header"
+			text = "LEP_election_num_3"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+	}
+}

@@ -1,0 +1,9 @@
+### LEP 大选分数条：挂在决议分类 LEP_election_category 的头部
+### context_type = decision_category（仿 zhili_test 的 QIE_EXP_GER_conference_cats_gui）
+scripted_gui = {
+
+	LEP_election_cats_gui = {
+		context_type = decision_category
+		window_name = "LEP_election_cats_gui"
+	}
+}

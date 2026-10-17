@@ -1,0 +1,88 @@
+### LEP 第二次大选：四行分数条（三党 + 国家团结联盟）
+### 与第一次大选分开：第一次用 LEP_election_cats_gui（三行）
+### 字体 hoi_30header；数字 y 比名字小 4（中文 override 24px vs 拉丁 30px，基线需补偿）
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "LEP_election2_cats_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 460 height = 182 }
+
+		instantTextBoxType = {
+			name = "LEP_election2_name_1"
+			position = { x = 20 y = 6 }
+			font = "hoi_30header"
+			text = "LEP_election2_name_1"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election2_num_1"
+			position = { x = 320 y = 2 }
+			font = "hoi_30header"
+			text = "LEP_election2_num_1"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "LEP_election2_name_2"
+			position = { x = 20 y = 50 }
+			font = "hoi_30header"
+			text = "LEP_election2_name_2"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election2_num_2"
+			position = { x = 320 y = 46 }
+			font = "hoi_30header"
+			text = "LEP_election2_num_2"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "LEP_election2_name_3"
+			position = { x = 20 y = 94 }
+			font = "hoi_30header"
+			text = "LEP_election2_name_3"
+			maxWidth = 300
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election2_num_3"
+			position = { x = 320 y = 90 }
+			font = "hoi_30header"
+			text = "LEP_election2_num_3"
+			maxWidth = 120
+			maxHeight = 40
+			format = right
+		}
+
+		instantTextBoxType = {
+			name = "LEP_election2_name_4"
+			position = { x = 20 y = 138 }
+			font = "hoi_30header"
+			text = "[LEP_NSU_name_text]"
+			maxWidth = 210
+			maxHeight = 40
+			format = left
+		}
+		instantTextBoxType = {
+			name = "LEP_election2_num_4"
+			position = { x = 240 y = 134 }
+			font = "hoi_30header"
+			text = "[LEP_NSU_num_text]"
+			maxWidth = 200
+			maxHeight = 40
+			format = right
+		}
+	}
+}

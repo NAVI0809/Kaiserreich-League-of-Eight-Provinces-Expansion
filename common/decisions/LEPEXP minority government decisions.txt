@@ -15,6 +15,7 @@ LEPEXP_parliament = {
 	# ── 少数派政府倒计时（照 mod 既有 mission 的写法：LEP_economic_recovery_ongoing）──
 	# days + days_mission_timeout：条目挂 360 天、每满 30 天跑一次 timeout_effect 扣罚并自我重启。
 	# available 用「仍有少数派状态」判定 —— 点了组建政府后 flag 清掉，条目自动消失。
+
 	LEP_minority_government_timer = {
 		icon = GFX_decision_generic_political_discourse
 		priority = 999

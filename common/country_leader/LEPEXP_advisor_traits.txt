@@ -1,4 +1,36 @@
 leader_traits = {
+
+	#齐燮元统一线：人物强化特质
+	LEP_architect_of_the_new_state = { #余家菊
+		custom_modifier_tooltip = LEP_architect_of_the_new_state_desc
+		random = no
+		political_power_factor = 0.10
+		research_speed_factor = 0.05
+		stability_factor = 0.05
+	}
+
+	LEP_iron_discipline_of_the_new_army = { #田文炳
+		custom_modifier_tooltip = LEP_iron_discipline_of_the_new_army_desc
+		random = no
+		army_org_factor = 0.05
+		command_power_gain_mult = 0.10
+		training_time_factor = -0.10
+	}
+
+	LEP_iron_hand_behind_the_throne = { #齐燮元退居幕后
+		custom_modifier_tooltip = LEP_iron_hand_behind_the_throne_desc
+		random = no
+		political_power_factor = 0.10
+		stability_factor = 0.10
+		justify_wargoal_cost = -0.25
+	}
+	LEP_the_man_behind_the_curtain = { #丁文江
+		custom_modifier_tooltip = LEP_the_man_behind_the_curtain_desc
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.10
+		consumer_goods_factor = -0.05
+	}
     #政府首脑
 	LEP_chamber_of_commerce_leader = {
 		custom_modifier_tooltip = LEP_chamber_of_commerce_leader_desc

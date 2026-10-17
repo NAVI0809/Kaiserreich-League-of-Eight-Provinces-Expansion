@@ -93,6 +93,92 @@ LEPEXP_DEBUG_CAT = {
 			}
 		}
 	}
+	### 选举调试（调试模式可见）
+
+	LEPEXP_debug_election1_start = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			# 清掉旧的门闩与阵营旗标，允许重复开启
+			clr_country_flag = LEP_first_election_open
+			clr_country_flag = LEP_first_election_DSP_win
+			clr_country_flag = LEP_first_election_KMT_win
+			clr_country_flag = LEP_first_election_JNSB_win
+			set_variable = { LEP_election_NSU_var = 0 }
+			country_event = { id = lep_election.1 days = 0 }
+		}
+	}
+
+	LEPEXP_debug_election1_finish = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = LEP_first_election_open }
+				# 把任务剩余天数一次减到底，直接触发 timeout_effect 结算
+				add_days_mission_timeout = {
+					mission = LEP_first_election_timer
+					days = -120
+				}
+			}
+		}
+	}
+
+	LEPEXP_debug_election2_start = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			clr_country_flag = LEP_second_election_open
+			clr_country_flag = LEP_second_election_DSP_win
+			clr_country_flag = LEP_second_election_KMT_win
+			clr_country_flag = LEP_second_election_JNSB_win
+			clr_country_flag = LEP_second_election_NSU_win
+			set_variable = { LEP_election_KMT_var = 0 }
+			set_variable = { LEP_election_DSP_var = 0 }
+			set_variable = { LEP_election_JNSB_var = 0 }
+			set_variable = { LEP_election_NSU_var = 0 }
+			country_event = { id = lep_election.3 days = 0 }
+		}
+	}
+
+	LEPEXP_debug_election2_finish = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = LEP_second_election_open }
+				add_days_mission_timeout = {
+					mission = LEP_second_election_timer
+					days = -120
+				}
+			}
+		}
+	}
+
 
 	LEP_add_regional_stage_focus = {
 		fire_only_once = no
@@ -3510,7 +3596,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 30
@@ -3538,7 +3624,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 25
@@ -3575,7 +3661,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 30
@@ -3610,7 +3696,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 40
@@ -3645,7 +3731,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 30
@@ -3682,7 +3768,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 50
@@ -3717,7 +3803,7 @@ military_mobilization_category ={
 			}
 			modifier = {
 				factor = 0
-				check_variable = { military_mobilization_var >= 100 }
+				check_variable = { military_mobilization_var > 99 }
 			}
 		}
 		days_remove = 30
