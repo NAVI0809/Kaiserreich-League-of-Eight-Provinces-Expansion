@@ -1,50 +1,99 @@
-LEP_power_balance = { 
+LEP_power_balance = {
 	initial_value = 0.00
-	left_side = LEP_commerce_side 
-	right_side = LEP_qi_side 
+	left_side = LEP_commerce_side
+	right_side = LEP_qi_side
 	decision_category = LEP_balance_of_power_category
 
-	range = {
-		id = LEP_balance_side
-		min = -0.30
-		max = 0.30
-		modifier = {
-			political_power_gain = 0.05
-		}
-		on_activate = {
-			
-		}
-	}
-
-	### 工商联方向（左侧）
+	### 工商联方向（左侧）：-1.00 ~ 0.00，三阶段——越深，齐燮元残余势力抵抗越弱
 	side = {
 		id = LEP_commerce_side
 		icon = GFX_idea_generic_lightbulb
-		range = {
-			id = LEP_bop_commerce_in_control_side
-			min = -1.00
-			max = -0.30
-			modifier = {
-				political_advisor_cost_factor = -0.10
-				political_power_factor = 0.05
+
+			range = {
+				id = LEP_bop_commerce_tilt
+				min = -0.34
+				max = 0.00
+				modifier = {
+					political_advisor_cost_factor = -0.05
+					consumer_goods_factor = -0.05
+					custom_effect_tooltip = LEP_bop_tt_commerce_tilt
+				}
+				
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_commerce_tilt
+				}
 			}
-		}
+
+			range = {
+				id = LEP_bop_commerce_firm
+				min = -0.67
+				max = -0.34
+				modifier = {
+					political_advisor_cost_factor = -0.10
+					consumer_goods_factor = -0.1
+				}
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_commerce_firm
+				}
+			}
+
+			range = {
+				id = LEP_bop_commerce_deep
+				min = -1.00
+				max = -0.67
+				modifier = {
+					political_advisor_cost_factor = -0.15
+					consumer_goods_factor = -0.15
+				}
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_commerce_deep
+				}
+			}
 	}
 
-	### 齐燮元方向（右侧）
+	### 齐燮元方向（右侧）：0.00 ~ 1.00，三阶段——越深，反齐残余势力抵抗越弱
 	side = {
 		id = LEP_qi_side
 		icon = GFX_idea_advisors_china_leauge
 
-		range = {
-			id = LEP_bop_qi_in_control_side
-			min = 0.30
-			max = 1.00
-			modifier = {
-				experience_gain_army_factor = 0.10
-				high_command_cost_factor = -0.10
+			range = {
+				id = LEP_bop_qi_tilt
+				min = 0.00
+				max = 0.33
+				modifier = {
+					experience_gain_army_factor = 0.05
+					high_command_cost_factor = -0.05
+				}
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_qi_tilt
+				}
 			}
-		}
+
+			range = {
+				id = LEP_bop_qi_firm
+				min = 0.33
+				max = 0.66
+				modifier = {
+					experience_gain_army_factor = 0.075
+					high_command_cost_factor = -0.075
+				}
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_qi_firm
+				}
+			}
+
+			range = {
+				id = LEP_bop_qi_deep
+				min = 0.66
+				max = 1.00
+				modifier = {
+					experience_gain_army_factor = 0.10
+					high_command_cost_factor = -0.10
+				}
+				on_activate = {
+					custom_effect_tooltip = LEP_bop_tt_qi_deep
+				}
+			}
 	}
 }
 

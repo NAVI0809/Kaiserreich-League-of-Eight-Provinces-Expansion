@@ -3913,6 +3913,78 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+
+		LEP_qi_resist_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_qi_resist_1" }
+			picture = generic_destruction
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.003
+				political_power_factor = -0.05
+				command_power_gain = -0.01
+				experience_gain_army_factor = -0.05
+			}
+		}
+
+		LEP_qi_resist_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_qi_resist_2" }
+			picture = generic_destruction
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.005
+				political_power_factor = -0.075
+				command_power_gain = -0.015
+				experience_gain_army_factor = -0.075
+			}
+		}
+
+		LEP_qi_resist_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_qi_resist_3" }
+			picture = generic_destruction
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.007
+				political_power_factor = -0.1
+				command_power_gain = -0.025
+				experience_gain_army_factor = -0.15
+			}
+		}
+
+		LEP_anti_qi_resist_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_anti_qi_resist_1" }
+			picture = generic_scars_of_civil_war
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.003
+				political_power_factor = -0.05
+				compliance_gain = -0.01
+				industrial_capacity_factory = -0.025
+			}
+		}
+
+		LEP_anti_qi_resist_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_anti_qi_resist_2" }
+			picture = generic_scars_of_civil_war
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.005
+				political_power_factor = -0.075
+				compliance_gain = -0.015
+				industrial_capacity_factory = -0.075
+			}
+		}
+
+		LEP_anti_qi_resist_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_anti_qi_resist_3" }
+			picture = generic_scars_of_civil_war
+			allowed = { always = no }
+			modifier = {
+				stability_weekly = -0.007
+				political_power_factor = -0.1
+				compliance_gain = -0.03
+				industrial_capacity_factory = -0.15
+			}
+		}
 	}
 	
 

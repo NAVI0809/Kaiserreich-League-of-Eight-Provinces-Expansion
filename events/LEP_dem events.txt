@@ -351,6 +351,15 @@ country_event = { #轨上浩劫
 		}
 		
 		hidden_effect = {
+			set_variable = { LEP_bop_stage = 1 }
+			if = {
+				limit = { power_balance_value = { id = LEP_power_balance value < -0.67 } }
+				set_variable = { LEP_bop_stage = 3 }
+			}
+			else_if = {
+				limit = { power_balance_value = { id = LEP_power_balance value < -0.34 } }
+				set_variable = { LEP_bop_stage = 2 }
+			}
 			remove_power_balance = {
 				id = LEP_power_balance
 			}
@@ -360,22 +369,6 @@ country_event = { #轨上浩劫
 		}
 	}
 
-	option = { #德国
-		log = "[GetLogInfo]: event league_mid.3 option league_mid.3.b"
-		name = league_mid.3.b
-		trigger = { #平衡
-			is_power_balance_in_range = {
-				id = LEP_power_balance
-				range = LEP_balance_side
-			}
-		}
-		country_event = { id = league_mid.5 days = 1 }
-		hidden_effect = {
-			remove_power_balance = {
-				id = LEP_power_balance
-			}
-		}
-	}
 
 	option = { #
 		log = "[GetLogInfo]: event league_mid.3 option league_mid.3.c"
@@ -384,6 +377,17 @@ country_event = { #轨上浩劫
 			is_power_balance_in_range = {
 				id = LEP_power_balance
 				range = LEP_bop_qi_in_control_side
+			}
+		}
+		hidden_effect = {
+			set_variable = { LEP_bop_stage = 1 }
+			if = {
+				limit = { power_balance_value = { id = LEP_power_balance value > 0.66 } }
+				set_variable = { LEP_bop_stage = 3 }
+			}
+			else_if = {
+				limit = { power_balance_value = { id = LEP_power_balance value > 0.33 } }
+				set_variable = { LEP_bop_stage = 2 }
 			}
 		}
 		country_event = { id = league_mid.6 days = 1 }
@@ -480,35 +484,23 @@ unit_leader_event = { #民主政变
 			LEP_rong_zongjing = {
 				unit_leader_event = { id = league_mid.7 days = 1 }
 			}
+			if = {
+				limit = { check_variable = { LEP_bop_stage > 2 } }
+				add_ideas = LEP_qi_resist_1
+			}
+			else_if = {
+				limit = { check_variable = { LEP_bop_stage = 2 } }
+				add_ideas = LEP_qi_resist_2
+			}
+			else = {
+				add_ideas = LEP_qi_resist_3
+			}
+			custom_effect_tooltip = tooltip_white_line
 			set_country_flag = LEP_dem_gov
 		set_country_flag = { flag = LEP_dem_gov_yr days = 366 value = 1 }	# 忠实的反对派：满一年后自动过期
 			clear_global_event_target = SZH_leader
 			CSR_set_leader_effect = yes
 		}
-	}
-}
-
-country_event = { #新代理人
-	id = league_mid.5
-	title = league_mid.5.t
-	desc = league_mid.5.d
-	picture = GFX_report_event_LEP_sun_zhejiang
-	
-
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = { #
-		log = "[GetLogInfo]: event league_mid.5 option league_mid.5.a"
-		name = league_mid.5.a
-		set_politics = {
-			ruling_party = market_liberal
-		}
-		set_cosmetic_tag = LEP_GER
-		add_popularity = {
-			ideology = market_liberal
-			popularity = 0.5
-		}
-		
 	}
 }
 
@@ -525,6 +517,18 @@ country_event = { #联帅
 		log = "[GetLogInfo]: event league_mid.6 option league_mid.6.a"
 		name = league_mid.6.a
 		complete_national_focus = LEP_the_marshal_stands_triumphant
+		if = {
+			limit = { check_variable = { LEP_bop_stage > 2 } }
+			add_ideas = LEP_anti_qi_resist_1
+		}
+		else_if = {
+			limit = { check_variable = { LEP_bop_stage = 2 } }
+			add_ideas = LEP_anti_qi_resist_2
+		}
+		else = {
+			add_ideas = LEP_anti_qi_resist_3
+		}
+		custom_effect_tooltip = tooltip_white_line
 		activate_mission = LEP_temp_suppress_kmt
 		activate_mission = LEP_temp_suppress_rural_banditry
 	}

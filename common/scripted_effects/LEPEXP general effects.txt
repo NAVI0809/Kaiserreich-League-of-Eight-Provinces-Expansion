@@ -2887,3 +2887,47 @@ LEP_election_pending_NSU_right = {
 	add_to_variable = { LEP_election_NSU_var = LEP_election_score_temp }
 }
 
+# ══ 残余势力抵抗：每调用一次降一级（顽强 → 中等 → 微弱 → 消除）══
+# 齐燮元残余（国家由工商联主导时获得）
+LEP_qi_resistance_step_down = {
+	custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+	if = {
+		limit = { has_idea = LEP_qi_resist_3 }
+		remove_ideas = LEP_qi_resist_3
+		custom_effect_tooltip = LEP_qi_resist_2_tt
+		add_ideas = LEP_qi_resist_2
+	}
+	else_if = {
+		limit = { has_idea = LEP_qi_resist_2 }
+		remove_ideas = LEP_qi_resist_2
+		custom_effect_tooltip = LEP_qi_resist_1_tt
+		add_ideas = LEP_qi_resist_1
+	}
+	else_if = {
+		limit = { has_idea = LEP_qi_resist_1 }
+		remove_ideas = LEP_qi_resist_1
+		custom_effect_tooltip = LEP_resistance_cleared_tt
+	}
+}
+
+# 反齐残余（国家由齐燮元主导时获得）
+LEP_anti_qi_resistance_step_down = {
+	custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+	if = {
+		limit = { has_idea = LEP_anti_qi_resist_3 }
+		remove_ideas = LEP_anti_qi_resist_3
+		custom_effect_tooltip = LEP_anti_qi_resist_2_tt
+		add_ideas = LEP_anti_qi_resist_2
+	}
+	else_if = {
+		limit = { has_idea = LEP_anti_qi_resist_2 }
+		remove_ideas = LEP_anti_qi_resist_2
+		custom_effect_tooltip = LEP_anti_qi_resist_1_tt
+		add_ideas = LEP_anti_qi_resist_1
+	}
+	else_if = {
+		limit = { has_idea = LEP_anti_qi_resist_1 }
+		remove_ideas = LEP_anti_qi_resist_1
+		custom_effect_tooltip = LEP_resistance_cleared_tt
+	}
+}
