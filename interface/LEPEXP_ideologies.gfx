@@ -11,4 +11,8 @@ spriteTypes = {
 		name = "GFX_ideology_social_conservative_free_market_conservatism_subtype"
 		texturefile = "gfx/interface/ideologies/social_conservative_free_market_conservatism.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_social_liberal_progressive_liberalism_subtype"
+		texturefile = "gfx/interface/ideologies/social_liberal_progressive_liberalism.png"
+	}
 }

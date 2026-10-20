@@ -9,6 +9,8 @@ add_namespace = lep_election
 add_namespace = league_industry
 add_namespace = league_jap
 add_namespace = LEP_seat_recount
+
+
 country_event = { #test
 	id = league_mid.999
 	title = league_mid.999.t
@@ -254,7 +256,7 @@ country_event = {#钱袋子与枪杆子
 	}
 }
 
-country_event = { 
+country_event = { #吃什么
 	id = league_war_events.24
 	title = league_war_events.24.t
 	desc = league_war_events.24.d
@@ -280,40 +282,26 @@ country_event = { #明争暗斗
 	id = league_mid.1
 	title = league_mid.1.t
 	desc = league_mid.1.d
-	picture = GFX_report_event_LEP_sun_zhejiang
+	picture = GFX_report_event_LEP_qi_xieyuan_coat
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+	option = { #作为齐燮元一方扮演
 		log = "[GetLogInfo]: event league_mid.1 option league_mid.1.a"
 		name = league_mid.1.a
-		set_power_balance = {
-			id = LEP_power_balance
-			left_side = LEP_commerce_side
-			right_side = LEP_qi_side
-			set_value = -0.10
-		}
-		if = {
-			limit = {
-				is_ai = yes
-				has_game_rule = { rule = LEP_path option = LEP_PATH_QI }
-			}
-			add_power_balance_value = {
-				id = LEP_power_balance
-				value = 1.10
-			}
-		}
-		if = {
-			limit = {
-				is_ai = yes
-				NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
-				NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_QI } }
-			}
-			add_power_balance_value = {
-				id = LEP_power_balance
-				value = -0.90
-			}
-		}
+		custom_effect_tooltip = league_mid.1_qi_tt
+		set_country_flag = LEP_play_qi_during_war_flag
+		activate_mission = LEP_anti_qi_action_ongoing
+		LEP_bop_start_effect = yes
+	}
+
+	option = { #作为反齐势力一方扮演
+		log = "[GetLogInfo]: event league_mid.1 option league_mid.1.b"
+		name = league_mid.1.b
+		custom_effect_tooltip = league_mid.1_anti_qi_tt
+		set_country_flag = LEP_play_anti_qi_during_war_flag
+		activate_mission = LEP_qi_action_ongoing
+		LEP_bop_start_effect = yes
 	}
 }
 

@@ -222,8 +222,8 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_chu_fucheng_leader_desc
-			### 初始 / 民主政府成立时都是普通社会自由主义；完成「科学化公共行政」后才转为自由技术官僚主义
-			ideology = social_liberal_subtype
+			### 初始 / 民主政府成立时是进步自由主义；完成「科学化公共行政」后才转为自由技术官僚主义
+			ideology = social_liberal_progressive_liberalism_subtype
 			traits = { CHN_southern_republican_aligned }
 		}
 		corps_commander = {
@@ -670,12 +670,18 @@ characters = {
 		portraits = {
 			civilian = {
 				small = GFX_portrait_LEP_ding_wenjiang_civilian_small
+				large = GFX_portrait_LEP_ding_wenjiang_civilian_large
 			}
 		}
 		advisor = {
 			slot = political_advisor
 			idea_token = LEP_ding_wenjiang_advisor
 			traits = { KR_influential_intellectual }
+		}
+		country_leader = {
+			desc = LEP_ding_wenjiang_leader_desc
+			ideology = paternal_autocrat_subtype
+			traits = { CHN_southern_zhili_aligned  }
 		}
 	}
 

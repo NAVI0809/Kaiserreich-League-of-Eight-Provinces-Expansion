@@ -2890,44 +2890,83 @@ LEP_election_pending_NSU_right = {
 # ══ 残余势力抵抗：每调用一次降一级（顽强 → 中等 → 微弱 → 消除）══
 # 齐燮元残余（国家由工商联主导时获得）
 LEP_qi_resistance_step_down = {
-	custom_effect_tooltip = LEP_qi_resistance_step_down_tt
 	if = {
 		limit = { has_idea = LEP_qi_resist_3 }
-		remove_ideas = LEP_qi_resist_3
-		custom_effect_tooltip = LEP_qi_resist_2_tt
-		add_ideas = LEP_qi_resist_2
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_qi_resist_3
+			add_idea = LEP_qi_resist_2
+		}
 	}
 	else_if = {
 		limit = { has_idea = LEP_qi_resist_2 }
-		remove_ideas = LEP_qi_resist_2
-		custom_effect_tooltip = LEP_qi_resist_1_tt
-		add_ideas = LEP_qi_resist_1
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_qi_resist_2
+			add_idea = LEP_qi_resist_1
+		}
 	}
 	else_if = {
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
 		limit = { has_idea = LEP_qi_resist_1 }
 		remove_ideas = LEP_qi_resist_1
-		custom_effect_tooltip = LEP_resistance_cleared_tt
 	}
 }
 
 # 反齐残余（国家由齐燮元主导时获得）
 LEP_anti_qi_resistance_step_down = {
-	custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
 	if = {
 		limit = { has_idea = LEP_anti_qi_resist_3 }
-		remove_ideas = LEP_anti_qi_resist_3
-		custom_effect_tooltip = LEP_anti_qi_resist_2_tt
-		add_ideas = LEP_anti_qi_resist_2
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_anti_qi_resist_3
+			add_idea = LEP_anti_qi_resist_2
+		}
 	}
 	else_if = {
 		limit = { has_idea = LEP_anti_qi_resist_2 }
-		remove_ideas = LEP_anti_qi_resist_2
-		custom_effect_tooltip = LEP_anti_qi_resist_1_tt
-		add_ideas = LEP_anti_qi_resist_1
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_anti_qi_resist_2
+			add_idea = LEP_anti_qi_resist_1
+		}
 	}
 	else_if = {
 		limit = { has_idea = LEP_anti_qi_resist_1 }
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
 		remove_ideas = LEP_anti_qi_resist_1
-		custom_effect_tooltip = LEP_resistance_cleared_tt
+	}
+}
+
+LEP_bop_start_effect = {
+	hidden_effect = {
+		set_power_balance = {
+			id = LEP_power_balance
+			left_side = LEP_commerce_side
+			right_side = LEP_qi_side
+			set_value = 0.10
+		}
+	}
+	
+	if = {
+		limit = {
+			is_ai = yes
+			has_game_rule = { rule = LEP_path option = LEP_PATH_QI }
+		}
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = 1.10
+		}
+	}
+	if = {
+		limit = {
+			is_ai = yes
+			NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+			NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_QI } }
+		}
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = -0.90
+		}
 	}
 }

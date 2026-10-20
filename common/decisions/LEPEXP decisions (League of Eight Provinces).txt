@@ -644,6 +644,52 @@ LEPEXP_DEBUG_CAT = {
 #zigai
 
 LEP_balance_of_power_category = {
+	LEP_anti_qi_action_ongoing = {
+		icon = GFX_decision_peace_dove
+		priority = 999
+
+		available = { 
+			NOT = {
+				has_country_flag = LEP_play_qi_during_war_flag
+			}
+		}
+		allowed = { always = no }
+
+
+		days = 15
+		days_mission_timeout = 15
+		timeout_effect = {
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = -0.05
+		    }
+			activate_mission = LEP_anti_qi_action_ongoing
+		}
+	}
+
+	LEP_qi_action_ongoing = {
+		icon = GFX_decision_decision_generic_chinese_officers
+		priority = 999
+
+		available = { 
+			NOT = {
+				has_country_flag = LEP_play_anti_qi_during_war_flag
+			}
+		}
+		allowed = { always = no }
+
+
+		days = 15
+		days_mission_timeout = 15
+		timeout_effect = {
+			add_power_balance_value = {
+			    id = LEP_power_balance
+			    value = 0.05
+		    }
+			activate_mission = LEP_qi_action_ongoing
+		}
+	}
+
 	LEP_new_loans = {
 		icon = GFX_decision_gre_investment_decisions
         allowed = {
@@ -652,7 +698,8 @@ LEP_balance_of_power_category = {
 		available = {
 			has_completed_focus = LEP_jiangnan_loans
 		}
-        cost = 5
+		
+        cost = 10
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -672,7 +719,7 @@ LEP_balance_of_power_category = {
 			add_political_power = 50
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.05
+			    value = -0.03
 		    }
 		}
 	}
@@ -685,7 +732,7 @@ LEP_balance_of_power_category = {
 		available = {
 			has_completed_focus = LEP_support_federalist_movement
 		}
-        cost = 5
+        cost = 10
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -707,7 +754,7 @@ LEP_balance_of_power_category = {
 			add_war_support = 0.05
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.05
+			    value = -0.03
 		    }
 		}
 	}
@@ -719,7 +766,7 @@ LEP_balance_of_power_category = {
 		available = {
 			has_completed_focus = LEP_raise_chamber_funds
 		}
-        cost = 5
+        cost = 10
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -733,17 +780,17 @@ LEP_balance_of_power_category = {
         complete_effect = {
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 250
+				amount = 50
 				producer = LEC
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
-				amount = 750
+				amount = 200
 				producer = LEC
 			}
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.05
+			    value = -0.03
 		    }
 		}
 	}
@@ -754,9 +801,14 @@ LEP_balance_of_power_category = {
             tag = LEP
         }
 		available = {
+			command_power > 9
 			has_completed_focus = LEP_qis_central_command
 		}
-        cost = 5
+        cost = 0
+		custom_cost_text = LEP_CP_10
+		custom_cost_trigger = {
+			NOT = { command_power < 10 }
+		}
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -773,10 +825,10 @@ LEP_balance_of_power_category = {
         complete_effect = {
 			add_stability = 0.05
 			army_experience = 15
-			add_command_power = 10
+			add_command_power = -10
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = 0.05
+			    value = 0.03
 		    }
 		}
 	}
@@ -787,9 +839,14 @@ LEP_balance_of_power_category = {
             tag = LEP
         }
 		available = {
+			command_power > 9
 			has_completed_focus = LEP_enforce_officer_loyalty
 		}
-        cost = 5
+        cost = 0
+		custom_cost_text = LEP_CP_10
+		custom_cost_trigger = {
+			NOT = { command_power < 10 }
+		}
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -807,10 +864,10 @@ LEP_balance_of_power_category = {
 
         complete_effect = {
 			army_experience = 5
-			add_command_power = 5
+			add_command_power = -10
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = 0.05
+			    value = 0.03
 		    }
 		}
 	}
@@ -955,7 +1012,7 @@ LEP_country_development = {
 
 LEP_foreign_policy_decisions = {
 	LEP_join_the_reichspakt_decision = {
-		icon = GFX_decision_trumpet
+		icon = GFX_decision_generic_reorganize_irregulars
 		priority = 75
 
 		allowed = { always = no }
@@ -987,7 +1044,7 @@ LEP_foreign_policy_decisions = {
 	}
 
 	LEP_join_the_moscow_accord_decision = {
-		icon = GFX_decision_trumpet
+		icon = GFX_decision_generic_reorganize_irregulars
 		priority = 150
 
 		allowed = { always = no }
@@ -1018,7 +1075,7 @@ LEP_foreign_policy_decisions = {
 	}
 
 	LEP_join_the_entente_decision = {
-		icon = GFX_decision_trumpet
+		icon = GFX_decision_generic_reorganize_irregulars
 		priority = 150
 
 		allowed = { always = no }
@@ -2509,7 +2566,7 @@ LEPEXP_military_defence_development_CAT = {
 			has_completed_focus = LEP_arm_national_guard
 		}
 
-		custom_cost_text = LEP_CP_50_PP_10
+		custom_cost_text = LEP_CP_100_PP_10
 		custom_cost_trigger = {
 			NOT = { has_political_power < 10 }
 			NOT = { command_power < 50 }
@@ -3001,7 +3058,7 @@ LEPEXP_military_defence_development_CAT = {
 		fire_only_once = yes
 		priority = 60
 
-		custom_cost_text = LEP_CP_50_PP_10
+		custom_cost_text = LEP_CP_100_PP_10
 		custom_cost_trigger = {
 			NOT = { has_political_power < 10 }
 			NOT = { command_power < 50 }
@@ -3139,7 +3196,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_10
+		custom_cost_text = LEP_CP_100_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3199,7 +3256,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_10
+		custom_cost_text = LEP_CP_100_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3260,7 +3317,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_10
+		custom_cost_text = LEP_CP_100_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }
@@ -3324,7 +3381,7 @@ LEPEXP_military_defence_development_CAT = {
 			}			
 		}
 
-		custom_cost_text = LEP_CP_50_ARMY_XP_10
+		custom_cost_text = LEP_CP_100_ARMY_XP_10
 		custom_cost_trigger = {
 			NOT = { has_army_experience < 10 }
 			NOT = { command_power < 50 }

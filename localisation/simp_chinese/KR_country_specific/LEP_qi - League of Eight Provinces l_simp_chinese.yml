@@ -83,7 +83,7 @@
  LEP_the_man_behind_the_curtain_desc: "丁文江以学者之身在军政之间周旋，既能为各方所容，又深明联帅的真实意图。位在总统，而诏令多出于帘后。"
  LEP_iron_hand_behind_the_throne: "幕后铁腕"
  LEP_iron_hand_behind_the_throne_desc: "齐燮元名义上退居副位，实则八省的军令、人事、财赋仍须经他之手。前台换了面孔，帘后的那只手没有换。"
- LEP_ding_wenjiang_leader_desc: "丁文江，字在君，江苏泰兴人，中国近代地质学奠基者。他以学者之身入主中枢，凭清誉与学识为各方所容，而实权仍在幕后。"
+ LEP_ding_wenjiang_leader_desc: "§L$LEP_ding_wenjiang_advisor_desc$§!"
  LEP_popular_support_the_young_and_the_modern: "政治法统：§g青年当国§!"
  LEP_popular_support_the_young_and_the_modern_desc: "以余家菊为首的一代少壮进入中枢。他们受过新式教育，做事讲条理、重实效，也让守旧的官僚第一次感到位置不稳。"
  LEP_popular_support_behind_the_throne: "政治法统：§P帘后垂治§!"

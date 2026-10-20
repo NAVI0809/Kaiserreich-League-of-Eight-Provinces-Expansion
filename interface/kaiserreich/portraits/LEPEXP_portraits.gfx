@@ -636,6 +636,11 @@ spriteTypes = {
         name = "GFX_LEP_ace_Zhou_Xundian"
         texturefile = "gfx/aces/LEP_Zhou_Xundian_ace.dds"
     }
+
+	spriteType = {
+		name = "GFX_portrait_LEP_ding_wenjiang_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_ding_wenjiang_large.png"
+	}
 	
 
 }
