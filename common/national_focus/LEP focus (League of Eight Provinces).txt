@@ -109,6 +109,8 @@ focus_tree = {
 			country_event = league_events.19
 			hidden_effect = {
 				country_event = { id = league_war_events.19 days = 10 }
+				country_event = { id = league_war_events.23 days = 18 }
+				
 			}
 		}
 	}
@@ -142,6 +144,9 @@ focus_tree = {
 			    id = LEP_power_balance
 			    value = 0.05
 		    }	
+			hidden_effect = {
+				country_event = { id = league_war_events.24 days = 5 }
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -6566,8 +6571,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_ideas = LEP_Expand_the_merchant_leet
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
+			LEP_raise_funds = yes
 			add_one_random_civilian_factory = yes
 		}
 
@@ -6609,7 +6613,8 @@ focus_tree = {
 				    level = 1
 				    instant_build = yes
 			    }
-			}			
+			}	
+			LEP_raise_funds = yes		
 		}
 
 	}
@@ -6627,12 +6632,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			add_timed_idea = {
-				idea = QIE_nationalised_german_industry
-				days = 200
-			}
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
+			LEP_raise_funds = yes
 			add_one_random_military_factory = yes
 			country_event = { id = league_mid.66 days = 1 } #蔡司
 		}
@@ -6680,9 +6680,8 @@ focus_tree = {
 				idea = LEP_national_road_construction_plan
 				days = 720
 			}
-			custom_effect_tooltip = tooltip_white_line
-			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 3 }
+			LEP_raise_funds = yes		
+			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
 		}
 
@@ -6777,8 +6776,8 @@ focus_tree = {
 		completion_reward = {
 			add_one_random_civilian_factory = yes
 			add_one_random_military_factory = yes
-			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 8 }
+			LEP_raise_funds = yes
+			set_temp_variable = { LEP_cons_var_change = 4 }
 			LEP_cons_var = yes
 		}
 
@@ -6800,9 +6799,7 @@ focus_tree = {
 		completion_reward = {
 			LEP_improve_industry = yes
 			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			add_one_random_civilian_factory = yes
-			set_temp_variable = { LEP_cons_var_change = 3 }
+			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
 		}
 

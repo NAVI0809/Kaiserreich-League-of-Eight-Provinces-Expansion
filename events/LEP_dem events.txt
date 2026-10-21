@@ -238,20 +238,23 @@ country_event = {#钱袋子与枪杆子
 		name = league_war_events.23.a
 		add_power_balance_value = {
 			id = LEP_power_balance
-			value = 0.08
+			value = -0.1
 		}
-		
+		add_war_support = 0.03
+		set_temp_variable = { change_league_war_morale_by = 5 }
+		china_update_morale = yes
 	}
 
 	option = { #
 		log = "[GetLogInfo]: event league_war_events.23 option league_war_events.23.b"
 		name = league_war_events.23.b
 		add_stability = -0.1
-
 		add_power_balance_value = {
 			id = LEP_power_balance
-			value = -0.1
+			value = 0.1
 		}
+		set_temp_variable = { change_league_war_morale_by = 5 }
+		china_update_morale = yes
 		
 	}
 }
@@ -267,12 +270,20 @@ country_event = { #吃什么
 	option = { #
 		log = "[GetLogInfo]: event league_war_events.24 option league_war_events.24.a"
 		name = league_war_events.24.a
+		add_war_support = -0.05
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = -0.1
+		}
 		
 	}
 
 	option = { #
 		log = "[GetLogInfo]: event league_war_events.24 option league_war_events.24.b"
 		name = league_war_events.24.b
+		add_stability = -0.05
+		set_temp_variable = { change_league_war_morale_by = 5 }
+		china_update_morale = yes
 		
 	}
 }
