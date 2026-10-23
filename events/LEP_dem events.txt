@@ -5839,6 +5839,7 @@ country_event = { #周训典
 	is_triggered_only = yes
 	title = league_military.10.t
 	desc = league_military.10.d
+	fire_only_once = yes
 
 	option = {
 		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
@@ -5866,6 +5867,7 @@ country_event = { #周训典
 	is_triggered_only = yes
 	title = league_military.11.t
 	desc = league_military.11.d
+	fire_only_once = yes
 
 	option = {
 		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
