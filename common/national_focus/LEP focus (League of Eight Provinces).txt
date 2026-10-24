@@ -7084,6 +7084,9 @@ focus_tree = {
 				is_subject = no
 				is_in_faction = no
 			}
+			NOT = {
+				has_completed_focus = LEP_under_germans_influence
+			}
 		}
 		bypass = {
 			LEP = {
@@ -7254,6 +7257,9 @@ focus_tree = {
 			LEP = {
 				is_subject = no
 				is_in_faction = no
+			}
+			NOT = {
+				has_completed_focus = LEP_under_germans_influence
 			}
 		}
 		bypass = {
@@ -8908,6 +8914,7 @@ focus_tree = {
 				ideology = social_liberal
 				popularity = 0.03
 			}
+			country_event = { id = league_qi.8 days = 0 }
 			
 		}
 	}
@@ -9042,6 +9049,7 @@ focus_tree = {
 				remove_ideas = LEP_Greater_Shanghai_Plan_idea
 				add_ideas = LEP_balanced_economy
 			}
+			country_event = { id = league_qi.9 days = 0 }
 		}
 	}
 	focus = {
@@ -9125,6 +9133,7 @@ focus_tree = {
 				remove_idea = LEP_political_split2
 				add_idea = LEP_five_races_flag_association
 			}
+			country_event = { id = league_qi.4 days = 0 }
 		}
 	}
 	focus = {
@@ -9152,6 +9161,7 @@ focus_tree = {
 				popularity = 0.03
 			}
 			add_ideas = LEP_right_to_education
+			country_event = { id = league_qi.6 days = 0 }
 		}
 	}
 	focus = {
@@ -9175,6 +9185,7 @@ focus_tree = {
 				remove_idea = LEP_army_corrupt2
 				add_idea = LEP_Jinling_Military_Academy
 			}
+			country_event = { id = league_qi.5 days = 0 }
 			
 		}
 	}
@@ -9288,6 +9299,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_popular_support_the_young_and_the_modern
+			country_event = { id = league_qi.7 days = 0 }
 		}
 	}
 	focus = {
@@ -9376,7 +9388,7 @@ focus_tree = {
 				remove_idea = LEP_economic_collapse2
 				add_idea = LEP_economic_collapse3
 			}
-			
+			country_event = { id = league_qi.12 days = 0 }
 		}
 	}
 	focus = {
@@ -9394,6 +9406,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			GER_add_to_mitteleuropa = yes
+			hidden_effect = {
+				country_event = { id = league_qi.15 days = 0 }
+			}
 		}
 	}
 	focus = {
@@ -9575,6 +9590,7 @@ focus_tree = {
 				}
 			}
 			add_ideas = LEP_popular_support_behind_the_throne
+			country_event = { id = league_qi.10 days = 0 }
 		}
 	}
 	
@@ -9603,6 +9619,7 @@ focus_tree = {
 				remove_idea = LEP_economic_collapse3
 				add_idea = LEP_guided_republic
 			}
+			country_event = { id = league_qi.13 days = 0 }
 		}
 	}
 	
@@ -9655,6 +9672,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_german_eastern_bastion"
 			add_ideas = LEP_popular_support_berlin_mandate
+			country_event = { id = league_qi.14 days = 0 }
 		}
 	}
 	focus = {
@@ -9682,6 +9700,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			
 			add_ideas = LEP_popular_support_the_new_ministry
+			country_event = { id = league_qi.11 days = 0 }
 		}
 	}
 

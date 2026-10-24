@@ -7452,6 +7452,8 @@ country_event = { #第二次大选：公布结果
 		}
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_DSP_win
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.b"
@@ -7465,6 +7467,8 @@ country_event = { #第二次大选：公布结果
 		}
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_ZXX_win
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.c"
@@ -7478,6 +7482,8 @@ country_event = { #第二次大选：公布结果
 		}
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_JNSB_win
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.d"
@@ -7492,6 +7498,7 @@ country_event = { #第二次大选：公布结果
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		complete_national_focus = LEP_solidarity_union
+		set_country_flag = LEP_NSU_win
 		mark_focus_tree_layout_dirty = yes
 	}
 }

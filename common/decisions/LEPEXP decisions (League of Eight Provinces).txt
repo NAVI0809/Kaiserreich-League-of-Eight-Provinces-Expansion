@@ -656,12 +656,12 @@ LEP_balance_of_power_category = {
 		allowed = { always = no }
 
 
-		days = 15
+		days = 20
 		days_mission_timeout = 15
 		timeout_effect = {
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.05
+			    value = -0.03
 		    }
 			activate_mission = LEP_anti_qi_action_ongoing
 		}
@@ -679,12 +679,12 @@ LEP_balance_of_power_category = {
 		allowed = { always = no }
 
 
-		days = 15
+		days = 20
 		days_mission_timeout = 15
 		timeout_effect = {
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = 0.05
+			    value = 0.03
 		    }
 			activate_mission = LEP_qi_action_ongoing
 		}

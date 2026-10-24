@@ -926,6 +926,7 @@ LEP_recruit_PAC_endgame_advisors_effect = {
 }
 
 LEP_dem_unification_effect = {
+	activate_targeted_decision = { decision = china_move_capital target = ROOT }
 	country_event = { id = league_generic.500 days = 0 }
 	country_event = { id = league_generic.501 days = 2 }
 	country_event = { id = league_generic.1 days = 5 }
@@ -2972,6 +2973,10 @@ LEP_bop_start_effect = {
 }
 
 LEP_qi_unification_effect = {
+	set_cosmetic_tag = united_china
+	custom_effect_tooltip = enables_new_focus_branches
+	activate_targeted_decision = { decision = china_move_capital target = ROOT }
+	country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
 	country_event = { id = league_qi.1 days = 1 }
 	set_country_flag = LEP_qi_national_focus
 	mark_focus_tree_layout_dirty = yes
