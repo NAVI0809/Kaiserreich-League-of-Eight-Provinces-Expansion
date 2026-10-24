@@ -243,6 +243,12 @@ recruit_character = ANQ_sa_benxin
 
 recruit_character = LEP_sa_shijun
 recruit_character = LEP_wu_rengli
+
+
+recruit_character = JAP_shunsaku_kudo 
+
+
+
 ### air staff ###
 recruit_character = LEP_chen_qixia
 recruit_character = LEP_wang_tianxiang
@@ -386,6 +392,9 @@ LEP_li_siguang = { #recruit only by focus
 }
 LEP_zhao_fengchang = { #recruit only by focus
 	set_character_flag = CHN_original_unit_leader
+	retire = yes
+}
+JAP_shunsaku_kudo = { #recruit only by event
 	retire = yes
 }
 

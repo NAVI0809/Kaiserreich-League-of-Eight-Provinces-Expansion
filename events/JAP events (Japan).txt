@@ -2266,7 +2266,7 @@ country_event = { #Fate of Hirohito - Democratic
 				}
 				hidden_effect = {
 					LEP_wu_zhennan = {
-						unit_leader_event = { id = league_jap.3 days = 30 }
+						unit_leader_event = { id = league_jap.3 days = 3 }
 					}
 				}
 			}
@@ -2304,7 +2304,7 @@ country_event = { #Fate of Hirohito - Democratic
 				}
 				hidden_effect = {
 					LEP_wu_zhennan = {
-						unit_leader_event = { id = league_jap.1 days = 30 }
+						unit_leader_event = { id = league_jap.1 days = 3 }
 					}
 				}
 			}

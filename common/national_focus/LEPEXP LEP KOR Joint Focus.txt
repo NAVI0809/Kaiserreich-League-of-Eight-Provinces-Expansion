@@ -1,0 +1,188 @@
+###Political
+joint_focus = {
+	id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	icon = GFX_goal_chinese_investment
+	cost = 2
+
+	x = 3
+	y = 0
+
+	text_icon = joint_focus_style
+
+	allow_branch = {
+		OR = {
+			original_tag = LEP
+			original_tag = KOR
+		} 
+		JAP = {
+			exists = yes
+			is_subject_of = LEP
+			NOT = {
+			    has_war_with = LEP
+		    }
+		}
+		KOR = {
+			exists = yes
+			is_subject_of = LEP
+			NOT = {
+			    has_war_with = JAP
+		    }
+		}	
+	}
+	offset = {
+		x = -10
+		y = 23
+		trigger = { original_tag = LEP }
+	}
+	offset = {
+		x = 20
+		y = 11
+		trigger = { original_tag = KOR }
+	}
+
+	cancel_if_invalid = no
+
+	available = {
+		LEP = {
+			has_country_flag = LEPEXP_oversee_JAP
+		}
+		custom_override_tooltip = {
+			tooltip = LEPEXP_LEP_KOR_Joint_JAP_focus_tt
+			if = {
+				limit = { NOT = { original_tag = LEP } }
+				LEP = {
+					exists = yes
+					is_subject = no
+					has_capitulated = no
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = KOR } }
+				KOR = {
+					exists = yes
+					is_subject = yes
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { original_tag = LEP } }
+			LEP = {
+				OR = {
+					has_subject = JAP
+					has_subject = KOR
+					has_country_flag = LEPEXP_oversee_JAP
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { original_tag = KOR } }
+			KOR = {
+				is_subject_of = LEP
+			}
+		}
+	}
+
+	ai_will_do = { factor = 100 }
+
+	select_effect = {
+		LEP = {
+			country_event = {
+               id = league_jap.20
+               hours = 12
+            }
+		}     
+    }
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_LEP_KOR_Joint_JAP_focus"
+		effect_tooltip = {
+			country_event = {
+                id = league_jap.21
+                days = 1
+            }   
+		}
+		hidden_effect = { 
+			if = {
+				limit = {
+					original_tag = KOR
+				}
+				LEP = {
+					country_event = {
+                        id = league_jap.21
+                        days = 1
+                    } 
+				}
+			}
+			if = {
+				limit = {
+					original_tag = LEP
+				}
+				KOR = {
+					country_event = {
+                        id = league_jap.21
+                        days = 1
+                    } 
+				}
+			}
+		}
+		country_event = {
+            id = league_jap.21
+            days = 1
+        }
+		add_political_power = 100
+		if = {
+			limit = {
+				original_tag = KOR
+			}
+			add_stability = 0.1
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_LEP_KOR_Joint_JAP_focus"
+		if = {
+			limit = {
+				original_tag = KOR
+			}
+			add_stability = 0.1
+		}
+		add_political_power = 80
+	}
+}
+joint_focus = {
+	id = LEPEXP_Punish_Militarism_focus
+	icon = GFX_goal_SCA_defense_union
+	cost = 8
+
+	relative_position_id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	x = 1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_LEP_KOR_Joint_JAP_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 100
+		modifier = {
+			factor = 900
+			original_tag = KOR
+			has_completed_focus = KOR_free_nation_in_rubble
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator SCANDINAVIA_defense_union"
+		add_stability = 0.1
+		add_manpower = 20000
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member SCANDINAVIA_defense_union"
+		add_stability = 0.05
+		add_manpower = 10000
+	}
+}
+
