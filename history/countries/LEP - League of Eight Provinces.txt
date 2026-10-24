@@ -490,3 +490,5 @@ set_variable = {
 	var = LEP_tsingtau_level
 	value = 2
 }
+
+LEP_recalculate_salvation_alliance = yes

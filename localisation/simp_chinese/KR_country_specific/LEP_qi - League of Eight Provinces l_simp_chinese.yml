@@ -17,11 +17,12 @@
  LEP_national_salvation_alliance_desc: "章太炎、徐绍桢等旧同盟会人士曾以“反赤救国大联合”为号召，主张反对赤化、保障国权，并以民治与社会改革争取民众支持。我们可以借鉴这一政治主张，联合反对工团主义的军政人物、旧国民党人士、地方士绅与社会团体，在维护国家独立与现有秩序的旗帜下建立更广泛的政治联盟。"
  LEP_balance_german_influence: "平衡德国影响"
  LEP_balance_german_influence_desc: "德国的资金与技术曾为中国的工业建设和军事现代化提供了重要助力，但长期依赖外援，也使本国经济与国家决策受到外部力量的牵制。我们必须重新审视双方的合作关系。我们将继续利用德国的投资、设备与专业人才，同时加强政府对重要产业、财政安排及对外合作的监督，防止外资利益凌驾于国家需要之上。"
+ LEP_balance_german_influence_tt: "§C合并§Y$LEP_treaty_port_administrative_office_idea$§!、§Y$LEP_local_enterprise_idea$§!与§Y$LEP_Greater_Shanghai_Plan_idea$§!与为一个更强力的国家精神§!"
  LEP_support_local_enterprises: "扶持本土企业"
  LEP_support_local_enterprises_desc: "长期以来，国内工商实业受制于资本不足、技术落后与外来商品竞争，难以充分发挥其潜力。我们将通过调整税制、改善融资条件、保护本国商品市场，并鼓励企业引进技术、改良生产，帮助本土工商界扩大经营规模。对于关系国计民生的重要产业，我们也将加强政府的协调与扶助，使本国资本逐步成长为国家工业建设的支柱，减少对外国资金与设备的过度依赖。"
  LEP_qixieyuan_personality_cult: "齐燮元个人崇拜"
  LEP_nationalist_military: "国家主义训导"
- LEP_nationalist_military_desc: "历经多年征战，我们终于在齐燮元的领导下完成了全国统一，但军事上的胜利并不意味着国家已然稳固。各省之间的隔阂与军中根深蒂固的派系观念，仍可能成为新生政权的隐患。国民革命军之所以战力强盛，不仅在于其编制与装备，更在于有主义贯穿其中，使官兵知晓所为何战。我们若要使五省联军真正成为统一国家的支柱，便不能仅凭军纪与长官威望维系部队。为此，我们将与同样寻求国家独立自主的中国青年党展开合作，在军中推行国家主义训导，以共同的信念弥合旧日裂隙。"
+ LEP_nationalist_military_desc: "国民革命军之所以战力强盛，不仅在于其编制与装备，更在于有主义贯穿其中，使官兵知晓所为何战。我们若要使五省联军真正成为统一国家的支柱，便不能仅凭军纪与长官威望维系部队。为此，我们将与同样寻求国家独立自主的中国青年党展开合作，在军中推行国家主义训导，以共同的信念弥合旧日裂隙。"
  LEP_five_color_flag: "拥护五色国旗"
  LEP_five_color_flag_desc: "全国既已统一，我们便更须确立国家的共同象征，以凝聚各省人心。五色国旗所代表的五族共和，不应随着党派更迭而遭到废弃，更不应成为一党一派的私有标志。我们将与中国青年党携手，在军中与社会各界宣扬国家主义，拥护五色国旗，维护国家统一与民族独立。唯有使国家高于党派，使共和成为全体国民共同遵守的原则。"
  LEP_education_rights_recovery: "收回教育权"
@@ -83,25 +84,27 @@
  LEP_architect_of_the_new_state: "新国家的建筑师"
  LEP_architect_of_the_new_state_desc: "余家菊以青年党的锐气入阁，主张以教育与科学重建国家。他主持的每一件政务都带着一种近乎严苛的条理，让旧官僚既敬且畏。"
  LEP_iron_discipline_of_the_new_army: "新军的铁律"
- LEP_iron_discipline_of_the_new_army_desc: "田文炳在直系中带过兵、也吃过败仗，深知旧军积弊何在。他主持军务后，发饷、升迁、训练皆按章程办理，八省军队自此有了可循的规矩。"
+ LEP_iron_discipline_of_the_new_army_desc: ""
  LEP_the_man_behind_the_curtain: "帘后之人"
  LEP_the_man_behind_the_curtain_desc: "丁文江以学者之身在军政之间周旋，既能为各方所容，又深明联帅的真实意图。位在总统，而诏令多出于帘后。"
  LEP_iron_hand_behind_the_throne: "幕后铁腕"
  LEP_iron_hand_behind_the_throne_desc: "齐燮元名义上退居副位，实则八省的军令、人事、财赋仍须经他之手。前台换了面孔，帘后的那只手没有换。"
  LEP_ding_wenjiang_leader_desc: "§L$LEP_ding_wenjiang_advisor_desc$§!"
- LEP_popular_support_the_young_and_the_modern: "政治法统：§g青年当国§!"
+ LEP_popular_support_the_young_and_the_modern: "政治法统：§n青年当国§!"
  LEP_popular_support_the_young_and_the_modern_desc: "以余家菊为首的一代少壮进入中枢。他们受过新式教育，做事讲条理、重实效，也让守旧的官僚第一次感到位置不稳。"
- LEP_popular_support_behind_the_throne: "政治法统：§P帘后垂治§!"
+ LEP_popular_support_behind_the_throne: "政治法统：§c帘后垂治§!"
  LEP_popular_support_behind_the_throne_desc: "总统换了面孔，实权仍握在联帅手中。各方之所以接受这一安排，正是因为它既顾全了体面，又不必真正交出权柄。"
- LEP_popular_support_the_new_ministry: "政治法统：§c军部新章§!"
+ LEP_popular_support_the_new_ministry: "政治法统：§P军部新章§!"
  LEP_popular_support_the_new_ministry_desc: "军务归入新设的部院，发饷、升迁、训练一体按章程办理。旧军官的私人势力被逐步纳入制度之内。"
+ LEP_popular_support_berlin_mandate: "政治法统：§m柏林授命§!"
+ LEP_popular_support_berlin_mandate_desc: ""
  LEP_tt_purge_deadwood: "§Y裁汰冗员：§!新式人才入替，积弊得以清除。"
  LEP_tt_reform_the_army: "§Y整军：§!军队涣散之弊稍得缓解。"
  LEP_tt_restore_legitimacy: "§Y法统稍复：§!有名望者居其位，政令渐能通行。"
 
  LEP_establish_national_defense_union_desc: "我们必须把八省各自为政的军队收束到同一个指挥之下。如今各省督军手里的兵，名义上同属民国，实际上各有各的粮台、各有各的官长；一旦外敌入境，这样的军队连集结都要花上数月。建立国防联军，正是要先把番号、饷章与调遣之权统一起来，再谈整顿。"
  LEP_political_committee_desc: "我们必须给这个新政权一套能够运转的中枢。眼下省署、军部、议会各行其是，一道命令往往要经过四五道关卡才能落地。组建政务委员会，把财政、民政、外交诸事归入一处议决，既是为了提高效率，也是为了让各派在这一张桌子上分出高下，而不必动刀兵。"
- LEP_target_ten_provinces_united_desc: "我们必须把眼光放到八省之外。东南这一隅物产虽丰，终究撑不起一个国家的架子——没有华北的煤铁，没有长江上游的米粮，工业与国防都无从谈起。明确以万省联合为目标，是要让全省上下明白：眼下的整顿不是偏安，而是为下一步做准备。"
+ LEP_target_ten_provinces_united_desc: "我们必须把眼光放到八省之外。东南这一隅物产虽丰，终究撑不起一个国家的架子——没有华北的煤铁，没有长江上游的米粮，工业与国防都无从谈起。"
  LEP_jinling_military_academy_expansion_desc: "我们必须承认，八省的军官大半是在行伍中打滚出来的，懂打仗，却未必懂近代战争。金陵原有的军官学校规模有限，一年毕业不过数十人，杯水车薪。扩建校舍、延聘教官、增设炮工辎重诸科，为的是在十年之内，让每一支部队都有一批读过书的官长。"
  LEP_awakening_lion_youth_corps_desc: "我们必须把这股青年人的热气引到正处。学校里、报馆里、街头巷尾，到处是议论国事的声音，却没有人替他们组织起来。醒狮青年团要做的，就是把这些零散的热情编成纪律：操练、宣讲、服务，让他们在成年前先学会做一个国民。"
  LEP_courtesy_to_scholars_desc: "我们必须给读书人留一条出路。民国以来，乡间的士绅既不必再应科举，也无从参与新政，渐渐成了旁观者甚至反对者。礼遇士人，请他们参与地方事务、充任咨议，是要把这一层人重新拉回国家的轨道上来。"
@@ -109,8 +112,67 @@
  LEP_Jinling_Military_Academy: "金陵陆军军官学校"
  LEP_Jinling_Military_Academy_desc: "扩建后的金陵军校增设炮、工、辎重诸科，延聘德国与日本教官，每年为八省军队输送一批受过近代训练的基层官长。"
  LEP_Consultative_Council: "咨询委员会"
- LEP_Consultative_Council_desc: "由士绅、商界与各党代表组成，专备省署咨询。它没有议决之权，却让各方第一次有了坐在一起说话的场合。"
+ LEP_Consultative_Council_desc: ""
  LEP_tt_reorganise_the_army: "§Y整编军队：§!涣散之弊稍得缓解。"
 
- 
+ #事件
+ league_qi.1.t: "凋敝的国民经济"
+ league_qi.1.d: "我们终于将中国重新置于南京的旗帜之下。自江南的工商重镇至西北的荒凉边地，地图上的疆界如今连成一片，昔日割据的军阀与地方政权也已不复存在。然而，一纸统一的宣告终究不能填平战火留下的沟壑。当庆祝胜利的钟声传遍各地，我们很快便不得不面对一个令人难堪的事实：我们得到的是一个统一的国家，却不是一个统一的经济体。​\n\n东南沿海的工厂、港口与金融机构尚能维持运转，上海的商人仍在盘算下一笔买卖，德国资本也为江浙的工业提供着有限的支撑。凭借青帮的关系网络与打手，我们甚至还能在某些地方压住骚乱，让货物继续流通，让税款勉强进入政府的账簿。但这些手段终究只能维系表面的安稳。越过长江，铁路与公路在战争中遭到破坏，农村的生产迟迟未能恢复，地方市场彼此隔绝，许多地区至今仍依靠残存的旧有秩序勉强维持生计。​\n\n更棘手的是，东南的财富并不会自然而然地流向内地。沿海的银行不愿向满目疮痍的乡村放贷，工厂缺乏稳定的原料供应，而饥困的农民也无力购买工业制品。我们可以派遣官员，可以调动军队，甚至可以用刺刀迫使地方服从，但这些都无法凭空创造粮食、修复铁路或重建市场。"
+ league_qi.1.a: "问题在于经济？"
 
+ league_qi.2.t: "胜利之师的积弊"
+ league_qi.2.d: "我们终于结束了中国漫长的分裂，五省联军的旗帜如今已插遍全国。然而，疆域的扩张并未使我们的军队一夜之间脱胎换骨。说到底，我们的中央军仍是那支由齐燮元一手经营起来的宁系部队：它在军阀混战中成长，依靠私人关系维系指挥，以派系忠诚代替制度约束，又在一次次征战与交易中养成了根深蒂固的积习。过去，这些问题尚能被战场上的胜利掩盖；如今，我们却再也无处可以躲藏。​​\n\n统一战争为许多军官带来了晋升，也为他们提供了大发横财的机会。战时采购的账目含混不清，军需物资在层层转运中不翼而飞，虚报兵额与侵吞军饷更早已成为公开的秘密。某些部队的花名册上挤满了领饷的士兵，营房里却找不到与之相称的人影；另一些将领则忙着购置田产、经营生意，仿佛军职不过是他们积累财富的另一条门路。我们当然可以对这些人睁一只眼闭一只眼——毕竟，许多人正是凭借对我们的忠诚才坐上今天的位置。但当忠诚变成了瓜分军费的凭据，我们究竟还剩下多少真正能够调遣的军队？​​\n\n更何况，全国统一并未让国防压力随之消失。北方边境需要驻军，沿海港口与漫长的交通线亟待守备，地方上的残余武装也远未彻底肃清。我们必须把军队部署到过去从未设想过的地方，却仍在依靠一支为争夺省份而建立、为军阀利益而运转的旧式军队维持秩序。扩军需要钱，整军需要钱，装备与训练同样需要钱；而我们的军费，正不断流进那些无法出现在战场上的口袋。"
+ league_qi.2.a: "枪杆子怎么会攻击钱袋子？"
+
+ league_qi.3.t: "政治危机"
+ league_qi.3.d: "在东南的岁月里，我们尚能凭借五省联军的枪杆子、地方士绅的支持与南京的行政机器稳坐联帅府。然而，如今我们的旗帜已经越过长江，插遍中国各地，昔日行之有效的统治手段却未必还能应付这个庞大而复杂的国家。统一消灭了许多割据政权，却没有消除人们对旧政治的怨愤；我们收复了疆土，却也将那些曾经被地方壁垒隔绝的矛盾一并带到了南京。​\n\n​我们并非没有尝试改变。民主科学座谈会、景星会以及其他知识界人士的加入，曾让我们得以向外界展示一个超越军阀政治的新政府形象。他们为行政改革建言，为教育与社会建设奔走，也试图在军队之外为我们的统治寻找新的支柱。然而，几位知识分子的支持终究无法掩盖官僚机构的积弊。贪污舞弊依旧盛行，报刊与集会仍受到严密约束，地方官员习惯于服从上级而非回应民众。那些曾经对我们抱有期待的人，如今开始追问：所谓统一，究竟是要建立一个新的中国，还是仅仅让南京的命令传到更远的地方？​​\n\n我们必须为未来的统治寻找新的基础。德国顾问可以为我们提供行政组织与国家建设的经验，却也意味着我们将进一步依赖外国人的判断；我们可以效仿孙传芳，在有限的政治让步中争取本土知识分子的支持，但改革势必触及既得利益者的权力；我们也可以借助民众对赤色帝国主义的恐惧，将中国青年党纳入我们的政治阵营，以民族主义与反共宣传巩固政权。三条道路各有代价，而我们已经没有太多时间继续拖延。"
+ league_qi.3.a: "该走哪条路？"
+
+ league_qi.4.t: ""
+ league_qi.4.d: ""
+ league_qi.4.a: ""
+
+ league_qi.5.t: ""
+ league_qi.5.d: ""
+ league_qi.5.a: ""
+
+ league_qi.6.t: ""
+ league_qi.6.d: ""
+ league_qi.6.a: ""
+
+ league_qi.7.t: ""
+ league_qi.7.d: ""
+ league_qi.7.a: ""
+
+ league_qi.8.t: ""
+ league_qi.8.d: ""
+ league_qi.8.a: ""
+
+ league_qi.9.t: ""
+ league_qi.9.d: ""
+ league_qi.9.a: ""
+
+ league_qi.10.t: ""
+ league_qi.10.d: ""
+ league_qi.10.a: ""
+ league_qi.3.b: ""
+
+ LEP_Three_Loves_Campaign: "三爱主义"
+ LEP_Three_Loves_Campaign_desc: ""
+
+ LEP_local_enterprise: "本地企业"
+ LEP_local_enterprise_desc: ""
+
+ LEP_salvation_alliance_modifier: "救国大联合"
+
+ LEP_guided_republic: "指导下的民国"
+ LEP_guided_republic_desc: ""
+
+ LEP_corporate_privilege: "德企特权"
+ LEP_corporate_privilege_desc: ""
+
+ LEP_security_pacification_campaign_idea: "治安强化运动"
+ LEP_security_pacification_campaign_idea_desc: ""
+
+ LEP_Seeckt_Mission: "赛克特顾问团"
+ LEP_Seeckt_Mission_desc: ""

@@ -1113,3 +1113,69 @@
  LEP_seat_mark_none: " "
  LEP_seat_coalition_over: "执政 §G[?LEP_coalition_seats|0]§! / 138 席"
  LEP_seat_coalition_under: "执政 §R[?LEP_coalition_seats|0]§! / 138 席"
+
+ LEP_economic_collapse1: "经济崩溃"
+ LEP_economic_collapse1_desc: ""
+
+ LEP_economic_collapse2: "经济萧条"
+ LEP_economic_collapse2_desc: ""
+
+ LEP_economic_collapse3: "经济复苏"
+ LEP_economic_collapse3_desc: ""
+
+ LEP_independent_economy: "独立经济"
+ LEP_independent_economy_desc: ""
+
+ LEP_five_races_flag: "五色国旗大同盟"
+ LEP_five_races_flag_desc: ""
+
+ LEP_political_split1: "政治分裂"
+ LEP_political_split1_desc: ""
+
+ LEP_political_split2: "政治分歧"
+ LEP_political_split2_desc: ""
+
+ LEP_army_corrupt1: "军队腐败"
+ LEP_army_corrupt1_desc: ""
+
+ LEP_army_corrupt2: "军队混乱"
+ LEP_army_corrupt2_desc: ""
+
+ LEP_YCP_economic: "国家主义经济模式"
+ LEP_YCP_economic_desc: ""
+
+ LEP_right_to_education: "教育权自主"
+ LEP_right_to_education_desc: ""
+
+ LEP_anti_red: "反赤宣传"
+ LEP_anti_red_desc: ""
+
+ LEP_YCP_economic2: "国家主义经济模式"
+ LEP_YCP_economic2_desc: ""
+
+ LEP_five_races_flag_association: "五色国旗大同盟"
+ LEP_five_races_flag_association_desc: ""
+
+ LEP_awakening_lion_youth_corps_idea: "醒狮青年团"
+ LEP_awakening_lion_youth_corps_idea_desc: ""
+
+ LEP_treaty_port_administrative_office_idea: "督办公署"
+ LEP_treaty_port_administrative_office_idea_desc: ""
+
+ LEP_local_enterprise_idea: "本地企业"
+ LEP_local_enterprise_idea_desc: ""
+
+ 
+
+ LEP_Greater_Shanghai_Plan_idea: "大上海计划"
+ LEP_Greater_Shanghai_Plan_idea_desc: ""
+
+ LEP_balanced_economy: "均衡经济"
+ LEP_balanced_economy_desc: ""
+
+ LEP_salvation_alliance_idea: "救国大联合"
+ LEP_salvation_alliance_idea_desc: ""
+ LEP_national_salvation_alliance_tt: "§Y该精神的效果会随当下$paternal_autocrat_coloured$、$authoritarian_democrat_coloured$、$social_conservative_coloured$、$social_liberal_coloured$与$social_democrat_coloured$党派支持率而修正。§!"
+
+ LEP_suns_legacy: "联帅传承"
+ LEP_suns_legacy_desc: ""

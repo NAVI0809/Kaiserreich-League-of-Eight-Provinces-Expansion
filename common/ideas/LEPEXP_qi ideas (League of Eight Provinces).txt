@@ -1,0 +1,431 @@
+#######################################
+# League of Eight Provinces EX QI Ideas #
+#######################################
+# By NAVI
+###########################
+
+ideas = {
+	country = {
+		LEP_economic_collapse1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_economic_collapse1" }
+			picture = generic_scars_of_civil_war
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				consumer_goods_factor = 0.30
+				industrial_capacity_factory = -0.15
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+
+		LEP_economic_collapse2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_economic_collapse2" }
+			picture = generic_scars_of_civil_war
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		LEP_economic_collapse3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_economic_collapse3" }
+			picture = generic_scars_of_civil_war
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		LEP_YCP_economic = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_economic_collapse3" }
+			picture = generic_scales
+			allowed = {
+				always = no
+			}
+			modifier = {
+				min_export = -0.15
+				local_resources_factor = 0.10
+				trade_opinion_factor_negative = 0.05
+			}
+		}
+	
+		LEP_independent_economy = {
+			picture = backward_industry
+			allowed = {
+				always = no
+			}
+			modifier = {
+				local_resources_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+			}
+		}
+		LEP_political_split1 = {
+			picture = SPR_political_violence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.2
+				war_support_factor = -0.1
+				research_speed_factor = -0.15
+			}
+		}
+		LEP_political_split2 = {
+			picture = SPR_political_violence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.1
+				war_support_factor = -0.05
+				research_speed_factor = -0.05
+			}
+		}
+		LEP_army_corrupt1 = {
+			picture = PER_untrained_officer
+			allowed = {
+				always = no
+			}
+			modifier = {
+				experience_gain_army = -0.1
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_org_factor = -0.2
+			}
+		}
+		LEP_army_corrupt2 = {
+			picture = PER_untrained_officer
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_org_factor = -0.1
+				experience_gain_army = -0.05
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+		LEP_right_to_education = {
+			picture = generic_research_increase
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.125
+				offensive_war_stability_factor = 0.05
+				research_sharing_per_country_bonus_factor = 0.15
+			}
+		}
+		LEP_anti_red = {
+			picture = UKR_mace
+			allowed = {
+				always = no
+			}
+			modifier = {
+				syndicalist_drift = -0.03
+				radical_socialist_drift = -0.03
+				totalist_drift = -0.03
+				resistance_growth = 0.15
+			}
+		}
+		LEP_YCP_economic2 = {
+			picture = generic_scales
+			allowed = {
+				always = no
+			}
+			modifier = {
+				min_export = -0.15
+				local_resources_factor = 0.10
+				trade_opinion_factor_negative = 0.05
+				production_speed_buildings_factor = 0.125
+				line_change_production_efficiency_factor = 0.15
+			}
+		}
+		LEP_five_races_flag_association = {
+			picture = FNG_xinhai_order
+			allowed = {
+				always = no
+			}
+			modifier = {
+				party_popularity_stability_factor = 0.20
+				war_support_factor = 0.10
+				paternal_autocrat_drift = 0.02
+				national_populist_drift = 0.02
+			}
+		}
+		LEP_awakening_lion_youth_corps_idea = {
+			picture = army_cooperation
+			allowed = {
+				always = no
+			}
+			modifier = {
+				training_time_factor = -0.15
+				conscription = 0.02
+			}
+		}
+		LEP_treaty_port_administrative_office_idea = {
+			picture = NOR_syndicalist_industry_idea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+
+		LEP_Greater_Shanghai_Plan_idea = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Greater_Shanghai_Plan" }
+			picture = generic_lightbulb
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				local_resources = 0.05
+			}
+		}
+		LEP_Seeckt_Mission = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Seeckt_Mission" }
+			picture = advisors_germany
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				max_command_power = 25
+				dig_in_speed_factor = 0.10
+				land_doctrine_cost_factor = -0.20
+			}
+		}
+		LEP_Jinling_Military_Academy = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Jinling_Military_Academy" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.05
+				command_power_gain_mult = 0.10
+			}
+		}
+		LEP_Consultative_Council = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Consultative_Council" }
+			picture = generic_officer
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				political_advisor_cost_factor = -0.1
+			}
+		}
+
+
+		LEP_popular_support_the_young_and_the_modern = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_the_young_and_the_modern" }
+			picture = FNG_xinhai_order
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+				political_power_factor = 0.10
+				research_speed_factor = 0.05
+				compliance_gain = 0.025
+			}
+		}
+
+		LEP_popular_support_behind_the_throne = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_behind_the_throne" }
+			picture = FNG_xinhai_order
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+				political_power_factor = 0.15
+				compliance_gain = 0.030
+				party_popularity_stability_factor = 0.10
+			}
+		}
+
+		LEP_popular_support_the_new_ministry = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_the_new_ministry" }
+			picture = FNG_xinhai_order
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				political_power_factor = 0.10
+				army_org_factor = 0.05
+				command_power_gain_mult = 0.10
+				resistance_growth = -0.1
+			}
+		}
+
+		LEP_popular_support_berlin_mandate = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_berlin_mandate" }
+			picture = FNG_xinhai_order
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.10
+				research_speed_factor = 0.05
+				army_org_factor = 0.05
+				command_power_gain_mult = 0.10
+				min_export = 0.3
+			}
+		}
+
+
+		LEP_Three_Loves_Campaign = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Three_Loves_Campaign" }
+			picture = generic_politics_dispute_beiyang
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_advisor_cost_factor = -0.33
+				compliance_gain = 0.01
+			}
+		}
+		LEP_Cult_of_the_Marshal = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Cult_of_the_Marshal" }
+			picture = advisors_china_beiyang
+			allowed = { always = no }
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.10
+				justify_wargoal_cost = -0.25
+			}
+		}
+
+		LEP_Restored_Confucian_Order = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_Restored_Confucian_Order" }
+			picture = RUS_land_reforms
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.1
+				local_supplies = 0.1
+			}
+		}
+		LEP_local_enterprise = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_local_enterprise" }
+			picture = FNG_china_money
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.1
+				production_speed_facility_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+		LEP_local_enterprise1 = {
+			picture = FNG_china_money
+			allowed = {
+				always = no
+			}
+		}
+		LEP_balanced_economy = {
+			picture = FNG_china_money
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.1
+				local_resources = 0.1
+				production_lack_of_resource_penalty_factor = -0.15
+				production_speed_facility_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				local_resources = 0.1
+			}
+		}
+		LEP_salvation_alliance_idea = {
+			picture = war_of_words
+			allowed = {
+				always = no
+			}
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.05
+				command_power_gain = 0.05
+			}
+		}
+		LEP_suns_legacy = {
+			picture = advisors_china_zhili
+			allowed = {
+				always = no
+			}
+			modifier = {
+				org_loss_at_low_org_factor = -0.15
+				army_experience_gain_army_factor = 0.003
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.1
+				modifier_army_sub_unit_irregular_infantry_defence_factor = 0.1
+			}
+		}
+		LEP_guided_republic = {
+			picture = generic_control_parliament
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = -0.02
+				trade_laws_cost_factor = -0.15
+			}
+		}
+		LEP_corporate_privilege = {
+			picture = GEA_AOG_BONUS
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				trade_cost_for_target_factor = -0.2
+				cic_to_target_factor = 0.15
+			}
+		}
+		LEP_security_pacification_campaign_idea = {
+			picture = generic_officer
+			allowed = {
+				always = no
+			}
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+				resistance_growth_on_our_occupied_states = 0.15
+				intelligence_agency_defense = 1
+				resistance_growth = -0.20
+			}
+		}
+	}	
+}

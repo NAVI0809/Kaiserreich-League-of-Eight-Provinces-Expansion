@@ -1,0 +1,157 @@
+add_namespace = league_qi
+
+country_event = { #经济
+	id = league_qi.1
+	title = league_qi.1.t
+	desc = league_qi.1.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_qi.1 option league_qi.1.a"
+		name = league_qi.1.a
+		add_ideas = LEP_economic_collapse1
+		country_event = { id = league_qi.2 days = 1 }
+	}
+}
+
+country_event = { #政治
+	id = league_qi.2
+	title = league_qi.2.t
+	desc = league_qi.2.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_qi.2 option league_qi.2.a"
+		name = league_qi.2.a
+		add_ideas = LEP_army_corrupt1
+		hidden_effect = {
+			country_event = { id = league_qi.3 days = 1 }
+		}
+	}
+}
+
+country_event = { #军事
+	id = league_qi.3
+	title = league_qi.3.t
+	desc = league_qi.3.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_qi.3 option league_qi.3.a"
+		name = league_qi.3.a
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_qi.3 option league_qi.3.b"
+		name = league_qi.3.b
+		add_ideas = LEP_political_split1
+	}
+}
+
+country_event = { #经济
+	id = league_qi.4
+	title = league_qi.4.t
+	desc = league_qi.4.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.4 option league_qi.4.a"
+		name = league_qi.4.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.5
+	title = league_qi.5.t
+	desc = league_qi.5.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.5 option league_qi.5.a"
+		name = league_qi.5.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.6
+	title = league_qi.6.t
+	desc = league_qi.6.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.6 option league_qi.6.a"
+		name = league_qi.6.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.7
+	title = league_qi.7.t
+	desc = league_qi.7.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.7 option league_qi.7.a"
+		name = league_qi.7.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.8
+	title = league_qi.8.t
+	desc = league_qi.8.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.8 option league_qi.8.a"
+		name = league_qi.8.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.9
+	title = league_qi.9.t
+	desc = league_qi.9.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.9 option league_qi.9.a"
+		name = league_qi.9.a
+    }
+}
+
+country_event = { #经济
+	id = league_qi.10
+	title = league_qi.10.t
+	desc = league_qi.10.d
+	picture = GFX_report_event_LEP_sun_zhejiang
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		log = "[GetLogInfo]: event league_qi.10 option league_qi.10.a"
+		name = league_qi.10.a
+    }
+}
+

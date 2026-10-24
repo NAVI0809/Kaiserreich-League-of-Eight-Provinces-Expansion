@@ -876,138 +876,138 @@ LEP_balance_of_power_category = {
 
 
 
-#LEP_country_development = {
-#	LEP_decision_reduce_expenditure = {
-#		icon = GFX_decision_SWI_no_elected_president
-#        allowed = {
-#            tag = LEP
-#        }
-#		available = {
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#		visible = {
-#			NOT = {
-#				has_idea = LEP_funding_shortage6
-#			}
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#        cost = 50
-#		ai_will_do = {
-#			base = 100
-#		}
-#        days_remove = 30
-#		fire_only_once = yes
-#
-#		remove_effect = {
-#			stability_factor = -0.1
-#			LEP_raise_funds = yes
-#		}
-#	}
-#
-#	LEP_decision_issue_bonds = {
-#		icon = GFX_decision_ger_mefo_bills
-#        allowed = {
-#            tag = LEP
-#        }
-#		available = {
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#		visible = {
-#			NOT = {
-#				has_idea = LEP_funding_shortage6
-#			}
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#        cost = 50
-#		ai_will_do = {
-#			base = 100
-#		}
-#        days_remove = 30
-#		fire_only_once = yes
-#
-#		remove_effect = {
-#			LEP_raise_funds = yes
-#		}
-#	}
-#
-#	LEP_decision_xihu_expo = {
-#		icon = GFX_decision_generic_consumer_goods
-#        allowed = {
-#            tag = LEP
-#        }
-#		available = {
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#		visible = {
-#			NOT = {
-#				has_idea = LEP_funding_shortage6
-#			}
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#        cost = 50
-#		ai_will_do = {
-#			base = 100
-#		}
-#        days_remove = 30
-#		fire_only_once = yes
-#
-#		remove_effect = {
-#			LEP_raise_funds = yes
-#		}
-#	}
-#
-#	LEP_decision_seek_overseas_chinese_capital = {
-#		icon = GFX_decision_card
-#        allowed = {
-#            tag = LEP
-#        }
-#		available = {
-#			NOT = {
-#				has_idea = LEP_funding_shortage6
-#			}
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#		visible = {
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#        cost = 50
-#		ai_will_do = {
-#			base = 100
-#		}
-#        days_remove = 30
-#		fire_only_once = yes
-#
-#		remove_effect = {
-#			LEP_raise_funds = yes
-#		}
-#	}
-#
-#	LEP_decision_bank_consortium = {
-#		icon = GFX_decision_gre_investment_decisions
-#        allowed = {
-#            tag = LEP
-#        }
-#		available = {
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#		visible = {
-#			NOT = {
-#				has_idea = LEP_funding_shortage6
-#			}
-#			has_completed_focus = LEP_relieve_funding_shortage
-#		}
-#        cost = 50
-#		ai_will_do = {
-#			base = 100
-#		}
-#        days_remove = 30
-#		fire_only_once = yes
-#
-#		remove_effect = {
-#			LEP_raise_funds = yes
-#		}
-#	}
-#}
+LEP_country_development = {
+	LEP_decision_reduce_expenditure = {
+		icon = GFX_decision_SWI_no_elected_president
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+		ai_will_do = {
+			base = 100
+		}
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			stability_factor = -0.1
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_issue_bonds = {
+		icon = GFX_decision_ger_mefo_bills
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+		ai_will_do = {
+			base = 100
+		}
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_xihu_expo = {
+		icon = GFX_decision_generic_consumer_goods
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+		ai_will_do = {
+			base = 100
+		}
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_seek_overseas_chinese_capital = {
+		icon = GFX_decision_card
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+		ai_will_do = {
+			base = 100
+		}
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+
+	LEP_decision_bank_consortium = {
+		icon = GFX_decision_gre_investment_decisions
+        allowed = {
+            tag = LEP
+        }
+		available = {
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+		visible = {
+			NOT = {
+				has_idea = LEP_funding_shortage6
+			}
+			has_completed_focus = LEP_relieve_funding_shortage
+		}
+        cost = 50
+		ai_will_do = {
+			base = 100
+		}
+        days_remove = 30
+		fire_only_once = yes
+
+		remove_effect = {
+			LEP_raise_funds = yes
+		}
+	}
+}
 
 
 LEP_foreign_policy_decisions = {

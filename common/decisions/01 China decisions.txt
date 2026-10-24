@@ -2355,7 +2355,7 @@ chinese_unification = {
 				}
 				else = {
 					hidden_effect = { news_event = china_events.315 }
-					china_generic_unification_effect = yes
+					LEP_qi_unification_effect = yes
 				}
 			}
 			else_if = {

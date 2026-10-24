@@ -21,11 +21,6 @@ focus_tree = {
 		y = 2800
 	}
 
-    
-	shared_focus = CHS_provisional_government
-	shared_focus = CHS_reintegrate_academies
-	shared_focus = CHS_standardised_arsenals
-	shared_focus = CHS_southern_fleets_legacy
 
 
 
@@ -3510,6 +3505,7 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_fengtian
 		allow_branch = {
 			has_country_flag = LEP_mili_focus_on_flag
+			has_country_flag = LEP_dem_gov
 		}
 		
 		relative_position_id = LEP_national_images_continuity
@@ -8733,13 +8729,11 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_military1 }
-				swap_ideas = {
-					remove_idea = CHS_military1
-					add_idea = CHS_military2
-				}
+			swap_ideas = {
+				remove_idea = LEP_army_corrupt1
+				add_idea = LEP_army_corrupt2
 			}
+			
 		}
 	}
 	focus = {
@@ -8766,12 +8760,9 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_legitimacy1 }
-				swap_ideas = {
-					remove_idea = CHS_legitimacy1
-					add_idea = CHS_legitimacy2
-				}
+			swap_ideas = {
+				remove_idea = LEP_economic_collapse1
+				add_idea = LEP_economic_collapse2
 			}
 		}
 	}
@@ -8797,9 +8788,9 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			add_war_support = 0.05
-			if = {
-				limit = { has_idea = CHS_bureaucracy1 }
-				remove_ideas = CHS_bureaucracy1
+			swap_ideas = {
+				remove_idea = LEP_political_split1
+				add_idea = LEP_political_split2
 			}
 		}
 	}
@@ -8816,6 +8807,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
 		}
+		available = {
+			market_liberal < 0.3
+		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_sun_successor"
 			add_political_power = 75
@@ -8824,12 +8818,15 @@ focus_tree = {
 				ideology = authoritarian_democrat
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_military2 }
-				swap_ideas = {
-					remove_idea = CHS_military2
-					add_idea = CHS_military3
-				}
+			add_trait = {
+				character = LEP_tian_wenbing
+				slot = second_in_command
+				trait = LEP_iron_discipline_of_the_new_army
+			}
+			custom_effect_tooltip = tooltip_white_line
+			swap_ideas = {
+				remove_idea = LEP_army_corrupt2
+				add_idea = LEP_suns_legacy
 			}
 		}
 	}
@@ -8864,7 +8861,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_Greater_Shanghai_Plan
+			add_ideas = LEP_Greater_Shanghai_Plan_idea
 			random_owned_controlled_state = {
 				prioritize = { 613 }
 				add_extra_state_shared_building_slots = 1
@@ -8892,12 +8889,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_national_salvation_alliance"
-			add_political_power = 50
-			add_stability = 0.05
-			if = {
-				limit = { has_idea = CHS_military3 }
-				remove_ideas = CHS_military3
+			add_dynamic_modifier = { modifier = LEP_salvation_alliance_modifier }
+			custom_effect_tooltip = LEP_national_salvation_alliance_tt
+			custom_effect_tooltip = tooltip_white_line
+			set_temp_variable = { coalition_partner_var = token:social_democrat }
+			add_to_coalition = yes
+			set_temp_variable = { coalition_partner_var = token:social_conservative }
+			add_to_coalition = yes
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
 			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
+			
 		}
 	}
 	focus = {
@@ -8912,6 +8923,14 @@ focus_tree = {
 		icon = GFX_goal_generic_build_housing
 		prerequisite = {
 			focus = LEP_national_salvation_alliance
+		}
+		completion_reward = {
+			add_one_random_civilian_factory = yes
+			add_one_random_civilian_factory = yes
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
@@ -8935,10 +8954,7 @@ focus_tree = {
 				ideology = social_conservative
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_legitimacy2 }
-				remove_ideas = CHS_legitimacy2
-			}
+			remove_ideas = LEP_political_split2
 		}
 	}
 	focus = {
@@ -8987,24 +9003,17 @@ focus_tree = {
 			focus = LEP_unite_middle_class
 			focus = LEP_courtesy_to_scholars
 		}
-				completion_reward = {
+		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_three_loves_doctrine"
 			add_political_power = 75
 			add_stability = 0.05
 			add_war_support = 0.05
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_democrat
 				popularity = 0.05
 			}
 			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { LEP_mili_var_change = 5 }
-			LEP_mili_var = yes
-			add_manpower = 50000
-			custom_effect_tooltip = tooltip_white_line
-			add_timed_idea = {
-				idea = LEP_Three_Loves_Campaign
-				days = 500
-			}
+			add_ideas = LEP_Three_Loves_Campaign
 		}
 	}
 	focus = {
@@ -9023,6 +9032,17 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_greater_shanghai_plan
 		}
+		completion_reward = {
+			set_temp_variable = { LEP_market_liberal_pp_change = -0.1 }
+			LEP_modify_tsingtau_spirit = yes
+			custom_effect_tooltip = LEP_balance_german_influence_tt
+			hidden_effect = {
+				remove_ideas = LEP_treaty_port_administrative_office_idea
+				remove_ideas = LEP_local_enterprise
+				remove_ideas = LEP_Greater_Shanghai_Plan_idea
+				add_ideas = LEP_balanced_economy
+			}
+		}
 	}
 	focus = {
 		id = LEP_support_local_enterprises
@@ -9037,6 +9057,11 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_treaty_port_administrative_office
 		}
+		completion_reward = {
+			add_one_random_civilian_factory = yes
+			add_one_random_military_factory = yes
+			add_ideas = LEP_local_enterprise
+		}
 	}
 	
 	focus = {
@@ -9047,6 +9072,9 @@ focus_tree = {
 		cost = 3
 		ai_will_do = {
 			factor = 50
+		}
+		available = {
+			market_liberal < 0.2
 		}
 		icon = GFX_goal_QIE_ycp
 		prerequisite = {
@@ -9060,11 +9088,18 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_military2 }
-				swap_ideas = {
-					remove_idea = CHS_military2
-					add_idea = CHS_military3
+			set_temp_variable = { coalition_partner_var = token:national_populist }
+			add_to_coalition = yes
+			add_advisor_role = {
+				character = LEP_yu_jiaju
+				activate = yes
+				advisor = {
+					slot = second_in_command
+					idea_token = LEP_yu_jiaju_sic
+					desc = LEP_yu_jiaju_advisor_desc
+					traits = { LEP_architect_of_the_new_state }
+					cost = 0
+					can_be_fired = no
 				}
 			}
 		}
@@ -9086,13 +9121,9 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_jinling_military_academy_expansion"
 			army_experience = 25
 			add_war_support = 0.05
-			add_ideas = LEP_Jinling_Military_Academy
-			if = {
-				limit = { has_idea = CHS_military2 }
-				swap_ideas = {
-					remove_idea = CHS_military2
-					add_idea = CHS_military3
-				}
+			swap_ideas = {
+				remove_idea = LEP_political_split2
+				add_idea = LEP_five_races_flag_association
 			}
 		}
 	}
@@ -9118,12 +9149,9 @@ focus_tree = {
 			add_stability = 0.05
 			add_popularity = {
 				ideology = national_populist
-				popularity = 0.05
+				popularity = 0.03
 			}
-			if = {
-				limit = { has_idea = CHS_military3 }
-				remove_ideas = CHS_military3
-			}
+			add_ideas = LEP_right_to_education
 		}
 	}
 	focus = {
@@ -9143,7 +9171,11 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_jinling_military_academy_expansion"
 			army_experience = 25
 			add_war_support = 0.05
-			add_ideas = LEP_Jinling_Military_Academy
+			swap_ideas = {
+				remove_idea = LEP_army_corrupt2
+				add_idea = LEP_Jinling_Military_Academy
+			}
+			
 		}
 	}
 	focus = {
@@ -9170,13 +9202,14 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = {
-				ideology = authoritarian_democrat
-				popularity = 0.05
+				ideology = paternal_autocrat
+				popularity = 0.02
 			}
-			if = {
-				limit = { has_idea = CHS_legitimacy2 }
-				remove_ideas = CHS_legitimacy2
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.02
 			}
+			add_ideas = LEP_anti_red
 		}
 	}
 	focus = {
@@ -9192,6 +9225,17 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_nationalist_military
 		}
+		completion_reward = {
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.02
+			}
+			swap_ideas = {
+				remove_idea = LEP_economic_collapse2
+				add_idea = LEP_YCP_economic
+			}
+		}
+		
 	}
 	focus = {
 		id = LEP_economic_regulation_enhancement
@@ -9205,6 +9249,18 @@ focus_tree = {
 		icon = GFX_goal_state_economy
 		prerequisite = {
 			focus = LEP_tariff_barriers
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.02
+			}
+			swap_ideas = {
+				remove_idea = LEP_YCP_economic
+				add_idea = LEP_YCP_economic2
+			}
+			set_temp_variable = { LEP_market_liberal_pp_change = -0.15 }
+			LEP_modify_tsingtau_spirit = yes
 		}
 	}
 	focus = {
@@ -9229,18 +9285,7 @@ focus_tree = {
 			add_political_power = 75
 			add_stability = 0.05
 			custom_effect_tooltip = tooltip_white_line
-			add_advisor_role = {
-				character = LEP_yu_jiaju
-				activate = yes
-				advisor = {
-					slot = second_in_command
-					idea_token = LEP_yu_jiaju_sic
-					desc = LEP_yu_jiaju_advisor_desc
-					traits = { LEP_architect_of_the_new_state }
-					cost = 0
-					can_be_fired = no
-				}
-			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_popular_support_the_young_and_the_modern
 		}
@@ -9254,6 +9299,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
+		available = {
+			GER = {
+				exists = yes
+			}
+		}
 		icon = GFX_goal_Reichstag
 		prerequisite = {
 			focus = LEP_target_ten_provinces_united
@@ -9263,15 +9313,13 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			custom_effect_tooltip = tooltip_white_line
-			set_temp_variable = { LEP_market_liberal_pp_change = 0.02 }
+			set_temp_variable = { LEP_market_liberal_pp_change = 0.05 }
 			LEP_modify_tsingtau_spirit = yes
-			custom_effect_tooltip = tooltip_white_line
-			hidden_effect = {
-				if = {
-					limit = { country_exists = GEA }
-					GEA = { country_event = { id = league_german_influence_events.1 days = 3 } }
-				}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
 			}
+			custom_effect_tooltip = tooltip_white_line
 		}
 	}
 	focus = {
@@ -9291,7 +9339,14 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_consultative_council"
 			add_political_power = 50
 			add_stability = 0.05
-			add_ideas = LEP_Consultative_Council
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			add_timed_idea = {
+				idea = LEP_security_pacification_campaign_idea
+				days = 500
+			}
 		}
 	}
 	focus = {
@@ -9317,13 +9372,11 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-			if = {
-				limit = { has_idea = CHS_military2 }
-				swap_ideas = {
-					remove_idea = CHS_military2
-					add_idea = CHS_military3
-				}
+			swap_ideas = {
+				remove_idea = LEP_economic_collapse2
+				add_idea = LEP_economic_collapse3
 			}
+			
 		}
 	}
 	focus = {
@@ -9339,6 +9392,9 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
 		}
+		completion_reward = {
+			GER_add_to_mitteleuropa = yes
+		}
 	}
 	focus = {
 		id = LEP_imperial_enterprise_privileges
@@ -9353,24 +9409,27 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_german_advisors_stationed
 		}
-	}
-	focus = {
-		id = LEP_break_with_germany
-		relative_position_id = LEP_council_new_order
-		x = 3
-		y = 1
-		cost = 3
-		ai_will_do = {
-			factor = 50
-		}
-		icon = GFX_goal_GER_Syndicalist_Blow
-		prerequisite = {
-			focus = LEP_prussian_constitutionalism
-		}
-		mutually_exclusive = {
-			focus = LEP_german_eastern_bastion
+		completion_reward = {
+			add_ideas = LEP_corporate_privilege
 		}
 	}
+	#focus = {
+	#	id = LEP_break_with_germany
+	#	relative_position_id = LEP_council_new_order
+	#	x = 3
+	#	y = 1
+	#	cost = 3
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
+	#	icon = GFX_goal_GER_Syndicalist_Blow
+	#	prerequisite = {
+	#		focus = LEP_prussian_constitutionalism
+	#	}
+	#	mutually_exclusive = {
+	#		focus = LEP_german_eastern_bastion
+	#	}
+	#}
 	focus = {
 		id = LEP_von_seekct
 	    relative_position_id = LEP_security_pacification_campaign
@@ -9387,11 +9446,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_von_seekct"
 			army_experience = 25
-			add_ideas = LEP_Seeckt_Mission
-			if = {
-				limit = { has_idea = CHS_military3 }
-				remove_ideas = CHS_military3
+			swap_ideas = {
+				remove_idea = LEP_army_corrupt2
+				add_idea = LEP_Seeckt_Mission
 			}
+			
+			
 		}
 	}
 	focus = {
@@ -9415,10 +9475,7 @@ focus_tree = {
 				ideology = national_populist
 				popularity = 0.05
 			}
-			if = {
-				limit = { has_idea = CHS_military3 }
-				remove_ideas = CHS_military3
-			}
+			add_ideas = LEP_awakening_lion_youth_corps_idea
 		}
 	}
 	focus = {
@@ -9460,6 +9517,12 @@ focus_tree = {
 		icon = GFX_goal_generic_loans
 		prerequisite = {
 			focus = LEP_sun_successor
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = LEP_economic_collapse2
+				add_idea = LEP_treaty_port_administrative_office_idea
+			}
 		}
 	}
 	
@@ -9511,7 +9574,6 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_popular_support_behind_the_throne
 		}
 	}
@@ -9537,12 +9599,10 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_traditional_values_return"
 			add_political_power = 50
 			add_stability = 0.10
-			add_popularity = {
-				ideology = social_conservative
-				popularity = 0.05
+			swap_ideas = {
+				remove_idea = LEP_economic_collapse3
+				add_idea = LEP_guided_republic
 			}
-			custom_effect_tooltip = tooltip_white_line
-			add_ideas = LEP_Restored_Confucian_Order
 		}
 	}
 	
@@ -9563,7 +9623,11 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_consultative_council"
 			add_political_power = 50
 			add_stability = 0.05
-			add_ideas = LEP_Consultative_Council
+			swap_ideas = {
+				remove_idea = LEP_political_split2
+				add_idea = LEP_Consultative_Council
+			}
+			
 		}
 	}
 	focus = {
@@ -9587,6 +9651,10 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = LEP_break_with_germany
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed LEP_german_eastern_bastion"
+			add_ideas = LEP_popular_support_berlin_mandate
 		}
 	}
 	focus = {
@@ -9612,12 +9680,7 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.05
 			custom_effect_tooltip = tooltip_white_line
-			add_trait = {
-				character = LEP_tian_wenbing
-				slot = second_in_command
-				trait = LEP_iron_discipline_of_the_new_army
-			}
-			custom_effect_tooltip = tooltip_white_line
+			
 			add_ideas = LEP_popular_support_the_new_ministry
 		}
 	}

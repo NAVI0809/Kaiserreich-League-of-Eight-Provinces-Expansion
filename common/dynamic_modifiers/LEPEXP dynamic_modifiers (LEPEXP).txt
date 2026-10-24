@@ -112,3 +112,13 @@ LEP_national_reconstruction_bureau_modifier = {
     production_factory_start_efficiency_factor = LEP_cons_production_factory_start_efficiency_factor
     production_factory_max_efficiency_factor = LEP_cons_production_factory_max_efficiency_factor
 }
+
+LEP_salvation_alliance_modifier = {
+    icon = "GFX_idea_war_of_words"
+    party_popularity_stability_factor = 0.15
+    industrial_capacity_factory = ROOT.party_popularity@social_conservative
+	political_power_gain = ROOT.party_popularity@authoritarian_democrat
+    compliance_growth = ROOT.party_popularity@social_liberal
+	production_factory_max_efficiency_factor = ROOT.party_popularity@social_democrat
+	command_power_gain = ROOT.party_popularity@paternal_autocrat
+}

@@ -343,9 +343,19 @@ country_event = { #轨上浩劫
 		log = "[GetLogInfo]: event league_mid.3 option league_mid.3.a"
 		name = league_mid.3.a
 		trigger = { #工商联
-			is_power_balance_in_range = {
-				id = LEP_power_balance
-				range = LEP_bop_commerce_in_control_side
+			OR = {
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_commerce_tilt
+				}
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_commerce_firm
+				}
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_commerce_deep
+				}
 			}
 		}
 		
@@ -370,13 +380,24 @@ country_event = { #轨上浩劫
 
 
 	option = { #
-		log = "[GetLogInfo]: event league_mid.3 option league_mid.3.c"
-		name = league_mid.3.c
+		log = "[GetLogInfo]: event league_mid.3 option league_mid.3.b"
+		name = league_mid.3.b
 		trigger = { #联帅
-			is_power_balance_in_range = {
-				id = LEP_power_balance
-				range = LEP_bop_qi_in_control_side
+		    OR = {
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_qi_tilt
+				}
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_qi_firm
+				}
+				is_power_balance_in_range = {
+					id = LEP_power_balance
+					range = LEP_bop_qi_deep
+				}
 			}
+			
 		}
 		hidden_effect = {
 			set_variable = { LEP_bop_stage = 1 }
@@ -4145,6 +4166,10 @@ country_event = { #日本民主
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	trigger = {
+		has_country_flag = LEP_dem_gov
+	}
+
     option = {
 		log = "[GetLogInfo]: event league_national.16 option league_national.16.a"
 		name = league_national.16.a
@@ -4160,6 +4185,10 @@ country_event = { #日本独裁
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	trigger = {
+		has_country_flag = LEP_dem_gov
+	}
 
     option = {
 		log = "[GetLogInfo]: event league_national.17 option league_national.17.a"
@@ -5737,6 +5766,10 @@ unit_leader_event = { #激活国防动员体系
 	picture = GFX_report_event_generic_diplomacy1
 	is_triggered_only = yes
 
+	trigger = {
+		has_country_flag = LEP_dem_gov
+	}
+
 	immediate = {
 		hidden_effect = {
 			every_possible_country = {
@@ -5837,6 +5870,7 @@ country_event = { #周训典
 	id = league_military.10
 	picture = GFX_report_event_ace_zhou
 	is_triggered_only = yes
+	fire_only_once = yes
 	title = league_military.10.t
 	desc = league_military.10.d
 
@@ -5864,6 +5898,7 @@ country_event = { #周训典
 	id = league_military.11
 	picture = GFX_report_event_ace_died
 	is_triggered_only = yes
+	fire_only_once = yes
 	title = league_military.11.t
 	desc = league_military.11.d
 

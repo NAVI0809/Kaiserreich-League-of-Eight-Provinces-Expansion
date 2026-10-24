@@ -2970,3 +2970,9 @@ LEP_bop_start_effect = {
 		}
 	}
 }
+
+LEP_qi_unification_effect = {
+	country_event = { id = league_qi.1 days = 1 }
+	set_country_flag = LEP_qi_national_focus
+	mark_focus_tree_layout_dirty = yes
+}
