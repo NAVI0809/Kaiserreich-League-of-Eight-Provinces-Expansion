@@ -18,10 +18,14 @@ focus_tree = {
 	default = no
 	continuous_focus_position = {
 		x = 250
-		y = 2800
+		y = 2200
 	}
 
-
+	shared_focus = CHS_provisional_government
+	shared_focus = CHS_reintegrate_academies
+	shared_focus = CHS_standardised_arsenals
+	shared_focus = CHS_southern_fleets_legacy
+    shared_focus = LEPEXP_LEP_KOR_Joint_JAP_focus
 
 
 	focus = {

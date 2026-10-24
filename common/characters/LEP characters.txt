@@ -1551,6 +1551,44 @@ characters = {
 		}
 	}
 
+	### LAST OF JAP'S NAVY
+	JAP_shunsaku_kudo = { #工藤俊作
+		name = JAP_shunsaku_kudo
+		portraits = {
+			army = {
+				small = GFX_portrait_JAP_shunsaku_kudo_small
+				large = GFX_portrait_JAP_shunsaku_kudo_large
+			}
+		}
+		advisor = {
+			slot = high_command
+			desc = JAP_shunsaku_kudo_high_command_desc
+			idea_token = JAP_shunsaku_kudo_high_command
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
+			traits = { KR_MHC_screen_3 }
+			cost = 100
+		}
+		navy_leader = {
+			desc = JAP_shunsaku_kudo_high_command_desc
+			traits = { 
+				navy_career_officer 
+				gentlemanly
+				fleet_protector
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
 	###################
 	#### Air staff ####
 	###################

@@ -183,6 +183,19 @@ LEP_NSU_direct_var_JXH_win = {
 		compare = less_than_or_equals
 	}
 }
+LEP_KOR_JOINT_focus_available = {
+	JAP = { 
+		exists = yes
+		OR = {
+			has_idea = LEP_military_occupation_forces_in_Japan1
+			has_idea = LEP_military_occupation_forces_in_Japan2
+		}
+	}
+	KOR = { 
+		exists = yes
+		is_subject_of = LEP 
+	}
+}
 
 
 

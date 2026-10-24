@@ -3732,6 +3732,14 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_military_occupation_forces_in_Japan" }
 			picture = big_entente_idea
 			allowed = { always = no }
+			available = {
+				country_exists = LEP
+				is_subject_of = LEP
+				NOT = {
+					has_war_with = LEP
+				}
+				has_socialist_government = no
+			}
 			modifier = {
 				stability_weekly = 0.001
 				required_garrison_factor = 0.02
@@ -3744,6 +3752,14 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_military_occupation_forces_in_Japan2" }
 			picture = big_entente_idea
 			allowed = { always = no }
+			available = {
+				country_exists = LEP
+				is_subject_of = LEP
+				NOT = {
+					has_war_with = LEP
+				}
+				has_socialist_government = no
+			}
 			modifier = {
 				stability_weekly = 0.003
 				required_garrison_factor = 0.05
