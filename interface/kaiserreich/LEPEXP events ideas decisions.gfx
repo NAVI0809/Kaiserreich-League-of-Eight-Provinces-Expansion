@@ -54,4 +54,12 @@ spriteTypes = {
 		name = "GFX_report_event_wu_zhennan_jap_lord"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_wu_zhennan_jap_lord.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_LEP_xu_deheng_speech"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_xu_deheng_speech.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_zou_taofen"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_zou_taofen.png"
+	}
 }	
