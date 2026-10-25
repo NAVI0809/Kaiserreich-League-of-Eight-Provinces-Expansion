@@ -4790,12 +4790,6 @@ focus_tree = {
 				remove_idea = LEP_political_rationality1
 				add_idea = LEP_political_rationality2m
 			}
-			### 褚辅成在台时：行政科学化 → 他本人由社会自由主义转为自由技术官僚主义
-			if = {
-				limit = { has_country_leader = { character = LEP_chu_fucheng } }
-				custom_effect_tooltip = LEP_scientific_public_administration_tt
-				set_country_leader_ideology = social_liberal_liberal_technocracy_subtype
-			}
 		}
 
 	}
@@ -4975,7 +4969,18 @@ focus_tree = {
 		x = 0
 		y = 5
 		completion_reward = {
-			country_event = { id = league_endgame.1 days = 0 }
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_chu_fucheng }
+				}
+				country_event = { id = league_endgame.1 days = 0 }
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_xu_deheng }
+				}
+				country_event = { id = league_endgame.7 days = 0 }
+			}
 			LEP_improve_popular_support = yes
 		}
 
@@ -6225,7 +6230,19 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
-			country_event = { id = league_endgame.4 days = 0 }
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_ma_xulun }
+				}
+				country_event = { id = league_endgame.4 days = 0 }
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_zou_taofen }
+				}
+				country_event = { id = league_endgame.8 days = 0 }
+			}
+			
 			LEP_improve_popular_support = yes
 		}
 

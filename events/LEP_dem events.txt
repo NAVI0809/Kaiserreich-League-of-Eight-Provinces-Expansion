@@ -9,6 +9,7 @@ add_namespace = lep_election
 add_namespace = league_industry
 add_namespace = league_jap
 add_namespace = LEP_seat_recount
+add_namespace = league_war_events
 
 
 country_event = { #test
@@ -137,7 +138,7 @@ country_event = { #封锁闽海?
 	}
 }
 
-unit_leader_event = { 
+unit_leader_event = { #封锁：萨师俊结局
 	id = league_war_events.20
 	title = league_war_events.20.t
 	desc = league_war_events.20.d
@@ -145,8 +146,9 @@ unit_leader_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
-		log = "[GetLogInfo]: event league_war_events.21 option league_war_events.20.a"
+
+	option = {
+		log = "[GetLogInfo]: event league_war_events.20 option league_war_events.20.a"
 		name = league_war_events.20.a
 		CHI = {
 			add_timed_idea = {
@@ -157,7 +159,7 @@ unit_leader_event = {
 	}
 }
 
-unit_leader_event = { 
+unit_leader_event = { #封锁：吴振南结局
 	id = league_war_events.21
 	title = league_war_events.21.t
 	desc = league_war_events.21.d
@@ -165,8 +167,9 @@ unit_leader_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
-		log = "[GetLogInfo]: event league_war_events.20 option league_war_events.21.a"
+
+	option = {
+		log = "[GetLogInfo]: event league_war_events.21 option league_war_events.21.a"
 		name = league_war_events.21.a
 		navy_experience = 5
 		add_equipment_to_stockpile = {
@@ -186,7 +189,7 @@ unit_leader_event = {
 	}
 }
 
-unit_leader_event = { 
+unit_leader_event = { #封锁：李世甲结局
 	id = league_war_events.22
 	title = league_war_events.22.t
 	desc = league_war_events.22.d
@@ -194,7 +197,8 @@ unit_leader_event = {
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+
+	option = {
 		log = "[GetLogInfo]: event league_war_events.22 option league_war_events.22.a"
 		name = league_war_events.22.a
 		navy_experience = 10
@@ -2659,6 +2663,20 @@ country_event = { #《告国民书》
 		name = league_mid.1000.a
 		add_war_support = 0.05
 	}
+}
+
+country_event = {
+	id = league_mid.1001
+	title = league_mid.1001.t
+	desc = league_mid.1001.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_national.26 option league_national.26.a"
+		name = league_national.26.a
+	}
 }	
 
 country_event = { #宪法蓝本选择
@@ -3422,14 +3440,16 @@ country_event = { #团结联盟解散
 	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
+	option = {
 		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.a"
 		name = league_rebuild.16.a
 		trigger = {
 			has_government = social_democrat
 		}
 		complete_national_focus = LEP_from_national_salvation_to_state_building
+		country_event = { id = league_endgame.6 days = 10 }
 	}
+
 	option = {
 		log = "[GetLogInfo]: event league_rebuild.16 option league_rebuild.16.b"
 		name = league_rebuild.16.b
@@ -4401,18 +4421,25 @@ country_event = { #第一次市民公听会
 	}
 }
 
-country_event = { 
+country_event = { ##民主科学社更换leader
 	id = league_national.24
 	title = league_national.24.t
 	desc = league_national.24.d
-	picture = GFX_report_event_QIE_wellington_koo_figure
+	picture = GFX_report_event_LEP_chu_fucheng
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
+	option = {
 		log = "[GetLogInfo]: event league_national.24 option league_national.24.a"
 		name = league_national.24.a
+		custom_effect_tooltip = LEP_CFC_retire_tt
+		set_country_flag = LEP_CFC_retire_flag
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_national.24 option league_national.24.b"
+		name = league_national.24.b
 	}
 }
 
@@ -4428,6 +4455,34 @@ country_event = {
     option = {
 		log = "[GetLogInfo]: event league_national.25 option league_national.25.a"
 		name = league_national.25.a
+	}
+}
+
+country_event = {
+	id = league_national.26
+	title = league_national.26.t
+	desc = league_national.26.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_national.26 option league_national.26.a"
+		name = league_national.26.a
+	}
+}
+
+country_event = {
+	id = league_national.1001
+	title = league_national.1001.t
+	desc = league_national.1001.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_national.1001 option league_national.1001.a"
+		name = league_national.1001.a
 	}
 }
 country_event = { 
@@ -4473,6 +4528,7 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
+			country_event = { id = league_national.24 days = 30 }
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
@@ -4496,6 +4552,7 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
+			country_event = { id = league_national.24 days = 30 }
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
@@ -4519,6 +4576,7 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
+			country_event = { id = league_national.24 days = 30 }
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
@@ -4527,12 +4585,147 @@ country_event = {
 	}
 }
 
+country_event = { #第二次大选：开始
+	id = lep_election.3
+	title = lep_election.3.t
+	desc = lep_election.3.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_variable = LEP_election_NSU_var } }
+				set_variable = { LEP_election_NSU_var = 0 }
+			}
+			if = {
+				limit = { NOT = { has_variable = LEP_NSU_direct_var } }
+				set_variable = { LEP_NSU_direct_var = 0 }
+			}
+			set_country_flag = LEP_second_election_open
+			activate_mission = LEP_second_election_timer
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.3 option lep_election.3.a"
+		name = lep_election.3.a
+		custom_effect_tooltip = LEP_election2_begins_tt
+	}
+}
+
+country_event = { #第二次大选：公布结果
+	id = lep_election.4
+	title = lep_election.4.t
+	desc = {
+		trigger = { has_country_flag = LEP_second_election_DSP_win }
+		text = lep_election.4.d.dsp
+	}
+	desc = {
+		trigger = { has_country_flag = LEP_second_election_KMT_win }
+		text = lep_election.4.d.kmt
+	}
+	desc = {
+		trigger = { has_country_flag = LEP_second_election_JNSB_win }
+		text = lep_election.4.d.jnsb
+	}
+	desc = {
+		trigger = { has_country_flag = LEP_second_election_NSU_win }
+		text = lep_election.4.d.nsu
+	}
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = LEP_second_election_open
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.a"
+		name = lep_election.4.a
+		trigger = { has_country_flag = LEP_second_election_DSP_win }
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		LEP_hold_election_seats = yes
+		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_DSP_win
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = LEP_CFC_retire_flag
+					promote_character = {
+						character = LEP_xu_deheng
+						ideology = social_liberal_liberal_technocracy_subtype
+					}
+				}
+			}
+		}
+	}
+	option = {
+		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.b"
+		name = lep_election.4.b
+		trigger = { has_country_flag = LEP_second_election_KMT_win }
+		set_politics = {
+			ruling_party = market_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		LEP_hold_election_seats = yes
+		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_ZXX_win
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.c"
+		name = lep_election.4.c
+		trigger = { has_country_flag = LEP_second_election_JNSB_win }
+		set_politics = {
+			ruling_party = social_conservative
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		LEP_hold_election_seats = yes
+		set_country_flag = LEP_phase_late
+		set_country_flag = LEP_JNSB_win
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.d"
+		name = lep_election.4.d
+		trigger = { has_country_flag = LEP_second_election_NSU_win }
+		set_politics = {
+			ruling_party = social_democrat
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		LEP_hold_election_seats = yes
+		set_country_flag = LEP_phase_late
+		complete_national_focus = LEP_solidarity_union
+		set_country_flag = LEP_NSU_win
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
 
 	
 
 
 ##各路线特有事件
-country_event = { #民主科学社
+country_event = { #民主科学社——褚辅成结局事件
 	id = league_endgame.1
 	title = league_endgame.1.t
 	desc = league_endgame.1.d
@@ -4540,7 +4733,8 @@ country_event = { #民主科学社
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+
+	option = {
 		log = "[GetLogInfo]: event league_endgame.1 option league_endgame.1.a"
 		name = league_endgame.1.a
 		add_political_power = 10
@@ -4577,7 +4771,7 @@ country_event = { #工商勇进党
 	}
 }
 
-country_event = { #救国会
+country_event = { #救国会——马叙伦结局事件
 	id = league_endgame.4
 	title = league_endgame.4.t
 	desc = league_endgame.4.d
@@ -4585,7 +4779,8 @@ country_event = { #救国会
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+
+	option = {
 		log = "[GetLogInfo]: event league_endgame.4 option league_endgame.4.a"
 		name = league_endgame.4.a
 		add_political_power = 10
@@ -4604,6 +4799,58 @@ country_event = { #景星会
 		log = "[GetLogInfo]: event league_endgame.5 option league_endgame.5.a"
 		name = league_endgame.5.a
 		add_political_power = 10
+	}
+}
+
+country_event = { ##救国会leader
+	id = league_endgame.6
+	title = league_endgame.6.t
+	desc = league_endgame.6.d
+	picture = GFX_report_event_LEP_ma_xulun
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_endgame.6 option league_endgame.6.a"
+		name = league_endgame.6.a
+		promote_character = {
+			character = LEP_zou_taofen
+			ideologies = social_democrat_subtype
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_endgame.6 option league_endgame.6.b"
+		name = league_endgame.6.b
+	}
+}
+
+country_event = { #民主科学社——许德珩结局事件
+	id = league_endgame.7
+	title = league_endgame.7.t
+	desc = league_endgame.7.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_endgame.7 option league_endgame.7.a"
+		name = league_endgame.7.a
+	}
+}
+
+country_event = { #救国会——邹韬奋结局事件
+	id = league_endgame.8
+	title = league_endgame.8.t
+	desc = league_endgame.8.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_endgame.8 option league_endgame.8.a"
+		name = league_endgame.8.a
 	}
 }
 
@@ -7535,126 +7782,6 @@ country_event = { #国会席位：延迟结算（由 LEP_hold_election_seats 触
 	}
 }
 
-country_event = { #第二次大选：开始
-	id = lep_election.3
-	title = lep_election.3.t
-	desc = lep_election.3.d
-	picture = GFX_report_event_CHN_vote
 
-	is_triggered_only = yes
-	fire_only_once = no
 
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = { NOT = { has_variable = LEP_election_NSU_var } }
-				set_variable = { LEP_election_NSU_var = 0 }
-			}
-			if = {
-				limit = { NOT = { has_variable = LEP_NSU_direct_var } }
-				set_variable = { LEP_NSU_direct_var = 0 }
-			}
-			set_country_flag = LEP_second_election_open
-			activate_mission = LEP_second_election_timer
-		}
-	}
 
-	option = {
-		log = "[GetLogInfo]: event lep_election.3 option lep_election.3.a"
-		name = lep_election.3.a
-		custom_effect_tooltip = LEP_election2_begins_tt
-	}
-}
-
-country_event = { #第二次大选：公布结果
-	id = lep_election.4
-	title = lep_election.4.t
-	desc = {
-		trigger = { has_country_flag = LEP_second_election_DSP_win }
-		text = lep_election.4.d.dsp
-	}
-	desc = {
-		trigger = { has_country_flag = LEP_second_election_KMT_win }
-		text = lep_election.4.d.kmt
-	}
-	desc = {
-		trigger = { has_country_flag = LEP_second_election_JNSB_win }
-		text = lep_election.4.d.jnsb
-	}
-	desc = {
-		trigger = { has_country_flag = LEP_second_election_NSU_win }
-		text = lep_election.4.d.nsu
-	}
-	picture = GFX_report_event_CHN_vote
-
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	immediate = {
-		hidden_effect = {
-			clr_country_flag = LEP_second_election_open
-		}
-	}
-
-	option = {
-		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.a"
-		name = lep_election.4.a
-		trigger = { has_country_flag = LEP_second_election_DSP_win }
-		set_politics = {
-			ruling_party = social_liberal
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
-		}
-		LEP_hold_election_seats = yes
-		set_country_flag = LEP_phase_late
-		set_country_flag = LEP_DSP_win
-		mark_focus_tree_layout_dirty = yes
-	}
-	option = {
-		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.b"
-		name = lep_election.4.b
-		trigger = { has_country_flag = LEP_second_election_KMT_win }
-		set_politics = {
-			ruling_party = market_liberal
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
-		}
-		LEP_hold_election_seats = yes
-		set_country_flag = LEP_phase_late
-		set_country_flag = LEP_ZXX_win
-		mark_focus_tree_layout_dirty = yes
-	}
-	option = {
-		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.c"
-		name = lep_election.4.c
-		trigger = { has_country_flag = LEP_second_election_JNSB_win }
-		set_politics = {
-			ruling_party = social_conservative
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
-		}
-		LEP_hold_election_seats = yes
-		set_country_flag = LEP_phase_late
-		set_country_flag = LEP_JNSB_win
-		mark_focus_tree_layout_dirty = yes
-	}
-	option = {
-		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.d"
-		name = lep_election.4.d
-		trigger = { has_country_flag = LEP_second_election_NSU_win }
-		set_politics = {
-			ruling_party = social_democrat
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
-		}
-		LEP_hold_election_seats = yes
-		set_country_flag = LEP_phase_late
-		complete_national_focus = LEP_solidarity_union
-		set_country_flag = LEP_NSU_win
-		mark_focus_tree_layout_dirty = yes
-	}
-}

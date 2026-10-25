@@ -243,6 +243,7 @@ recruit_character = ANQ_sa_benxin
 
 recruit_character = LEP_sa_shijun
 recruit_character = LEP_wu_rengli
+recruit_character = LEP_zou_taofen
 
 
 recruit_character = JAP_shunsaku_kudo 

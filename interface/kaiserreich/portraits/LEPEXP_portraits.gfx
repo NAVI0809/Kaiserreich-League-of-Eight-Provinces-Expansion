@@ -201,6 +201,10 @@ spriteTypes = {
 		texturefile = "gfx/leaders/LEP/LEP_chu_fucheng_army.png"
 	}
 	spriteType = {
+		name = "GFX_portrait_LEP_xu_deheng_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_xu_deheng_large.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_LEP_fang_shengtao_civilian_large"
 		texturefile = "gfx/leaders/LEP/LEP_fang_shengtao_large.png"
 	}
@@ -279,6 +283,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_LEP_ma_xulun_civilian_large"
 		texturefile = "gfx/leaders/LEP/LEP_ma_xulun_large.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_LEP_zou_taofe_civilian_large"
+		texturefile = "gfx/leaders/LEP/LEP_zou_taofen_large.png"
 	}
 	spriteType = {
 		name = "GFX_portrait_LEP_wang_e_army_large"

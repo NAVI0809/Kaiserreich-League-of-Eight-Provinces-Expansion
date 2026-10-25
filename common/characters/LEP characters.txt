@@ -168,6 +168,20 @@ characters = {
 		}
 	}
 
+	#邹韬奋
+	LEP_zou_taofen = {
+		name = LEP_zou_taofen
+		portraits = {
+			civilian = {
+				large = GFX_portrait_LEP_zou_taofe_civilian_large
+			}
+		}
+		country_leader = {
+			desc = LEP_zou_taofen_leader_desc
+			ideology = social_democrat_subtype
+		}
+	}
+
 	
 
 	#褚輔成
@@ -222,7 +236,6 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_chu_fucheng_leader_desc
-			### 初始 / 民主政府成立时是进步自由主义；完成「科学化公共行政」后才转为自由技术官僚主义
 			ideology = social_liberal_progressive_liberalism_subtype
 			traits = { CHN_southern_republican_aligned }
 		}
@@ -1132,7 +1145,8 @@ characters = {
 		portraits = {
 			civilian = {
 				small = GFX_portrait_LEP_xu_deheng_civilian_small
-			}
+				large = GFX_portrait_LEP_xu_deheng_civilian_large
+			}	
 		}
 		advisor = {
 			slot = political_advisor
@@ -1155,6 +1169,10 @@ characters = {
 			visible = {
 				has_completed_focus = LEP_national_images_continuity
 			}
+		}
+		country_leader = {
+			desc = LEP_xu_deheng_leader_desc
+			ideology = social_liberal_liberal_technocracy_subtype
 		}
 		
 	}
