@@ -66,4 +66,13 @@ spriteTypes = {
 		name = "GFX_report_event_LEP_zou_taofen"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_zou_taofen.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_LEP_kim_koo"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_kim_koo.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_chi_jap_kor_flag"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_chi_jap_kor_flag.png"
+	}
+	
 }	

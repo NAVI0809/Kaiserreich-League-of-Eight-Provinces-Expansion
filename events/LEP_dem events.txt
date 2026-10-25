@@ -2578,11 +2578,11 @@ country_event = {  #国民党和谈：军事
 	}
 }
 
-country_event = { 
+country_event = { #金九
 	id = league_mid.73
 	title = league_mid.73.t
 	desc = league_mid.73.d
-	picture = GFX_report_event_QIE_hu_shih_yan_huiqing
+	picture = GFX_report_event_LEP_kim_koo
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2590,14 +2590,6 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.a"
 		name = league_mid.73.a
-	}
-	option = {
-		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.b"
-		name = league_mid.73.b
-	}
-	option = {
-		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.c"
-		name = league_mid.73.c
 	}
 }
 
@@ -3856,32 +3848,7 @@ unit_leader_event = { #工商勇进党成立
 	}
 }
 
-country_event = { 
-	id = lep_election.1
-	title = lep_election.1.t
-	desc = lep_election.1.d
-	picture = GFX_report_event_CHN_vote
 
-	is_triggered_only = yes
-	fire_only_once = no
-
-	immediate = {
-		hidden_effect = {
-			set_variable = { LEP_election_KMT_var = 0 }
-			set_variable = { LEP_election_DSP_var = 0 }
-			set_variable = { LEP_election_JNSB_var = 0 }
-			set_variable = { LEP_election_NSU_var = 0 }
-			set_country_flag = LEP_first_election_open
-			activate_mission = LEP_first_election_timer
-		}
-	}
-
-	option = {
-		log = "[GetLogInfo]: event lep_election.1 option lep_election.1.a"
-		name = lep_election.1.a
-		custom_effect_tooltip = LEP_election_begins_tt
-	}
-}
 
 
 country_event = { 
@@ -4485,6 +4452,33 @@ country_event = {
 		name = league_national.1001.a
 	}
 }
+
+country_event = {
+	id = lep_election.1
+	title = lep_election.1.t
+	desc = lep_election.1.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { LEP_election_KMT_var = 0 }
+			set_variable = { LEP_election_DSP_var = 0 }
+			set_variable = { LEP_election_JNSB_var = 0 }
+			set_variable = { LEP_election_NSU_var = 0 }
+			set_country_flag = LEP_first_election_open
+			activate_mission = LEP_first_election_timer
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.1 option lep_election.1.a"
+		name = lep_election.1.a
+		custom_effect_tooltip = LEP_election_begins_tt
+	}
+}
+
 country_event = { 
 	id = lep_election.2
 	title = lep_election.2.t
@@ -7029,6 +7023,22 @@ country_event = { #阿依努自治区
 			    }
 			}
 		}
+	}
+}
+
+country_event = { #友谊地久天长
+	id = league_jap.25
+	title = league_jap.25.t
+	desc = league_jap.25.d
+	picture = GFX_report_event_LEP_chi_jap_kor_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.25 option league_jap.25.a"
+		name = league_jap.25.a
+		custom_effect_tooltip = league_jap.25_tt
 	}
 }
 
