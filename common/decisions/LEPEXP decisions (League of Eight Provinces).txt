@@ -5639,3 +5639,84 @@ LEPEXP_gov = {
 		days_re_enable = 10
 	}	
 }
+
+LEPEXP_JAP_land_reform_decisions_cat = {
+	LEPEXP_JAP_generic_land_reform_decision = {
+		icon = GFX_decision_generic_agriculture
+
+		allowed = { always = no } #activated by effect
+
+		visible = {
+			FROM = {
+				is_owned_and_controlled_by = JAP
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		fire_only_once = yes
+		state_target = yes
+		cancel_if_not_visible = yes
+		cost = 100
+		days_remove = 150
+
+		highlight_states = {
+			highlight_state_targets = { state = FROM }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 50
+				has_political_power < 200
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		cancel_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision cancel LEPEXP_JAP_generic_land_reform_decision"
+		}
+
+		complete_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision complete LEPEXP_JAP_generic_land_reform_decision"
+			if = {
+				limit = {
+					FROM = {
+						has_dynamic_modifier = {
+							modifier = JAP_autonomous_region_modifier
+						}
+					}
+				}
+				add_stability = 0.01
+			}
+		}
+		remove_effect = {
+			log = "[GetLogRoot][GetLogFrom]: Decision remove LEPEXP_JAP_generic_land_reform_decision"
+			FROM = {
+				increase_state_category_by_one_level = yes
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+							    modifier = JAP_land_reform_modifier
+						    }
+						}						
+					}
+					add_dynamic_modifier = {
+						modifier = JAP_land_reform_modifier
+						scope = THIS
+					}
+				}
+				else = {
+					add_political_power = 10
+					add_stability = 0.01
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+}

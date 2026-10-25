@@ -122,3 +122,24 @@ LEP_salvation_alliance_modifier = {
 	production_factory_max_efficiency_factor = ROOT.party_popularity@social_democrat
 	command_power_gain = ROOT.party_popularity@paternal_autocrat
 }
+
+JAP_autonomous_region_modifier = {
+	icon = GFX_decision_SWI_no_elected_president
+	remove_trigger = {
+		NOT = { owner = { original_tag = JAP } }
+	}
+	recruitable_population_factor = -0.2
+	local_supplies = 0.15
+    state_production_speed_buildings_factor = -0.1
+    local_factory_energy_consumption = -0.03
+}
+
+JAP_land_reform_modifier = {
+	icon = GFX_decision_decision_generic_chinese_officers
+	remove_trigger = {
+		NOT = { owner = { original_tag = JAP } }
+	}
+    state_production_speed_buildings_factor = 0.1
+    state_resources_factor = 0.05
+    local_building_slots = 3
+}

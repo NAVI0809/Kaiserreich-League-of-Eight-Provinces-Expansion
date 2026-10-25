@@ -55,6 +55,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_wu_zhennan_jap_lord.png"
 	}
 	spriteType = {
+		name = "GFX_report_event_LEP_japan_native"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_japan_native.png"
+	}
+	spriteType = {
 		name = "GFX_report_event_LEP_xu_deheng_speech"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_xu_deheng_speech.png"
 	}

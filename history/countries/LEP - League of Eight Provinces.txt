@@ -150,8 +150,8 @@ recruit_character = LEP_sun_chuanfang
 recruit_character = LEP_qi_xieyuan
 recruit_character = LEP_lu_xiangting
 
-activate_advisor = LEP_lu_xiangting_sic
 recruit_character = LEP_gu_zhun
+recruit_character = LEP_zou_taofen
 
 ### Advisors ###
 recruit_character = LEP_tian_wenbing
@@ -243,7 +243,6 @@ recruit_character = ANQ_sa_benxin
 
 recruit_character = LEP_sa_shijun
 recruit_character = LEP_wu_rengli
-recruit_character = LEP_zou_taofen
 
 
 recruit_character = JAP_shunsaku_kudo 
@@ -297,7 +296,7 @@ LEP_yin_ruli = { #recruit only by focus
 LEP_zhang_jvsheng = {
 	retire = yes
 }
-LEP_lu_xiaobo  = { #recruit only by league_
+LEP_lu_xiaobo  = { #recruit only by focus
 	retire = yes
 }
 LEP_zhu_meixian = { #recruit only by league_mid.64
@@ -403,6 +402,8 @@ promote_character = { #recruit only by league_mid.52
 	character = LEP_gu_zhun
 	ideology = syndicalist_subtype
 }
+
+activate_advisor = LEP_lu_xiangting_sic
 
 
 #--------------------------------------#

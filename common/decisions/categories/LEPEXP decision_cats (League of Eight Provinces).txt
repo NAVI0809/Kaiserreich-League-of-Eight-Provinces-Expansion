@@ -189,6 +189,13 @@ LEP_national_reconstruction_bureau = {
 	visible_when_empty = yes
 }
 
+LEPEXP_JAP_land_reform_decisions_cat = {
+	icon = GFX_decision_category_generic_agriculture
+	picture =  GFX_decision_cat_JAP_land_reform
+
+	allowed = { always = no } #activated by effect
+}
+
 
 
 

@@ -2981,3 +2981,23 @@ LEP_qi_unification_effect = {
 	set_country_flag = LEP_qi_national_focus
 	mark_focus_tree_layout_dirty = yes
 }
+
+LEPEXP_JAP_generic_land_reform_setup = {
+	every_state = {
+		limit = {
+			is_core_of = JAP
+			OR = {
+				has_state_category = one
+				has_state_category = two
+				has_state_category = three
+				has_state_category = four
+				has_state_category = five
+				has_state_category = zero_island
+				has_state_category = minor_port
+			}			
+		}
+		JAP = {
+			activate_targeted_decision = { target = PREV decision = LEPEXP_JAP_generic_land_reform_decision }
+		}
+	}
+}

@@ -6220,6 +6220,7 @@ unit_leader_event = { #日本共和国：派遣总督
 					}
 				}
 				set_country_flag = LEPEXP_oversee_JAP
+				set_country_flag = LEPEXP_JAP_2
 				mark_focus_tree_layout_dirty = yes
 				#country_event = { id = league_jap.2 days = 365 }
 			}
@@ -6333,6 +6334,9 @@ country_event = { #日本共和国：第一次大选
 					}
 				}
 				country_event = { id = league_generic.17 days = 1460 }
+			}
+			LEP = {
+				clr_country_flag = LEPEXP_oversee_JAP
 			}
 		}
 	}
@@ -6539,6 +6543,7 @@ unit_leader_event = { #日本国：派遣总督
 					}
 				}
 				set_country_flag = LEPEXP_oversee_JAP
+				set_country_flag = LEPEXP_JAP_2
 				mark_focus_tree_layout_dirty = yes
 				#country_event = { id = league_jap.2 days = 365 }
 			}
@@ -6646,6 +6651,9 @@ country_event = { #日本国：第一次大选
 				}
 				country_event = { id = league_generic.17 days = 1460 }
 			}
+			LEP = {
+				clr_country_flag = LEPEXP_oversee_JAP
+			} 
 		}
 	}
 	option = {
@@ -6974,6 +6982,53 @@ country_event = { #吴太上皇
 		log = "[GetLogInfo]: event league_jap.23 option league_jap.23.b"
 		name = league_jap.23.b
 		add_political_power = 10
+	}
+}
+
+country_event = { #阿依努自治区
+
+	id = league_jap.24
+	title = league_jap.24.t
+	desc = league_jap.24.d
+	picture = GFX_report_event_LEP_japan_native
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.24 option league_jap.24.a"
+		name = league_jap.24.a
+
+		JAP = {
+            536 = {
+				add_dynamic_modifier = { 
+					modifier = JAP_autonomous_region_modifier 
+					scope = THIS
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 537
+				}
+				537 = {
+				    add_dynamic_modifier = { 
+						modifier = JAP_autonomous_region_modifier 
+						scope = THIS
+					}
+			    }
+			}
+			if = {
+				limit = {
+					owns_state = 555
+				}
+				555 = {
+				    add_dynamic_modifier = { 
+						modifier = JAP_autonomous_region_modifier 
+						scope = THIS
+					}
+			    }
+			}
+		}
 	}
 }
 

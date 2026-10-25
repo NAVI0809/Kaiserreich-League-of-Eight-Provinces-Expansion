@@ -195,6 +195,9 @@ LEP_KOR_JOINT_focus_available = {
 		exists = yes
 		is_subject_of = LEP 
 	}
+	LEP = {
+		has_country_flag = LEPEXP_oversee_JAP
+	}
 }
 
 
