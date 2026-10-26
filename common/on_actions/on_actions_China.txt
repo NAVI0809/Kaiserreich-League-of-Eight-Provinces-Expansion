@@ -1138,6 +1138,11 @@ on_actions = {
 	# ROOT is country
 	on_daily_LEP = {
 		effect = {
+			### 军事动员条刷新（条宽/指针/阶段圆球）
+			if = {
+				limit = { tag = LEP }
+				LEP = { LEP_mob_refresh = yes }
+			}
 			CHN_china_GUI_daily_update = yes
 		}
 	}

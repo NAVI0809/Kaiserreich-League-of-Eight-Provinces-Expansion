@@ -234,7 +234,7 @@ LEP_election_day_achievement = {
 			}
 			custom_override_tooltip = {
 				tooltip = LEP_election_day_achievement_tooltip
-				has_completed_focus = LEP_new_election
+				has_country_flag = LEP_second_election_done
 			}
 		}
 		else_if = {

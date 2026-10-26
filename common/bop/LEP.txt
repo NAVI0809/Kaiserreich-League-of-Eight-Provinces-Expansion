@@ -16,7 +16,6 @@ LEP_power_balance = {
 				modifier = {
 					political_advisor_cost_factor = -0.05
 					consumer_goods_factor = -0.05
-					custom_effect_tooltip = LEP_bop_tt_commerce_tilt
 				}
 				
 				on_activate = {

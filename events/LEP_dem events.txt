@@ -23,13 +23,11 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		add_ace = {
-			name = "Zhou"
-			surname = "Xundian"
-			callsign = "Flying Tiger"
-			type = fighter_genius
-			is_female = no
-		}
+		add_ideas = LEP_mob_stage_1
+		add_ideas = LEP_mob_stage_2
+		add_ideas = LEP_mob_stage_3
+		add_ideas = LEP_mob_stage_4
+		add_ideas = LEP_mob_stage_5
     }
 }
 
@@ -1827,13 +1825,13 @@ country_event = { #景星学会
 	id = league_mid.50
 	title = league_mid.50.t
 	desc = league_mid.50.d
-	picture = GFX_report_event_CHN_official_announcement
+	picture = GFX_report_event_LEP_li_linsi
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
-    option = {
-		log = "[GetLogInfo]: eventleague_mid.50 option league_mid.50.a"
+	option = {
+		log = "[GetLogInfo]: event league_mid.50 option league_mid.50.a"
 		name = league_mid.50.a
 		add_popularity = {
 			ideology = authoritarian_democrat
@@ -1849,12 +1847,11 @@ country_event = { #景星学会
 		}
 		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
 		add_to_coalition = yes
-		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
-		
+		LEP_hold_election_seats = yes    # 执政联盟变动 → 重排席位
 	}
 
 	option = {
-		log = "[GetLogInfo]: eventleague_mid.50 option league_mid.50.b"
+		log = "[GetLogInfo]: event league_mid.50 option league_mid.50.b"
 		name = league_mid.50.b
 		add_popularity = {
 			ideology = social_conservative
@@ -4637,6 +4634,7 @@ country_event = { #第二次大选：公布结果
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = LEP_second_election_open
+			set_country_flag = LEP_second_election_done
 		}
 	}
 
@@ -4644,6 +4642,10 @@ country_event = { #第二次大选：公布结果
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.a"
 		name = lep_election.4.a
 		trigger = { has_country_flag = LEP_second_election_DSP_win }
+		if = {
+			limit = { check_variable = { LEP_first_vote = 4 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		set_politics = {
 			ruling_party = social_liberal
 			election_frequency = 48
@@ -4670,6 +4672,10 @@ country_event = { #第二次大选：公布结果
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.b"
 		name = lep_election.4.b
 		trigger = { has_country_flag = LEP_second_election_KMT_win }
+		if = {
+			limit = { check_variable = { LEP_first_vote = 5 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		set_politics = {
 			ruling_party = market_liberal
 			election_frequency = 48
@@ -4685,6 +4691,10 @@ country_event = { #第二次大选：公布结果
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.c"
 		name = lep_election.4.c
 		trigger = { has_country_flag = LEP_second_election_JNSB_win }
+		if = {
+			limit = { check_variable = { LEP_first_vote = 6 } }
+			set_country_flag = LEP_voted_same_twice	# 从一而终成就
+		}
 		set_politics = {
 			ruling_party = social_conservative
 			election_frequency = 48
@@ -4785,11 +4795,12 @@ country_event = { #景星会
 	id = league_endgame.5
 	title = league_endgame.5.t
 	desc = league_endgame.5.d
-	picture = GFX_report_event_CHN_official_announcement
+	picture = GFX_report_event_LEP_li_linsi
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+
+	option = {
 		log = "[GetLogInfo]: event league_endgame.5 option league_endgame.5.a"
 		name = league_endgame.5.a
 		add_political_power = 10
@@ -6029,20 +6040,30 @@ unit_leader_event = { #激活国防动员体系
 	option = {
 		log = "[GetLogInfo]: event league_military.1 option league_military.1.a"
 		name = league_military.1.a
-		complete_national_focus = LEP_war_comes_from_the_north
-		custom_effect_tooltip = tooltip_white_line
-		army_experience = 20
-		add_command_power = 15
-		custom_effect_tooltip = tooltip_white_line
-		unlock_decision_category_tooltip = military_mobilization_category
+		# unit_leader_event 的 option 作用域是将领，国家效果必须包进 owner
 		custom_effect_tooltip = tooltip_white_line
 		QIE_jiang_baili = { custom_effect_tooltip = character_becomes_a_general }
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = LEP_military_preparation_tt
-		set_country_flag = LEP_mili_focus_on_flag
-		mark_focus_tree_layout_dirty = yes
-		hidden_effect = {
-			add_dynamic_modifier = { modifier = LEP_military_mobilization_modifier }
+		owner = {
+			complete_national_focus = LEP_war_comes_from_the_north
+			army_experience = 20
+			add_command_power = 15
+			unlock_decision_category_tooltip = military_mobilization_category
+			set_country_flag = LEP_mili_focus_on_flag
+			mark_focus_tree_layout_dirty = yes
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_variable = military_mobilization_var } }
+					set_variable = { military_mobilization_var = 0 }
+				}
+				# 动员机制启用：挂上第一档，取代原来的动态修正
+				if = {
+					limit = { NOT = { has_idea = LEP_mob_stage_1 } }
+					add_ideas = LEP_mob_stage_1
+				}
+				LEP_mob_refresh = yes
+			}
 		}
 	}
 }

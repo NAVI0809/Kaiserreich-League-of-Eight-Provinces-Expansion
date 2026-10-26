@@ -3882,6 +3882,105 @@ ideas = {
 				industrial_capacity_factory = -0.15
 			}
 		}
+
+		LEP_mob_stage_1 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_1" }
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = -0.2
+				training_time_army_factor = 0.2
+				consumer_goods_factor = 0.25
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.15
+				army_core_attack_factor = -0.1
+				army_core_defence_factor = -0.1
+			}
+		}
+
+		LEP_mob_stage_2 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_2" }
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				training_time_army_factor = 0.1
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+				army_core_attack_factor = -0.05
+				army_core_defence_factor = -0.05
+			}
+		}
+
+		LEP_mob_stage_3 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_3" }
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				training_time_army_factor = -0.075
+				consumer_goods_factor = -0.075
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		LEP_mob_stage_4 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_4" }
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				training_time_army_factor = -0.125
+				consumer_goods_factor = -0.15
+				production_speed_arms_factory_factor = 0.15
+				conversion_cost_civ_to_mil_factor = -0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		LEP_mob_stage_5 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_5" }
+			picture = SWE_varnplikt
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = 0.2
+				training_time_army_factor = -0.2
+				consumer_goods_factor = -0.25
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.25
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+
+		LEP_mob_stage_6 = {
+			on_add = { log = "[GetLogRoot]: add idea LEP_mob_stage_6" }
+			picture = tur_coordinated_balkan_armed_forces
+			allowed = { always = no }
+			modifier = {
+				
+			}
+		}
 	}
 	
 
@@ -3999,4 +4098,8 @@ ideas = {
 			}
 		}
 	}
+
+
+	
+
 }

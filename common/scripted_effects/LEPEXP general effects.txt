@@ -1202,102 +1202,77 @@ LEP_add_to_ECT = {
 LEP_mili_var = {
 	custom_effect_tooltip = LEP_add_mili_var_tt
 	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
-	set_variable = {
-		var = LEP_mob_political_power_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_political_power_factor
-		value = -0.002
-	}
-
-	set_variable = {
-		var = LEP_mob_war_support_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_war_support_factor
-		value = 0.003
-	}
-	add_to_variable = {
-		var = LEP_mob_war_support_factor
-		value = -0.1
-	}
-
-	set_variable = {
-		var = LEP_mob_conversion_cost_civ_to_mil_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_conversion_cost_civ_to_mil_factor
-		value = -0.004
-	}
-	add_to_variable = {
-		var = LEP_mob_conversion_cost_civ_to_mil_factor
-		value = 0.15
-	}
-
-	set_variable = {
-		var = LEP_mob_industry_air_damage_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_industry_air_damage_factor
-		value = -0.0025
-	}
-
-	set_variable = {
-		var = LEP_mob_supply_consumption_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_supply_consumption_factor
-		value = -0.0000125
-	}
-
-	set_variable = {
-		var = LEP_mob_army_attack_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_army_attack_factor
-		value = 0.0000125
-	}
-
-	set_variable = {
-		var = LEP_mob_army_defence_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_army_defence_factor
-		value = 0.0000125
-	}
-
-	set_variable = {
-		var = LEP_mob_training_time_army_factor
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_training_time_army_factor
-		value = -0.0025
-	}
-	add_to_variable = {
-		var = LEP_mob_training_time_army_factor
-		value = 0.1
-	}
-
-	set_variable = {
-		var = LEP_mob_land_reinforce_rate
-		value = military_mobilization_var
-	}
-	multiply_variable = {
-		var = LEP_mob_land_reinforce_rate
-		value = 0.0005
-	}
 	clamp_variable = {
 		var = military_mobilization_var
 		min = 0
 		max = 100
+	}
+
+	# 按动员度换阶段 idea（五档，替代原来的线性变量计算）
+	# 0-19 承平之制 / 20-39 绸缪牖户 / 40-59 整军经武 / 60-79 百业从戎 / 80-100 钢铁长城
+	if = {
+		limit = { check_variable = { military_mobilization_var < 20 } }
+		if = {
+			limit = { NOT = { has_idea = LEP_mob_stage_1 } }
+			hidden_effect = {
+				remove_idea = LEP_mob_stage_2
+				remove_idea = LEP_mob_stage_3
+				remove_idea = LEP_mob_stage_4
+				remove_idea = LEP_mob_stage_5
+				add_ideas = LEP_mob_stage_1
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 40 } }
+		if = {
+			limit = { NOT = { has_idea = LEP_mob_stage_2 } }
+			hidden_effect = {
+				remove_idea = LEP_mob_stage_1
+				remove_idea = LEP_mob_stage_3
+				remove_idea = LEP_mob_stage_4
+				remove_idea = LEP_mob_stage_5
+				add_ideas = LEP_mob_stage_2
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 60 } }
+		if = {
+			limit = { NOT = { has_idea = LEP_mob_stage_3 } }
+			hidden_effect = {
+				remove_idea = LEP_mob_stage_1
+				remove_idea = LEP_mob_stage_2
+				remove_idea = LEP_mob_stage_4
+				remove_idea = LEP_mob_stage_5
+				add_ideas = LEP_mob_stage_3
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 80 } }
+		if = {
+			limit = { NOT = { has_idea = LEP_mob_stage_4 } }
+			hidden_effect = {
+				remove_idea = LEP_mob_stage_1
+				remove_idea = LEP_mob_stage_2
+				remove_idea = LEP_mob_stage_3
+				remove_idea = LEP_mob_stage_5
+				add_ideas = LEP_mob_stage_4
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_idea = LEP_mob_stage_5 } }
+			hidden_effect = {
+				remove_idea = LEP_mob_stage_1
+				remove_idea = LEP_mob_stage_2
+				remove_idea = LEP_mob_stage_3
+				remove_idea = LEP_mob_stage_4
+				add_ideas = LEP_mob_stage_5
+			}
+		}
 	}
 }
 
@@ -2999,5 +2974,74 @@ LEPEXP_JAP_generic_land_reform_setup = {
 		JAP = {
 			activate_targeted_decision = { target = PREV decision = LEPEXP_JAP_generic_land_reform_decision }
 		}
+	}
+}
+
+### 军事动员条刷新：把 military_mobilization_var（0~100）换算成条宽/指针/阶段圆球
+### 条 x=65 宽 360，每点动员 = 3.6px
+### 注意：全程用普通变量，避免 set_variable 读 temp_variable 失败
+LEP_mob_refresh = {
+	if = {
+		limit = { NOT = { has_variable = military_mobilization_var } }
+		set_variable = { military_mobilization_var = 0 }
+	}
+
+	# 指针：绝对坐标 → 条起点 65 + var*3.6，再减 10（半个指针宽）
+	# 让填充末端伸进指针内部，与正版 BOP 的视觉一致
+	set_variable = { LEP_mob_needle_x = military_mobilization_var }
+	multiply_variable = { LEP_mob_needle_x = 3.6 }
+	add_to_variable = { LEP_mob_needle_x = 55 }
+
+	# 低于 50% 走青条，50% 及以上走橙条；贴图单帧，frame 直接用 var
+	# 全程直接从 military_mobilization_var 取值，不做变量间赋值
+	if = {
+		limit = { check_variable = { military_mobilization_var < 50 } }
+		set_variable = { LEP_mob_blue_frame = military_mobilization_var }
+		set_variable = { LEP_mob_blue_y = 34 }
+		set_variable = { LEP_mob_orange_frame = 0 }
+		set_variable = { LEP_mob_orange_y = -3000 }
+	}
+	else = {
+		set_variable = { LEP_mob_blue_frame = 0 }
+		set_variable = { LEP_mob_blue_y = -3000 }
+		set_variable = { LEP_mob_orange_frame = military_mobilization_var }
+		set_variable = { LEP_mob_orange_y = 34 }
+	}
+
+	# ── 五个阶段圆球：未达成放原位，已达成换绿；无关的那组移出屏幕 ──
+	# 阶段一 承平之制（0）常亮
+	set_variable = { LEP_mob_n1_off_x = -2000 }
+	set_variable = { LEP_mob_n1_on_x = 89 }
+
+	set_variable = { LEP_mob_n2_off_x = 161 }
+	set_variable = { LEP_mob_n2_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 19 } }
+		set_variable = { LEP_mob_n2_off_x = -2000 }
+		set_variable = { LEP_mob_n2_on_x = 161 }
+	}
+
+	set_variable = { LEP_mob_n3_off_x = 233 }
+	set_variable = { LEP_mob_n3_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 39 } }
+		set_variable = { LEP_mob_n3_off_x = -2000 }
+		set_variable = { LEP_mob_n3_on_x = 233 }
+	}
+
+	set_variable = { LEP_mob_n4_off_x = 305 }
+	set_variable = { LEP_mob_n4_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 59 } }
+		set_variable = { LEP_mob_n4_off_x = -2000 }
+		set_variable = { LEP_mob_n4_on_x = 305 }
+	}
+
+	set_variable = { LEP_mob_n5_off_x = 377 }
+	set_variable = { LEP_mob_n5_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 79 } }
+		set_variable = { LEP_mob_n5_off_x = -2000 }
+		set_variable = { LEP_mob_n5_on_x = 377 }
 	}
 }

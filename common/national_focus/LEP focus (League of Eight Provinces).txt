@@ -4450,12 +4450,12 @@ focus_tree = {
 				factor = 10
 				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
 			}
-		
+
 			modifier = {
 				factor = 10
 				has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
 			}
-}
+		}
 		icon = GFX_goal_QIE_assembly
 		mutually_exclusive = {
 			focus = LEP_empower_the_president

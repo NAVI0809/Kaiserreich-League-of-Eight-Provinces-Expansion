@@ -100,11 +100,58 @@ guiTypes = {
 		name = "ui_military_mobilization"
 		position = { x = 0 y = 0 }
 		size = { width = 100% height= 240 }
+		clipping = no
+
+		# ── 军事动员条（复用原版 BOP 素材）──
+		# 每个元素都显式给 size，避免被容器拉伸
+
+		
 
 		iconType = {
-			name ="military_mobilization"
-			spriteType = "GFX_mod_military_mobilization"
-			position = { x= 30	 y = 5 }
+			name = "LEP_mob_bar_blue"
+			spriteType = "GFX_LEP_mob_bar_blue"
+			position = { x = 65 y = 34 }
+			size = { width = 360 height = 16 }
+		}
+
+		iconType = {
+			name = "LEP_mob_bar_orange"
+			spriteType = "GFX_LEP_mob_bar_orange"
+			position = { x = 65 y = 34 }
+			size = { width = 360 height = 16 }
+		}
+
+		iconType = { name = "LEP_mob_splitter_1" spriteType = "GFX_bop_splitter" position = { x = 133 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_2" spriteType = "GFX_bop_splitter" position = { x = 205 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_3" spriteType = "GFX_bop_splitter" position = { x = 277 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_4" spriteType = "GFX_bop_splitter" position = { x = 349 y = 28 } size = { width = 8 height = 28 } }
+
+		iconType = { name = "LEP_mob_n1_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 89 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_chengping_tt" }
+		iconType = { name = "LEP_mob_n2_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 161 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_choumou_tt" }
+		iconType = { name = "LEP_mob_n3_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 233 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_zhengjun_tt" }
+		iconType = { name = "LEP_mob_n4_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 305 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_baiye_tt" }
+		iconType = { name = "LEP_mob_n5_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 377 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_gangtie_tt" }
+
+		iconType = { name = "LEP_mob_n1_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 89 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_chengping_tt" }
+		iconType = { name = "LEP_mob_n2_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 161 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_choumou_tt" }
+		iconType = { name = "LEP_mob_n3_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 233 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_zhengjun_tt" }
+		iconType = { name = "LEP_mob_n4_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 305 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_baiye_tt" }
+		iconType = { name = "LEP_mob_n5_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 377 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_gangtie_tt" }
+
+iconType = {
+			name = "LEP_mob_bar_frame"
+			spriteType = "GFX_bop_bar_frame"
+			position = { x = 61 y = 30 }
+			size = { width = 368 height = 24 }
+		}
+
+		# 指针：GUI 基准 x=65（条起点），properties 的 x 是相对偏移
+		# 指针：x 由 properties 给绝对坐标，此处基准必须为 0
+		iconType = {
+			name = "LEP_mob_needle"
+			spriteType = "GFX_bop_needle"
+			position = { x = 0 y = 26 }
+			size = { width = 20 height = 32 }
 		}
 
 		instantTextboxType = {
@@ -131,7 +178,6 @@ guiTypes = {
 			position = { x = 20 y = 80 }
 			scale = 0.5
 		}
-
 
 		# ── 执政联盟席位对比条（仿原版 balance of power 外观；放在徽章与标题下方、法案列表上方）──
 		# ── 执政联盟席位对比条（仿原版 balance of power 外观）──

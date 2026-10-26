@@ -90,20 +90,6 @@ LEP_ZZX_influence_modifier = {
     war_support_factor = LEP_ZXX_war_support_factor
 }
 
-LEP_military_mobilization_modifier = {
-    icon = "GFX_idea_SWE_varnplikt"
-    political_power_factor = LEP_mob_political_power_factor
-    war_support_factor = LEP_mob_war_support_factor
-    conversion_cost_civ_to_mil_factor = LEP_mob_conversion_cost_civ_to_mil_factor
-    industry_air_damage_factor = LEP_mob_industry_air_damage_factor
-    dig_in_speed_factor = LEP_mob_dig_in_speed_factor
-    supply_consumption_factor = LEP_mob_supply_consumption_factor
-    army_attack_factor = LEP_mob_army_attack_factor
-    army_defence_factor = LEP_mob_army_defence_factor
-    training_time_army_factor = LEP_mob_training_time_army_factor
-    land_reinforce_rate = LEP_mob_land_reinforce_rate
-}
-
 LEP_national_reconstruction_bureau_modifier = {
     industrial_capacity_factory = LEP_cons_industrial_capacity_factory
     consumer_goods_factor = LEP_cons_consumer_goods_factor

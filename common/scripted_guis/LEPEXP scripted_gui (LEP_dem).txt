@@ -9,20 +9,30 @@ scripted_gui = {
 		window_name = "ui_military_mobilization"
 
 		properties = {
-			military_mobilization = {
-				frame = military_mobilization_var
+			# 进度条用 frame 控制填充（贴图 90 帧），y 控制显隐
+			LEP_mob_bar_blue = {
+				frame = LEP_mob_blue_frame
+				y = LEP_mob_blue_y
 			}
-			military_mobilization_sample_1 = {
-				frame = military_mobilization_var_sample_1
+			LEP_mob_bar_orange = {
+				frame = LEP_mob_orange_frame
+				y = LEP_mob_orange_y
 			}
-
-			
-			military_mobilization_sample_2 = {
-				frame = military_mobilization_var_sample_2
+			# 指针（GUI 基准 65，此处给相对偏移）
+			LEP_mob_needle = {
+				x = LEP_mob_needle_x
 			}
-			military_mobilization_sample_2_divider = {
-				x = military_mobilization_x
-			}
+			# 五个阶段圆球：未达成 / 已达成 两组，靠 x 切换
+			LEP_mob_n1_off = { x = LEP_mob_n1_off_x }
+			LEP_mob_n2_off = { x = LEP_mob_n2_off_x }
+			LEP_mob_n3_off = { x = LEP_mob_n3_off_x }
+			LEP_mob_n4_off = { x = LEP_mob_n4_off_x }
+			LEP_mob_n5_off = { x = LEP_mob_n5_off_x }
+			LEP_mob_n1_on = { x = LEP_mob_n1_on_x }
+			LEP_mob_n2_on = { x = LEP_mob_n2_on_x }
+			LEP_mob_n3_on = { x = LEP_mob_n3_on_x }
+			LEP_mob_n4_on = { x = LEP_mob_n4_on_x }
+			LEP_mob_n5_on = { x = LEP_mob_n5_on_x }
 		}
 	}
 
