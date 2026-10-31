@@ -10,6 +10,7 @@ add_namespace = league_industry
 add_namespace = league_jap
 add_namespace = LEP_seat_recount
 add_namespace = league_war_events
+add_namespace = china_events
 
 
 country_event = { #test
@@ -23,12 +24,22 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		add_ideas = LEP_mob_stage_1
-		add_ideas = LEP_mob_stage_2
-		add_ideas = LEP_mob_stage_3
-		add_ideas = LEP_mob_stage_4
-		add_ideas = LEP_mob_stage_5
-    }
+		promote_character = {
+			character = LEP_xu_deheng
+			ideology = social_liberal_progressive_liberalism_subtype
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			election_frequency = 48
+			elections_allowed = yes
+			last_election = "[CURRENT_DATE]"
+		}
+		if = {
+			limit = { has_country_leader = { character = LEP_xu_deheng } }
+			LEP_xu_deheng = { promote_character = social_liberal_liberal_technocracy_subtype }
+			set_politics = { ruling_party = social_liberal }
+		}
+	}
 }
 
 country_event = { #封锁闽海?
@@ -227,7 +238,7 @@ unit_leader_event = { #封锁：李世甲结局
 	}
 }
 
-country_event = {#钱袋子与枪杆子
+country_event = { #钱袋子与枪杆子
 	id = league_war_events.23
 	title = league_war_events.23.t
 	desc = league_war_events.23.d
@@ -235,7 +246,8 @@ country_event = {#钱袋子与枪杆子
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #
+
+	option = {
 		log = "[GetLogInfo]: event league_war_events.23 option league_war_events.23.a"
 		name = league_war_events.23.a
 		add_power_balance_value = {
@@ -247,7 +259,7 @@ country_event = {#钱袋子与枪杆子
 		china_update_morale = yes
 	}
 
-	option = { #
+	option = {
 		log = "[GetLogInfo]: event league_war_events.23 option league_war_events.23.b"
 		name = league_war_events.23.b
 		add_stability = -0.1
@@ -257,7 +269,10 @@ country_event = {#钱袋子与枪杆子
 		}
 		set_temp_variable = { change_league_war_morale_by = 5 }
 		china_update_morale = yes
-		
+		add_timed_idea = {
+			idea = LEP_sloppy_discipline
+			days = 100
+		}
 	}
 }
 
@@ -519,7 +534,7 @@ unit_leader_event = { #民主政变
 			}
 			custom_effect_tooltip = tooltip_white_line
 			set_country_flag = LEP_dem_gov
-		set_country_flag = { flag = LEP_dem_gov_yr days = 366 value = 1 }	# 忠实的反对派：满一年后自动过期
+			set_country_flag = { flag = LEP_dem_gov_yr days = 366 value = 1 }	# 忠实的反对派：满一年后自动过期
 			clear_global_event_target = SZH_leader
 			CSR_set_leader_effect = yes
 		}
@@ -569,7 +584,6 @@ unit_leader_event = { #商帮的支持
 		name = league_mid.7.a
 		set_temp_variable = { coalition_partner_var = token:social_conservative }
 		add_to_coalition = yes
-		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		custom_effect_tooltip = tooltip_white_line
 		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = LEP_rong_zongjing_advisor
@@ -614,7 +628,6 @@ unit_leader_event = { #黄郛南下
 		custom_effect_tooltip = tooltip_white_line
 		set_temp_variable = { coalition_partner_var = token:market_liberal }
 		add_to_coalition = yes
-		LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 		custom_effect_tooltip = tooltip_white_line
 		add_ideas = LEP_popular_support_0
 		hidden_effect = {
@@ -4513,6 +4526,7 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -4537,6 +4551,7 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -4561,6 +4576,7 @@ country_event = {
 		    elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -4652,7 +4668,9 @@ country_event = { #第二次大选：公布结果
 			elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
+		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
 		set_country_flag = LEP_DSP_win
 		mark_focus_tree_layout_dirty = yes
@@ -4660,9 +4678,19 @@ country_event = { #第二次大选：公布结果
 			if = {
 				limit = {
 					has_country_flag = LEP_CFC_retire_flag
+				}
+				# 走过「科学化公共行政」才按技术官僚接班，否则保留他的进步自由主义身份
+				if = {
+					limit = { has_country_flag = LEP_xu_deheng_technocrat }
 					promote_character = {
 						character = LEP_xu_deheng
 						ideology = social_liberal_liberal_technocracy_subtype
+					}
+				}
+				else = {
+					promote_character = {
+						character = LEP_xu_deheng
+						ideology = social_liberal_progressive_liberalism_subtype
 					}
 				}
 			}
@@ -4682,7 +4710,9 @@ country_event = { #第二次大选：公布结果
 			elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
+		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
 		set_country_flag = LEP_ZXX_win
 		mark_focus_tree_layout_dirty = yes
@@ -4701,7 +4731,9 @@ country_event = { #第二次大选：公布结果
 			elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
+		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
 		set_country_flag = LEP_JNSB_win
 		mark_focus_tree_layout_dirty = yes
@@ -4716,11 +4748,27 @@ country_event = { #第二次大选：公布结果
 			elections_allowed = yes
 			last_election = "[CURRENT_DATE]"
 		}
+		end_coalition = yes
 		LEP_hold_election_seats = yes
+		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
 		complete_national_focus = LEP_solidarity_union
 		set_country_flag = LEP_NSU_win
 		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = { #议会中的少数派
+	id = lep_election.5
+	title = lep_election.5.t
+	desc = lep_election.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.5 option lep_election.5.a"
+		name = lep_election.5.a
+		custom_effect_tooltip =  lep_election.5_tt
 	}
 }
 
@@ -6062,6 +6110,11 @@ unit_leader_event = { #激活国防动员体系
 					limit = { NOT = { has_idea = LEP_mob_stage_1 } }
 					add_ideas = LEP_mob_stage_1
 				}
+				# 启动 30 天周期任务：每周期按当前法案结算一次动员度加成
+				if = {
+					limit = { NOT = { has_active_mission = LEP_update_military_mobilization_var_mission } }
+					activate_mission = LEP_update_military_mobilization_var_mission
+				}
 				LEP_mob_refresh = yes
 			}
 		}
@@ -6173,6 +6226,54 @@ country_event = { #周训典
 		name = league_military.11.a
 		LEP_zhou_xundian = {
 			kill_character = yes
+		}
+	}
+}
+
+country_event = { ##动员buff升级
+	id = league_military.4
+	title = league_military.4.t
+	desc = league_military.4.d
+	picture = GFX_report_event_CHN_China_mobilization_poster
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.4 option league_military.4.a"
+		name = league_military.4.a
+		meta_effect = {
+			text = {
+				swap_ideas = {
+					remove_idea = LEP_mob_stage_[STAGE_OLD]
+					add_idea = LEP_mob_stage_[STAGE_NEW]
+				}
+			}
+			STAGE_OLD = "[?LEP_mob_stage_prev]"
+			STAGE_NEW = "[?LEP_mob_stage]"
+		}
+	}
+}
+
+country_event = { #动员buff降级
+	id = league_military.5
+	title = league_military.5.t
+	desc = league_military.5.d
+	picture = GFX_report_event_CHN_China_mobilization_poster
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.5 option league_military.5.a"
+		name = league_military.5.a
+		meta_effect = {
+			text = {
+				swap_ideas = {
+					remove_idea = LEP_mob_stage_[STAGE_OLD]
+					add_idea = LEP_mob_stage_[STAGE_NEW]
+				}
+			}
+			STAGE_OLD = "[?LEP_mob_stage_prev]"
+			STAGE_NEW = "[?LEP_mob_stage]"
 		}
 	}
 }
@@ -7699,18 +7800,24 @@ country_event = {#撤回4点
 
 
 #各派系掌权新闻
-news_event = {#通用统一新闻
+news_event = { #通用统一新闻
 	id = china_events.317
-	immediate = { log = "[GetLogInfo]: event china_events.317" }
 	title = china_events.317.t
 	desc = china_events.317.d
 	picture = GFX_news_event_LEP_dem_victory
 
-	trigger = { wants_world_news = yes } #Global news event
-
 	is_triggered_only = yes
-	fire_for_sender = yes
 	major = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	immediate = {
+		log = "[GetLogInfo]: event china_events.317"
+	}
+
+	fire_for_sender = yes
 
 	option = {
 		name = china_events.317.a
@@ -7809,16 +7916,22 @@ news_event = {
 
 news_event = {
 	id = china_events.323
-	immediate = { log = "[GetLogInfo]: event china_events.323" }
 	title = china_events.323.t
 	desc = china_events.323.d
-	picture = GFX_news_event_LEP_dem_victory
-
-	trigger = { wants_world_news = yes } #Global news event
+	picture = GFX_news_event_LEP_DSP_xu
 
 	is_triggered_only = yes
-	fire_for_sender = yes
 	major = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	immediate = {
+		log = "[GetLogInfo]: event china_events.323"
+	}
+
+	fire_for_sender = yes
 
 	option = {
 		name = china_events.323.a

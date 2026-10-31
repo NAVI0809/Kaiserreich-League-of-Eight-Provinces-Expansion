@@ -130,4 +130,19 @@ on_actions = {
 			}
 		}
 	}
+	# ── 大选组阁：每届任期选举后重排席位，并检查是否取得过半席位 ──────
+	# 结算延迟 1 天（LEP_hold_election_seats），检查逻辑在 LEP_do_count_seats 末尾。
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = {
+					tag = LEP
+					has_country_flag = LEP_seat_enabled
+				}
+				set_country_flag = LEP_election_pending_check
+				end_coalition = yes
+				LEP_hold_election_seats = yes
+			}
+		}
+	}
 }

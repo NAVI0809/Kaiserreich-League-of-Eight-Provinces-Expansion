@@ -3981,6 +3981,17 @@ ideas = {
 				
 			}
 		}
+		LEP_sloppy_discipline = {
+			picture = generic_army_problems
+			allowed = {
+				always = no
+			}
+			modifier = {
+				resistance_damage_to_garrison = 0.15
+				resistance_growth = 0.05
+				army_org_regain = 0.05
+			}
+		}
 	}
 	
 

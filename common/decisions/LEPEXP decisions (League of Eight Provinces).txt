@@ -1332,6 +1332,10 @@ LEP_stride_towards_unification = {
 		}
 		target_trigger = {
 			FROM = {
+				OR = {
+					is_neighbor_of = ROOT
+					any_neighbor_country = { is_subject_of = ROOT }
+				}
 				tag = SHX
 			}
 		}
@@ -1440,6 +1444,7 @@ LEP_stride_towards_unification = {
 				tag = SZC
 			}
 		}
+		
 		visible = {
 			has_completed_focus = LEP_End_Local_Warlordism
 			OR = {
@@ -3637,6 +3642,121 @@ LEPEXP_military_defence_development_CAT = {
 }
 
 military_mobilization_category ={
+			LEP_update_military_mobilization_var_mission = {
+		icon = GFX_decision_government_up
+		allowed = { always = no } #manually activated
+		available = {
+			hidden_trigger = { always = no }
+		}
+		priority = 999
+		selectable_mission = no
+		is_good = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			# 周期结算：当前法案决定动员度的相对加成（三类合计 -10 ~ +10）
+			custom_effect_tooltip = LEP_mob_law_econ_impact_tt
+			if = {
+				limit = { has_idea = civilian_economy }
+				custom_effect_tooltip = LEP_mob_law_econ_civilian_tt
+			}
+			if = {
+				limit = { has_idea = low_economic_mobilisation }
+				custom_effect_tooltip = LEP_mob_law_econ_low_tt
+			}
+			if = {
+				limit = { has_idea = partial_economic_mobilisation }
+				custom_effect_tooltip = LEP_mob_law_econ_partial_tt
+			}
+			if = {
+				limit = { has_idea = war_economy }
+				custom_effect_tooltip = LEP_mob_law_econ_war_tt
+			}
+			if = {
+				limit = { has_idea = tot_economic_mobilisation }
+				custom_effect_tooltip = LEP_mob_law_econ_total_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_mob_law_trade_impact_tt
+			if = {
+				limit = { OR = { has_idea = unequal_treaties has_idea = unequal_treaties_lesser } }
+				custom_effect_tooltip = LEP_mob_law_trade_unequal_tt
+			}
+			if = {
+				limit = { has_idea = sino_shanghai_economic_accord }
+				custom_effect_tooltip = LEP_mob_law_trade_sino_tt
+			}
+			if = {
+				limit = { has_idea = free_trade }
+				custom_effect_tooltip = LEP_mob_law_trade_free_tt
+			}
+			if = {
+				limit = { has_idea = export_focus }
+				custom_effect_tooltip = LEP_mob_law_trade_export_tt
+			}
+			if = {
+				limit = { has_idea = limited_exports }
+				custom_effect_tooltip = LEP_mob_law_trade_limited_tt
+			}
+			if = {
+				limit = { has_idea = closed_economy }
+				custom_effect_tooltip = LEP_mob_law_trade_closed_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_mob_law_cons_impact_tt
+			if = {
+				limit = { has_idea = disarmed_nation }
+				custom_effect_tooltip = LEP_mob_law_cons_disarmed_tt
+			}
+			if = {
+				limit = { has_idea = volunteer_only }
+				custom_effect_tooltip = LEP_mob_law_cons_volunteer_tt
+			}
+			if = {
+				limit = { has_idea = limited_conscription }
+				custom_effect_tooltip = LEP_mob_law_cons_limited_tt
+			}
+			if = {
+				limit = { has_idea = extensive_conscription }
+				custom_effect_tooltip = LEP_mob_law_cons_extensive_tt
+			}
+			if = {
+				limit = { has_idea = service_by_requirement }
+				custom_effect_tooltip = LEP_mob_law_cons_service_tt
+			}
+			if = {
+				limit = { has_idea = all_adults_serve }
+				custom_effect_tooltip = LEP_mob_law_cons_alladults_tt
+			}
+			if = {
+				limit = { has_idea = scraping_the_barrel }
+				custom_effect_tooltip = LEP_mob_law_cons_scraping_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_war = yes }
+				custom_effect_tooltip = LEP_mob_war_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_mob_peace_tt
+			}
+			if = {
+				limit = { has_idea = CUF_call_of_the_united_front_idea_3 }
+				custom_effect_tooltip = LEP_mob_united_front_3_tt
+			}
+			else_if = {
+				limit = { has_idea = CUF_call_of_the_united_front_idea_2 }
+				custom_effect_tooltip = LEP_mob_united_front_2_tt
+			}
+			else_if = {
+				limit = { has_idea = CUF_call_of_the_united_front_idea_1 }
+				custom_effect_tooltip = LEP_mob_united_front_1_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_mob_law_total_tt
+			LEP_mob_law_bonus = yes
+			activate_mission = LEP_update_military_mobilization_var_mission
+		}
+	}
 	LEP_industrial_census = {
 		icon = eng_trade_unions_support
 		available = {

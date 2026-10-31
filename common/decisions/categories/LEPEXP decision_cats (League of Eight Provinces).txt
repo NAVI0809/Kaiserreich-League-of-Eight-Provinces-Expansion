@@ -14,7 +14,7 @@ LEP_election_category = {
 	icon = GFX_decision_category_generic_propaganda
 	allowed = { original_tag = LEP }
 	visible = { has_country_flag = LEP_first_election_open }
-	priority = 2
+	priority = 999
 	visible_when_empty = no
 	scripted_gui = LEP_election_cats_gui
 }
@@ -22,7 +22,7 @@ LEP_second_election_category = {
 	icon = GFX_decision_category_generic_propaganda
 	allowed = { original_tag = LEP }
 	visible = { has_country_flag = LEP_second_election_open }
-	priority = 2
+	priority = 999
 	visible_when_empty = no
 	scripted_gui = LEP_election2_cats_gui
 }
@@ -32,7 +32,7 @@ LEP_second_election_category = {
 LEPEXP_laws_CAT = {
 	icon = GFX_decision_category_patriotic
 	picture = GFX_decision_cat_generic_australasia
-	priority = 999
+	priority = 998
 	allowed = {
 		tag = LEP
 	}
@@ -67,7 +67,7 @@ LEP_country_development = {
 	icon = GFX_decision_category_power_struggle
 	allowed = { original_tag = LEP }
 	visible = { original_tag = LEP }
-	priority = 100
+	priority = 800
 }
 
 LEP_political_consultation = {
@@ -128,13 +128,11 @@ LEP_liberation_of_asia_category = {
 LEPEXP_gov = {
 	icon = GFX_decision_category_generic_democracy
 	allowed = { 
-		AND = {
-			NOT = {
-				has_completed_focus = LEP_new_republic_with_old_ideals
-			}
-			tag = LEP
-			has_completed_focus = LEP_unite_national_liberals 
+		NOT = {
+			has_completed_focus = LEP_new_republic_with_old_ideals
 		}
+		tag = LEP
+		has_completed_focus = LEP_unite_national_liberals 
 	}
 
 	priority = 981
@@ -142,7 +140,9 @@ LEPEXP_gov = {
 	scripted_gui = LEPEXP_gov_decision_cat_gui
 
 	visible = {
-		
+		NOT = {
+			has_completed_focus = LEP_new_republic_with_old_ideals
+		}
 	}
 	visible_when_empty = yes
 }

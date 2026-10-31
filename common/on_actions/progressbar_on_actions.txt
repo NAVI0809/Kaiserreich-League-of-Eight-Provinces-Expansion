@@ -37,6 +37,12 @@ on_actions = {
 			}
 
 
+			# 每日增减后立刻重算阶段：跨档时派发 league_military.4 / .5
+			LEP = {
+				LEP_mob_stage_update = yes
+				LEP_mob_refresh = yes
+			}
+
 			LEP = {
 				if = {
 					limit = {

@@ -1199,81 +1199,175 @@ LEP_add_to_ECT = {
 	}
 }
 
-LEP_mili_var = {
-	custom_effect_tooltip = LEP_add_mili_var_tt
-	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+LEP_mob_stage_update = {
 	clamp_variable = {
 		var = military_mobilization_var
 		min = 0
 		max = 100
 	}
 
-	# 按动员度换阶段 idea（五档，替代原来的线性变量计算）
-	# 0-19 承平之制 / 20-39 绸缪牖户 / 40-59 整军经武 / 60-79 百业从戎 / 80-100 钢铁长城
+	# 阶段追踪：算出当前档位，与上一档比较后派发升降档事件
+	# 1 承平之制 / 2 绸缪牖户 / 3 整军经武 / 4 百业从戎 / 5 钢铁长城
 	if = {
 		limit = { check_variable = { military_mobilization_var < 20 } }
-		if = {
-			limit = { NOT = { has_idea = LEP_mob_stage_1 } }
-			hidden_effect = {
-				remove_idea = LEP_mob_stage_2
-				remove_idea = LEP_mob_stage_3
-				remove_idea = LEP_mob_stage_4
-				remove_idea = LEP_mob_stage_5
-				add_ideas = LEP_mob_stage_1
-			}
-		}
+		set_variable = { LEP_mob_stage_new = 1 }
 	}
 	else_if = {
 		limit = { check_variable = { military_mobilization_var < 40 } }
-		if = {
-			limit = { NOT = { has_idea = LEP_mob_stage_2 } }
-			hidden_effect = {
-				remove_idea = LEP_mob_stage_1
-				remove_idea = LEP_mob_stage_3
-				remove_idea = LEP_mob_stage_4
-				remove_idea = LEP_mob_stage_5
-				add_ideas = LEP_mob_stage_2
-			}
-		}
+		set_variable = { LEP_mob_stage_new = 2 }
 	}
 	else_if = {
 		limit = { check_variable = { military_mobilization_var < 60 } }
-		if = {
-			limit = { NOT = { has_idea = LEP_mob_stage_3 } }
-			hidden_effect = {
-				remove_idea = LEP_mob_stage_1
-				remove_idea = LEP_mob_stage_2
-				remove_idea = LEP_mob_stage_4
-				remove_idea = LEP_mob_stage_5
-				add_ideas = LEP_mob_stage_3
-			}
-		}
+		set_variable = { LEP_mob_stage_new = 3 }
 	}
 	else_if = {
 		limit = { check_variable = { military_mobilization_var < 80 } }
+		set_variable = { LEP_mob_stage_new = 4 }
+	}
+	else = {
+		set_variable = { LEP_mob_stage_new = 5 }
+	}
+
+	# 跨档时记录新旧档位并派事件，idea 的更换写在事件选项里
+	# LEP_mob_stage      = 当前档位（1-5）
+	# LEP_mob_stage_prev = 本次跨档前的档位，供事件选项决定要摘掉哪个 idea
+	if = {
+		limit = { has_variable = LEP_mob_stage }
+		set_variable = { LEP_mob_stage_diff = LEP_mob_stage_new }
+		subtract_from_variable = { LEP_mob_stage_diff = LEP_mob_stage }
 		if = {
-			limit = { NOT = { has_idea = LEP_mob_stage_4 } }
-			hidden_effect = {
-				remove_idea = LEP_mob_stage_1
-				remove_idea = LEP_mob_stage_2
-				remove_idea = LEP_mob_stage_3
-				remove_idea = LEP_mob_stage_5
-				add_ideas = LEP_mob_stage_4
-			}
+			limit = { check_variable = { LEP_mob_stage_diff > 0 } }
+			set_variable = { LEP_mob_stage_prev = LEP_mob_stage }
+			set_variable = { LEP_mob_stage = LEP_mob_stage_new }
+			country_event = league_military.4
+		}
+		else_if = {
+			limit = { check_variable = { LEP_mob_stage_diff < 0 } }
+			set_variable = { LEP_mob_stage_prev = LEP_mob_stage }
+			set_variable = { LEP_mob_stage = LEP_mob_stage_new }
+			country_event = league_military.5
 		}
 	}
 	else = {
-		if = {
-			limit = { NOT = { has_idea = LEP_mob_stage_5 } }
-			hidden_effect = {
-				remove_idea = LEP_mob_stage_1
-				remove_idea = LEP_mob_stage_2
-				remove_idea = LEP_mob_stage_3
-				remove_idea = LEP_mob_stage_4
-				add_ideas = LEP_mob_stage_5
-			}
-		}
+		# 首次建档：只记录，不发事件
+		set_variable = { LEP_mob_stage = LEP_mob_stage_new }
 	}
+}
+
+# 按当前法案在每个更新周期（30 天）结束时调整动员度
+# 三类法案合计 -10 ~ +10，数值刻意压低，避免法案取代决议与国策成为主要推手
+# 计算当前法案与时局对动员度的合计影响，结果存入 LEP_mob_law_sum（应用与 tooltip 共用）
+LEP_mob_law_calc = {
+	set_variable = { LEP_mob_law_sum = 0 }
+
+	# 经济法案：民用 -5 / 低度 -3 / 部分 0 / 战时 +4 / 总体战 +5
+	if = {
+		limit = { has_idea = civilian_economy }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = low_economic_mobilisation }
+		add_to_variable = { LEP_mob_law_sum = -3 }
+	}
+	else_if = {
+		limit = { has_idea = war_economy }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = tot_economic_mobilisation }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 贸易法案：不平等 -5 / 宁沪经济协定 -3 / 自由贸易 -2 / 出口导向 0 / 限制出口 +3 / 封闭 +5
+	# 宁沪经济协定由事件 swap 掉不平等条约，两者互斥
+	if = {
+		limit = { OR = { has_idea = unequal_treaties has_idea = unequal_treaties_lesser } }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = sino_shanghai_economic_accord }
+		add_to_variable = { LEP_mob_law_sum = -3 }
+	}
+	else_if = {
+		limit = { has_idea = free_trade }
+		add_to_variable = { LEP_mob_law_sum = -2 }
+	}
+	else_if = {
+		limit = { has_idea = limited_exports }
+		add_to_variable = { LEP_mob_law_sum = 3 }
+	}
+	else_if = {
+		limit = { has_idea = closed_economy }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 征兵法案：非武装 -5 / 志愿 -4 / 有限 -1 / 广泛 +2 / 义务 +4 / 全民 +4 / 竭泽 +5
+	if = {
+		limit = { has_idea = disarmed_nation }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = volunteer_only }
+		add_to_variable = { LEP_mob_law_sum = -4 }
+	}
+	else_if = {
+		limit = { has_idea = limited_conscription }
+		add_to_variable = { LEP_mob_law_sum = -1 }
+	}
+	else_if = {
+		limit = { has_idea = extensive_conscription }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else_if = {
+		limit = { has_idea = service_by_requirement }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = all_adults_serve }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = scraping_the_barrel }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 战和状态：和平则动员压力消退，开战则举国转入战时轨道
+	if = {
+		limit = { has_war = yes }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else = {
+		add_to_variable = { LEP_mob_law_sum = -2 }
+	}
+
+	# 统一战线三阶段：整合越深、局势越紧，动员越容易推进
+	# 1 斗志昂扬 / 2 哀兵奋进 / 3 背水一战
+	if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_3 }
+		add_to_variable = { LEP_mob_law_sum = 3 }
+	}
+	else_if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_2 }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else_if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_1 }
+		add_to_variable = { LEP_mob_law_sum = 1 }
+	}
+}
+
+# 结算：把合计值加进动员度，再刷新阶段 idea
+LEP_mob_law_bonus = {
+	LEP_mob_law_calc = yes
+	add_to_variable = { military_mobilization_var = LEP_mob_law_sum }
+	LEP_mob_stage_update = yes
+	LEP_mob_refresh = yes
+}
+
+LEP_mili_var = {
+	custom_effect_tooltip = LEP_add_mili_var_tt
+	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+	LEP_mob_stage_update = yes
 }
 
 LEP_cons_var = {
@@ -2985,6 +3079,9 @@ LEP_mob_refresh = {
 		limit = { NOT = { has_variable = military_mobilization_var } }
 		set_variable = { military_mobilization_var = 0 }
 	}
+
+	# 每日重算法案合计值，保证任务卡 tooltip 里 [?LEP_mob_law_sum] 始终是最新的
+	LEP_mob_law_calc = yes
 
 	# 指针：绝对坐标 → 条起点 65 + var*3.6，再减 10（半个指针宽）
 	# 让填充末端伸进指针内部，与正版 BOP 的视觉一致

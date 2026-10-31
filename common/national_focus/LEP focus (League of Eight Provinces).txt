@@ -109,6 +109,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = league_war_events.19 days = 10 }
 				country_event = { id = league_war_events.23 days = 18 }
+				country_event = { id = league_war_events.23 days = 38 }
 				
 			}
 		}
@@ -4635,8 +4636,20 @@ focus_tree = {
 		}
 		available = { china_is_the_unifier_of_china_trigger = yes }
 		completion_reward = {
-			country_event = { id = china_events.318 days = 0 }
-			LEP_chu_fucheng = { add_trait = { trait = LEP_autonomy_standard_bearer ideology = social_liberal_subtype } }	### 上台时仍是普通社会自由主义
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_chu_fucheng }
+				}
+				country_event = { id = china_events.318 days = 0 }
+				LEP_chu_fucheng = { add_trait = { trait = LEP_autonomy_standard_bearer ideology = social_liberal_subtype } }	### 上台时仍是普通社会自由主义
+			}
+			if = {
+				limit = {
+					has_country_leader = { character = LEP_xu_deheng }
+				}
+				country_event = { id = china_events.323 days = 0 }
+				LEP_xu_deheng = { add_trait = { trait = LEP_autonomy_standard_bearer ideology = social_liberal_subtype } }	### 上台时仍是普通社会自由主义
+			}
 		}
 
 	}
@@ -4790,6 +4803,37 @@ focus_tree = {
 				remove_idea = LEP_political_rationality1
 				add_idea = LEP_political_rationality2m
 			}
+			if = {
+				limit = { NOT = { has_country_flag = LEP_xu_deheng_technocrat } }
+				hidden_effect = {
+					LEP_xu_deheng = {
+						add_country_leader_role = {
+							country_leader = {
+								desc = LEP_xu_deheng_leader_desc
+								ideology = social_liberal_liberal_technocracy_subtype
+							}
+						}
+					}
+				}
+				set_country_flag = LEP_xu_deheng_technocrat
+			}
+			if = {
+				limit = { has_country_leader = { character = LEP_xu_deheng } }
+				hidden_effect = {
+					LEP_xu_deheng = { promote_character = social_liberal_liberal_technocracy_subtype }
+					set_politics = { ruling_party = social_liberal }
+				}
+				custom_effect_tooltip = LEP_xu_deheng_technocrat_tt
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_country_leader = { character = LEP_xu_deheng ideology = social_liberal_progressive_liberalism_subtype } } }
+					LEP_xu_deheng = {
+						remove_country_leader_role = { ideology = social_liberal_progressive_liberalism_subtype }
+					}
+				}
+			}
+			
 		}
 
 	}
@@ -6371,7 +6415,7 @@ focus_tree = {
 			has_idea = LEP_funding_shortage1
 		}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 20
 			unlock_decision_tooltip = LEP_decision_reduce_expenditure
 			unlock_decision_tooltip = LEP_decision_issue_bonds
 			unlock_decision_tooltip = LEP_decision_xihu_expo
@@ -6588,7 +6632,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_ideas = LEP_Expand_the_merchant_leet
-			LEP_raise_funds = yes
+			
 			add_one_random_civilian_factory = yes
 		}
 
@@ -6631,7 +6675,7 @@ focus_tree = {
 				    instant_build = yes
 			    }
 			}	
-			LEP_raise_funds = yes		
+			
 		}
 
 	}
@@ -6649,7 +6693,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
-			LEP_raise_funds = yes
+			
 			add_one_random_military_factory = yes
 			country_event = { id = league_mid.66 days = 1 } #蔡司
 		}
@@ -6697,7 +6741,7 @@ focus_tree = {
 				idea = LEP_national_road_construction_plan
 				days = 720
 			}
-			LEP_raise_funds = yes		
+				
 			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
 		}
@@ -6793,7 +6837,7 @@ focus_tree = {
 		completion_reward = {
 			add_one_random_civilian_factory = yes
 			add_one_random_military_factory = yes
-			LEP_raise_funds = yes
+			
 			set_temp_variable = { LEP_cons_var_change = 4 }
 			LEP_cons_var = yes
 		}

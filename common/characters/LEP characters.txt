@@ -1172,7 +1172,7 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_xu_deheng_leader_desc
-			ideology = social_liberal_liberal_technocracy_subtype
+			ideology = social_liberal_progressive_liberalism_subtype
 		}
 		
 	}

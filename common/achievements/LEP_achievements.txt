@@ -43,45 +43,45 @@ LEP_unfinished_revolution_achievement = {
 	}
 }
 
-LEP_loyal_opposition_achievement = {
-	possible = {
-		custom_override_tooltip = {
-			tooltip = LEP_ach_needs_lep
-			original_tag = LEP
-		}
-	}
-
-	happened = {
-		if = {
-			limit = {
-				NOT = { has_global_flag = disallow_achievements_flag }
-				OR = {
-					NOT = { has_global_flag = on_startup_completed }
-					is_ai = no
-				}
-			}
-			custom_override_tooltip = {
-				tooltip = LEP_loyal_opposition_achievement_tooltip
-				has_country_flag = LEP_dem_gov
-				NOT = { has_country_flag = LEP_dem_gov_yr }   # 该 flag 满 366 天自动过期 = 满一年
-				check_variable = { LEP_coalition_seats < 138 }
-			}
-		}
-		else_if = {
-			limit = { has_global_flag = disallow_achievements_flag }
-			custom_override_tooltip = {
-				tooltip = achievements_disabled
-				always = no
-			}
-		}
-		else = {
-			custom_override_tooltip = {
-				tooltip = achievements_disabled_observer
-				always = no
-			}
-		}
-	}
-}
+# LEP_loyal_opposition_achievement = {
+# 	possible = {
+# 		custom_override_tooltip = {
+# 			tooltip = LEP_ach_needs_lep
+# 			original_tag = LEP
+# 		}
+# 	}
+#
+# 	happened = {
+# 		if = {
+# 			limit = {
+# 				NOT = { has_global_flag = disallow_achievements_flag }
+# 				OR = {
+# 					NOT = { has_global_flag = on_startup_completed }
+# 					is_ai = no
+# 				}
+# 			}
+# 			custom_override_tooltip = {
+# 				tooltip = LEP_loyal_opposition_achievement_tooltip
+# 				has_country_flag = LEP_dem_gov
+# 				NOT = { has_country_flag = LEP_dem_gov_yr }   # 该 flag 满 366 天自动过期 = 满一年
+# 				check_variable = { LEP_coalition_seats < 138 }
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = { has_global_flag = disallow_achievements_flag }
+# 			custom_override_tooltip = {
+# 				tooltip = achievements_disabled
+# 				always = no
+# 			}
+# 		}
+# 		else = {
+# 			custom_override_tooltip = {
+# 				tooltip = achievements_disabled_observer
+# 				always = no
+# 			}
+# 		}
+# 	}
+# }
 
 LEP_hundred_schools_achievement = {
 	possible = {

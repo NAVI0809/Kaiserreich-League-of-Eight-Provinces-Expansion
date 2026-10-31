@@ -35,6 +35,7 @@ LEPEXP_parliament = {
 		timeout_effect = {
 			add_stability = -0.03
 			add_political_power = -40
+			country_event = { id = lep_election.5 days = 0 }
 			# 执政党支持率 -2%
 			if = { limit = { has_government = totalist }               add_popularity = { ideology = totalist               popularity = -0.02 } }
 			if = { limit = { has_government = syndicalist }            add_popularity = { ideology = syndicalist            popularity = -0.02 } }
@@ -52,11 +53,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_form_government_decision = {
-		icon = GFX_decision_generic_speech
+		icon = GFX_decision_generic_flags
 		cost = 0
-		fire_only_once = no
-
-		# 与拉拢决议一致：只在少数派政府状态下出现（席位没过半那段时间）
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			has_country_flag = LEP_minority_gov
@@ -77,11 +75,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_syndicalist_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = syndicalist }
@@ -116,11 +111,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_radical_socialist_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = radical_socialist }
@@ -155,11 +147,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_social_democrat_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_democrat }
@@ -194,11 +183,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_social_liberal_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_liberal }
@@ -229,11 +215,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_market_liberal_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = market_liberal }
@@ -264,11 +247,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_social_conservative_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_conservative }
@@ -299,11 +279,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_authoritarian_democrat_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = authoritarian_democrat }
@@ -338,11 +315,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_paternal_autocrat_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = paternal_autocrat }
@@ -373,11 +347,8 @@ LEPEXP_parliament = {
 	}
 
 	LEP_invite_national_populist_decision = {
-		# 拉拢用另一个图标，和「组建政府」区分开
-		icon = GFX_decision_generic_political_discourse
+		icon = GFX_decision_generic_agreement
 		cost = 0
-		fire_only_once = no
-
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = national_populist }

@@ -380,6 +380,16 @@ LEP_do_count_seats = {
 				activate_mission = LEP_minority_government_timer
 			}
 		}
+		### ── 大选组阁后检查：未过半则提醒组建执政联盟 ──
+		### 标记由选举事件落下，结算当天消费掉；已过半则不弹。
+		if = {
+			limit = { has_country_flag = LEP_election_pending_check }
+			clr_country_flag = LEP_election_pending_check
+			if = {
+				limit = { check_variable = { LEP_coalition_seats < 138 } }
+				country_event = { id = lep_election.5 days = 0 }
+			}
+		}
 		### 过半不自动解除 —— 由玩家在国会点击「组建政府」正式组阁后才清。
 		### （过半后 on_daily 会暂停扣罚，见 on_actions_LEPEXP.txt）
 	}
