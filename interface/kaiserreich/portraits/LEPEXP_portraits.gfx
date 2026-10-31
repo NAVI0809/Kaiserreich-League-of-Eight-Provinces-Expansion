@@ -316,6 +316,10 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_wu_zhennan_japs_lord"
 		texturefile = "gfx/leaders/LEP/LEP_wu_zhennan_japs_lord.png"
 	}
+	spriteType = {
+		name = "GFX_portrait_LEP_li_dingxin_navy_large"
+		texturefile = "gfx/leaders/LEP/LEP_li_dingxin_navy_large.png"
+	}
 
     ##############################################
 	##############################################
@@ -323,12 +327,19 @@ spriteTypes = {
 	## -------------zigai-advisors------------- ##
 
 	##############################################	
-	##############################################
+	##############################################.
+
+	spriteType = {
+		name = "GFX_portrait_LEP_li_dingxin_army_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_li_dingxin_army_small.png"
+	}
+
 
 	spriteType = {
 		name = "GFX_portrait_JAP_shunsaku_kudo_small"
 		texturefile = "gfx/interface/advisors/LEP/JAP_shunsaku_kudo_small.png"
 	}
+
 
 	spriteType = {
 		name = "GFX_portrait_LEP_lu_xiaobo_civilian_small"

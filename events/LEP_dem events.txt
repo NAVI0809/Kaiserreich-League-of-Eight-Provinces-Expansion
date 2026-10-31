@@ -7184,6 +7184,7 @@ country_event = { #吴太上皇
 				set_portraits = {
 					civilian = { large = GFX_portrait_LEP_wu_zhennan_japs_lord }
 				}
+				add_unit_leader_trait = navy_media_personality
 			}
 		}
 	}
