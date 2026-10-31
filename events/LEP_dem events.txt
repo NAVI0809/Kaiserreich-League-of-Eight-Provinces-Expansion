@@ -4512,6 +4512,34 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = LEP_first_election_open
+			### AI 且预设了游戏路线：只保留该路线党派当选，玩家操作时不生效
+			if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+				}
+				clr_country_flag = LEP_first_election_KMT_win
+				clr_country_flag = LEP_first_election_JNSB_win
+				set_country_flag = LEP_first_election_DSP_win
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+				}
+				clr_country_flag = LEP_first_election_DSP_win
+				clr_country_flag = LEP_first_election_JNSB_win
+				set_country_flag = LEP_first_election_KMT_win
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+				}
+				clr_country_flag = LEP_first_election_DSP_win
+				clr_country_flag = LEP_first_election_KMT_win
+				set_country_flag = LEP_first_election_JNSB_win
+			}
 		}
 	}
 
@@ -4651,6 +4679,60 @@ country_event = { #第二次大选：公布结果
 		hidden_effect = {
 			clr_country_flag = LEP_second_election_open
 			set_country_flag = LEP_second_election_done
+			### AI 且预设了游戏路线：只保留该路线党派当选，玩家操作时不生效
+			if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_DSP }
+				}
+				clr_country_flag = LEP_second_election_KMT_win
+				clr_country_flag = LEP_second_election_JNSB_win
+				clr_country_flag = LEP_second_election_NSU_win
+				set_country_flag = LEP_second_election_DSP_win
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_ZXX }
+				}
+				clr_country_flag = LEP_second_election_DSP_win
+				clr_country_flag = LEP_second_election_JNSB_win
+				clr_country_flag = LEP_second_election_NSU_win
+				set_country_flag = LEP_second_election_KMT_win
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
+				}
+				clr_country_flag = LEP_second_election_DSP_win
+				clr_country_flag = LEP_second_election_KMT_win
+				clr_country_flag = LEP_second_election_NSU_win
+				set_country_flag = LEP_second_election_JNSB_win
+			}
+			### 国家团结联盟两条路线：救国会（JGH）/ 景星会（JXH），同一张 NSU 票
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_JGH }
+				}
+				clr_country_flag = LEP_second_election_DSP_win
+				clr_country_flag = LEP_second_election_KMT_win
+				clr_country_flag = LEP_second_election_JNSB_win
+				set_variable = { LEP_NSU_direct_var = 1 }
+				set_country_flag = LEP_second_election_NSU_win
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_game_rule = { rule = LEP_path option = LEP_PATH_JXH }
+				}
+				clr_country_flag = LEP_second_election_DSP_win
+				clr_country_flag = LEP_second_election_KMT_win
+				clr_country_flag = LEP_second_election_JNSB_win
+				set_variable = { LEP_NSU_direct_var = -1 }
+				set_country_flag = LEP_second_election_NSU_win
+			}
 		}
 	}
 
@@ -4742,11 +4824,23 @@ country_event = { #第二次大选：公布结果
 		log = "[GetLogInfo]: event lep_election.4 option lep_election.4.d"
 		name = lep_election.4.d
 		trigger = { has_country_flag = LEP_second_election_NSU_win }
-		set_politics = {
-			ruling_party = social_democrat
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
+		### 联盟内部派别决定执政党：景星会走威权民主，救国会走社会民主
+		if = {
+			limit = { LEP_NSU_direct_var_JXH_win = yes }
+			set_politics = {
+				ruling_party = authoritarian_democrat
+				election_frequency = 48
+				elections_allowed = yes
+				last_election = "[CURRENT_DATE]"
+			}
+		}
+		else = {
+			set_politics = {
+				ruling_party = social_democrat
+				election_frequency = 48
+				elections_allowed = yes
+				last_election = "[CURRENT_DATE]"
+			}
 		}
 		end_coalition = yes
 		LEP_hold_election_seats = yes
