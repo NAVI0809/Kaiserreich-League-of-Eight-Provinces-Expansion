@@ -1569,6 +1569,48 @@ characters = {
 		}
 	}
 
+	#李鼎新
+	LEP_li_dingxin = {
+		name = LEP_li_dingxin
+		portraits = {
+			army = {
+				small = GFX_portrait_LEP_li_dingxin_army_small
+				large = GFX_portrait_LEP_li_dingxin_navy_large
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			desc = LEP_li_dingxin_high_command_desc
+			idea_token = LEP_wu_rengli_navy_chief
+			ai_will_do = {
+				base = 50
+				modifier = {
+					factor = 2
+					has_war = yes
+				}
+			}
+			traits = { KR_navy_chief_reform_3 }
+			cost = 120
+		}
+		navy_leader = {
+			desc = LEP_li_dingxin_high_command_desc
+			traits = { 
+				navy_career_officer
+				naval_lineage
+				navy_media_personality
+				war_hero
+				cruiser_captain
+				spotter
+				CHN_SZH_officer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+
 	### LAST OF JAP'S NAVY
 	JAP_shunsaku_kudo = { #工藤俊作
 		name = JAP_shunsaku_kudo
