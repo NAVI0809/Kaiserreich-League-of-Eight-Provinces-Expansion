@@ -24,21 +24,17 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		promote_character = {
-			character = LEP_xu_deheng
-			ideology = social_liberal_progressive_liberalism_subtype
+		QIE = {
+			QIE_tang_zaili = {
+				if = {
+					limit = { can_be_captured = yes }
+					capture_by = LEP
+				}
+			}
 		}
-		set_politics = {
-			ruling_party = social_liberal
-			election_frequency = 48
-			elections_allowed = yes
-			last_election = "[CURRENT_DATE]"
-		}
-		if = {
-			limit = { has_country_leader = { character = LEP_xu_deheng } }
-			LEP_xu_deheng = { promote_character = social_liberal_liberal_technocracy_subtype }
-			set_politics = { ruling_party = social_liberal }
-		}
+		
+		
+		
 	}
 }
 

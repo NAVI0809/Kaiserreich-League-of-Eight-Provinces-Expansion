@@ -9,7 +9,7 @@
 
 LEPEXP_parliament = {
 
-	# ── 少数派政府倒计时（KR mission 范式，照 UPC_perils_of_a_minority_government_mission）──
+	# ── 少数派政府倒计时（KR mission 范式：每满 30 天结算一次，然后自我重启）──
 	# days_mission_timeout 由引擎计时；每满 30 天跑一次 timeout_effect 扣罚，然后自我重启。
 	# 显示用的天数另存 LEP_minority_days（on_daily 递减），因为 mission 的剩余时间读不到。
 	# ── 少数派政府倒计时（照 mod 既有 mission 的写法：LEP_economic_recovery_ongoing）──
