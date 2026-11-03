@@ -395,9 +395,14 @@ LEP_zhao_fengchang = { #recruit only by focus
 	set_character_flag = CHN_original_unit_leader
 	retire = yes
 }
+LEP_li_dingxin = {
+	unit_leader_event = { id = league_military.12 days = 6 }
+}
+
 JAP_shunsaku_kudo = { #recruit only by event
 	retire = yes
 }
+
 
 promote_character = { #recruit only by league_mid.52
 	character = LEP_gu_zhun
