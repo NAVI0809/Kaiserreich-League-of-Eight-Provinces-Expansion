@@ -3149,7 +3149,7 @@ LEPEXP_NAVY_germany_ships_effect = {
 		QIE_create_variant_destroyer = yes
 		create_ship = { name = "玄武" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
 	    create_ship = { name = "栖霞" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
-	    create_ship = { name = "拱墅" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "拱宸" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
 	    create_ship = { name = "钱塘" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
 	    create_ship = { name = "海曙" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
 	}	
@@ -3195,7 +3195,7 @@ LEPEXP_NAVY_germany_ships_effect_2 = {
 
 		create_ship = { name = "玄武" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
 	    create_ship = { name = "栖霞" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
-	    create_ship = { name = "拱墅" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "拱宸" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
 	    create_ship = { name = "钱塘" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
 	    create_ship = { name = "海曙" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
 	}	
