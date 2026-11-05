@@ -1,7 +1,7 @@
 #################################
 #### --LEP KOR Joint foucs-- ####
 #################################
-#### -- made in Nov, 2026 -- ####
+#### -- made on Nov, 2026 -- ####
 
 joint_focus = { #东京审判
 	id = LEPEXP_LEP_KOR_Joint_JAP_focus
@@ -93,6 +93,10 @@ joint_focus = { #东京审判
 			country_event = {
                id = league_jap.20
                hours = 12
+            }
+			country_event = {
+               id = league_jap.26
+               days = 2
             }
 		}     
     }
@@ -298,11 +302,43 @@ joint_focus = { #东渡淘金
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_gold_rush_focus"
-		
+		add_political_power = 50
+		LEP = {			
+			country_event = {
+				id = league_jap.27
+                days = 1  
+			}
+		}
+		JAP = {
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_gold_rush_focus"
-		
+		add_political_power = 30
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_infrastructure = yes
 	}
 }
 
@@ -361,7 +397,13 @@ joint_focus = { #倾销阴影
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_sell_everthing_focus"
-		
+		LEP = {
+			add_political_power = -20
+			country_event = {
+				id = league_jap.28
+                days = 1  
+			}
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_sell_everthing_focus"
