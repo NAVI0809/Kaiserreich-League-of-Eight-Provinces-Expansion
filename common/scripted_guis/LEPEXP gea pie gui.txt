@@ -1,0 +1,116 @@
+### 德属东亚争夺饼图：把 GEA 上的 100 格数组映射到 100 个扇形
+### frame: 0 中国 / 1 德国 / 2 本土 / 3 澳大拉西亚 / 4 现状
+
+scripted_gui = {
+
+	LEP_gea_pie = {
+		context_type = decision_category
+		window_name = "LEP_gea_contest_gui"
+		# 不用 dirty：默认每 tick 重建，点了决议立刻反映
+
+		ai_enabled = { always = no }
+
+		properties = {
+			pie0 = { frame = GEA.LEP_gea_pie_frames^0 }
+			pie1 = { frame = GEA.LEP_gea_pie_frames^1 }
+			pie2 = { frame = GEA.LEP_gea_pie_frames^2 }
+			pie3 = { frame = GEA.LEP_gea_pie_frames^3 }
+			pie4 = { frame = GEA.LEP_gea_pie_frames^4 }
+			pie5 = { frame = GEA.LEP_gea_pie_frames^5 }
+			pie6 = { frame = GEA.LEP_gea_pie_frames^6 }
+			pie7 = { frame = GEA.LEP_gea_pie_frames^7 }
+			pie8 = { frame = GEA.LEP_gea_pie_frames^8 }
+			pie9 = { frame = GEA.LEP_gea_pie_frames^9 }
+			pie10 = { frame = GEA.LEP_gea_pie_frames^10 }
+			pie11 = { frame = GEA.LEP_gea_pie_frames^11 }
+			pie12 = { frame = GEA.LEP_gea_pie_frames^12 }
+			pie13 = { frame = GEA.LEP_gea_pie_frames^13 }
+			pie14 = { frame = GEA.LEP_gea_pie_frames^14 }
+			pie15 = { frame = GEA.LEP_gea_pie_frames^15 }
+			pie16 = { frame = GEA.LEP_gea_pie_frames^16 }
+			pie17 = { frame = GEA.LEP_gea_pie_frames^17 }
+			pie18 = { frame = GEA.LEP_gea_pie_frames^18 }
+			pie19 = { frame = GEA.LEP_gea_pie_frames^19 }
+			pie20 = { frame = GEA.LEP_gea_pie_frames^20 }
+			pie21 = { frame = GEA.LEP_gea_pie_frames^21 }
+			pie22 = { frame = GEA.LEP_gea_pie_frames^22 }
+			pie23 = { frame = GEA.LEP_gea_pie_frames^23 }
+			pie24 = { frame = GEA.LEP_gea_pie_frames^24 }
+			pie25 = { frame = GEA.LEP_gea_pie_frames^25 }
+			pie26 = { frame = GEA.LEP_gea_pie_frames^26 }
+			pie27 = { frame = GEA.LEP_gea_pie_frames^27 }
+			pie28 = { frame = GEA.LEP_gea_pie_frames^28 }
+			pie29 = { frame = GEA.LEP_gea_pie_frames^29 }
+			pie30 = { frame = GEA.LEP_gea_pie_frames^30 }
+			pie31 = { frame = GEA.LEP_gea_pie_frames^31 }
+			pie32 = { frame = GEA.LEP_gea_pie_frames^32 }
+			pie33 = { frame = GEA.LEP_gea_pie_frames^33 }
+			pie34 = { frame = GEA.LEP_gea_pie_frames^34 }
+			pie35 = { frame = GEA.LEP_gea_pie_frames^35 }
+			pie36 = { frame = GEA.LEP_gea_pie_frames^36 }
+			pie37 = { frame = GEA.LEP_gea_pie_frames^37 }
+			pie38 = { frame = GEA.LEP_gea_pie_frames^38 }
+			pie39 = { frame = GEA.LEP_gea_pie_frames^39 }
+			pie40 = { frame = GEA.LEP_gea_pie_frames^40 }
+			pie41 = { frame = GEA.LEP_gea_pie_frames^41 }
+			pie42 = { frame = GEA.LEP_gea_pie_frames^42 }
+			pie43 = { frame = GEA.LEP_gea_pie_frames^43 }
+			pie44 = { frame = GEA.LEP_gea_pie_frames^44 }
+			pie45 = { frame = GEA.LEP_gea_pie_frames^45 }
+			pie46 = { frame = GEA.LEP_gea_pie_frames^46 }
+			pie47 = { frame = GEA.LEP_gea_pie_frames^47 }
+			pie48 = { frame = GEA.LEP_gea_pie_frames^48 }
+			pie49 = { frame = GEA.LEP_gea_pie_frames^49 }
+			pie50 = { frame = GEA.LEP_gea_pie_frames^50 }
+			pie51 = { frame = GEA.LEP_gea_pie_frames^51 }
+			pie52 = { frame = GEA.LEP_gea_pie_frames^52 }
+			pie53 = { frame = GEA.LEP_gea_pie_frames^53 }
+			pie54 = { frame = GEA.LEP_gea_pie_frames^54 }
+			pie55 = { frame = GEA.LEP_gea_pie_frames^55 }
+			pie56 = { frame = GEA.LEP_gea_pie_frames^56 }
+			pie57 = { frame = GEA.LEP_gea_pie_frames^57 }
+			pie58 = { frame = GEA.LEP_gea_pie_frames^58 }
+			pie59 = { frame = GEA.LEP_gea_pie_frames^59 }
+			pie60 = { frame = GEA.LEP_gea_pie_frames^60 }
+			pie61 = { frame = GEA.LEP_gea_pie_frames^61 }
+			pie62 = { frame = GEA.LEP_gea_pie_frames^62 }
+			pie63 = { frame = GEA.LEP_gea_pie_frames^63 }
+			pie64 = { frame = GEA.LEP_gea_pie_frames^64 }
+			pie65 = { frame = GEA.LEP_gea_pie_frames^65 }
+			pie66 = { frame = GEA.LEP_gea_pie_frames^66 }
+			pie67 = { frame = GEA.LEP_gea_pie_frames^67 }
+			pie68 = { frame = GEA.LEP_gea_pie_frames^68 }
+			pie69 = { frame = GEA.LEP_gea_pie_frames^69 }
+			pie70 = { frame = GEA.LEP_gea_pie_frames^70 }
+			pie71 = { frame = GEA.LEP_gea_pie_frames^71 }
+			pie72 = { frame = GEA.LEP_gea_pie_frames^72 }
+			pie73 = { frame = GEA.LEP_gea_pie_frames^73 }
+			pie74 = { frame = GEA.LEP_gea_pie_frames^74 }
+			pie75 = { frame = GEA.LEP_gea_pie_frames^75 }
+			pie76 = { frame = GEA.LEP_gea_pie_frames^76 }
+			pie77 = { frame = GEA.LEP_gea_pie_frames^77 }
+			pie78 = { frame = GEA.LEP_gea_pie_frames^78 }
+			pie79 = { frame = GEA.LEP_gea_pie_frames^79 }
+			pie80 = { frame = GEA.LEP_gea_pie_frames^80 }
+			pie81 = { frame = GEA.LEP_gea_pie_frames^81 }
+			pie82 = { frame = GEA.LEP_gea_pie_frames^82 }
+			pie83 = { frame = GEA.LEP_gea_pie_frames^83 }
+			pie84 = { frame = GEA.LEP_gea_pie_frames^84 }
+			pie85 = { frame = GEA.LEP_gea_pie_frames^85 }
+			pie86 = { frame = GEA.LEP_gea_pie_frames^86 }
+			pie87 = { frame = GEA.LEP_gea_pie_frames^87 }
+			pie88 = { frame = GEA.LEP_gea_pie_frames^88 }
+			pie89 = { frame = GEA.LEP_gea_pie_frames^89 }
+			pie90 = { frame = GEA.LEP_gea_pie_frames^90 }
+			pie91 = { frame = GEA.LEP_gea_pie_frames^91 }
+			pie92 = { frame = GEA.LEP_gea_pie_frames^92 }
+			pie93 = { frame = GEA.LEP_gea_pie_frames^93 }
+			pie94 = { frame = GEA.LEP_gea_pie_frames^94 }
+			pie95 = { frame = GEA.LEP_gea_pie_frames^95 }
+			pie96 = { frame = GEA.LEP_gea_pie_frames^96 }
+			pie97 = { frame = GEA.LEP_gea_pie_frames^97 }
+			pie98 = { frame = GEA.LEP_gea_pie_frames^98 }
+			pie99 = { frame = GEA.LEP_gea_pie_frames^99 }
+		}
+	}
+}

@@ -328,6 +328,18 @@ leader_traits = {
 		ai_will_do = { factor = 1 }
 	}
 
+	LEPEXP_bridge_expert = {
+		sprite = 10
+		
+		production_speed_infrastructure_factor = 0.15
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
 	KR_temporary_congress_sic = {
 		sprite = 13
 		random = no
@@ -433,6 +445,8 @@ leader_traits = {
 
 		ai_will_do = { factor = 1 }
 	}
+
+
 
 	#理论家
 	LEP_gas_warfare_trait = { 

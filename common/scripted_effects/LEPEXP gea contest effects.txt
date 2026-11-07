@@ -1,0 +1,92 @@
+### ─────────────────────────────────────────────────────────────
+### 德属东亚争夺 · 数据层
+### 四个份额变量都挂在 GEA 身上：LEP_gea_align_CHN / DEU / IDC / AST _var
+### 数组 LEP_gea_pie_frames 共 100 格，每格一格 = 一个 3.6° 扇形
+### frame: 0 中国 / 1 德国 / 2 本土 / 3 澳大拉西亚（未定由底圆灰色显示）
+### 调用方式：GEA = { LEP_gea_pie_update = yes }
+### ─────────────────────────────────────────────────────────────
+
+LEP_gea_pie_update = {
+
+	### 变量兜底
+	if = { limit = { NOT = { has_variable = LEP_gea_align_CHN_var } } set_variable = { LEP_gea_align_CHN_var = 0 } }
+	if = { limit = { NOT = { has_variable = LEP_gea_align_DEU_var } } set_variable = { LEP_gea_align_DEU_var = 0 } }
+	if = { limit = { NOT = { has_variable = LEP_gea_align_IDC_var } } set_variable = { LEP_gea_align_IDC_var = 0 } }
+	if = { limit = { NOT = { has_variable = LEP_gea_align_AST_var } } set_variable = { LEP_gea_align_AST_var = 0 } }
+
+	### 100 格，默认 4 = 现状
+	clear_array = LEP_gea_pie_frames
+	resize_array = { array = LEP_gea_pie_frames value = 0 size = 100 }
+
+	### 总份额
+	set_temp_variable = {
+		LEP_gea_total = {
+			value = LEP_gea_align_CHN_var
+			add = LEP_gea_align_DEU_var
+			add = LEP_gea_align_IDC_var
+			add = LEP_gea_align_AST_var
+		}
+	}
+	if = { limit = { check_variable = { LEP_gea_total < 0.5 } } set_temp_variable = { LEP_gea_total = 1 } }
+
+	set_temp_variable = { LEP_gea_start = 0 }
+
+	### 中国
+	set_temp_variable = { LEP_gea_pct = { value = LEP_gea_align_CHN_var divide = LEP_gea_total multiply = 100 round = yes } }
+	if = { limit = { check_variable = { LEP_gea_pct < 0 } } set_temp_variable = { LEP_gea_pct = 0 } }
+	if = { limit = { check_variable = { LEP_gea_pct > 100 } } set_temp_variable = { LEP_gea_pct = 100 } }
+	set_variable = { LEP_gea_pct_CHN_var = { value = LEP_gea_align_CHN_var divide = LEP_gea_total multiply = 100 round = yes } }
+	set_temp_variable = { LEP_gea_end = { value = LEP_gea_start add = LEP_gea_pct } }
+	if = { limit = { check_variable = { LEP_gea_end > 100 } } set_temp_variable = { LEP_gea_end = 100 } }
+	for_loop_effect = {
+		start = LEP_gea_start
+		end = LEP_gea_end
+		set_variable = { LEP_gea_pie_frames^v = 1 }
+	}
+	set_temp_variable = { LEP_gea_start = LEP_gea_end }
+
+	### 德国傀儡政府
+	set_temp_variable = { LEP_gea_pct = { value = LEP_gea_align_DEU_var divide = LEP_gea_total multiply = 100 round = yes } }
+	if = { limit = { check_variable = { LEP_gea_pct < 0 } } set_temp_variable = { LEP_gea_pct = 0 } }
+	if = { limit = { check_variable = { LEP_gea_pct > 100 } } set_temp_variable = { LEP_gea_pct = 100 } }
+	set_variable = { LEP_gea_pct_DEU_var = { value = LEP_gea_align_DEU_var divide = LEP_gea_total multiply = 100 round = yes } }
+	set_temp_variable = { LEP_gea_end = { value = LEP_gea_start add = LEP_gea_pct } }
+	if = { limit = { check_variable = { LEP_gea_end > 100 } } set_temp_variable = { LEP_gea_end = 100 } }
+	for_loop_effect = {
+		start = LEP_gea_start
+		end = LEP_gea_end
+		set_variable = { LEP_gea_pie_frames^v = 2 }
+	}
+	set_temp_variable = { LEP_gea_start = LEP_gea_end }
+
+	### 印度支那本土
+	set_temp_variable = { LEP_gea_pct = { value = LEP_gea_align_IDC_var divide = LEP_gea_total multiply = 100 round = yes } }
+	if = { limit = { check_variable = { LEP_gea_pct < 0 } } set_temp_variable = { LEP_gea_pct = 0 } }
+	if = { limit = { check_variable = { LEP_gea_pct > 100 } } set_temp_variable = { LEP_gea_pct = 100 } }
+	set_variable = { LEP_gea_pct_IDC_var = { value = LEP_gea_align_IDC_var divide = LEP_gea_total multiply = 100 round = yes } }
+	set_temp_variable = { LEP_gea_end = { value = LEP_gea_start add = LEP_gea_pct } }
+	if = { limit = { check_variable = { LEP_gea_end > 100 } } set_temp_variable = { LEP_gea_end = 100 } }
+	for_loop_effect = {
+		start = LEP_gea_start
+		end = LEP_gea_end
+		set_variable = { LEP_gea_pie_frames^v = 3 }
+	}
+	set_temp_variable = { LEP_gea_start = LEP_gea_end }
+
+	### 澳大拉西亚
+	set_temp_variable = { LEP_gea_pct = { value = LEP_gea_align_AST_var divide = LEP_gea_total multiply = 100 round = yes } }
+	if = { limit = { check_variable = { LEP_gea_pct < 0 } } set_temp_variable = { LEP_gea_pct = 0 } }
+	if = { limit = { check_variable = { LEP_gea_pct > 100 } } set_temp_variable = { LEP_gea_pct = 100 } }
+	set_variable = { LEP_gea_pct_AST_var = { value = LEP_gea_align_AST_var divide = LEP_gea_total multiply = 100 round = yes } }
+	set_temp_variable = { LEP_gea_end = { value = LEP_gea_start add = LEP_gea_pct } }
+	if = { limit = { check_variable = { LEP_gea_end > 100 } } set_temp_variable = { LEP_gea_end = 100 } }
+	for_loop_effect = {
+		start = LEP_gea_start
+		end = LEP_gea_end
+		set_variable = { LEP_gea_pie_frames^v = 4 }
+	}
+	set_temp_variable = { LEP_gea_start = LEP_gea_end }
+
+	### 通知界面重绘
+	set_variable_to_random = LEP_gea_pie_dirty
+}

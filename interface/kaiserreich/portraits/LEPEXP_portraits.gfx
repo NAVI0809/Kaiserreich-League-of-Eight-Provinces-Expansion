@@ -681,6 +681,11 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_ding_wenjiang_civilian_large"
 		texturefile = "gfx/leaders/LEP/LEP_ding_wenjiang_large.png"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_LEP_mao_yisheng_civilian_small"
+		texturefile = "gfx/interface/advisors/LEP/LEP_mao_yisheng_civilian_small.png"
+	}
 	
 
 }

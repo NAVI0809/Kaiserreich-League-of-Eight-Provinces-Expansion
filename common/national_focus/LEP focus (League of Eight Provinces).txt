@@ -6421,6 +6421,9 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_decision_xihu_expo
 			unlock_decision_tooltip = LEP_decision_seek_overseas_chinese_capital
 			unlock_decision_tooltip = LEP_decision_bank_consortium
+			hidden_effect = {
+				country_event = { id = league_mid.74 days = 50 }
+			}
 
 		}
 

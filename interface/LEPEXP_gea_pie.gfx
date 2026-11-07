@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_LEP_gea_pie_segment"
+		texturefile = "gfx/interface/gea_contest/gea_pie_segment.png"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_LEP_gea_pie_bg"
+		texturefile = "gfx/interface/gea_contest/gea_pie_bg.png"
+	}
+
+}

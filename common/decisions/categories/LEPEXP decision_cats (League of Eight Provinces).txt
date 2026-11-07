@@ -196,6 +196,16 @@ LEPEXP_JAP_land_reform_decisions_cat = {
 	allowed = { always = no } #activated by effect
 }
 
-
-
-
+### 德属东亚争夺（饼图挂在分类头上）
+LEPEXP_gea_contest_CAT = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = { tag = LEP }
+	visible = {
+		country_exists = GEA
+		OR = {
+			has_global_flag = LEP_gea_contest_active
+			is_debug = yes
+		}
+	}
+	scripted_gui = LEP_gea_pie
+}

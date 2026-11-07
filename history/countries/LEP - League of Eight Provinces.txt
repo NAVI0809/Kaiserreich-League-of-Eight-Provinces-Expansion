@@ -244,7 +244,7 @@ recruit_character = ANQ_sa_benxin
 recruit_character = LEP_sa_shijun
 recruit_character = LEP_wu_rengli
 recruit_character = LEP_li_dingxin
-
+recruit_character = LEP_mao_yisheng
 
 recruit_character = JAP_shunsaku_kudo 
 
@@ -396,6 +396,10 @@ LEP_zhao_fengchang = { #recruit only by focus
 	retire = yes
 }
 JAP_shunsaku_kudo = { #recruit only by event
+	retire = yes
+}
+LEP_mao_yisheng = { #recruit only by league_mid.74
+	set_character_flag = CHN_original_unit_leader
 	retire = yes
 }
 

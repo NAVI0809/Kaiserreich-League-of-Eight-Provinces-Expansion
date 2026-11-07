@@ -1310,6 +1310,24 @@ characters = {
 			}
 		}
 	}
+    #茅以升
+	LEP_mao_yisheng = {
+		name = LEP_mao_yisheng
+		portraits = {
+			civilian = {
+				small = GFX_portrait_LEP_mao_yisheng_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			desc = LEP_mao_yisheng_advisor_desc
+			idea_token = LEP_mao_yisheng_advisor
+			traits = { LEPEXP_bridge_expert }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
     
 	#陆小波
 	LEP_lu_xiaobo = {

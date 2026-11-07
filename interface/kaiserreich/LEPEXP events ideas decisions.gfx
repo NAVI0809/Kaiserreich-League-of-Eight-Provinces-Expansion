@@ -80,6 +80,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_LEP_qiantangjiang_bridge"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_qiantangjiang_bridge.png"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_LEP_dem_victory"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_dem_victory.png"
 	}

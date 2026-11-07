@@ -638,6 +638,31 @@ LEPEXP_DEBUG_CAT = {
 			base = 0
 		}
 	}
+
+
+	# 德属东亚争夺：激活（调试）
+	LEPEXP_debug_gea_contest_start = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+			country_exists = GEA
+		}
+		complete_effect = {
+			set_global_flag = LEP_gea_contest_active
+			GEA = {
+				set_variable = { LEP_gea_align_CHN_var = 25 }
+				set_variable = { LEP_gea_align_DEU_var = 25 }
+				set_variable = { LEP_gea_align_IDC_var = 25 }
+				set_variable = { LEP_gea_align_AST_var = 25 }
+				LEP_gea_pie_update = yes
+			}
+		}
+	}
+
 }
 
 
@@ -5838,5 +5863,123 @@ LEPEXP_JAP_land_reform_decisions_cat = {
 			}
 		}
 		fixed_random_seed = no
+	}
+}
+
+### 德属东亚争夺 · 决议（分类本体在 categories 里，这里放条目）
+LEPEXP_gea_contest_CAT = {
+
+
+	# 调试：跳过数值换算，直接把 100 格写成四等分
+	# 若这样仍只有三色 → 贴图帧的问题；若四色齐全 → 是百分比换算的问题
+
+	# 调试：把 100 格全部填成 frame 3（澳大拉西亚绿）
+	# 若整圈变绿 → frame 3 正常，问题在数据；若变蓝/变橙 → 引擎的 frame 索引不是 0 基
+	LEPEXP_debug_gea_pie_all_green = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				clear_array = LEP_gea_pie_frames
+				resize_array = { array = LEP_gea_pie_frames value = 4 size = 100 }
+				set_variable_to_random = LEP_gea_pie_dirty
+			}
+		}
+	}
+	LEPEXP_debug_gea_pie_equal = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				clear_array = LEP_gea_pie_frames
+				resize_array = { array = LEP_gea_pie_frames value = 4 size = 100 }
+				for_loop_effect = {
+					start = 0
+					end = 25
+					set_variable = { LEP_gea_pie_frames^v = 1 }
+				}
+				for_loop_effect = {
+					start = 25
+					end = 50
+					set_variable = { LEP_gea_pie_frames^v = 2 }
+				}
+				for_loop_effect = {
+					start = 50
+					end = 75
+					set_variable = { LEP_gea_pie_frames^v = 3 }
+				}
+				for_loop_effect = {
+					start = 75
+					end = 100
+					set_variable = { LEP_gea_pie_frames^v = 4 }
+				}
+				set_variable = { LEP_gea_pct_CHN_var = 25 }
+				set_variable = { LEP_gea_pct_DEU_var = 25 }
+				set_variable = { LEP_gea_pct_IDC_var = 25 }
+				set_variable = { LEP_gea_pct_AST_var = 25 }
+				set_variable_to_random = LEP_gea_pie_dirty
+			}
+		}
+	}
+	LEPEXP_debug_gea_add_CHN = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				add_to_variable = { LEP_gea_align_CHN_var = 10 }
+				LEP_gea_pie_update = yes
+			}
+		}
+	}
+
+	LEPEXP_debug_gea_add_DEU = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				add_to_variable = { LEP_gea_align_DEU_var = 10 }
+				LEP_gea_pie_update = yes
+			}
+		}
+	}
+
+	LEPEXP_debug_gea_add_IDC = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				add_to_variable = { LEP_gea_align_IDC_var = 10 }
+				LEP_gea_pie_update = yes
+			}
+		}
+	}
+
+	LEPEXP_debug_gea_add_AST = {
+		fire_only_once = no
+		cost = 0
+		visible = { is_debug = yes }
+		available = { always = yes }
+		allowed = { tag = LEP }
+		complete_effect = {
+			GEA = {
+				add_to_variable = { LEP_gea_align_AST_var = 10 }
+				LEP_gea_pie_update = yes
+			}
+		}
 	}
 }
