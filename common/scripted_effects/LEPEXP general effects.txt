@@ -3142,3 +3142,61 @@ LEP_mob_refresh = {
 		set_variable = { LEP_mob_n5_on_x = 377 }
 	}
 }
+
+LEPEXP_NAVY_germany_ships_effect = {
+	custom_effect_tooltip = LEPEXP_NAVY_germany_ships_TT
+	hidden_effect = {
+		QIE_create_variant_destroyer = yes
+		create_ship = { name = "玄武" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "栖霞" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "拱宸" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "钱塘" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "海曙" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	}	
+}
+
+LEPEXP_NAVY_germany_ships_effect_2 = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_tech = early_ship_hull_light } }
+			set_technology = { early_ship_hull_light = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_light_battery } }
+			set_technology = { basic_light_battery = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_depth_charges } }
+			set_technology = { basic_depth_charges = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_torpedo } }
+			set_technology = { basic_torpedo = 1 }
+		}
+		create_equipment_variant = {
+            show_position = no
+            name = "S113 Speziell für China" 	# S113 Class
+            role_icon_index = 32
+            type = vnr_ship_hull_light_1
+            name_group = CHYN_THEME_MOUNTAINS
+            modules = {
+              fixed_ship_battery_slot = ship_light_battery_2
+              fixed_ship_anti_air_slot = ship_anti_air_1
+              fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+              fixed_ship_engine_slot = light_ship_engine_1
+              fixed_ship_torpedo_slot = ship_torpedo_1
+              front_1_custom_slot = ship_light_battery_2
+              mid_1_custom_slot = ship_light_battery_2
+              rear_1_custom_slot = ship_depth_charge_1
+              rear_2_custom_slot = ship_light_battery_2
+            }
+            obsolete = yes
+        }
+
+		create_ship = { name = "玄武" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "栖霞" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "拱宸" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "钱塘" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "海曙" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	}	
+}

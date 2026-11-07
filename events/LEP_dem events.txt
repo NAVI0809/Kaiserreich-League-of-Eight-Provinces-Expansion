@@ -6283,9 +6283,9 @@ country_event = { #周训典
 	picture = GFX_report_event_ace_zhou
 	is_triggered_only = yes
 	fire_only_once = yes
+
 	title = league_military.10.t
-	desc = league_military.10.d
-	fire_only_once = yes
+	desc = league_military.10.d	
 
 	option = {
 		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
@@ -6312,9 +6312,9 @@ country_event = { #周训典
 	picture = GFX_report_event_ace_died
 	is_triggered_only = yes
 	fire_only_once = yes
+
 	title = league_military.11.t
 	desc = league_military.11.d
-	fire_only_once = yes
 
 	option = {
 		log = "[GetLogInfo]: event league_military.11 option league_military.11.a"
@@ -6322,6 +6322,43 @@ country_event = { #周训典
 		LEP_zhou_xundian = {
 			kill_character = yes
 		}
+	}
+}
+
+unit_leader_event = { #李鼎新
+	id = league_military.12
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	title = league_military.12.t
+	desc = league_military.12.d
+
+	option = {
+		log = "[GetLogInfo]: event league_military.12 option league_military.12.a"
+		name = league_military.12.a
+		navy_experience = 10
+		hidden_effect = {
+			country_event = {
+				id = league_military.13
+				days = 15
+			}
+		}
+	}
+}
+
+country_event = { #驱逐舰到货
+	id = league_military.13
+	title = league_military.13.t
+	desc = league_military.13.d
+	picture = GFX_report_event_CHI_ROC_navy_officers
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.13 option league_military.13.a"
+		name = league_military.13.a
+		LEPEXP_NAVY_germany_ships_effect = yes
+		LEPEXP_NAVY_germany_ships_effect_2 = yes
 	}
 }
 
@@ -7082,9 +7119,7 @@ country_event = { #审判日寇
 		log = "[GetLogInfo]: event league_jap.20 option league_jap.20.a"
 		name = league_jap.20.a
 		custom_effect_tooltip = JAP_purge_military_socialist_tt
-		JAP = {
-			JAP_purge_military_effect = yes
-		}
+		
 		hidden_effect = {
 			LEP = {
 				JAP_shunsaku_kudo = {
@@ -7120,6 +7155,10 @@ country_event = { #枪毙日寇
 		log = "[GetLogInfo]: event league_jap.7 option league_jap.7.a"
 		name = league_jap.21.a
 		add_war_support = 0.05
+		custom_effect_tooltip = JAP_purge_military_socialist_tt
+		JAP = {
+			JAP_purge_military_effect = yes
+		}
 	}
 }
 
@@ -7257,6 +7296,69 @@ country_event = { #友谊地久天长
 		log = "[GetLogInfo]: event league_jap.25 option league_jap.25.a"
 		name = league_jap.25.a
 		custom_effect_tooltip = league_jap.25_tt
+	}
+}
+
+country_event = { #小小的意外
+	id = league_jap.26
+	title = league_jap.26.t
+	desc = league_jap.26.d
+	picture = GFX_report_event_QIE_police_training
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.26 option league_jap.26.a"
+		name = league_jap.26.a
+		add_war_support = 0.02
+		JAP = {
+			add_manpower = -33
+			JAP_tojo_hideki = {
+				kill_character = yes
+			}
+			JAP_doihara_kenji = {
+				kill_character = yes
+			}
+		}
+	}
+}
+
+country_event = { #无情的生意
+	id = league_jap.27
+	title = league_jap.27.t
+	desc = league_jap.27.d
+	picture = GFX_report_event_JAP_manchurian_exploitation
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.26 option league_jap.27.a"
+		name = league_jap.27.a
+		add_political_power = -30
+		LEP_weaken_JNSB_large = yes
+	}
+}
+
+country_event = { #收拾局势
+	id = league_jap.28
+	title = league_jap.28.t
+	desc = league_jap.28.d
+	picture = GFX_report_event_CHN_official_announcement
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.26 option league_jap.28.a"
+		name = league_jap.28.a
+		JAP = {
+			add_political_power = 20
+			add_one_random_civilian_factory = yes
+		}
+		add_political_power = -30
+		LEP_weaken_JNSB_small = yes
 	}
 }
 
