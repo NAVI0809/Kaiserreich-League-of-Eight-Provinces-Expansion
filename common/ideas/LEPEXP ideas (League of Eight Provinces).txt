@@ -3992,6 +3992,298 @@ ideas = {
 				army_org_regain = 0.05
 			}
 		}
+		LEP_trade_union_representation_right = {
+			picture = generic_leftist_trade_union
+			allowed = {
+				always = no
+			}
+			modifier = {
+				line_change_production_efficiency_factor = 0.025
+				production_factory_efficiency_gain_factor = -0.05
+				political_power_cost = 0.01
+			}
+		}
+		LEP_worker_welfare_allocation = {
+			picture = generic_goods_red_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				line_change_production_efficiency_factor = 0.025
+			}
+		}
+		LEP_restrict_capital_merger = {
+			picture = capital_outflow
+			allowed = {
+				always = no
+			}
+			modifier = {
+				local_factories = -0.025
+				factory_energy_consumption = 0.05
+			}
+		}
+		LEP_promote_land_reform = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			modifier = {
+				local_supplies = 0.02
+				stability_factor = -0.05
+			}
+		}
+		LEP_reorganize_bureaucratic_capital = {
+			picture = eng_tackle_capitalism
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.025
+				political_power_factor = -0.025
+			}
+		}
+		LEP_implement_revolutionary_program = {
+			picture = CHI_high_popular_support
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				production_factory_start_efficiency_factor = 0.025
+			}
+		}
+		LEP_expand_social_relief = {
+			picture = HOL_welfare_state
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.075
+				political_power_gain = -0.025
+			}
+		}
+		LEP_labor_management_consultation = {
+			picture = generic_government_reconciliation
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = -0.05
+				political_power_gain = -0.025
+			}
+		}
+		LEP_develop_public_education = {
+			picture = generic_high_literacy
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		LEP_freedom_of_press_and_publication = {
+			picture = generic_democratic_opposition
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.025
+			}
+		}
+		LEP_expand_congressional_oversight = {
+			picture = generic_constitutional_guarantees
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.075
+				consumer_goods_factor = 0.025
+			}
+		}
+		LEP_support_academic_research = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.075
+				political_power_gain = -0.025
+			}
+		}
+		LEP_protect_private_property_idea = {
+			picture = generic_scales
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}
+		}
+		LEP_free_financial_market = {
+			picture = generic_loans
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.075
+				political_power_gain = -0.05
+			}
+		}
+		LEP_reduce_enterprise_burden = {
+			picture = generic_economic_increase
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		LEP_tax_cuts_and_fee_reductions = {
+			picture = generic_coins
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.025
+				political_power_gain = -0.075
+			}
+		}
+		LEP_deregulation = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		LEP_free_trade = {
+			picture = generic_trade
+			allowed = {
+				always = no
+			}
+			modifier = {
+				min_export = 0.05
+				industrial_capacity_factory = -0.05
+				stability_factor = -0.025
+			}
+		}
+		LEP_strengthen_executive_authority = {
+			picture = generic_central_management
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.05
+				war_support_factor = -0.025
+			}
+		}
+		LEP_local_rectification = {
+			picture = generic_investigation
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.025
+			}
+		}
+		LEP_national_development_plan = {
+			picture = man_five_year_plan_industry
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.075
+				political_power_gain = -0.025
+			}
+		}
+		LEP_improve_military_pay_and_benefits = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_morale_factor = 0.05
+				consumer_goods_factor = 0.075
+				political_power_gain = -0.025
+			}
+		}
+		LEP_additional_defense_appropriation = {
+			picture = generic_war_preparation
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.075
+				stability_factor = -0.025
+			}
+		}
+		LEP_resettle_veterans = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = -0.05
+				consumer_goods_factor = 0.025
+			}
+		}
+		LEP_youth_service_organization = {
+			picture = generic_political_support
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.05
+				political_power_gain = -0.025
+			}
+		}
+		LEP_national_education = {
+			picture = generic_modernisation_reforms_gold
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.075
+				political_power_gain = -0.025
+			}
+		}
+		LEP_anti_red_suppression_work = {
+			picture = generic_shield_against_communism
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = -0.05
+				political_power_gain = -0.025
+			}
+		}
 	}
 	
 

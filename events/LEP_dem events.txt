@@ -24,14 +24,11 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		QIE = {
-			QIE_tang_zaili = {
-				if = {
-					limit = { can_be_captured = yes }
-					capture_by = LEP
-				}
-			}
+		add_days_mission_timeout = {
+			mission = LEP_first_election_timer
+			days = -90
 		}
+		
 		
 		
 		
@@ -2680,6 +2677,24 @@ country_event = {
 		log = "[GetLogInfo]: event league_national.26 option league_national.26.a"
 		name = league_national.26.a
 	}
+}
+
+country_event = {
+	id = league_mid.1002
+	title = league_mid.1002.t
+	desc = league_mid.1002.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.6 option lep_election.6.a"
+		name = lep_election.6.a
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		add_ideas = LEP_expand_social_relief
+		LEP_hold_election_seats = yes
+	}
 }	
 
 country_event = { #宪法蓝本选择
@@ -4864,6 +4879,722 @@ country_event = { #议会中的少数派
 		log = "[GetLogInfo]: event lep_election.5 option lep_election.5.a"
 		name = lep_election.5.a
 		custom_effect_tooltip =  lep_election.5_tt
+	}
+}
+
+country_event = { #谈判：中工盟1
+	id = lep_election.6
+	title = lep_election.6.t
+	desc = lep_election.6.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.6 option lep_election.6.a"
+		name = lep_election.6.a
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_trade_union_representation_right
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.6 option lep_election.6.b"
+		name = lep_election.6.b
+	}
+}
+
+country_event = { #谈判：中工盟2
+	id = lep_election.7
+	title = lep_election.7.t
+	desc = lep_election.7.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.7 option lep_election.7.a"
+		name = lep_election.7.a
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_expand_social_relief
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.7 option lep_election.7.b"
+		name = lep_election.7.b
+	}
+}
+
+country_event = { #谈判：中工盟3
+	id = lep_election.8
+	title = lep_election.8.t
+	desc = lep_election.8.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.8 option lep_election.8.a"
+		name = lep_election.8.a
+		set_temp_variable = { coalition_partner_var = token:syndicalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_restrict_capital_merger
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.8 option lep_election.8.b"
+		name = lep_election.8.b
+	}
+}
+
+country_event = { #谈判：革委会1
+	id = lep_election.9
+	title = lep_election.9.t
+	desc = lep_election.9.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.9 option lep_election.9.a"
+		name = lep_election.9.a
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_promote_land_reform
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.9 option lep_election.9.b"
+		name = lep_election.9.b
+	}
+}
+
+country_event = { #谈判：革委会2
+	id = lep_election.10
+	title = lep_election.10.t
+	desc = lep_election.10.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.10 option lep_election.10.a"
+		name = lep_election.10.a
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_reorganize_bureaucratic_capital
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.10 option lep_election.10.b"
+		name = lep_election.10.b
+	}
+}
+
+country_event = { #谈判：革委会3
+	id = lep_election.11
+	title = lep_election.11.t
+	desc = lep_election.11.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.11 option lep_election.11.a"
+		name = lep_election.11.a
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_implement_revolutionary_program
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.11 option lep_election.11.b"
+		name = lep_election.11.b
+	}
+}
+
+country_event = {
+	id = lep_election.1003
+	title = lep_election.1003.t
+	desc = lep_election.1003.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.1003 option lep_election.1003.a"
+		name = lep_election.1003.a
+	}
+}
+
+country_event = { #谈判：救国会1
+	id = lep_election.12
+	title = lep_election.12.t
+	desc = lep_election.12.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.12 option lep_election.12.a"
+		name = lep_election.12.a
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_expand_social_relief
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.12 option lep_election.12.b"
+		name = lep_election.12.b
+	}
+}
+
+country_event = { #谈判：救国会2
+	id = lep_election.13
+	title = lep_election.13.t
+	desc = lep_election.13.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.13 option lep_election.13.a"
+		name = lep_election.13.a
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_labor_management_consultation
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.13 option lep_election.13.b"
+		name = lep_election.13.b
+	}
+}
+
+country_event = { #谈判：救国会3
+	id = lep_election.14
+	title = lep_election.14.t
+	desc = lep_election.14.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.14 option lep_election.14.a"
+		name = lep_election.14.a
+		set_temp_variable = { coalition_partner_var = token:social_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_develop_public_education
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.14 option lep_election.14.b"
+		name = lep_election.14.b
+	}
+}
+
+country_event = { #谈判：民科社1
+	id = lep_election.15
+	title = lep_election.15.t
+	desc = lep_election.15.d
+	picture = GFX_report_event_CHI_chen_gongbo_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.15 option lep_election.15.a"
+		name = lep_election.15.a
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_freedom_of_press_and_publication
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.15 option lep_election.15.b"
+		name = lep_election.15.b
+	}
+}
+
+country_event = { #谈判：民科社2
+	id = lep_election.16
+	title = lep_election.16.t
+	desc = lep_election.16.d
+	picture = GFX_report_event_CHI_chen_gongbo_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.16 option lep_election.16.a"
+		name = lep_election.16.a
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_expand_congressional_oversight
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.16 option lep_election.16.b"
+		name = lep_election.16.b
+	}
+}
+
+country_event = { #谈判：民科社3
+	id = lep_election.17
+	title = lep_election.17.t
+	desc = lep_election.17.d
+	picture = GFX_report_event_CHI_chen_gongbo_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.17 option lep_election.17.a"
+		name = lep_election.17.a
+		set_temp_variable = { coalition_partner_var = token:social_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_support_academic_research
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.17 option lep_election.17.b"
+		name = lep_election.17.b
+	}
+}
+
+country_event = { #谈判：国民党1
+	id = lep_election.18
+	title = lep_election.18.t
+	desc = lep_election.18.d
+	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.18 option lep_election.18.a"
+		name = lep_election.18.a
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_protect_private_property_idea
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.18 option lep_election.18.b"
+		name = lep_election.18.b
+	}
+}
+
+country_event = { #谈判：国民党2
+	id = lep_election.19
+	title = lep_election.19.t
+	desc = lep_election.19.d
+	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.19 option lep_election.19.a"
+		name = lep_election.19.a
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_free_financial_market
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.19 option lep_election.19.b"
+		name = lep_election.19.b
+	}
+}
+
+country_event = { #谈判：国民党3
+	id = lep_election.20
+	title = lep_election.20.t
+	desc = lep_election.20.d
+	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.20 option lep_election.20.a"
+		name = lep_election.20.a
+		set_temp_variable = { coalition_partner_var = token:market_liberal }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_tax_cuts_and_fee_reductions
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.20 option lep_election.20.b"
+		name = lep_election.20.b
+	}
+}
+
+country_event = { #谈判：工商勇进党1
+	id = lep_election.21
+	title = lep_election.21.t
+	desc = lep_election.21.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.21 option lep_election.21.a"
+		name = lep_election.21.a
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_reduce_enterprise_burden
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.21 option lep_election.21.b"
+		name = lep_election.21.b
+	}
+}
+
+country_event = { #谈判：工商勇进党2
+	id = lep_election.22
+	title = lep_election.22.t
+	desc = lep_election.22.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.22 option lep_election.22.a"
+		name = lep_election.22.a
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_deregulation
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.22 option lep_election.22.b"
+		name = lep_election.22.b
+	}
+}
+
+country_event = { #谈判：工商勇进党3
+	id = lep_election.23
+	title = lep_election.23.t
+	desc = lep_election.23.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.23 option lep_election.23.a"
+		name = lep_election.23.a
+		set_temp_variable = { coalition_partner_var = token:social_conservative }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_free_trade
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.23 option lep_election.23.b"
+		name = lep_election.23.b
+	}
+}
+
+country_event = { #谈判：景星会1
+	id = lep_election.24
+	title = lep_election.24.t
+	desc = lep_election.24.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.24 option lep_election.24.a"
+		name = lep_election.24.a
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_strengthen_executive_authority
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.24 option lep_election.24.b"
+		name = lep_election.24.b
+	}
+}
+
+country_event = { #谈判：景星会2
+	id = lep_election.25
+	title = lep_election.25.t
+	desc = lep_election.25.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.25 option lep_election.25.a"
+		name = lep_election.25.a
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_local_rectification
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.25 option lep_election.25.b"
+		name = lep_election.25.b
+	}
+}
+
+country_event = { #谈判：景星会3
+	id = lep_election.26
+	title = lep_election.26.t
+	desc = lep_election.26.d
+	picture = GFX_report_event_CHN_parliament_nanjing
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.26 option lep_election.26.a"
+		name = lep_election.26.a
+		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_national_development_plan
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.26 option lep_election.26.b"
+		name = lep_election.26.b
+	}
+}
+
+country_event = { #谈判：退伍军人协会1
+	id = lep_election.27
+	title = lep_election.27.t
+	desc = lep_election.27.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.27 option lep_election.27.a"
+		name = lep_election.27.a
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_improve_military_pay_and_benefits
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.27 option lep_election.27.b"
+		name = lep_election.27.b
+	}
+}
+
+country_event = { #谈判：退伍军人协会2
+	id = lep_election.28
+	title = lep_election.28.t
+	desc = lep_election.28.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.28 option lep_election.28.a"
+		name = lep_election.28.a
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_additional_defense_appropriation
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.28 option lep_election.28.b"
+		name = lep_election.28.b
+	}
+}
+
+country_event = { #谈判：退伍军人协会3
+	id = lep_election.29
+	title = lep_election.29.t
+	desc = lep_election.29.d
+	picture = GFX_report_event_CHN_vote
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.29 option lep_election.29.a"
+		name = lep_election.29.a
+		set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_resettle_veterans
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.29 option lep_election.29.b"
+		name = lep_election.29.b
+	}
+}
+
+country_event = { #谈判：青年党1
+	id = lep_election.30
+	title = lep_election.30.t
+	desc = lep_election.30.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.30 option lep_election.30.a"
+		name = lep_election.30.a
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_youth_service_organization
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.30 option lep_election.30.b"
+		name = lep_election.30.b
+	}
+}
+
+country_event = { #谈判：青年党2
+	id = lep_election.31
+	title = lep_election.31.t
+	desc = lep_election.31.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.31 option lep_election.31.a"
+		name = lep_election.31.a
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_national_education
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.31 option lep_election.31.b"
+		name = lep_election.31.b
+	}
+}
+
+country_event = { #谈判：青年党3
+	id = lep_election.32
+	title = lep_election.32.t
+	desc = lep_election.32.d
+	picture = GFX_report_event_CHN_china_five_colour_speech
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.32 option lep_election.32.a"
+		name = lep_election.32.a
+		set_temp_variable = { coalition_partner_var = token:national_populist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_anti_red_suppression_work
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.32 option lep_election.32.b"
+		name = lep_election.32.b
 	}
 }
 

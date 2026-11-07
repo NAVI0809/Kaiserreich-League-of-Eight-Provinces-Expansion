@@ -14,3 +14,75 @@
  RULE_OPTION_LEP_PATH_JNSB_DESC: "江南商帮改组为§c工商勇进党§!，民族资本与银行金融界成为政府的中坚，工商立国成为国策。"
  RULE_OPTION_LEP_PATH_ZXX: "£KR_game_rule_flag_CHN  国民党携炬而行"
  RULE_OPTION_LEP_PATH_ZXX_DESC: "政学系改组为§m国民党§!，承袭北洋国会传统，以议会政治与宪政为纲领。"
+
+ LEP_restrict_capital_merger: ""
+ LEP_restrict_capital_merger_desc: ""
+
+ LEP_promote_land_reform: "推进土地改革"
+ LEP_promote_land_reform_desc: ""
+
+ LEP_reorganize_bureaucratic_capital: "整顿官僚资本"
+ LEP_reorganize_bureaucratic_capital_desc: ""
+
+ LEP_implement_revolutionary_program: "贯彻革命纲领"
+ LEP_implement_revolutionary_program_desc: ""
+
+	LEP_expand_social_relief: "扩大社会救济"
+ LEP_expand_social_relief_desc: ""
+
+	LEP_labor_management_consultation: "劳资协商"
+ LEP_labor_management_consultation_desc: ""
+
+	LEP_develop_public_education: "发展公共教育"
+ LEP_develop_public_education_desc: ""
+
+	LEP_freedom_of_press_and_publication: "新闻出版自由"
+ LEP_freedom_of_press_and_publication_desc: ""
+
+	LEP_expand_congressional_oversight: "扩大国会监督"
+ LEP_expand_congressional_oversight_desc: ""
+
+	LEP_support_academic_research: "支持学术研究"
+ LEP_support_academic_research_desc: ""
+
+ LEP_protect_private_property: ""
+ LEP_protect_private_property_desc: ""
+
+	LEP_reduce_enterprise_burden: "企业减负"
+ LEP_reduce_enterprise_burden_desc: ""
+
+	LEP_tax_cuts_and_fee_reductions: "减税降费"
+ LEP_tax_cuts_and_fee_reductions_desc: ""
+
+	LEP_deregulation: "放松管制"
+ LEP_deregulation_desc: ""
+
+	LEP_free_trade: "自由贸易"
+ LEP_free_trade_desc: ""
+
+	LEP_strengthen_executive_authority: "强化行政权威"
+ LEP_strengthen_executive_authority_desc: ""
+
+	LEP_local_rectification: "地方整顿"
+ LEP_local_rectification_desc: ""
+
+	LEP_national_development_plan: "国家发展计划"
+ LEP_national_development_plan_desc: ""
+
+	LEP_improve_military_pay_and_benefits: "提高军人待遇"
+ LEP_improve_military_pay_and_benefits_desc: ""
+
+	LEP_additional_defense_appropriation: "额外国防拨款"
+ LEP_additional_defense_appropriation_desc: ""
+
+	LEP_resettle_veterans: "安置退伍军人"
+ LEP_resettle_veterans_desc: ""
+
+	LEP_youth_service_organization: "青年服务组织"
+ LEP_youth_service_organization_desc: ""
+
+	LEP_national_education: "国民教育"
+ LEP_national_education_desc: ""
+
+	LEP_anti_red_suppression_work: "反赤肃清工作"
+ LEP_anti_red_suppression_work_desc: ""
