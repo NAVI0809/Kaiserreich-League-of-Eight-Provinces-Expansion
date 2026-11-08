@@ -2484,9 +2484,9 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				LEP_chu_fucheng = {
-					unit_leader_event = { id = league_national.5 days = 50 }
+					unit_leader_event = { id = league_national.5 days = 10 }
 				}
-				country_event = { id = lep_election.1 days = 2 }
+				country_event = { id = lep_election.1 days = 18 }
 				remove_dynamic_modifier = { modifier = LEP_ZZH_influence_modifier }
 				remove_dynamic_modifier = { modifier = LEP_JNSB_influence_modifier }
 				remove_dynamic_modifier = { modifier = LEP_ZXX_influence_modifier }
