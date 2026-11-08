@@ -243,25 +243,25 @@ defined_text = {
 	name = GetMilitaryMobilizationVar
 	text = {
 		trigger = {
-			check_variable = { military_mobilization_var > 99 }
+			check_variable = { military_mobilization_var > 80 }
 		}
 		localization_key = GetMilitaryMobilizationVar99
 	}
 	text = {
 		trigger = {
-			check_variable = { military_mobilization_var > 75 }
+			check_variable = { military_mobilization_var > 60 }
 		}
 		localization_key = GetMilitaryMobilizationVar75
 	}
 	text = {
 		trigger = {
-			check_variable = { military_mobilization_var > 50 }
+			check_variable = { military_mobilization_var > 40 }
 		}
 		localization_key = GetMilitaryMobilizationVar50
 	}
 	text = {
 		trigger = {
-			check_variable = { military_mobilization_var > 25 }
+			check_variable = { military_mobilization_var > 20 }
 		}
 		localization_key = GetMilitaryMobilizationVar25
 	}
