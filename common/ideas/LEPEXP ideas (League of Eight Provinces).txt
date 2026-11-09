@@ -6,6 +6,71 @@
 
 ideas = {
 	#zigai
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+
+		LEPEXP_CNJP_treaties = {
+			on_add = { log = "[GetLogRoot]: add idea LEPEXP_CNJP_treaties" }
+			picture = unequal_treaties
+			level = 3
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed = { always = no }
+			cancel = {
+				has_global_flag = LEPEXP_japs_paid
+			}
+
+			modifier = {
+				min_export = 0.5
+				civilian_intel_to_others = 20.0
+			}
+			targeted_modifier = {
+				tag = LEP
+				cic_to_target_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = KOR
+				cic_to_target_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				has_global_flag = LEPEXP_japs_paid
+			}
+
+			on_remove = {
+				#Have post-LEC China start with export focus
+				if = {
+					limit = {
+						has_idea = closed_economy
+					}
+					swap_ideas = {
+						remove_idea = closed_economy
+						add_idea = 	export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = limited_exports
+					}
+					swap_ideas = {
+						remove_idea = limited_exports
+						add_idea = export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = free_trade
+					}
+					swap_ideas = {
+						remove_idea = free_trade
+						add_idea = export_focus
+					}
+				}
+			}
+		}
+	}	
 	country = {
 
 		
@@ -4282,6 +4347,59 @@ ideas = {
 				stability_factor = 0.05
 				research_speed_factor = -0.05
 				political_power_gain = -0.025
+			}
+		}
+		LEPEXP_trade_damage_idea = {
+			picture = FNG_mantetsu_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				war_support_weekly = -0.005
+				political_power_gain = -0.025
+				trade_opinion_factor = -0.5
+			}
+			on_remove = {
+				add_political_power = -100
+			}
+		}
+		LEPEXP_trade_damage_JAP_idea = {
+			picture = FNG_mantetsu_influence
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.2
+			}
+			on_remove = {
+				add_offsite_building = { type = industrial_complex level = 2 }
+				add_one_random_civilian_factory = yes
+				add_one_random_civilian_factory = yes
+			}
+		}
+		LEPEXP_gold_rush_idea = {
+			picture = generic_coins
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		LEPEXP_cn_production_standered_idea = {
+			picture = generic_politics_dispute_beiyang
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_speed_infrastructure_factor = 0.10
+				global_building_slots_factor = 0.10
+				production_factory_max_efficiency_factor = 0.1
 			}
 		}
 	}

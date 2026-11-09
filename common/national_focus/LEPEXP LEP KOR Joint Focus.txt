@@ -185,9 +185,84 @@ joint_focus = { #惩戒军国主义
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_Punish_Militarism_focus"
+		add_political_power = 30
+		JAP = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = -8000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -800
+			}
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_Punish_Militarism_focus"
+		add_political_power = 20
+		KOR = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 8000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 800
+				producer = JAP
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 100 producer = USA }
+			custom_effect_tooltip = LEPEXP_KOR_AB_TT
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Gongsuteugjeon Yeodan"
+					LINE_1 = { localization_key = line_battalion_tt NAME = paratrooper ICON = GFX_unit_paratrooper_icon_small COUNT = 8 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = airborne_light_armor ICON = GFX_unit_light_armor_icon_small }
+				}
+				if = {
+					limit = { has_template = "Gongsuteugjeon-yeodan" }
+					delete_unit_template_and_units = { division_template = "Gongsuteugjeon-yeodan" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Gongsuteugjeon-yeodan"
+					regiments = {
+						paratrooper = { x = 0 y = 0 }
+						paratrooper = { x = 0 y = 1 }
+						paratrooper = { x = 1 y = 0 }
+						paratrooper = { x = 1 y = 1 }
+						paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 2 y = 1 }
+						paratrooper = { x = 3 y = 0 }
+						paratrooper = { x = 3 y = 1 }
+					}
+					support = {
+						combat_engineer = { x = 0 y = 0 }
+						airborne_light_armor = { x = 0 y = 1 }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			282 = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "空输部队"
+					}
+					create_unit = {
+						division = "name = \"Je 1 Gongsuteugjeon-yeodan\" division_template = \"Gongsuteugjeon-yeodan\" start_experience_factor = 0.5"
+						owner = ROOT
+					}
+				}
+			}
+		}
+		JAP = {
+			add_stability = 0.1
+		}
 	}
 }
 
@@ -234,8 +309,8 @@ joint_focus = { #枪口下的土改
 			add_political_power = 100
 			add_manpower = 10000
 			add_stability = 0.05
-			add_one_random_civilian_factory = yes #SSJW Balancing - Cut Here First
-			add_one_random_civilian_factory = yes #SSJW Balancing - Cut Here First
+			add_one_random_civilian_factory = yes 
+			add_one_random_civilian_factory = yes 
 			unlock_decision_category_tooltip = JAP_land_reform
 			hidden_effect = { JAP_open_JAP_land_reform = yes }
 			LEPEXP_JAP_generic_land_reform_setup = yes
@@ -308,8 +383,10 @@ joint_focus = { #东渡淘金
 				id = league_jap.27
                 days = 1  
 			}
+			add_ideas = LEPEXP_gold_rush_idea
 		}
 		JAP = {
+			add_ideas = LEPEXP_gold_rush_idea
 			random_owned_state = {
 				remove_building = {
 					type = industrial_complex
@@ -365,7 +442,6 @@ joint_focus = { #开展基层选举
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_loacl_election_focus"
-		
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_loacl_election_focus"
@@ -399,15 +475,26 @@ joint_focus = { #倾销阴影
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_sell_everthing_focus"
 		LEP = {
 			add_political_power = -20
+			remove_ideas = LEPEXP_gold_rush_idea
+			add_timed_idea = {
+				idea = LEPEXP_trade_damage_idea
+				days = 150
+			}
 			country_event = {
 				id = league_jap.28
                 days = 1  
-			}
+			}			
 		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_sell_everthing_focus"
-		
+		JAP = {
+			remove_ideas = LEPEXP_gold_rush_idea
+			add_timed_idea = {
+				idea = LEPEXP_trade_damage_JAP_idea
+				days = 150
+			}
+		}
 	}
 }
 
@@ -443,11 +530,18 @@ joint_focus = { #推广中国工业标准
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_chinese_stander_focus"
-		
+		LEP = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_chinese_stander_focus"
-		
+		JAP = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
+		KOR = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
 	}
 }
 
@@ -480,9 +574,22 @@ joint_focus = { #筹备琉球独立
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_preparing_ryukyu_independence_focus"
+		LEP = {
+            transfer_state = 526
+			country_event = {
+				id = league_jap.29
+                days = 1  
+			}
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_preparing_ryukyu_independence_focus"
+		526 = {
+			add_dynamic_modifier = {
+				modifier = CHN_autonomous_region_modifier 
+				scope = THIS
+			}
+		}
 	}
 }
 
@@ -515,46 +622,56 @@ joint_focus = { #秋后算账
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_JAPS_must_pay_focus"
-	}
-	completion_reward_joint_member = {
-		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_JAPS_must_pay_focus"
-	}
-}
-
-joint_focus = { #秋后算账
-	id = LEPEXP_JAPS_must_pay_focus
-	icon = GFX_goal_SCA_defense_union
-	cost = 4
-
-	relative_position_id = LEPEXP_LEP_KOR_Joint_JAP_focus
-	x = -3
-	y = 1
-
-	text_icon = joint_focus_style
-
-	prerequisite = { focus = LEPEXP_LEP_KOR_Joint_JAP_focus }
-
-	available = {
-		LEP_KOR_JOINT_focus_available = yes
-	}
-
-	ai_will_do = { 
-		factor = 20
-		modifier = {
-			factor = 500
-			original_tag = KOR
-			OR = {
-			   has_completed_focus = KOR_prosecuting_the_traitorous_element
-			   has_completed_focus = KOR_dealing_with_the_collaborators
+		add_political_power = 30
+		JAP = {
+			add_political_power = -50
+			if = {
+			    limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = 	LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_exports
+				}
+				swap_ideas = {
+					remove_idea = limited_exports
+					add_idea = LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = free_trade
+				}
+				swap_ideas = {
+					remove_idea = free_trade
+					add_idea = LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = export_focus
+				}
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = LEPEXP_CNJP_treaties
+				}
 			}
 		}
 	}
-
-	completion_reward_joint_originator = {
-		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_JAPS_must_pay_focus"
-	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_JAPS_must_pay_focus"
+		add_political_power = 20
+		LEP = {
+			country_event = {
+				id = league_jap.30
+                days = 3
+			}
+		}
 	}
 }
 
@@ -626,9 +743,23 @@ joint_focus = { #没收日本专利
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_Revocation_jap_patents_focus"
+		add_timed_idea = {
+			idea = GER_intellectual_property_idea
+			days = 720
+		}
+		LEP = {
+			country_event = {
+				id = league_jap.31
+                days = 3
+			}
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_Revocation_jap_patents_focus"
+		add_timed_idea = {
+			idea = GER_intellectual_property_idea
+			days = 720
+		}
 	}
 }
 
@@ -676,11 +807,19 @@ joint_focus = { #重建而非毁灭
 					has_country_flag = LEPEXP_JAP_2
 				}
 				country_event = { id = league_jap.4 days = 5 }
-			}			
+			}	
+			country_event = { id = league_jap.25 days = 1 }		
 		}
+		set_global_flag = LEPEXP_japs_paid
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_rebuild_jap_focus"
+		KOR = {
+			country_event = { id = league_jap.25 days = 1 }
+		}
+		JAP = {
+			country_event = { id = league_jap.25 days = 1 }
+		}
 	}
 }
 
@@ -715,10 +854,21 @@ joint_focus = { #控制战略资源
 
 	completion_reward_joint_originator = {
 		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_jap_resource_taken_focus"
-		
+		JAP = {
+			give_resource_rights = {
+                receiver = LEP
+                state = 1102
+            }
+		}
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_jap_resource_taken_focus"
+		JAP = {
+			give_resource_rights = {
+                receiver = KOR
+                state = 528
+            }
+		}
 	}
 }
 
