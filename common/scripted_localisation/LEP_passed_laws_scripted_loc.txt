@@ -121,6 +121,198 @@ defined_text = {
 }
 
 defined_text = {
+	name = GetPressAct
+	text = {
+		localization_key = idea_desc|LEP_press_act_idea
+	}
+}
+
+defined_text = {
+	name = GetTradeUnionAct
+	text = {
+		localization_key = idea_desc|LEP_trade_union_act_idea
+	}
+}
+
+defined_text = {
+	name = GetLaborDisputeAct
+	text = {
+		localization_key = idea_desc|LEP_labor_dispute_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCivilPayAct
+	text = {
+		localization_key = idea_desc|LEP_civil_pay_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCentralBankAct
+	text = {
+		localization_key = idea_desc|LEP_central_bank_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCopyrightAct
+	text = {
+		localization_key = idea_desc|LEP_copyright_act_idea
+	}
+}
+
+defined_text = {
+	name = GetNormalSchoolAct
+	text = {
+		localization_key = idea_desc|LEP_normal_school_act_idea
+	}
+}
+
+defined_text = {
+	name = GetParliamentOrganizationAct
+	text = {
+		localization_key = idea_desc|LEP_parliament_organization_act_idea
+	}
+}
+
+defined_text = {
+	name = GetProvincialGovernmentAct
+	text = {
+		localization_key = idea_desc|LEP_provincial_government_act_idea
+	}
+}
+
+defined_text = {
+	name = GetBankAct
+	text = {
+		localization_key = idea_desc|LEP_bank_act_idea
+	}
+}
+
+defined_text = {
+	name = GetBusinessRegistrationAct
+	text = {
+		localization_key = idea_desc|LEP_business_registration_act_idea
+	}
+}
+
+defined_text = {
+	name = GetPhysicalEducationAct
+	text = {
+		localization_key = idea_desc|LEP_physical_education_act_idea
+	}
+}
+
+defined_text = {
+	name = GetMartialLawAct
+	text = {
+		localization_key = idea_desc|LEP_martial_law_act_idea
+	}
+}
+
+defined_text = {
+	name = GetUniversityAct
+	text = {
+		localization_key = idea_desc|LEP_university_act_idea
+	}
+}
+
+defined_text = {
+	name = GetLaborContractAct
+	text = {
+		localization_key = idea_desc|LEP_labor_contract_act_idea
+	}
+}
+
+defined_text = {
+	name = GetCivilCodeV1
+	text = {
+		localization_key = idea_desc|LEP_civil_code_idea_1
+	}
+}
+
+defined_text = {
+	name = GetCivilCodeV2
+	text = {
+		localization_key = idea_desc|LEP_civil_code_idea_2
+	}
+}
+
+defined_text = {
+	name = GetCivilCodeV3
+	text = {
+		localization_key = idea_desc|LEP_civil_code_idea_3
+	}
+}
+
+defined_text = {
+	name = GetPartyActV1
+	text = {
+		localization_key = idea_desc|LEP_political_association_management_act_idea_1
+	}
+}
+
+defined_text = {
+	name = GetPartyActV2
+	text = {
+		localization_key = idea_desc|LEP_political_association_management_act_idea_2
+	}
+}
+
+defined_text = {
+	name = LEP_GetCivilCodeBody
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_1
+		}
+		localization_key = LEP_civil_code_body_1
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_2
+		}
+		localization_key = LEP_civil_code_body_2
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_civil_code_idea_3
+		}
+		localization_key = LEP_civil_code_body_3
+	}
+}
+
+defined_text = {
+	name = LEP_GetPartyActBody
+	text = {
+		trigger = {
+			has_idea = LEP_political_association_management_act_idea_1
+		}
+		localization_key = LEP_political_association_management_act_body_1
+	}
+	text = {
+		trigger = {
+			has_idea = LEP_political_association_management_act_idea_2
+		}
+		localization_key = LEP_political_association_management_act_body_2
+	}
+}
+
+defined_text = {
+	name = LEP_GetActTip7
+	text = {
+		localization_key = idea_desc|LEP_political_association_management_act_idea_1
+	}
+}
+
+defined_text = {
+	name = LEP_GetActTip13
+	text = {
+		localization_key = idea_desc|LEP_civil_code_idea_1
+	}
+}
+
+defined_text = {
 	name = LEP_GetPassedLawName
 	text = {
 		trigger = { check_variable = { LEP_law_id = 1 } }
@@ -179,8 +371,68 @@ defined_text = {
 		localization_key = LEP_provincial_authority_act
 	}
 	text = {
-		localization_key = LEP_act_unknown
+		trigger = { check_variable = { LEP_law_id = 15 } }
+		localization_key = LEP_press_act
 	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 16 } }
+		localization_key = LEP_trade_union_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 17 } }
+		localization_key = LEP_labor_dispute_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 18 } }
+		localization_key = LEP_civil_pay_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 19 } }
+		localization_key = LEP_central_bank_act
+	}
+	text = {
+		localization_key = LEP_act_unknown
+	}	text = {
+		trigger = { check_variable = { LEP_law_id = 20 } }
+		localization_key = LEP_copyright_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 21 } }
+		localization_key = LEP_normal_school_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 22 } }
+		localization_key = LEP_parliament_organization_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 23 } }
+		localization_key = LEP_provincial_government_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 24 } }
+		localization_key = LEP_bank_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 25 } }
+		localization_key = LEP_business_registration_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 26 } }
+		localization_key = LEP_physical_education_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 27 } }
+		localization_key = LEP_martial_law_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 28 } }
+		localization_key = LEP_university_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 29 } }
+		localization_key = LEP_labor_contract_act
+	}
+
 }
 
 defined_text = {
@@ -211,7 +463,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 7 } }
-		localization_key = LEP_political_association_management_act_desc_tip
+		localization_key = "[LEP_GetPartyActBody]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 8 } }
@@ -235,15 +487,75 @@ defined_text = {
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 13 } }
-		localization_key = LEP_civil_code_desc_tip
+		localization_key = "[LEP_GetCivilCodeBody]"
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_id = 14 } }
 		localization_key = LEP_provincial_authority_act_desc
 	}
 	text = {
-		localization_key = LEP_act_unknown
+		trigger = { check_variable = { LEP_law_id = 15 } }
+		localization_key = LEP_press_act_desc
 	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 16 } }
+		localization_key = LEP_trade_union_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 17 } }
+		localization_key = LEP_labor_dispute_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 18 } }
+		localization_key = LEP_civil_pay_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 19 } }
+		localization_key = LEP_central_bank_act_desc
+	}
+	text = {
+		localization_key = LEP_act_unknown
+	}	text = {
+		trigger = { check_variable = { LEP_law_id = 20 } }
+		localization_key = LEP_copyright_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 21 } }
+		localization_key = LEP_normal_school_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 22 } }
+		localization_key = LEP_parliament_organization_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 23 } }
+		localization_key = LEP_provincial_government_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 24 } }
+		localization_key = LEP_bank_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 25 } }
+		localization_key = LEP_business_registration_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 26 } }
+		localization_key = LEP_physical_education_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 27 } }
+		localization_key = LEP_martial_law_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 28 } }
+		localization_key = LEP_university_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 29 } }
+		localization_key = LEP_labor_contract_act_desc
+	}
+
 }
 
 defined_text = {
@@ -305,8 +617,68 @@ defined_text = {
 		localization_key = "[?LEP_law_date_14.GetDateStringNoHour] 通过"
 	}
 	text = {
-		localization_key = ""
+		trigger = { check_variable = { LEP_law_id = 15 } }
+		localization_key = "[?LEP_law_date_15.GetDateStringNoHour] 通过"
 	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 16 } }
+		localization_key = "[?LEP_law_date_16.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 17 } }
+		localization_key = "[?LEP_law_date_17.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 18 } }
+		localization_key = "[?LEP_law_date_18.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 19 } }
+		localization_key = "[?LEP_law_date_19.GetDateStringNoHour] 通过"
+	}
+	text = {
+		localization_key = ""
+	}	text = {
+		trigger = { check_variable = { LEP_law_id = 20 } }
+		localization_key = "[?LEP_law_date_20.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 21 } }
+		localization_key = "[?LEP_law_date_21.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 22 } }
+		localization_key = "[?LEP_law_date_22.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 23 } }
+		localization_key = "[?LEP_law_date_23.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 24 } }
+		localization_key = "[?LEP_law_date_24.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 25 } }
+		localization_key = "[?LEP_law_date_25.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 26 } }
+		localization_key = "[?LEP_law_date_26.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 27 } }
+		localization_key = "[?LEP_law_date_27.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 28 } }
+		localization_key = "[?LEP_law_date_28.GetDateStringNoHour] 通过"
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_id = 29 } }
+		localization_key = "[?LEP_law_date_29.GetDateStringNoHour] 通过"
+	}
+
 }
 
 ### 序号：第几个通过（行号拼键，需要 LEP_law_seq_0 … LEP_law_seq_13，见 05 片段）
@@ -411,8 +783,68 @@ defined_text = {
 		localization_key = LEP_provincial_authority_act
 	}
 	text = {
-		localization_key = LEP_law_detail_hint
+		trigger = { check_variable = { LEP_law_detail = 15 } }
+		localization_key = LEP_press_act
 	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 16 } }
+		localization_key = LEP_trade_union_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 17 } }
+		localization_key = LEP_labor_dispute_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 18 } }
+		localization_key = LEP_civil_pay_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 19 } }
+		localization_key = LEP_central_bank_act
+	}
+	text = {
+		localization_key = LEP_law_detail_hint
+	}	text = {
+		trigger = { check_variable = { LEP_law_detail = 20 } }
+		localization_key = LEP_copyright_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 21 } }
+		localization_key = LEP_normal_school_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 22 } }
+		localization_key = LEP_parliament_organization_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 23 } }
+		localization_key = LEP_provincial_government_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 24 } }
+		localization_key = LEP_bank_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 25 } }
+		localization_key = LEP_business_registration_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 26 } }
+		localization_key = LEP_physical_education_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 27 } }
+		localization_key = LEP_martial_law_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 28 } }
+		localization_key = LEP_university_act
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 29 } }
+		localization_key = LEP_labor_contract_act
+	}
+
 }
 
 defined_text = {
@@ -442,8 +874,18 @@ defined_text = {
 		localization_key = LEP_mass_layoff_protection_act_desc
 	}
 	text = {
-		trigger = { check_variable = { LEP_law_detail = 7 } }
-		localization_key = LEP_political_association_management_act_desc_tip
+		trigger = {
+			check_variable = { LEP_law_detail = 7 }
+			has_idea = LEP_political_association_management_act_idea_1
+		}
+		localization_key = LEP_political_association_management_act_body_1
+	}
+	text = {
+		trigger = {
+			check_variable = { LEP_law_detail = 7 }
+			has_idea = LEP_political_association_management_act_idea_2
+		}
+		localization_key = LEP_political_association_management_act_body_2
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_detail = 8 } }
@@ -466,12 +908,89 @@ defined_text = {
 		localization_key = LEP_land_act_desc
 	}
 	text = {
-		trigger = { check_variable = { LEP_law_detail = 13 } }
-		localization_key = LEP_civil_code_desc_tip
+		trigger = {
+			check_variable = { LEP_law_detail = 13 }
+			has_idea = LEP_civil_code_idea_1
+		}
+		localization_key = LEP_civil_code_body_1
+	}
+	text = {
+		trigger = {
+			check_variable = { LEP_law_detail = 13 }
+			has_idea = LEP_civil_code_idea_2
+		}
+		localization_key = LEP_civil_code_body_2
+	}
+	text = {
+		trigger = {
+			check_variable = { LEP_law_detail = 13 }
+			has_idea = LEP_civil_code_idea_3
+		}
+		localization_key = LEP_civil_code_body_3
 	}
 	text = {
 		trigger = { check_variable = { LEP_law_detail = 14 } }
 		localization_key = LEP_provincial_authority_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 15 } }
+		localization_key = LEP_press_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 16 } }
+		localization_key = LEP_trade_union_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 17 } }
+		localization_key = LEP_labor_dispute_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 18 } }
+		localization_key = LEP_civil_pay_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 19 } }
+		localization_key = LEP_central_bank_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 20 } }
+		localization_key = LEP_copyright_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 21 } }
+		localization_key = LEP_normal_school_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 22 } }
+		localization_key = LEP_parliament_organization_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 23 } }
+		localization_key = LEP_provincial_government_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 24 } }
+		localization_key = LEP_bank_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 25 } }
+		localization_key = LEP_business_registration_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 26 } }
+		localization_key = LEP_physical_education_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 27 } }
+		localization_key = LEP_martial_law_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 28 } }
+		localization_key = LEP_university_act_desc
+	}
+	text = {
+		trigger = { check_variable = { LEP_law_detail = 29 } }
+		localization_key = LEP_labor_contract_act_desc
 	}
 	text = {
 		localization_key = ""

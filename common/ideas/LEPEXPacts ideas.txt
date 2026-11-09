@@ -345,7 +345,319 @@ ideas = {
 		        overlord_trade_cost_factor = -0.1
 			}
 		}
+
+		LEP_press_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_15 } }
+					set_variable = { LEP_law_seen_15 = 1 }
+					add_to_array = { LEP_passed_law_ids = 15 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_15 = global.date }
+				}
+			}
+			modifier = {
+				stability_factor = 0.075
+				war_support_factor = 0.05
+				political_power_gain = -0.02
+			}
+		}
+
+		LEP_trade_union_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_16 } }
+					set_variable = { LEP_law_seen_16 = 1 }
+					add_to_array = { LEP_passed_law_ids = 16 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_16 = global.date }
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.075
+				stability_factor = 0.05
+				political_power_gain = -0.02
+			}
+		}
+
+		LEP_labor_dispute_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_17 } }
+					set_variable = { LEP_law_seen_17 = 1 }
+					add_to_array = { LEP_passed_law_ids = 17 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_17 = global.date }
+				}
+			}
+			modifier = {
+				stability_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		LEP_civil_pay_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_18 } }
+					set_variable = { LEP_law_seen_18 = 1 }
+					add_to_array = { LEP_passed_law_ids = 18 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_18 = global.date }
+				}
+			}
+			modifier = {
+				stability_factor = 0.075
+				political_power_gain = 0.02
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		LEP_central_bank_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_19 } }
+					set_variable = { LEP_law_seen_19 = 1 }
+					add_to_array = { LEP_passed_law_ids = 19 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_19 = global.date }
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.075
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
 	}
+
+		LEP_copyright_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_20 } }
+					set_variable = { LEP_law_seen_20 = 1 }
+					add_to_array = { LEP_passed_law_ids = 20 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_20 = global.date }
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = -0.05
+				political_power_gain = -0.1
+				war_support_factor = -0.025
+			}
+		}
+
+		LEP_normal_school_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_21 } }
+					set_variable = { LEP_law_seen_21 = 1 }
+					add_to_array = { LEP_passed_law_ids = 21 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_21 = global.date }
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.05
+				stability_factor = 0.025
+				political_power_gain = -0.025
+			}
+		}
+
+		LEP_parliament_organization_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_22 } }
+					set_variable = { LEP_law_seen_22 = 1 }
+					add_to_array = { LEP_passed_law_ids = 22 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_22 = global.date }
+				}
+			}
+			modifier = {
+				political_power_gain = 0.075
+				stability_factor = 0.05
+				war_support_factor = -0.025
+				political_advisor_cost_factor = -0.1
+			}
+		}
+
+		LEP_provincial_government_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_23 } }
+					set_variable = { LEP_law_seen_23 = 1 }
+					add_to_array = { LEP_passed_law_ids = 23 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_23 = global.date }
+				}
+			}
+			modifier = {
+				political_power_factor = 0.1
+				political_advisor_cost_factor = -0.15
+				trade_laws_cost_factor = -0.33
+				local_supplies = 0.05
+			}
+		}
+
+		LEP_bank_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_24 } }
+					set_variable = { LEP_law_seen_24 = 1 }
+					add_to_array = { LEP_passed_law_ids = 24 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_24 = global.date }
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.025
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		LEP_business_registration_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_25 } }
+					set_variable = { LEP_law_seen_25 = 1 }
+					add_to_array = { LEP_passed_law_ids = 25 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_25 = global.date }
+				}
+			}
+			modifier = {
+				political_power_gain = 0.05
+				tank_manufacturer_cost_factor = -0.15
+				naval_manufacturer_cost_factor = -0.15
+				aircraft_manufacturer_cost_factor = -0.15
+				materiel_manufacturer_cost_factor = -0.15
+				industrial_concern_cost_factor = -0.15
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		LEP_physical_education_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_26 } }
+					set_variable = { LEP_law_seen_26 = 1 }
+					add_to_array = { LEP_passed_law_ids = 26 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_26 = global.date }
+				}
+			}
+			modifier = {
+				training_time_army_factor = -0.15
+				experience_gain_army_factor = 0.05
+				war_support_factor = 0.05
+				conscription_factor = 0.03
+			}
+		}
+
+		LEP_martial_law_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_27 } }
+					set_variable = { LEP_law_seen_27 = 1 }
+					add_to_array = { LEP_passed_law_ids = 27 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_27 = global.date }
+				}
+			}
+			modifier = {
+				stability_factor = 0.075
+				war_support_factor = 0.05
+				political_power_gain = -0.05
+				resistance_growth = -0.1
+			}
+		}
+
+		LEP_university_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_28 } }
+					set_variable = { LEP_law_seen_28 = 1 }
+					add_to_array = { LEP_passed_law_ids = 28 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_28 = global.date }
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.025
+				consumer_goods_factor = 0.025
+				political_power_factor = 0.025
+			}
+		}
+
+		LEP_labor_contract_act_idea = {
+			allowed = {
+				always = yes
+			}
+			on_add = {
+				if = {
+					limit = { NOT = { has_variable = LEP_law_seen_29 } }
+					set_variable = { LEP_law_seen_29 = 1 }
+					add_to_array = { LEP_passed_law_ids = 29 }
+					set_variable_to_random = LEP_law_gui_dirty
+					set_variable = { LEP_law_date_29 = global.date }
+				}
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				political_power_gain = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
 
 	
 }

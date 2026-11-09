@@ -4689,8 +4689,25 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_academic_freedom
-		}
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_copyright_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_copyright_act_idea
+			}
+}
 	}
 	focus = {
 		id = LEP_human_rights_protection_commission
@@ -4744,6 +4761,19 @@ focus_tree = {
 		relative_position_id = LEP_absolute_freedom_of_academic_thought
 		x = 2
 		y = 1
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_popularity = { ideology = social_liberal popularity = 0.02 }
+			custom_effect_tooltip = LEP_normal_school_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_normal_school_act_idea
+			}
+		}
 
 	}
 	focus = {
@@ -4769,10 +4799,38 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
 				remove_idea = LEP_political_rationality1
 				add_idea = LEP_political_rationality2n
 			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_civil_pay_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_civil_pay_act_idea
+			}
+			
 		}
 
 	}
@@ -5084,8 +5142,25 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_multi_level_governance_system_idea
-		}
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_provincial_government_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_provincial_government_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -5123,11 +5198,29 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
 				remove_idea = LEP_disappointment
 				add_idea = LEP_disappointment1
 			}
-		}
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_parliament_organization_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_parliament_organization_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -5269,7 +5362,25 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_financial_backing
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_central_bank_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_central_bank_act_idea
+			}
 		}
 
 	}
@@ -5397,8 +5508,25 @@ focus_tree = {
 		x = -3
 		y = 1
 		completion_reward = {
-			add_ideas = LEP_modern_management_system_idea
-		}
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_business_registration_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_business_registration_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -5418,7 +5546,25 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_labor_capital_reconciliation_idea
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_labor_dispute_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_labor_dispute_act_idea
+			}
 		}
 
 	}
@@ -5439,7 +5585,25 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_ideas = LEP_depoliticize_trade_unions_idea
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_trade_union_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_trade_union_act_idea
+			}
 		}
 
 	}
@@ -5629,8 +5793,26 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			LEP_tianyuan_effect = yes
-		}
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_bank_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_bank_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -5778,10 +5960,28 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_stability = 0.05
 			LEP_strengthen_JXH_large = yes
 			remove_ideas = LEP_ruins_waiting_for_reconstruction2
-		}
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_martial_law_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_martial_law_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -5846,10 +6046,28 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_stability = 0.05
 			swap_ideas = {
 				remove_idea = LEP_disappointment
 				add_idea = LEP_disappointment1
+			}
+			custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_press_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_press_act_idea
 			}
 		}
 
@@ -6031,11 +6249,30 @@ focus_tree = {
 		x = 1
 		y = 1
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+			# 政策本身照常升级；本级追加的收益已移入《劳动契约法》
 			swap_ideas = {
 				remove_idea = LEP_social_reform
 				add_idea = LEP_social_reform2
 			}
-		}
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_labor_contract_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_labor_contract_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -6159,8 +6396,26 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
 			add_research_slot_until_five = yes
-		}
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_university_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_university_act_idea
+			}
+}
 
 	}
 	focus = {
@@ -6308,8 +6563,25 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			add_ideas = YUN_youth_paramilitarism_idea
-		}
+			# 表决预览：席位过半 → 将通过；否则 → 将被否决
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_act_will_pass_tt
+			}
+			else = {
+				custom_effect_tooltip = LEP_act_will_block_tt
+			}
+			custom_effect_tooltip = tooltip_white_line
+					custom_effect_tooltip = tooltip_white_line
+			custom_effect_tooltip = LEP_physical_education_act_tt
+			custom_effect_tooltip = tooltip_white_line
+			# 表决：只有执政联盟过半，这项法案才真的通过
+			if = {
+				limit = { check_variable = { LEP_coalition_seats > 137 } }
+				custom_effect_tooltip = LEP_when_act_pass
+				add_ideas = LEP_physical_education_act_idea
+			}
+}
 
 	}
 	focus = {

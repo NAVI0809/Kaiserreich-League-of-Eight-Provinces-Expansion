@@ -90,6 +90,51 @@ scripted_gui = {
 			LEP_law_click_14_click = {
 				set_variable = { LEP_law_detail = 14 }
 			}
+			LEP_law_click_15_click = {
+				set_variable = { LEP_law_detail = 15 }
+			}
+			LEP_law_click_16_click = {
+				set_variable = { LEP_law_detail = 16 }
+			}
+			LEP_law_click_17_click = {
+				set_variable = { LEP_law_detail = 17 }
+			}
+			LEP_law_click_18_click = {
+				set_variable = { LEP_law_detail = 18 }
+			}
+			LEP_law_click_19_click = {
+				set_variable = { LEP_law_detail = 19 }
+			}
+			LEP_law_click_20_click = {
+				set_variable = { LEP_law_detail = 20 }
+			}
+			LEP_law_click_21_click = {
+				set_variable = { LEP_law_detail = 21 }
+			}
+			LEP_law_click_22_click = {
+				set_variable = { LEP_law_detail = 22 }
+			}
+			LEP_law_click_23_click = {
+				set_variable = { LEP_law_detail = 23 }
+			}
+			LEP_law_click_24_click = {
+				set_variable = { LEP_law_detail = 24 }
+			}
+			LEP_law_click_25_click = {
+				set_variable = { LEP_law_detail = 25 }
+			}
+			LEP_law_click_26_click = {
+				set_variable = { LEP_law_detail = 26 }
+			}
+			LEP_law_click_27_click = {
+				set_variable = { LEP_law_detail = 27 }
+			}
+			LEP_law_click_28_click = {
+				set_variable = { LEP_law_detail = 28 }
+			}
+			LEP_law_click_29_click = {
+				set_variable = { LEP_law_detail = 29 }
+			}
 
 
 			# ✕ = 清除内容：清空所选法案，详情区回到提示语
@@ -188,6 +233,51 @@ scripted_gui = {
 			}
 			LEP_law_click_14_visible = {
 				check_variable = { LEP_law_id = 14 }
+			}
+			LEP_law_click_15_visible = {
+				check_variable = { LEP_law_id = 15 }
+			}
+			LEP_law_click_16_visible = {
+				check_variable = { LEP_law_id = 16 }
+			}
+			LEP_law_click_17_visible = {
+				check_variable = { LEP_law_id = 17 }
+			}
+			LEP_law_click_18_visible = {
+				check_variable = { LEP_law_id = 18 }
+			}
+			LEP_law_click_19_visible = {
+				check_variable = { LEP_law_id = 19 }
+			}
+			LEP_law_click_20_visible = {
+				check_variable = { LEP_law_id = 20 }
+			}
+			LEP_law_click_21_visible = {
+				check_variable = { LEP_law_id = 21 }
+			}
+			LEP_law_click_22_visible = {
+				check_variable = { LEP_law_id = 22 }
+			}
+			LEP_law_click_23_visible = {
+				check_variable = { LEP_law_id = 23 }
+			}
+			LEP_law_click_24_visible = {
+				check_variable = { LEP_law_id = 24 }
+			}
+			LEP_law_click_25_visible = {
+				check_variable = { LEP_law_id = 25 }
+			}
+			LEP_law_click_26_visible = {
+				check_variable = { LEP_law_id = 26 }
+			}
+			LEP_law_click_27_visible = {
+				check_variable = { LEP_law_id = 27 }
+			}
+			LEP_law_click_28_visible = {
+				check_variable = { LEP_law_id = 28 }
+			}
+			LEP_law_click_29_visible = {
+				check_variable = { LEP_law_id = 29 }
 			}
 		}
 	}

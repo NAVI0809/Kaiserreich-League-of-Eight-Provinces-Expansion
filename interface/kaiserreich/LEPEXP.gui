@@ -169,7 +169,7 @@ iconType = {
 	containerWindowType = {
 		name = "ui_parliament"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 620 }
+		size = { width = 100% height = 856 }
 
 		# 装饰性议会徽章 —— 已让位给上方的席位条，移到条下方并与「已通过法案」同行
 		iconType = {
@@ -292,7 +292,7 @@ iconType = {
 		containerWindowType = {
 			name = "LEP_law_detail_container"
 			position = { x = 6 y = 406 }
-			size = { width = 490 height = 200 }
+			size = { width = 490 height = 440 }
 			Orientation = upper_left
 			clipping = yes
 
@@ -322,11 +322,11 @@ iconType = {
 
 			instantTextBoxType = {
 				name = "LEP_law_detail_body"
-				position = { x = 14 y = 46 }
+				position = { x = 14 y = 42 }
 				font = "hoi_16mbs"
 				text = "[LEP_GetLawDetailBody]"
-				maxWidth = 460
-				maxHeight = 146
+				maxWidth = 448
+				maxHeight = 392
 				format = left
 			}
 		}
@@ -472,7 +472,102 @@ iconType = {
 			spriteType = "GFX_LEPEXP_law_click_area"
 			clicksound = click_action
 		}
-	}
+
+		buttonType = {
+			name = "LEP_law_click_15"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_16"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_17"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_18"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_19"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_20"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_21"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_22"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_23"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_24"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_25"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_26"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_27"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_28"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_29"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}	}
 
 	containerWindowType = {
 		name = "ui_industry"

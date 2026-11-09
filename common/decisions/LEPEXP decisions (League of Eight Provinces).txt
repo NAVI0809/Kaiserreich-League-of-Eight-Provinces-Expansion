@@ -93,6 +93,51 @@ LEPEXP_DEBUG_CAT = {
 			}
 		}
 	}
+	### 法案调试
+
+	LEPEXP_debug_all_laws = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			tag = LEP
+		}
+		complete_effect = {
+			# 一次通过全部 29 部法案；每部法案的 on_add 会自行登记进议会列表
+			add_ideas = LEP_organization_act_idea
+			add_ideas = LEP_compulsory_education_act_idea
+			add_ideas = LEP_civil_service_act_idea
+			add_ideas = LEP_provincial_county_organization_act_idea
+			add_ideas = LEP_factory_inspection_act_idea
+			add_ideas = LEP_mass_layoff_protection_act_idea
+			add_ideas = LEP_political_association_management_act_idea_1
+			add_ideas = LEP_factory_act_idea
+			add_ideas = LEP_social_security_act_idea
+			add_ideas = LEP_company_act_idea
+			add_ideas = LEP_collective_agreement_act_idea
+			add_ideas = LEP_land_act_idea
+			add_ideas = LEP_civil_code_idea_1
+			add_ideas = LEP_provincial_authority_act_idea
+			add_ideas = LEP_press_act_idea
+			add_ideas = LEP_trade_union_act_idea
+			add_ideas = LEP_labor_dispute_act_idea
+			add_ideas = LEP_civil_pay_act_idea
+			add_ideas = LEP_central_bank_act_idea
+			add_ideas = LEP_copyright_act_idea
+			add_ideas = LEP_normal_school_act_idea
+			add_ideas = LEP_parliament_organization_act_idea
+			add_ideas = LEP_provincial_government_act_idea
+			add_ideas = LEP_bank_act_idea
+			add_ideas = LEP_business_registration_act_idea
+			add_ideas = LEP_physical_education_act_idea
+			add_ideas = LEP_martial_law_act_idea
+			add_ideas = LEP_university_act_idea
+			add_ideas = LEP_labor_contract_act_idea
+		}
+	}
+
 	### 选举调试（调试模式可见）
 
 	LEPEXP_debug_election1_start = {

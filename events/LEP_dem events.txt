@@ -4527,6 +4527,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			country_event = { id = league_national.24 days = 30 }
 			clr_country_flag = LEP_first_election_open
 			### AI 且预设了游戏路线：只保留该路线党派当选，玩家操作时不生效
 			if = {
@@ -4577,7 +4578,7 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
-			country_event = { id = league_national.24 days = 30 }
+			
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
@@ -4602,7 +4603,7 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
-			country_event = { id = league_national.24 days = 30 }
+			
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
@@ -4627,7 +4628,6 @@ country_event = {
 			country_event = { id = league_national.9 days = 5 }
 		}
 		hidden_effect = {
-			country_event = { id = league_national.24 days = 30 }
 			set_variable = { LEP_election_KMT_var = 0 }
 			set_variable = { LEP_election_DSP_var = 0 }
 			set_variable = { LEP_election_JNSB_var = 0 }
