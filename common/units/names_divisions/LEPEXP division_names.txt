@@ -82,7 +82,7 @@ LEP_GAR_01 = {
 LEP_GAR_02 = {
 	name = div_jingbei_unit_2
 
-	for_countries = { LEP }
+	for_countries = { LEP RYK }
 
 	division_types = { "irregular_infantry" "militia" "infantry"}
 
@@ -173,7 +173,7 @@ LEP_ARM_02 = {
 LEP_PAR_02 = {
 	name = div_paratrooper_unit_LEPEXP
 
-	for_countries = { LEP }
+	for_countries = { LEP KOR }
 
 	division_types = { "paratrooper" }
 

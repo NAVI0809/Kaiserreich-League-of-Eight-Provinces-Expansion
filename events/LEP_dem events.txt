@@ -8108,6 +8108,12 @@ country_event = { #琉球
 		526 = { 
 			add_compliance = 20
 		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEPEXP_RYK_STATE_TT
+		country_event = {
+			id = league_jap.32
+			days = 1000
+		}
 	}
 	option = {
 		log = "[GetLogInfo]: event league_jap.29 option league_jap.29.b"
@@ -8128,6 +8134,12 @@ country_event = { #琉球
 				}
 			}
 		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEPEXP_RYK_STATE_TT
+		country_event = {
+			id = league_jap.32
+			days = 1200
+		}
 	}
 
 	option = {
@@ -8135,6 +8147,12 @@ country_event = { #琉球
 		name = league_jap.29.c
 		526 = { 
 			add_extra_state_shared_building_slots = 3
+		}
+		custom_effect_tooltip = tooltip_white_line
+		custom_effect_tooltip = LEPEXP_RYK_STATE_TT
+		country_event = {
+			id = league_jap.32
+			days = 1100
 		}
 	}
 }
@@ -8170,6 +8188,64 @@ country_event = { #八木
 			category = electronics
 			bonus = 0.3
 			uses = 3
+		}
+	}
+}
+
+country_event = { #琉球独立
+	id = league_jap.32
+	title = league_jap.32.t
+	desc = league_jap.32.d
+	picture = GFX_report_event_taiwan_and_ryukyu_islands_map
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.32 option league_jap.32.a"
+		name = league_jap.32.a
+        LEPEXP_RYK_setup_gov_effect = yes
+		526 = { 
+			add_extra_state_shared_building_slots = 1
+			remove_dynamic_modifier = {
+				modifier = CHN_autonomous_region_modifier 
+				scope = THIS
+			}
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.32 option league_jap.32.b"
+		name = league_jap.32.b
+		hidden_effect = {
+			country_event = {
+				id = league_jap.32
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = { #空输
+	id = league_jap.33
+	title = league_jap.33.t
+	desc = league_jap.33.d
+	picture = GFX_report_event_taiwan_and_ryukyu_islands_map
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_jap.33 option league_jap.33.a"
+		name = league_jap.33.a
+		1099 = {
+            teleport_armies = {
+                to_state = 282
+                limit = {
+                    tag = KOR
+                }
+            }
+        }
+		282 = {
+		   transfer_state_to = JAP
 		}
 	}
 }

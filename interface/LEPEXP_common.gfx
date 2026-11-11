@@ -1,0 +1,94 @@
+spriteTypes = {
+
+	#subunits
+	spriteType = { 
+		name = "GFX_unit_combat_engineer_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/support_unit_combat_engineer_icon.dds" 
+		noOfFrames = 2 
+	}
+
+	spriteType = { 
+		name = "GFX_unit_combat_engineer_icon_medium_white"				
+	    textureFile = "gfx/interface/counters/divisions_small/onmap_support_unit_combat_engineer_icon.dds" 
+		noOfFrames = 2 
+	}
+
+	spriteType = { 
+		name = "GFX_unit_combat_engineer_icon_small"				
+	    textureFile = "gfx/interface/counters/divisions_small/onmap_support_unit_combat_engineer_icon.dds" 
+		noOfFrames = 2 
+	}
+
+	#texticons
+	spriteType = {
+		name = "GFX_flag_LEP_nanjing_texticons"
+		texturefile = "gfx/texticons/LEP_nanjing_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_dem_texticon"
+		texturefile = "gfx/texticons/LEP_dem_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_jiangsu_texticon"
+		texturefile = "gfx/texticons/LEP_jiangsu_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_flag_LEP_shanghai_texticon"
+		texturefile = "gfx/texticons/LEP_shanghai_texticon.png"
+		legacy_lazy_load = no
+	}
+
+	#MIO
+	spriteType = {
+		name = "GFX_military_industrial_organization_cat_heavy_fighter"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/generic_mio_department_icon_plane_heavy_fighter.dds"
+	}
+	
+	#focus
+	spriteType = {
+		name = "GFX_goal_LEPEXP_CN_JAP_gold_rush_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_CN_JAP_gold_rush_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_preparing_ryukyu_independence_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_preparing_ryukyu_independence_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_JAPS_must_pay_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_JAPS_must_pay_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_CN_JAP_return_stolen_artifacts"
+		texturefile = "gfx/interface/goals/LEPEXP_CN_JAP_return_stolen_artifacts.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_CN_JAP_loacl_election_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_CN_JAP_loacl_election_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_CN_JAP_sell_everthing_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_CN_JAP_sell_everthing_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_CN_JAP_chinese_stander_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_CN_JAP_chinese_stander_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_JAPS_must_pay_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_JAPS_must_pay_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_LEP_KOR_Joint_JAP_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_LEP_KOR_Joint_JAP_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_LEPEXP_Punish_Militarism_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_Punish_Militarism_focus.png"
+	}
+}

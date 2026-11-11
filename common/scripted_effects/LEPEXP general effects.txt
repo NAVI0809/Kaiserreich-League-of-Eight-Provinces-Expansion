@@ -3200,3 +3200,50 @@ LEPEXP_NAVY_germany_ships_effect_2 = {
 	    create_ship = { name = "海曙" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
 	}	
 }
+
+LEPEXP_RYK_setup_gov_effect = {
+	set_temp_variable = { tag_to_release = RYK }
+	release_targeted_tag = yes
+	hidden_effect = {		
+		RYK = {
+			RYK_establish_government = yes
+			RYK_claim_homeland = yes
+			add_ideas = {
+				RYK_fort_island_idea
+				RYK_not_ready_idea
+				RYK_natianl_phase_1_idea
+				RYK_CIR_corp_idea
+			}
+			division_template = {
+				name = "Infantry Division"
+				division_names_group = LEP_GAR_02
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					combat_engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
+						owner = RYK
+					}
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
+						owner = RYK
+					}
+				}
+		}
+	}
+}
