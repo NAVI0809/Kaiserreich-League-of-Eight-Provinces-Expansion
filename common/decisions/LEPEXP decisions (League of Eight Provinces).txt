@@ -137,6 +137,26 @@ LEPEXP_DEBUG_CAT = {
 			add_ideas = LEP_labor_contract_act_idea
 		}
 	}
+	LEPEXP_debug_spawn_ryk = {
+		fire_only_once = no
+		cost = 0
+		visible = {
+			is_debug = yes
+		}
+		allowed = {
+			always = yes
+		}
+		complete_effect = {
+			every_state = {
+				limit = { state = 526 }
+				set_state_owner_to = RYK
+				set_state_controller_to = RYK
+			}
+			RYK = { RYK_establish_government = yes }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 
 	### 选举调试（调试模式可见）
 

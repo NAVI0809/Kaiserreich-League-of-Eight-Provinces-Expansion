@@ -1,0 +1,32 @@
+characters = {
+	#######################
+	### Country Leaders ###
+	#######################
+
+	RYK_cai_zhang = { #For Zongshe when Pujie retires
+		name = RYK_cai_zhang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RYK_cai_zhang_civilian_large
+			}
+		}
+		country_leader = {
+			desc = RYK_cai_zhang_leader_desc
+			ideology = social_conservative_subtype
+		}
+		country_leader = {
+			desc = RYK_cai_zhang_leader_desc
+			ideology = market_liberal_subtype
+		}
+		country_leader = {
+			desc = RYK_cai_zhang_leader_desc
+			ideology = social_liberal_subtype
+		}
+		country_leader = {
+			desc = RYK_cai_zhang_leader_desc
+			ideology = social_democrat_subtype
+		}
+	}
+
+	
+}
