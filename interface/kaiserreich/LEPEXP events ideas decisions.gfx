@@ -85,6 +85,19 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_report_event_LEP_troops_guns"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_troops_guns.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_troops_line"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_troops_line.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_troops_valley"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_troops_valley.png"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_LEP_dem_victory"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_dem_victory.png"
 	}
