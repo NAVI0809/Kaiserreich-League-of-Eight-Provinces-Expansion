@@ -8022,11 +8022,15 @@ country_event = { #友谊地久天长
 
 	is_triggered_only = yes
 	fire_only_once = yes
+	immediate = {
+		hidden_effect = { scoped_play_song = li_ge }
+	}
 
 	option = {
 		log = "[GetLogInfo]: event league_jap.25 option league_jap.25.a"
 		name = league_jap.25.a
 		custom_effect_tooltip = league_jap.25_tt
+		
 	}
 }
 

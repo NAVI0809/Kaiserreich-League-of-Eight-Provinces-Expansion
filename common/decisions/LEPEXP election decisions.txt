@@ -80,10 +80,10 @@ LEP_election_category = {
 		}
 	}
 
-	### 第二次大选的拉票决议（四党；团结联盟按是否参选显示）
-
-
-
+	### 第二次大选的拉票决议（四党；团结联盟按是否参选显示）
+
+
+
 
 }
 
@@ -168,6 +168,7 @@ LEP_second_election_category = {
 		complete_effect = {
 			LEP_election2_boost_KMT = yes
 		}
+		days_remove = 10
 	}
 
 
@@ -183,6 +184,7 @@ LEP_second_election_category = {
 		complete_effect = {
 			LEP_election2_boost_DSP = yes
 		}
+		days_remove = 10
 	}
 
 
@@ -198,6 +200,7 @@ LEP_second_election_category = {
 		complete_effect = {
 			LEP_election2_boost_JNSB = yes
 		}
+		days_remove = 10
 	}
 
 
@@ -219,5 +222,6 @@ LEP_second_election_category = {
 		complete_effect = {
 			LEP_election2_boost_NSU = yes
 		}
+		days_remove = 10
 	}
 }

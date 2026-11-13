@@ -16763,18 +16763,24 @@ focus_tree = {
 				days = 90
 			}			
 			custom_effect_tooltip = tooltip_white_line
-			custom_effect_tooltip = {
-				localization_key = tooltip_modify_dynmod
-				DYNMOD = LEP_national_autonomy_army
+			if = {
+				limit = {
+					has_country_flag = LEP_dem_gov
+				}
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = LEP_national_autonomy_army
+				}
+				add_to_variable = {
+					LEP_max_planning_factor = 0.05
+					tooltip = max_planning_factor_tooltip
+				}
+				add_to_variable = {
+					LEP_army_attack_factor = 0.03
+					tooltip = army_attack_factor_tooltip
+				}
 			}
-			add_to_variable = {
-				LEP_max_planning_factor = 0.05
-				tooltip = max_planning_factor_tooltip
-			}
-			add_to_variable = {
-				LEP_army_attack_factor = 0.03
-				tooltip = army_attack_factor_tooltip
-			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			swap_ideas = {
 				remove_idea = LEP_joint_staff
@@ -17088,30 +17094,36 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_rain_of_fire"
-			custom_effect_tooltip = {
-				localization_key = tooltip_modify_dynmod
-				DYNMOD = LEP_national_autonomy_army
+			if = {
+				limit = {
+					has_country_flag = LEP_dem_gov
+				}
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = LEP_national_autonomy_army
+				}
+				add_to_variable = {
+					LEP_land_night_attack = 0.1
+					tooltip = land_night_attack_tooltip
+				}
+				add_to_variable = {
+					LEP_org_loss_when_moving = -0.05
+					tooltip = org_loss_when_moving_tooltip
+				}
+				add_to_variable = {
+					LEP_experience_loss_factor = -0.05
+					tooltip = experience_loss_factor_tooltip
+				}
+				add_to_variable = {
+					LEP_attrition = -0.05
+					tooltip = attrition_tooltip
+				}
+				add_to_variable = {
+					LEP_initiative_factor = 0.03
+					tooltip = initiative_factor_tooltip
+				}
 			}
-			add_to_variable = {
-				LEP_land_night_attack = 0.1
-				tooltip = land_night_attack_tooltip
-			}
-			add_to_variable = {
-				LEP_org_loss_when_moving = -0.05
-				tooltip = org_loss_when_moving_tooltip
-			}
-			add_to_variable = {
-				LEP_experience_loss_factor = -0.05
-				tooltip = experience_loss_factor_tooltip
-			}
-			add_to_variable = {
-				LEP_attrition = -0.05
-				tooltip = attrition_tooltip
-			}
-			add_to_variable = {
-				LEP_initiative_factor = 0.03
-				tooltip = initiative_factor_tooltip
-			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			activate_targeted_decision = { target = FROM decision = LEPEXP_training_mountain_warfare_decision }
 			activate_targeted_decision = { target = FROM decision = LEPEXP_training_ski_infantry_decision }
@@ -17178,14 +17190,21 @@ focus_tree = {
 		prerequisite = { focus = LEP_battlion_combat_team }
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed LEP_recon_units"
-			custom_effect_tooltip = {
-				localization_key = tooltip_modify_dynmod
-				DYNMOD = LEP_national_autonomy_army
+			if = {
+				limit = {
+					has_country_flag = LEP_dem_gov
+				}
+				custom_effect_tooltip = {
+					localization_key = tooltip_modify_dynmod
+					DYNMOD = LEP_national_autonomy_army
+				}
+				add_to_variable = {
+					LEP_recon_factor = 0.1
+					tooltip = recon_factor_tooltip
+				}
+				
 			}
-			add_to_variable = {
-				LEP_recon_factor = 0.1
-				tooltip = recon_factor_tooltip
-			}
+			
 			custom_effect_tooltip = tooltip_white_line
 			enable_tech_extensive_reconnaissance = yes
 		}

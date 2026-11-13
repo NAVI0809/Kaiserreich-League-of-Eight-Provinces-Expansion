@@ -1,9 +1,21 @@
 
 # MAIN THEME
 music = {
+	name = "chun_you"
+	file = "chun_you.ogg"
+	volume = 0.8
+}
+
+music = {
 	name = "maintheme"
 	file = "Jasmine.ogg"
 	volume = 0.95
+}
+
+music = {
+	name = "li_ge"
+	file = "li_ge.ogg"
+	volume = 0.65
 }
 
 music = {

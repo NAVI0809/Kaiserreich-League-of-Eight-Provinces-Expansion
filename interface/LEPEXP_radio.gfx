@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lep_radio_album_art"
+		texturefile = "gfx/interface/lep_radio/lep_radio_album_art.tga"
+		noOfFrames = 2
+	}
+}

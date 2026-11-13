@@ -413,7 +413,9 @@ joint_focus = { #中日关税条约
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_trade_deal_focus"
-		
+		JAP = {
+			add_ideas = LEP_China_Japan_tariff_treaty_jap
+		}
 	}
 }
 
@@ -513,7 +515,13 @@ joint_focus = { #开展基层选举
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_loacl_election_focus"
-		
+		JAP = {
+			add_timed_idea = {
+				idea = LEP_grassroots_democracy
+				days = 300
+			}
+			
+		}
 	}
 }
 
@@ -777,6 +785,12 @@ joint_focus = { #协助朝鲜重建
 	}
 	completion_reward_joint_member = {
 		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_JAPS_help_KOR_rebuild_focus"
+		LEP = {
+			add_ideas = LEP_aid_kora_chn
+		}
+		KOR = {
+			add_ideas = LEP_aid_kora_kor
+		}
 	}
 }
 

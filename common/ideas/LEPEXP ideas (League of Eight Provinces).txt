@@ -6,71 +6,6 @@
 
 ideas = {
 	#zigai
-	trade_laws = {
-		law = yes
-		use_list_view = yes
-
-		LEPEXP_CNJP_treaties = {
-			on_add = { log = "[GetLogRoot]: add idea LEPEXP_CNJP_treaties" }
-			picture = unequal_treaties
-			level = 3
-			removal_cost = -1
-			cancel_if_invalid = no
-
-			allowed = { always = no }
-			cancel = {
-				has_global_flag = LEPEXP_japs_paid
-			}
-
-			modifier = {
-				min_export = 0.5
-				civilian_intel_to_others = 20.0
-			}
-			targeted_modifier = {
-				tag = LEP
-				cic_to_target_factor = 0.2
-			}
-			targeted_modifier = {
-				tag = KOR
-				cic_to_target_factor = 0.1
-			}
-
-			allowed_to_remove = {
-				has_global_flag = LEPEXP_japs_paid
-			}
-
-			on_remove = {
-				#Have post-LEC China start with export focus
-				if = {
-					limit = {
-						has_idea = closed_economy
-					}
-					swap_ideas = {
-						remove_idea = closed_economy
-						add_idea = 	export_focus
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = limited_exports
-					}
-					swap_ideas = {
-						remove_idea = limited_exports
-						add_idea = export_focus
-					}
-				}
-				else_if = {
-					limit = {
-						has_idea = free_trade
-					}
-					swap_ideas = {
-						remove_idea = free_trade
-						add_idea = export_focus
-					}
-				}
-			}
-		}
-	}	
 	country = {
 
 		
@@ -4402,6 +4337,67 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 			}
 		}
+
+		LEP_grassroots_democracy = {
+			picture = AUS_mountaineers
+			allowed = {
+				always = no
+			}
+			modifier = {
+				social_conservative_drift = 0.03
+				market_liberal_drift = 0.03
+				social_liberal_drift = 0.03
+				social_democrat_drift = 0.03
+				political_power_gain = -0.1
+			}
+		}
+		LEP_aid_kora_chn = {
+			picture = KOR_support_korea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = 0.025
+			}
+		}
+		LEP_aid_kora_kor = {
+			picture = KOR_support_korea
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.05
+			}
+		}
+		LEP_China_Japan_tariff_treaty_jap = {
+			picture = japanese_integration
+			allowed = {
+				always = no
+			}
+			modifier = {
+				min_export = 0.25
+				cic_to_overlord_factor = 0.30
+				extra_trade_to_overlord_factor = 0.25
+				overlord_trade_cost_factor = -0.25
+			}
+		}
+		LEP_China_Japan_tariff_treaty_chn = {
+			picture = LEC_China_Rising
+			allowed = {
+				always = no
+			}
+			modifier = {
+				trade_cost_for_target_factor = 0.05
+			}
+			
+		}
+		
 	}
 	
 
@@ -4451,6 +4447,8 @@ ideas = {
 				train_tech = 0.1
 			}
 		}
+
+		
 	}	
 
 	
@@ -4461,6 +4459,67 @@ ideas = {
 	trade_laws = {
 		law = yes
 		use_list_view = yes
+
+		LEPEXP_CNJP_treaties = {
+			on_add = { log = "[GetLogRoot]: add idea LEPEXP_CNJP_treaties" }
+			picture = unequal_treaties
+			level = 3
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			allowed = { always = no }
+			cancel = {
+				has_global_flag = LEPEXP_japs_paid
+			}
+
+			modifier = {
+				min_export = 0.5
+				civilian_intel_to_others = 20.0
+			}
+			targeted_modifier = {
+				tag = LEP
+				cic_to_target_factor = 0.2
+			}
+			targeted_modifier = {
+				tag = KOR
+				cic_to_target_factor = 0.1
+			}
+
+			allowed_to_remove = {
+				has_global_flag = LEPEXP_japs_paid
+			}
+
+			on_remove = {
+				#Have post-LEC China start with export focus
+				if = {
+					limit = {
+						has_idea = closed_economy
+					}
+					swap_ideas = {
+						remove_idea = closed_economy
+						add_idea = 	export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = limited_exports
+					}
+					swap_ideas = {
+						remove_idea = limited_exports
+						add_idea = export_focus
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = free_trade
+					}
+					swap_ideas = {
+						remove_idea = free_trade
+						add_idea = export_focus
+					}
+				}
+			}
+		}
 
 		sino_shanghai_economic_accord = {
 			on_add = { log = "[GetLogRoot]: add idea sino_shanghai_economic_accord" }
