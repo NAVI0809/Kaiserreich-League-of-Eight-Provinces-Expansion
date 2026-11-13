@@ -242,7 +242,7 @@ country_event = { #远东军需调拨
 		custom_effect_tooltip = LEP_transport_enquipment_tt
 		send_equipment_fraction = {
 			target = GER
-			value = 0.6
+			value = 0.3
 		}
 		hidden_effect = {
 			country_event = { id = league_qi.15 days = 30 }

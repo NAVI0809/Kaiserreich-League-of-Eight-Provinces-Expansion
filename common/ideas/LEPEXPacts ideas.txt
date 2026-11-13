@@ -445,7 +445,6 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
-	}
 
 		LEP_copyright_act_idea = {
 			allowed = {
@@ -660,4 +659,5 @@ ideas = {
 		}
 
 	
+}
 }
