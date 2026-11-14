@@ -12164,19 +12164,19 @@ focus_tree = {
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 4 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 4 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 5 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"Wusheng Lianjun Di 5 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
 						owner = ROOT
 					}
 				}
@@ -13067,6 +13067,39 @@ focus_tree = {
 				LEP_army_artillery_attack_factor = 0.05
 				tooltip = army_artillery_attack_factor_tooltip
 			}
+			custom_effect_tooltip = tooltip_white_line
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 600
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 600
+				producer = USA
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 600
+				producer = RUS
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 150
+				producer = GER
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+				producer = LEP
+			}
+			add_equipment_to_stockpile = {
+                type = small_plane_airframe_1
+                amount = 100
+                producer = USA
+                variant_name = "P-36C"
+            }
+
 			custom_effect_tooltip = tooltip_white_line
 			add_popularity = {
 				ideology = social_liberal
