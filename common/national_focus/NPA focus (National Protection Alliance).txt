@@ -15,6 +15,7 @@ shared_focus = {
 			has_country_flag = SZC_zhili_exiles_in_power
 			has_country_flag = SZC_federalists_in_power
 			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_qi_national_focus	# 齐燮元统一后走自己的国策树，不再显示军阀通用分支
 		}
 	}
 	offset = {
@@ -562,6 +563,7 @@ shared_focus = {
 			has_country_flag = SZC_zhili_exiles_in_power
 			has_country_flag = SZC_federalists_in_power
 			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_qi_national_focus	# 齐燮元统一后走自己的国策树，不再显示军阀通用分支
 		}
 	}
 	offset = {
@@ -609,6 +611,7 @@ shared_focus = {
 			has_country_flag = SZC_zhili_exiles_in_power
 			has_country_flag = SZC_federalists_in_power
 			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_qi_national_focus	# 齐燮元统一后走自己的国策树，不再显示军阀通用分支
 		}
 	}
 	ai_will_do = { factor = 100 }
@@ -979,6 +982,7 @@ shared_focus = {
 			has_country_flag = SZC_zhili_exiles_in_power
 			has_country_flag = SZC_federalists_in_power
 			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_qi_national_focus	# 齐燮元统一后走自己的国策树，不再显示军阀通用分支
 		}
 	}
 	ai_will_do = { factor = 10 }
