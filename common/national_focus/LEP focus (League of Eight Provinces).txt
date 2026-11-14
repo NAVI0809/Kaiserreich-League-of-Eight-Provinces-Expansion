@@ -951,7 +951,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LEP_establish_pacification_office
+		id = LEP_continue_xia_chao_police_reform
 		icon = GFX_focus_FIN_parmis_devils
 		cost = 2.00
 		ai_will_do = {
@@ -1000,12 +1000,12 @@ focus_tree = {
 			factor = 50
 		}
 		prerequisite = {
-			focus = LEP_establish_pacification_office
+			focus = LEP_continue_xia_chao_police_reform
 		}
 		will_lead_to_war_with = HNN
 		will_lead_to_war_with = GXC
 		will_lead_to_war_with = YUN
-		relative_position_id = LEP_establish_pacification_office
+		relative_position_id = LEP_continue_xia_chao_police_reform
 		x = -1
 		y = 1
 		bypass = {
@@ -1778,13 +1778,13 @@ focus_tree = {
 
 		}
 		prerequisite = {
-			focus = LEP_establish_pacification_office
+			focus = LEP_continue_xia_chao_police_reform
 		}
 		will_lead_to_war_with = QIE
 		mutually_exclusive = {
 			focus = LEP_peace_declaration
 		}
-		relative_position_id = LEP_establish_pacification_office
+		relative_position_id = LEP_continue_xia_chao_police_reform
 		x = 0
 		y = 2
 		completion_reward = {

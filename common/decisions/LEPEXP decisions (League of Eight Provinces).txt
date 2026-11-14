@@ -2661,10 +2661,13 @@ LEPEXP_military_defence_development_CAT = {
 			has_completed_focus = LEP_arm_national_guard
 		}
 
-		custom_cost_text = LEP_CP_100_PP_10
+		custom_cost_text = LEP_CP_50_PP_10
 		custom_cost_trigger = {
-			NOT = { has_political_power < 10 }
-			NOT = { command_power < 50 }
+			AND = {
+				NOT = { has_political_power < 10 }
+				NOT = { command_power < 50 }
+			}
+			
 		}
 
 		is_good = no

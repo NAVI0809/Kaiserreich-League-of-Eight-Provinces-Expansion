@@ -202,7 +202,7 @@ LEPEXP_gea_contest_CAT = {
 	allowed = { tag = LEP }
 	visible = {
 		country_exists = GEA
-		OR = {
+		AND = {
 			has_global_flag = LEP_gea_contest_active
 			is_debug = yes
 		}

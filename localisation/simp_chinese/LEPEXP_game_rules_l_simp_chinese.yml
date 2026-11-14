@@ -15,7 +15,6 @@
  RULE_OPTION_LEP_PATH_ZXX: "£KR_game_rule_flag_CHN  国民党携炬而行"
  RULE_OPTION_LEP_PATH_ZXX_DESC: "政学系改组为§m国民党§!，承袭北洋国会传统，以议会政治与宪政为纲领。"
 
- LEP_restrict_capital_merger: ""
  LEP_restrict_capital_merger_desc: ""
 
  LEP_promote_land_reform: "推进土地改革"
@@ -45,8 +44,6 @@
 	LEP_support_academic_research: "支持学术研究"
  LEP_support_academic_research_desc: ""
 
- LEP_protect_private_property: ""
- LEP_protect_private_property_desc: ""
 
 	LEP_reduce_enterprise_burden: "企业减负"
  LEP_reduce_enterprise_burden_desc: ""
