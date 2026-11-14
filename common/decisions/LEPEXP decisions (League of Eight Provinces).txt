@@ -1,7 +1,7 @@
 ###########################
 # League of Eight Provinces EXP Decisions
 ###########################
-# By
+# By 
 ###########################
 
 
@@ -989,7 +989,7 @@ LEP_country_development = {
 		fire_only_once = yes
 
 		remove_effect = {
-			stability_factor = -0.1
+			add_stability = -0.1
 			LEP_raise_funds = yes
 		}
 	}
@@ -2075,7 +2075,6 @@ LEP_liberation_of_asia_category = {
 
 		
 		target_array = subjects
-		target_array = faction_members
 
 		target_root_trigger = {
 			

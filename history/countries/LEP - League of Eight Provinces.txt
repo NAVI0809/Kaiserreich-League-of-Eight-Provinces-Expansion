@@ -95,7 +95,6 @@ if = {
 LEP_add_plane_variants = yes
 
 ### NAVY ###
-QIE_starting_naval_variants_kr = yes #naval submod
 LEP_add_naval_variants = yes
 
 ########################################
@@ -511,5 +510,3 @@ set_variable = {
 	var = LEP_tsingtau_level
 	value = 2
 }
-
-LEP_recalculate_salvation_alliance = yes

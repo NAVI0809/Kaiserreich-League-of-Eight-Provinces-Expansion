@@ -16,6 +16,24 @@ on_actions = {
                     }
                 }
             }
+
+            # 联赛战争兜底：参战的中国阵营若没拿到 league_collapse_*，
+            # china_league_war_morale 不存在会被 clamp 在 0，表现为士气永远不变。
+            if = {
+                limit = {
+                    has_global_flag = LEP_war
+                    has_war = yes
+                    OR = { tag = CHI tag = ANQ tag = SHD }
+                    NOT = {
+                        OR = {
+                            has_idea = league_collapse_ANQ
+                            has_idea = league_collapse_SHD
+                            has_idea = league_collapse_CHI
+                        }
+                    }
+                }
+                LEP_add_collapse_dm = yes
+            }
         }
     }
 

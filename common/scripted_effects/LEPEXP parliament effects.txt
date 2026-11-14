@@ -42,7 +42,7 @@ LEP_do_count_seats = {
 		set_temp_variable = { s1 = 0 }
 		set_temp_variable = { s8 = 0 }
 		set_temp_variable = { s9 = 0 }
-		# 激进社会主义（国民党）：与闽赣国民党和谈成功使其合法化
+		# 激进社会主义（农工民主党）：与闽赣国民党和谈成功使其合法化
 		if = {
 			limit = { NOT = { has_country_flag = LEP_lkmt_legalized } }
 			set_temp_variable = { s2 = 0 }

@@ -490,6 +490,8 @@ unit_leader_event = { #民主政变
 					set_nationality = LEP
 				}
 			}
+			remove_mission = LEP_qi_action_ongoing
+			remove_mission = LEP_anti_qi_action_ongoing
 	
 		
 			if = {
@@ -561,6 +563,10 @@ country_event = { #联帅
 		custom_effect_tooltip = tooltip_white_line
 		activate_mission = LEP_temp_suppress_kmt
 		activate_mission = LEP_temp_suppress_rural_banditry
+		hidden_effect = {
+			remove_mission = LEP_qi_action_ongoing
+			remove_mission = LEP_anti_qi_action_ongoing
+		}
 	}
 }
 
@@ -3633,10 +3639,11 @@ country_event = { #外债
 			idea = LEP_defaulted_debt
 			days = 100
 		}
+		# 成立债务整理委员会＝我方主动处理外债，不再背负德国的敌视
 		GER = {
-			add_opinion_modifier = { target = LEP modifier = KR_hates_govt }
+			remove_opinion_modifier = { target = LEP modifier = KR_hates_govt }
 		}
-		add_opinion_modifier = { target = GER modifier = KR_hates_govt }
+		remove_opinion_modifier = { target = GER modifier = KR_hates_govt }
 		add_days_mission_timeout = {
 			mission = LEP_economic_recovery_ongoing
 			days = 50

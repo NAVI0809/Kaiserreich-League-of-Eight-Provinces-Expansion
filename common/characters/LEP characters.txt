@@ -13,6 +13,10 @@ characters = {
 			# Placeholder leader, doesn't need desc
 			ideology = market_liberal_subtype
 		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = national_populist_subtype
+		}
 	}
 	#孫傳芳
 	LEP_sun_chuanfang = {
@@ -904,6 +908,10 @@ characters = {
 			desc = LEP_yu_jiaju_advisor_desc
 			idea_token = LEP_yu_jiaju_advisor
 			traits = { KR_nationalist_firebrand }
+		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = social_liberal_subtype
 		}
 	}
 

@@ -240,7 +240,9 @@ ideas = {
 		LEP_popular_support_the_young_and_the_modern = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_popular_support_the_young_and_the_modern" }
 			picture = FNG_xinhai_order
-			allowed = { always = no }
+			allowed = {
+				always = no
+			}
 			modifier = {
 				stability_factor = 0.10
 				war_support_factor = 0.05

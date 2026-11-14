@@ -780,6 +780,12 @@ LEP_remove_collapse_dm = {
 }
 
 china_update_morale = {
+	# 兜底：某些路线（如齐燮元线吞并 CHI）不会经过 LEP_add_collapse_dm，
+	# 士气变量缺失时 add_to_variable 会从 0 开始并被 clamp 在 0，表现为「士气永远不动」。
+	if = {
+		limit = { NOT = { has_variable = china_league_war_morale } }
+		set_variable = { china_league_war_morale = 50 }
+	}
 	if = {
 		limit = {
 			any_enemy_country = {
@@ -4389,6 +4395,14 @@ CHN_clear_china_alignment_gui = {
 CHN_update_china_alignment_gui = {
 	### Use to update the GUI ###
 	set_variable_to_random = china_alignment_gui_update
+}
+
+CHN_china_GUI_daily_update = {
+	if = {
+		limit = { has_country_flag = china_alignment_gui_visibility }
+		CHN_calculate_china_alignment_gui_effect = yes
+		CHN_update_china_alignment_gui = yes
+	}
 }
 
 ### Scientist Transfer ###

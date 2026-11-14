@@ -1777,6 +1777,11 @@ focus_tree = {
 			}
 
 		}
+		bypass = {
+			LEP = {
+				controls_state = 608
+			}
+		}   
 		prerequisite = {
 			focus = LEP_continue_xia_chao_police_reform
 		}
@@ -7995,6 +8000,11 @@ focus_tree = {
 		prerequisite = {
 			focus = LEP_demand_concessions_return
 		}
+		bypass = {
+			LEP = {
+				is_in_faction_with = GER
+			}
+		}   
 		relative_position_id = LEP_demand_concessions_return
 		x = -1
 		y = 1
@@ -9431,11 +9441,18 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed LEP_nationalist_military"
 			add_war_support = 0.05
 			army_experience = 15
+			effect_tooltip = {
+				set_party_name = {
+					ideology = social_liberal
+					name = LEP_YCP_zhongshe_party
+					long_name = LEP_YCP_zhongshe_party_fake
+				}
+			}
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.05
 			}
-			set_temp_variable = { coalition_partner_var = token:national_populist }
+			set_temp_variable = { coalition_partner_var = token:social_liberal }
 			add_to_coalition = yes
 			add_advisor_role = {
 				character = LEP_yu_jiaju
@@ -9447,6 +9464,26 @@ focus_tree = {
 					traits = { LEP_architect_of_the_new_state }
 					cost = 0
 					can_be_fired = no
+				}
+			}
+			hidden_effect = {
+				promote_character = {
+					character = LEP_yu_jiaju
+					ideology = social_liberal_subtype
+				}
+				promote_character = {
+					character = LEP_assorted_leaders
+					ideology = national_populist_subtype
+				}
+				set_party_name = {
+					ideology = social_liberal
+					name = LEP_YCP_zhongshe_party
+					long_name = LEP_YCP_zhongshe_party_long
+				}
+				set_party_name = {
+					ideology = national_populist
+					name = LEP_3K_party
+					long_name = LEP_3K_party_long
 				}
 			}
 		}
@@ -9496,7 +9533,7 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.03
 			}
 			add_ideas = LEP_right_to_education
@@ -9556,7 +9593,7 @@ focus_tree = {
 				popularity = 0.02
 			}
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.02
 			}
 			add_ideas = LEP_anti_red
@@ -9577,7 +9614,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.02
 			}
 			swap_ideas = {
@@ -9602,7 +9639,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.02
 			}
 			swap_ideas = {
@@ -9826,7 +9863,7 @@ focus_tree = {
 			add_political_power = 50
 			add_stability = 0.05
 			add_popularity = {
-				ideology = national_populist
+				ideology = social_liberal
 				popularity = 0.05
 			}
 			add_ideas = LEP_awakening_lion_youth_corps_idea

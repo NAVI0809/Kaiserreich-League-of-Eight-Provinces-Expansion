@@ -7456,7 +7456,12 @@ china_league_collapse_decisions = {
 		days_mission_timeout = 25
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout china_take_nanjing"
-			set_temp_variable = { change_league_war_morale_by = { value = -8 add = china_morale_collapse_rate } }
+			if = {
+				limit = { NOT = { has_variable = china_morale_collapse_rate } }
+				set_variable = { china_morale_collapse_rate = 0 }
+			}
+			set_temp_variable = { change_league_war_morale_by = -8 }
+			add_to_temp_variable = { change_league_war_morale_by = china_morale_collapse_rate }
 			add_to_variable = { china_morale_collapse_rate = -1 }
 			china_update_morale = yes
 			custom_effect_tooltip = china_league_war_mission_loop

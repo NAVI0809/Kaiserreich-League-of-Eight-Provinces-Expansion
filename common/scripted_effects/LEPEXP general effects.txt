@@ -909,19 +909,19 @@ LEP_promote_democracy = {
 
 LEP_recruit_RCA_endgame_advisors_effect = {
 	CHI = {
-		CHI_wang_jingwei = { LEP_recruit_characters_effect = yes }
-		CHI_gu_mengyu = { LEP_recruit_characters_effect = yes }
-	    CHI_guo_chuntao = { LEP_recruit_characters_effect = yes }
-	    CHI_zhou_fohai = { LEP_recruit_characters_effect = yes }
+		CHI_wang_jingwei = { CHN_recruit_character_effect = yes }
+		CHI_gu_mengyu = { CHN_recruit_character_effect = yes }
+	    CHI_guo_chuntao = { CHN_recruit_character_effect = yes }
+	    CHI_zhou_fohai = { CHN_recruit_character_effect = yes }
 	}
 }
 
 LEP_recruit_PAC_endgame_advisors_effect = {
 	CHI = {
-		CHI_song_qingling = { LEP_recruit_characters_effect = yes }
-		CHI_chen_youren = { LEP_recruit_characters_effect = yes }
-	    CHI_zhang_bojun = { LEP_recruit_characters_effect = yes }
-	    CHI_song_ziwen = { LEP_recruit_characters_effect = yes }
+		CHI_song_qingling = { CHN_recruit_character_effect = yes }
+		CHI_chen_youren = { CHN_recruit_character_effect = yes }
+	    CHI_zhang_bojun = { CHN_recruit_character_effect = yes }
+	    CHI_song_ziwen = { CHN_recruit_character_effect = yes }
 	}
 }
 
@@ -1645,7 +1645,7 @@ LEP_improve_military_reorganization_effect = {
 	}
 	else = {
 		clr_country_flag = LEP_improve_military_reorganization_effect_incomplete
-		add_army_experience = 5
+		army_experience = 5
 		add_command_power = 10
 	}
 }
@@ -2011,7 +2011,7 @@ LEP_lkmt_conference_result_effect = {
 			}
 		}
 		set_country_flag = LEP_lkmt_legalized
-		### 合法化后，闽赣国民党以「国民党（革委会）」名义参与议会，以别于黄郛在北京重建的国民党
+		### 合法化后，闽赣国民党以「农工民主党」名义参与议会，以别于黄郛在北京重建的国民党
 		set_party_name = {
 			ideology = radical_socialist
 			name = LEP_radical_socialist_party_legalized
