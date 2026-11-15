@@ -252,6 +252,1376 @@ guiTypes = {
 		}
 
 		iconType = {
+			name = "LEP_seat_frame_0"
+			position = { x = 14 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_1"
+			position = { x = 29 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_2"
+			position = { x = 44 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_3"
+			position = { x = 58 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_4"
+			position = { x = 73 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_5"
+			position = { x = 88 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_6"
+			position = { x = 103 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_7"
+			position = { x = 118 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_8"
+			position = { x = 133 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_9"
+			position = { x = 15 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_10"
+			position = { x = 30 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_11"
+			position = { x = 148 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_12"
+			position = { x = 45 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_13"
+			position = { x = 60 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_14"
+			position = { x = 76 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_15"
+			position = { x = 164 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_16"
+			position = { x = 91 y = 186 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_17"
+			position = { x = 17 y = 169 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_18"
+			position = { x = 33 y = 169 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_19"
+			position = { x = 106 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_20"
+			position = { x = 48 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_21"
+			position = { x = 63 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_22"
+			position = { x = 122 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_23"
+			position = { x = 179 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_24"
+			position = { x = 79 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_25"
+			position = { x = 22 y = 154 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_26"
+			position = { x = 37 y = 154 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_27"
+			position = { x = 94 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_28"
+			position = { x = 137 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_29"
+			position = { x = 52 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_30"
+			position = { x = 68 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_31"
+			position = { x = 26 y = 139 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_32"
+			position = { x = 110 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_33"
+			position = { x = 42 y = 139 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_34"
+			position = { x = 84 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_35"
+			position = { x = 153 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_36"
+			position = { x = 57 y = 141 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_37"
+			position = { x = 126 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_38"
+			position = { x = 100 y = 157 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_39"
+			position = { x = 32 y = 125 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_40"
+			position = { x = 73 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_41"
+			position = { x = 49 y = 125 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_42"
+			position = { x = 91 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_43"
+			position = { x = 64 y = 128 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_44"
+			position = { x = 40 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_45"
+			position = { x = 117 y = 155 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_46"
+			position = { x = 144 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_47"
+			position = { x = 169 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_48"
+			position = { x = 82 y = 129 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_49"
+			position = { x = 107 y = 144 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_50"
+			position = { x = 56 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_51"
+			position = { x = 72 y = 115 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_52"
+			position = { x = 48 y = 98 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_53"
+			position = { x = 134 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_54"
+			position = { x = 99 y = 130 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_55"
+			position = { x = 65 y = 99 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_56"
+			position = { x = 161 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_57"
+			position = { x = 90 y = 116 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_58"
+			position = { x = 126 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_59"
+			position = { x = 57 y = 85 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_60"
+			position = { x = 116 y = 132 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_61"
+			position = { x = 82 y = 103 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_62"
+			position = { x = 108 y = 118 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_63"
+			position = { x = 153 y = 159 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_64"
+			position = { x = 76 y = 87 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_65"
+			position = { x = 100 y = 105 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_66"
+			position = { x = 68 y = 74 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_67"
+			position = { x = 92 y = 92 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_68"
+			position = { x = 145 y = 145 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_69"
+			position = { x = 187 y = 187 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_70"
+			position = { x = 126 y = 121 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_71"
+			position = { x = 137 y = 131 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_72"
+			position = { x = 87 y = 76 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_73"
+			position = { x = 118 y = 108 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_74"
+			position = { x = 79 y = 63 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_75"
+			position = { x = 110 y = 94 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_76"
+			position = { x = 179 y = 174 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_77"
+			position = { x = 103 y = 82 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_78"
+			position = { x = 99 y = 65 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_79"
+			position = { x = 171 y = 161 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_80"
+			position = { x = 91 y = 53 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_81"
+			position = { x = 138 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_82"
+			position = { x = 164 y = 147 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_83"
+			position = { x = 130 y = 99 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_84"
+			position = { x = 156 y = 134 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_85"
+			position = { x = 123 y = 85 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_86"
+			position = { x = 115 y = 72 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_87"
+			position = { x = 149 y = 122 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_88"
+			position = { x = 111 y = 56 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_89"
+			position = { x = 105 y = 44 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_90"
+			position = { x = 128 y = 64 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_91"
+			position = { x = 136 y = 77 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_92"
+			position = { x = 142 y = 91 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_93"
+			position = { x = 150 y = 103 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_94"
+			position = { x = 117 y = 36 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_95"
+			position = { x = 125 y = 49 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_96"
+			position = { x = 163 y = 114 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_97"
+			position = { x = 170 y = 126 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_98"
+			position = { x = 178 y = 140 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_99"
+			position = { x = 141 y = 57 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_100"
+			position = { x = 149 y = 71 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_101"
+			position = { x = 132 y = 30 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_102"
+			position = { x = 139 y = 42 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_103"
+			position = { x = 156 y = 84 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_104"
+			position = { x = 185 y = 153 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_105"
+			position = { x = 164 y = 97 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_106"
+			position = { x = 193 y = 166 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_107"
+			position = { x = 156 y = 52 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_108"
+			position = { x = 146 y = 24 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_109"
+			position = { x = 154 y = 37 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_110"
+			position = { x = 163 y = 65 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_111"
+			position = { x = 177 y = 108 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_112"
+			position = { x = 171 y = 79 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_113"
+			position = { x = 185 y = 122 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_114"
+			position = { x = 200 y = 179 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_115"
+			position = { x = 178 y = 92 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_116"
+			position = { x = 162 y = 19 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_117"
+			position = { x = 170 y = 48 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_118"
+			position = { x = 169 y = 33 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_119"
+			position = { x = 192 y = 134 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_120"
+			position = { x = 178 y = 62 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_121"
+			position = { x = 185 y = 76 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_122"
+			position = { x = 177 y = 16 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_123"
+			position = { x = 192 y = 105 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_124"
+			position = { x = 185 y = 45 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_125"
+			position = { x = 185 y = 30 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_126"
+			position = { x = 200 y = 148 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_127"
+			position = { x = 193 y = 90 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_128"
+			position = { x = 193 y = 60 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_129"
+			position = { x = 200 y = 118 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_130"
+			position = { x = 192 y = 15 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_131"
+			position = { x = 200 y = 74 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_132"
+			position = { x = 200 y = 44 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_133"
+			position = { x = 200 y = 29 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_134"
+			position = { x = 208 y = 14 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_135"
+			position = { x = 208 y = 59 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_136"
+			position = { x = 208 y = 88 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_137"
+			position = { x = 208 y = 103 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_138"
+			position = { x = 208 y = 133 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_139"
+			position = { x = 208 y = 163 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_140"
+			position = { x = 216 y = 29 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_141"
+			position = { x = 216 y = 44 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_142"
+			position = { x = 216 y = 74 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_143"
+			position = { x = 224 y = 15 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_144"
+			position = { x = 216 y = 118 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_145"
+			position = { x = 223 y = 60 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_146"
+			position = { x = 223 y = 90 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_147"
+			position = { x = 231 y = 30 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_148"
+			position = { x = 216 y = 148 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_149"
+			position = { x = 231 y = 45 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_150"
+			position = { x = 224 y = 105 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_151"
+			position = { x = 239 y = 16 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_152"
+			position = { x = 231 y = 76 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_153"
+			position = { x = 238 y = 62 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_154"
+			position = { x = 224 y = 134 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_155"
+			position = { x = 247 y = 33 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_156"
+			position = { x = 246 y = 48 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_157"
+			position = { x = 254 y = 19 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_158"
+			position = { x = 238 y = 92 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_159"
+			position = { x = 231 y = 122 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_160"
+			position = { x = 216 y = 179 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_161"
+			position = { x = 245 y = 79 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_162"
+			position = { x = 239 y = 108 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_163"
+			position = { x = 253 y = 65 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_164"
+			position = { x = 262 y = 37 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_165"
+			position = { x = 270 y = 24 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_166"
+			position = { x = 260 y = 52 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_167"
+			position = { x = 223 y = 166 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_168"
+			position = { x = 252 y = 97 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_169"
+			position = { x = 277 y = 42 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_170"
+			position = { x = 260 y = 84 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_171"
+			position = { x = 231 y = 153 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_172"
+			position = { x = 284 y = 30 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_173"
+			position = { x = 267 y = 71 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_174"
+			position = { x = 275 y = 57 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_175"
+			position = { x = 238 y = 140 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_176"
+			position = { x = 246 y = 126 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_177"
+			position = { x = 253 y = 114 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_178"
+			position = { x = 291 y = 49 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_179"
+			position = { x = 299 y = 36 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_180"
+			position = { x = 266 y = 103 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_181"
+			position = { x = 274 y = 91 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_182"
+			position = { x = 280 y = 77 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_183"
+			position = { x = 288 y = 64 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_184"
+			position = { x = 312 y = 44 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_185"
+			position = { x = 305 y = 56 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_186"
+			position = { x = 267 y = 122 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_187"
+			position = { x = 301 y = 72 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_188"
+			position = { x = 293 y = 85 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_189"
+			position = { x = 260 y = 134 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_190"
+			position = { x = 286 y = 99 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_191"
+			position = { x = 278 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_192"
+			position = { x = 252 y = 147 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_193"
+			position = { x = 325 y = 53 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_194"
+			position = { x = 317 y = 65 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_195"
+			position = { x = 245 y = 161 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_196"
+			position = { x = 313 y = 82 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_197"
+			position = { x = 237 y = 174 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_198"
+			position = { x = 306 y = 94 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_199"
+			position = { x = 337 y = 63 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_200"
+			position = { x = 298 y = 108 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_201"
+			position = { x = 329 y = 76 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_202"
+			position = { x = 279 y = 131 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_203"
+			position = { x = 290 y = 121 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_204"
+			position = { x = 324 y = 92 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_205"
+			position = { x = 271 y = 145 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_206"
+			position = { x = 229 y = 187 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_207"
+			position = { x = 348 y = 74 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_208"
+			position = { x = 316 y = 105 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_209"
+			position = { x = 340 y = 87 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_210"
+			position = { x = 263 y = 159 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_211"
+			position = { x = 308 y = 118 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_212"
+			position = { x = 334 y = 103 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_213"
+			position = { x = 300 y = 132 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_214"
+			position = { x = 359 y = 85 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_215"
+			position = { x = 290 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_216"
+			position = { x = 326 y = 116 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_217"
+			position = { x = 351 y = 99 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_218"
+			position = { x = 255 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_219"
+			position = { x = 317 y = 130 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_220"
+			position = { x = 282 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_221"
+			position = { x = 368 y = 98 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_222"
+			position = { x = 344 y = 115 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_223"
+			position = { x = 360 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_224"
+			position = { x = 309 y = 144 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_225"
+			position = { x = 334 y = 129 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_226"
+			position = { x = 376 y = 111 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_227"
+			position = { x = 299 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_228"
+			position = { x = 272 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_229"
+			position = { x = 247 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_230"
+			position = { x = 352 y = 128 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_231"
+			position = { x = 325 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_232"
+			position = { x = 367 y = 125 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_233"
+			position = { x = 343 y = 142 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_234"
+			position = { x = 384 y = 125 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_235"
+			position = { x = 316 y = 157 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_236"
+			position = { x = 290 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_237"
+			position = { x = 359 y = 141 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_238"
+			position = { x = 374 y = 139 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_239"
+			position = { x = 332 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_240"
+			position = { x = 263 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_241"
+			position = { x = 306 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_242"
+			position = { x = 390 y = 139 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_243"
+			position = { x = 348 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_244"
+			position = { x = 364 y = 156 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_245"
+			position = { x = 322 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_246"
+			position = { x = 279 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_247"
+			position = { x = 379 y = 154 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_248"
+			position = { x = 394 y = 154 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_249"
+			position = { x = 337 y = 171 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_250"
+			position = { x = 294 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_251"
+			position = { x = 237 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_252"
+			position = { x = 353 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_253"
+			position = { x = 368 y = 170 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_254"
+			position = { x = 310 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_255"
+			position = { x = 383 y = 169 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_256"
+			position = { x = 399 y = 169 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_257"
+			position = { x = 325 y = 186 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_258"
+			position = { x = 252 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_259"
+			position = { x = 340 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_260"
+			position = { x = 356 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_261"
+			position = { x = 371 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_262"
+			position = { x = 386 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_263"
+			position = { x = 268 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_264"
+			position = { x = 401 y = 185 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_265"
+			position = { x = 283 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_266"
+			position = { x = 298 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_267"
+			position = { x = 313 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_268"
+			position = { x = 328 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_269"
+			position = { x = 343 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_270"
+			position = { x = 358 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_271"
+			position = { x = 372 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_272"
+			position = { x = 387 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
+			name = "LEP_seat_frame_273"
+			position = { x = 402 y = 200 }
+			spriteType = "GFX_LEP_seat_frame_none"
+		}
+		iconType = {
 			name = "LEP_seat_icon_0"
 			position = { x = 14 y = 200 }
 			spriteType = "GFX_LEP_seat_dots"

@@ -2534,6 +2534,8 @@
  LEP_seat_s7: "GFX_LEP_seat_p7"
  LEP_seat_s8: "GFX_LEP_seat_p8"
  LEP_seat_s9: "GFX_LEP_seat_p9"
+ LEP_seat_frame_gold: "GFX_LEP_seat_frame_gold"
+ LEP_seat_frame_silver: "GFX_LEP_seat_frame_silver"
  chinese_southern_republican: "§G南方共和派§!"
  china_alignment_chinese_southern_republican: "由§G南方共和派§!统治"
  china_alignment_chinese_southern_republican_NOT: "不由§G南方共和派§!统治"

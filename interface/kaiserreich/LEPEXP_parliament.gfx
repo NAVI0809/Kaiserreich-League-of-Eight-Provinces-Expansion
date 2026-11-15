@@ -47,6 +47,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/parliament/LEP_seat_p9.png"
 	}
 	spriteType = {
+		name = "GFX_LEP_seat_frame_gold"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_gold.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_frame_silver"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_silver.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_frame_none"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_none.png"
+	}
+	spriteType = {
 		name = "GFX_LEP_seat_button"
 		texturefile = "gfx/interface/parliament/LEP_seat_button.png"
 	}

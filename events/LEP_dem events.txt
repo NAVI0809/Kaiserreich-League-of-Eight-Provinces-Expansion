@@ -3647,11 +3647,8 @@ country_event = { #外债
 			idea = LEP_defaulted_debt
 			days = 100
 		}
-		# 成立债务整理委员会＝我方主动处理外债，不再背负德国的敌视
-		GER = {
-			remove_opinion_modifier = { target = LEP modifier = KR_hates_govt }
-		}
-		remove_opinion_modifier = { target = GER modifier = KR_hates_govt }
+		
+		
 		add_days_mission_timeout = {
 			mission = LEP_economic_recovery_ongoing
 			days = 50
@@ -3660,7 +3657,7 @@ country_event = { #外债
 		LEP_election_boost_JNSB = yes
 	}
 
-	option = {
+	option = {# 成立债务整理委员会＝我方主动处理外债，不再背负德国的敌视
 		log = "[GetLogInfo]: event league_national.3 option league_national.3.b"
 		name = league_national.3.b
 		add_stability = 0.1
@@ -3680,6 +3677,15 @@ country_event = { #外债
 			mission = LEP_economic_recovery_ongoing
 			days = -20
 		}
+		GER = {
+			remove_opinion_modifier = { target = LEP modifier = KR_hates_govt }
+		}
+		remove_opinion_modifier = { target = GER modifier = KR_hates_govt }
+		GER = {
+			remove_opinion_modifier = { target = LEP modifier = KR_hostile }
+		}
+		remove_opinion_modifier = { target = GER modifier = KR_hostile }
+		
 		LEP_election_boost_KMT = yes
 	}
 }
