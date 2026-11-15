@@ -1624,6 +1624,7 @@ characters = {
 				navy_career_officer
 				naval_lineage
 				navy_media_personality
+				ground_pounder
 				war_hero
 				cruiser_captain
 				spotter
