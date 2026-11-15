@@ -2607,6 +2607,7 @@ country_event = { #金九
 	option = {
 		log = "[GetLogInfo]: event league_mid.73 option league_mid.73.a"
 		name = league_mid.73.a
+		add_political_power = 10
 	}
 }
 

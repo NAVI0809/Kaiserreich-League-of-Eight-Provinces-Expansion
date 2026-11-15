@@ -791,6 +791,11 @@ joint_focus = { #协助朝鲜重建
 		KOR = {
 			add_ideas = LEP_aid_kora_kor
 		}
+		hidden_effect = {
+			LEP = {
+				country_event = { id = league_mid.73 days = 3 }
+			}			
+		}
 	}
 }
 
