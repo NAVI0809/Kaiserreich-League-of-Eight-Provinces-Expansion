@@ -49,12 +49,6 @@ country_event = { #政治
 		log = "[GetLogInfo]: event league_qi.3 option league_qi.3.a"
 		name = league_qi.3.a
 	}
-
-	option = {
-		log = "[GetLogInfo]: event league_qi.3 option league_qi.3.b"
-		name = league_qi.3.b
-		add_ideas = LEP_political_split1
-	}
 }
 
 country_event = { #五色国旗大同盟
