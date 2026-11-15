@@ -855,6 +855,11 @@ ideas = {
 		LEP_Coercive_Rule = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule" }
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -864,6 +869,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule1" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -874,6 +884,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule2" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -885,6 +900,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule3" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.05
@@ -896,6 +916,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule4a" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.1
@@ -907,6 +932,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule4b" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.15
@@ -918,6 +948,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule5" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -929,6 +964,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule6" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -940,6 +980,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule7" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.2
@@ -951,6 +996,11 @@ ideas = {
 			on_add = { log = "[GetLogRoot]: add idea LEP_Coercive_Rule8" }
 			name = LEP_Coercive_Rule
 			picture = generic_oppression
+			available = {
+				NOT = {
+					has_country_flag = LEP_dem_gov
+				}
+			}
 			allowed = { always = no }
 			modifier = {
 				stability_factor = 0.25

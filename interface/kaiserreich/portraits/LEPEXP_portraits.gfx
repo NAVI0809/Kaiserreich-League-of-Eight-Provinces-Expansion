@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_portrait_LEP_qi_xieyuan_suit"
+		texturefile = "gfx/leaders/LEP/LEP_qi_xieyuan_suit.png"
+	}
+	spriteType = {
 		name = "GFX_portrait_LEP_sun_chuanfang_army_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_sun_chuanfang.png"
 	}
@@ -686,6 +690,8 @@ spriteTypes = {
 		name = "GFX_portrait_LEP_mao_yisheng_civilian_small"
 		texturefile = "gfx/interface/advisors/LEP/LEP_mao_yisheng_civilian_small.png"
 	}
+
+	
 	
 
 }

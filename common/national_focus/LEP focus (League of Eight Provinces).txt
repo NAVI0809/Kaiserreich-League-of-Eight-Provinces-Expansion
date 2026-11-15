@@ -5290,7 +5290,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_song_jiaoren_vision
-		icon = GFX_goal_GXC_rehabilitating_beiyang
+		icon = GFX_goal_LEPEXP_songjiaoren_focus
 		cost = 4.00
 		ai_will_do = {
 			factor = 50
@@ -5451,7 +5451,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LEP_continuation_of_the_founding_republican_spirit
-		icon = GFX_goal_beiyang_flags
+		icon = GFX_goal_LEPEXP_minyuan_focus
 		cost = 4.00
 		ai_will_do = {
 			factor = 50

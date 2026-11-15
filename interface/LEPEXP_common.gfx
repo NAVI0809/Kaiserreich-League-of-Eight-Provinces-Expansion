@@ -91,4 +91,16 @@ spriteTypes = {
 		name = "GFX_goal_LEPEXP_Punish_Militarism_focus"
 		texturefile = "gfx/interface/goals/LEPEXP_Punish_Militarism_focus.png"
 	}
+	SpriteType = {
+		name = "GFX_goal_LEPEXP_jack_ma"
+		texturefile = "gfx/interface/goals/LEPEXP_jack_ma.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_LEPEXP_minyuan_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_minyuan_focus.png"
+	}
+	SpriteType = {
+		name = "GFX_goal_LEPEXP_songjiaoren_focus"
+		texturefile = "gfx/interface/goals/LEPEXP_songjiaoren_focus.png"
+	}
 }

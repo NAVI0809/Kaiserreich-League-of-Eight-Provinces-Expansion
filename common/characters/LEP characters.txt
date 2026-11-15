@@ -182,7 +182,7 @@ characters = {
 		}
 		country_leader = {
 			desc = LEP_zou_taofen_leader_desc
-			ideology = social_democrat_subtype
+			ideology = social_democrat_liberal_socialism_subtype
 		}
 	}
 

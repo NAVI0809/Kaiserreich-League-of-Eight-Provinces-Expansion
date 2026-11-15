@@ -24,9 +24,12 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		add_days_mission_timeout = {
-			mission = LEP_first_election_timer
-			days = -90
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		promote_character = {
+			character = LEP_zou_taofen
+			ideologies = social_democrat_subtype
 		}
 		
 		
@@ -564,6 +567,11 @@ country_event = { #联帅
 		activate_mission = LEP_temp_suppress_kmt
 		activate_mission = LEP_temp_suppress_rural_banditry
 		hidden_effect = {
+			LEP_qi_xieyuan = {
+				set_portraits = {
+					civilian = { large = GFX_portrait_LEP_qi_xieyuan_suit }
+				}
+			}
 			remove_mission = LEP_qi_action_ongoing
 			remove_mission = LEP_anti_qi_action_ongoing
 		}
