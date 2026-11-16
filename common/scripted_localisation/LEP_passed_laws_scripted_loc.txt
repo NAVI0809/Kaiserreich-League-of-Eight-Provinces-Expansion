@@ -391,8 +391,6 @@ defined_text = {
 		localization_key = LEP_central_bank_act
 	}
 	text = {
-		localization_key = LEP_act_unknown
-	}	text = {
 		trigger = { check_variable = { LEP_law_id = 20 } }
 		localization_key = LEP_copyright_act
 	}
@@ -431,6 +429,9 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { LEP_law_id = 29 } }
 		localization_key = LEP_labor_contract_act
+	}
+	text = {
+		localization_key = LEP_act_unknown
 	}
 
 }
@@ -514,8 +515,6 @@ defined_text = {
 		localization_key = LEP_central_bank_act_desc
 	}
 	text = {
-		localization_key = LEP_act_unknown
-	}	text = {
 		trigger = { check_variable = { LEP_law_id = 20 } }
 		localization_key = LEP_copyright_act_desc
 	}
@@ -554,6 +553,9 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { LEP_law_id = 29 } }
 		localization_key = LEP_labor_contract_act_desc
+	}
+	text = {
+		localization_key = LEP_act_unknown
 	}
 
 }
@@ -637,8 +639,6 @@ defined_text = {
 		localization_key = "[?LEP_law_date_19.GetDateStringNoHour] 通过"
 	}
 	text = {
-		localization_key = ""
-	}	text = {
 		trigger = { check_variable = { LEP_law_id = 20 } }
 		localization_key = "[?LEP_law_date_20.GetDateStringNoHour] 通过"
 	}
@@ -677,6 +677,9 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { LEP_law_id = 29 } }
 		localization_key = "[?LEP_law_date_29.GetDateStringNoHour] 通过"
+	}
+	text = {
+		localization_key = ""
 	}
 
 }
@@ -803,8 +806,6 @@ defined_text = {
 		localization_key = LEP_central_bank_act
 	}
 	text = {
-		localization_key = LEP_law_detail_hint
-	}	text = {
 		trigger = { check_variable = { LEP_law_detail = 20 } }
 		localization_key = LEP_copyright_act
 	}
@@ -843,6 +844,9 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { LEP_law_detail = 29 } }
 		localization_key = LEP_labor_contract_act
+	}
+	text = {
+		localization_key = LEP_law_detail_hint
 	}
 
 }
