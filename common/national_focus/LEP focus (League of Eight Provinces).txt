@@ -4652,7 +4652,7 @@ focus_tree = {
 					has_country_leader = { character = LEP_xu_deheng }
 				}
 				country_event = { id = china_events.323 days = 0 }
-				LEP_xu_deheng = { add_trait = { trait = LEP_autonomy_standard_bearer ideology = social_liberal_subtype } }	### 上台时仍是普通社会自由主义
+				LEP_xu_deheng = { add_trait = { trait = LEP_democratic_activist ideology = social_liberal_subtype } }	### 上台时仍是普通社会自由主义
 			}
 		}
 
