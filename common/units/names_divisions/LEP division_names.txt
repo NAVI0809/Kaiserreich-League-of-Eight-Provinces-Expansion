@@ -152,21 +152,21 @@ LEP_MIL_02 = {
 
 	# Number reservation system will tie to another group.
 
-	fallback_name = "第%d.步兵镇"
+	fallback_name = "第%d.混成警备旅"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-        1 = { "厦门辅助部队" }
-        2 = { "无锡辅助部队" }
-        3 = { "南京辅助部队" }
-        4 = { "温州辅助部队" }
-        5 = { "南通辅助部队" }
-        6 = { "鼓浪屿辅助部队" }
-        7 = { "第%d辅助部队" }
-        8 = { "第%d辅助部队" }
-        9 = { "第%d辅助部队" }
-        10 = { "第%d辅助部队" }
+        1 = { "厦门混成警备协" }
+        2 = { "无锡混成警备协" }
+        3 = { "南京混成警备协" }
+        4 = { "温州混成警备协" }
+        5 = { "南通混成警备协" }
+        6 = { "鼓浪屿混成警备协" }
+        7 = { "第%d混成警备协" }
+        8 = { "第%d混成警备协" }
+        9 = { "第%d混成警备协" }
+        10 = { "第%d混成警备协" }
     }
 }
 
@@ -177,7 +177,7 @@ LEP_CAV_01 = {
 
 	division_types = { "cavalry" }
 
-	fallback_name = "第%d.骑兵协"
+	fallback_name = "第%d.骑兵师"
 
 	ordered = {
         1 = { "南京骑兵第%d协" }
