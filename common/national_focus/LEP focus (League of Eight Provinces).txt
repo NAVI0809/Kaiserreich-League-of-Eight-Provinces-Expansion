@@ -1153,6 +1153,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_political_power = 80
+			LEP_strengthen_ZXX_small = yes
 			custom_effect_tooltip = tooltip_white_line
 			QIE = {
 				QIE_gu_zhongxiu = {
@@ -1163,11 +1164,6 @@ focus_tree = {
 							desc = QIE_gu_zhongxiu_advisor_desc
 							idea_token = LEP_gu_zhongxiu_advisor
 							traits = { LEPEXP_hydrologist }
-							on_add = {
-								FROM = {
-									LEP_strengthen_ZXX_small = yes
-								}
-							}
 						}
 					}
 				}

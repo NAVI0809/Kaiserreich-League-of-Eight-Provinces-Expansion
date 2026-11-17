@@ -69,7 +69,7 @@ defined_text = {
 		localization_key = LEP_add_ZZH_small_regional_stage
 	}
 	text = {
-		localization_key = LEP_add_ZZH_large_national_stage
+		localization_key = LEP_add_ZZH_small_national_stage
 	}
 }
 
@@ -84,7 +84,7 @@ defined_text = {
 		localization_key = LEP_add_ZXX_small_regional_stage
 	}
 	text = {
-		localization_key = LEP_add_ZXX_large_national_stage
+		localization_key = LEP_add_ZXX_small_national_stage
 	}
 }
 
