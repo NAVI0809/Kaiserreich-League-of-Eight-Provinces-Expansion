@@ -2844,6 +2844,7 @@ characters = {
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 3
+			visible = { has_country_flag = LEPEXP_ALLOW_LIU }
 		}
 		advisor = {
 			desc = LEP_liu_qingeng_commander_desc

@@ -110,10 +110,6 @@ add_ideas = {
 
 	unequal_treaties
 }
-add_timed_idea = {
-	idea = LEP_Liu_rifle_idea
-	days = 1460
-}
 
 ###- Events -###
 country_event = { id = league_collapse_events.1 days = 3 } # Sun Chuanfang meets with the governors

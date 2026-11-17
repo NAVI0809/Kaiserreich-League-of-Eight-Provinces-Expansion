@@ -454,6 +454,9 @@ unit_leader_event = { #民主政变
 			LEP_chen_yi = {
 			    promote_leader = yes
 		    }
+			LEP_liu_qingeng = {
+				CHN_recruit_character_effect = yes
+			} 
 			clr_country_flag = LEP_is_pro_GER
 		}
 	}
@@ -495,7 +498,11 @@ unit_leader_event = { #民主政变
 			}
 			remove_mission = LEP_qi_action_ongoing
 			remove_mission = LEP_anti_qi_action_ongoing
-	
+
+			LEP_liu_qingeng = {
+				set_country_flag = LEPEXP_ALLOW_LIU
+				unit_leader_event = { id = league_military.14 days = 3 }
+			} 
 		
 			if = {
 				limit = { has_idea = LEP_the_disunited_armies_2 }
@@ -5980,7 +5987,7 @@ unit_leader_event = { #unit leader upgrade event
 			custom_effect_tooltip = tooltip_white_line
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 1
+				value = 0.5
 			}
 			add_tech_bonus = {
 				name = league_generic.7.t.LEP_liu_qingeng
@@ -7112,6 +7119,35 @@ country_event = { #驱逐舰到货
 		name = league_military.13.a
 		LEPEXP_NAVY_germany_ships_effect = yes
 		LEPEXP_NAVY_germany_ships_effect_2 = yes
+	}
+}
+
+unit_leader_event = { #刘庆恩
+	id = league_military.14
+	title = league_military.14.t
+	desc = league_military.14.d
+	
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.14 option league_military.14.a"
+		name = league_military.14.a
+		add_political_power = -30
+		add_war_support = 0.05
+        LEP_liu_qingeng = { custom_effect_tooltip = character_becomes_a_general }
+		613 = { #南京
+		    add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_Liu_rifle_idea
+			days = 1300
+		}
 	}
 }
 
