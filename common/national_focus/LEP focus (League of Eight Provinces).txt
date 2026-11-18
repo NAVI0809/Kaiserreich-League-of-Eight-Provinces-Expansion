@@ -12395,7 +12395,7 @@ focus_tree = {
 	focus = {
 		id = LEP_new_model_officer
 		icon = GFX_goal_ANQ_invite_governors
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_eliteheer_model
 		x = -3
@@ -12527,7 +12527,7 @@ focus_tree = {
 	focus = {
 		id = LEP_staff_officer_school
 		dynamic = yes
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_new_model_officer
 		x = -2
@@ -12588,7 +12588,7 @@ focus_tree = {
 	focus = {
 		id = LEP_mp_academy
 		icon = GFX_goal_generic_police_state
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_staff_officer_school
 		x = 0
@@ -12632,7 +12632,7 @@ focus_tree = {
 	focus = {
 		id = LEP_thorough_logistics
 		icon = GFX_focus_generic_supply_line
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_innovation_breeds_victory
 		x = 0
@@ -12680,7 +12680,7 @@ focus_tree = {
 	focus = {
 		id = LEP_field_hospital_focus
 		icon = GFX_focus_generic_field_hostpital
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_thorough_logistics
 		x = 0
@@ -12714,7 +12714,7 @@ focus_tree = {
 	focus = {
 		id = LEP_disrupting_supply
 		icon = GFX_focus_FIN_motti_tactics
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_thorough_logistics
 		x = -2
@@ -12757,7 +12757,7 @@ focus_tree = {
 	focus = {
 		id = LEP_overtures_to_berlin
 		icon = GFX_goal_COS_German_Bailout
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_eliteheer_model
 		x = 0
@@ -12866,7 +12866,7 @@ focus_tree = {
 	focus = {
 		id = LEP_raining_thunder
 		icon = GFX_goal_Krupp_Artillery
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_overtures_to_berlin
 		x = -1
@@ -13026,7 +13026,7 @@ focus_tree = {
 	focus = {
 		id = LEP_symphony_of_factory_and_firepower
 		icon = GFX_goal_Focus_Military_Mobilisation
-		cost = 6
+		cost = 5
 
 		relative_position_id = LEP_raining_thunder
 		x = 1
@@ -16477,7 +16477,7 @@ focus_tree = {
 	focus = {
 		id = LEP_through_fire_and_war
 		icon = GFX_focus_CHI_decisive_battles
-		cost = 5
+		cost = 4
 
 		relative_position_id = LEP_symphony_of_factory_and_firepower
 		x = -1

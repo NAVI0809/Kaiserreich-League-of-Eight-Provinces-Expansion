@@ -4397,7 +4397,18 @@ ideas = {
 			}
 			
 		}
-		
+		LEPEXP_tinned_food_idea = {
+			picture = LEPEXP_tinned_food
+			allowed = {
+				always = no
+			}
+			modifier = {
+				supply_consumption_factor = -0.07
+				army_morale_factor = 0.07
+				naval_morale_factor = 0.07
+				no_supply_grace = 120
+			}			
+		}		
 	}
 	
 
