@@ -14487,6 +14487,125 @@ focus_tree = {
 	}
 
 	focus = {
+		id = LEP_six_year_programme
+		icon = GFX_goal_bluewater_navy
+		cost = 5
+
+		relative_position_id = LEP_refurbish_chinese_dockyards
+		x = 0
+		y = 1
+
+		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+			modifier = {
+				factor = 2
+				china_is_the_unifier_of_china_trigger = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed CHI_six_year_programme"
+			add_timed_idea = {
+				idea = USA_maritime_industry_idea
+				days = 2190
+			}
+			custom_effect_tooltip = tooltip_white_line
+			random_owned_controlled_state = {
+				prioritize = { 613 } #南京
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 743 } #Shanghai
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1065 } #威海
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 1068 } #葫芦岛
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 } #大连
+				limit = {
+					is_coastal = yes
+					free_building_slots = { building = dockyard size > 1 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = { has_dlc_aat = no }
+				custom_effect_tooltip = tooltip_white_line
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = csic
+			}
+			else = {
+				if = {
+					limit = { mio:CHN_naval_industry_organisation = { is_mio_available = no } }
+					custom_effect_tooltip = available_mio_tt
+					show_mio_tooltip = CHN_naval_industry_organisation
+				}
+				mio:CHN_naval_industry_organisation = {
+					set_mio_flag = CHN_mio_unlocked
+					add_mio_size = 2
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_NAVY_BONUS }
+	}
+
+	focus = {
 		id = LEP_naval_guns_targeting
 		icon = GFX_focus_generic_trade_interdiction
 		cost = 5
@@ -14638,15 +14757,17 @@ focus_tree = {
 						is_owned_and_controlled_by = ROOT
 					}
 				}
-				1099= {
-					limit = {
-						is_core_of = ROOT
-						is_coastal = yes
-					}
-					add_building_construction = {
-						type = radar_station
-						level = 2
-						instant_build = yes
+				1099 = {
+					if = {
+						limit = {
+							is_core_of = ROOT
+							is_coastal = yes
+						}
+						add_building_construction = {
+							type = radar_station
+							level = 2
+							instant_build = yes
+						}
 					}
 				}
 			}
@@ -14655,125 +14776,6 @@ focus_tree = {
 			FOCUS_FILTER_NAVY_BONUS
 			FOCUS_FILTER_RESEARCH
 		}
-	}
-
-	focus = {
-		id = LEP_six_year_programme
-		icon = GFX_goal_bluewater_navy
-		cost = 5
-
-		relative_position_id = LEP_refurbish_chinese_dockyards
-		x = 0
-		y = 1
-
-		prerequisite = { focus = LEP_refurbish_chinese_dockyards }
-		ai_will_do = {
-			base = 50
-			modifier = {
-				factor = 2
-				has_war = yes
-			}
-			modifier = {
-				factor = 0.5
-				has_war = no
-			}
-			modifier = {
-				factor = 2
-				china_is_the_unifier_of_china_trigger = yes
-			}
-		}
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed CHI_six_year_programme"
-			add_timed_idea = {
-				idea = USA_maritime_industry_idea
-				days = 2190
-			}
-			custom_effect_tooltip = tooltip_white_line
-			random_owned_controlled_state = {
-				prioritize = { 613 } #南京
-				limit = {
-					is_coastal = yes
-					free_building_slots = { building = dockyard size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 743 } #Shanghai
-				limit = {
-					is_coastal = yes
-					free_building_slots = { building = dockyard size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 1065 } #威海
-				limit = {
-					is_coastal = yes
-					free_building_slots = { building = dockyard size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 1068 } #葫芦岛
-				limit = {
-					is_coastal = yes
-					free_building_slots = { building = dockyard size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 745 } #大连
-				limit = {
-					is_coastal = yes
-					free_building_slots = { building = dockyard size > 1 include_locked = yes }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = { has_dlc_aat = no }
-				custom_effect_tooltip = tooltip_white_line
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = csic
-			}
-			else = {
-				if = {
-					limit = { mio:CHN_naval_industry_organisation = { is_mio_available = no } }
-					custom_effect_tooltip = available_mio_tt
-					show_mio_tooltip = CHN_naval_industry_organisation
-				}
-				mio:CHN_naval_industry_organisation = {
-					set_mio_flag = CHN_mio_unlocked
-					add_mio_size = 2
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_NAVY_BONUS }
 	}
 
 	focus = {

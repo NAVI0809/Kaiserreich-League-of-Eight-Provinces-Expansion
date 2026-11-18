@@ -3043,6 +3043,8 @@ LEP_bop_start_effect = {
 
 LEP_qi_unification_effect = {
 	set_cosmetic_tag = united_china
+	set_global_flag = china_united
+    set_country_flag = china_is_potential_government
 	custom_effect_tooltip = enables_new_focus_branches
 	activate_targeted_decision = { decision = china_move_capital target = ROOT }
 	country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
