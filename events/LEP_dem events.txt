@@ -2361,6 +2361,7 @@ country_event = { #从工厂到餐桌
 		name = league_mid.65.a
 		add_stability = 0.05
 		add_war_support = 0.02
+		add_ideas = LEPEXP_tinned_food_idea
 	}
 }	
 
