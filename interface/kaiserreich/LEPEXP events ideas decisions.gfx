@@ -96,6 +96,10 @@ spriteTypes = {
 		name = "GFX_report_event_LEP_troops_valley"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_troops_valley.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_LEPEXP_situmeitang"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEPEXP_situmeitang.png"
+	}
 
 	spriteType = {
 		name = "GFX_news_event_LEP_dem_victory"

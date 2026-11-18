@@ -12025,14 +12025,14 @@ focus_tree = {
 				tooltip = army_attack_factor_tooltip
 			}
 			custom_effect_tooltip = tooltip_white_line
-			if={
+			if = {
 				limit = {
 					has_idea = LEP_the_disunited_armies_1
 				}
 				remove_ideas = LEP_the_disunited_armies_1
 			}
 			custom_effect_tooltip = tooltip_white_line
-			if={
+			if = {
 				limit = {
 					has_idea = LEP_unstable_morale
 				}
@@ -12040,6 +12040,12 @@ focus_tree = {
 				    idea = LEP_unstable_morale
 				    days = -20
 			    }
+			}
+			hidden_effect = {
+				country_event = {
+					id = league_military.15
+					days = 8
+				}
 			}			
 		}
 		
@@ -13904,9 +13910,11 @@ focus_tree = {
 					custom_effect_tooltip = characters_will_be_recruited
 					character_list_tooltip = {
 						limit = { is_character = SHD_lin_jianzhang}
+						limit = { is_character = SHD_qu_tongfeng}
 					}
 					hidden_effect = {
 						SHD_lin_jianzhang = { CHN_recruit_character_effect = yes }
+						SHD_qu_tongfeng = { CHN_recruit_character_effect = yes }
 					}
 				}
 			}
@@ -16949,6 +16957,16 @@ focus_tree = {
 			}
 			custom_effect_tooltip = tooltip_white_line
 			if = {
+				limit = {
+					ROOT = {
+					    has_character = ANQ_sun_liren 
+				    }
+				}
+				ANQ_sun_liren = {
+					add_unit_leader_trait = combined_arms_expert
+				}
+			}
+			if = {
 				limit = { has_tech = mechanised_infantry }
 				custom_override_tooltip = {
 					tooltip = {
@@ -16995,7 +17013,7 @@ focus_tree = {
 							TYPE = "Jixiehua Bubing Shi"
 						}
 						create_unit = {
-							division = "name = \"新编机械化第38师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							division = "name = \"新1军新编机械化步兵第38师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.8"
 							owner = ROOT
 						}
 					}
@@ -17011,7 +17029,23 @@ focus_tree = {
 							TYPE = "Jixiehua Bubing Shi"
 						}			
 						create_unit = {
-							division = "name = \"新编机械化第22师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							division = "name = \"新1军新编机械化步兵第30师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
+							owner = ROOT
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_core_of = LEP
+						valid_state_for_spawning_friendly_unit = yes
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = tooltip_spawn_unit
+							TYPE = "Jixiehua Bubing Shi"
+						}			
+						create_unit = {
+							division = "name = \"新1军机械化步兵第50师\" division_template = \"Jixiehua Bubing Shi\" start_experience_factor = 0.5"
 							owner = ROOT
 						}
 					}

@@ -46,7 +46,7 @@ LEP_INF_02 = {
 
 	# Number reservation system will tie to another group.
 
-	fallback_name = "第%d.步兵协"
+	fallback_name = "第%d.步兵旅"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -82,7 +82,7 @@ LEP_INF_02 = {
 }
 
 LEP_INF_03 = {
-	name = 炮兵协
+	name = 炮兵镇
 
 	for_countries = { LEP }
 
@@ -90,12 +90,38 @@ LEP_INF_03 = {
 
 	# Number reservation system will tie to another group.
 
-	fallback_name = "第%d.炮兵镇"
+	fallback_name = "第%d.炮兵师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "南京炮兵镇" }
+		1 = { "南京炮兵第%d.镇" }
+        2 = { "宁波炮兵第%d.镇" }
+        3 = { "温州炮兵第%d.镇" }
+        4 = { "杭州炮兵第%d.镇" }
+        5 = { "徐州炮兵第%d.镇" }
+        6 = { "扬州炮兵第%d.镇" }
+        7 = { "苏州炮兵第%d.镇" }
+        8 = { "无锡炮兵第%d.镇" }
+        9 = { "南通炮兵第%d.镇" }
+        10 = { "金华炮兵第%d.镇" }
+        11 = { "南昌炮兵第%d.镇" }
+        12 = { "福州炮兵第%d.镇" }
+        13 = { "泉州炮兵第%d.镇" }
+        14 = { "建宁炮兵第%d.镇" }
+        15 = { "赣州炮兵第%d.镇" }
+        16 = { "江西炮兵第%d.镇" }
+        18 = { "淮安炮兵第%d.镇" }
+        19 = { "泰州炮兵第%d.镇" }
+        20 = { "绍兴炮兵第%d.镇" }
+        21 = { "安庆炮兵第%d.镇" }
+        22 = { "合肥炮兵第%d.镇" }
+        23 = { "常州炮兵第%d.镇" }
+        24 = { "芜湖炮兵第%d.镇" }
+        25 = { "厦门炮兵第%d.镇" }
+        26 = { "宿迁炮兵第%d.镇" }
+        27 = { "景德镇炮兵第%d.镇" }
+        28 = { "宿迁炮兵第%d.镇" }
 	}
 }
 
@@ -108,38 +134,38 @@ LEP_MIL_01 = {
 
 	# Number reservation system will tie to another group.
 
-	fallback_name = "%d. Minbing"
+	fallback_name = "%d. 民兵旅"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "南京民兵" }
-		2 = { "宁波民兵" }
-		3 = { "温州民兵" }
-		4 = { "杭州民兵" }
-		5 = { "徐州民兵" }
-        6 = { "扬州民兵" }
-        7 = { "苏州民兵" }
-        8 = { "无锡民兵" }
-        9 = { "南通民兵" }
-        10 = { "金华民兵" }
-        11 = { "南昌民兵" }
-        12 = { "福州民兵" }
-        13 = { "泉州民兵" }
-        14 = { "建宁民兵" }
-        15 = { "赣州民兵" }
-        16 = { "江西民兵" }
-        18 = { "淮安民兵" }
-        19 = { "泰州民兵" }
-        20 = { "绍兴民兵" }
-        21 = { "安庆民兵" }
-        22 = { "合肥民兵" }
-        23 = { "常州民兵" }
-        24 = { "芜湖民兵" }
-        25 = { "厦门民兵" }
-        26 = { "宿迁民兵" }
-        27 = { "景德镇民兵" }
-        28 = { "宿迁民兵" } 
+		1 = { "南京民兵协" }
+		2 = { "宁波民兵协" }
+		3 = { "温州民兵协" }
+		4 = { "杭州民兵协" }
+		5 = { "徐州民兵协" }
+        6 = { "扬州民兵协" }
+        7 = { "苏州民兵协" }
+        8 = { "无锡民兵协" }
+        9 = { "南通民兵协" }
+        10 = { "金华民兵协" }
+        11 = { "南昌民兵协" }
+        12 = { "福州民兵协" }
+        13 = { "泉州民兵协" }
+        14 = { "建宁民兵协" }
+        15 = { "赣州民兵协" }
+        16 = { "江西民兵协" }
+        18 = { "淮安民兵协" }
+        19 = { "泰州民兵协" }
+        20 = { "绍兴民兵协" }
+        21 = { "安庆民兵协" }
+        22 = { "合肥民兵协" }
+        23 = { "常州民兵协" }
+        24 = { "芜湖民兵协" }
+        25 = { "厦门民兵协" }
+        26 = { "宿迁民兵协" }
+        27 = { "景德镇民兵协" }
+        28 = { "宿迁民兵协" } 
     }
 }
 
@@ -219,12 +245,25 @@ LEP_MOT_01 = {
 
 	# Number reservation system will tie to another group.
 
-	fallback_name = "机动化步兵第%d镇"
+	fallback_name = "机动化步兵第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "机动化步兵第%d镇" }
+		1 = { "南京机动化步兵第1镇" }
+		2 = { "南京机动化步兵第2镇" }
+		3 = { "无锡机动化步兵镇" }
+		4 = { "南昌机动化步兵镇" }
+		5 = { "杭州机动化步兵镇" }
+		6 = { "宁波机动化步兵镇" }
+		7 = { "金华机动化步兵镇" }
+		8 = { "安庆机动化步兵镇" }
+		9 = { "芜湖机动化步兵镇" }
+		10 = { "厦门机动化步兵镇" }
+		11 = { "福州机动化步兵镇" }
+		12 = { "温州机动化步兵镇" }
+		13 = { "奉化机动化步兵镇" }
+		14 = { "义乌机动化步兵镇" }
 	}
 }
 
@@ -238,12 +277,25 @@ LEP_MEC_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "机械化第%d镇"
+	fallback_name = "机械化第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "机械化第%dd镇" }
+		1 = { "南京机械化步兵第1镇" }
+		2 = { "南京机械化步兵第2镇" }
+		3 = { "无锡机械化步兵镇" }
+		4 = { "南昌机械化步兵镇" }
+		5 = { "杭州机械化步兵镇" }
+		6 = { "宁波机械化步兵镇" }
+		7 = { "金华机械化步兵镇" }
+		8 = { "安庆机械化步兵镇" }
+		9 = { "芜湖机械化步兵镇" }
+		10 = { "厦门机械化步兵镇" }
+		11 = { "福州机械化步兵镇" }
+		12 = { "温州机械化步兵镇" }
+		13 = { "奉化机械化步兵镇" }
+		14 = { "义乌机械化步兵镇" }
 	}
 }
 
