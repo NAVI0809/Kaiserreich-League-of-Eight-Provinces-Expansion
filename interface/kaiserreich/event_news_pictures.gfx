@@ -1,6 +1,52 @@
 spriteTypes = {
 	#Sorted by tag, not name
 
+	### AFG - Afghanistan ###
+	spriteType = {
+		name = "GFX_news_event_AFG_pathanistan_revolt"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_pathanistan_revolt.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_civil_war"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_civil_war.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_amanullah_reformist"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_amanullah_reformist.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_amanullah_traditionalist"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_amanullah_traditionalist.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_hashim_revolt"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_hashim_revolt.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_reformist_conspiracy"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_reformist_conspiracy.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_nadir_shah"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_nadir_shah.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_zahir_shah"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_zahir_shah.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_republic_peoples_party"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_republic_peoples_party.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_republic_aia"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_republic_aia.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AFG_republic_socialist"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_AFG_republic_socialist.png"
+	}
+
 	### ANQ - Anqing Clique ###
 	spriteType = {
 		name = "GFX_news_event_ANQ_feng_recognised"
@@ -49,6 +95,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_AST_earle_page"
 		texturefile = "gfx/event_news_pictures/Oceania/news_event_AST_earle_page.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_AST_eureka"
+		texturefile = "gfx/event_news_pictures/Oceania/news_event_AST_eureka.png"
 	}
 
 	### AUS - Austria ###
@@ -157,6 +207,18 @@ spriteTypes = {
 		name = "GFX_news_event_BUL_legionaries"
 		texturefile = "gfx/event_news_pictures/Europe/news_event_BUL_legionaries.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_BUL_democracy"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_BUL_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_BUL_zveno"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_BUL_zveno.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_BUL_fatherland_front"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_BUL_fatherland_front.png"
+	}
 
 	### CAN - Canada ###
 	spriteType = {
@@ -218,6 +280,12 @@ spriteTypes = {
 		texturefile = "gfx/event_news_pictures/Asia/news_event_CHI_hu_zongnan_victory.png"
 	}
 
+	### CHN - China ###
+	spriteType = {
+		name = "GFX_news_event_CHN_entente_peace"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_CHN_entente_peace.png"
+	}
+
 	### WCA - Workers' Congress ###
 	spriteType = {
 		name = "GFX_news_event_WCA_triumph"
@@ -245,6 +313,38 @@ spriteTypes = {
 	}
 
 	### CUB - Cuba ###
+	spriteType = {
+		name = "GFX_news_event_CUB_autenticos"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_autenticos.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_diaz"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_diaz.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_election"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_election.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_hernandez"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_hernandez.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_guiteras"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_guiteras.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_marines"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_marines.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_mella"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_mella.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_CUB_pena"
+		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_pena.png"
+	}
 	spriteType = {
 		name = "GFX_news_event_CUB_flagcrowd"
 		texturefile = "gfx/event_news_pictures/North_America/news_event_CUB_flagcrowd.png"
@@ -446,6 +546,14 @@ spriteTypes = {
 		name = "GFX_news_event_GER_victory"
 		texturefile = "gfx/event_news_pictures/Europe/news_event_GER_victory.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_GER_ambassador_crisis"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_GER_ambassador_crisis.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_GER_congress_of_lyon"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_GER_congress_of_lyon.png"
+	}
 
 	### GRE - Greece ###
 	spriteType = {
@@ -619,14 +727,14 @@ spriteTypes = {
 		texturefile = "gfx/event_news_pictures/Europe/news_event_ICE_independent.png"
 	}
 
-	### INC - Indochina ###
+	### VIN - Vietnam ###
 	spriteType = {
-		name = "GFX_news_event_INC_rebel2"
-		texturefile = "gfx/event_news_pictures/Asia/news_event_INC_rebel2.png"
+		name = "GFX_news_event_VIN_rebel2"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_VIN_rebel2.png"
 	}
 	spriteType = {
-		name = "GFX_news_event_INC_victorious"
-		texturefile = "gfx/event_news_pictures/Asia/news_event_INC_victorious.png"
+		name = "GFX_news_event_VIN_victorious"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_VIN_victorious.png"
 	}
 
 	### INS - Indonesia ###
@@ -736,6 +844,10 @@ spriteTypes = {
 		name = "GFX_news_event_JAP_germany_peace"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_JAP_germany_peace.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_JAP_entente_peace"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_JAP_entente_peace.png"
+	}
 
 	### LEC - Legation Cities ###
 	spriteType = {
@@ -750,7 +862,6 @@ spriteTypes = {
 		name = "GFX_news_event_LEP_qi_victory"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_LEP_qi_victory.png"
 	}
-	
 
 	### LIT - Lithuania ###
 	spriteType = {
@@ -800,6 +911,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_MEX_military"
 		texturefile = "gfx/event_news_pictures/North_America/news_event_MEX_military.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_MEX_american_civil_war"
+		textureFile = "gfx/event_news_pictures/North_America/news_event_MEX_american_civil_war.png"
 	}
 
 	### MON - Mongolia ###
@@ -1251,6 +1366,10 @@ spriteTypes = {
 		name = "GFX_news_event_SER_white_hand"
 		texturefile = "gfx/event_news_pictures/Europe/news_event_SER_white_hand.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_SER_yugoslavia"
+		texturefile = "gfx/event_news_pictures/Europe/news_event_SER_yugoslavia.png"
+	}
 
 	### SHX - Shanxi ###
 	spriteType = {
@@ -1609,6 +1728,10 @@ spriteTypes = {
 		name = "GFX_news_event_china_war"
 		texturefile = "gfx/event_news_pictures/Asia/news_event_china_war.png"
 	}
+	spriteType = {
+		name = "GFX_news_event_second_sino_japanese_war"
+		texturefile = "gfx/event_news_pictures/Asia/news_event_second_sino_japanese_war.png"
+	}
 
 	### General Internationale ###
 	spriteType = {
@@ -1804,6 +1927,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_capture_cairo"
 		texturefile = "gfx/event_news_pictures/Africa/news_event_capture_cairo.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_capture_casablanca"
+		texturefile = "gfx/event_news_pictures/Africa/news_event_capture_casablanca.png"
 	}
 	spriteType = {
 		name = "GFX_news_event_capture_minsk"

@@ -4564,6 +4564,12 @@ china_create_united_front_faction = {
 		days = 30
 		value = 1
 	}
+	if = {
+		limit = {
+			is_ai = yes
+		}
+		add_timed_idea = { idea = has_scripted_peace days = 60 }
+	}
 }
 
 china_form_SCPC_effect = {
@@ -4614,12 +4620,12 @@ china_form_SCPC_effect = {
 				is_claimed_by = ROOT
 			}
 			OR = {
-				has_state_flag = guangxi_province_state
-				has_state_flag = guangdong_province_state
-				has_state_flag = yunnan_province_state
-				has_state_flag = sichuan_province_state
-				has_state_flag = hunan_province_state
-				has_state_flag = guizhou_province_state
+				check_variable = { chinese_province_state = 594.id }
+				check_variable = { chinese_province_state = 592.id }
+				check_variable = { chinese_province_state = 325.id }
+				check_variable = { chinese_province_state = 605.id }
+				check_variable = { chinese_province_state = 602.id }
+				check_variable = { chinese_province_state = 603.id }
 			}
 		}
 		add_claim_by = ROOT

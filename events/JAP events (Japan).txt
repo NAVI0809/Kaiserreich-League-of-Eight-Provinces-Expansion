@@ -3107,7 +3107,7 @@ country_event = { #The condemnation proposal
 						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
 					}
 					AND = {
@@ -3236,7 +3236,7 @@ country_event = { #Japan's resolution on trade
 						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
 					}
 					AND = {
@@ -3361,7 +3361,7 @@ country_event = { #Japan's resolution on economic integration
 						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
 					}
 					AND = {
@@ -3479,7 +3479,7 @@ country_event = { #Japan's resolution on military alliance
 						has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
 					}
 					AND = {
@@ -3575,9 +3575,9 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP } }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						OR = {
-							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							has_completed_focus = VIN_Commit_to_Chinese_Revolution
 							NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
 							NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP } }
 						}
@@ -3625,9 +3625,9 @@ country_event = { #Japan offers membership in sphere / from Tokyo Conference
 						NOT = { has_game_rule = { rule = HAW_forpol option = HAW_FORPOL_JAP } }
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						OR = {
-							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							has_completed_focus = VIN_Commit_to_Chinese_Revolution
 							NOT = { has_game_rule = { rule = INC_forpol option = DEFAULT } }
 							NOT = { has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP } }
 						}
@@ -6237,9 +6237,9 @@ country_event = { #Invited into economic sphere (via decision)
 						}
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						OR = {
-							has_completed_focus = INC_Commit_to_Chinese_Revolution
+							has_completed_focus = VIN_Commit_to_Chinese_Revolution
 							NOT = {
 								has_game_rule = { rule = INC_forpol option = DEFAULT }
 								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
@@ -6339,9 +6339,9 @@ country_event = { #Invited into economic sphere (via decision)
 						}
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						OR = {
-							has_completed_focus = INC_Commit_to_Chinese_Revolution #INC should refuse to work with JAP if theyve taken steps to align with CHI
+							has_completed_focus = VIN_Commit_to_Chinese_Revolution #VIN should refuse to work with JAP if theyve taken steps to align with CHI
 							NOT = {
 								has_game_rule = { rule = INC_forpol option = DEFAULT }
 								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }
@@ -6412,9 +6412,9 @@ country_event = { #Invited into economic sphere (via decision)
 						}
 					}
 					AND = {
-						tag = INC
+						tag = VIN
 						OR = {
-							has_completed_focus = INC_Commit_to_Chinese_Revolution #INC should refuse to work with JAP if theyve taken steps to align with CHI
+							has_completed_focus = VIN_Commit_to_Chinese_Revolution #VIN should refuse to work with JAP if theyve taken steps to align with CHI
 							NOT = {
 								has_game_rule = { rule = INC_forpol option = DEFAULT }
 								has_game_rule = { rule = INC_forpol option = INC_FORPOL_JAP }

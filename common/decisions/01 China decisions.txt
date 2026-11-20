@@ -736,7 +736,7 @@ foreign_politics = {
 				if = {
 					limit = {
 						ROOT = { has_socialist_government = yes }
-						NOT = { tag = INC } #Apparently Indochina will basically always be willing to align with Socialist China
+						NOT = { tag = VIN } #Apparently Indochina will basically always be willing to align with Socialist China
 					}
 					has_socialist_government = yes
 				}
@@ -1011,11 +1011,13 @@ foreign_politics = {
 			clear_decision_attack_AI = yes
 			if = {
 				limit = { FROM = { owns_state = 858 } } #Tawang
+				set_country_flag = CHN_IND_pressed_claim_over_tawang_flag
 				country_event = { id = CHN.foreignpolicy.401 days = 1 } #Revisiting the MacMahon Line
 				FROM = { country_event = { id = CHN.foreignpolicy.401 days = 1 } } #Revisiting the MacMahon Line
 			}
 			if = {
 				limit = { FROM = { owns_state = 897 } } #Aksai Chin
+				set_country_flag = CHN_IND_pressed_claim_over_askai_chin_flag
 				country_event = { id = CHN.foreignpolicy.411 days = 1 } #The [897.GetName] Border Dispute
 				FROM = { country_event = { id = CHN.foreignpolicy.411 days = 1 } } #The [897.GetName] Border Dispute
 			}
@@ -3007,6 +3009,16 @@ chinese_unification = {
 						china_alignment_right_kuomintang = yes
 						FROM = { china_alignment_right_kuomintang = yes }
 					}
+					AND = {
+						china_alignment_right_kuomintang = yes
+						has_country_flag = YUN_received_support_from_CHI
+						FROM = {
+							OR = {
+								is_subject_of = LKT
+								tag = LKT
+							}
+						}
+					}
 				}
 			}
 		}
@@ -3435,6 +3447,23 @@ chinese_unification = {
 			}
 			modifier = {
 				factor = 0
+				check_variable = { ROOT.strength_ratio < FROM.strength_ratio }
+				check_expr = {
+					value = num_core_states
+					divide = num_controlled_states
+					less_than_or_equals = 0.5
+				}
+			}
+			modifier = {
+				factor = 0
+				check_expr = {
+					value = ROOT.strength_ratio
+					divide = FROM.strength_ratio
+					less_than_or_equals = 0.5
+				}
+			}
+			modifier = {
+				factor = 0
 				FROM = { has_war = no } #Attack if enemy is already at war
 				FROM = { default_attack_AI_trigger = yes } #Attack if enemy is weaker
 			}
@@ -3460,6 +3489,10 @@ chinese_unification = {
 					}
 				}
 				NOT = { has_war_with = QIE } #Follow this logic only if not already at war with QIE
+				any_country = {
+					is_ally_with = QIE
+					is_neighbor_of = ROOT #Follow this logic only if is neighbor of QIE or QIEs puppets
+				}
 				NOT = {
 					OR = {
 						AND = {
@@ -3476,6 +3509,35 @@ chinese_unification = {
 							}
 						}
 					}
+				}
+			}
+			modifier = {
+				factor = 0
+				country_exists = FNG #Follow this logic only if FNG still exists
+				NOT = { original_tag = FNG } #Ignore this logic if original tag is FNG
+				NOT = {
+					FROM = {
+						OR = {
+							original_tag = FNG
+							original_tag = QIE
+						}
+					}
+				}
+				NOT = {
+					FROM = {
+						is_subject = yes
+						overlord = {
+							OR = {
+								original_tag = FNG #Dont attack warlords that arent FNGs puppets
+								original_tag = QIE #Dont attack warlords that arent QIEs puppets
+							}
+						}
+					}
+				}
+				NOT = { has_war_with = FNG } #Follow this logic only if not already at war with FNG
+				any_country = {
+					is_ally_with = FNG
+					is_neighbor_of = ROOT #Follow this logic only if is neighbor of FNG or FNGs puppets
 				}
 			}
 			modifier = {
@@ -4262,6 +4324,9 @@ chinese_unification = {
 		}
 
 		target_array = china_possible_allies_array
+		target_root_trigger = {
+			china_is_potential_government = yes
+		}
 		target_trigger = {
 			china_is_potential_government = yes
 			FROM = { china_can_ROOT_offer_alliance = yes }
@@ -4281,6 +4346,7 @@ chinese_unification = {
 				###check if they have a non-fitting South China War rule set
 				NOT = { has_global_flag = china_united }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				OR = {
 					AND = {
 						tag = GXC
@@ -4394,6 +4460,9 @@ chinese_unification = {
 		}
 
 		target_array = china_possible_allies_array_northwest
+		target_root_trigger = {
+			china_is_potential_government = yes
+		}
 		target_trigger = {
 			FROM = {
 				is_subject = no
@@ -4482,6 +4551,9 @@ chinese_unification = {
 		}
 
 		target_array = china_possible_targets_array
+		target_root_trigger = {
+			china_is_potential_government = yes
+		}
 		target_trigger = {
 			FROM = {
 				is_subject = no
@@ -4815,6 +4887,10 @@ chinese_unification = {
 
 		complete_effect = {
 			log = "[GetLogRoot]: Decision complete CHN_pressure_to_act_mission"
+			set_temp_variable = { CHN_pressure_political_power_var = { value = CHN_pressure_to_act_variable multiply = 50 } } #For every point, add 50 pp
+			add_political_power = CHN_pressure_political_power_var
+			set_temp_variable = { CHN_pressure_war_support_var = { value = CHN_pressure_to_act_variable multiply = 0.1 } } #For every point, add 10% WS
+			add_war_support = CHN_pressure_war_support_var
 			clear_variable = CHN_pressure_to_act_variable
 			set_temp_variable = { CHN_pressure_political_power_var = CHN_pressure_to_act_variable }
 			multiply_temp_variable = { CHN_pressure_political_power_var = 50 } #For every point, add 50 pp
@@ -5187,6 +5263,20 @@ chinese_unification = {
 			}
 			#As an exception, there is no requirement to share borders for this decision
 			CHN_has_revolted = no
+			#if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				OR = {
@@ -5238,6 +5328,9 @@ chinese_unification = {
 		}
 
 		targets = { NPA }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = NPA } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -5277,6 +5370,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5318,6 +5412,32 @@ chinese_unification = {
 				FROM = { any_neighbor_country = { is_subject_of = ROOT } }
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
+			#if = {
+			#	limit = { tag = GXC }
+			#	GXC_popularity_join_zhili_trigger = yes
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#	}
+			#}
+			#else_if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = GXC }
 				GXC_popularity_join_zhili_trigger = yes
@@ -5412,6 +5532,9 @@ chinese_unification = {
 		}
 
 		targets = { NZH }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = NZH } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -5460,6 +5583,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5499,6 +5623,32 @@ chinese_unification = {
 				FROM = { any_neighbor_country = { is_subject_of = ROOT } }
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
+			#if = {
+			#	limit = { tag = GXC }
+			#	GXC_popularity_join_zhili_trigger = yes
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#	}
+			#}
+			#else_if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = GXC }
 				GXC_popularity_join_zhili_trigger = yes
@@ -5544,6 +5694,9 @@ chinese_unification = {
 		}
 
 		targets = { SZH }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = SZH } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -5562,6 +5715,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5648,6 +5802,32 @@ chinese_unification = {
 					FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 				}
 			}
+			#if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#else_if = {
+			#	limit = { tag = GXC }
+			#	GXC_popularity_join_fengtian_trigger = yes
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				OR = {
@@ -5735,6 +5915,9 @@ chinese_unification = {
 		}
 
 		targets = { AGJ }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = AGJ } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -5783,6 +5966,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -5825,6 +6009,20 @@ chinese_unification = {
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
 			CHN_has_revolted = no
+			#if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				OR = {
@@ -5890,6 +6088,9 @@ chinese_unification = {
 		}
 
 		targets = { UPC }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = UPC } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -5957,6 +6158,7 @@ chinese_unification = {
 				tag = HNN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_YUN_BOTH } }
 				GXC = { exists = yes }
 				YUN = {
@@ -5969,6 +6171,7 @@ chinese_unification = {
 				tag = YUN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_HNN_BOTH } }
 				GXC = { exists = yes }
 				HNN = { exists = yes }
@@ -6007,6 +6210,20 @@ chinese_unification = {
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
 			CHN_has_revolted = no
+			#if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				OR = {
@@ -6058,6 +6275,9 @@ chinese_unification = {
 		}
 
 		targets = { LKT }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = LKT } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -6115,6 +6335,7 @@ chinese_unification = {
 				factor = 0
 				tag = HNN
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_GXC_YUN } }
 				NOT = { has_global_flag = CHN_south_china_war_started }
 				GXC = { exists = yes }
@@ -6157,6 +6378,20 @@ chinese_unification = {
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
 			CHN_has_revolted = no
+			#if = {
+			#	limit = { tag = HNN }
+			#	OR = {
+			#		AND = {
+			#			has_global_flag = CHN_south_china_war_started
+			#			has_country_flag = CHN_SCW_neutral_flag
+			#		}
+			#		CHN_south_china_war_over_trigger = yes
+			#		date > 1938.1.1
+			#		YUN = { is_subject = yes }
+			#		GXC = { is_subject = yes }
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				OR = {
@@ -6211,6 +6446,9 @@ chinese_unification = {
 		}
 
 		targets = { RKT }
+		target_root_trigger = {
+			china_is_potential_government = no
+		}
 		target_trigger = { FROM = { tag = RKT } }
 		target_non_existing = yes
 		fire_only_once = yes
@@ -6278,6 +6516,7 @@ chinese_unification = {
 				tag = HNN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_YUN_BOTH } }
 				GXC = { exists = yes }
 				YUN = {
@@ -6290,6 +6529,7 @@ chinese_unification = {
 				tag = YUN
 				FROM = { tag = GXC }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = DEFAULT } }
+				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_NO_WAR } }
 				NOT = { has_game_rule = { rule = CHN_south_china_war option = CHN_SOUTH_CHINA_WAR_HNN_BOTH } }
 			}
 		}
@@ -6360,6 +6600,15 @@ chinese_unification = {
 				FROM = { any_neighbor_country = { is_subject_of = ROOT } }
 				FROM = { any_subject_country = { is_neighbor_of = ROOT } }
 			}
+			#if = {
+			#	limit = { tag = HNN }
+			#	FROM = { has_country_leader = { character = SHX_yan_xishan } }
+			#	OR = {
+			#		has_global_flag = CHN_south_china_war_started
+			#		date > 1937.7.1
+			#	}
+			#}
+			#Going to experiment with locking the Southern Chinese factions from joining factions until after 1938 so they have a fair chance of conquering each other.
 			if = {
 				limit = { tag = HNN }
 				FROM = { has_country_leader = { character = SHX_yan_xishan } }
@@ -7076,6 +7325,13 @@ chinese_unification = {
 					803 #Wenzhou
 					1075 #Nantong
 				}
+			}
+			if = {
+				limit = { FROM = { is_subject = yes } }
+				NOT = { has_variable = china_refused_return_of_concessions_@FROM.overlord }
+			}
+			else = {
+				NOT = { has_variable = china_refused_return_of_concessions_@FROM }
 			}
 			at_war_with_or_justifying_wargoal_against_FROM = no
 		}

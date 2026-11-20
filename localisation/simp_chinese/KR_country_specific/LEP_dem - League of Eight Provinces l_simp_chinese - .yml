@@ -2993,7 +2993,7 @@
 
  LEP_gea_name_CHN: "[CHN.GetName]"
  LEP_gea_name_DEU: "德国政府"
- LEP_gea_name_IDC: "[INC.GetName]"
+ LEP_gea_name_IDC: "[VIN.GetName]"
  LEP_gea_name_AST: "[AST.GetName]"
  LEP_gea_num_CHN: "[?GEA.LEP_gea_pct_CHN_var|0]%"
  LEP_gea_num_DEU: "[?GEA.LEP_gea_pct_DEU_var|0]%"

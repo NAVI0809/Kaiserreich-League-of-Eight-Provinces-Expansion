@@ -1223,7 +1223,7 @@ LEP_foreign_policy_decisions = {
 			create_faction_from_template = { template = faction_template_generic name = asian_union }
 			activate_targeted_decision = { target = KOR decision = china_invite_countries_to_faction }
 			activate_targeted_decision = { target = BRM decision = china_invite_countries_to_faction }
-			activate_targeted_decision = { target = INC decision = china_invite_countries_to_faction }
+			activate_targeted_decision = { target = VIN decision = china_invite_countries_to_faction }
 			activate_targeted_decision = { target = VIN decision = china_invite_countries_to_faction }
 			activate_targeted_decision = { target = LAO decision = china_invite_countries_to_faction }
 			activate_targeted_decision = { target = CAM decision = china_invite_countries_to_faction }

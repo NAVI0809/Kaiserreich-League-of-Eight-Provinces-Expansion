@@ -8091,7 +8091,7 @@ focus_tree = {
 		completion_reward = {
 		    log = "[GetLogRoot]: Focus Completed KMT_liberate_southeast_asia"
 		    activate_targeted_decision = { target = GEA decision = LEP_liberation_war_decision }
-		    activate_targeted_decision = { target = INC decision = LEP_liberation_war_decision }
+		    activate_targeted_decision = { target = VIN decision = LEP_liberation_war_decision }
 		    activate_targeted_decision = { target = VIN decision = LEP_liberation_war_decision }
 		    activate_targeted_decision = { target = LAO decision = LEP_liberation_war_decision }
 		    activate_targeted_decision = { target = CAM decision = LEP_liberation_war_decision }
@@ -8144,7 +8144,7 @@ focus_tree = {
 			    limit = {
 					var:827.owner = {
 					    NOT = {
-						    tag = INC
+						    tag = VIN
 						    tag = VIN
 						    tag = ROOT
 						    tag = GEA

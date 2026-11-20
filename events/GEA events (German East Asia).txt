@@ -112,7 +112,7 @@ country_event = { # Yen Bai Mutiny
 		set_global_flag = GEA_Martial_Law_NOT_Declared
 		add_political_power = -30 # Weaken the Stability
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 8
 		}
 	}
@@ -147,7 +147,7 @@ country_event = { # Yen Bai Mutiny (FRA)
 		add_command_power = -15
 		add_manpower = -500
 		send_equipment = {
-			target = INC
+			target = VIN
 			type = infantry_equipment
 			amount = 1000
 		}
@@ -271,7 +271,7 @@ country_event = { # BBR Round 2 (Police)
 			}
 		}
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 3
 		}
 		modify_country_flag = {
@@ -441,7 +441,7 @@ country_event = { # Saigon Uprising
 		trigger = { tag = GEA }
 		ai_chance = { base = 0 }
 		hidden_effect = { GEA_spawn_indochinese_revolt = yes }
-		INC = { change_tag_from = ROOT }
+		VIN = { change_tag_from = ROOT }
 		hidden_effect = {
 			set_variable = { country_guide_page_count = 0 }
 		}
@@ -460,7 +460,7 @@ country_event = { # Saigon Uprising
 		name = german_east_asia_events.15.a.fra
 		trigger = { tag = FRA }
 		ai_chance = { base = 0 }
-		INC = { change_tag_from = ROOT }
+		VIN = { change_tag_from = ROOT }
 	}
 
 	option = { # Good luck, comrades!
@@ -481,9 +481,9 @@ country_event = { # Evacuate our assets?
 
 	trigger = {
 		tag = GEA
-		has_war_with = INC
+		has_war_with = VIN
 		controls_state = 671
-		INC = {
+		VIN = {
 			controls_state = 827
 			surrender_progress < 0.20
 		}
@@ -551,6 +551,7 @@ country_event = { # GEA in trouble
 	option = { # Fighting a land war in Asia sounds like fun!
 		log = "[GetLogInfo]: event german_east_asia_events.17 option german_east_asia_events.17.c"
 		name = german_east_asia_events.17.c
+		trigger = { NOT = { has_war_with = VIN } }
 		ai_chance = {
 			base = 20
 			modifier = {
@@ -565,16 +566,16 @@ country_event = { # GEA in trouble
 			}
 			modifier = { # Don't ruin players' game
 				factor = 0
-				INC = { is_ai = no }
+				VIN = { is_ai = no }
 			}
 		}
 		add_war_support = -0.25 # sounds like fun!
 		add_to_war = {
 			targeted_alliance = GEA
-			enemy = INC
+			enemy = VIN
 		}
 		hidden_effect = {
-			INC = {
+			VIN = {
 				country_event = { id = german_east_asia_events.23 days = 5 }
 			}
 		}
@@ -596,12 +597,12 @@ country_event = { # Time to Retreat?
 		add_political_power = -25
 		if = {
 			limit = {
-				INC = { controls_state = 671 }
+				VIN = { controls_state = 671 }
 			}
 			add_war_support = -0.03
 		}
 		hidden_effect = {
-			INC = {
+			VIN = {
 				country_event = { id = german_east_asia_events.19 days = 1 }
 			}
 		}
@@ -619,7 +620,7 @@ country_event = { # Time to Retreat?
 						state = 882 #Samabuli
 					}
 				}
-				transfer_state_to = INC
+				transfer_state_to = VIN
 			}
 		}
 		if = {
@@ -660,7 +661,7 @@ country_event = { # Time to Retreat?
 				remove_core_of = GEA
 				add_claim_by = GEA
 			}
-			INC = {
+			VIN = {
 				country_event = { id = german_east_asia_events.20 days = 5 }
 			}
 		}
@@ -815,6 +816,11 @@ country_event = { #Indochinese rebellion crushed
 		log = "[GetLogInfo]: event german_east_asia_events.22 option german_east_asia_events.22.a"
 		name = german_east_asia_events.22.a
 		add_political_power = 20
+		every_owned_state = {
+			limit = { region = 196 } #Indochina
+			add_resistance = -10
+			add_compliance = 15
+		}
 		hidden_effect = {
 			news_event = { id = indochina_events.174 days = 2 }
 		}
@@ -831,7 +837,7 @@ country_event = { #Escalation - If I can't fix the bug...make it a feature
 	is_triggered_only = yes
 
 	trigger = {
-		tag = INC
+		tag = VIN
 		has_global_flag = GEA_Indochina_Uprising_Fired
 		has_war_with = GEA
 		has_war_with = GER
@@ -868,6 +874,8 @@ country_event = {
 				factor = 0
 				has_game_rule = { rule = INC_revolt option = INC_REVOLT_YES }
 			}
+			add_compliance = 25
+			add_dynamic_modifier = { modifier = GEA_bao_dai_government_modifier }
 		}
 		add_stability = 0.05
 		set_temp_variable = { target = VIN }
@@ -986,7 +994,7 @@ country_event = { # Falling Rice Price
 			value = 1
 		}
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 5
 		}
 	}
@@ -1022,7 +1030,7 @@ country_event = { # Falling Rice Price
 			value = 2
 		}
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 5
 		}
 	}
@@ -1069,7 +1077,7 @@ country_event = { # European privileges
 			value = 1
 		}
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 6
 		}
 	}
@@ -1099,7 +1107,7 @@ country_event = { # Strikes in Annamese plantations
 			value = 1
 		}
 		add_to_variable = {
-			var = INC.guerilla_activity
+			var = VIN.guerilla_activity
 			value = 3
 		}
 	}
@@ -1159,12 +1167,12 @@ country_event = { # Counterinsurgency tactic
 	fire_only_once = yes
 	trigger = {
 		tag = GEA
-		has_war_with = INC
+		has_war_with = VIN
 		has_army_experience > 3
 
 		has_global_flag = GEA_Indochina_Uprising_Fired
 		NOT = {
-			INC = {
+			VIN = {
 				OR = {
 					has_completed_focus = INC_Mobile_Warfare
 					has_completed_focus = INC_General_Offensive_General_Uprising
