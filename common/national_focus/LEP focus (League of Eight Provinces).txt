@@ -6809,6 +6809,7 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_decision_baimao_gate
 			unlock_decision_tooltip = LEP_decision_jiangzhe_seawall
 			unlock_decision_tooltip = LEP_decision_westlake_dredging
+			unlock_decision_tooltip = LEP_decision_tuoshanyan_dam
 		}
 
 	}

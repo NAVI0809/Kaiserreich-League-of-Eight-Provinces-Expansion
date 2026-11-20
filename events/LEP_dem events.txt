@@ -8969,6 +8969,21 @@ country_event = {#撤回4点
 	    name = league_industry.6.g
     }
 }
+country_event = {
+	id = league_industry.7
+	title = league_industry.7.t
+	desc = league_industry.7.d
+	picture = GFX_report_event_SIA_Dam_Chao_Phraya_Opening
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = league_industry.7.a
+		log = "[GetLogInfo]: event league_industry.7 option league_industry.7.a"
+		add_political_power = 30
+	}
+}
 
 
 
