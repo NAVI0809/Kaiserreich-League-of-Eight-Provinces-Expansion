@@ -5208,7 +5208,7 @@ LEP_national_reconstruction_bureau = {
 				id = league_industry.7
 				days = 12
 			}
-			746 = { increase_state_category_by_one_levels = yes }
+			
 			746 = {
 			    if = {
 				    limit = { dam > 0 }
@@ -5220,7 +5220,7 @@ LEP_national_reconstruction_bureau = {
 				    add_building_construction = {
 					    type = dam
 					    level = 1
-					    province = 7120
+					    province = 9974
 					    instant_build = yes
 				    }
 			    }
