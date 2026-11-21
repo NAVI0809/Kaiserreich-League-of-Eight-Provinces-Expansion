@@ -809,7 +809,7 @@ LEP_balance_of_power_category = {
 			add_political_power = 50
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.03
+			    value = -0.08
 		    }
 		}
 	}
@@ -844,7 +844,7 @@ LEP_balance_of_power_category = {
 			add_war_support = 0.05
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.03
+			    value = -0.08
 		    }
 		}
 	}
@@ -880,7 +880,7 @@ LEP_balance_of_power_category = {
 			}
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = -0.03
+			    value = -0.08
 		    }
 		}
 	}
@@ -918,7 +918,7 @@ LEP_balance_of_power_category = {
 			add_command_power = -10
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = 0.03
+			    value = 0.08
 		    }
 		}
 	}
@@ -957,7 +957,7 @@ LEP_balance_of_power_category = {
 			add_command_power = -10
 			add_power_balance_value = {
 			    id = LEP_power_balance
-			    value = 0.03
+			    value = 0.08
 		    }
 		}
 	}
@@ -5740,11 +5740,12 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_autonomy_outline
 		}
 		modifier = {
-			social_democrat_drft = 0.01
+			social_democrat_drift = 0.01
 			social_liberal_drift = 0.03
 			market_liberal_drift = 0.01
 			social_conservative_drift = 0.01
@@ -5762,6 +5763,7 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_southeast_autonomy_academy
 		}
@@ -5787,6 +5789,7 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_rebuild_administrative_system
 		}
@@ -5818,6 +5821,7 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_administrative_inspector
 		}
@@ -5853,6 +5857,7 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_livelihood_equality
 		}
@@ -5883,6 +5888,7 @@ LEPEXP_gov = {
         allowed = {
             tag = LEP
 		}
+		visible = { always = yes }
 		available = {
 			has_completed_focus = LEP_livelihood_equality
 		}

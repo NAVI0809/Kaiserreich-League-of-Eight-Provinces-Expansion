@@ -132,7 +132,6 @@ LEPEXP_gov = {
 			has_completed_focus = LEP_new_republic_with_old_ideals
 		}
 		tag = LEP
-		has_completed_focus = LEP_unite_national_liberals 
 	}
 
 	priority = 981
@@ -143,6 +142,7 @@ LEPEXP_gov = {
 		NOT = {
 			has_completed_focus = LEP_new_republic_with_old_ideals
 		}
+		has_completed_focus = LEP_unite_national_liberals
 	}
 	visible_when_empty = yes
 }

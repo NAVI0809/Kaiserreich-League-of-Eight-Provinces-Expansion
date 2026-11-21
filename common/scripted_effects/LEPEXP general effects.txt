@@ -3053,6 +3053,13 @@ LEP_qi_unification_effect = {
 	country_event = { id = league_qi.1 days = 1 }
 	set_country_flag = LEP_qi_national_focus
 	mark_focus_tree_layout_dirty = yes
+	hidden_effect = {
+		LEP_qi_xieyuan = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_qi_xieyuan_suit }
+			}
+		}
+	}
 }
 
 LEPEXP_JAP_generic_land_reform_setup = {

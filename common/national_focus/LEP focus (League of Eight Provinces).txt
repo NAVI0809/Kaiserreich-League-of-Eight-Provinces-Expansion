@@ -109,7 +109,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = league_war_events.19 days = 10 }
 				country_event = { id = league_war_events.23 days = 18 }
-				country_event = { id = league_war_events.23 days = 38 }
+				country_event = { id = league_war_events.24 days = 38 }
 				
 			}
 		}

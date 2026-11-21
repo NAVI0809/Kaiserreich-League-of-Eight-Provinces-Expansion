@@ -248,7 +248,7 @@ country_event = { #钱袋子与枪杆子
 		name = league_war_events.23.a
 		add_power_balance_value = {
 			id = LEP_power_balance
-			value = -0.1
+			value = -0.15
 		}
 		add_war_support = 0.03
 		set_temp_variable = { change_league_war_morale_by = 5 }
@@ -261,7 +261,7 @@ country_event = { #钱袋子与枪杆子
 		add_stability = -0.1
 		add_power_balance_value = {
 			id = LEP_power_balance
-			value = 0.1
+			value = 0.15
 		}
 		set_temp_variable = { change_league_war_morale_by = 5 }
 		china_update_morale = yes
@@ -286,7 +286,7 @@ country_event = { #吃什么
 		add_war_support = -0.05
 		add_power_balance_value = {
 			id = LEP_power_balance
-			value = -0.1
+			value = -0.15
 		}
 		
 	}
@@ -574,11 +574,6 @@ country_event = { #联帅
 		activate_mission = LEP_temp_suppress_kmt
 		activate_mission = LEP_temp_suppress_rural_banditry
 		hidden_effect = {
-			LEP_qi_xieyuan = {
-				set_portraits = {
-					civilian = { large = GFX_portrait_LEP_qi_xieyuan_suit }
-				}
-			}
 			remove_mission = LEP_qi_action_ongoing
 			remove_mission = LEP_anti_qi_action_ongoing
 		}
