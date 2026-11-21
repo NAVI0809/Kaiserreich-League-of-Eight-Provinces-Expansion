@@ -9143,6 +9143,7 @@ news_event = {
 	trigger = { wants_world_news = yes } #Global news event
 
 	is_triggered_only = yes
+	fire_only_once = yes
 	fire_for_sender = yes
 	major = yes
 
