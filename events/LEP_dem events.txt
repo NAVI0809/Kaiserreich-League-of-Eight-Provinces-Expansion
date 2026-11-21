@@ -8991,6 +8991,7 @@ country_event = {
 		name = league_industry.7.a
 		log = "[GetLogInfo]: event league_industry.7 option league_industry.7.a"
 		add_political_power = 30
+		746 = { increase_state_category_by_one_levels = yes }
 	}
 }
 
