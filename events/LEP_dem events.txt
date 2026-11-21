@@ -1865,6 +1865,7 @@ country_event = { #景星学会
 	option = {
 		log = "[GetLogInfo]: event league_mid.50 option league_mid.50.a"
 		name = league_mid.50.a
+		add_political_power = 50
 		add_popularity = {
 			ideology = authoritarian_democrat
 			popularity = 0.05
@@ -1873,20 +1874,18 @@ country_event = { #景星学会
 			ideology = market_liberal
 			popularity = 0.03
 		}
-		add_popularity = {
-			ideology = social_liberal
-			popularity = 0.03
-		}
-		set_temp_variable = { coalition_partner_var = token:authoritarian_democrat }
-		add_to_coalition = yes
-		LEP_hold_election_seats = yes    # 执政联盟变动 → 重排席位
 	}
 
 	option = {
 		log = "[GetLogInfo]: event league_mid.50 option league_mid.50.b"
 		name = league_mid.50.b
+		add_stability = 0.05
 		add_popularity = {
 			ideology = social_conservative
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
 			popularity = 0.03
 		}
 	}

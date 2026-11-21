@@ -1728,7 +1728,7 @@ focus_tree = {
 				factor = 10
 				has_game_rule = { rule = LEP_path option = LEP_PATH_JNSB }
 			}
-}
+        }
 		prerequisite = {
 			focus = LEP_new_citizen
 		}
@@ -1741,18 +1741,13 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = social_democrat
-				popularity = 0.1
+				popularity = 0.8
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
 				days = 200
 				idea = LEP_socia_solidarity
 			}
-			custom_effect_tooltip = tooltip_white_line
-			
-			set_temp_variable = { coalition_partner_var = token:social_democrat }
-			add_to_coalition = yes
-			LEP_hold_election_seats = yes	# 执政联盟变动 → 重排席位
 			custom_effect_tooltip = tooltip_white_line
 			country_event = { id = league_mid.50 days = 0 }
 			custom_effect_tooltip = tooltip_white_line
