@@ -456,7 +456,7 @@ unit_leader_event = { #民主政变
 		    }
 			LEP_liu_qingeng = {
 				CHN_recruit_character_effect = yes
-			} 
+			}
 			clr_country_flag = LEP_is_pro_GER
 		}
 	}
@@ -486,6 +486,7 @@ unit_leader_event = { #民主政变
 		custom_effect_tooltip = tooltip_white_line
 		set_potential_national_government = yes
 		custom_effect_tooltip = tooltip_white_line
+		set_country_flag = LEPEXP_ALLOW_LIU
 		add_timed_idea = {
 			idea = LEP_unstable_morale
 			days = 190
@@ -500,7 +501,7 @@ unit_leader_event = { #民主政变
 			remove_mission = LEP_anti_qi_action_ongoing
 
 			LEP_liu_qingeng = {
-				set_country_flag = LEPEXP_ALLOW_LIU
+				
 				unit_leader_event = { id = league_military.14 days = 3 }
 			} 
 		
