@@ -288,7 +288,10 @@ foreign_politics = {
 					tag = SZC
 					china_is_aligned_with_zhili = yes
 				}
-				tag = LEP
+				AND = {
+					tag = LEP
+					has_completed_focus = LEP_Return_to_the_World_Stage
+				}
 				AND = {
 					tag = YUN
 					has_country_leader = { character = YUN_hu_ruoyu }
@@ -380,7 +383,10 @@ foreign_politics = {
 					has_government = authoritarian_democrat
 				}
 				china_alignment_right_kuomintang = yes
-				has_country_flag = LEP_dem_gov
+				AND = {
+					has_country_flag = LEP_dem_gov
+					has_completed_focus = LEP_Return_to_the_World_Stage
+				}
 			}
 			FROM = {
 				is_faction_leader = yes
@@ -577,6 +583,13 @@ foreign_politics = {
 				OR = {
 					has_country_leader = { character = GXC_chen_lianbo }
 					has_country_leader = { character = GXC_liu_zhenhuan }
+				}
+			}
+			if = {
+				limit = { tag = LEP }
+				AND = {
+					has_country_flag = LEP_dem_gov
+					has_completed_focus = LEP_Return_to_the_World_Stage
 				}
 			}
 		}
