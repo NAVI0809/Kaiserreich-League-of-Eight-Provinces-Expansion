@@ -1281,6 +1281,7 @@ LEP_stride_towards_unification = {
 					any_neighbor_country = { is_subject_of = ROOT }
 				}
 				tag = UPC
+				is_subject = no
 			}
 		}
 	
@@ -1312,6 +1313,9 @@ LEP_stride_towards_unification = {
 			HNN = {
 				has_country_leader = { character = HNN_zhao_hengti }
 			}	
+			HNN = {
+				is_subject = no
+			}
 		}
 
 		target_trigger = {
@@ -1376,6 +1380,9 @@ LEP_stride_towards_unification = {
 			GXC = {
 				has_country_leader = { character = GXC_lu_yuguang }
 			}
+			GXC = {
+				is_subject = no
+			}
 		}
 		available = {
 			GXC = {
@@ -1435,6 +1442,9 @@ LEP_stride_towards_unification = {
 				exists = yes
 				has_country_leader = { character = SHX_feng_yuxiang }
 			}
+			SHX = {
+				is_subject = no
+			}
 		}
 		available = {
 			SHX = {
@@ -1481,10 +1491,8 @@ LEP_stride_towards_unification = {
 			has_completed_focus = LEP_End_Local_Warlordism
 			YUN = {
 				exists = yes
-				
-			}
-			YUN = {
 				has_completed_focus = YUN_the_federalist_revival
+				is_subject = no
 			}
 		}
 		available = {
@@ -1544,6 +1552,9 @@ LEP_stride_towards_unification = {
 					has_country_leader = { character = SZC_LIU_XIANG } 
 					has_completed_focus = SZC_The_Lord_Of_Sichuan
 				}
+			}
+			SZC = {
+				is_subject = no
 			}
 		}
 		available = {
@@ -5732,9 +5743,6 @@ LEPEXP_gov = {
 		available = {
 			has_completed_focus = LEP_autonomy_outline
 		}
-		visible = {
-			has_completed_focus = LEP_autonomy_outline
-		}
 		modifier = {
 			social_democrat_drft = 0.01
 			social_liberal_drift = 0.03
@@ -5755,9 +5763,6 @@ LEPEXP_gov = {
             tag = LEP
 		}
 		available = {
-			has_completed_focus = LEP_southeast_autonomy_academy
-		}
-		visible = {
 			has_completed_focus = LEP_southeast_autonomy_academy
 		}
 		modifier = {
@@ -5783,9 +5788,6 @@ LEPEXP_gov = {
             tag = LEP
 		}
 		available = {
-			has_completed_focus = LEP_rebuild_administrative_system
-		}
-		visible = {
 			has_completed_focus = LEP_rebuild_administrative_system
 		}
         cost = 20
@@ -5817,9 +5819,6 @@ LEPEXP_gov = {
             tag = LEP
 		}
 		available = {
-			has_completed_focus = LEP_administrative_inspector
-		}
-		visible = {
 			has_completed_focus = LEP_administrative_inspector
 		}
 
@@ -5857,9 +5856,6 @@ LEPEXP_gov = {
 		available = {
 			has_completed_focus = LEP_livelihood_equality
 		}
-		visible = {
-			has_completed_focus = LEP_livelihood_equality
-		}
 		modifier = {
 			production_factory_start_efficiency_factor = 0.1
 		}
@@ -5888,9 +5884,6 @@ LEPEXP_gov = {
             tag = LEP
 		}
 		available = {
-			has_completed_focus = LEP_livelihood_equality
-		}
-		visible = {
 			has_completed_focus = LEP_livelihood_equality
 		}
 		modifier = {

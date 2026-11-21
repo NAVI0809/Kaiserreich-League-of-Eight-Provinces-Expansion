@@ -700,14 +700,23 @@ country_event = { #人民救国会成立
 		log = "[GetLogInfo]: eventleague_mid.10 option league_mid.10.a"
 		set_country_flag = LEP_people_salvation		# 社会民主党已改称「人民救国会」
 		name = league_mid.10.a
-		set_party_name = {
-			ideology = social_democrat
-			name = LEP_people_salvation_association
-			long_name = LEP_people_salvation_association_long
+		effect_tooltip = {
+			set_party_name = {
+				ideology = social_democrat
+				name = LEP_people_salvation_association
+				long_name = LEP_people_salvation_association_fake
+			}
 		}
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.05
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = social_democrat
+				name = LEP_people_salvation_association
+				long_name = LEP_people_salvation_association_long
+			}
 		}
 	}
 }

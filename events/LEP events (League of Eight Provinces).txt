@@ -2169,6 +2169,9 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		has_country_leader = { character = LEP_qi_xieyuan }
+	}
 
 	option = {
 		log = "[GetLogInfo]: event league_events.201 option league_events.201.a"
@@ -2232,6 +2235,7 @@ country_event = { #Heads up to Fengtian of LEP intervention to support QIE
 		QIE = {
 			has_country_flag = wu_intervenes_proLEP
 		}
+		has_country_leader = { character = LEP_qi_xieyuan }
 	}
 
 	is_triggered_only = yes

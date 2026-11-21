@@ -340,6 +340,7 @@ foreign_politics = {
 
 		allowed = {
 			OR = {
+				tag = LEP
 				tag = SHX
 				tag = HNN
 				tag = GXC
@@ -379,6 +380,7 @@ foreign_politics = {
 					has_government = authoritarian_democrat
 				}
 				china_alignment_right_kuomintang = yes
+				has_country_flag = LEP_dem_gov
 			}
 			FROM = {
 				is_faction_leader = yes
@@ -521,7 +523,11 @@ foreign_politics = {
 		priority = 150
 
 		allowed = {
-			tag = GXC
+			OR = {
+				tag = LEP
+				tag = GXC
+			}
+			
 		}
 
 		available = {
@@ -547,6 +553,10 @@ foreign_politics = {
 					tag = GXC
 				}
 				has_completed_focus = CHN_return_to_the_world_stage_focus
+			}
+			if = {
+				limit = { tag = LEP }
+				has_country_flag = LEP_dem_gov
 			}
 			#Basically the Entente is not protecting any concessions or Tibet
 			LEC = { NOT = { is_ally_with = ENT } }

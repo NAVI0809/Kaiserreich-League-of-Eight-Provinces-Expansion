@@ -2012,11 +2012,21 @@ LEP_lkmt_conference_result_effect = {
 		}
 		set_country_flag = LEP_lkmt_legalized
 		### 合法化后，闽赣国民党以「农工民主党」名义参与议会，以别于黄郛在北京重建的国民党
-		set_party_name = {
-			ideology = radical_socialist
-			name = LEP_radical_socialist_party_legalized
-			long_name = LEP_radical_socialist_party_legalized_long
+		effect_tooltip = {
+			set_party_name = {
+				ideology = radical_socialist
+				name = LEP_radical_socialist_party_legalized
+				long_name = LEP_radical_socialist_party_legalized_fake
+			}
 		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = radical_socialist
+				name = LEP_radical_socialist_party_legalized
+				long_name = LEP_radical_socialist_party_legalized_long
+			}
+		}
+		
 		# 若国会已成立，立即按新资格重算席位
 		if = {
 			limit = { has_country_flag = LEP_seat_enabled }
@@ -2081,18 +2091,14 @@ LEP_lkmt_conference_result_effect = {
 		custom_effect_tooltip = league_mid_54_politic_3_tt
 		add_popularity = {
 			ideology = radical_socialist
-			popularity = 0.1
-		}
-		add_popularity = {
-			ideology = social_democrat
 			popularity = 0.05
 		}
 		add_popularity = {
-			ideology = social_liberal
+			ideology = social_democrat
 			popularity = 0.03
 		}
 		add_popularity = {
-			ideology = totalist
+			ideology = social_liberal
 			popularity = 0.01
 		}
 		reduce_focus_completion_cost = {
@@ -2111,11 +2117,11 @@ LEP_lkmt_conference_result_effect = {
 		custom_effect_tooltip = league_mid_54_politic_2_tt
 		add_popularity = {
 			ideology = radical_socialist
-			popularity = 0.08
+			popularity = 0.03
 		}
 		add_popularity = {
 			ideology = social_democrat
-			popularity = 0.03
+			popularity = 0.01
 		}
 		set_temp_variable = { coalition_partner_var = token:radical_socialist }
 		add_to_coalition = yes
@@ -2127,15 +2133,11 @@ LEP_lkmt_conference_result_effect = {
 		custom_effect_tooltip = league_mid_54_politic_1_tt
 		add_popularity = {
 			ideology = radical_socialist
-			popularity = 0.03
+			popularity = 0.01
 		}
 		add_popularity = {
 			ideology = social_democrat
 			popularity = 0.01
-		}
-		add_popularity = {
-			ideology = totalist
-			popularity = 0.02
 		}
 		add_manpower = 50
 	}
@@ -3247,5 +3249,11 @@ LEPEXP_RYK_setup_gov_effect = {
 					}
 				}
 		}
+	}
+}
+
+LEP_liberation_war_PREV_effect = {
+	ROOT = {
+		activate_targeted_decision = { target = PREV decision = LEP_liberation_war_decision }
 	}
 }
