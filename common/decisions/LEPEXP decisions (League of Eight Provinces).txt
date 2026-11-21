@@ -2778,6 +2778,12 @@ LEPEXP_military_defence_development_CAT = {
 				idea = QIE_unprepared_military
 				days = 360
 			}
+			hidden_effect = {
+				country_event = {
+					id = league_military.6
+					hours = 1
+				}
+			}
 		} 
 
 		complete_effect = {
@@ -2789,6 +2795,12 @@ LEPEXP_military_defence_development_CAT = {
 			596 = { #杭州
 				add_dynamic_modifier = { modifier = LEPEXP_east_coast_defence_ready_modifier }
 				prioritize_state = yes
+			}
+			hidden_effect = {
+				country_event = {
+					id = league_military.7
+					hours = 1
+				}
 			}
 		}
 		fixed_random_seed = no

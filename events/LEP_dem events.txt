@@ -7231,6 +7231,52 @@ country_event = { #动员buff降级
 	}
 }
 
+country_event = { #国防线失败
+	id = league_military.6
+	title = league_military.6.t
+	desc = league_military.6.d
+	picture = GFX_report_event_generic_east_china_map
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.6 option league_military.6.a"
+		name = league_military.6.a
+		add_war_support = -0.05
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = QIE_unprepared_military
+				days = 360
+			}
+		}
+	}
+}
+
+country_event = { #国防线成功
+	id = league_military.7
+	title = league_military.7.t
+	desc = league_military.7.d
+	picture = GFX_report_event_generic_east_china_map
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_military.7 option league_military.7.a"
+		name = league_military.7.a
+		add_war_support = 0.05
+		effect_tooltip = {
+			613 = { #南京
+				add_dynamic_modifier = { modifier = LEPEXP_east_coast_defence_ready_modifier }
+				prioritize_state = yes
+			}
+			596 = { #杭州
+				add_dynamic_modifier = { modifier = LEPEXP_east_coast_defence_ready_modifier }
+				prioritize_state = yes
+			}
+		}
+	}
+}
+
 country_event = { #工厂
 	id = league_military.1001
 	picture = GFX_report_event_generic_diplomacy1
