@@ -1741,7 +1741,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = {
 				ideology = social_democrat
-				popularity = 0.8
+				popularity = 0.08
 			}
 			custom_effect_tooltip = tooltip_white_line
 			add_timed_idea = {
