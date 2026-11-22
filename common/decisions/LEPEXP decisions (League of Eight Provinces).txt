@@ -5145,6 +5145,10 @@ LEP_national_reconstruction_bureau = {
 			has_completed_focus = LEP_small_scale_waterworks
 			has_country_flag = LEP_showcase_industrial_construction_on
 		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 613 }
+		}
 		
         cost = 50
 		ai_will_do = {
@@ -5196,13 +5200,16 @@ LEP_national_reconstruction_bureau = {
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
 			has_completed_focus = LEP_small_scale_waterworks
+			owns_state = 746 #ningbo
 		}
 		visible = {
 			has_completed_focus = LEP_small_scale_waterworks
 			has_country_flag = LEP_showcase_industrial_construction_on
-			746 = { #ningbo
-				is_owned_or_subject_trigger = yes
-			}
+			owns_state = 746 #ningbo
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 746 }
 		}
 		
         cost = 50
@@ -5247,7 +5254,6 @@ LEP_national_reconstruction_bureau = {
 			    }
 			    custom_effect_tooltip = tooltip_white_line
 		    }
-			add_one_random_civilian_factory = yes
 		}
 	}
 
