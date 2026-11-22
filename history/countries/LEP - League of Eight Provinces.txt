@@ -214,7 +214,6 @@ recruit_character = LEP_li_siguang
 recruit_character = LEP_huang_qun
 recruit_character = LEP_jing_yaoyue
 
-recruit_character = LEP_yuan_xiluo
 recruit_character = LEP_zhao_fengchang
 recruit_character = LEP_jiang_qian
 
