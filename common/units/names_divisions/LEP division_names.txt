@@ -309,12 +309,12 @@ LEP_ARM_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Zhuangjia di %d Xie"
+	fallback_name = "装甲第%d协"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Zhuangjia di %d Xie" }
+		1 = { "装甲第%d协" }
 	}
 }
 
@@ -328,12 +328,12 @@ LEP_PAR_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Sanbing di %d Xie"
+	fallback_name = "伞兵第%d协"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Sanbing di %d Xie" }
+		1 = { "伞兵第%d协" }
 	}
 }
 
@@ -347,12 +347,12 @@ LEP_MAR_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Luzhan Dui di %d Xie"
+	fallback_name = "陆战队第%d协"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Luzhan Dui di %d Xie" }
+		1 = { "陆战队第%d协" }
 	}
 }
 
@@ -366,12 +366,12 @@ LEP_MTN_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Shandi di %d Xie"
+	fallback_name = "山地第%d协"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Shandi di %d Xie" }
+		1 = { "山地第%d协" }
 	}
 }
 

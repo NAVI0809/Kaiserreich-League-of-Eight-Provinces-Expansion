@@ -740,6 +740,8 @@ focus_tree = {
 				country_event = { id = league_mid.31 days = 5 }
 				country_event = { id = league_mid.32 days = 35 }
 				country_event = { id = league_mid.11 days = 3 }
+				country_event = { id = league_mid.76 days = 80 }
+				
 				if = {
 					limit = {
 						QIE = {
@@ -11905,23 +11907,23 @@ focus_tree = {
 				random_owned_controlled_state = {
 					prioritize = { 613 }
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 1 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"五省联军第1师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"五省联军第2师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"五省联军第3师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 4 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"五省联军第4师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 5 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
+						division = "name = \"五省联军第5师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.5 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 				}
@@ -12228,23 +12230,23 @@ focus_tree = {
 				random_owned_controlled_state = {
 					prioritize = { 613 }
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 1 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
+						division = "name = \"五省联军第1师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 2 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
+						division = "name = \"五省联军第2师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 3 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
+						division = "name = \"五省联军第3师\" division_template = \"League Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 4 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
+						division = "name = \"五省联军第4师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"Wusheng Lianjun Di 5 Shi\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
+						division = "name = \"五省联军第5师\" division_template = \"League Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.2"
 						owner = ROOT
 					}
 				}

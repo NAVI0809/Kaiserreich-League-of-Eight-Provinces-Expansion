@@ -8,15 +8,15 @@ LEP_LTB_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Qingxing Bubing Di %d Shi"
+	fallback_name = "轻型步兵第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Qingxing Bubing Di %d Shi" }
-		2 = { "Qingxing Bubing Di %d Shi" }
-		3 = { "Qingxing Bubing Di %d Shi" }
-		4 = { "Qingxing Bubing Di %d Shi" }
+		1 = { "轻型步兵第%d师" }
+		2 = { "轻型步兵第%d师" }
+		3 = { "轻型步兵第%d师" }
+		4 = { "轻型步兵第%d师" }
 	}
 }
 
@@ -52,30 +52,30 @@ LEP_GAR_01 = {
 	# Number reservation system will tie to another group.
 	link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Jingbei Di %d Xie"
+	fallback_name = "警备第%d协"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Nanjing Jingbei Xie" }
-		2 = { "Hangzhou Jingbei Xie" }
-		3 = { "Ningbo Jingbei Xie" }
-		4 = { "Hefei Jingbei Xie" }
-		5 = { "Wuhu Jingbei Xie" }
-		6 = { "Wuxi Jingbei Xie" }
-		7 = { "Xuzhou Jingbei Xie" }
-		8 = { "Nanchang Jingbei Xie" }
-		9 = { "Nantong Jingbei Xie" }
-		10 = { "Bengbu Jingbei Xie" }
-		11 = { "Jinghua Jingbei Xie" }
-		12 = { "Anqing Jingbei Xie" }
-		13 = { "Xiamen Jingbei Xie" }
-		14 = { "Jingbei Di %d Xie" }
-		15 = { "Jingbei Di %d Xie" }
-		16 = { "Jingbei Di %d Xie" }
-		17 = { "Jingbei Di %d Xie" }
-		18 = { "Jingbei Di %d Xie" }
-		19 = { "Jingbei Di %d Xie" }
+		1 = { "南京警备协" }
+		2 = { "杭州警备协" }
+		3 = { "宁波警备协" }
+		4 = { "合肥警备协" }
+		5 = { "芜湖警备协" }
+		6 = { "无锡警备协" }
+		7 = { "徐州警备协" }
+		8 = { "南昌警备协" }
+		9 = { "南通警备协" }
+		10 = { "蚌埠警备协" }
+		11 = { "金华警备协" }
+		12 = { "安庆警备协" }
+		13 = { "厦门警备协" }
+		14 = { "警备第%d协" }
+		15 = { "警备第%d协" }
+		16 = { "警备第%d协" }
+		17 = { "警备第%d协" }
+		18 = { "警备第%d协" }
+		19 = { "警备第%d协" }
 	}
 }
 
@@ -114,21 +114,21 @@ LEP_NMC_01 = {
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Ningbo Luzhandui Huncheng Lü" }
-		2 = { "Zhoushan Luzhandui Huncheng Lü" }
-		3 = { "Jiangying Luzhandui Huncheng Lü" }
-		4 = { "Nantong Luzhandui Huncheng Lü" }
-		5 = { "Liugongdao Luzhandui Huncheng Lü" }
-		6 = { "Weihaiwei Luzhandui Huncheng Lü" }				
-		7 = { "Humeng Luzhandui Huncheng Lü" }
-		8 = { "Dalian Luzhandui Huncheng Lü" }
-		9 = { "Sanya Luzhandui Huncheng Lü" }
-		10 = { "Qingdao Luzhandui Huncheng Lü" }
-		11 = { "Wusong Luzhandui Huncheng Lü" }
-		12 = { "Jiaozhouwan Luzhandui Huncheng Lü" }
-		13 = { "Takaogang Luzhandui Huncheng Lü" }
-		14 = { "Zhanjiang Luzhandui Huncheng Lü" }
-		15 = { "Guangzhou Luzhandui Huncheng Lü" }
+		1 = { "宁波陆战队混成旅" }
+		2 = { "舟山陆战队混成旅" }
+		3 = { "江阴陆战队混成旅" }
+		4 = { "南通陆战队混成旅" }
+		5 = { "刘公岛陆战队混成旅" }
+		6 = { "威海卫陆战队混成旅" }				
+		7 = { "虎门陆战队混成旅" }
+		8 = { "大连陆战队混成旅" }
+		9 = { "三亚陆战队混成旅" }
+		10 = { "青岛陆战队混成旅" }
+		11 = { "吴淞陆战队混成旅" }
+		12 = { "胶州湾陆战队混成旅" }
+		13 = { "高雄陆战队混成旅" }
+		14 = { "湛江陆战队混成旅" }
+		15 = { "广州陆战队混成旅" }
 	}
 }
 
@@ -161,7 +161,7 @@ LEP_ARM_02 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Zhuangjia di %d Shi"
+	fallback_name = "装甲第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
@@ -169,8 +169,8 @@ LEP_ARM_02 = {
 		1 = { "第5军-第200师" }
 		2 = { "第5军-荣誉第1师" }
 		3 = { "第5军-新编第22师" }
-		4 = { "Zhuangjia di %d Shi-'Wuchang'" }
-		5 = { "Zhuangjia di %d Shi-'Zhonghua'" }
+		4 = { "装甲第%d师-‘武昌'" }
+		5 = { "装甲第%d师-‘中华'" }
 	}
 }
 
@@ -184,13 +184,13 @@ LEP_PAR_02 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Kongshu Di %d Shi"
+	fallback_name = "空输第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
 		1 = { "一空输" }
-		2 = { "Kongshu Di %d Shi" }
+		2 = { "空输第%d师" }
 	}
 }
 
@@ -203,16 +203,16 @@ LEP_JFJ_01 = {
 	# Number reservation system will tie to another group.
 	#link_numbering_with = { LEP_INF_01 }
 
-	fallback_name = "Jiangfang Jun Di %d Shi"
+	fallback_name = "江防军第%d师"
 
 	# Names with numbers (only one number per entry).
 	# It's okay to have gaps in numbering.
 	ordered = {
-		1 = { "Jiangfang Jun Di %d Shi" }
-		2 = { "Jiangfang Jun Di %d Shi" }
-		3 = { "Jiangfang Jun Di %d Shi" }
-		4 = { "Jiangfang Jun Di %d Shi" }
-		5 = { "Jiangfang Jun Di %d Shi" }
+		1 = { "江防军第%d师" }
+		2 = { "江防军第%d师" }
+		3 = { "江防军第%d师" }
+		4 = { "江防军第%d师" }
+		5 = { "江防军第%d师" }
 	}
 }
 
