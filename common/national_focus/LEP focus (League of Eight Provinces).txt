@@ -7091,7 +7091,9 @@ focus_tree = {
 			}
 			set_temp_variable = { LEP_cons_var_change = 3 }
 			LEP_cons_var = yes
-			hidden_effect = { id = league_mid.59 days = 50 }
+			hidden_effect = { 
+				country_event = { id = league_mid.59 days = 50 }
+			}
 		}
 
 	}

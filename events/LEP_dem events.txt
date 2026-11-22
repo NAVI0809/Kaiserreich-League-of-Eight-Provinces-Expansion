@@ -2736,10 +2736,9 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.a"
 		name = league_mid.76.a
-		add_political_power = 5
 		add_popularity = {
 			ideology = social_liberal
-			popularity = 0.03
+			popularity = 0.01
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -2750,10 +2749,9 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.b"
 		name = league_mid.76.b
-		add_war_support = 0.03
 		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = 0.03
+			ideology = social_liberal
+			popularity = 0.01
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -2764,19 +2762,6 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.c"
 		name = league_mid.76.c
-		add_stability = 0.02
-		add_popularity = {
-			ideology = social_liberal
-			popularity = -0.02
-		}
-		add_popularity = {
-			ideology = paternal_autocrat
-			popularity = -0.05
-		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = -0.05
-		}
 	}
 }
 
