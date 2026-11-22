@@ -9089,7 +9089,7 @@ country_event = {#撤回4点
 	    name = league_industry.6.g
     }
 }
-country_event = {
+country_event = { #它山堰
 	id = league_industry.7
 	title = league_industry.7.t
 	desc = league_industry.7.d
@@ -9102,7 +9102,10 @@ country_event = {
 		name = league_industry.7.a
 		log = "[GetLogInfo]: event league_industry.7 option league_industry.7.a"
 		add_political_power = 30
-		746 = { increase_state_category_by_one_levels = yes }
+		746 = { 
+			increase_state_category_by_one_levels = yes 
+			add_extra_state_shared_building_slots = 3
+		}
 	}
 }
 
