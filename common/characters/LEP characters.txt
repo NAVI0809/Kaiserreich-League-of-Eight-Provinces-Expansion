@@ -1760,10 +1760,10 @@ characters = {
 							has_war_with = JAP
 						}
 					}
-				}
-				ROOT = {
-					country_event = { id = league_generic.14 days = 3 }				
-				}
+					ROOT = {
+					    country_event = { id = league_generic.14 days = 3 }				
+				    }
+				}				
 				custom_effect_tooltip = tooltip_white_line
 				add_tech_bonus = {
 					name = LEP_xu_huansheng
