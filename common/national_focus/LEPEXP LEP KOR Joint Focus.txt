@@ -863,6 +863,8 @@ joint_focus = { #重建而非毁灭
 
 	prerequisite = { focus = LEPEXP_Revocation_jap_patents_focus }
 	prerequisite = { focus = LEPEXP_CN_JAP_loacl_election_focus }
+	prerequisite = { focus = LEPEXP_CN_JAP_sell_everthing_focus }
+
 
 	available = {
 		LEP_KOR_JOINT_focus_available = yes
