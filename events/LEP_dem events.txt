@@ -2736,9 +2736,10 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.a"
 		name = league_mid.76.a
+		add_political_power = 10
 		add_popularity = {
 			ideology = social_liberal
-			popularity = 0.01
+			popularity = 0.03
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -2749,9 +2750,10 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.b"
 		name = league_mid.76.b
+		add_war_support = 0.03
 		add_popularity = {
-			ideology = social_liberal
-			popularity = 0.01
+			ideology = paternal_autocrat
+			popularity = 0.03
 		}
 		add_popularity = {
 			ideology = national_populist
@@ -2762,8 +2764,140 @@ country_event = { #青年党在华东
 	option = {
 		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.c"
 		name = league_mid.76.c
+		add_stability = 0.02
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.03
+		}
 	}
 }
+
+country_event = { #省宪运动的兴起
+	id = league_mid.77
+	title = league_mid.77.t
+	desc = league_mid.77.d
+	picture = GFX_report_event_LEP_constitution_newspaper
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.77 option league_mid.77.a"
+		name = league_mid.77.a
+		country_event = { id = league_mid.78 days = 0 }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.77 option league_mid.77.b"
+		name = league_mid.77.b
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = { #江浙战争与宁波自治
+	id = league_mid.78
+	title = league_mid.78.t
+	desc = league_mid.78.d
+	picture = GFX_report_event_LEP_jiangzhe_army
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.78 option league_mid.78.a"
+		name = league_mid.78.a
+		country_event = { id = league_mid.79 days = 0 }
+	}
+}
+
+country_event = { #孙传芳与浙江自治法
+	id = league_mid.79
+	title = league_mid.79.t
+	desc = league_mid.79.d
+	picture = GFX_report_event_LEP_sun_picture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.79 option league_mid.79.a"
+		name = league_mid.79.a
+		country_event = { id = league_mid.80 days = 0 }
+	}
+}
+
+country_event = { #浙江省人民自治政府
+	id = league_mid.80
+	title = league_mid.80.t
+	desc = league_mid.80.d
+	picture = GFX_report_event_LEP_goddess_of_peace
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.80 option league_mid.80.a"
+		name = league_mid.80.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = { #申新拍卖事件告一段落
+	id = league_mid.81
+	title = league_mid.81.t
+	desc = league_mid.81.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.81 option league_mid.81.a"
+		name = league_mid.81.a
+	}
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.81 option league_mid.81.b"
+		name = league_mid.81.b
+	}
+}
+
+country_event = { #从钱庄到民族实业
+	id = league_mid.82
+	title = league_mid.82.t
+	desc = league_mid.82.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.82 option league_mid.82.a"
+		name = league_mid.82.a
+	}
+}
+
+country_event = { #政局、债务与企业危机
+	id = league_mid.83
+	title = league_mid.83.t
+	desc = league_mid.83.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event league_mid.83 option league_mid.83.a"
+		name = league_mid.83.a
+	}
+}	
 
 country_event = {
 	id = league_mid.1003
@@ -8457,6 +8591,9 @@ country_event = {#投入1点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.a"
 	    name = league_industry.1.a
+		trigger = {
+			LEP_cons_cap_max_eff_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8468,6 +8605,9 @@ country_event = {#投入1点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.b"
 	    name = league_industry.1.b
+		trigger = {
+			LEP_cons_cap_ind_cap_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8480,6 +8620,9 @@ country_event = {#投入1点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.c"
 	    name = league_industry.1.c
+		trigger = {
+			LEP_cons_cap_consumer_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8492,6 +8635,9 @@ country_event = {#投入1点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.d"
 	    name = league_industry.1.d
+		trigger = {
+			LEP_cons_cap_eff_gain_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8504,6 +8650,9 @@ country_event = {#投入1点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.e"
 	    name = league_industry.1.e
+		trigger = {
+			LEP_cons_cap_start_eff_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8516,6 +8665,9 @@ country_event = {#投入1点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.1 option league_industry.1.f"
 	    name = league_industry.1.f
+		trigger = {
+			LEP_cons_cap_build_speed_1 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -1 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8540,6 +8692,9 @@ country_event = {#投入2点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.a"
 	    name = league_industry.2.a
+		trigger = {
+			LEP_cons_cap_max_eff_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8552,6 +8707,9 @@ country_event = {#投入2点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.b"
 	    name = league_industry.2.b
+		trigger = {
+			LEP_cons_cap_ind_cap_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8564,6 +8722,9 @@ country_event = {#投入2点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.c"
 	    name = league_industry.2.c
+		trigger = {
+			LEP_cons_cap_consumer_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8576,6 +8737,9 @@ country_event = {#投入2点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.d"
 	    name = league_industry.2.d
+		trigger = {
+			LEP_cons_cap_eff_gain_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8588,6 +8752,9 @@ country_event = {#投入2点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.e"
 	    name = league_industry.2.e
+		trigger = {
+			LEP_cons_cap_start_eff_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8600,6 +8767,9 @@ country_event = {#投入2点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.2 option league_industry.2.f"
 	    name = league_industry.2.f
+		trigger = {
+			LEP_cons_cap_build_speed_2 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -2 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8624,6 +8794,9 @@ country_event = {#投入4点
 	option = {#生产上限
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.a"
 	    name = league_industry.3.a
+		trigger = {
+			LEP_cons_cap_max_eff_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8636,6 +8809,9 @@ country_event = {#投入4点
     option = {#工厂产出
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.b"
 	    name = league_industry.3.b
+		trigger = {
+			LEP_cons_cap_ind_cap_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8648,6 +8824,9 @@ country_event = {#投入4点
     option = {#生活消费品
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.c"
 	    name = league_industry.3.c
+		trigger = {
+			LEP_cons_cap_consumer_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8660,6 +8839,9 @@ country_event = {#投入4点
     option = {#生产效率增长
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.d"
 	    name = league_industry.3.d
+		trigger = {
+			LEP_cons_cap_eff_gain_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8672,6 +8854,9 @@ country_event = {#投入4点
     option = {#基础效率
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.e"
 	    name = league_industry.3.e
+		trigger = {
+			LEP_cons_cap_start_eff_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {
@@ -8684,6 +8869,9 @@ country_event = {#投入4点
     option = {#建造速度
 	    log = "[GetLogInfo]: event league_industry.3 option league_industry.3.f"
 	    name = league_industry.3.f
+		trigger = {
+			LEP_cons_cap_build_speed_4 = yes
+		}
 		set_temp_variable = { LEP_cons_var_change = -4 }
 		LEP_cons_var = yes
 		add_to_variable = {

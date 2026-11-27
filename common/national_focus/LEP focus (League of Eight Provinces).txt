@@ -854,6 +854,7 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			LEP_strengthen_ZZH_small = yes
 			hidden_effect = {
+				country_event = { id = league_mid.77 days = 3 }
 				LEP_yin_ruli = { CHN_recruit_character_effect = yes }
 			}
 			

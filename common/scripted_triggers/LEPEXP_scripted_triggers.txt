@@ -200,5 +200,133 @@ LEP_KOR_JOINT_focus_available = {
 	}
 }
 
-
-
+# 实业发展委员会：单项投入上限检查
+# 上限点数：工厂产出/建造速度/基础效率/效率增长/生产上限各12点，消费品8点
+# 每点增量：见 events/LEP_dem events.txt league_industry.1
+# 投N点时判断 当前值+N点增量 <= 上限；消费品为负值，判断 当前值-N点增量 >= 下限
+LEP_cons_cap_ind_cap_1 = {
+	check_variable = {
+		var = LEP_cons_industrial_capacity_factory
+		value = 0.165
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_ind_cap_2 = {
+	check_variable = {
+		var = LEP_cons_industrial_capacity_factory
+		value = 0.15
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_ind_cap_4 = {
+	check_variable = {
+		var = LEP_cons_industrial_capacity_factory
+		value = 0.12
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_consumer_1 = {
+	check_variable = {
+		var = LEP_cons_consumer_goods_factor
+		value = -0.35
+		compare = greater_than_or_equals
+	}
+}
+LEP_cons_cap_consumer_2 = {
+	check_variable = {
+		var = LEP_cons_consumer_goods_factor
+		value = -0.3
+		compare = greater_than_or_equals
+	}
+}
+LEP_cons_cap_consumer_4 = {
+	check_variable = {
+		var = LEP_cons_consumer_goods_factor
+		value = -0.2
+		compare = greater_than_or_equals
+	}
+}
+LEP_cons_cap_build_speed_1 = {
+	check_variable = {
+		var = LEP_cons_production_speed_buildings_factor
+		value = 0.22
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_build_speed_2 = {
+	check_variable = {
+		var = LEP_cons_production_speed_buildings_factor
+		value = 0.2
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_build_speed_4 = {
+	check_variable = {
+		var = LEP_cons_production_speed_buildings_factor
+		value = 0.16
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_start_eff_1 = {
+	check_variable = {
+		var = LEP_cons_production_factory_start_efficiency_factor
+		value = 0.165
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_start_eff_2 = {
+	check_variable = {
+		var = LEP_cons_production_factory_start_efficiency_factor
+		value = 0.15
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_start_eff_4 = {
+	check_variable = {
+		var = LEP_cons_production_factory_start_efficiency_factor
+		value = 0.12
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_eff_gain_1 = {
+	check_variable = {
+		var = LEP_cons_production_factory_efficiency_gain_factor
+		value = 0.22
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_eff_gain_2 = {
+	check_variable = {
+		var = LEP_cons_production_factory_efficiency_gain_factor
+		value = 0.2
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_eff_gain_4 = {
+	check_variable = {
+		var = LEP_cons_production_factory_efficiency_gain_factor
+		value = 0.16
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_max_eff_1 = {
+	check_variable = {
+		var = LEP_cons_production_factory_max_efficiency_factor
+		value = 0.11
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_max_eff_2 = {
+	check_variable = {
+		var = LEP_cons_production_factory_max_efficiency_factor
+		value = 0.1
+		compare = less_than_or_equals
+	}
+}
+LEP_cons_cap_max_eff_4 = {
+	check_variable = {
+		var = LEP_cons_production_factory_max_efficiency_factor
+		value = 0.08
+		compare = less_than_or_equals
+	}
+}
