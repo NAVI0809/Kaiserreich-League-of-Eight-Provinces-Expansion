@@ -74,6 +74,40 @@ LEPEXP_parliament = {
 		}
 	}
 
+	LEP_invite_totalist_decision = {
+		icon = GFX_decision_generic_agreement
+		cost = 0
+		visible = { has_country_flag = LEP_minority_gov }
+		available = {
+			NOT = { has_government = totalist }
+			NOT = { is_in_coalition_with_totalist = yes }
+			# 该党须在国会占有席位（被查禁的党不参选、席次为 0）——
+			# 用 custom_trigger_tooltip 把原因讲清楚，而不是让它整条消失。
+			custom_trigger_tooltip = {
+				tooltip = LEP_party_has_seats_tt
+				check_variable = { LEP_seat_n0 > 0 }
+			}
+		}
+		complete_effect = {
+			random_list = {
+				1 = { country_event = lep_election.33 }
+				1 = { country_event = lep_election.34 }
+				1 = { country_event = lep_election.35 }
+			}
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 5
+				has_government = radical_socialist
+			}
+			modifier = {
+				factor = 5
+				has_government = syndicalist
+			}
+		}
+	}
+
 	LEP_invite_syndicalist_decision = {
 		icon = GFX_decision_generic_agreement
 		cost = 0

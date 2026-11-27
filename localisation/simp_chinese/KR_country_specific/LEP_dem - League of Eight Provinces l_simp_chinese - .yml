@@ -2500,8 +2500,8 @@
  LEP_national_reconstruction_bureau: "[LEP_national_reconstruction_bureau_loc]"
  LEP_national_reconstruction_bureau_desc: "[LEP_national_reconstruction_bureau_desc_loc]"
  LEP_national_reconstruction_bureau_key: "国家建设总局"
- LEP_national_reconstruction_bureau_desc_key1: "实业发展委员会已经正式投入运作。随着政府逐步恢复对财政、铁路与工矿资源的统筹能力，我们终于能够按照国家发展的需要，有计划地推进工业建设。委员会将根据各地实际情况调配建设资源，在兴建工厂、完善基础设施与扶持重点产业之间作出权衡。有限的资源无法满足所有需求，每一项投资都将影响未来的发展方向，而如何规划这场关系国家前途的建设事业，将由我们亲自决定。\n\n当前拥有的建设资源：£GFX_production_texticon §n[?LEP_construction_var]§!\n\n依据当前投入的建设资源，§Y[LEP_national_reconstruction_bureau_loc]§!将获得如下加成：\n\n£GFX_civ_factory_output  工厂产出：[?LEP.LEP_cons_industrial_capacity_factory|=%+]/§Y+18%§!\n£GFX_consumer_goods_texticon  生活消费品工厂：[?LEP.LEP_cons_consumer_goods_factor|Y%]/§Y40%§!\n£GFX_build_cost_ic_texticon  建造速度：[?LEP.LEP_cons_production_speed_buildings_factor|=%+]/§Y+24%§!\n£GFX_prod_eff  基础生产效率：[?LEP.LEP_cons_production_factory_start_efficiency_factor|=%+]/§Y+18%§!\n£GFX_prod_eff  生产效率增长：[?LEP.LEP_cons_production_factory_efficiency_gain_factor|=%+]/§Y+24%§!\n£GFX_prod_eff_cap  生产效率上限：[?LEP.LEP_cons_production_factory_max_efficiency_factor|=%+]/§Y+12%§!"
- LEP_national_reconstruction_bureau_desc_key2: "国家建设总局已经正式成立。这一直属中央的统筹机构，将负责协调全国基础设施建设、工业投资与资源调配，打破过去各省各行其是、重复建设的弊端。在推进铁路、公路、水利、能源等重点工程的同时，总局也将监督各项经济建设计划的实施，确保有限的财政与物资得到最有效的利用。随着经济秩序逐步恢复，我们终于有能力将国家建设与经济复苏结合起来，在振兴工商业、改善民生的同时，为未来的工业化和国防建设奠定坚实基础。如今，各项建设方案已经准备就绪，只待政府统筹部署，便可全面展开。\n\n当前拥有的建设资源：£GFX_production_texticon §n[?LEP_construction_var]§!\n\n依据当前投入的建设资源，§Y[LEP_national_reconstruction_bureau_loc]§!将获得如下加成：\n\n£GFX_civ_factory_output  工厂产出：[?LEP.LEP_cons_industrial_capacity_factory|=%+]/§Y+18%§!\n£GFX_consumer_goods_texticon  生活消费品工厂：[?LEP.LEP_cons_consumer_goods_factor|Y%]/§Y40%§!\n£GFX_build_cost_ic_texticon  建造速度：[?LEP.LEP_cons_production_speed_buildings_factor|=%+]/§Y+24%§!\n£GFX_prod_eff  基础生产效率：[?LEP.LEP_cons_production_factory_start_efficiency_factor|=%+]/§Y+18%§!\n£GFX_prod_eff  生产效率增长：[?LEP.LEP_cons_production_factory_efficiency_gain_factor|=%+]/§Y+24%§!\n£GFX_prod_eff_cap  生产效率上限：[?LEP.LEP_cons_production_factory_max_efficiency_factor|=%+]/§Y+12%§!"
+ LEP_national_reconstruction_bureau_desc_key1: "实业发展委员会已经正式投入运作。随着政府逐步恢复对财政、铁路与工矿资源的统筹能力，我们终于能够按照国家发展的需要，有计划地推进工业建设。委员会将根据各地实际情况调配建设资源，在兴建工厂、完善基础设施与扶持重点产业之间作出权衡。有限的资源无法满足所有需求，每一项投资都将影响未来的发展方向，而如何规划这场关系国家前途的建设事业，将由我们亲自决定。\n\n当前拥有的建设资源：£GFX_production_texticon §n[?LEP_construction_var]§!\n\n依据当前投入的建设资源，§Y[LEP_national_reconstruction_bureau_loc]§!将获得如下加成：\n\n£GFX_civ_factory_output  工厂产出：[?LEP.LEP_cons_industrial_capacity_factory|=%+]/§Y+18%§!\n£GFX_consumer_goods_texticon  生活消费品工厂：[?LEP.LEP_cons_consumer_goods_factor|Y%]/§Y40%§!\n£GFX_construction_speed_icon  建造速度：[?LEP.LEP_cons_production_speed_buildings_factor|=%+]/§Y+24%§!\n£GFX_prod_eff  基础生产效率：[?LEP.LEP_cons_production_factory_start_efficiency_factor|=%+]/§Y+18%§!\n£GFX_prod_eff  生产效率增长：[?LEP.LEP_cons_production_factory_efficiency_gain_factor|=%+]/§Y+24%§!\n£GFX_prod_eff_cap  生产效率上限：[?LEP.LEP_cons_production_factory_max_efficiency_factor|=%+]/§Y+12%§!"
+ LEP_national_reconstruction_bureau_desc_key2: "国家建设总局已经正式成立。这一直属中央的统筹机构，将负责协调全国基础设施建设、工业投资与资源调配，打破过去各省各行其是、重复建设的弊端。在推进铁路、公路、水利、能源等重点工程的同时，总局也将监督各项经济建设计划的实施，确保有限的财政与物资得到最有效的利用。随着经济秩序逐步恢复，我们终于有能力将国家建设与经济复苏结合起来，在振兴工商业、改善民生的同时，为未来的工业化和国防建设奠定坚实基础。如今，各项建设方案已经准备就绪，只待政府统筹部署，便可全面展开。\n\n当前拥有的建设资源：£GFX_production_texticon §n[?LEP_construction_var]§!\n\n依据当前投入的建设资源，§Y[LEP_national_reconstruction_bureau_loc]§!将获得如下加成：\n\n£GFX_civ_factory_output  工厂产出：[?LEP.LEP_cons_industrial_capacity_factory|=%+]/§G18%§!\n£GFX_consumer_goods_texticon  生活消费品工厂：[?LEP.LEP_cons_consumer_goods_factor|Y%]/§Y-40%§!\n£GFX_construction_speed_icon  建造速度：[?LEP.LEP_cons_production_speed_buildings_factor|=%+]/§G24%§!\n£GFX_prod_eff  基础生产效率：[?LEP.LEP_cons_production_factory_start_efficiency_factor|=%+]/§G18%§!\n£GFX_prod_eff  生产效率增长：[?LEP.LEP_cons_production_factory_efficiency_gain_factor|=%+]/§G24%§!\n£GFX_prod_eff_cap  生产效率上限：[?LEP.LEP_cons_production_factory_max_efficiency_factor|=%+]/§G12%§!"
  LEP_industrial_construction_button_tt: "§G显示§!/§C隐藏§!工业建设决议"
  LEP_resource_allocation_button_tt: "§G显示§!/§C隐藏§!建设点数分配决议"
  LEP_national_reconstruction_bureau_modifier: "[LEP_national_reconstruction_bureau_loc]"
@@ -2882,6 +2882,18 @@
 
 ##少数组阁谈判（九个党派 × 三种诉求，同意即入阁并限时挂 idea）
 
+ lep_election.33.t: "新社会民主党提议劳资协调"
+ lep_election.33.d: "新社会民主党在国会中提出了一份关于劳资关系的方案。该党认为，近来各地工厂接连发生的罢工与怠工，已使刚刚恢复的生产秩序再度受损；而厂方动辄以停业、解雇相威胁，同样无助于收拾局面。党魁蒋康虎主张由政府出面设立劳资仲裁机构，由官、厂、工三方各派代表，就工资、工时与工伤赔偿逐案调处。工会应当有合法的谈判渠道，但须在法律与国策的范围内活动；厂方也须承认工人应得的待遇。\n"
+ lep_election.33.a: "由国家出面，调停劳资"
+ lep_election.33.b: "政府不宜卷入劳资纠纷"
+ lep_election.34.t: "新社会民主党要求推行国家计划"
+ lep_election.34.d: "新社会民主党向内阁递交了一份《国家经济计划纲要》，主张设立直属于国会的经济计划机构，对煤、铁、电力、铁路与航运等关键部门实行统一规划，按年度分派生产与运输指标；对囤积居奇、操纵物价与投机外汇者，则处以重罚。该党认为，中国资本本就薄弱，若再任由各家在重复建设与投机买卖上彼此消耗，工业化将永无成算。"
+ lep_election.34.a: "把有限的资源集中起来办大事"
+ lep_election.34.b: "经济事务不宜由官府一手包办"
+ lep_election.35.t: "新社会民主党提出工会改组方案"
+ lep_election.35.d: "新社会民主党提出，将各地分散的工会改组为按行业划分的工会联合会，由劳工主管部门登记监督。改组后的工会可就工资、工时与福利与厂方集体谈判，但不得参与党派政治，也不得组织政治性罢工。作为交换，该党承诺由政府拨出专款充作工会的互助与救济基金，并承认行业工会在调解劳资争议中的正式地位。"
+ lep_election.35.a: "工会当办工人的事，不做政争的工具"
+ lep_election.35.b: "工人的组织不容官府改组"
  lep_election.6.t: "中工盟要求扩大工会代表权"
  lep_election.6.d: "自新政府成立以来，工商业的恢复与发展始终是内阁工作的重心。然而，对于工厂中那些真正维持机器运转的人而言，经济复苏似乎并未给他们带来多少改变。中国工团主义者同盟近日向内阁递交了一份提案，要求在国营企业及大型工厂中设立工人代表会议，使工会能够参与劳动管理、监督工作条件，并就工资与生产安排向资方提出意见。中工盟代表认为，工人不应在涉及自身利益的决策中毫无发言权。"
  lep_election.6.a: "工人也应当有自己的发言权"
@@ -3079,7 +3091,7 @@
  league_mid.77.b: "我们最好着眼当下"
 
  league_mid.81.t: "申新拍卖事件告一段落"
- league_mid.81.d: "申新七厂的拍卖风波，至此总算告一段落。荣氏企业与英商汇丰银行重新议定抵押条件，贷款期限延长，原定处置的厂产也得以保全。这场持续一年多的纠纷，终于有了结果。\n\n申新纺织公司由荣宗敬、荣德生兄弟创办于1915年。至三十年代中期，申新已拥有数十万纱锭与数千台织机，在中国纺织业中占据重要地位。申新七厂原为德商瑞记纱厂，后经英商经营，于1928年由荣氏购入。此后，工厂扩张所需的资金，有相当一部分来自银行借款。\n\n1934年末，申新七厂所欠汇丰银行的两百万元抵押贷款到期。荣氏请求展期，并愿支付利息及部分本金，却未获银行同意。1935年2月，鲁意师摩拍卖行在《申报》刊登公告，定于当月26日拍卖厂产。拍卖当天，日本方面的代理人以二百二十五万元底价竞得工厂，消息传出后，上海工商界顿时哗然。\n\n荣氏兄弟聘请律师提出异议，上海第一特别区法院亦发出查封通知，但汇丰仍坚持拍卖。与此同时，《申报》等报刊接连刊文，商会、工业团体与地方组织纷纷向当局陈情，要求阻止拍卖、保全民族工业。原本的债务纠纷，逐渐演变为一场牵涉外国资本、司法权与民族实业的公共风潮。\n\n在舆论压力与地方交涉下，厂产转移最终未能完成。1936年12月，荣氏与汇丰重新订立抵押协议，将贷款期限延至1940年12月3日，利率由百分之八下调至百分之七，申新各厂的土地、建筑与机器设备继续作为担保。"
+ league_mid.81.d: "申新七厂的拍卖风波，至此总算告一段落。荣氏企业与英商汇丰银行重新议定抵押条件，贷款期限延长，原定处置的厂产也得以保全。这场持续一年多的纠纷，终于有了结果。\n\n申新纺织公司由荣宗敬、荣德生兄弟创办于1915年。至三十年代中期，申新已拥有数十万纱锭与数千台织机，在中国纺织业中占据重要地位。申新七厂原为德商瑞记纱厂，后经英商经营，于1928年由荣氏购入。此后，工厂扩张所需的资金，有相当一部分来自银行借款。\n\n1934年末，申新七厂所欠汇丰银行的两百万元抵押贷款到期。荣氏请求展期，并愿支付利息及部分本金，却未获银行同意。1935年2月，鲁意师摩拍卖行在《申报》刊登公告，定于当月26日拍卖厂产。拍卖当天，日本方面的代理人以二百二十五万元底价竞得工厂，消息传出后，上海工商界顿时哗然。\n\n荣氏兄弟聘请律师提出异议，上海第一特别区法院亦发出查封通知，但汇丰仍坚持拍卖。与此同时，《申报》等报刊接连刊文，商会、工业团体与地方组织纷纷向当局陈情，要求阻止拍卖、保全民族工业。原本的债务纠纷，逐渐演变为一场牵涉外国资本、司法权与民族实业的公共风潮。\n\n在舆论压力与地方交涉下，厂产转移最终未能完成。1936年，荣氏与汇丰重新订立抵押协议，将贷款期限延至1940年12月3日，利率由百分之八下调至百分之七，申新各厂的土地、建筑与机器设备继续作为担保。"
  league_mid.81.a: "详细讲讲这些江南商人"
 
  league_mid.81.b: "申新暂得保全，实业界总算有了喘息"

@@ -5146,7 +5146,7 @@ country_event = { #谈判：中工盟1
 	id = lep_election.6
 	title = lep_election.6.t
 	desc = lep_election.6.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_LEP_gu_zhun_picture
 
 	is_triggered_only = yes
 
@@ -5172,7 +5172,7 @@ country_event = { #谈判：中工盟2
 	id = lep_election.7
 	title = lep_election.7.t
 	desc = lep_election.7.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_LEP_gu_zhun_picture
 
 	is_triggered_only = yes
 
@@ -5198,7 +5198,7 @@ country_event = { #谈判：中工盟3
 	id = lep_election.8
 	title = lep_election.8.t
 	desc = lep_election.8.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_LEP_gu_zhun_picture
 
 	is_triggered_only = yes
 
@@ -5224,7 +5224,7 @@ country_event = { #谈判：革委会1
 	id = lep_election.9
 	title = lep_election.9.t
 	desc = lep_election.9.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_CHI_song_qingling_speech_party_congress
 
 	is_triggered_only = yes
 
@@ -5250,7 +5250,7 @@ country_event = { #谈判：革委会2
 	id = lep_election.10
 	title = lep_election.10.t
 	desc = lep_election.10.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_CHI_song_qingling_speech_party_congress
 
 	is_triggered_only = yes
 
@@ -5276,7 +5276,7 @@ country_event = { #谈判：革委会3
 	id = lep_election.11
 	title = lep_election.11.t
 	desc = lep_election.11.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_CHI_song_qingling_speech_party_congress
 
 	is_triggered_only = yes
 
@@ -5316,7 +5316,7 @@ country_event = { #谈判：救国会1
 	id = lep_election.12
 	title = lep_election.12.t
 	desc = lep_election.12.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_ma_xulun
 
 	is_triggered_only = yes
 
@@ -5342,7 +5342,7 @@ country_event = { #谈判：救国会2
 	id = lep_election.13
 	title = lep_election.13.t
 	desc = lep_election.13.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_ma_xulun
 
 	is_triggered_only = yes
 
@@ -5368,7 +5368,7 @@ country_event = { #谈判：救国会3
 	id = lep_election.14
 	title = lep_election.14.t
 	desc = lep_election.14.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_ma_xulun
 
 	is_triggered_only = yes
 
@@ -5394,7 +5394,7 @@ country_event = { #谈判：民科社1
 	id = lep_election.15
 	title = lep_election.15.t
 	desc = lep_election.15.d
-	picture = GFX_report_event_CHI_chen_gongbo_speech
+	picture = GFX_report_event_LEP_chu_fucheng
 
 	is_triggered_only = yes
 
@@ -5420,7 +5420,7 @@ country_event = { #谈判：民科社2
 	id = lep_election.16
 	title = lep_election.16.t
 	desc = lep_election.16.d
-	picture = GFX_report_event_CHI_chen_gongbo_speech
+	picture = GFX_report_event_LEP_chu_fucheng
 
 	is_triggered_only = yes
 
@@ -5446,7 +5446,7 @@ country_event = { #谈判：民科社3
 	id = lep_election.17
 	title = lep_election.17.t
 	desc = lep_election.17.d
-	picture = GFX_report_event_CHI_chen_gongbo_speech
+	picture = GFX_report_event_LEP_chu_fucheng
 
 	is_triggered_only = yes
 
@@ -5472,7 +5472,7 @@ country_event = { #谈判：国民党1
 	id = lep_election.18
 	title = lep_election.18.t
 	desc = lep_election.18.d
-	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+	picture = GFX_report_event_QIE_huang_fu
 
 	is_triggered_only = yes
 
@@ -5498,7 +5498,7 @@ country_event = { #谈判：国民党2
 	id = lep_election.19
 	title = lep_election.19.t
 	desc = lep_election.19.d
-	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+	picture = GFX_report_event_QIE_huang_fu
 
 	is_triggered_only = yes
 
@@ -5524,7 +5524,7 @@ country_event = { #谈判：国民党3
 	id = lep_election.20
 	title = lep_election.20.t
 	desc = lep_election.20.d
-	picture = GFX_report_event_CHI_nanjing_legislative_yuan_conference_hall
+	picture = GFX_report_event_QIE_huang_fu
 
 	is_triggered_only = yes
 
@@ -5550,7 +5550,7 @@ country_event = { #谈判：工商勇进党1
 	id = lep_election.21
 	title = lep_election.21.t
 	desc = lep_election.21.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_rong_zongjing
 
 	is_triggered_only = yes
 
@@ -5576,7 +5576,7 @@ country_event = { #谈判：工商勇进党2
 	id = lep_election.22
 	title = lep_election.22.t
 	desc = lep_election.22.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_rong_zongjing
 
 	is_triggered_only = yes
 
@@ -5602,7 +5602,7 @@ country_event = { #谈判：工商勇进党3
 	id = lep_election.23
 	title = lep_election.23.t
 	desc = lep_election.23.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_rong_zongjing
 
 	is_triggered_only = yes
 
@@ -5628,7 +5628,7 @@ country_event = { #谈判：景星会1
 	id = lep_election.24
 	title = lep_election.24.t
 	desc = lep_election.24.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_li_linsi
 
 	is_triggered_only = yes
 
@@ -5654,7 +5654,7 @@ country_event = { #谈判：景星会2
 	id = lep_election.25
 	title = lep_election.25.t
 	desc = lep_election.25.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_li_linsi
 
 	is_triggered_only = yes
 
@@ -5680,7 +5680,7 @@ country_event = { #谈判：景星会3
 	id = lep_election.26
 	title = lep_election.26.t
 	desc = lep_election.26.d
-	picture = GFX_report_event_CHN_parliament_nanjing
+	picture = GFX_report_event_LEP_li_linsi
 
 	is_triggered_only = yes
 
@@ -5706,7 +5706,7 @@ country_event = { #谈判：退伍军人协会1
 	id = lep_election.27
 	title = lep_election.27.t
 	desc = lep_election.27.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_LEP_chen_yi_4
 
 	is_triggered_only = yes
 
@@ -5732,7 +5732,7 @@ country_event = { #谈判：退伍军人协会2
 	id = lep_election.28
 	title = lep_election.28.t
 	desc = lep_election.28.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_LEP_chen_yi_4
 
 	is_triggered_only = yes
 
@@ -5758,7 +5758,7 @@ country_event = { #谈判：退伍军人协会3
 	id = lep_election.29
 	title = lep_election.29.t
 	desc = lep_election.29.d
-	picture = GFX_report_event_CHN_vote
+	picture = GFX_report_event_LEP_chen_yi_4
 
 	is_triggered_only = yes
 
@@ -5784,7 +5784,7 @@ country_event = { #谈判：青年党1
 	id = lep_election.30
 	title = lep_election.30.t
 	desc = lep_election.30.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_CHN_china_CYP_YCP_zuo_shunsheng_chen_qitian_zeng_qi_li_huang_flag
 
 	is_triggered_only = yes
 
@@ -5810,7 +5810,7 @@ country_event = { #谈判：青年党2
 	id = lep_election.31
 	title = lep_election.31.t
 	desc = lep_election.31.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_CHN_china_CYP_YCP_zuo_shunsheng_chen_qitian_zeng_qi_li_huang_flag
 
 	is_triggered_only = yes
 
@@ -5836,7 +5836,7 @@ country_event = { #谈判：青年党3
 	id = lep_election.32
 	title = lep_election.32.t
 	desc = lep_election.32.d
-	picture = GFX_report_event_CHN_china_five_colour_speech
+	picture = GFX_report_event_CHN_china_CYP_YCP_zuo_shunsheng_chen_qitian_zeng_qi_li_huang_flag
 
 	is_triggered_only = yes
 
@@ -5861,6 +5861,84 @@ country_event = { #谈判：青年党3
 
 	
 
+
+country_event = { #谈判：新社会民主党1
+	id = lep_election.33
+	title = lep_election.33.t
+	desc = lep_election.33.d
+	picture = GFX_report_event_LEP_jiang_kanghu
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.33 option lep_election.33.a"
+		name = lep_election.33.a
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_deal_labor_arbitration
+			days = 240
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.33 option lep_election.33.b"
+		name = lep_election.33.b
+	}
+}
+
+country_event = { #谈判：新社会民主党2
+	id = lep_election.34
+	title = lep_election.34.t
+	desc = lep_election.34.d
+	picture = GFX_report_event_LEP_jiang_kanghu
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.34 option lep_election.34.a"
+		name = lep_election.34.a
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_deal_state_economic_plan
+			days = 270
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.34 option lep_election.34.b"
+		name = lep_election.34.b
+	}
+}
+
+country_event = { #谈判：新社会民主党3
+	id = lep_election.35
+	title = lep_election.35.t
+	desc = lep_election.35.d
+	picture = GFX_report_event_LEP_jiang_kanghu
+
+	is_triggered_only = yes
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.35 option lep_election.35.a"
+		name = lep_election.35.a
+		set_temp_variable = { coalition_partner_var = token:totalist }
+		add_to_coalition = yes
+		add_timed_idea = {
+			idea = LEP_deal_union_reorganization
+			days = 210
+		}
+		LEP_hold_election_seats = yes
+	}
+
+	option = {
+		log = "[GetLogInfo]: event lep_election.35 option lep_election.35.b"
+		name = lep_election.35.b
+	}
+}
 
 ##各路线特有事件
 country_event = { #民主科学社——褚辅成结局事件

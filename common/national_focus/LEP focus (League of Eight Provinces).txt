@@ -741,6 +741,7 @@ focus_tree = {
 				country_event = { id = league_mid.32 days = 35 }
 				country_event = { id = league_mid.11 days = 3 }
 				country_event = { id = league_mid.76 days = 80 }
+				country_event = { id = league_mid.84 days = 50 }
 				
 				if = {
 					limit = {

@@ -140,6 +140,11 @@ spriteTypes = {
 		name = "GFX_report_event_LEP_shenxin_factory"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_shenxin_factory.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_LEP_gu_zhun_picture"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_gu_zhun_picture.png"
+	}
+	
 
 
 	spriteType = {

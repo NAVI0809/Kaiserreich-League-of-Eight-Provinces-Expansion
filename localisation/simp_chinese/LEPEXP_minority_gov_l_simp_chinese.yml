@@ -14,6 +14,8 @@
  LEP_invite_label_7: "拉拢威权民主党入阁"
  LEP_invite_label_8: "拉拢家长制独裁派入阁"
  LEP_invite_label_9: "拉拢国家民粹派入阁"
+ LEP_invite_totalist_decision: "邀请§R[LEP_seat_name_0]§!入阁"
+ LEP_invite_totalist_decision_desc: "说服该党加入执政联盟。该党现有 [?LEP_seat_n0] 席。（联盟现有 [?LEP_coalition_seats] / 274）"
  LEP_invite_syndicalist_decision: "邀请§r[LEP_seat_name_1]§!入阁"
  LEP_invite_syndicalist_decision_desc: "说服该党加入执政联盟。该党现有 [?LEP_seat_n1] 席。（联盟现有 [?LEP_coalition_seats] / 274）"
  LEP_invite_radical_socialist_decision: "邀请§R[LEP_seat_name_2]§!入阁"
