@@ -1,0 +1,299 @@
+scripted_gui = {
+	LEPEXP_gov_decision_cat_gui = {
+		context_type = decision_category
+		window_name = "LEPEXP_gov_decision_cat_gui"
+	}
+
+	ui_military_mobilization = {
+		context_type = decision_category
+		window_name = "ui_military_mobilization"
+
+		properties = {
+			# 进度条用 frame 控制填充（贴图 90 帧），y 控制显隐
+			LEP_mob_bar_blue = {
+				frame = LEP_mob_blue_frame
+				y = LEP_mob_blue_y
+			}
+			LEP_mob_bar_orange = {
+				frame = LEP_mob_orange_frame
+				y = LEP_mob_orange_y
+			}
+			# 指针（GUI 基准 65，此处给相对偏移）
+			LEP_mob_needle = {
+				x = LEP_mob_needle_x
+			}
+			# 五个阶段圆球：未达成 / 已达成 两组，靠 x 切换
+			LEP_mob_n1_off = { x = LEP_mob_n1_off_x }
+			LEP_mob_n2_off = { x = LEP_mob_n2_off_x }
+			LEP_mob_n3_off = { x = LEP_mob_n3_off_x }
+			LEP_mob_n4_off = { x = LEP_mob_n4_off_x }
+			LEP_mob_n5_off = { x = LEP_mob_n5_off_x }
+			LEP_mob_n1_on = { x = LEP_mob_n1_on_x }
+			LEP_mob_n2_on = { x = LEP_mob_n2_on_x }
+			LEP_mob_n3_on = { x = LEP_mob_n3_on_x }
+			LEP_mob_n4_on = { x = LEP_mob_n4_on_x }
+			LEP_mob_n5_on = { x = LEP_mob_n5_on_x }
+		}
+	}
+
+	ui_parliament = {
+		context_type = decision_category
+		window_name = "ui_parliament"
+
+		# 不用 dirty：默认每 tick 重建界面，点击选中后立刻生效。
+		# （之前写 dirty = LEP_law_gui_dirty，但那变量开局不存在，引擎认为它从未变化 → 界面不刷新，
+		#   表现就是「点击有响应但什么都没发生」。要省性能再启用 dirty 时，记得在 history 里先初始化它。）
+
+		effects = {
+
+			# 点整行 → 展示该法案详情。编号写死在每个热区自己的 effect 里，
+			# 不读 dynamic_lists 的 value 变量（那个变量在点击那一刻可能已失效 → 之前闪退就是这么来的）
+			LEP_law_click_1_click = {
+				set_variable = { LEP_law_detail = 1 }
+			}
+			LEP_law_click_2_click = {
+				set_variable = { LEP_law_detail = 2 }
+			}
+			LEP_law_click_3_click = {
+				set_variable = { LEP_law_detail = 3 }
+			}
+			LEP_law_click_4_click = {
+				set_variable = { LEP_law_detail = 4 }
+			}
+			LEP_law_click_5_click = {
+				set_variable = { LEP_law_detail = 5 }
+			}
+			LEP_law_click_6_click = {
+				set_variable = { LEP_law_detail = 6 }
+			}
+			LEP_law_click_7_click = {
+				set_variable = { LEP_law_detail = 7 }
+			}
+			LEP_law_click_8_click = {
+				set_variable = { LEP_law_detail = 8 }
+			}
+			LEP_law_click_9_click = {
+				set_variable = { LEP_law_detail = 9 }
+			}
+			LEP_law_click_10_click = {
+				set_variable = { LEP_law_detail = 10 }
+			}
+			LEP_law_click_11_click = {
+				set_variable = { LEP_law_detail = 11 }
+			}
+			LEP_law_click_12_click = {
+				set_variable = { LEP_law_detail = 12 }
+			}
+			LEP_law_click_13_click = {
+				set_variable = { LEP_law_detail = 13 }
+			}
+			LEP_law_click_14_click = {
+				set_variable = { LEP_law_detail = 14 }
+			}
+			LEP_law_click_15_click = {
+				set_variable = { LEP_law_detail = 15 }
+			}
+			LEP_law_click_16_click = {
+				set_variable = { LEP_law_detail = 16 }
+			}
+			LEP_law_click_17_click = {
+				set_variable = { LEP_law_detail = 17 }
+			}
+			LEP_law_click_18_click = {
+				set_variable = { LEP_law_detail = 18 }
+			}
+			LEP_law_click_19_click = {
+				set_variable = { LEP_law_detail = 19 }
+			}
+			LEP_law_click_20_click = {
+				set_variable = { LEP_law_detail = 20 }
+			}
+			LEP_law_click_21_click = {
+				set_variable = { LEP_law_detail = 21 }
+			}
+			LEP_law_click_22_click = {
+				set_variable = { LEP_law_detail = 22 }
+			}
+			LEP_law_click_23_click = {
+				set_variable = { LEP_law_detail = 23 }
+			}
+			LEP_law_click_24_click = {
+				set_variable = { LEP_law_detail = 24 }
+			}
+			LEP_law_click_25_click = {
+				set_variable = { LEP_law_detail = 25 }
+			}
+			LEP_law_click_26_click = {
+				set_variable = { LEP_law_detail = 26 }
+			}
+			LEP_law_click_27_click = {
+				set_variable = { LEP_law_detail = 27 }
+			}
+			LEP_law_click_28_click = {
+				set_variable = { LEP_law_detail = 28 }
+			}
+			LEP_law_click_29_click = {
+				set_variable = { LEP_law_detail = 29 }
+			}
+
+
+			# ✕ = 清除内容：清空所选法案，详情区回到提示语
+			LEP_law_detail_close_click = {
+				set_variable = { LEP_law_detail = 0 }
+			}
+		}
+
+		# 多帧贴图取第几帧：必须走 properties（照原文件里那段被注释的 LEP_law_icon 示例）
+		properties = {
+			LEP_seat_bar_fill_minority = {
+				frame = LEP_seat_bar_frame
+			}
+			LEP_seat_bar_fill_majority = {
+				frame = LEP_seat_bar_frame
+			}
+		}
+
+		dynamic_lists = {
+			LEP_passed_laws_grid = {
+				array = LEP_passed_law_ids          # 已通过法案的编号数组（on_add 里追加）
+				index = LEP_law_index               # 行号 0,1,2…（= 第几个通过）
+				value = LEP_law_id                  # 该行的法案编号
+				entry_container = LEP_passed_law_entry
+			}
+		}
+
+		# 图标多帧贴图取第几帧 = 该行的法案编号
+		# 现在用的是单帧统一图标，所以整段先注释掉；等 14 帧的 GFX_LEP_law_icons 做好后把下面放开
+		#properties = {
+		#	LEP_law_icon = {
+		#		frame = LEP_law_id
+		#	}
+		#}
+
+		triggers = {
+			# 席位条：分类可见时就有（席位由 LEP_provisional_senate 开启）；两套填充按过半与否切换
+			LEP_seat_bar_container_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_title_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_numbers_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_bg_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_frame_icon_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_scale_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_needle_visible = { has_country_flag = LEP_seat_enabled }
+			LEP_seat_bar_fill_minority_visible = {
+				has_country_flag = LEP_seat_enabled
+				check_variable = { LEP_coalition_seats < 138 }
+			}
+			LEP_seat_bar_fill_majority_visible = {
+				has_country_flag = LEP_seat_enabled
+				check_variable = { LEP_coalition_seats > 137 }
+			}
+			# 列表常显（原来靠议会按钮切换，按钮改成装饰图标后就一直显示了）
+			LEP_passed_laws_container_visible = {
+				always = yes
+			}
+			# 每行只留下与自己法案匹配的那个点击热区
+			LEP_law_click_1_visible = {
+				check_variable = { LEP_law_id = 1 }
+			}
+			LEP_law_click_2_visible = {
+				check_variable = { LEP_law_id = 2 }
+			}
+			LEP_law_click_3_visible = {
+				check_variable = { LEP_law_id = 3 }
+			}
+			LEP_law_click_4_visible = {
+				check_variable = { LEP_law_id = 4 }
+			}
+			LEP_law_click_5_visible = {
+				check_variable = { LEP_law_id = 5 }
+			}
+			LEP_law_click_6_visible = {
+				check_variable = { LEP_law_id = 6 }
+			}
+			LEP_law_click_7_visible = {
+				check_variable = { LEP_law_id = 7 }
+			}
+			LEP_law_click_8_visible = {
+				check_variable = { LEP_law_id = 8 }
+			}
+			LEP_law_click_9_visible = {
+				check_variable = { LEP_law_id = 9 }
+			}
+			LEP_law_click_10_visible = {
+				check_variable = { LEP_law_id = 10 }
+			}
+			LEP_law_click_11_visible = {
+				check_variable = { LEP_law_id = 11 }
+			}
+			LEP_law_click_12_visible = {
+				check_variable = { LEP_law_id = 12 }
+			}
+			LEP_law_click_13_visible = {
+				check_variable = { LEP_law_id = 13 }
+			}
+			LEP_law_click_14_visible = {
+				check_variable = { LEP_law_id = 14 }
+			}
+			LEP_law_click_15_visible = {
+				check_variable = { LEP_law_id = 15 }
+			}
+			LEP_law_click_16_visible = {
+				check_variable = { LEP_law_id = 16 }
+			}
+			LEP_law_click_17_visible = {
+				check_variable = { LEP_law_id = 17 }
+			}
+			LEP_law_click_18_visible = {
+				check_variable = { LEP_law_id = 18 }
+			}
+			LEP_law_click_19_visible = {
+				check_variable = { LEP_law_id = 19 }
+			}
+			LEP_law_click_20_visible = {
+				check_variable = { LEP_law_id = 20 }
+			}
+			LEP_law_click_21_visible = {
+				check_variable = { LEP_law_id = 21 }
+			}
+			LEP_law_click_22_visible = {
+				check_variable = { LEP_law_id = 22 }
+			}
+			LEP_law_click_23_visible = {
+				check_variable = { LEP_law_id = 23 }
+			}
+			LEP_law_click_24_visible = {
+				check_variable = { LEP_law_id = 24 }
+			}
+			LEP_law_click_25_visible = {
+				check_variable = { LEP_law_id = 25 }
+			}
+			LEP_law_click_26_visible = {
+				check_variable = { LEP_law_id = 26 }
+			}
+			LEP_law_click_27_visible = {
+				check_variable = { LEP_law_id = 27 }
+			}
+			LEP_law_click_28_visible = {
+				check_variable = { LEP_law_id = 28 }
+			}
+			LEP_law_click_29_visible = {
+				check_variable = { LEP_law_id = 29 }
+			}
+		}
+	}
+
+	ui_industry = {
+		context_type = decision_category
+		window_name = "ui_industry"
+		effects = {
+			industrial_construction_button_click = {
+				LEP_showcase_industrial_construction_effect = yes
+			}
+
+			resource_allocation_button_click = {
+				LEP_showcase_resource_allocation_effect = yes
+			}
+		}
+	}
+}
+

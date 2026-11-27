@@ -1,0 +1,46 @@
+### LEP 国家团结联盟：名字与分数随联盟内的主导派别换色
+### 左倾（LEP_NSU_direct_var > 0）→ 人民救国会 / social_democrat / §S
+### 右倾（LEP_NSU_direct_var < 0）→ 景星会 / authoritarian_democrat / §a
+### 未定（= 0 或变量不存在）→ 中性
+
+defined_text = {
+	name = LEP_NSU_name_text
+	text = {
+		trigger = {
+			has_variable = LEP_NSU_direct_var
+			check_variable = { LEP_NSU_direct_var > 0 }
+		}
+		localization_key = LEP_election2_name_4_left
+	}
+	text = {
+		trigger = {
+			has_variable = LEP_NSU_direct_var
+			check_variable = { LEP_NSU_direct_var < 0 }
+		}
+		localization_key = LEP_election2_name_4_right
+	}
+	text = {
+		localization_key = LEP_election2_name_4_none
+	}
+}
+
+defined_text = {
+	name = LEP_NSU_num_text
+	text = {
+		trigger = {
+			has_variable = LEP_NSU_direct_var
+			check_variable = { LEP_NSU_direct_var > 0 }
+		}
+		localization_key = LEP_election2_num_4_left
+	}
+	text = {
+		trigger = {
+			has_variable = LEP_NSU_direct_var
+			check_variable = { LEP_NSU_direct_var < 0 }
+		}
+		localization_key = LEP_election2_num_4_right
+	}
+	text = {
+		localization_key = LEP_NSU_too_weak
+	}
+}

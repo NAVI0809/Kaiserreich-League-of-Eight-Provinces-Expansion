@@ -1,0 +1,964 @@
+#################################
+#### --LEP KOR Joint foucs-- ####
+#################################
+#### -- made on Nov, 2026 -- ####
+
+joint_focus = { #东京审判
+	id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	icon = GFX_goal_LEPEXP_LEP_KOR_Joint_JAP_focus
+	cost = 2
+
+	x = 3
+	y = 0
+
+	text_icon = joint_focus_style
+
+	allow_branch = {
+		OR = {
+			original_tag = LEP
+			original_tag = KOR
+		} 
+		JAP = {
+			exists = yes
+			is_subject_of = LEP
+			NOT = {
+			    has_war_with = LEP
+		    }
+		}
+		KOR = {
+			exists = yes
+			is_subject_of = LEP
+			NOT = {
+			    has_war_with = JAP
+		    }
+		}	
+	}
+	offset = {
+		x = -10
+		y = 23
+		trigger = { original_tag = LEP }
+	}
+	offset = {
+		x = 20
+		y = 11
+		trigger = { original_tag = KOR }
+	}
+
+	cancel_if_invalid = no
+
+	available = {
+		LEP = {
+			has_country_flag = LEPEXP_oversee_JAP
+		}
+		custom_override_tooltip = {
+			tooltip = LEPEXP_LEP_KOR_Joint_JAP_focus_tt
+			if = {
+				limit = { NOT = { original_tag = LEP } }
+				LEP = {
+					exists = yes
+					is_subject = no
+					has_capitulated = no
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = KOR } }
+				KOR = {
+					exists = yes
+					is_subject = yes
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { original_tag = LEP } }
+			LEP = {
+				OR = {
+					has_subject = JAP
+					has_subject = KOR
+					has_country_flag = LEPEXP_oversee_JAP
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { original_tag = KOR } }
+			KOR = {
+				is_subject_of = LEP
+			}
+		}
+	}
+
+	ai_will_do = { factor = 100 }
+
+	select_effect = {
+		LEP = {
+			country_event = {
+               id = league_jap.20
+               hours = 12
+            }
+			country_event = {
+               id = league_jap.26
+               days = 4
+            }
+		}     
+		JAP = {
+			give_military_access = KOR
+		}
+    }
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_LEP_KOR_Joint_JAP_focus"
+		effect_tooltip = {
+			country_event = {
+                id = league_jap.21
+                days = 1
+            }   
+		}
+		hidden_effect = { 
+			if = {
+				limit = {
+					original_tag = KOR
+				}
+				LEP = {
+					country_event = {
+                        id = league_jap.21
+                        days = 1
+                    } 
+				}
+			}
+			if = {
+				limit = {
+					original_tag = LEP
+				}
+				KOR = {
+					country_event = {
+                        id = league_jap.21
+                        days = 1
+                    } 
+				}
+			}
+		}
+		add_political_power = 100
+		if = {
+			limit = {
+				original_tag = KOR
+			}
+			add_stability = 0.1
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_LEP_KOR_Joint_JAP_focus"
+		if = {
+			limit = {
+				original_tag = KOR
+			}
+			add_stability = 0.1
+		}
+		add_political_power = 80
+	}
+}
+#################
+#### -left - ####
+joint_focus = { #惩戒军国主义
+	id = LEPEXP_Punish_Militarism_focus
+	icon = GFX_goal_LEPEXP_Punish_Militarism_focus
+	cost = 4
+
+	relative_position_id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	x = 1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_LEP_KOR_Joint_JAP_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 5
+		modifier = {
+			factor = 900
+			original_tag = KOR
+			OR = {
+				has_completed_focus = KOR_education_for_the_masses
+			    has_completed_focus = KOR_reconstituting_the_national_army
+			}			
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_Punish_Militarism_focus"
+		add_political_power = 30
+		JAP = {
+			add_political_power = -50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = -8000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -800
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_Punish_Militarism_focus"
+		add_political_power = 20
+		JAP = {
+			add_stability = 0.1
+			hidden_effect = {
+				282 = {
+					transfer_state_to = KOR
+				}
+			}
+		}
+		KOR = {
+			hidden_effect = {
+				country_event = league_jap.33
+				if = {
+				    limit = { has_dlc_nsb = yes }
+				    if = {
+					    limit = { NOT = { has_tech = basic_light_tank_chassis } }
+					    set_technology = { basic_light_tank_chassis = 1 popup = no }
+				    }
+				    create_equipment_variant = {
+					    name = "Panzer I Ausf. A"
+					    type = light_tank_chassis_1
+					    show_position = no
+					    parent_version = 0
+					    modules = {
+						    main_armament_slot = tank_heavy_machine_gun				# MG13/MG17 twin
+						    turret_type_slot = tank_light_one_man_tank_turret
+						    suspension_type_slot = tank_bogie_suspension
+						    armor_type_slot = tank_riveted_armor
+						    engine_type_slot = tank_gasoline_engine
+						    special_type_slot_1 = secondary_turret_hmg				# Represent 2nd MG in twinned pair
+						    special_type_slot_2 = tank_radio_1
+					    }
+					    upgrades = {
+						    tank_nsb_engine_upgrade = 6
+						    tank_nsb_armor_upgrade = 1
+						}
+						icon = GFX_GER_basic_light_tank_medium
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 20
+						variant_name = "Panzer I Ausf. A"
+					}
+				}
+				else = {
+					if = {
+						limit = { NOT = { has_tech = basic_light_tank } }
+						set_technology = { basic_light_tank = 1 popup = no }
+					}
+					create_equipment_variant = {
+						name = "Panzer I Ausf. A"
+						type = light_tank_equipment_1
+						upgrades = {
+							tank_gun_upgrade = 2
+							tank_armor_upgrade = 2
+							tank_reliability_upgrade = 2
+							tank_engine_upgrade = 2
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = light_tank_equipment_1
+						amount = 20
+						variant_name = "Panzer I Ausf. A"
+					}
+				}	
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 8000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 800
+				producer = JAP
+			}
+			custom_effect_tooltip = tooltip_white_line
+			add_equipment_to_stockpile = { type = transport_plane_equipment_1 amount = 100 producer = USA }
+			custom_effect_tooltip = LEPEXP_KOR_AB_TT
+			custom_effect_tooltip = tooltip_white_line
+			add_potential_special_forces_tree = yes
+			custom_effect_tooltip = tooltip_white_line
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = tooltip_create_division_template
+					NAME = "Gongsuteugjeon Yeodan"
+					LINE_1 = { localization_key = line_battalion_tt NAME = paratrooper ICON = GFX_unit_paratrooper_icon_small COUNT = 8 }
+					SUPPORT_1 = { localization_key = support_battalion_tt NAME = combat_engineer ICON = GFX_unit_engineer_icon_small }
+					SUPPORT_2 = { localization_key = support_battalion_tt NAME = airborne_light_armor ICON = GFX_unit_light_armor_icon_small }
+				}
+				if = {
+					limit = { has_template = "Gongsuteugjeon Yeodan" }
+					delete_unit_template_and_units = { division_template = "Gongsuteugjeon Yeodan" disband = yes } #no cheating
+				}
+				division_template = {
+					name = "Gongsuteugjeon Yeodan"
+					division_names_group = LEP_PAR_02
+					is_locked = yes
+					regiments = {
+						paratrooper = { x = 0 y = 0 }
+						paratrooper = { x = 0 y = 1 }
+						paratrooper = { x = 1 y = 0 }
+						paratrooper = { x = 1 y = 1 }
+						paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 2 y = 1 }
+						paratrooper = { x = 3 y = 0 }
+						paratrooper = { x = 3 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						airborne_light_armor = { x = 0 y = 1 }
+					}
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			1099 = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = tooltip_spawn_unit
+						TYPE = "空输部队"
+					}
+					create_unit = {
+						division = "name = \"Je 1 Gongsuteugjeon-yeodan\" division_template = \"Gongsuteugjeon Yeodan\" start_experience_factor = 0.5"
+						owner = KOR
+					}
+				}
+			}
+		}		
+	}
+}
+
+joint_focus = { #枪口下的土改
+	id = LEPEXP_jap_land_reform_focus
+	icon = GFX_focus_JAP_the_modern_ashigaru
+	cost = 6
+
+	relative_position_id = LEPEXP_Punish_Militarism_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_Punish_Militarism_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 5
+		modifier = {
+			factor = 900
+			original_tag = KOR
+			has_completed_focus = KOR_harnessing_the_fields_of_the_south
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_Punish_Militarism_focus"
+		LEP = {
+			country_event = { 
+                id = league_jap.24
+                days = 1  
+			}
+		}
+		add_political_power = -50
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_Punish_Militarism_focus"
+		add_political_power = -50
+		JAP = {
+			add_political_power = 100
+			add_manpower = 10000
+			add_stability = 0.05
+			add_one_random_civilian_factory = yes 
+			add_one_random_civilian_factory = yes 
+			unlock_decision_category_tooltip = JAP_land_reform
+			hidden_effect = { JAP_open_JAP_land_reform = yes }
+			LEPEXP_JAP_generic_land_reform_setup = yes
+		}
+	}
+}
+
+joint_focus = { #中日关税条约
+	id = LEPEXP_CN_JAP_trade_deal_focus
+	icon = GFX_focus_PHI_encourage_japanese_investment
+	cost = 6
+
+	relative_position_id = LEPEXP_Punish_Militarism_focus
+	x = 1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_Punish_Militarism_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_trade_deal_focus"
+		
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_trade_deal_focus"
+		JAP = {
+			add_ideas = LEP_China_Japan_tariff_treaty_jap
+		}
+	}
+}
+
+joint_focus = { #东渡淘金
+	id = LEPEXP_CN_JAP_gold_rush_focus
+	icon = GFX_goal_LEPEXP_CN_JAP_gold_rush_focus
+	cost = 6
+
+	relative_position_id = LEPEXP_Punish_Militarism_focus
+	x = 3
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_Punish_Militarism_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 900
+			original_tag = KOR
+			has_completed_focus = KOR_joining_the_global_economy
+		}		
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_gold_rush_focus"
+		add_political_power = 50
+		LEP = {			
+			country_event = {
+				id = league_jap.27
+                days = 1  
+			}
+			add_ideas = LEPEXP_gold_rush_idea
+		}
+		JAP = {
+			add_ideas = LEPEXP_gold_rush_idea
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_gold_rush_focus"
+		add_political_power = 30
+		add_one_random_civilian_factory = yes
+		add_one_random_civilian_factory = yes
+		add_one_random_infrastructure = yes
+	}
+}
+
+joint_focus = { #开展基层选举
+	id = LEPEXP_CN_JAP_loacl_election_focus
+	icon = GFX_goal_LEPEXP_CN_JAP_loacl_election_focus
+	cost = 6
+
+	relative_position_id = LEPEXP_jap_land_reform_focus
+	x = 1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_jap_land_reform_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 1	
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_loacl_election_focus"
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_loacl_election_focus"
+		JAP = {
+			add_timed_idea = {
+				idea = LEP_grassroots_democracy
+				days = 300
+			}
+			
+		}
+	}
+}
+
+joint_focus = { #倾销阴影
+	id = LEPEXP_CN_JAP_sell_everthing_focus
+	icon = GFX_goal_LEPEXP_CN_JAP_sell_everthing_focus
+	cost = 6
+
+	relative_position_id = LEPEXP_CN_JAP_gold_rush_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_CN_JAP_gold_rush_focus }
+	prerequisite = { focus = LEPEXP_CN_JAP_trade_deal_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 1	
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_sell_everthing_focus"
+		LEP = {
+			add_political_power = -20
+			remove_ideas = LEPEXP_gold_rush_idea
+			add_timed_idea = {
+				idea = LEPEXP_trade_damage_idea
+				days = 150
+			}
+			country_event = {
+				id = league_jap.28
+                days = 1  
+			}			
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_sell_everthing_focus"
+		JAP = {
+			remove_ideas = LEPEXP_gold_rush_idea
+			add_timed_idea = {
+				idea = LEPEXP_trade_damage_JAP_idea
+				days = 150
+			}
+		}
+	}
+}
+
+joint_focus = { #推广中国工业标准
+	id = LEPEXP_CN_JAP_chinese_stander_focus
+	icon = GFX_goal_LEPEXP_CN_JAP_chinese_stander_focus
+	cost = 6
+
+	relative_position_id = LEPEXP_CN_JAP_sell_everthing_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_CN_JAP_sell_everthing_focus }
+	prerequisite = { focus = LEPEXP_CN_JAP_loacl_election_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 50
+			original_tag = KOR
+			OR = {
+			   has_completed_focus = KOR_spreading_burgeoning_light_industries
+			   has_completed_focus = KOR_maintaining_pyongyang_heavy_industry  
+			}			
+		}		
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_CN_JAP_chinese_stander_focus"
+		LEP = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_CN_JAP_chinese_stander_focus"
+		JAP = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
+		KOR = {
+			add_ideas = LEPEXP_cn_production_standered_idea
+		}
+	}
+}
+
+#### -left ends - ####
+######################
+
+#################
+#### - mid - ####
+
+joint_focus = { #筹备琉球独立
+	id = LEPEXP_preparing_ryukyu_independence_focus
+	icon = GFX_goal_LEPEXP_preparing_ryukyu_independence_focus
+	cost = 4
+
+	relative_position_id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_LEP_KOR_Joint_JAP_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_preparing_ryukyu_independence_focus"
+		LEP = {
+            transfer_state = 526
+			country_event = {
+				id = league_jap.29
+                days = 1  
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_preparing_ryukyu_independence_focus"
+		526 = {
+			add_dynamic_modifier = {
+				modifier = CHN_autonomous_region_modifier 
+				scope = THIS
+			}
+		}
+	}
+}
+
+#### -mid ends- ####
+####################
+
+###################
+#### - RIGHT - ####
+
+joint_focus = { #秋后算账
+	id = LEPEXP_JAPS_must_pay_focus
+	icon = GFX_goal_LEPEXP_JAPS_must_pay_focus
+	cost = 4
+
+	relative_position_id = LEPEXP_LEP_KOR_Joint_JAP_focus
+	x = -3
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_LEP_KOR_Joint_JAP_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_JAPS_must_pay_focus"
+		add_political_power = 30
+		JAP = {
+			add_political_power = -50
+			if = {
+			    limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = 	LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_exports
+				}
+				swap_ideas = {
+					remove_idea = limited_exports
+					add_idea = LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = free_trade
+				}
+				swap_ideas = {
+					remove_idea = free_trade
+					add_idea = LEPEXP_CNJP_treaties
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = export_focus
+				}
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = LEPEXP_CNJP_treaties
+				}
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_JAPS_must_pay_focus"
+		add_political_power = 20
+		LEP = {
+			country_event = {
+				id = league_jap.30
+                days = 3
+			}
+		}
+	}
+}
+
+joint_focus = { #协助朝鲜重建
+	id = LEPEXP_JAPS_help_KOR_rebuild_focus
+	icon = GFX_focus_JAP_ignite_the_korean_peninsula
+	cost = 4
+
+	relative_position_id = LEPEXP_JAPS_must_pay_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_JAPS_must_pay_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 500
+			original_tag = KOR
+			OR = {
+			   has_completed_focus = KOR_prosecuting_the_traitorous_element
+			   has_completed_focus = KOR_dealing_with_the_collaborators
+			}
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_JAPS_help_KOR_rebuild_focus"
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_JAPS_help_KOR_rebuild_focus"
+		LEP = {
+			add_ideas = LEP_aid_kora_chn
+		}
+		KOR = {
+			add_ideas = LEP_aid_kora_kor
+		}
+		hidden_effect = {
+			LEP = {
+				country_event = { id = league_mid.73 days = 3 }
+			}			
+		}
+	}
+}
+
+joint_focus = { #没收日本专利
+	id = LEPEXP_Revocation_jap_patents_focus
+	icon = GFX_focus_JAP_expand_the_showa_research_association
+	cost = 4
+
+	relative_position_id = LEPEXP_JAPS_must_pay_focus
+	x = 1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_JAPS_must_pay_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 500
+			original_tag = KOR
+			OR = {
+			   has_completed_focus = KOR_prosecuting_the_traitorous_element
+			   has_completed_focus = KOR_dealing_with_the_collaborators
+			}
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_Revocation_jap_patents_focus"
+		add_timed_idea = {
+			idea = GER_intellectual_property_idea
+			days = 720
+		}
+		LEP = {
+			country_event = {
+				id = league_jap.31
+                days = 3
+			}
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_Revocation_jap_patents_focus"
+		add_timed_idea = {
+			idea = GER_intellectual_property_idea
+			days = 720
+		}
+	}
+}
+
+joint_focus = { #重建而非毁灭
+	id = LEPEXP_rebuild_jap_focus
+	icon = GFX_focus_JAP_further_urban_investments
+	cost = 4
+
+	relative_position_id = LEPEXP_Revocation_jap_patents_focus
+	x = 0
+	y = 2
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_Revocation_jap_patents_focus }
+	prerequisite = { focus = LEPEXP_CN_JAP_loacl_election_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 50
+			original_tag = KOR
+			OR = {
+			   has_completed_focus = KOR_spreading_burgeoning_light_industries
+			   has_completed_focus = KOR_maintaining_pyongyang_heavy_industry  
+			}			
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_rebuild_jap_focus"
+		LEP = {
+			if = {
+				limit = {
+					has_country_flag = LEPEXP_JAP_1
+				}
+				country_event = { id = league_jap.2 days = 5 }
+			}
+			if = {
+				limit = {
+					has_country_flag = LEPEXP_JAP_2
+				}
+				country_event = { id = league_jap.4 days = 5 }
+			}	
+			country_event = { id = league_jap.25 days = 1 }		
+		}
+		set_global_flag = LEPEXP_japs_paid
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_rebuild_jap_focus"
+		KOR = {
+			country_event = { id = league_jap.25 days = 1 }
+		}
+		JAP = {
+			country_event = { id = league_jap.25 days = 1 }
+		}
+	}
+}
+
+joint_focus = { #控制战略资源
+	id = LEPEXP_jap_resource_taken_focus
+	icon = GFX_focus_JAP_resource_security
+	cost = 4
+
+	relative_position_id = LEPEXP_Revocation_jap_patents_focus
+	x = -1
+	y = 1
+
+	text_icon = joint_focus_style
+
+	prerequisite = { focus = LEPEXP_Revocation_jap_patents_focus }
+
+	available = {
+		LEP_KOR_JOINT_focus_available = yes
+	}
+
+	ai_will_do = { 
+		factor = 20
+		modifier = {
+			factor = 500
+			original_tag = KOR
+			OR = {
+			   has_completed_focus = KOR_spreading_burgeoning_light_industries
+			   has_completed_focus = KOR_maintaining_pyongyang_heavy_industry  
+			}			
+		}
+	}
+
+	completion_reward_joint_originator = {
+		log = "[GetLogRoot]: completion_reward_joint_originator LEPEXP_jap_resource_taken_focus"
+		JAP = {
+			give_resource_rights = {
+                receiver = LEP
+                state = 1102
+            }
+		}
+	}
+	completion_reward_joint_member = {
+		log = "[GetLogRoot]: completion_reward_joint_member LEPEXP_jap_resource_taken_focus"
+		JAP = {
+			give_resource_rights = {
+                receiver = KOR
+                state = 528
+            }
+		}
+	}
+}
+
+
+#### -RIGHT ends- ####
+######################

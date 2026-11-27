@@ -1,0 +1,22 @@
+music_station = "lep_radio"
+
+music = {
+	song = "li_ge"
+	chance = {
+		base = 10
+	}
+}
+
+music = {
+	song = "maintheme"
+	chance = {
+		base = 10
+	}
+}
+
+music = {
+	song = "chun_you"
+	chance = {
+		base = 10
+	}
+}

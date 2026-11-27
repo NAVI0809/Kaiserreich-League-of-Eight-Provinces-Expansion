@@ -1,0 +1,44 @@
+air_wings = {
+	#海航
+	613 = { 
+		# 海军部直属海上巡逻机大队
+		large_plane_maritime_patrol_plane_airframe_2 =  {		
+			owner = "LEP" 
+			amount = 10
+			version_name = "PB4Y-CN"
+		}
+		name = "海军部直属远程巡逻机大队"
+	}
+	613 = { 
+		large_plane_maritime_patrol_plane_airframe_2 =  {		
+			owner = "LEP" 
+			amount = 10
+			version_name = "PB4Y-CN"
+		}
+		name = "海军第1海上巡逻机大队"
+	}
+	613 = { 
+		large_plane_maritime_patrol_plane_airframe_2 =  {		
+			owner = "LEP" 
+			amount = 10
+			version_name = "PB4Y-CN"
+		}
+		name = "海军第2远程巡逻机大队"
+	}
+	613 = { 
+		large_plane_maritime_patrol_plane_airframe_2 =  {		
+			owner = "LEP" 
+			amount = 10
+			version_name = "PB4Y-CN"
+		}
+		name = "海军第3远程巡逻机大队"
+	}
+	613 = { 
+		large_plane_maritime_patrol_plane_airframe_2 =  {		
+			owner = "LEP" 
+			amount = 8
+			version_name = "PB4Y-CN"
+		}
+		name = "海军航空学院远程巡逻机训练大队"
+	}
+}	

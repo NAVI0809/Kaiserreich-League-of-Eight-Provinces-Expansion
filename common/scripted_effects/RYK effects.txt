@@ -1,0 +1,54 @@
+### 琉球民国：立国初始化（动态建国时用；静态开局由 history/countries 负责）
+RYK_establish_government = {
+	set_capital = { state = 526 }
+
+	set_politics = {
+		ruling_party = social_conservative
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		totalist = 0
+		syndicalist = 0
+		radical_socialist = 3
+		social_democrat = 24
+		social_liberal = 26
+		market_liberal = 19
+		social_conservative = 25
+		authoritarian_democrat = 3
+		paternal_autocrat = 0
+		national_populist = 0
+	}
+	set_party_name = {
+		ideology = social_conservative
+		name = RYK_youth_comrades_party
+		long_name = RYK_youth_comrades_party_long
+	}
+	set_party_name = {
+		ideology = social_liberal
+		name = RYK_youth_comrades_party
+		long_name = RYK_youth_comrades_party_long
+	}
+	set_party_name = {
+		ideology = market_liberal
+		name = RYK_youth_comrades_party
+		long_name = RYK_youth_comrades_party_long
+	}
+	set_party_name = {
+		ideology = social_democrat
+		name = RYK_youth_comrades_party
+		long_name = RYK_youth_comrades_party_long
+	}
+
+	set_stability = 0.50
+	set_war_support = 0.20
+	recruit_character = RYK_cai_zhang
+
+	RYK_claim_homeland = yes
+}
+
+### 琉球民国：声索琉球群岛（核心已写在 state 526）
+RYK_claim_homeland = {
+	add_state_claim = 526
+}

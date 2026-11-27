@@ -1,0 +1,166 @@
+on_actions = {  
+
+    on_daily = {
+        effect = {
+            if = {
+                limit = {
+                    tag = LEP
+                    has_war_with = JAP
+                }
+
+                random = {
+                    chance = 5
+
+                    country_event = {
+                        id = league_military.10
+                    }
+                }
+            }
+
+            # 联赛战争兜底：参战的中国阵营若没拿到 league_collapse_*，
+            # china_league_war_morale 不存在会被 clamp 在 0，表现为士气永远不变。
+            if = {
+                limit = {
+                    has_global_flag = LEP_war
+                    has_war = yes
+                    OR = { tag = CHI tag = ANQ tag = SHD }
+                    NOT = {
+                        OR = {
+                            has_idea = league_collapse_ANQ
+                            has_idea = league_collapse_SHD
+                            has_idea = league_collapse_CHI
+                        }
+                    }
+                }
+                LEP_add_collapse_dm = yes
+            }
+        }
+    }
+
+	on_ace_killed = {
+		effect = {
+            if = {
+                limit = {
+                    FROM = { name = "Zhou" surname = "Xundian" }
+                }
+
+                country_event = {
+                    id = league_military.11
+                }
+            }
+        }
+	}
+
+	# ── 少数派政府：只负责「显示用」的天数递减 ─────────────────────
+	# 真正的 30 天扣罚循环由 mission（LEP_minority_government_timer）承担；
+	# 这里仅维护 LEP_minority_days 供界面显示（mission 的剩余时间引擎读不到）。
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = LEP_minority_gov
+					check_variable = { LEP_coalition_seats < 138 }
+				}
+				subtract_from_variable = { LEP_minority_days = 1 }
+				if = {
+					limit = { check_variable = { LEP_minority_days < 1 } }
+					set_variable = { LEP_minority_days = 30 }
+				}
+			}
+
+			# 席位条档位兜底：读旧档时变量可能还不存在，这里每天补算一次（很轻）
+			if = {
+				limit = { has_country_flag = LEP_seat_enabled }
+				set_variable = { LEP_seat_bar_frame = LEP_coalition_seats }
+				multiply_variable = { LEP_seat_bar_frame = 28 }
+				divide_variable = { LEP_seat_bar_frame = 274 }
+				round_variable = LEP_seat_bar_frame
+				if = { limit = { check_variable = { LEP_seat_bar_frame > 28 } } set_variable = { LEP_seat_bar_frame = 28 } }
+				if = { limit = { check_variable = { LEP_seat_bar_frame < 0 } } set_variable = { LEP_seat_bar_frame = 0 } }
+			}
+		}
+	}
+
+    on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { tag = LEP }
+				if = {
+					limit = {
+						FROM.FROM = { state = 608 } #Beijing
+						has_country_flag = LEP_dem_gov
+					}
+					country_event = { id = league_national.1 days = 3 } 
+				}
+			}
+		}
+	}
+
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = LEP }
+				}
+				unit_leader_event = league_generic.7 #Champion Event
+			}
+		}
+	}
+
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = LEP
+							FROM = { tag = FNG }
+						}
+						AND = {
+							tag = FNG
+							FROM = { tag = LEP }
+						}
+					}
+				}
+				LEP = {
+					LEP_li_erkang = {
+						unit_leader_event = { id = league_military.1 days = 3 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							tag = LEP
+							FROM = { tag = JAP }
+						}
+						AND = {
+							tag = JAP
+							FROM = { tag = LEP }
+						}
+					}
+				}
+				LEP = {
+					LEP_change_president_clothes_effect = yes
+					LEP_war_with_jap_effect = yes
+				}
+			}
+		}
+	}
+	# ── 大选组阁：每届任期选举后重排席位，并检查是否取得过半席位 ──────
+	# 结算延迟 1 天（LEP_hold_election_seats），检查逻辑在 LEP_do_count_seats 末尾。
+	on_new_term_election = {
+		effect = {
+			if = {
+				limit = {
+					tag = LEP
+					has_country_flag = LEP_seat_enabled
+				}
+				set_country_flag = LEP_election_pending_check
+				end_coalition = yes
+				LEP_hold_election_seats = yes
+			}
+		}
+	}
+}

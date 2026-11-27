@@ -1,0 +1,10 @@
+### LEP 第二次大选分数条
+### 四行：三党 + 国家团结联盟（名字/分数由 defined_text 决定）
+scripted_gui = {
+
+	LEP_election2_cats_gui = {
+		context_type = decision_category
+		window_name = "LEP_election2_cats_gui"
+	}
+
+}

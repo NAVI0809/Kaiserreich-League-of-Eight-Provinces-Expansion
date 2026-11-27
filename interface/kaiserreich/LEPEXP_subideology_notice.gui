@@ -1,0 +1,23 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "LEPEXP_subideology_container"
+		### 叠在政治页执政党信息栏（ruling_party_info x=175 y=213）之上
+		### 位置 = KR 原生 ideology 文本框原位（该文本框已在 interface/countrypoliticsview.gui 里注释掉）
+		### 显示内容：有子意识形态→子名；没有→父名（兜底见 common/scripted_localisation/LEPEXP_subideologies.txt）
+		position = { x = 170 y = 205 }
+
+		instantTextBoxType = {
+			name = "LEPEXP_subideology_name"
+			position = { x = 10 y = 16 }
+			font = "hoi_16mbs"
+			text = "[GetSubIdeologyName]"
+			pdx_tooltip = "[GetSubIdeologyDesc]"
+			maxWidth = 155
+			maxHeight = 20
+			fixedsize = yes
+			format = centre
+			alwaystransparent = yes
+		}
+	}
+}

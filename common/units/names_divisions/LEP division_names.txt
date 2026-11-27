@@ -1,0 +1,377 @@
+LEP_INF_01 = {
+	name = 步兵镇
+
+	for_countries = { LEP }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "第%d.步兵镇"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京步兵第%d镇" }
+		2 = { "南京步兵第%d镇" }
+		3 = { "南京步兵第%d镇" }
+		4 = { "南京步兵第%d镇" }
+		5 = { "南京步兵第%d镇" }
+		6 = { "江苏步兵第%d镇" }
+		7 = { "江苏步兵第%d镇" }
+		8 = { "江苏步兵第%d镇" }
+		9 = { "江苏步兵第%d镇" }
+		10 = { "浙江步兵第%d镇" }
+		11 = { "浙江步兵第%d镇" }
+		12 = { "浙江步兵第%d镇" }
+		13 = { "浙江步兵第%d镇" }
+		14 = { "江西步兵第%d镇" }
+		15 = { "江西步兵第%d镇" }
+		16 = { "江西步兵第%d镇" }
+		18 = { "福建步兵第%d镇" }
+		19 = { "福建步兵第%d镇" }
+		20 = { "安徽步兵第%d镇" }
+		21 = { "安徽步兵第%d镇" }
+		22 = { "安徽步兵第%d镇" }
+		23 = { "安徽步兵第%d镇" }
+	}
+}
+
+LEP_INF_02 = {
+	name = 步兵协
+
+	for_countries = { LEP }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "第%d.步兵旅"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京步兵协" }
+		2 = { "宁波步兵协" }
+		3 = { "温州步兵协" }
+		4 = { "杭州步兵协" }
+		5 = { "徐州步兵协" }
+		6 = { "扬州步兵协" }
+		7 = { "苏州步兵协" }
+		8 = { "无锡步兵协" }
+		9 = { "南通步兵协" }
+		10 = { "金华步兵协" }
+		11 = { "南昌步兵协" }
+		12 = { "福州步兵协" }
+		13 = { "泉州步兵协" }
+		14 = { "建宁步兵协" }
+		15 = { "赣州步兵协" }
+		16 = { "江西步兵协" }
+		18 = { "淮安步兵协" }
+		19 = { "田州步兵协" }
+		20 = { "绍兴步兵协" }
+		21 = { "安庆步兵协" }
+		22 = { "合肥步兵协" }
+		23 = { "常州步兵协" }
+		24 = { "芜湖步兵协" }
+		25 = { "厦门步兵协" }
+		26 = { "宿迁兵协" }
+		27 = { "景德镇步兵协" }
+		28 = { "宿迁步兵协" }
+	}
+}
+
+LEP_INF_03 = {
+	name = 炮兵镇
+
+	for_countries = { LEP }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "第%d.炮兵师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京炮兵第%d.镇" }
+        2 = { "宁波炮兵第%d.镇" }
+        3 = { "温州炮兵第%d.镇" }
+        4 = { "杭州炮兵第%d.镇" }
+        5 = { "徐州炮兵第%d.镇" }
+        6 = { "扬州炮兵第%d.镇" }
+        7 = { "苏州炮兵第%d.镇" }
+        8 = { "无锡炮兵第%d.镇" }
+        9 = { "南通炮兵第%d.镇" }
+        10 = { "金华炮兵第%d.镇" }
+        11 = { "南昌炮兵第%d.镇" }
+        12 = { "福州炮兵第%d.镇" }
+        13 = { "泉州炮兵第%d.镇" }
+        14 = { "建宁炮兵第%d.镇" }
+        15 = { "赣州炮兵第%d.镇" }
+        16 = { "江西炮兵第%d.镇" }
+        18 = { "淮安炮兵第%d.镇" }
+        19 = { "泰州炮兵第%d.镇" }
+        20 = { "绍兴炮兵第%d.镇" }
+        21 = { "安庆炮兵第%d.镇" }
+        22 = { "合肥炮兵第%d.镇" }
+        23 = { "常州炮兵第%d.镇" }
+        24 = { "芜湖炮兵第%d.镇" }
+        25 = { "厦门炮兵第%d.镇" }
+        26 = { "宿迁炮兵第%d.镇" }
+        27 = { "景德镇炮兵第%d.镇" }
+        28 = { "宿迁炮兵第%d.镇" }
+	}
+}
+
+LEP_MIL_01 = {
+	name = 民兵
+
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "%d. 民兵旅"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京民兵协" }
+		2 = { "宁波民兵协" }
+		3 = { "温州民兵协" }
+		4 = { "杭州民兵协" }
+		5 = { "徐州民兵协" }
+        6 = { "扬州民兵协" }
+        7 = { "苏州民兵协" }
+        8 = { "无锡民兵协" }
+        9 = { "南通民兵协" }
+        10 = { "金华民兵协" }
+        11 = { "南昌民兵协" }
+        12 = { "福州民兵协" }
+        13 = { "泉州民兵协" }
+        14 = { "建宁民兵协" }
+        15 = { "赣州民兵协" }
+        16 = { "江西民兵协" }
+        18 = { "淮安民兵协" }
+        19 = { "泰州民兵协" }
+        20 = { "绍兴民兵协" }
+        21 = { "安庆民兵协" }
+        22 = { "合肥民兵协" }
+        23 = { "常州民兵协" }
+        24 = { "芜湖民兵协" }
+        25 = { "厦门民兵协" }
+        26 = { "宿迁民兵协" }
+        27 = { "景德镇民兵协" }
+        28 = { "宿迁民兵协" } 
+    }
+}
+
+LEP_MIL_02 = {
+	name = 警备队
+
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "第%d.混成警备旅"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+        1 = { "厦门混成警备协" }
+        2 = { "无锡混成警备协" }
+        3 = { "南京混成警备协" }
+        4 = { "温州混成警备协" }
+        5 = { "南通混成警备协" }
+        6 = { "鼓浪屿混成警备协" }
+        7 = { "第%d混成警备协" }
+        8 = { "第%d混成警备协" }
+        9 = { "第%d混成警备协" }
+        10 = { "第%d混成警备协" }
+    }
+}
+
+LEP_CAV_01 = {
+	name = 骑兵协
+
+	for_countries = { LEP }
+
+	division_types = { "cavalry" }
+
+	fallback_name = "第%d.骑兵师"
+
+	ordered = {
+        1 = { "南京骑兵第%d协" }
+        2 = { "宁波骑兵第%d协" }
+        3 = { "温州骑兵第%d协" }
+        4 = { "杭州骑兵第%d协" }
+        5 = { "徐州骑兵第%d协" }
+        6 = { "扬州骑兵第%d协" }
+        7 = { "苏州骑兵第%d协" }
+        8 = { "无锡骑兵第%d协" }
+        9 = { "南通骑兵第%d协" }
+        10 = { "金华骑兵第%d协" }
+        11 = { "南昌骑兵第%d协" }
+        12 = { "福州骑兵第%d协" }
+        13 = { "泉州骑兵第%d协" }
+        14 = { "建宁骑兵第%d协" }
+        15 = { "赣州骑兵第%d协" }
+        16 = { "江西骑兵第%d协" }
+        18 = { "淮安骑兵第%d协" }
+        19 = { "泰州骑兵第%d协" }
+        20 = { "绍兴骑兵第%d协" }
+        21 = { "安庆骑兵第%d协" }
+        22 = { "合肥骑兵第%d协" }
+        23 = { "常州骑兵第%d协" }
+        24 = { "芜湖骑兵第%d协" }
+        25 = { "厦门骑兵第%d协" }
+        26 = { "宿迁骑兵第%d协" }
+        27 = { "景德镇骑兵第%d协" }
+        28 = { "宿迁骑兵第%d协" }
+    }
+}
+
+LEP_MOT_01 = {
+	name = 摩托化部队
+
+	for_countries = { LEP }
+
+	division_types = { "motorized" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "机动化步兵第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京机动化步兵第1镇" }
+		2 = { "南京机动化步兵第2镇" }
+		3 = { "无锡机动化步兵镇" }
+		4 = { "南昌机动化步兵镇" }
+		5 = { "杭州机动化步兵镇" }
+		6 = { "宁波机动化步兵镇" }
+		7 = { "金华机动化步兵镇" }
+		8 = { "安庆机动化步兵镇" }
+		9 = { "芜湖机动化步兵镇" }
+		10 = { "厦门机动化步兵镇" }
+		11 = { "福州机动化步兵镇" }
+		12 = { "温州机动化步兵镇" }
+		13 = { "奉化机动化步兵镇" }
+		14 = { "义乌机动化步兵镇" }
+	}
+}
+
+LEP_MEC_01 = {
+	name = 机械化部队
+
+	for_countries = { LEP }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "机械化第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "南京机械化步兵第1镇" }
+		2 = { "南京机械化步兵第2镇" }
+		3 = { "无锡机械化步兵镇" }
+		4 = { "南昌机械化步兵镇" }
+		5 = { "杭州机械化步兵镇" }
+		6 = { "宁波机械化步兵镇" }
+		7 = { "金华机械化步兵镇" }
+		8 = { "安庆机械化步兵镇" }
+		9 = { "芜湖机械化步兵镇" }
+		10 = { "厦门机械化步兵镇" }
+		11 = { "福州机械化步兵镇" }
+		12 = { "温州机械化步兵镇" }
+		13 = { "奉化机械化步兵镇" }
+		14 = { "义乌机械化步兵镇" }
+	}
+}
+
+LEP_ARM_01 = {
+	name = div_armoured_unit
+
+	for_countries = { LEP }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "装甲第%d协"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "装甲第%d协" }
+	}
+}
+
+LEP_PAR_01 = {
+	name = div_paratrooper_unit
+
+	for_countries = { LEP }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "伞兵第%d协"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "伞兵第%d协" }
+	}
+}
+
+LEP_MAR_01 = {
+	name = div_marine_unit
+
+	for_countries = { LEP }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "陆战队第%d协"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "陆战队第%d协" }
+	}
+}
+
+LEP_MTN_01 = {
+	name = div_mountain_unit
+
+	for_countries = { LEP }
+
+	division_types = { "mountaineers" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "山地第%d协"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "山地第%d协" }
+	}
+}
+

@@ -1,0 +1,7 @@
+spriteTypes = {
+	# 「已通过法案」列表：整行点击热区（几乎全透明的 470×46 贴图，只负责吃鼠标）
+	spriteType = {
+		name = "GFX_LEPEXP_law_click_area"
+		texturefile = "gfx/interface/LEPEXP_law_click_area.png"
+	}
+}

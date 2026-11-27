@@ -1,0 +1,258 @@
+LEP_LTB_01 = {
+	name = div_qingxing_unit
+
+	for_countries = { LEP }
+
+	division_types = { "mountaineers" "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Qingxing Bubing Di %d Shi"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Qingxing Bubing Di %d Shi" }
+		2 = { "Qingxing Bubing Di %d Shi" }
+		3 = { "Qingxing Bubing Di %d Shi" }
+		4 = { "Qingxing Bubing Di %d Shi" }
+	}
+}
+
+LEP_ND_01 = {
+	name = div_tiaozheng_unit
+
+	for_countries = { LEP }
+
+	division_types = { "infantry" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "新编第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "新编第%d师" }
+		2 = { "新编第%d师" }
+		3 = { "新编第%d师" }
+		4 = { "新编第%d师" }
+	}
+}
+
+LEP_GAR_01 = {
+	name = div_jingbei_unit
+
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry"}
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Jingbei Di %d Xie"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Nanjing Jingbei Xie" }
+		2 = { "Hangzhou Jingbei Xie" }
+		3 = { "Ningbo Jingbei Xie" }
+		4 = { "Hefei Jingbei Xie" }
+		5 = { "Wuhu Jingbei Xie" }
+		6 = { "Wuxi Jingbei Xie" }
+		7 = { "Xuzhou Jingbei Xie" }
+		8 = { "Nanchang Jingbei Xie" }
+		9 = { "Nantong Jingbei Xie" }
+		10 = { "Bengbu Jingbei Xie" }
+		11 = { "Jinghua Jingbei Xie" }
+		12 = { "Anqing Jingbei Xie" }
+		13 = { "Xiamen Jingbei Xie" }
+		14 = { "Jingbei Di %d Xie" }
+		15 = { "Jingbei Di %d Xie" }
+		16 = { "Jingbei Di %d Xie" }
+		17 = { "Jingbei Di %d Xie" }
+		18 = { "Jingbei Di %d Xie" }
+		19 = { "Jingbei Di %d Xie" }
+	}
+}
+
+LEP_GAR_02 = {
+	name = div_jingbei_unit_2
+
+	for_countries = { LEP RYK }
+
+	division_types = { "irregular_infantry" "militia" "infantry"}
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "警备第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "首都警备师" }
+		2 = { "保安司令部"}
+		3 = { "警备第%d师" }
+	}
+}
+
+LEP_NMC_01 = {
+	name = div_fujianluzhandui_unit
+
+	for_countries = { LEP }
+
+	division_types = { "marine" }
+
+	# Number reservation system will tie to another group.
+
+	fallback_name = "陆战队混成 %d 旅"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Ningbo Luzhandui Huncheng Lü" }
+		2 = { "Zhoushan Luzhandui Huncheng Lü" }
+		3 = { "Jiangying Luzhandui Huncheng Lü" }
+		4 = { "Nantong Luzhandui Huncheng Lü" }
+		5 = { "Liugongdao Luzhandui Huncheng Lü" }
+		6 = { "Weihaiwei Luzhandui Huncheng Lü" }				
+		7 = { "Humeng Luzhandui Huncheng Lü" }
+		8 = { "Dalian Luzhandui Huncheng Lü" }
+		9 = { "Sanya Luzhandui Huncheng Lü" }
+		10 = { "Qingdao Luzhandui Huncheng Lü" }
+		11 = { "Wusong Luzhandui Huncheng Lü" }
+		12 = { "Jiaozhouwan Luzhandui Huncheng Lü" }
+		13 = { "Takaogang Luzhandui Huncheng Lü" }
+		14 = { "Zhanjiang Luzhandui Huncheng Lü" }
+		15 = { "Guangzhou Luzhandui Huncheng Lü" }
+	}
+}
+
+LEP_NMC_02 = {
+	name = div_marine_new_unit
+
+	for_countries = { LEP }
+
+	division_types = { "marine"}
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_NMC_01 }
+
+	fallback_name = "陆战队第 %d 师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "陆战队第 %d 师" }
+	}
+}
+
+LEP_ARM_02 = {
+	name = div_armoured_unit_2
+
+	for_countries = { LEP }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor"}
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Zhuangjia di %d Shi"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "第5军-第200师" }
+		2 = { "第5军-荣誉第1师" }
+		3 = { "第5军-新编第22师" }
+		4 = { "Zhuangjia di %d Shi-'Wuchang'" }
+		5 = { "Zhuangjia di %d Shi-'Zhonghua'" }
+	}
+}
+
+LEP_PAR_02 = {
+	name = div_paratrooper_unit_LEPEXP
+
+	for_countries = { LEP KOR }
+
+	division_types = { "paratrooper" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Kongshu Di %d Shi"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "一空输" }
+		2 = { "Kongshu Di %d Shi" }
+	}
+}
+
+LEP_JFJ_01 = {
+	name = div_LEP_JFJ
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "Jiangfang Jun Di %d Shi"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "Jiangfang Jun Di %d Shi" }
+		2 = { "Jiangfang Jun Di %d Shi" }
+		3 = { "Jiangfang Jun Di %d Shi" }
+		4 = { "Jiangfang Jun Di %d Shi" }
+		5 = { "Jiangfang Jun Di %d Shi" }
+	}
+}
+
+LEP_NG_01 = {
+	name = div_LEP_NG
+	for_countries = { LEP }
+
+	division_types = { "irregular_infantry" "militia" "infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "省防军第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "省防军第%d师" }
+	}
+}
+
+LEP_MEC_02 = {
+	name = div_LEP_MEC_new
+
+	for_countries = { LEP }
+
+	division_types = { "mechanized" }
+
+	# Number reservation system will tie to another group.
+	link_numbering_with = { LEP_INF_01 }
+
+	fallback_name = "机械化步兵第%d师"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "第78军机械化步兵第36师" }
+		2 = { "第71军机械化步兵第87师" }
+		3 = { "第72军机械化步兵第88师" }
+		4 = { "机械化步兵第%d师" }
+		5 = { "机械化步兵第%d师" }
+	}
+}

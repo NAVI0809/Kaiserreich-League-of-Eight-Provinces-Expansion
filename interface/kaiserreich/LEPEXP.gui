@@ -1,0 +1,593 @@
+@GROUP_X = 180
+@GROUP_Y = 5
+@GROUP_WIDTH = 83
+@GROUP_HEIGHT = 74
+
+@POINTS_X = 59
+@POINTS_Y = 69
+@POINTS_WIDTH = 32
+@POINTS_HEIGHT = 32
+@POINTS_TEXT_X = 10
+@POINTS_TEXT_Y = 6
+@POINTS_TEXT_WIDTH = 10
+@POINTS_TEXT_HEIGHT = 10
+
+guiTypes = {
+	containerWindowType = {
+		name = "LEPEXP_gov_decision_cat_gui"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 110 }
+
+		containerWindowType = {
+			name = "ZZH"
+			position = { x = 0 y = 5 }
+			size = { width = @GROUP_WIDTH height = @GROUP_HEIGHT } #matches icon size
+
+			iconType = {
+				name = "ZZH_icon"
+				position = { x = 30 y = 0 }
+				spriteType = "GFX_goal_constitutional_guarantees"
+
+				pdx_tooltip = LEP_ZZH_modifier_tooltip
+				pdx_tooltip_delayed = LEP_ZZH_modifier_tooltip_desc
+			}
+
+			instantTextBoxType = {
+			    name = "value"
+			    position = { x = 30 y = 80 }
+			    font = "hoi_24header"
+			    text = [?LEP.party_popularity@social_liberal|%g2]
+			    maxWidth = 80
+			    maxHeight = 80
+			    format = center
+		    }
+			
+
+			containerWindowType = {
+				name = "JNSB"
+				position = { x = @GROUP_X y = 0 }
+				size = { width = @GROUP_WIDTH height = @GROUP_HEIGHT } #matches icon size
+
+				iconType = {
+					name = "JNSB_icon"
+					position = { x = 30 y = 0 }
+					spriteType = "GFX_goal_ANQ_Dalu_Yinhang"
+
+					pdx_tooltip = LEP_JNSB_modifier_tooltip
+					pdx_tooltip_delayed = LEP_JNSB_modifier_tooltip_desc
+				}
+
+				instantTextBoxType = {
+			        name = "value"
+			        position = { x = 30 y = 80 }
+			        font = "hoi_24header"
+			        text = [?LEP.party_popularity@social_conservative|%g2]
+			        maxWidth = 80
+			        maxHeight = 80
+			        format = center
+		        }
+				
+
+				containerWindowType = {
+					name = "ZXX"
+					position = { x = @GROUP_X y = 0 }
+					size = { width = @GROUP_WIDTH height = @GROUP_HEIGHT } #matches icon size
+
+					iconType = {
+						name = "ZXX_icon"
+						position = { x = 30 y = 0 }
+						spriteType = "GFX_goal_ANQ_convince_intellectuals"
+
+						pdx_tooltip = LEP_ZXX_modifier_tooltip
+						pdx_tooltip_delayed = LEP_ZXX_modifier_tooltip_desc
+					}
+
+					instantTextBoxType = {
+			            name = "value"
+			            position = { x = 30 y = 80 }
+			            font = "hoi_24header"
+			            text = [?LEP.party_popularity@market_liberal|%g2]
+			            maxWidth = 80
+			            maxHeight = 80
+			            format = center
+		            }
+				}
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "ui_military_mobilization"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 240 }
+		clipping = no
+
+		# ── 军事动员条（复用原版 BOP 素材）──
+		# 每个元素都显式给 size，避免被容器拉伸
+
+		
+
+		iconType = {
+			name = "LEP_mob_bar_blue"
+			spriteType = "GFX_LEP_mob_bar_blue"
+			position = { x = 65 y = 34 }
+			size = { width = 360 height = 16 }
+		}
+
+		iconType = {
+			name = "LEP_mob_bar_orange"
+			spriteType = "GFX_LEP_mob_bar_orange"
+			position = { x = 65 y = 34 }
+			size = { width = 360 height = 16 }
+		}
+
+		iconType = { name = "LEP_mob_splitter_1" spriteType = "GFX_bop_splitter" position = { x = 133 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_2" spriteType = "GFX_bop_splitter" position = { x = 205 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_3" spriteType = "GFX_bop_splitter" position = { x = 277 y = 28 } size = { width = 8 height = 28 } }
+		iconType = { name = "LEP_mob_splitter_4" spriteType = "GFX_bop_splitter" position = { x = 349 y = 28 } size = { width = 8 height = 28 } }
+
+		iconType = { name = "LEP_mob_n1_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 89 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_chengping_tt" }
+		iconType = { name = "LEP_mob_n2_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 161 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_choumou_tt" }
+		iconType = { name = "LEP_mob_n3_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 233 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_zhengjun_tt" }
+		iconType = { name = "LEP_mob_n4_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 305 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_baiye_tt" }
+		iconType = { name = "LEP_mob_n5_off" spriteType = "GFX_LEP_mob_node_off" position = { x = 377 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_gangtie_tt" }
+
+		iconType = { name = "LEP_mob_n1_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 89 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_chengping_tt" }
+		iconType = { name = "LEP_mob_n2_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 161 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_choumou_tt" }
+		iconType = { name = "LEP_mob_n3_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 233 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_zhengjun_tt" }
+		iconType = { name = "LEP_mob_n4_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 305 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_baiye_tt" }
+		iconType = { name = "LEP_mob_n5_on" spriteType = "GFX_LEP_mob_node_on" position = { x = 377 y = 6 } size = { width = 24 height = 28 } tooltip = "LEP_mob_node_gangtie_tt" }
+
+iconType = {
+			name = "LEP_mob_bar_frame"
+			spriteType = "GFX_bop_bar_frame"
+			position = { x = 61 y = 30 }
+			size = { width = 368 height = 24 }
+		}
+
+		# 指针：GUI 基准 x=65（条起点），properties 的 x 是相对偏移
+		# 指针：x 由 properties 给绝对坐标，此处基准必须为 0
+		iconType = {
+			name = "LEP_mob_needle"
+			spriteType = "GFX_bop_needle"
+			position = { x = 0 y = 26 }
+			size = { width = 20 height = 32 }
+		}
+
+		instantTextboxType = {
+			name = "milmob_text"
+			position = { x = 1 y = 95 }
+			font = "hoi_24header"
+			text = "LEP_military_mobilization_text"
+			format = centre
+			maxWidth = 490
+			maxHeight = 340
+			fixedsize = yes
+		}
+	}
+
+	containerWindowType = {
+		name = "ui_parliament"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 950 }
+
+		# 装饰性议会徽章 —— 已让位给上方的席位条，移到条下方并与「已通过法案」同行
+		iconType = {
+			name = "parliament_button"
+			spriteType = "GFX_goal_generic_parliament"
+			position = { x = 20 y = 80 }
+			scale = 0.5
+		}
+
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观；放在徽章与标题下方、法案列表上方）──
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观）──
+		# 放在徽章右侧：徽章实际占 x=6~60，所以整体从 x=70 起，避免压字。
+		# frame 由 scripted_gui 的 properties 段给（GUI 里直接写 frame=变量 取不到值）。
+		# ── 执政联盟席位对比条（仿原版 balance of power 外观）──
+		# 窗口宽 490、条 360 → 容器 x = (490-360)/2 = 65，整块居中。
+		# 容器宽收成 360，内部元素一律贴齐条的左右边缘。
+		containerWindowType = {
+			name = "LEP_seat_bar_container"
+			position = { x = 65 y = 6 }
+			size = { width = 360 height = 62 }
+			clipping = yes
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_title"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				text = "LEP_seat_bar_title"
+				maxWidth = 180
+				maxHeight = 18
+				format = left
+			}
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_numbers"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				text = "[LEP_GetSeatBarNumbers]"
+				maxWidth = 360
+				maxHeight = 18
+				format = right
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_bg"
+				spriteType = "GFX_LEP_seat_bar_bg"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_fill_minority"
+				spriteType = "GFX_LEP_seat_bar_minority"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_fill_majority"
+				spriteType = "GFX_LEP_seat_bar_majority"
+				position = { x = 0 y = 26 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_needle"
+				spriteType = "GFX_LEP_seat_bar_needle"
+				position = { x = 170 y = 18 }
+			}
+
+			iconType = {
+				name = "LEP_seat_bar_frame_icon"
+				spriteType = "GFX_LEP_seat_bar_frame"
+				position = { x = -4 y = 22 }
+			}
+
+			instantTextBoxType = {
+				name = "LEP_seat_bar_scale"
+				position = { x = 0 y = 44 }
+				font = "hoi_16mbs"
+				text = "LEP_seat_bar_scale"
+				maxWidth = 360
+				maxHeight = 16
+				format = center
+			}
+		}
+
+		instantTextBoxType = {
+			name = "LEP_passed_laws_title"
+			# 与徽章同行，位置比席位条再靠左下一些
+			position = { x = 72 y = 84 }
+			font = "hoi_24header"
+			text = "LEP_passed_laws_title"
+			maxWidth = 300
+			maxHeight = 28
+			format = left
+		}
+
+		# 承接 gridbox 的容器：滚动条挂这里，只滚列表，不会带着按钮一起滚
+		containerWindowType = {
+			name = "LEP_passed_laws_container"
+			position = { x = 6 y = 118 }
+			size = { width = 490 height = 290 }
+			margin = { top = 6 bottom = 6 }
+			Orientation = upper_left
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+
+			gridboxType = {
+				name = "LEP_passed_laws_grid"          # 必须与 scripted_gui 里 dynamic_lists 的键名逐字一致
+				position = { x = 8 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 470 height = 48 }  # 行距；高不能小于条目高，否则行与行重叠
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		# ── 详情区（属于 ui_parliament：只有它的元素才会渲染到决议面板里）──
+		containerWindowType = {
+			name = "LEP_law_detail_container"
+			position = { x = 6 y = 406 }
+			size = { width = 490 height = 520 }
+			Orientation = upper_left
+			clipping = yes
+
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+
+			instantTextBoxType = {
+				name = "LEP_law_detail_name"
+				position = { x = 14 y = 10 }
+				font = "hoi_24header"
+				text = "[LEP_GetLawDetailName]"
+				maxWidth = 380
+				maxHeight = 30
+				format = left
+			}
+
+			buttonType = {
+				name = "LEP_law_detail_close"
+				position = { x = -40 y = 8 }
+				spriteType = "GFX_NV_btn_close"
+				clicksound = click_close
+				pdx_tooltip = "CLOSE"
+				orientation = UPPER_RIGHT
+			}
+
+			instantTextBoxType = {
+				name = "LEP_law_detail_body"
+				position = { x = 14 y = 42 }
+				font = "hoi_16mbs"
+				text = "[LEP_GetLawDetailBody]"
+				maxWidth = 448
+				maxHeight = 470
+				format = left
+			}
+		}
+
+	}
+
+	containerWindowType = {
+		name = "LEP_passed_law_entry"
+		size = { width = 470 height = 46 }
+		clipping = yes
+
+		iconType = {
+			name = "LEP_law_bg"
+			spriteType = "GFX_diplo_countrylist_entry"
+			position = { x = 0 y = 0 }
+		}
+
+		iconType = {
+			name = "LEP_law_icon"
+			spriteType = "GFX_decision_ger_mefo_bills"
+			position = { x = 8 y = 7 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "LEP_law_name"
+			position = { x = 52 y = 14 }
+			font = "hoi_16mbs"
+			text = "[LEP_GetPassedLawName]"
+			maxWidth = 250
+			maxHeight = 22
+			fixedsize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "LEP_law_date"
+			position = { x = 310 y = 14 }
+			font = "hoi_16mbs"
+			text = "[LEP_GetPassedLawDate]"
+			maxWidth = 150
+			maxHeight = 20
+			format = left
+		}
+
+		# ── 整行点击热区：每个法案一个（编号写死在 scripted_gui 的 effect 里，不读 value 变量，避免失效变量导致崩溃）──
+		# 贴图几乎全透明，视觉上就是行本身；放在最上层，所以点行内任何地方都能触发。
+		# 用 <元素名>_visible 只留下与本行法案匹配的那个。
+		buttonType = {
+			name = "LEP_law_click_1"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_2"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_3"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_4"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_5"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_6"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_7"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_8"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_9"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_10"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_11"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_12"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_13"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_14"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_15"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_16"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_17"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_18"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_19"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+
+		buttonType = {
+			name = "LEP_law_click_20"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_21"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_22"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_23"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_24"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_25"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_26"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_27"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_28"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "LEP_law_click_29"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_LEPEXP_law_click_area"
+			clicksound = click_action
+		}	}
+
+	containerWindowType = {
+		name = "ui_industry"
+		position = { x = 100 y = 100 }
+		size = { width = 100% height = 110 }
+
+		buttonType = {
+			name = "industrial_construction_button"
+			spriteType = "GFX_idea_man_five_year_plan_industry"
+			clicksound = click_ok
+			pdx_tooltip = "LEP_industrial_construction_button_tt"
+			position = { x = 100 y = 20 }
+		}
+
+		buttonType = {
+			name = "resource_allocation_button"
+			spriteType = "GFX_idea_generic_loans"
+			clicksound = click_ok
+			pdx_tooltip = "LEP_resource_allocation_button_tt"
+			position = { x = 200 y = 20 }
+		}
+	}
+}

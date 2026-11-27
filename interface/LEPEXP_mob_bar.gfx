@@ -1,0 +1,39 @@
+### LEP 军事动员条 · 复用原版 BOP 素材
+### 底槽/外框/分隔线/指针 直接引用本体已注册的 BOP sprite，不再另存
+### 只有节点圆球需要从 bop_indicator.dds 裁切，存为 DDS
+
+spriteTypes = {
+
+	### 阶段圆球 · 未达成（原 bop_indicator.dds 左半）
+	spriteType = {
+		name = "GFX_LEP_mob_node_off"
+		texturefile = "gfx/interface/bop_lamps/LEP_mob_node_off.dds"
+	}
+
+	### 阶段圆球 · 已达成（原 bop_indicator.dds 右半）
+	spriteType = {
+		name = "GFX_LEP_mob_node_on"
+		texturefile = "gfx/interface/bop_lamps/LEP_mob_node_on.dds"
+	}
+
+	### 进度条本体 · 青色（动员度 < 50%）
+	progressbartype = {
+		name = "GFX_LEP_mob_bar_blue"
+		textureFile1 = "gfx/interface/bop/bop_bar_blue_light.dds"
+		textureFile2 = "gfx/interface/bop/bop_bar_bg.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+	### 进度条本体 · 橙色（动员度 >= 50%）
+	progressbartype = {
+		name = "GFX_LEP_mob_bar_orange"
+		textureFile1 = "gfx/interface/bop/bop_bar_orange_light.dds"
+		textureFile2 = "gfx/interface/bop/bop_bar_bg.dds"
+		size = { x = 360 y = 16 }
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+	}
+
+}

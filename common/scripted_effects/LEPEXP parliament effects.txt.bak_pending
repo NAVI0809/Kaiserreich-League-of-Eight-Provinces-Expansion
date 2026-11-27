@@ -1,0 +1,693 @@
+### LEP 国会席位图 · 数据层（274 席）
+### 调用 LEP_hold_election_seats：请求重排席位（延迟 1 天执行，见文件末尾说明）
+### 实际计算在 LEP_do_count_seats：按各党支持率把席位分下去，产出帧数组 LEP_seat_party
+### 帧号 = 政治光谱序（10 个意识形态）：
+###   0 totalist (#770F00)
+###   1 syndicalist (#E30613)
+###   2 radical_socialist (#EA5153)
+###   3 social_democrat (#C71748)
+###   4 social_liberal (#EF7D00)
+###   5 market_liberal (#FFED00)
+###   6 social_conservative (#005D95)
+###   7 authoritarian_democrat (#878787)
+###   8 paternal_autocrat (#1D1D1B)
+###   9 中国青年党（原 national_populist 槽位；点图改灰蓝，与威权民主的灰区分）
+### 门槛：支持率不足 0.5% 的党不计席位 —— 界面上显示 0% 的党就不会有席位
+### 归一化：有效党派按比例分摊，保证总数恰好 274
+### 席位坐标写死在 interface/kaiserreich/LEPEXP_parliament.gui
+
+LEP_seats_init = {
+	# 按当前政党支持率折算一次席位基数，写入 LEP_seats_0..9（合计恒为 274）
+	# 只在 LEP_seats_init 旗标未设时调用；之后席位只由选举结算与事件改动
+	set_temp_variable = { i0 = { value = party_popularity@totalist } }
+	set_temp_variable = { i1 = { value = party_popularity@syndicalist } }
+	set_temp_variable = { i2 = { value = party_popularity@radical_socialist } }
+	set_temp_variable = { i3 = { value = party_popularity@social_democrat } }
+	set_temp_variable = { i4 = { value = party_popularity@social_liberal } }
+	set_temp_variable = { i5 = { value = party_popularity@market_liberal } }
+	set_temp_variable = { i6 = { value = party_popularity@social_conservative } }
+	set_temp_variable = { i7 = { value = party_popularity@authoritarian_democrat } }
+	set_temp_variable = { i8 = { value = party_popularity@paternal_autocrat } }
+	set_temp_variable = { i9 = { value = party_popularity@national_populist } }
+
+	# 参选资格：总体主义永不计票；未解冻时工团/家长制/国家民粹不计；
+	# 农工民主党需与闽赣国民党和谈成功（LEP_lkmt_legalized）才计票
+	set_temp_variable = { i0 = 0 }
+	if = {
+		limit = { NOT = { has_country_flag = LEP_thaw_broad } }
+		set_temp_variable = { i1 = 0 }
+		set_temp_variable = { i8 = 0 }
+		set_temp_variable = { i9 = 0 }
+		if = {
+			limit = { NOT = { has_country_flag = LEP_lkmt_legalized } }
+			set_temp_variable = { i2 = 0 }
+		}
+	}
+
+	# 归一化并换算成 274 席
+	set_temp_variable = { itot = i0 }
+	add_to_temp_variable = { itot = i1 }
+	add_to_temp_variable = { itot = i2 }
+	add_to_temp_variable = { itot = i3 }
+	add_to_temp_variable = { itot = i4 }
+	add_to_temp_variable = { itot = i5 }
+	add_to_temp_variable = { itot = i6 }
+	add_to_temp_variable = { itot = i7 }
+	add_to_temp_variable = { itot = i8 }
+	add_to_temp_variable = { itot = i9 }
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i0 = itot }
+	}
+	multiply_temp_variable = { i0 = 274 }
+	round_temp_variable = i0
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i1 = itot }
+	}
+	multiply_temp_variable = { i1 = 274 }
+	round_temp_variable = i1
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i2 = itot }
+	}
+	multiply_temp_variable = { i2 = 274 }
+	round_temp_variable = i2
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i3 = itot }
+	}
+	multiply_temp_variable = { i3 = 274 }
+	round_temp_variable = i3
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i4 = itot }
+	}
+	multiply_temp_variable = { i4 = 274 }
+	round_temp_variable = i4
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i5 = itot }
+	}
+	multiply_temp_variable = { i5 = 274 }
+	round_temp_variable = i5
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i6 = itot }
+	}
+	multiply_temp_variable = { i6 = 274 }
+	round_temp_variable = i6
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i7 = itot }
+	}
+	multiply_temp_variable = { i7 = 274 }
+	round_temp_variable = i7
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i8 = itot }
+	}
+	multiply_temp_variable = { i8 = 274 }
+	round_temp_variable = i8
+	if = {
+		limit = { check_variable = { itot > 0 } }
+		divide_temp_variable = { i9 = itot }
+	}
+	multiply_temp_variable = { i9 = 274 }
+	round_temp_variable = i9
+
+	# 四舍五入的差额补给社会自由党，保证总和恰好 274
+	set_temp_variable = { isum = i0 }
+	add_to_temp_variable = { isum = i1 }
+	add_to_temp_variable = { isum = i2 }
+	add_to_temp_variable = { isum = i3 }
+	add_to_temp_variable = { isum = i4 }
+	add_to_temp_variable = { isum = i5 }
+	add_to_temp_variable = { isum = i6 }
+	add_to_temp_variable = { isum = i7 }
+	add_to_temp_variable = { isum = i8 }
+	add_to_temp_variable = { isum = i9 }
+	set_temp_variable = { idiff = 274 }
+	subtract_from_temp_variable = { idiff = isum }
+	add_to_temp_variable = { i4 = idiff }
+	if = {
+		limit = { check_variable = { i4 < 0 } }
+		set_temp_variable = { i4 = 0 }
+	}
+
+	# 写入席位变量
+	set_variable = { LEP_seats_0 = i0 }
+	set_variable = { LEP_seats_1 = i1 }
+	set_variable = { LEP_seats_2 = i2 }
+	set_variable = { LEP_seats_3 = i3 }
+	set_variable = { LEP_seats_4 = i4 }
+	set_variable = { LEP_seats_5 = i5 }
+	set_variable = { LEP_seats_6 = i6 }
+	set_variable = { LEP_seats_7 = i7 }
+	set_variable = { LEP_seats_8 = i8 }
+	set_variable = { LEP_seats_9 = i9 }
+
+	# 记录初始 popularity 排名（1 = 支持率最高），作为下次大选的对比基准
+	set_temp_variable = { r0 = 1 }
+	if = { limit = { check_variable = { i1 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i2 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i3 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i4 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i5 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i6 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i7 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i8 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	if = { limit = { check_variable = { i9 > i0 } } add_to_temp_variable = { r0 = 1 } }
+	set_temp_variable = { r1 = 1 }
+	if = { limit = { check_variable = { i0 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i2 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i3 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i4 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i5 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i6 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i7 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i8 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	if = { limit = { check_variable = { i9 > i1 } } add_to_temp_variable = { r1 = 1 } }
+	set_temp_variable = { r2 = 1 }
+	if = { limit = { check_variable = { i0 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i1 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i3 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i4 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i5 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i6 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i7 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i8 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	if = { limit = { check_variable = { i9 > i2 } } add_to_temp_variable = { r2 = 1 } }
+	set_temp_variable = { r3 = 1 }
+	if = { limit = { check_variable = { i0 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i1 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i2 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i4 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i5 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i6 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i7 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i8 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	if = { limit = { check_variable = { i9 > i3 } } add_to_temp_variable = { r3 = 1 } }
+	set_temp_variable = { r4 = 1 }
+	if = { limit = { check_variable = { i0 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i1 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i2 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i3 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i5 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i6 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i7 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i8 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	if = { limit = { check_variable = { i9 > i4 } } add_to_temp_variable = { r4 = 1 } }
+	set_temp_variable = { r5 = 1 }
+	if = { limit = { check_variable = { i0 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i1 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i2 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i3 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i4 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i6 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i7 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i8 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	if = { limit = { check_variable = { i9 > i5 } } add_to_temp_variable = { r5 = 1 } }
+	set_temp_variable = { r6 = 1 }
+	if = { limit = { check_variable = { i0 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i1 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i2 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i3 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i4 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i5 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i7 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i8 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	if = { limit = { check_variable = { i9 > i6 } } add_to_temp_variable = { r6 = 1 } }
+	set_temp_variable = { r7 = 1 }
+	if = { limit = { check_variable = { i0 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i1 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i2 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i3 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i4 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i5 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i6 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i8 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	if = { limit = { check_variable = { i9 > i7 } } add_to_temp_variable = { r7 = 1 } }
+	set_temp_variable = { r8 = 1 }
+	if = { limit = { check_variable = { i0 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i1 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i2 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i3 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i4 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i5 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i6 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i7 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	if = { limit = { check_variable = { i9 > i8 } } add_to_temp_variable = { r8 = 1 } }
+	set_temp_variable = { r9 = 1 }
+	if = { limit = { check_variable = { i0 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i1 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i2 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i3 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i4 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i5 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i6 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i7 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	if = { limit = { check_variable = { i8 > i9 } } add_to_temp_variable = { r9 = 1 } }
+	set_variable = { LEP_rank_0 = r0 }
+	set_variable = { LEP_rank_1 = r1 }
+	set_variable = { LEP_rank_2 = r2 }
+	set_variable = { LEP_rank_3 = r3 }
+	set_variable = { LEP_rank_4 = r4 }
+	set_variable = { LEP_rank_5 = r5 }
+	set_variable = { LEP_rank_6 = r6 }
+	set_variable = { LEP_rank_7 = r7 }
+	set_variable = { LEP_rank_8 = r8 }
+	set_variable = { LEP_rank_9 = r9 }
+
+	set_variable = { LEP_seats_init = 1 }
+}
+
+LEP_do_count_seats = {
+
+	# ➓ 前置：席位变量未初始化时先折算一次（首局 / 旧存档）
+	if = {
+		limit = { NOT = { has_variable = LEP_seats_init } }
+		LEP_seats_init = yes
+	}
+
+	# ① 取 10 个意识形态的支持率（KR 里一个意识形态对应一个政党）
+	#    注意 party_popularity@xxx 必须包在 { value = ... } 里，否则会被读成 0
+	set_temp_variable = { s0 = { value = party_popularity@totalist } }
+	set_temp_variable = { s1 = { value = party_popularity@syndicalist } }
+	set_temp_variable = { s2 = { value = party_popularity@radical_socialist } }
+	set_temp_variable = { s3 = { value = party_popularity@social_democrat } }
+	set_temp_variable = { s4 = { value = party_popularity@social_liberal } }
+	set_temp_variable = { s5 = { value = party_popularity@market_liberal } }
+	set_temp_variable = { s6 = { value = party_popularity@social_conservative } }
+	set_temp_variable = { s7 = { value = party_popularity@authoritarian_democrat } }
+	set_temp_variable = { s8 = { value = party_popularity@paternal_autocrat } }
+	set_temp_variable = { s9 = { value = party_popularity@national_populist } }
+
+	# ② 参选资格
+	#    常驻：社会民主(3) 社会自由(4) 市场自由(5) 社会保守(6) 威权民主(7)
+	#    总体主义(0) 永不参选 —— 国民党(十人团)是特务机构，不适合进入议会
+	#    默认禁、只有「政治解冻及其后果」选宽容才开：
+	#    工团主义(1) 激进社会主义(2) 家长制独裁(8) 国家民粹主义(9)
+	set_temp_variable = { s0 = 0 }
+	if = {
+		limit = { NOT = { has_country_flag = LEP_thaw_broad } }
+		set_temp_variable = { s1 = 0 }
+		set_temp_variable = { s8 = 0 }
+		set_temp_variable = { s9 = 0 }
+		# 激进社会主义（农工民主党）：与闽赣国民党和谈成功使其合法化
+		if = {
+			limit = { NOT = { has_country_flag = LEP_lkmt_legalized } }
+			set_temp_variable = { s2 = 0 }
+		}
+	}
+
+	# ③ 门槛：不足 0.5% 的党直接不计（界面显示 0% 就真的 0 席）
+	if = {
+		limit = { check_variable = { s0 < 0.005 } }
+		set_temp_variable = { s0 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s1 < 0.005 } }
+		set_temp_variable = { s1 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s2 < 0.005 } }
+		set_temp_variable = { s2 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s3 < 0.005 } }
+		set_temp_variable = { s3 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s4 < 0.005 } }
+		set_temp_variable = { s4 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s5 < 0.005 } }
+		set_temp_variable = { s5 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s6 < 0.005 } }
+		set_temp_variable = { s6 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s7 < 0.005 } }
+		set_temp_variable = { s7 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s8 < 0.005 } }
+		set_temp_variable = { s8 = 0 }
+	}
+	if = {
+		limit = { check_variable = { s9 < 0.005 } }
+		set_temp_variable = { s9 = 0 }
+	}
+
+	# ④ 汇总有效支持率
+	set_temp_variable = { total = 0 }
+	add_to_temp_variable = { total = s0 }
+	add_to_temp_variable = { total = s1 }
+	add_to_temp_variable = { total = s2 }
+	add_to_temp_variable = { total = s3 }
+	add_to_temp_variable = { total = s4 }
+	add_to_temp_variable = { total = s5 }
+	add_to_temp_variable = { total = s6 }
+	add_to_temp_variable = { total = s7 }
+	add_to_temp_variable = { total = s8 }
+	add_to_temp_variable = { total = s9 }
+
+	# ⑤ 归一化并按 274 席换算
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s0 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s1 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s2 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s3 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s4 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s5 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s6 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s7 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s8 = total }
+	}
+	if = {
+		limit = { check_variable = { total > 0 } }
+		divide_temp_variable = { s9 = total }
+	}
+
+	multiply_temp_variable = { s0 = 274 }
+	multiply_temp_variable = { s1 = 274 }
+	multiply_temp_variable = { s2 = 274 }
+	multiply_temp_variable = { s3 = 274 }
+	multiply_temp_variable = { s4 = 274 }
+	multiply_temp_variable = { s5 = 274 }
+	multiply_temp_variable = { s6 = 274 }
+	multiply_temp_variable = { s7 = 274 }
+	multiply_temp_variable = { s8 = 274 }
+	multiply_temp_variable = { s9 = 274 }
+
+	# ⑥ 累加边界（席位 0 号 = 政治光谱最左翼）
+	#    ★ 自 2026-11 起直接读席位变量 LEP_seats_*，不再按支持率实时折算：
+	#      任期内席位固定，只在大选结算（LEP_election_settle_seats）与事件中改动
+	set_temp_variable = { b0 = LEP_seats_0 }
+	set_temp_variable = { b1 = b0 }
+	add_to_temp_variable = { b1 = LEP_seats_1 }
+	set_temp_variable = { b2 = b1 }
+	add_to_temp_variable = { b2 = LEP_seats_2 }
+	set_temp_variable = { b3 = b2 }
+	add_to_temp_variable = { b3 = LEP_seats_3 }
+	set_temp_variable = { b4 = b3 }
+	add_to_temp_variable = { b4 = LEP_seats_4 }
+	set_temp_variable = { b5 = b4 }
+	add_to_temp_variable = { b5 = LEP_seats_5 }
+	set_temp_variable = { b6 = b5 }
+	add_to_temp_variable = { b6 = LEP_seats_6 }
+	set_temp_variable = { b7 = b6 }
+	add_to_temp_variable = { b7 = LEP_seats_7 }
+	set_temp_variable = { b8 = b7 }
+	add_to_temp_variable = { b8 = LEP_seats_8 }
+	set_temp_variable = { b9 = b8 }
+	add_to_temp_variable = { b9 = LEP_seats_9 }
+
+	# ⑥½ 校正：保证 LEP_seats_* 总和恒为 274
+	#     若某个事件把席位写歪了（多给/少给），差额一律补给社会自由党，
+	#     否则 while 循环填不满 274 个点，议席图会缺点
+	set_temp_variable = { ssum = LEP_seats_0 }
+	add_to_temp_variable = { ssum = LEP_seats_1 }
+	add_to_temp_variable = { ssum = LEP_seats_2 }
+	add_to_temp_variable = { ssum = LEP_seats_3 }
+	add_to_temp_variable = { ssum = LEP_seats_4 }
+	add_to_temp_variable = { ssum = LEP_seats_5 }
+	add_to_temp_variable = { ssum = LEP_seats_6 }
+	add_to_temp_variable = { ssum = LEP_seats_7 }
+	add_to_temp_variable = { ssum = LEP_seats_8 }
+	add_to_temp_variable = { ssum = LEP_seats_9 }
+	set_temp_variable = { sdiff = 274 }
+	subtract_from_temp_variable = { sdiff = ssum }
+	if = {
+		limit = { NOT = { check_variable = { sdiff = 0 } } }
+		add_to_variable = { LEP_seats_4 = sdiff }
+	}
+
+	# ⑦ 逐席填帧
+	clear_array = LEP_seat_party
+	set_temp_variable = { si = 0 }
+	# 同时统计每党实际拿到的席位数（整数），避免浮点四舍五入导致总和 ≠ 274
+	set_temp_variable = { c0 = 0 }
+	set_temp_variable = { c1 = 0 }
+	set_temp_variable = { c2 = 0 }
+	set_temp_variable = { c3 = 0 }
+	set_temp_variable = { c4 = 0 }
+	set_temp_variable = { c5 = 0 }
+	set_temp_variable = { c6 = 0 }
+	set_temp_variable = { c7 = 0 }
+	set_temp_variable = { c8 = 0 }
+	set_temp_variable = { c9 = 0 }
+	while_loop_effect = {
+		limit = { check_variable = { si < 274 } }
+		if = {
+			limit = { check_variable = { si < b0 } }
+			add_to_array = { LEP_seat_party = 0 }
+			add_to_temp_variable = { c0 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b1 } }
+			add_to_array = { LEP_seat_party = 1 }
+			add_to_temp_variable = { c1 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b2 } }
+			add_to_array = { LEP_seat_party = 2 }
+			add_to_temp_variable = { c2 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b3 } }
+			add_to_array = { LEP_seat_party = 3 }
+			add_to_temp_variable = { c3 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b4 } }
+			add_to_array = { LEP_seat_party = 4 }
+			add_to_temp_variable = { c4 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b5 } }
+			add_to_array = { LEP_seat_party = 5 }
+			add_to_temp_variable = { c5 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b6 } }
+			add_to_array = { LEP_seat_party = 6 }
+			add_to_temp_variable = { c6 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b7 } }
+			add_to_array = { LEP_seat_party = 7 }
+			add_to_temp_variable = { c7 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b8 } }
+			add_to_array = { LEP_seat_party = 8 }
+			add_to_temp_variable = { c8 = 1 }
+		}
+		else_if = {
+			limit = { check_variable = { si < b9 } }
+			add_to_array = { LEP_seat_party = 9 }
+			add_to_temp_variable = { c9 = 1 }
+		}
+		add_to_temp_variable = { si = 1 }
+	}
+
+	# ⑧ 各党实际席位数（整数，总和恒为 274）
+	set_variable = { LEP_seat_n0 = c0 }
+	set_variable = { LEP_seat_n1 = c1 }
+	set_variable = { LEP_seat_n2 = c2 }
+	set_variable = { LEP_seat_n3 = c3 }
+	set_variable = { LEP_seat_n4 = c4 }
+	set_variable = { LEP_seat_n5 = c5 }
+	set_variable = { LEP_seat_n6 = c6 }
+	set_variable = { LEP_seat_n7 = c7 }
+	set_variable = { LEP_seat_n8 = c8 }
+	set_variable = { LEP_seat_n9 = c9 }
+
+	# ⑨ 执政联盟总席位：执政党 + 联盟伙伴。同一党只计一次（用 OR 合并两种身份）
+	set_variable = { LEP_coalition_seats = 0 }
+	if = {
+		limit = {
+			OR = {
+				has_government = totalist
+				is_in_coalition_with_totalist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n0 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = syndicalist
+				is_in_coalition_with_syndicalist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n1 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = radical_socialist
+				is_in_coalition_with_radical_socialist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n2 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_democrat
+				is_in_coalition_with_social_democrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n3 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_liberal
+				is_in_coalition_with_social_liberal = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n4 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = market_liberal
+				is_in_coalition_with_market_liberal = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n5 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = social_conservative
+				is_in_coalition_with_social_conservative = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n6 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = authoritarian_democrat
+				is_in_coalition_with_authoritarian_democrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n7 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = paternal_autocrat
+				is_in_coalition_with_paternal_autocrat = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n8 }
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government = national_populist
+				is_in_coalition_with_national_populist = yes
+			}
+		}
+		add_to_variable = { LEP_coalition_seats = LEP_seat_n9 }
+	}
+
+	### ── 席位条：把执政联盟席次折算成 0~28 档（每档约 10 席）供 GUI 取帧 ──
+	set_variable = { LEP_seat_bar_frame = LEP_coalition_seats }
+	multiply_variable = { LEP_seat_bar_frame = 28 }
+	divide_variable = { LEP_seat_bar_frame = 274 }
+	round_variable = LEP_seat_bar_frame
+	if = { limit = { check_variable = { LEP_seat_bar_frame > 28 } } set_variable = { LEP_seat_bar_frame = 28 } }
+	if = { limit = { check_variable = { LEP_seat_bar_frame < 0 } } set_variable = { LEP_seat_bar_frame = 0 } }
+	set_variable_to_random = LEP_law_gui_dirty
+
+	### ── 少数派政府检查（席位每次重排后同步一次）────────────────
+	### 席位过半 → 清掉少数派状态与倒计时；未过半 → 进入/维持倒计时。
+	### 放在这里而不是选举事件里：拉拢党派后席位一变就会立刻重算，
+	### 玩家把席位凑过半的那一刻状态自动解除，不必再等下一次选举。
+	if = {
+		limit = {
+			has_country_flag = LEP_dem_gov
+			has_country_flag = LEP_seat_enabled
+		}
+		if = {
+			limit = { check_variable = { LEP_coalition_seats < 138 } }
+			if = {
+				limit = { NOT = { has_country_flag = LEP_minority_gov } }
+				set_country_flag = LEP_minority_gov
+				clr_country_flag = LEP_minority_gov_over   # 重新进入少数派：清掉上次的「已结束」标记
+				set_variable = { LEP_minority_days = 30 }
+				activate_mission = LEP_minority_government_timer
+			}
+		}
+		### ── 大选组阁后检查：未过半则提醒组建执政联盟 ──
+		### 标记由选举事件落下，结算当天消费掉；已过半则不弹。
+		if = {
+			limit = { has_country_flag = LEP_election_pending_check }
+			clr_country_flag = LEP_election_pending_check
+			if = {
+				limit = { check_variable = { LEP_coalition_seats < 138 } }
+				country_event = { id = lep_election.5 days = 0 }
+			}
+		}
+		### 过半不自动解除 —— 由玩家在国会点击「组建政府」正式组阁后才清。
+		### （过半后 on_daily 会暂停扣罚，见 on_actions_LEPEXP.txt）
+	}
+}
+
+### ─────────────────────────────────────────────────────────
+### 请求重排席位。
+### 为什么不直接算：调用点常常在同一个效果块里先做 add_popularity /
+### set_party_name / add_to_coalition，而同一块内 party_popularity@X 读到的
+### 仍是变化前的旧值，当场结算会漏掉刚落下的支持率变化。
+### 因此这里只发一个延迟 1 天的事件，等支持率落定后再实际计算。
+### 全 mod 的调用点都走这里，故各调用点无需关心顺序问题。
+### ─────────────────────────────────────────────────────────
+LEP_hold_election_seats = {
+	# 席位结算延迟一天（避免同帧读到旧的 party_popularity）。
+	# 触发过程藏进 hidden_effect，界面上不露「将触发某事件」；改由下面一行统一提示。
+	hidden_effect = {
+		if = {
+			limit = { has_country_flag = LEP_seat_enabled }
+			country_event = { id = LEP_seat_recount.1 days = 1 }
+		}
+	}
+	if = {
+		limit = { has_country_flag = LEP_seat_enabled }
+		custom_effect_tooltip = LEP_seat_recount_tt
+	}
+}

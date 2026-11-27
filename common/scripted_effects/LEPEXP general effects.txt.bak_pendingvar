@@ -1,0 +1,3238 @@
+
+enable_tech_combat_engineer = {
+	custom_override_tooltip = {
+		tooltip = tech_effect|tech_LEP_combat_engineer
+		set_technology = { tech_LEP_combat_engineer = 1 popup = no }
+	}
+}
+
+enable_tech_livens_gas_projector = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_enable_hidden_tech
+			TECH = country_culture|tech_livens_gas_projector
+			EFFECT = tech_effect|tech_livens_gas_projector
+		}
+		set_technology = { tech_livens_gas_projector = 1 popup = no }
+	}
+}
+
+LEPEXP_call_back_GMJ_officers_effect = {
+	SHX_deng_xiaoping = { set_nationality = ROOT }
+	every_unit_leader ={
+		limit = {
+    	    has_trait = CHN_gmj_officer_trait
+		}
+		remove_second_in_command_role = yes
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}	
+
+LEPEXP_call_back_SHX_officers_effect = {
+	SHX_fu_zuoyi = { CHN_recruit_character_effect = yes }
+	SHX_shang_zhen = {
+		CHN_recruit_character_effect = yes
+		remove_second_in_command_role = yes
+	}
+	SHX_xu_yongchang = { CHN_recruit_character_effect = yes }
+	SHX_zhao_chengshou = { CHN_recruit_character_effect = yes }
+	SHX_wang_jingguo = { CHN_recruit_character_effect = yes }
+	SHX_yang_aiyuan = { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_HNN_FED_officers_effect = {
+	HNN_recruit_federalist_generals_effect = yes
+	every_unit_leader ={
+		limit = {
+    	    OR = {
+				has_character_flag = HNN_fed_loyalist_flag
+			}
+		}
+		remove_second_in_command_role = yes
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}	
+
+LEPEXP_call_back_GXC_FED_officers_effect = {
+	GXC_weng_shiliang = { CHN_recruit_character_effect = yes }
+	GXC_ma_yuhang = { CHN_recruit_character_effect = yes }
+	GXC_luo_xianxiang = { CHN_recruit_character_effect = yes }
+	GXC_xiong_lue = { CHN_recruit_character_effect = yes }
+	GXC_yang_kunru = { CHN_recruit_character_effect = yes }
+	GXC_ge_zhaohuang = { CHN_recruit_character_effect = yes }
+	GXC_sun_baogang = { CHN_recruit_character_effect = yes }
+	GXC_li_minxin = { CHN_recruit_character_effect = yes }
+	GXC_li_zhangda = { CHN_recruit_character_effect = yes }
+	GXC_xie_wenbing = { CHN_recruit_character_effect = yes }
+	every_unit_leader ={
+		limit = {
+    	    OR = {
+				has_character_flag = GXC_LJS_character_flag
+				has_trait = CHN_GRA_officer
+				has_trait = CHN_CDL_officer
+			}
+			NOT = {
+				is_character = GXC_ye_ju
+			}
+		}
+		hidden_effect = {
+			remove_second_in_command_role = yes
+	    }
+	    set_nationality = FROM
+	    demote_to_general = yes
+    }
+}
+
+LEPEXP_call_back_LKMT_officers_effect = {
+	CHI_du_yuming = { CHN_recruit_character_effect = yes }
+	CHI_dai_anlan = { CHN_recruit_character_effect = yes }
+	CHI_wang_lingyun = { CHN_recruit_character_effect = yes }
+	CHI_wang_yaowu = { CHN_recruit_character_effect = yes }
+	HNN_peng_dehuai = { CHN_recruit_character_effect = yes }
+}
+
+LEPEXP_call_back_RKMT_officers_effect = {
+	YUN_xu_tingyao = { CHN_recruit_character_effect = yes }
+	YUN_li_genyuan = { CHN_recruit_character_effect = yes }
+	SZC_lu_chao = { CHN_recruit_character_effect = yes }	
+}
+
+LEPEXP_call_back_warlords_officers_effect = {
+	GXC_liu_zhenhuan = { CHN_recruit_character_effect = yes }
+    SHD_jin_yune = { CHN_recruit_character_effect = yes }
+	SHD_qu_tongfeng = { CHN_recruit_character_effect = yes }
+	SIK_niu_shi = { CHN_recruit_character_effect = yes }
+	SIK_zhang_peiyuan = { CHN_recruit_character_effect = yes }
+	SIK_yang_feixia = { CHN_recruit_character_effect = yes }
+	SIK_li_hairu = { CHN_recruit_character_effect = yes }
+	SZC_li_jiayu = { CHN_recruit_character_effect = yes }
+	SZC_lai_xinhui = { CHN_recruit_character_effect = yes }
+	SZC_chen_lanting = { CHN_recruit_character_effect = yes }
+	SZC_chen_li = { CHN_recruit_character_effect = yes }
+	SZC_peng_shifu = { CHN_recruit_character_effect = yes }
+	SZC_kuang_jixun = { CHN_recruit_character_effect = yes }
+	SZC_fan_shaozeng = { CHN_recruit_character_effect = yes }
+	SZC_he_guoguang = { CHN_recruit_character_effect = yes }
+	SZC_guo_rudong = { CHN_recruit_character_effect = yes }	
+	HNN_chen_quzhen = { CHN_recruit_character_effect = yes }
+	HNN_long_yunfei = { CHN_recruit_character_effect = yes }	
+	HNN_zhou_xicheng = { CHN_recruit_character_effect = yes }	
+	HNN_dai_jitao = { CHN_recruit_character_effect = yes }	
+}
+
+LEPEXP_call_back_SZC_officers_effect = {
+	SZC_xiong_kewu = { CHN_recruit_character_effect = yes }
+	SZC_dan_maoxin = { CHN_recruit_character_effect = yes }
+	SZC_yu_peidi = { CHN_recruit_character_effect = yes }
+	SZC_yu_jitang = { CHN_recruit_character_effect = yes }
+	SZC_zhao_weibin = { CHN_recruit_character_effect = yes }
+	SZC_xiao_yisu = { CHN_recruit_character_effect = yes }
+	SZC_bian_zhishan = { CHN_recruit_character_effect = yes }
+	SZC_deng_xihou = { CHN_recruit_character_effect = yes }
+	SZC_tian_songyao = { CHN_recruit_character_effect = yes }
+	SZC_huang_yin = { CHN_recruit_character_effect = yes }
+	SZC_chen_dingxun = { CHN_recruit_character_effect = yes }
+	SZC_sun_zhen = { CHN_recruit_character_effect = yes }
+	SZC_wang_mingzhang = { CHN_recruit_character_effect = yes }
+	SZC_liu_wenhui = { CHN_recruit_character_effect = yes }
+	SZC_xia_shouxun = { CHN_recruit_character_effect = yes }
+	SZC_xiang_chuanyi = { CHN_recruit_character_effect = yes }
+	SZC_wang_yunxiang = { CHN_recruit_character_effect = yes }
+	SZC_leng_yindong = { CHN_recruit_character_effect = yes }
+	SZC_liu_xiang = { CHN_recruit_character_effect = yes }
+	SZC_pan_wenhua = { CHN_recruit_character_effect = yes }
+	SZC_tang_shizun = { CHN_recruit_character_effect = yes }
+	SZC_guo_xunqi = { CHN_recruit_character_effect = yes }
+	SZC_wang_lingji = { CHN_recruit_character_effect = yes }
+	SZC_wang_zuanxu = { CHN_recruit_character_effect = yes }
+}
+
+
+LEP_add_naval_variants = {
+	if = {
+		limit = { has_dlc_mtg = yes }
+		### Submarines ###
+		create_equipment_variant = {
+			name = "Type VII" #equivalent to OTL class
+			type = ship_hull_submarine_2
+			name_group = CHYN_SS_HISTORICAL
+			show_position = no
+			parent_version = 0
+			modules = {
+				fixed_ship_torpedo_slot = ship_torpedo_sub_2
+				fixed_ship_engine_slot = sub_ship_engine_1
+				rear_1_custom_slot = empty
+			}
+		}
+		### Destroyers ###
+		create_equipment_variant = {
+			name = "Luoxiao Shan Class"
+			type = ship_hull_light_1
+			name_group = CHYN_THEME_MOUNTAINS
+		    modules = {
+	        	fixed_ship_battery_slot = ship_light_battery_1
+		        fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = light_ship_engine_1
+				fixed_ship_torpedo_slot = ship_torpedo_1
+				mid_1_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+			obsolete = yes
+		}
+
+		### Light Cruisers ###
+		create_equipment_variant = {
+			name = "Fei Hong Class"
+			type = ship_hull_cruiser_1
+			name_group = CHYN_CL_HISTORICAL
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				mid_1_custom_slot = ship_torpedo_1
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		}
+
+		### Heavy Cruisers ###
+		create_equipment_variant = {
+			name = "Pinghai Class"
+			type = ship_hull_cruiser_coastal_defense_ship
+			name_group = CHYN_CA_HISTORICAL
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_anti_air_slot = empty
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				mid_1_custom_slot = empty
+				mid_2_custom_slot = empty
+				rear_1_custom_slot = empty
+			}
+		obsolete = yes
+		}
+		### Battleship ###
+		create_equipment_variant = {
+			name = "Nassau Class" #WW1 battleship
+			type = ship_hull_heavy_1
+			name_group = CHYN_BB_HISTORICAL
+			show_position = no
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_1
+				fixed_ship_secondaries_slot = ship_secondaries_1
+				fixed_ship_armor_slot = ship_armor_bb_1
+				front_1_custom_slot = empty
+				mid_1_custom_slot = ship_airplane_launcher_1
+				mid_2_custom_slot = ship_secondaries_1
+				rear_1_custom_slot = ship_heavy_battery_1
+			}
+			obsolete = yes
+		}
+	}	
+}
+
+LEP_add_plane_variants = {
+	if = {
+		limit = { has_dlc_bba = yes }
+		create_equipment_variant = {
+			name = "He-51"										# Based on HE-51
+			type = small_plane_airframe_0
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x			# 4 × 7.7 mm MG
+				engine_type_slot = engine_1_1x
+				special_type_slot_1 = empty
+			}
+			design_team = mio:LEP_focke_wulf_organisation				# FF is reserved for naval planes only
+			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Bf 109C"
+			type = small_plane_airframe_1
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 =	light_mg_2x		# 4x MG
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			design_team = mio:LEP_focke_wulf_organisation
+			icon = GFX_GER_small_1_bf109e_medium
+		}
+		create_equipment_variant = {
+			name = "Do 23"
+			type = medium_plane_airframe_0
+			show_position = no
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay		# 1000kg bomb bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				fixed_auxiliary_weapon_slot_2 = empty
+				fixed_auxiliary_weapon_slot_3 = empty
+				engine_type_slot = engine_1_2x
+				special_type_slot_1 = lmg_defense_turret_2x		# 3 x 7.92 mm MG
+				special_type_slot_2 = empty
+				special_type_slot_3 = empty
+				special_type_slot_4 = empty
+			}
+			obsolete = yes
+			design_team = mio:LEP_jianqiao_organisation
+			icon = GFX_GER_medium_0_do23_medium
+		}
+	}	
+}
+
+LEP_pb4y_effect = {
+	if = {
+		limit = { NOT = { has_tech = basic_large_airframe } }
+		set_technology = { basic_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = improved_large_airframe } }
+		set_technology = { improved_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = basic_large_airframe } }
+		set_technology = { basic_large_airframe = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = aa_lmg } }
+		set_technology = { aa_lmg = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = engines_3 } }
+		set_technology = { engines_3 = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = air_torpedoe_2 } }
+		set_technology = { air_torpedoe_2 = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = survivability_studies } }
+		set_technology = { survivability_studies = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = early_bombs } }
+		set_technology = { early_bombs = 1 }
+	}
+	if = {
+		limit = { NOT = { has_tech = aircraft_construction } }
+		set_technology = { aircraft_construction = 1 }
+	}
+	if = {
+		limit = { has_dlc_bba = yes }
+		create_equipment_variant = {
+			name = "PB4Y-CN"
+			show_position = no
+			type = large_plane_maritime_patrol_plane_airframe_2
+			modules = {
+				fixed_main_weapon_slot = torpedo_mounting_2 #up to 4 torpedoes - gameplay adjusted
+				fixed_auxiliary_weapon_slot_1 = torpedo_mounting_2 #up to 4 torpedoes - gameplay adjusted
+				fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+				engine_type_slot = engine_3_4x #
+				special_type_slot_1 = armor_plate_large
+				special_type_slot_2 = self_sealing_fuel_tanks_large
+				special_type_slot_3 = lmg_defense_turret_2x #2 turrets with 2 ShKAS machine guns in each
+				special_type_slot_4 = lmg_defense_turret_2x #2 turrets with Oerlikon cannons in each
+			}
+			design_team = mio:LEP_fujian_organisation
+			icon = GFX_USA_large_2_pb4y_1_medium
+		}
+	}	
+		
+}
+
+LEP_remove_sfj_effect = {
+	if = {
+		limit = { has_template = "ShengFang Jun" }
+		delete_unit_template_and_units = { division_template = "ShengFang Jun" disband = yes } #no cheating
+	}
+}
+
+LEP_decision_add_sfj_effect = {
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = tooltip_create_division_template
+			NAME = "ShengFang Jun"
+			LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 3 }
+			LINE_2 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 3 }
+			LINE_3 = { localization_key = line_battalion_tt NAME = militia ICON = GFX_unit_militia_icon_small COUNT = 3 }
+			SUPPORT_1 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+			SUPPORT_2 = { localization_key = support_battalion_tt NAME = light_tank_recon ICON = GFX_unit_light_armor_icon_small }
+			SUPPORT_3 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+			SUPPORT_4 = { localization_key = support_battalion_tt NAME = logistics_company ICON = GFX_unit_logistics_company_icon_small }
+		}
+		if = {
+			limit = { has_template = "ShengFang Jun" }
+			delete_unit_template_and_units = { division_template = "ShengFang Jun" disband = yes } #no cheating
+		}
+		division_template = {
+			name = "ShengFang Jun"
+			division_names_group = LEP_NG_01
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				irregular_infantry = { x = 1 y = 0 }
+				irregular_infantry = { x = 1 y = 1 }
+				irregular_infantry = { x = 1 y = 2 }
+				militia = { x = 2 y = 0 }
+				militia = { x = 2 y = 1 }
+				militia = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				light_tank_recon = { x = 0 y = 1 }
+				engineer = { x = 0 y = 2 }
+				logistics_company = { x = 0 y = 3 }
+			}
+		}
+	}
+	custom_effect_tooltip = tooltip_white_line
+	custom_effect_tooltip = sfj_deploy_tt
+	#custom_effect_tooltip = sfj_180_days_tt
+	hidden_effect = {
+		LEP_deploy_sfj_effect = yes
+	}	
+}
+
+LEP_deploy_sfj_effect = {
+	#华东五省
+	if = {
+		limit = { 747 = { is_owned_by_ROOT_or_subject = yes } }
+		747 = {
+			create_unit = {
+				division = "name = \"省防军-福州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	if = {
+		limit = {
+			613 = { is_owned_by_ROOT_or_subject = yes }
+			598 = { is_owned_by_ROOT_or_subject = yes }
+			1047 = { is_owned_by_ROOT_or_subject = yes }
+			606 = { is_owned_by_ROOT_or_subject = yes }
+			596 = { is_owned_by_ROOT_or_subject = yes }
+			1067 = { is_owned_by_ROOT_or_subject = yes }
+			746 = { is_owned_by_ROOT_or_subject = yes }			
+			1046 = { is_owned_by_ROOT_or_subject = yes }
+			1044 = { is_owned_by_ROOT_or_subject = yes }
+		}
+		613 = {
+			create_unit = {
+				division = "name = \"省防军-南京守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		598 = {
+			create_unit = {
+				division = "name = \"省防军-江苏师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1047 = {
+			create_unit = {
+				division = "name = \"省防军-徐州守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		606 = {
+			create_unit = {
+				division = "name = \"省防军-安徽师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		596 = {
+			create_unit = {
+				division = "name = \"省防军-浙江师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1067 = {
+			create_unit = {
+				division = "name = \"省防军-金华守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		746 = {
+			create_unit = {
+				division = "name = \"省防军-宁波守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		
+		1046 = {
+			create_unit = {
+				division = "name = \"省防军-福建师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1044 = {
+			create_unit = {
+				division = "name = \"省防军-江西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#华南
+	if = {
+		limit = {
+			592 = { is_owned_by_ROOT_or_subject = yes } #广东
+			594 = { is_owned_by_ROOT_or_subject = yes } #广西
+			591 = { is_owned_by_ROOT_or_subject = yes } #海南
+			325 = { is_owned_by_ROOT_or_subject = yes } #云南
+			1051 = { is_owned_by_ROOT_or_subject = yes } #贵州
+			605 = { is_owned_by_ROOT_or_subject = yes } #四川
+			650 = { is_owned_by_ROOT_or_subject = yes } #重庆
+			601 = { is_owned_by_ROOT_or_subject = yes } #川边
+			602 = { is_owned_by_ROOT_or_subject = yes } #湖南
+		}
+		592 = {
+			create_unit = {
+				division = "name = \"省防军-广东师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		594 = {
+			create_unit = {
+				division = "name = \"省防军-广西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		591 = {
+			create_unit = {
+				division = "name = \"省防军-海南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		325 = {
+			create_unit = {
+				division = "name = \"省防军-云南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		816 = {
+			create_unit = {
+				division = "name = \"省防军-大理守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1051 = {
+			create_unit = {
+				division = "name = \"省防军-贵州师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		605 = {
+			create_unit = {
+				division = "name = \"省防军-四川师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		605 = {
+			create_unit = {
+				division = "name = \"省防军-成都守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		650 = {
+			create_unit = {
+				division = "name = \"省防军-重庆守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		601 = {
+			create_unit = {
+				division = "name = \"省防军-川边守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		601 = {
+			create_unit = {
+				division = "name = \"省防军-西康守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		602 = {
+			create_unit = {
+				division = "name = \"省防军-湖南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#华北
+	if = {
+		limit = {
+			597 = { is_owned_by_ROOT_or_subject = yes } #山东
+			1059 = { is_owned_by_ROOT_or_subject = yes } #开封
+			607 = { is_owned_by_ROOT_or_subject = yes } #洛阳
+			1072 = { is_owned_by_ROOT_or_subject = yes } #山西
+			1048 = { is_owned_by_ROOT_or_subject = yes } #武汉
+			799 = { is_owned_by_ROOT_or_subject = yes } #西安
+			608 = { is_owned_by_ROOT_or_subject = yes } #北京
+		}
+		597 = {
+			create_unit = {
+				division = "name = \"省防军-山东师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1059 = {
+			create_unit = {
+				division = "name = \"省防军-河南师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		607 = {
+			create_unit = {
+				division = "name = \"省防军-洛阳守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1072 = {
+			create_unit = {
+				division = "name = \"省防军-山西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1048 = {
+			create_unit = {
+				division = "name = \"省防军-湖北师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		799 = {
+			create_unit = {
+				division = "name = \"省防军-陕西师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		608= {
+			create_unit = {
+				division = "name = \"省防军-北京警备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+		1062 = {
+			create_unit = {
+				division = "name = \"省防军-保定守备师\" division_template = \"ShengFang Jun\" start_equipment_factor = 1 start_experience_factor = 0.15"
+				owner = ROOT
+			}
+		}
+	}
+	#酌情西北与东北
+}
+
+#zigai
+
+LEP_rescue_industry = {
+	if = {
+		limit = { has_idea = LEP_Crippled_Industry }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industry
+			add_idea = LEP_Crippled_Industrym1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Crippled_Industry1 }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industry1
+			add_idea = LEP_Crippled_Industrym1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Crippled_Industrym1 }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industrym1
+			add_idea = LEP_Crippled_Industrym2a
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Crippled_Industrym2a }
+		swap_ideas = {
+			remove_idea = LEP_Crippled_Industrym2a
+			add_idea = LEP_Crippled_Industrym3
+		}
+	}
+	else = {
+		add_political_power = 50
+		add_stability = 0.1
+		add_war_support = 0.05
+	}
+}
+
+LEP_rebuild_order = {
+	if = {
+		limit = { has_idea = LEP_Rampant_Disorder }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder
+			add_idea = LEP_Rampant_Disorder1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder1 }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder1
+			add_idea = LEP_Rampant_Disorder2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder2 }
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder2
+			add_idea = LEP_Rampant_Disorder3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_Rampant_Disorder3 }
+		remove_ideas = LEP_Rampant_Disorder3
+	}
+	else = {
+		# 照 KR 原版 LEP_suppress_student_unions：镇压学生必生骚乱，兜底给最低档
+		swap_ideas = {
+			remove_idea = LEP_Rampant_Disorder
+			add_idea = LEP_Rampant_Disorder1
+		}
+	}
+}
+
+
+LEP_improve_popular_support = {
+	if = {
+		limit = { has_idea = LEP_popular_support_0 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_0
+			add_idea = LEP_popular_support_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_1 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_1
+			add_idea = LEP_popular_support_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_2 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_2
+			add_idea = LEP_popular_support_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_3 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_3
+			add_idea = LEP_popular_support_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_popular_support_4 }
+		swap_ideas = {
+			remove_idea = LEP_popular_support_4
+			add_idea = LEP_popular_support_5
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_DSP_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_governance_for_truth
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_ZXX_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_governance_by_zhengxue
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JNSB_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_industry_and_commerce_co_governance
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JGH_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_voice_of_the_people
+		}
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_idea = LEP_popular_support_5
+				has_country_flag = LEP_JXH_win
+			}
+		}
+		swap_ideas = {
+			remove_idea = LEP_popular_support_5
+			add_idea = LEP_popular_support_rational_order
+		}
+	}
+	else = {
+		add_political_power = 100
+		add_stability = 0.1
+		add_war_support = 0.15
+	}
+}
+
+LEP_improve_industry = {
+	if = {
+		limit = { has_idea = LEP_industrial_general_committee1 }
+		swap_ideas = {
+			remove_idea = LEP_industrial_general_committee1
+			add_idea = LEP_industrial_general_committee2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_industrial_general_committee2 }
+		swap_ideas = {
+			remove_idea = LEP_industrial_general_committee2
+			add_idea = LEP_industrial_general_committee3
+		}
+	}
+}
+
+LEP_raise_funds = {
+	if = {
+		limit = { has_idea = LEP_funding_shortage1 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage1
+			add_idea = LEP_funding_shortage2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage2 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage2
+			add_idea = LEP_funding_shortage3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage3 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage3
+			add_idea = LEP_funding_shortage4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage4 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage4
+			add_idea = LEP_funding_shortage5
+		}
+	}
+
+	else_if = {
+		limit = { has_idea = LEP_funding_shortage5 }
+		swap_ideas = {
+			remove_idea = LEP_funding_shortage5
+			add_idea = LEP_funding_shortage6
+		}
+	}
+}
+
+LEP_promote_democracy = {
+	if = {
+		limit = { has_idea = LEP_weak_democracy }
+		swap_ideas = {
+			remove_idea = LEP_weak_democracy
+			add_idea = LEP_unstable_democracy
+		}
+	}
+	if = {
+		limit = { has_idea = LEP_unstable_democracy }
+		swap_ideas = {
+			remove_idea = LEP_unstable_democracy
+			add_idea = LEP_strenghtening_democracy
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_strenghtening_democracy }
+		swap_ideas = {
+			remove_idea = LEP_strenghtening_democracy
+			add_idea = LEP_strong_democracy
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_strong_democracy }
+		swap_ideas = {
+			remove_idea = LEP_strong_democracy
+			add_idea = LEP_genuine_democracy
+		}
+	}
+	else = {
+		add_political_power = 100
+		add_stability = 0.1
+	}
+
+}
+
+LEP_recruit_RCA_endgame_advisors_effect = {
+	CHI = {
+		CHI_wang_jingwei = { CHN_recruit_character_effect = yes }
+		CHI_gu_mengyu = { CHN_recruit_character_effect = yes }
+	    CHI_guo_chuntao = { CHN_recruit_character_effect = yes }
+	    CHI_zhou_fohai = { CHN_recruit_character_effect = yes }
+	}
+}
+
+LEP_recruit_PAC_endgame_advisors_effect = {
+	CHI = {
+		CHI_song_qingling = { CHN_recruit_character_effect = yes }
+		CHI_chen_youren = { CHN_recruit_character_effect = yes }
+	    CHI_zhang_bojun = { CHN_recruit_character_effect = yes }
+	    CHI_song_ziwen = { CHN_recruit_character_effect = yes }
+	}
+}
+
+LEP_dem_unification_effect = {
+	activate_targeted_decision = { decision = china_move_capital target = ROOT }
+	country_event = { id = league_generic.500 days = 0 }
+	country_event = { id = league_generic.501 days = 2 }
+	country_event = { id = league_generic.1 days = 5 }
+	every_other_country = {
+		limit = {
+			is_subject_of = LEP
+			is_chinese_tag = yes
+		}
+		country_event = { id = china_events.2200 days = 0 }
+	}
+}
+
+LEP_strengthen_ZZH_small = {
+	custom_effect_tooltip = LEP_add_ZZH_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_ZZH_large = {
+	custom_effect_tooltip = LEP_add_ZZH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_ZXX_small = {
+	custom_effect_tooltip = LEP_add_ZXX_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_ZXX_large = {
+	custom_effect_tooltip = LEP_add_ZXX_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JNSB_small = {
+	custom_effect_tooltip = LEP_add_JNSB_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.03
+		}
+	}
+}
+
+LEP_strengthen_JNSB_large = {
+	custom_effect_tooltip = LEP_add_JNSB_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JGH_large = {
+	custom_effect_tooltip = LEP_add_JGH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_strengthen_JXH_large = {
+	custom_effect_tooltip = LEP_add_JXH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.08
+		}
+	}
+}
+
+LEP_weaken_ZZH_small = {
+	custom_effect_tooltip = LEP_sub_ZZH_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_ZZH_large = {
+	custom_effect_tooltip = LEP_sub_ZZH_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_liberal
+			popularity = -0.08
+		}
+	}
+}
+
+LEP_weaken_ZXX_small = {
+	custom_effect_tooltip = LEP_sub_ZXX_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_ZXX_large = {
+	custom_effect_tooltip = LEP_sub_ZXX_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = market_liberal
+			popularity = -0.08
+		}
+	}
+}
+
+LEP_weaken_JNSB_small = {
+	custom_effect_tooltip = LEP_sub_JNSB_small_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_weaken_JNSB_large = {
+	custom_effect_tooltip = LEP_sub_JNSB_large_tooltip
+	hidden_effect = {
+		add_popularity = {
+			ideology = social_conservative
+			popularity = -0.03
+		}
+	}
+}
+
+LEP_change_clothes_of_generals = {
+	LEP_chen_yi = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_chen_yi_dem_army_large }
+		}
+	}
+	LEP_tang_enbo = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_tang_enbo_dem_army_large }
+		}
+	}
+	LEP_zhou_fengqi = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_zhou_fengqi_dem_army_large }
+		}
+	}
+	LEP_ge_jingen = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_ge_jingen_dem_army_large }
+		}
+	}
+	LEP_qian_zongze = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_qian_zongze_dem_army_large }
+		}
+	}
+	LEP_shi_yousan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_shi_yousan_dem_army_large }
+		}
+	}
+	LEP_lin_wei = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_lin_wei_dem_army_large }
+		}
+	}
+	LEP_zhou_yan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_zhou_yan_dem_army_large }
+		}
+	}
+	LEP_guo_chan = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_guo_chan_dem_army_large }
+		}
+	}
+	LEP_xu_peigen = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_xu_peigen_dem_army_large }
+		}
+	}
+	LEP_li_rentao = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_li_rentao_dem_army_large }
+		}
+	}
+	LEP_liu_qingeng = {
+		set_portraits = {
+			army = { large = GFX_portrait_LEP_liu_qingeng_dem_army_large }
+		}
+	}
+	
+}
+
+LEP_tianyuan_effect = {
+	if = {
+		limit = { has_idea = LEP_tianyuan_idea }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea
+			add_idea = LEP_tianyuan_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_tianyuan_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea2
+			add_idea = LEP_tianyuan_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_tianyuan_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_tianyuan_idea3
+			add_idea = LEP_tianyuan_idea4
+		}
+	}
+}
+
+LEP_found_economic_cooperation_treaty = {
+	add_ideas = LEP_ECT_idea_LEP
+	custom_effect_tooltip = tooltip_white_line
+	custom_effect_tooltip = LEP_invite_to_ECT_tt
+	hidden_effect = {
+		save_global_event_target_as = KR_ECT_leader
+		create_economic_sphere = yes
+		var:economic_sphere = {
+			set_character_name = LEP_ECT_Name
+			var:icon = { set_character_name = "GFX_goal_LEP_jiangzhe_bank" }
+			var:desc = { set_character_name = LEP_ECT_desc }
+			set_variable = { red = 0.972 }
+			set_variable = { green = 0.776 }
+			set_variable = { blue = 0.0 }
+		}
+	}
+}
+
+LEP_add_to_ECT = {
+	custom_effect_tooltip = LEP_add_to_ECT_tt
+	add_ideas = LEP_ECT_idea_Member
+	hidden_effect = {
+		set_temp_variable = { sphere_target = THIS }
+		LEP = {
+			add_to_economic_sphere = yes
+			remove_opinion_modifier = { target = PREV modifier = KR_disapproves_of_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_hates_govt }
+			remove_opinion_modifier = { target = PREV modifier = KR_outraged }
+		}
+	}
+}
+
+LEP_mob_stage_update = {
+	clamp_variable = {
+		var = military_mobilization_var
+		min = 0
+		max = 100
+	}
+
+	# 阶段追踪：算出当前档位，与上一档比较后派发升降档事件
+	# 1 承平之制 / 2 绸缪牖户 / 3 整军经武 / 4 百业从戎 / 5 钢铁长城
+	if = {
+		limit = { check_variable = { military_mobilization_var < 20 } }
+		set_variable = { LEP_mob_stage_new = 1 }
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 40 } }
+		set_variable = { LEP_mob_stage_new = 2 }
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 60 } }
+		set_variable = { LEP_mob_stage_new = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { military_mobilization_var < 80 } }
+		set_variable = { LEP_mob_stage_new = 4 }
+	}
+	else = {
+		set_variable = { LEP_mob_stage_new = 5 }
+	}
+
+	# 跨档时记录新旧档位并派事件，idea 的更换写在事件选项里
+	# LEP_mob_stage      = 当前档位（1-5）
+	# LEP_mob_stage_prev = 本次跨档前的档位，供事件选项决定要摘掉哪个 idea
+	if = {
+		limit = { has_variable = LEP_mob_stage }
+		set_variable = { LEP_mob_stage_diff = LEP_mob_stage_new }
+		subtract_from_variable = { LEP_mob_stage_diff = LEP_mob_stage }
+		if = {
+			limit = { check_variable = { LEP_mob_stage_diff > 0 } }
+			set_variable = { LEP_mob_stage_prev = LEP_mob_stage }
+			set_variable = { LEP_mob_stage = LEP_mob_stage_new }
+			country_event = league_military.4
+		}
+		else_if = {
+			limit = { check_variable = { LEP_mob_stage_diff < 0 } }
+			set_variable = { LEP_mob_stage_prev = LEP_mob_stage }
+			set_variable = { LEP_mob_stage = LEP_mob_stage_new }
+			country_event = league_military.5
+		}
+	}
+	else = {
+		# 首次建档：只记录，不发事件
+		set_variable = { LEP_mob_stage = LEP_mob_stage_new }
+	}
+}
+
+# 按当前法案在每个更新周期（30 天）结束时调整动员度
+# 三类法案合计 -10 ~ +10，数值刻意压低，避免法案取代决议与国策成为主要推手
+# 计算当前法案与时局对动员度的合计影响，结果存入 LEP_mob_law_sum（应用与 tooltip 共用）
+LEP_mob_law_calc = {
+	set_variable = { LEP_mob_law_sum = 0 }
+
+	# 经济法案：民用 -5 / 低度 -3 / 部分 0 / 战时 +4 / 总体战 +5
+	if = {
+		limit = { has_idea = civilian_economy }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = low_economic_mobilisation }
+		add_to_variable = { LEP_mob_law_sum = -3 }
+	}
+	else_if = {
+		limit = { has_idea = war_economy }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = tot_economic_mobilisation }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 贸易法案：不平等 -5 / 宁沪经济协定 -3 / 自由贸易 -2 / 出口导向 0 / 限制出口 +3 / 封闭 +5
+	# 宁沪经济协定由事件 swap 掉不平等条约，两者互斥
+	if = {
+		limit = { OR = { has_idea = unequal_treaties has_idea = unequal_treaties_lesser } }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = sino_shanghai_economic_accord }
+		add_to_variable = { LEP_mob_law_sum = -3 }
+	}
+	else_if = {
+		limit = { has_idea = free_trade }
+		add_to_variable = { LEP_mob_law_sum = -2 }
+	}
+	else_if = {
+		limit = { has_idea = limited_exports }
+		add_to_variable = { LEP_mob_law_sum = 3 }
+	}
+	else_if = {
+		limit = { has_idea = closed_economy }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 征兵法案：非武装 -5 / 志愿 -4 / 有限 -1 / 广泛 +2 / 义务 +4 / 全民 +4 / 竭泽 +5
+	if = {
+		limit = { has_idea = disarmed_nation }
+		add_to_variable = { LEP_mob_law_sum = -5 }
+	}
+	else_if = {
+		limit = { has_idea = volunteer_only }
+		add_to_variable = { LEP_mob_law_sum = -4 }
+	}
+	else_if = {
+		limit = { has_idea = limited_conscription }
+		add_to_variable = { LEP_mob_law_sum = -1 }
+	}
+	else_if = {
+		limit = { has_idea = extensive_conscription }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else_if = {
+		limit = { has_idea = service_by_requirement }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = all_adults_serve }
+		add_to_variable = { LEP_mob_law_sum = 4 }
+	}
+	else_if = {
+		limit = { has_idea = scraping_the_barrel }
+		add_to_variable = { LEP_mob_law_sum = 5 }
+	}
+
+	# 战和状态：和平则动员压力消退，开战则举国转入战时轨道
+	if = {
+		limit = { has_war = yes }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else = {
+		add_to_variable = { LEP_mob_law_sum = -2 }
+	}
+
+	# 统一战线三阶段：整合越深、局势越紧，动员越容易推进
+	# 1 斗志昂扬 / 2 哀兵奋进 / 3 背水一战
+	if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_3 }
+		add_to_variable = { LEP_mob_law_sum = 3 }
+	}
+	else_if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_2 }
+		add_to_variable = { LEP_mob_law_sum = 2 }
+	}
+	else_if = {
+		limit = { has_idea = CUF_call_of_the_united_front_idea_1 }
+		add_to_variable = { LEP_mob_law_sum = 1 }
+	}
+}
+
+# 结算：把合计值加进动员度，再刷新阶段 idea
+LEP_mob_law_bonus = {
+	LEP_mob_law_calc = yes
+	add_to_variable = { military_mobilization_var = LEP_mob_law_sum }
+	LEP_mob_stage_update = yes
+	LEP_mob_refresh = yes
+}
+
+LEP_mili_var = {
+	custom_effect_tooltip = LEP_add_mili_var_tt
+	add_to_variable = { military_mobilization_var = LEP_mili_var_change }
+	LEP_mob_stage_update = yes
+}
+
+LEP_cons_var = {
+	custom_effect_tooltip = LEP_add_cons_var_tt
+	add_to_variable = { LEP_construction_var = LEP_cons_var_change }
+	# 工业奇迹成就：建设积累曾经攒到 40（之后全部投出去也算）
+	hidden_effect = {
+		if = {
+			limit = { check_variable = { LEP_construction_var > 39 } }
+			set_country_flag = LEP_cons_var_reached_40
+		}
+	}
+}
+
+LEP_showcase_laws_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_chowcase_laws_on
+			}
+		}
+		set_country_flag = LEP_chowcase_laws_on
+	}
+	else = {
+		clr_country_flag = LEP_chowcase_laws_on
+	}
+
+}
+
+LEP_showcase_industrial_construction_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_showcase_industrial_construction_on
+			}
+		}
+		set_country_flag = LEP_showcase_industrial_construction_on
+	}
+	else = {
+		clr_country_flag = LEP_showcase_industrial_construction_on
+	}
+
+}
+
+LEP_showcase_resource_allocation_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = LEP_showcase_resource_allocation_on
+			}
+		}
+		set_country_flag = LEP_showcase_resource_allocation_on
+	}
+	else = {
+		clr_country_flag = LEP_showcase_resource_allocation_on
+	}
+
+}
+
+LEP_setup_economic_devastation_effect = {
+	if = {
+		limit = { has_country_flag = LEP_setup_economic_devastation_early_flag }
+		if = {
+			limit = { has_idea = LEP_devastated_national_econ_idea }
+			#You get punished for starting reforms early but doing nothing
+			custom_effect_tooltip = CHN_activate_economic_devastation_no_additional_level_warning_tt
+			add_stability = -0.1
+		}
+		else_if = {
+			set_country_flag = LEP_improve_economic_devastation_effect_incomplete
+			limit = { has_idea = LEP_devastated_national_econ2_idea }
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_devastated_national_econ2_idea
+				add_idea = 	LEP_devastated_national_econ_idea
+			}
+		}
+		else_if = {
+			set_country_flag = LEP_improve_economic_devastation_effect_incomplete
+			limit = { has_idea = LEP_devastated_national_econ3_idea }
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			swap_ideas = {
+				remove_idea = LEP_devastated_national_econ3_idea
+				add_idea = LEP_devastated_national_econ2_idea
+			}
+		}
+		else = {
+			set_country_flag = LEP_improve_economic_devastation_effect_incomplete
+			custom_effect_tooltip = CHN_activate_economic_devastation_additional_level_warning_tt
+			add_ideas = LEP_devastated_national_econ3_idea
+		}
+	}
+	else = {
+		custom_effect_tooltip = CHN_activate_economic_devastation_normal_tt
+		set_country_flag = LEP_setup_economic_devastation_normal_flag
+		set_country_flag = LEP_improve_economic_devastation_effect_incomplete
+		add_ideas = LEP_devastated_national_econ_idea
+	}
+	mark_focus_tree_layout_dirty = yes
+}
+
+LEP_setup_military_disarray_effect = {
+	if = {
+		limit = { has_country_flag = LEP_setup_military_disarray_early_flag }
+		if = {
+			limit = { has_idea = LEP_military_disarray_idea1 }
+			#You get punished for starting reforms early but doing nothing
+			custom_effect_tooltip = CHN_activate_military_disarray_no_additional_level_warning_tt
+			add_war_support = -0.10
+		}
+		else_if = {
+			limit = { has_idea = LEP_military_disarray_idea2 }
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			set_country_flag = LEP_improve_military_reorganization_effect_incomplete
+			swap_ideas = {
+				remove_idea = LEP_military_disarray_idea2
+				add_idea = LEP_military_disarray_idea1
+			}
+		}
+		else_if = {
+			limit = { has_idea = LEP_military_disarray_idea3 }
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			set_country_flag = LEP_improve_military_reorganization_effect_incomplete
+			swap_ideas = {
+				remove_idea = LEP_military_disarray_idea3
+				add_idea = LEP_military_disarray_idea2
+			}
+		}
+		else = {
+			custom_effect_tooltip = CHN_activate_military_disarray_additional_level_warning_tt
+			set_country_flag = LEP_improve_military_reorganization_effect_incomplete
+			add_ideas = LEP_military_disarray_idea3
+		}
+	}
+	else = {
+		custom_effect_tooltip = CHN_activate_military_disarray_normal_tt
+		set_country_flag = LEP_setup_military_disarray_normal_flag
+		set_country_flag = LEP_improve_military_reorganization_effect_incomplete
+		add_ideas = LEP_military_disarray_idea1
+	}
+	mark_focus_tree_layout_dirty = yes
+}
+
+LEP_improve_economic_devastation_effect = {
+	if = {
+		limit = { has_idea = LEP_devastated_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ_idea
+			add_idea = LEP_devastated_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ2_idea
+			add_idea = LEP_devastated_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ3_idea
+			add_idea = LEP_devastated_national_econ4_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ4_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ4_idea
+			add_idea = LEP_recovering_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ_idea
+			add_idea = LEP_recovering_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ2_idea
+			add_idea = LEP_recovering_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ3_idea }
+		remove_ideas = LEP_recovering_national_econ3_idea
+	}
+	else = { 
+		clr_country_flag = LEP_improve_economic_devastation_effect_incomplete
+		add_one_random_civilian_factory = yes 
+	}
+}
+
+LEP_worsen_economic_devastation_effect = {
+	if = {
+		limit = { has_idea = LEP_recovering_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ3_idea
+			add_idea = LEP_recovering_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ2_idea
+			add_idea = LEP_recovering_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_recovering_national_econ_idea }
+		swap_ideas = {
+			remove_idea = LEP_recovering_national_econ_idea
+			add_idea = LEP_devastated_national_econ4_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ4_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ4_idea
+			add_idea = LEP_devastated_national_econ3_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ3_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ3_idea
+			add_idea = LEP_devastated_national_econ2_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ2_idea }
+		swap_ideas = {
+			remove_idea = LEP_devastated_national_econ2_idea
+			add_idea = LEP_devastated_national_econ_idea
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_devastated_national_econ_idea }
+		remove_ideas = LEP_devastated_national_econ_idea
+	}
+	else = { 
+		add_stability = -0.15
+		add_political_power = -75
+	}
+}
+
+LEP_improve_military_reorganization_effect = {
+	if = {
+		limit = { has_idea = LEP_military_disarray_idea1 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea1
+			add_idea = LEP_military_disarray_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea2
+			add_idea = LEP_military_disarray_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea3
+			add_idea = LEP_military_disarray_idea4
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea4 }
+		remove_ideas = LEP_military_disarray_idea4
+	}
+	else = {
+		clr_country_flag = LEP_improve_military_reorganization_effect_incomplete
+		army_experience = 5
+		add_command_power = 10
+	}
+}
+
+LEP_worsen_military_reorganization_effect = {
+	if = {
+		limit = { has_idea = LEP_military_disarray_idea4 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea4
+			add_idea = LEP_military_disarray_idea3
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea3 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea3
+			add_idea = LEP_military_disarray_idea2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea2 }
+		swap_ideas = {
+			remove_idea = LEP_military_disarray_idea2
+			add_idea = LEP_military_disarray_idea1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_military_disarray_idea1 }
+		remove_ideas = LEP_military_disarray_idea1
+	}
+	else = {
+		add_stability = -0.10
+		add_political_power = -50
+	}
+}
+
+LEP_Show_fujian_Notification_List = {
+	# RECURSIVE scripted effect. EDIT WITH CAUTION!
+	set_temp_variable = { current_factory = fujian_factory_list^LEP_fujian_array_index }
+	set_temp_variable = { current_state = fujian_state_list^LEP_fujian_array_index }
+	set_temp_variable = { current_date = fujian_date_list^LEP_fujian_array_index }
+	if = {
+		limit = { check_variable = { current_factory = 0 } }
+		custom_effect_tooltip = LEP_fujian_Notification_None
+	}
+	else = {
+		custom_effect_tooltip = LEP_fujian_Notification_Entry
+	}
+	add_to_temp_variable = { LEP_fujian_array_index = 1 }
+	if = {
+		limit = { check_variable = { var:LEP_fujian_array_index < fujian_factory_list^num } }
+		LEP_Show_fujian_Notification_List = yes
+	}
+}
+
+LEP_fujian_Factories = {
+	mio:LEP_fujian_organisation = {
+		# Remove last element in arrays
+		remove_from_array = { array = fujian_factory_list }
+		remove_from_array = { array = fujian_state_list }
+		remove_from_array = { array = fujian_date_list }
+		# Add Date
+		add_to_array = { array = fujian_date_list value = global.date index = 0 }
+		# Handle factory starting progress
+		set_temp_variable = { LEP_starting_construction_progress_min_temp = LEP_starting_construction_progress_min }
+
+		# Get Factory chances
+		set_temp_variable = { LEP_fujian_civilian_factory_chance_temp = LEP_fujian_civilian_factory_chance }
+		set_temp_variable = { LEP_fujian_military_factory_chance_temp = LEP_fujian_military_factory_chance }
+		set_temp_variable = { LEP_fujian_dockyard_chance_temp = LEP_fujian_dockyard_chance }
+	}
+	set_temp_variable_to_random = { var = LEP_damage min = 0.8 max = 1 integer = no }
+	# LEP_starting_construction_progress_min affected by mio trait fujian_upgrade_1_3 and LEP_mio_policy_hire_state_construction_companies
+	# So, min damage is 0.40 (40%), while max damage is 0.60 (60%) with both upgrades.
+	subtract_from_temp_variable = { LEP_damage = LEP_starting_construction_progress_min_temp }
+	random_list = {
+		var:LEP_fujian_civilian_factory_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:industrial_complex }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { LEP_total_campaign_civs = 1 }
+				add_to_array = { array = fujian_factory_list value = 1 index = 0 }
+			}
+		}
+		var:LEP_fujian_military_factory_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:arms_factory }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { LEP_total_campaign_mils = 1 }
+				add_to_array = { array = fujian_factory_list value = 2 index = 0 }
+			}
+		}
+		var:LEP_fujian_dockyard_chance_temp = {
+			set_temp_variable = { LEP_target_building = token:dockyard }
+			mio:LEP_fujian_organisation = {
+				add_to_variable = { LEP_total_campaign_dockyards = 1 }
+				add_to_array = { array = fujian_factory_list value = 3 index = 0 }
+			}
+		}
+	}
+	meta_effect = {
+		text = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					NOT = { has_state_flag = LEP_fujian_Recent_Building }
+					impassable = no
+					free_building_slots = { building = [BUILDING] size > 0 include_locked = no }
+					if = {
+						limit = { check_variable = { LEP_target_building = token:dockyard } }
+						is_coastal = yes
+					}
+				}
+				add_building_construction = {
+					type = [BUILDING]
+					level = 1
+					instant_build = yes
+				}
+				damage_building = { type = [BUILDING] damage = [LEP_DAMAGE] }
+				set_state_flag = { flag = LEP_fujian_Recent_Building days = 360 value = 1 }
+				PREV = { mio:LEP_fujian_organisation = { add_to_array = { array = fujian_state_list value = PREV.PREV index = 0 } } }
+			}
+		}
+		BUILDING = "[?LEP_target_building.GetTokenKey]"
+		LEP_DAMAGE = "[?LEP_damage|2]"
+	}
+
+	mio:LEP_fujian_organisation = {
+		add_to_variable = { LEP_total_campaign_factory_progress = { value = 1 subtract = LEP_damage } }
+
+		add_to_variable = { LEP_total_campaign_factories = 1 }
+		set_variable = { LEP_average_campaign_factory_progress = { value = LEP_total_campaign_factory_progress divide = LEP_total_campaign_factories } }
+
+		set_temp_variable = { LEP_factory_interval_min_temp = LEP_factory_interval_min }
+	}
+	# Default is 160 days as lower limit for random factory construction interval
+	# Reduced by 50 days by mio trait fujian_upgrade_1_4 and mio policy LEP_mio_policy_buy_out_land_holdings each
+	# Thus, value can either be 160, 110 or 60 days
+	country_event = { id = league_military.1001 days = LEP_factory_interval_min_temp?160 random_days = 40 }
+}
+
+LEP_private_assistance = {
+	set_variable_to_random = {
+		var = LEP_MIO_Random_Funds
+		min = 100
+		max = 300
+		integer = yes
+	}
+	meta_effect = {
+		text = {
+			random_military_industrial_organization = {
+				limit = { is_mio_assigned_to_task = yes }
+				add_mio_funds = [FUNDS]
+			}
+		}
+		FUNDS = "[?LEP_MIO_Random_Funds]"
+	}
+}
+
+LEP_unlock_fujian_policies = {
+	custom_effect_tooltip = tooltip_white_line
+	unlock_mio_policy_tooltip = { policy = LEP_mio_policy_hire_state_construction_companies show_modifiers = no }
+	unlock_mio_policy_tooltip = { policy = LEP_mio_policy_buy_out_land_holdings show_modifiers = no }
+}
+
+LEP_NSU_left = {
+	custom_effect_tooltip = LEP_NSU_left_tt
+	add_to_variable  = { LEP_NSU_direct_var = 1 }
+}
+
+LEP_NSU_right = {
+	custom_effect_tooltip = LEP_NSU_right_tt
+	add_to_variable  = { LEP_NSU_direct_var = -1 }
+}
+
+LEP_change_back_civil_clothes = {
+	custom_effect_tooltip = LEP_change_back_civil_clothes_tt
+	hidden_effect = {
+		LEP_chu_fucheng = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_chu_fucheng_civilian_large }
+			}
+		}
+
+		LEP_rong_zongjing = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_rong_zongjing_civilian_large }
+			}
+		}
+
+		QIE_huang_fu = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_QIE_huang_fu_civilian_large }
+			}
+		}
+	}
+
+}
+
+LEP_change_president_clothes_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = LEP_chu_fucheng }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			LEP_chu_fucheng = {
+				unit_leader_event = { id = league_mid.26 days = 3 }
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = QIE_huang_fu }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			QIE_huang_fu = {
+				unit_leader_event = { id = league_mid.25 days = 3 }
+			}
+		}
+	
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_completed_focus = LEP_new_election
+			}
+			has_country_leader = { character = LEP_rong_zongjing }
+		}
+		custom_effect_tooltip = LEP_change_army_clothes_tt
+		custom_effect_tooltip = tooltip_white_line
+		hidden_effect = {
+			unit_leader_event = { id = league_mid.27 days = 3 }
+		}
+	}
+}
+
+LEP_war_with_jap_effect = {
+	if = {
+		limit = {
+			OR = {
+				JAP = { has_government = social_democrat }
+				JAP = { has_government = social_liberal }
+				JAP = { has_government = market_liberal }
+				JAP = { has_government = social_conservative }
+				JAP = { has_government = authoritarian_democrat }
+			}
+		}
+		country_event = { id = league_national.16 days = 15 }
+	}
+	if = {
+		limit = {
+			OR = {
+				JAP = { has_government = paternal_autocrat }
+				JAP = { has_government = national_populist }
+			}
+		}
+		country_event = { id = league_national.17 days = 15 }
+	}
+}
+
+LEP_jap_cancel_occupation_effect = {
+	remove_ideas = LEP_military_occupation_forces_in_Japan1
+	remove_ideas = LEP_military_occupation_forces_in_Japan2
+	add_popularity = {
+		ideology = social_democrat
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = social_liberal
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = market_liberal
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = social_conservative
+		popularity = 0.1
+	}
+	add_popularity = {
+		ideology = paternal_autocrat
+		popularity = -1
+	}
+	add_popularity = {
+		ideology = national_populist
+		popularity = -1
+	}
+	add_popularity = {
+		ideology = authoritarian_democrat
+		popularity = -0.15
+	}
+}
+
+check_LEP_lkmt_conference_var_effect = {
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = greater_than_or_equals
+			}
+		}
+		country_event = { id = league_mid.54 days = 3 }
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = less_than
+			}
+		}
+		country_event = { id = league_mid.55 days = 3 }
+	}
+}
+
+add_LEP_lkmt_conference_var_3_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_3_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 3
+	}
+}
+
+add_LEP_lkmt_conference_var_2_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_2_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 2
+	}
+}
+
+add_LEP_lkmt_conference_var_1_effect = {
+	custom_effect_tooltip = LEP_add_lkmt_conference_var_1_tt
+	add_to_variable = {
+		var = LEP_lkmt_conference_var
+		value = 1
+	}
+}
+
+LEP_lkmt_conference_result_effect = {
+	CHI = {
+		CHI_song_qingling = {
+			set_nationality = ROOT
+		}
+	}
+	remove_ideas = LEP_kuomintang
+	# 国民党合法化：正常政党方案(a/flag_3) 或 执政联盟方案(b/flag_2)
+	# 最低限度方案(c/flag_1)只释放政治犯，不承认其议会资格，故不解禁
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = LEP_lkmt_politic_flag_3
+				has_country_flag = LEP_lkmt_politic_flag_2
+			}
+		}
+		set_country_flag = LEP_lkmt_legalized
+		### 合法化后，闽赣国民党以「农工民主党」名义参与议会，以别于黄郛在北京重建的国民党
+		effect_tooltip = {
+			set_party_name = {
+				ideology = radical_socialist
+				name = LEP_radical_socialist_party_legalized
+				long_name = LEP_radical_socialist_party_legalized_fake
+			}
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = radical_socialist
+				name = LEP_radical_socialist_party_legalized
+				long_name = LEP_radical_socialist_party_legalized_long
+			}
+		}
+		
+		# 若国会已成立，立即按新资格重算席位
+		if = {
+			limit = { has_country_flag = LEP_seat_enabled }
+			LEP_hold_election_seats = yes
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				var = LEP_lkmt_conference_var
+				value = 5
+				compare = equals
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_1
+			days = 120
+		}
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 6
+					compare = greater_than_or_equals
+				}
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 7
+					compare = less_than_or_equals
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_2
+			days = 120
+		}
+	}
+	
+	if = {
+		limit = {
+			AND = {
+				check_variable = {
+					var = LEP_lkmt_conference_var
+					value = 8
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = LEP_lkmt_cooperation_3
+			days = 120
+		}
+	}
+	#各项选择-政治
+	custom_effect_tooltip = tooltip_white_line
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_politic_3_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.01
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_appease_general_labor_union
+			cost = 4
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_eradicate_bad_customs
+			cost = 4
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_politic_2_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+		set_temp_variable = { coalition_partner_var = token:radical_socialist }
+		add_to_coalition = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_politic_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_politic_1_tt
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+		add_manpower = 50
+	}
+	#各项选择-经济
+	custom_effect_tooltip = tooltip_white_line
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_econ_3_tt
+		add_stability = -0.1
+		add_political_power = -30
+		add_popularity = {
+			ideology = syndicalist
+			popularity = 0.05
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_gonghe_cooperative_movement
+			cost = 7
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_cooperative_network
+			cost = 7
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_econ_2_tt
+		add_stability = -0.05
+		add_political_power = -10
+		reduce_focus_completion_cost = {
+			focus = LEP_gonghe_cooperative_movement
+			cost = 4
+		}
+		reduce_focus_completion_cost = {
+			focus = LEP_cooperative_network
+			cost = 4
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_econ_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_econ_1_tt
+		add_stability = 0.03
+		add_political_power = -5
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+		
+	}
+	custom_effect_tooltip = tooltip_white_line
+	#各项选择-军事
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_effect_tooltip = league_mid_54_mili_3_tt
+		CHI_li_jishen = { custom_effect_tooltip = character_becomes_a_general }
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			CHI = {
+				CHI_peng_xuefeng = {
+				    set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				    }
+			    }
+			}
+		}		
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_effect_tooltip = league_mid_54_mili_2_tt
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		CHI_peng_xuefeng  = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+		hidden_effect = {
+			CHI = {
+				CHI_peng_xuefeng = {
+				    set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+				    }
+			    }
+			}
+		}		
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_effect_tooltip = league_mid_54_mili_1_tt
+		add_manpower = 1000
+		army_experience = 50
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 800
+			producer = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 50
+			producer = CHI
+		}
+		LEP_li_yutang = { custom_effect_tooltip = character_becomes_a_general }
+		ANQ_sun_liren  = { custom_effect_tooltip = character_becomes_a_general }
+	}
+}
+
+LEP_lkmt_troops_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_3_TT
+        LEP_LKMT_troops_temp_effect = yes
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"第10军-第3师\" division_template = \"Tiao Zheng Shi\" start_equipment_factor = 1 start_experience_factor = 0.4"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-第190师\" division_template = \"Duli Shi\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-预备第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+	}	
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_2_TT
+		LEP_LKMT_troops_temp_effect = yes
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"第10军-第3师\" division_template = \"Tiao Zheng Shi\" start_equipment_factor = 1 start_experience_factor = 0.4"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"第10军-预备第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+		custom_effect_tooltip = tooltip_dash_line
+		army_experience = 10
+		add_manpower = 6000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 1500
+			amount = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 100
+			producer = FRA
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_effect_tooltip = LEPEXP_LKMT_10TH_ARMY_1_TT
+		custom_override_tooltip = {
+			random_owned_controlled_state = {
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"独立第10师\" division_template = \"Duli Shi\" start_equipment_factor = 0.8 start_experience_factor = 0.1"
+					owner = ROOT
+				}
+			}	
+		}
+		custom_effect_tooltip = tooltip_dash_line
+		army_experience = 25
+		add_manpower = 20000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 3000
+			amount = CHI
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 400
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 200
+			producer = FRA
+		}
+	}
+}
+
+LEP_LKMT_troops_temp_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "调整师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 7 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Tiao Zheng Shi" }
+				delete_unit_template_and_units = { division_template = "Tiao Zheng Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Tiao Zheng Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "调整师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = infantry ICON = GFX_unit_infantry_icon_small COUNT = 7 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 2 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Tiao Zheng Shi" }
+				delete_unit_template_and_units = { division_template = "Tiao Zheng Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Tiao Zheng Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		custom_override_tooltip = {
+			tooltip = {
+				localization_key = tooltip_create_division_template
+				NAME = "独立师"
+				LINE_1 = { localization_key = line_battalion_tt NAME = irregular_infantry ICON = GFX_unit_irregular_infantry_icon_small COUNT = 9 }
+				LINE_2 = { localization_key = line_battalion_tt NAME = artillery_brigade ICON = GFX_unit_artillery_brigade_icon_small COUNT = 1 }
+				SUPPORT_1 = { localization_key = support_battalion_tt NAME = engineer ICON = GFX_unit_engineer_icon_small }
+				SUPPORT_2 = { localization_key = support_battalion_tt NAME = artillery ICON = GFX_unit_artillery_icon_small }
+				SUPPORT_3 = { localization_key = support_battalion_tt NAME = recon ICON = GFX_unit_recon_icon_small }
+			}
+			if = {
+				limit = { has_template = "Duli Shi" }
+				delete_unit_template_and_units = { division_template = "Duli Shi" disband = yes } #no cheating
+			}
+			division_template = {
+				name = "Duli Shi"
+				division_names_group = LEP_ND_01
+				regiments = {
+					irregular_infantry = { x = 0 y = 0 }
+					irregular_infantry = { x = 0 y = 1 }
+					irregular_infantry = { x = 0 y = 2 }
+					irregular_infantry = { x = 1 y = 0 }
+					irregular_infantry = { x = 1 y = 1 }
+					irregular_infantry = { x = 1 y = 2 }
+					irregular_infantry = { x = 2 y = 0 }
+					irregular_infantry = { x = 2 y = 1 }
+					irregular_infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+			}
+		}
+	}
+}
+
+LEP_lkmt_mili_immediate_effect = {
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_3
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			CHI_recruit_PAC_endgame_advisors_effect = yes
+			CHI_recruit_peng_xuefeng_effect = yes
+			if = {
+				limit = {
+					has_character = CHI_li_jishen
+				}
+				CHI_li_jishen = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_li_jishen_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_chen_shaokuan
+				}
+				CHI_chen_shaokuan= {
+					set_nationality = ROOT
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_peng_xuefeng
+				}
+				CHI_peng_xuefeng = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_character = CHI_peng_xuefeng
+					}						
+				}
+				CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_2
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			CHI_recruit_peng_xuefeng_effect = yes
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character = CHI_peng_xuefeng
+				}
+				CHI_peng_xuefeng = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_CHI_peng_xuefeng_dem }
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_character = CHI_peng_xuefeng
+					}						
+				}
+				CHI_peng_xuefeng = { CHN_recruit_character_effect = yes}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					    army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = LEP_lkmt_mili_flag_1
+		}
+		ROOT = { LEP_li_yutang = { CHN_recruit_character_effect = yes } }
+		CHI = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+						army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+		every_possible_country = {
+			if = {
+				limit = {
+					has_character = ANQ_sun_liren
+				}
+				ANQ_sun_liren = {
+					set_nationality = ROOT
+					set_portraits = {
+					army = { large = GFX_portrait_ANQ_sun_liren_dem }
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+# ══ 竞选声势：更好 / 更糟（仿原版 RUS_boost_* / RUS_lower_*）══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election_boost_KMT = yes        （加分，tooltip：国民党在接下来的选举中将表现得更好！）
+#       LEP_election_lower_KMT = yes        （减分，tooltip：……将表现得更好！→ 更糟）
+# 仅在竞选期（LEP_first_election_open）生效；分值由 LEP_election_score_temp 决定
+
+### 「LEP_election_boost_KMT」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		add_to_variable = { LEP_seats_5 = 4 tooltip = LEP_seat_gain_5 }
+		subtract_from_variable = { LEP_seats_4 = 2 }
+		subtract_from_variable = { LEP_seats_6 = 2 }
+	}
+}
+
+### 「LEP_election_lower_KMT」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		subtract_from_variable = { LEP_seats_5 = 4 }
+		add_to_variable = { LEP_seats_4 = 2 tooltip = LEP_seat_gain_4 }
+		add_to_variable = { LEP_seats_6 = 2 tooltip = LEP_seat_gain_6 }
+	}
+}
+
+### 「LEP_election_boost_DSP」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		add_to_variable = { LEP_seats_4 = 4 tooltip = LEP_seat_gain_4 }
+		subtract_from_variable = { LEP_seats_5 = 2 }
+		subtract_from_variable = { LEP_seats_6 = 2 }
+	}
+}
+
+### 「LEP_election_lower_DSP」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		subtract_from_variable = { LEP_seats_4 = 4 }
+		add_to_variable = { LEP_seats_5 = 2 tooltip = LEP_seat_gain_5 }
+		add_to_variable = { LEP_seats_6 = 2 tooltip = LEP_seat_gain_6 }
+	}
+}
+
+### 「LEP_election_boost_JNSB」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_boost_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		add_to_variable = { LEP_seats_6 = 4 tooltip = LEP_seat_gain_6 }
+		subtract_from_variable = { LEP_seats_4 = 2 }
+		subtract_from_variable = { LEP_seats_5 = 2 }
+	}
+}
+
+### 「LEP_election_lower_JNSB」——照 RUS_boost_kadet / RUS_lower_kadet 的范式
+LEP_election_lower_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_first_election_open }
+		subtract_from_variable = { LEP_seats_6 = 4 }
+		add_to_variable = { LEP_seats_4 = 2 tooltip = LEP_seat_gain_4 }
+		add_to_variable = { LEP_seats_5 = 2 tooltip = LEP_seat_gain_5 }
+	}
+}
+
+# ══ 第二次大选计分（含国家团结联盟）══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election2_boost_NSU = yes
+
+LEP_election2_boost_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		add_to_variable = { LEP_seats_5 = 3 tooltip = LEP_seat_gain_5 }
+		subtract_from_variable = { LEP_seats_4 = 1 }
+		subtract_from_variable = { LEP_seats_6 = 1 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } subtract_from_variable = { LEP_seats_3 = 1 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } subtract_from_variable = { LEP_seats_7 = 1 } }
+	}
+}
+
+
+LEP_election2_lower_KMT = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		subtract_from_variable = { LEP_seats_5 = 3 }
+		add_to_variable = { LEP_seats_4 = 1 tooltip = LEP_seat_gain_4 }
+		add_to_variable = { LEP_seats_6 = 1 tooltip = LEP_seat_gain_6 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } add_to_variable = { LEP_seats_3 = 1 tooltip = LEP_seat_gain_3 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } add_to_variable = { LEP_seats_7 = 1 tooltip = LEP_seat_gain_7 } }
+	}
+}
+
+
+LEP_election2_boost_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		add_to_variable = { LEP_seats_4 = 3 tooltip = LEP_seat_gain_4 }
+		subtract_from_variable = { LEP_seats_5 = 1 }
+		subtract_from_variable = { LEP_seats_6 = 1 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } subtract_from_variable = { LEP_seats_3 = 1 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } subtract_from_variable = { LEP_seats_7 = 1 } }
+	}
+}
+
+
+LEP_election2_lower_DSP = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		subtract_from_variable = { LEP_seats_4 = 3 }
+		add_to_variable = { LEP_seats_5 = 1 tooltip = LEP_seat_gain_5 }
+		add_to_variable = { LEP_seats_6 = 1 tooltip = LEP_seat_gain_6 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } add_to_variable = { LEP_seats_3 = 1 tooltip = LEP_seat_gain_3 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } add_to_variable = { LEP_seats_7 = 1 tooltip = LEP_seat_gain_7 } }
+	}
+}
+
+
+LEP_election2_boost_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		add_to_variable = { LEP_seats_6 = 3 tooltip = LEP_seat_gain_6 }
+		subtract_from_variable = { LEP_seats_4 = 1 }
+		subtract_from_variable = { LEP_seats_5 = 1 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } subtract_from_variable = { LEP_seats_3 = 1 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } subtract_from_variable = { LEP_seats_7 = 1 } }
+	}
+}
+
+
+LEP_election2_lower_JNSB = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		subtract_from_variable = { LEP_seats_6 = 3 }
+		add_to_variable = { LEP_seats_4 = 1 tooltip = LEP_seat_gain_4 }
+		add_to_variable = { LEP_seats_5 = 1 tooltip = LEP_seat_gain_5 }
+		if = { limit = { check_variable = { LEP_NSU_direct_var > 0 } } add_to_variable = { LEP_seats_3 = 1 tooltip = LEP_seat_gain_3 } }
+		else_if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } add_to_variable = { LEP_seats_7 = 1 tooltip = LEP_seat_gain_7 } }
+	}
+}
+
+
+LEP_election2_boost_NSU = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } }
+			add_to_variable = { LEP_seats_7 = 3 tooltip = LEP_seat_gain_7 }
+		}
+		else = { add_to_variable = { LEP_seats_3 = 3 tooltip = LEP_seat_gain_3 } }
+		subtract_from_variable = { LEP_seats_4 = 1 }
+		subtract_from_variable = { LEP_seats_5 = 1 }
+		subtract_from_variable = { LEP_seats_6 = 1 }
+	}
+}
+
+
+LEP_election2_lower_NSU = {
+	if = {
+		limit = { has_country_flag = LEP_second_election_open }
+		if = { limit = { check_variable = { LEP_NSU_direct_var < 0 } } subtract_from_variable = { LEP_seats_7 = 3 } }
+		else = { subtract_from_variable = { LEP_seats_3 = 3 } }
+		add_to_variable = { LEP_seats_4 = 1 tooltip = LEP_seat_gain_4 }
+		add_to_variable = { LEP_seats_5 = 1 tooltip = LEP_seat_gain_5 }
+		add_to_variable = { LEP_seats_6 = 1 tooltip = LEP_seat_gain_6 }
+	}
+}
+
+
+# ══ 国策积累竞选声势：大选已开始时直接计入，未开始时攒到下次 ══
+# 用法：set_temp_variable = { LEP_election_score_temp = 1 }
+#       LEP_election_pending_DSP = yes
+
+LEP_election_pending_KMT = {
+	add_to_variable = { LEP_seat_pending_5 = 2 }
+	custom_effect_tooltip = LEP_election_pending_KMT_tt
+}
+
+
+LEP_election_pending_DSP = {
+	add_to_variable = { LEP_seat_pending_4 = 2 }
+	custom_effect_tooltip = LEP_election_pending_DSP_tt
+}
+
+
+LEP_election_pending_JNSB = {
+	add_to_variable = { LEP_seat_pending_6 = 2 }
+	custom_effect_tooltip = LEP_election_pending_JNSB_tt
+}
+
+
+LEP_election_pending_NSU = {
+	add_to_variable = { LEP_seat_pending_3 = 2 }
+	custom_effect_tooltip = LEP_election_pending_NSU_tt
+}
+
+
+# ══ 国家团结联盟的先发优势：联盟内某一派已占据主导，全国动员时能借力 ══
+LEP_election_pending_NSU_left = {
+	add_to_variable = { LEP_seat_pending_3 = 2 }
+	custom_effect_tooltip = LEP_NSU_pending_left_tt
+}
+
+
+LEP_election_pending_NSU_right = {
+	add_to_variable = { LEP_seat_pending_7 = 2 }
+	custom_effect_tooltip = LEP_NSU_pending_right_tt
+}
+
+# ══ 残余势力抵抗：每调用一次降一级（顽强 → 中等 → 微弱 → 消除）══
+# 齐燮元残余（国家由工商联主导时获得）
+LEP_qi_resistance_step_down = {
+	if = {
+		limit = { has_idea = LEP_qi_resist_3 }
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_qi_resist_3
+			add_idea = LEP_qi_resist_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_qi_resist_2 }
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_qi_resist_2
+			add_idea = LEP_qi_resist_1
+		}
+	}
+	else_if = {
+		custom_effect_tooltip = LEP_qi_resistance_step_down_tt
+		limit = { has_idea = LEP_qi_resist_1 }
+		remove_ideas = LEP_qi_resist_1
+	}
+}
+
+# 反齐残余（国家由齐燮元主导时获得）
+LEP_anti_qi_resistance_step_down = {
+	if = {
+		limit = { has_idea = LEP_anti_qi_resist_3 }
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_anti_qi_resist_3
+			add_idea = LEP_anti_qi_resist_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_anti_qi_resist_2 }
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+		swap_ideas = {
+			remove_idea = LEP_anti_qi_resist_2
+			add_idea = LEP_anti_qi_resist_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = LEP_anti_qi_resist_1 }
+		custom_effect_tooltip = LEP_anti_qi_resistance_step_down_tt
+		remove_ideas = LEP_anti_qi_resist_1
+	}
+}
+
+LEP_bop_start_effect = {
+	hidden_effect = {
+		set_power_balance = {
+			id = LEP_power_balance
+			left_side = LEP_commerce_side
+			right_side = LEP_qi_side
+			set_value = 0.10
+		}
+	}
+	
+	if = {
+		limit = {
+			is_ai = yes
+			has_game_rule = { rule = LEP_path option = LEP_PATH_QI }
+		}
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = 1.10
+		}
+	}
+	if = {
+		limit = {
+			is_ai = yes
+			NOT = { has_game_rule = { rule = LEP_path option = DEFAULT } }
+			NOT = { has_game_rule = { rule = LEP_path option = LEP_PATH_QI } }
+		}
+		add_power_balance_value = {
+			id = LEP_power_balance
+			value = -0.90
+		}
+	}
+}
+
+LEP_qi_unification_effect = {
+	set_cosmetic_tag = united_china
+	set_global_flag = china_united
+    set_country_flag = china_is_potential_government
+	custom_effect_tooltip = enables_new_focus_branches
+	activate_targeted_decision = { decision = china_move_capital target = ROOT }
+	country_event = { id = china_events.2145 days = 3 } #National Unification and New Troubles
+	country_event = { id = league_qi.1 days = 1 }
+	set_country_flag = LEP_qi_national_focus
+	mark_focus_tree_layout_dirty = yes
+	hidden_effect = {
+		LEP_qi_xieyuan = {
+			set_portraits = {
+				civilian = { large = GFX_portrait_LEP_qi_xieyuan_suit }
+			}
+		}
+	}
+}
+
+LEPEXP_JAP_generic_land_reform_setup = {
+	every_state = {
+		limit = {
+			is_core_of = JAP
+			OR = {
+				has_state_category = one
+				has_state_category = two
+				has_state_category = three
+				has_state_category = four
+				has_state_category = five
+				has_state_category = zero_island
+				has_state_category = minor_port
+			}			
+		}
+		JAP = {
+			activate_targeted_decision = { target = PREV decision = LEPEXP_JAP_generic_land_reform_decision }
+		}
+	}
+}
+
+### 军事动员条刷新：把 military_mobilization_var（0~100）换算成条宽/指针/阶段圆球
+### 条 x=65 宽 360，每点动员 = 3.6px
+### 注意：全程用普通变量，避免 set_variable 读 temp_variable 失败
+LEP_mob_refresh = {
+	if = {
+		limit = { NOT = { has_variable = military_mobilization_var } }
+		set_variable = { military_mobilization_var = 0 }
+	}
+
+	# 每日重算法案合计值，保证任务卡 tooltip 里 [?LEP_mob_law_sum] 始终是最新的
+	LEP_mob_law_calc = yes
+
+	# 指针：绝对坐标 → 条起点 65 + var*3.6，再减 10（半个指针宽）
+	# 让填充末端伸进指针内部，与正版 BOP 的视觉一致
+	set_variable = { LEP_mob_needle_x = military_mobilization_var }
+	multiply_variable = { LEP_mob_needle_x = 3.6 }
+	add_to_variable = { LEP_mob_needle_x = 55 }
+
+	# 低于 50% 走青条，50% 及以上走橙条；贴图单帧，frame 直接用 var
+	# 全程直接从 military_mobilization_var 取值，不做变量间赋值
+	if = {
+		limit = { check_variable = { military_mobilization_var < 50 } }
+		set_variable = { LEP_mob_blue_frame = military_mobilization_var }
+		set_variable = { LEP_mob_blue_y = 34 }
+		set_variable = { LEP_mob_orange_frame = 0 }
+		set_variable = { LEP_mob_orange_y = -3000 }
+	}
+	else = {
+		set_variable = { LEP_mob_blue_frame = 0 }
+		set_variable = { LEP_mob_blue_y = -3000 }
+		set_variable = { LEP_mob_orange_frame = military_mobilization_var }
+		set_variable = { LEP_mob_orange_y = 34 }
+	}
+
+	# ── 五个阶段圆球：未达成放原位，已达成换绿；无关的那组移出屏幕 ──
+	# 阶段一 承平之制（0）常亮
+	set_variable = { LEP_mob_n1_off_x = -2000 }
+	set_variable = { LEP_mob_n1_on_x = 89 }
+
+	set_variable = { LEP_mob_n2_off_x = 161 }
+	set_variable = { LEP_mob_n2_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 19 } }
+		set_variable = { LEP_mob_n2_off_x = -2000 }
+		set_variable = { LEP_mob_n2_on_x = 161 }
+	}
+
+	set_variable = { LEP_mob_n3_off_x = 233 }
+	set_variable = { LEP_mob_n3_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 39 } }
+		set_variable = { LEP_mob_n3_off_x = -2000 }
+		set_variable = { LEP_mob_n3_on_x = 233 }
+	}
+
+	set_variable = { LEP_mob_n4_off_x = 305 }
+	set_variable = { LEP_mob_n4_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 59 } }
+		set_variable = { LEP_mob_n4_off_x = -2000 }
+		set_variable = { LEP_mob_n4_on_x = 305 }
+	}
+
+	set_variable = { LEP_mob_n5_off_x = 377 }
+	set_variable = { LEP_mob_n5_on_x = -2000 }
+	if = {
+		limit = { check_variable = { military_mobilization_var > 79 } }
+		set_variable = { LEP_mob_n5_off_x = -2000 }
+		set_variable = { LEP_mob_n5_on_x = 377 }
+	}
+}
+
+LEPEXP_NAVY_germany_ships_effect = {
+	custom_effect_tooltip = LEPEXP_NAVY_germany_ships_TT
+	hidden_effect = {
+		QIE_create_variant_destroyer = yes
+		create_ship = { name = "玄武" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "栖霞" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "拱宸" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "钱塘" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	    create_ship = { name = "海曙" type = ship_hull_light_1 equipment_variant = "Chu Tong Class" }
+	}	
+}
+
+LEPEXP_NAVY_germany_ships_effect_2 = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_tech = early_ship_hull_light } }
+			set_technology = { early_ship_hull_light = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_light_battery } }
+			set_technology = { basic_light_battery = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_depth_charges } }
+			set_technology = { basic_depth_charges = 1 }
+		}
+		if = {
+			limit = { NOT = { has_tech = basic_torpedo } }
+			set_technology = { basic_torpedo = 1 }
+		}
+		create_equipment_variant = {
+            show_position = no
+            name = "S113 Speziell für China" 	# S113 Class
+            role_icon_index = 32
+            type = vnr_ship_hull_light_1
+            name_group = CHYN_THEME_MOUNTAINS
+            modules = {
+              fixed_ship_battery_slot = ship_light_battery_2
+              fixed_ship_anti_air_slot = ship_anti_air_1
+              fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+              fixed_ship_engine_slot = light_ship_engine_1
+              fixed_ship_torpedo_slot = ship_torpedo_1
+              front_1_custom_slot = ship_light_battery_2
+              mid_1_custom_slot = ship_light_battery_2
+              rear_1_custom_slot = ship_depth_charge_1
+              rear_2_custom_slot = ship_light_battery_2
+            }
+            obsolete = yes
+        }
+
+		create_ship = { name = "玄武" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "栖霞" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "拱宸" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "钱塘" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	    create_ship = { name = "海曙" type = vnr_ship_hull_light_1 equipment_variant = "S113 Speziell für China" }
+	}	
+}
+
+LEPEXP_RYK_setup_gov_effect = {
+	set_temp_variable = { tag_to_release = RYK }
+	release_targeted_tag = yes
+	hidden_effect = {		
+		RYK = {
+			RYK_establish_government = yes
+			RYK_claim_homeland = yes
+			add_ideas = {
+				RYK_fort_island_idea
+				RYK_not_ready_idea
+				RYK_natianl_phase_1_idea
+				RYK_CIR_corp_idea
+			}
+			division_template = {
+				name = "Infantry Division"
+				division_names_group = LEP_GAR_02
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					combat_engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_equipment_factor = 1 start_experience_factor = 0.1"
+						owner = RYK
+					}
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_equipment_factor = 0.7 start_experience_factor = 0.1"
+						owner = RYK
+					}
+				}
+		}
+	}
+}
+
+LEP_liberation_war_PREV_effect = {
+	ROOT = {
+		activate_targeted_decision = { target = PREV decision = LEP_liberation_war_decision }
+	}
+}

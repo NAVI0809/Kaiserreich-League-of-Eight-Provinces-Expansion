@@ -1,0 +1,493 @@
+leader_traits = {
+
+	#齐燮元统一线：人物强化特质
+	LEP_architect_of_the_new_state = { #余家菊
+		custom_modifier_tooltip = LEP_architect_of_the_new_state_desc
+		random = no
+		political_power_factor = 0.10
+		research_speed_factor = 0.05
+		stability_factor = 0.05
+	}
+
+	LEP_iron_discipline_of_the_new_army = { #田文炳
+		custom_modifier_tooltip = LEP_iron_discipline_of_the_new_army_desc
+		random = no
+		army_org_factor = 0.05
+		command_power_gain_mult = 0.10
+		training_time_factor = -0.10
+	}
+
+	LEP_iron_hand_behind_the_throne = { #齐燮元退居幕后
+		custom_modifier_tooltip = LEP_iron_hand_behind_the_throne_desc
+		random = no
+		political_power_factor = 0.10
+		stability_factor = 0.10
+		justify_wargoal_cost = -0.25
+	}
+	LEP_the_man_behind_the_curtain = { #丁文江
+		custom_modifier_tooltip = LEP_the_man_behind_the_curtain_desc
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.10
+		consumer_goods_factor = -0.05
+	}
+    #政府首脑
+	LEP_chamber_of_commerce_leader = {
+		custom_modifier_tooltip = LEP_chamber_of_commerce_leader_desc
+		random = no
+		production_factory_start_efficiency_factor = 0.05
+		local_resources = 0.03
+	}
+
+	LEP_order_engineer = {
+		custom_modifier_tooltip = LEP_order_engineer_desc
+		random = no
+		political_power_factor = 0.1
+		research_speed_factor = 0.05
+	}
+
+	LEP_autonomy_standard_bearer = {
+		custom_modifier_tooltip = LEP_autonomy_standard_bearer_desc
+		random = no
+		compliance_gain = 0.05
+		stability_factor = 0.1
+	}
+
+	LEP_democratic_activist = {
+		custom_modifier_tooltip = LEP_democratic_activist_desc
+		random = no
+		political_power_gain = 0.03
+		research_speed_factor = 0.08
+	}
+	
+
+    #司令部
+	LEPEXP_air_chief_ACE_fighter = { #战斗机主导
+		sprite = 2
+		air_superiority_efficiency = 0.1
+		air_accidents_factor = -0.05
+		air_weather_penalty = -0.1
+		army_bonus_air_superiority_factor = 0.05
+		experience_gain_air = 0.02
+
+		ai_will_do = {
+			factor = 0.25
+			modifier = {
+				factor = 0.1
+				has_deployed_air_force_size = { size < 200 }
+			}
+		}
+	}
+
+	LEPEXP_Grassroots_General = { #草根将军
+		sprite = 5
+		army_infantry_attack_factor = 0.1
+		army_infantry_defence_factor = 0.1
+		breakthrough_factor = 0.05
+		army_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_coastline_defender = { #岸防司令
+		sprite = 9
+		max_dig_in = 4
+		production_speed_coastal_bunker_factor = 0.25
+		production_speed_bunker_factor = 0.1
+		amphibious_invasion = 0.2
+		invasion_preparation = -0.1
+		special_forces_cap_flat = 5
+		special_forces_attack_factor = 0.05
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_maneuver_warfare = { #运动战大师
+	    sprite = 5
+		experience_loss_factor = -0.1
+		land_reinforce_rate = 0.02
+		org_loss_at_low_org_factor = -0.15
+		army_org_factor = 0.05
+		army_morale_factor = 0.05
+		army_defence_factor = 0.10
+		max_dig_in = 4
+		army_speed_factor = 0.05
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_fort_destroyer = { #工事毁灭者
+	    sprite = 16
+		
+		breakthrough_factor = 0.1
+		army_artillery_attack_factor = 0.1
+		supply_consumption_factor = 0.05
+		
+		modifier = {
+			fort = {
+				attack = 0.20
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#政治顾问
+
+	LEPEXP_dem_act = { #民主活动家
+		sprite = 15
+
+		social_liberal_drift = 0.01
+		political_power_factor = 0.05
+		research_speed_factor = 0.03
+		compliance_gain = 0.005
+		stability_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_minister_justice = { #司法
+		sprite = 10
+
+		stability_weekly = 0.002
+		political_power_factor = 0.03
+		mobilization_laws_cost_factor = 0.15
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_hydrologist = { #水利
+		sprite = 10
+
+		production_speed_infrastructure_factor = 0.2
+		global_building_slots_factor = 0.15
+		factory_energy_consumption = -0.05
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_psychology_practitioner = { #心理学实践者
+	    sprite = 12
+
+		research_speed_factor = 0.03
+		compliance_gain = 0.008
+		resistance_damage_to_garrison = -0.15
+		resistance_growth = -0.05
+		social_liberal_drift = 0.01
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_humble_educator = { #谦逊的教育家
+	    sprite = 14
+
+		research_speed_factor = 0.1
+		political_power_factor = 0.1
+		compliance_gain = 0.01
+		social_liberal_drift = 0.01
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_fiscal_reformer = { #财政改革家
+	    sprite = 13
+		
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.05
+		political_power_gain = 0.02
+		political_power_cost = -0.05
+		trade_laws_cost_factor = -0.5
+		resource_trade_cost_bonus_per_factory = 3
+		economy_cost_factor = -0.15
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_king_of_cotton_yarn = { #棉纱大王
+	    sprite = 10
+		
+		consumer_goods_factor = -0.1
+		attrition = -0.1
+		experience_loss_factor = -0.05
+		casualty_trickleback = 0.05
+
+		equipment_bonus = {
+			support_equipment = {
+				build_cost_ic = -0.10
+				reliability = 0.1
+				instant = yes				
+			} 
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_doubletitle_champion = { #双料巨头
+	    sprite = 10
+		
+		political_power_factor = -0.02
+		consumer_goods_factor = -0.05
+		supply_node_range = 0.07
+		industrial_capacity_dockyard = 0.07
+		trade_laws_cost_factor = -0.3
+
+		targeted_modifier = {
+			tag = GER
+			extra_trade_to_target_factor = 0.3
+			trade_cost_for_target_factor = -0.3
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_king_of_chemical_industry = { #化工大王
+	    sprite = 10
+		
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+		research_speed_factor = 0.1
+		local_resources_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LEPEXP_patriotic_businessman = { #救亡商人
+	    sprite = 10
+		random = no
+        
+		political_power_factor = -0.03
+		consumer_goods_factor = 0.05
+		resistance_target_on_our_occupied_states = 0.1
+		modifier_army_sub_unit_irregular_infantry_defence_factor = 0.15
+		war_support_factor = 0.1
+		supply_consumption_factor = -0.1
+		supply_node_range = 0.1		
+
+		ai_will_do = { factor = 1 }
+	}
+
+	LEPEXP_shipping_king = { #船运大亨
+	    sprite = 3
+		random = no
+
+		political_power_factor = 0.05
+		production_speed_dockyard_factor = 0.1
+		industrial_capacity_dockyard = 0.1
+		equipment_bonus = {
+			convoy = {
+				build_cost_ic = -0.10
+				instant = yes
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	LEPEXP_venerable_diplomat = {#可敬的外交官
+		sprite = 13
+		random = no
+		war_support_factor = 0.05
+		opinion_gain_monthly_factor = 0.25
+		send_volunteer_size = 1
+		social_liberal_acceptance = 20
+		market_liberal_acceptance =20
+		ai_will_do = { factor = 1 }
+	}
+
+	LEPEXP_moderate_mediator = {#温和的调停者
+		sprite = 13
+		random = no
+		political_power_gain = 0.01
+		war_support_factor = 0.05
+		opinion_gain_monthly_factor = 0.25
+		send_volunteer_size = 1
+			targeted_modifier = {
+			tag = USA
+			extra_trade_to_target_factor = 0.3
+			trade_cost_for_target_factor = -0.3
+		}
+		social_democrat_acceptance = 20
+		radical_socialist_acceptance = 20
+		ai_will_do = { factor = 1 }
+	}
+
+	LEPEXP_bridge_expert = {
+		sprite = 10
+		
+		production_speed_infrastructure_factor = 0.15
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	KR_temporary_congress_sic = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.02
+		stability_factor = 0.03
+		trade_laws_cost_factor = 0.05
+		mobilization_laws_cost_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_elected_congress_sic = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.02
+		stability_factor = 0.03
+		trade_laws_cost_factor = -0.03
+		mobilization_laws_cost_factor = -0.03
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_publisher = {
+		sprite = 13
+		random = no
+		political_power_factor = 0.05
+		war_support_weekly = 0.002
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_educator = {
+		sprite = 13
+		random = no
+		research_speed_factor = 0.1
+		### 顺从度增长速度：原为 compliance_growth = 0.004 —— 值太小（0.4%），而 compliance_growth 按官方文档是
+		### 「0 decimal places」修饰符，UI 取整后显示成 0%。改用 0.1，与 KR 本体同类政治顾问
+		### （KR_pious_intellectual / KR_reformer_of_the_interior / KR_leftist_lawyer）一致，UI 显示 10%
+		compliance_growth = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_modern_sage = {
+		sprite = 13
+		random = no
+		stability_factor = 0.1
+		compliance_gain = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_zhuge_of_republic = {
+		sprite = 13
+		random = no
+		political_power_gain = 0.05
+		political_advisor_cost_factor = -0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_industrialist = {
+		sprite = 13
+		random = no
+		production_speed_buildings_factor = 0.1
+		production_speed_industrial_complex_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.1
+		production_speed_buildings_factor = 0.1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_geologist = {
+		sprite = 13
+		random = no
+		local_resources_factor = 0.15
+		research_speed_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+
+	KR_semi_auto = {
+		sprite = 5
+		random = no
+
+		special_project_speed_factor = 0.15
+		research_speed_factor = 0.05
+
+		equipment_bonus = {
+			infantry_equipment = {
+				soft_attack = 0.15
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+			artillery_equipment = {
+				soft_attack = 0.10
+				build_cost_ic = 0.10
+				reliability = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+
+
+	#理论家
+	LEP_gas_warfare_trait = { 
+		army_org_factor = 0.05
+		land_doctrine_cost_factor = -0.1
+		army_attack_against_major_factor = 0.15
+		breakthrough_factor = 0.15
+		army_speed_factor = 0.10
+		army_infantry_attack_factor = 0.05
+		army_infantry_defence_factor = 0.03
+		army_artillery_attack_factor = 0.1
+		army_artillery_defence_factor = 0.05
+		tactic_breakthrough_preferred_weight_factor = 0.5
+		tactic_backhand_blow_preferred_weight_factor = 0.5
+
+		military_factory_donations = 1
+
+		ai_will_do = { factor = 1 }
+	}
+
+	LEP_professional_nco_system = {
+		random = no
+		experience_gain_army = 0.10
+		army_speed_factor = 0.05   
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.15
+		out_of_supply_factor = -0.1
+		resistance_damage_to_garrison_on_our_occupied_states = 0.25
+		experience_loss_factor = -0.2
+		resistance_growth_on_our_occupied_states = 0.15
+		army_morale_factor = 0.15
+		planning_speed = 0.10
+		superior_firepower_mastery_gain_factor = 0.05
+
+		ai_will_do = { factor = 1 }
+	}
+}

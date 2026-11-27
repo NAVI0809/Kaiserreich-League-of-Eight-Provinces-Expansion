@@ -1,0 +1,30 @@
+GEA_chinese_state_controller_is_friendly_power = {
+	OR = {
+		is_ally_with = GEA
+		has_country_leader = { character = LEP_sun_chuanfang }
+		has_country_leader = { character = LEP_qi_xieyuan }
+		has_dynamic_modifier = { modifier = QIE_german_influence_dynamic_modifier }
+		AND = {
+			is_subject = yes
+			overlord = {
+				OR = {
+					has_country_leader = { character = LEP_sun_chuanfang }
+					has_country_leader = { character = LEP_qi_xieyuan }
+					has_dynamic_modifier = { modifier = QIE_german_influence_dynamic_modifier }
+				}
+			}
+		}
+	}
+}
+
+GEA_can_send_volunteers_to_target = {
+	FROM = {
+		OR = {
+			is_in_asia = yes
+			is_in_australia = yes
+		}
+		# LEPEXP：走民主政府路线的中国不再是德属东亚可以「援助」的对象
+		# （KR 原本把 GEA 的志愿军限制整套注释掉了，这里按 MAF_restrict_volunteers_to_africa 的范式重建）
+		NOT = { has_country_flag = LEP_dem_gov }
+	}
+}

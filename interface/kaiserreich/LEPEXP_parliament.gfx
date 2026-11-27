@@ -1,0 +1,91 @@
+spriteTypes = {
+	### 席位点模板占位：274 个 iconType 的 spriteType 都指向它，实际显示由
+	### common/scripted_guis/LEPEXP parliament gui.txt 的 properties（image = "[LEP_seat_gfx_N]"）
+	### 在打开面板时按党派替换成 GFX_LEP_seat_p0~p9。这里只用于消除"找不到 sprite"报错。
+	spriteType = {
+		name = "GFX_LEP_seat_dots"
+		texturefile = "gfx/interface/parliament/LEP_seat_plain.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p0"
+		texturefile = "gfx/interface/parliament/LEP_seat_p0.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p1"
+		texturefile = "gfx/interface/parliament/LEP_seat_p1.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p2"
+		texturefile = "gfx/interface/parliament/LEP_seat_p2.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p3"
+		texturefile = "gfx/interface/parliament/LEP_seat_p3.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p4"
+		texturefile = "gfx/interface/parliament/LEP_seat_p4.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p5"
+		texturefile = "gfx/interface/parliament/LEP_seat_p5.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p6"
+		texturefile = "gfx/interface/parliament/LEP_seat_p6.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p7"
+		texturefile = "gfx/interface/parliament/LEP_seat_p7.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p8"
+		texturefile = "gfx/interface/parliament/LEP_seat_p8.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_p9"
+		texturefile = "gfx/interface/parliament/LEP_seat_p9.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_frame_gold"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_gold.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_frame_silver"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_silver.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_frame_none"
+		texturefile = "gfx/interface/parliament/LEP_seat_frame_none.png"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_button"
+		texturefile = "gfx/interface/parliament/LEP_seat_button.png"
+	}
+
+	### ── 国会席位对比条（仿原版 balance of power 外观）────────────────────
+	### 填充为 28 帧横向拼图：第 i 帧 = 从左起 (i+1)/28 的填充，GUI 用 frame = LEP_seat_bar_frame 切帧。
+	spriteType = {
+		name = "GFX_LEP_seat_bar_majority"
+		texturefile = "gfx/interface/parliament/LEP_seat_bar_majority.dds"
+		noOfFrames = 29
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_minority"
+		texturefile = "gfx/interface/parliament/LEP_seat_bar_minority.dds"
+		noOfFrames = 29
+	}
+	# 以下三个直接复用游戏本体的 bop 素材
+	spriteType = {
+		name = "GFX_LEP_seat_bar_bg"
+		texturefile = "gfx/interface/bop/bop_bar_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_frame"
+		texturefile = "gfx/interface/bop/bop_bar_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_LEP_seat_bar_needle"
+		texturefile = "gfx/interface/bop/bop_needle.dds"
+	}
+}

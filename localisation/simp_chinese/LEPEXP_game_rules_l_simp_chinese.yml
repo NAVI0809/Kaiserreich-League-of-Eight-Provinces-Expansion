@@ -1,0 +1,88 @@
+﻿l_simp_chinese:
+ LEP_PATH: "£KR_game_rule_flag_LEP  东南半壁"
+ RULE_OPTION_LEP_PATH_RANDOM: "默认"
+ RULE_OPTION_LEP_PATH_RANDOM_DESC: "孙传芳留下的八省联合正站在岔路口。南京的议会与各省的督军各执一词，军人、文官与商界都在争夺这个国家未来的定义权——在有人真正做出决断之前，没有人知道它会走向何方。"
+ RULE_OPTION_LEP_PATH_QI: "£KR_game_rule_flag_LEP  联帅的军政府"
+ RULE_OPTION_LEP_PATH_QI_DESC: "齐燮元以§P联帅之姿§!总揽大权，议会与选举被束之高阁，军令成为国家唯一的支点。"
+ RULE_OPTION_LEP_PATH_DSP: "£KR_game_rule_flag_CHN  民主科学社点燃启蒙之光"
+ RULE_OPTION_LEP_PATH_DSP_DESC: "自治同志会改组为§l民主科学社§!，主张以专家政治与渐进改革重建国家秩序。"
+ RULE_OPTION_LEP_PATH_JGH: "£KR_game_rule_flag_CHN  人民救国会带来变革之风"
+ RULE_OPTION_LEP_PATH_JGH_DESC: "国家团结联盟由§S人民救国会§!主导，推行进步改革与社会立法，把政治的重心移向城市与劳工。"
+ RULE_OPTION_LEP_PATH_JXH: "£KR_game_rule_flag_CHN  景星会开启稳健之治"
+ RULE_OPTION_LEP_PATH_JXH_DESC: "国家团结联盟由§a景星会§!主导，以秩序、稳定与传统价值为纲，主张一个强而有力的中央。"
+ RULE_OPTION_LEP_PATH_JNSB: "£KR_game_rule_flag_CHN  工商勇进党取得多数"
+ RULE_OPTION_LEP_PATH_JNSB_DESC: "江南商帮改组为§c工商勇进党§!，民族资本与银行金融界成为政府的中坚，工商立国成为国策。"
+ RULE_OPTION_LEP_PATH_ZXX: "£KR_game_rule_flag_CHN  国民党携炬而行"
+ RULE_OPTION_LEP_PATH_ZXX_DESC: "政学系改组为§m国民党§!，承袭北洋国会传统，以议会政治与宪政为纲领。"
+
+ LEP_restrict_capital_merger_desc: ""
+
+ LEP_promote_land_reform: "推进土地改革"
+ LEP_promote_land_reform_desc: ""
+
+ LEP_reorganize_bureaucratic_capital: "整顿官僚资本"
+ LEP_reorganize_bureaucratic_capital_desc: ""
+
+ LEP_implement_revolutionary_program: "贯彻革命纲领"
+ LEP_implement_revolutionary_program_desc: ""
+
+	LEP_expand_social_relief: "扩大社会救济"
+ LEP_expand_social_relief_desc: ""
+
+	LEP_labor_management_consultation: "劳资协商"
+ LEP_labor_management_consultation_desc: ""
+
+	LEP_develop_public_education: "发展公共教育"
+ LEP_develop_public_education_desc: ""
+
+	LEP_freedom_of_press_and_publication: "新闻出版自由"
+ LEP_freedom_of_press_and_publication_desc: ""
+
+	LEP_expand_congressional_oversight: "扩大国会监督"
+ LEP_expand_congressional_oversight_desc: ""
+
+	LEP_support_academic_research: "支持学术研究"
+ LEP_support_academic_research_desc: ""
+
+
+	LEP_reduce_enterprise_burden: "企业减负"
+ LEP_reduce_enterprise_burden_desc: ""
+
+	LEP_tax_cuts_and_fee_reductions: "减税降费"
+ LEP_tax_cuts_and_fee_reductions_desc: ""
+
+	LEP_deregulation: "放松管制"
+ LEP_deregulation_desc: ""
+
+	LEP_free_trade: "自由贸易"
+ LEP_free_trade_desc: ""
+
+	LEP_strengthen_executive_authority: "强化行政权威"
+ LEP_strengthen_executive_authority_desc: ""
+
+	LEP_local_rectification: "地方整顿"
+ LEP_local_rectification_desc: ""
+
+	LEP_national_development_plan: "国家发展计划"
+ LEP_national_development_plan_desc: ""
+
+	LEP_improve_military_pay_and_benefits: "提高军人待遇"
+ LEP_improve_military_pay_and_benefits_desc: ""
+
+	LEP_additional_defense_appropriation: "额外国防拨款"
+ LEP_additional_defense_appropriation_desc: ""
+
+	LEP_resettle_veterans: "安置退伍军人"
+ LEP_resettle_veterans_desc: ""
+
+	LEP_youth_service_organization: "青年服务组织"
+ LEP_youth_service_organization_desc: ""
+
+	LEP_national_education: "国民教育"
+ LEP_national_education_desc: ""
+
+	LEP_anti_red_suppression_work: "反赤肃清工作"
+ LEP_anti_red_suppression_work_desc: ""
+
+ _China_Japan_tariff_treaty_chn: "中日关税条约"
+ _China_Japan_tariff_treaty_chn_desc: ""

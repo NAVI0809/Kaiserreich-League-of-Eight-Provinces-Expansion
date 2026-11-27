@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_RYK_cai_zhang_civilian_large"
+		texturefile = "gfx/leaders/RYK/RYK_cai_zhang.png"
+	}
+	
+}
