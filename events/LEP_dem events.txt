@@ -2856,6 +2856,7 @@ country_event = { #申新拍卖事件告一段落
 	id = league_mid.81
 	title = league_mid.81.t
 	desc = league_mid.81.d
+	picture = GFX_report_event_LEP_shenxin_factory
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2863,11 +2864,16 @@ country_event = { #申新拍卖事件告一段落
 	option = {
 		log = "[GetLogInfo]: event league_mid.81 option league_mid.81.a"
 		name = league_mid.81.a
+		country_event = { id = league_mid.82 days = 0 }
 	}
 
 	option = {
 		log = "[GetLogInfo]: event league_mid.81 option league_mid.81.b"
 		name = league_mid.81.b
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.01
+		}
 	}
 }
 
@@ -2875,6 +2881,7 @@ country_event = { #从钱庄到民族实业
 	id = league_mid.82
 	title = league_mid.82.t
 	desc = league_mid.82.d
+	picture = GFX_report_event_LEP_bing_chuan_label
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2882,6 +2889,7 @@ country_event = { #从钱庄到民族实业
 	option = {
 		log = "[GetLogInfo]: event league_mid.82 option league_mid.82.a"
 		name = league_mid.82.a
+		country_event = { id = league_mid.83 days = 0 }
 	}
 }
 
@@ -2889,6 +2897,7 @@ country_event = { #政局、债务与企业危机
 	id = league_mid.83
 	title = league_mid.83.t
 	desc = league_mid.83.d
+	picture = GFX_report_event_LEP_rong_zongjing
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -2896,20 +2905,48 @@ country_event = { #政局、债务与企业危机
 	option = {
 		log = "[GetLogInfo]: event league_mid.83 option league_mid.83.a"
 		name = league_mid.83.a
+		add_popularity = {
+			ideology = social_conservative
+			popularity = 0.01
+		}
 	}
 }	
 
-country_event = {
-	id = league_mid.1003
-	title = league_mid.1003.t
-	desc = league_mid.1003.d
+
+country_event = { #新社会民主党
+	id = league_mid.84
+	title = league_mid.84.t
+	desc = league_mid.84.d
+	picture = GFX_report_event_LEP_jiang_kanghu
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
-		log = "[GetLogInfo]: event league_mid.76 option league_mid.76.a"
-		name = league_mid.76.a
+		log = "[GetLogInfo]: event league_mid.84 option league_mid.84.a"
+		name = league_mid.84.a
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.01
+		}
+		effect_tooltip = {
+			set_party_name = {
+				ideology = totalist
+				name = LEP_new_social_democratic_party
+				long_name = LEP_new_social_democratic_party_long_fake
+			}
+		}
+		hidden_effect = {
+			promote_character = {
+				character = LEP_jiang_kanghu
+				ideology = totalist_subtype
+			}
+			set_party_name = {
+				ideology = totalist
+				name = LEP_new_social_democratic_party
+				long_name = LEP_new_social_democratic_party_long
+			}
+		}
 	}
 }	
 

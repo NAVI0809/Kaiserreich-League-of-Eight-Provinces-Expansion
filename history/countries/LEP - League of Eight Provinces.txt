@@ -124,6 +124,7 @@ country_event = {
 	id = china_events.70 #National Day of the Republic of China
 	days = 282 #Should Fire 10/10
 }
+country_event = { id = league_mid.81 days = 5 }
 
 ########################################
 #####- Section 04: Characters - ########
@@ -259,6 +260,7 @@ recruit_character = LEP_ye_zaifu
 recruit_character = LEP_zhu_jiaren
 recruit_character = LEP_liu_qingeng
 recruit_character = LEP_lin_shie
+recruit_character = LEP_jiang_kanghu
 
 ### Character Setup ###
 # LEPEXP 

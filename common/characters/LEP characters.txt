@@ -68,6 +68,21 @@ characters = {
 		}
 	}
 
+	#江亢虎
+	LEP_jiang_kanghu = {
+		name = LEP_jiang_kanghu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CHI_lixingshe_civilian_large
+			}
+		}
+		country_leader = {
+			# Placeholder leader, doesn't need desc
+			ideology = totalist_subtype
+			traits = { CHN_non_aligned }
+		}
+	}
+
 	#陳獨秀
 	LEP_dai_chunfeng_dummy = {
 		name = CHI_dai_chunfeng

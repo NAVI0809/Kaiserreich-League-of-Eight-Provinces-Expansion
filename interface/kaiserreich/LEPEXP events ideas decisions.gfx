@@ -124,6 +124,23 @@ spriteTypes = {
 		name = "GFX_report_event_LEP_jiangzhe_army"
 		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_jiangzhe_army.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_LEP_rong_zongjing"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_rong_zongjing.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_bing_chuan_label"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_bing_chuan_label.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_jiang_kanghu"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_jiang_kanghu.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEP_shenxin_factory"
+		texturefile = "gfx/event_pictures/East_Asia/China/LEP/LEP_shenxin_factory.png"
+	}
+
 
 	spriteType = {
 		name = "GFX_news_event_LEP_dem_victory"

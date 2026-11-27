@@ -63,8 +63,28 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
+			name = "LEP_seat_name_box_0"
+			position = { x = 16 y = 264 }
+			font = "hoi_16mbs"
+			text = "[LEP_seat_name_0][LEP_seat_mark_0]"
+			maxWidth = 340
+			maxHeight = 18
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "LEP_seat_num_box_0"
+			position = { x = 366 y = 264 }
+			font = "hoi_16mbs"
+			text = "[?LEP_seat_n0|0]"
+			maxWidth = 60
+			maxHeight = 18
+			format = right
+		}
+
+		instantTextBoxType = {
 			name = "LEP_seat_name_box_1"
-			position = { x = 16 y = 268 }
+			position = { x = 16 y = 282 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_1][LEP_seat_mark_1]"
 			maxWidth = 340
@@ -74,7 +94,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_1"
-			position = { x = 366 y = 268 }
+			position = { x = 366 y = 282 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n1|0]"
 			maxWidth = 60
@@ -84,7 +104,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_2"
-			position = { x = 16 y = 288 }
+			position = { x = 16 y = 300 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_2][LEP_seat_mark_2]"
 			maxWidth = 340
@@ -94,7 +114,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_2"
-			position = { x = 366 y = 288 }
+			position = { x = 366 y = 300 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n2|0]"
 			maxWidth = 60
@@ -104,7 +124,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_3"
-			position = { x = 16 y = 308 }
+			position = { x = 16 y = 318 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_3][LEP_seat_mark_3]"
 			maxWidth = 340
@@ -114,7 +134,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_3"
-			position = { x = 366 y = 308 }
+			position = { x = 366 y = 318 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n3|0]"
 			maxWidth = 60
@@ -124,7 +144,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_4"
-			position = { x = 16 y = 328 }
+			position = { x = 16 y = 336 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_4][LEP_seat_mark_4]"
 			maxWidth = 340
@@ -134,7 +154,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_4"
-			position = { x = 366 y = 328 }
+			position = { x = 366 y = 336 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n4|0]"
 			maxWidth = 60
@@ -144,7 +164,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_5"
-			position = { x = 16 y = 348 }
+			position = { x = 16 y = 354 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_5][LEP_seat_mark_5]"
 			maxWidth = 340
@@ -154,7 +174,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_5"
-			position = { x = 366 y = 348 }
+			position = { x = 366 y = 354 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n5|0]"
 			maxWidth = 60
@@ -164,7 +184,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_6"
-			position = { x = 16 y = 368 }
+			position = { x = 16 y = 372 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_6][LEP_seat_mark_6]"
 			maxWidth = 340
@@ -174,7 +194,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_6"
-			position = { x = 366 y = 368 }
+			position = { x = 366 y = 372 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n6|0]"
 			maxWidth = 60
@@ -184,7 +204,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_7"
-			position = { x = 16 y = 388 }
+			position = { x = 16 y = 390 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_7][LEP_seat_mark_7]"
 			maxWidth = 340
@@ -194,7 +214,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_7"
-			position = { x = 366 y = 388 }
+			position = { x = 366 y = 390 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n7|0]"
 			maxWidth = 60
@@ -224,7 +244,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_name_box_9"
-			position = { x = 16 y = 428 }
+			position = { x = 16 y = 426 }
 			font = "hoi_16mbs"
 			text = "[LEP_seat_name_9][LEP_seat_mark_9]"
 			maxWidth = 340
@@ -234,7 +254,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "LEP_seat_num_box_9"
-			position = { x = 366 y = 428 }
+			position = { x = 366 y = 426 }
 			font = "hoi_16mbs"
 			text = "[?LEP_seat_n9|0]"
 			maxWidth = 60

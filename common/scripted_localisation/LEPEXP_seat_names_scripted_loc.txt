@@ -3,6 +3,13 @@
 ### mark_N：状态标记（执政党 / 执政联盟 / 已查禁），与党名分开，便于并排显示
 
 defined_text = {
+	name = LEP_seat_name_0
+	text = {
+		localization_key = LEP_new_social_democratic_party
+	}
+}
+
+defined_text = {
 	name = LEP_seat_name_1
 	text = {
 		localization_key = LEP_yi_you_club_party
@@ -101,6 +108,7 @@ defined_text = {
 		localization_key = LEP_seat_mark_coalition
 	}
 	text = {
+		trigger = { NOT = { has_country_flag = LEP_thaw_broad } }
 		localization_key = LEP_seat_mark_banned
 	}
 	text = {

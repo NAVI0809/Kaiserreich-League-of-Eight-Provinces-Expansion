@@ -33,12 +33,11 @@ LEP_do_count_seats = {
 
 	# ② 参选资格
 	#    常驻：社会民主(3) 社会自由(4) 市场自由(5) 社会保守(6) 威权民主(7)
-	#    总体主义(0) 永不参选 —— 国民党(十人团)是特务机构，不适合进入议会
 	#    默认禁、只有「政治解冻及其后果」选宽容才开：
-	#    工团主义(1) 激进社会主义(2) 家长制独裁(8) 国家民粹主义(9)
-	set_temp_variable = { s0 = 0 }
+	#    总体主义(0) 工团主义(1) 激进社会主义(2) 家长制独裁(8) 国家民粹主义(9)
 	if = {
 		limit = { NOT = { has_country_flag = LEP_thaw_broad } }
+		set_temp_variable = { s0 = 0 }
 		set_temp_variable = { s1 = 0 }
 		set_temp_variable = { s8 = 0 }
 		set_temp_variable = { s9 = 0 }
