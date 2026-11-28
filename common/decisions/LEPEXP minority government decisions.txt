@@ -403,6 +403,7 @@ LEPEXP_parliament = {
 		available = {
 			NOT = { has_government = national_populist }
 			NOT = { is_in_coalition_with_national_populist = yes }
+			NOT = { has_country_flag = LEP_YCP_in_coalition }
 			# 该党须在国会占有席位（被查禁的党不参选、席次为 0）——
 			# 用 custom_trigger_tooltip 把原因讲清楚，而不是让它整条消失。
 			custom_trigger_tooltip = {

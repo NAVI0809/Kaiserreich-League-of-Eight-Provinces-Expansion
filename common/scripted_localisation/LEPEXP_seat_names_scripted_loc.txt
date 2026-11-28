@@ -255,7 +255,12 @@ defined_text = {
 		localization_key = LEP_seat_mark_ruling
 	}
 	text = {
-		trigger = { is_in_coalition_with_national_populist = yes }
+		trigger = {
+			OR = {
+				is_in_coalition_with_national_populist = yes
+				has_country_flag = LEP_YCP_in_coalition
+			}
+		}
 		localization_key = LEP_seat_mark_coalition
 	}
 	text = {

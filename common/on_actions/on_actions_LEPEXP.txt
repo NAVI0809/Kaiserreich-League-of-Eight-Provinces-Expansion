@@ -159,6 +159,7 @@ on_actions = {
 				}
 				set_country_flag = LEP_election_pending_check
 				end_coalition = yes
+				clr_country_flag = LEP_YCP_in_coalition
 				LEP_hold_election_seats = yes
 			}
 		}

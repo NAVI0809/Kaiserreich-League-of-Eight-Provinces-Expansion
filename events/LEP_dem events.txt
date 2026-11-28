@@ -1262,6 +1262,24 @@ country_event = { #3k党
 			ideology = national_populist
 			popularity = 0.01
 		}
+		effect_tooltip = {
+			set_party_name = {
+				ideology = national_populist
+				name = LEP_3K_party
+				long_name = LEP_3K_party_long_fake
+			}
+		}
+		hidden_effect = {
+			promote_character = {
+				character = LEP_assorted_leaders
+				ideology = national_populist_subtype
+			}
+			set_party_name = {
+				ideology = national_populist
+				name = LEP_3K_party
+				long_name = LEP_3K_party_long
+			}
+		}
 	}
 }
 
@@ -3238,6 +3256,7 @@ country_event = { #分道扬镳
 			    long_name = LEP_JNSB_party_long
 		    }
 			end_coalition = yes
+			clr_country_flag = LEP_YCP_in_coalition
 			set_country_flag =  LEP_RA_national_stage
 		}
 	}
@@ -4047,6 +4066,7 @@ unit_leader_event = { #民主科学社成立
 			    long_name = LEP_ZZH_party_long
 		    }
 			end_coalition = yes
+			clr_country_flag = LEP_YCP_in_coalition
 			QIE_huang_fu = {
 				unit_leader_event = { id = league_national.6 days = 2 }
 			}
@@ -4825,6 +4845,7 @@ country_event = {
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -4850,6 +4871,7 @@ country_event = {
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -4875,6 +4897,7 @@ country_event = {
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_phase_late
 		hidden_effect = {
@@ -5020,6 +5043,7 @@ country_event = { #第二次大选：公布结果
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
@@ -5062,6 +5086,7 @@ country_event = { #第二次大选：公布结果
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
@@ -5083,6 +5108,7 @@ country_event = { #第二次大选：公布结果
 			last_election = "[CURRENT_DATE]"
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
@@ -5112,6 +5138,7 @@ country_event = { #第二次大选：公布结果
 			}
 		}
 		end_coalition = yes
+		clr_country_flag = LEP_YCP_in_coalition
 		LEP_hold_election_seats = yes
 		set_country_flag = LEP_election_pending_check
 		set_country_flag = LEP_phase_late
@@ -5784,8 +5811,7 @@ country_event = { #谈判：青年党1
 	option = {
 		log = "[GetLogInfo]: event lep_election.30 option lep_election.30.a"
 		name = lep_election.30.a
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		add_to_coalition = yes
+		set_country_flag = LEP_YCP_in_coalition
 		add_timed_idea = {
 			idea = LEP_youth_service_organization
 			days = 240
@@ -5810,8 +5836,7 @@ country_event = { #谈判：青年党2
 	option = {
 		log = "[GetLogInfo]: event lep_election.31 option lep_election.31.a"
 		name = lep_election.31.a
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		add_to_coalition = yes
+		set_country_flag = LEP_YCP_in_coalition
 		add_timed_idea = {
 			idea = LEP_national_education
 			days = 210
@@ -5836,8 +5861,7 @@ country_event = { #谈判：青年党3
 	option = {
 		log = "[GetLogInfo]: event lep_election.32 option lep_election.32.a"
 		name = lep_election.32.a
-		set_temp_variable = { coalition_partner_var = token:national_populist }
-		add_to_coalition = yes
+		set_country_flag = LEP_YCP_in_coalition
 		add_timed_idea = {
 			idea = LEP_anti_red_suppression_work
 			days = 270

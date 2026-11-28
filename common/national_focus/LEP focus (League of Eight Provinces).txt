@@ -737,11 +737,14 @@ focus_tree = {
 				activate_targeted_decision = { target = LEP decision = LEP_organization_act }
 				recruit_character = LEP_Nanking_parliament
 				activate_advisor = LEP_Nanking_parliament
-				country_event = { id = league_mid.31 days = 5 }
-				country_event = { id = league_mid.32 days = 35 }
 				country_event = { id = league_mid.11 days = 3 }
-				country_event = { id = league_mid.76 days = 80 }
+				country_event = { id = league_mid.31 days = 5 }
+				country_event = { id = league_mid.29 days = 20 }
+				country_event = { id = league_mid.32 days = 35 }
 				country_event = { id = league_mid.84 days = 50 }
+				country_event = { id = league_mid.76 days = 80 }
+				
+				
 				
 				if = {
 					limit = {
@@ -1680,7 +1683,7 @@ focus_tree = {
 			LEP_strengthen_ZXX_small = yes
 			hidden_effect = {
 				LEP_zhao_fengchang = { CHN_recruit_character_effect = yes }
-				country_event = { id = league_mid.29 days = 30 }
+				
 			}
 		}
 
