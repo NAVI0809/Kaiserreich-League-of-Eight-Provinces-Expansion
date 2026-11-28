@@ -853,7 +853,10 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			unlock_decision_tooltip = LEP_hold_provincial_council
 			custom_effect_tooltip = tooltip_white_line
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				country_event = { id = league_mid.77 days = 3 }
 				LEP_yin_ruli = { CHN_recruit_character_effect = yes }
@@ -883,7 +886,10 @@ focus_tree = {
 				add_idea = LEP_autonomy_outline_idea1m
 			}
 			LEP_qi_resistance_step_down = yes
-			LEP_strengthen_JNSB_small = yes
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.03
+			}
 		}
 	}
 	focus = {
@@ -908,7 +914,10 @@ focus_tree = {
 				add_idea = LEP_autonomy_outline_idea1n
 			}
 			LEP_qi_resistance_step_down = yes
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 	focus = {
@@ -948,7 +957,10 @@ focus_tree = {
 				}
 			}
 			country_event = { id = league_mid.44 days = 0 }
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				LEP_jiang_qian = { CHN_recruit_character_effect = yes }
 			}
@@ -1376,7 +1388,10 @@ focus_tree = {
 				add_ideas = LEP_provincial_county_organization_act_idea
 			}
 			LEP_strengthen_ZXX_small = yes
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_provincial_county_organization_act }
 				
@@ -1412,7 +1427,10 @@ focus_tree = {
 			unlock_decision_tooltip = LEP_local_industry_protection
 			unlock_decision_tooltip = LEP_relax_chamber_commerce_autonomy
 			custom_effect_tooltip = tooltip_white_line
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				LEP_rong_desheng = { CHN_recruit_character_effect = yes }
 				LEP_yu_qiaqing = { CHN_recruit_character_effect = yes }
@@ -1498,7 +1516,10 @@ focus_tree = {
 				custom_effect_tooltip = LEP_when_act_pass
 				add_ideas = LEP_mass_layoff_protection_act_idea
 			}
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_mass_layoff_protection_act }
 			}
@@ -1530,7 +1551,10 @@ focus_tree = {
 			add_ideas = LEP_new_citizen1
 			custom_effect_tooltip = tooltip_white_line
 			LEP_improve_popular_support = yes
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				country_event = { id = league_mid.33 days = 25 }
 				country_event = { id = league_mid.35 days = 40 }
@@ -1600,7 +1624,10 @@ focus_tree = {
 			custom_effect_tooltip = tooltip_white_line
 			add_research_slot_until_five = yes
 			country_event = { id = league_mid.35 days = 0 }
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_compulsory_education_act }
 				LEP_jing_yaoyue = { CHN_recruit_character_effect = yes }
@@ -1674,7 +1701,10 @@ focus_tree = {
 		completion_reward = {
 			LEP_improve_popular_support = yes
 			country_event = { id = league_mid.45 days = 0 }
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 	}
 	focus = {
@@ -1713,7 +1743,10 @@ focus_tree = {
 				}
 			}
 			country_event = { id = league_mid.46 days = 0 }
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			LEP_strengthen_JNSB_small = yes
 		}
 	}
@@ -1894,7 +1927,10 @@ focus_tree = {
 			    LEP_social_liberal_drift = 0.02
 			    tooltip = social_liberal_drift_tooltip
 		    }
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 		}
 
 	}
@@ -2391,7 +2427,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_stability = 0.1
-			LEP_strengthen_ZZH_small = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.03
+			}
 			LEP_strengthen_ZXX_small = yes
 			CHN_improve_economic_devastation_effect = yes
 		}
@@ -2678,6 +2717,15 @@ focus_tree = {
 			activate_targeted_decision = { target = FROM decision = LEP_MIO_hongqiao_investment }
 			activate_targeted_decision = { target = FROM decision = LEP_MIO_jianqiao_investment }
 			activate_targeted_decision = { target = FROM decision = LEP_MIO_fujian_investment }
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_heavy_in_gov_tt
+				CHN_add_civilian_industry_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_heavy_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -2772,6 +2820,15 @@ focus_tree = {
 			LEP_NSU_right = yes
 			LEP_election_pending_NSU_right = yes
 					LEP_election_pending_JNSB = yes
+			# 联盟伙伴加成：该党在政府之内（is_part_of_government_*，含执政党本身）
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_legacy_JNSB_in_gov_tt
+				add_political_power = 40
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_legacy_JNSB_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -2824,6 +2881,15 @@ focus_tree = {
 			LEP_NSU_left = yes
 			LEP_election_pending_DSP = yes
 			LEP_election_pending_NSU_left = yes
+			# 联盟伙伴加成：该党在政府之内（is_part_of_government_*，含执政党本身）
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_democracy_JGH_in_gov_tt
+				add_stability = 0.04
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_democracy_JGH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -2896,6 +2962,15 @@ focus_tree = {
 				idea = LEP_womens_rights_idea
 				days = 120
 			}
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_womens_JGH_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_womens_JGH_not_in_gov_tt
+			}
 		}
 		
 	}
@@ -2967,6 +3042,15 @@ focus_tree = {
 					HNN_zuo_shunsheng = { CHN_recruit_character_effect = yes }
 				}
 			}
+			# 联盟伙伴加成：中国青年党在政府之内
+			if = {
+				limit = { is_part_of_government_national_populist = yes }
+				custom_effect_tooltip = LEP_nic_rhetoric_YCP_in_gov_tt
+				add_war_support = 0.05
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_rhetoric_YCP_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3012,6 +3096,15 @@ focus_tree = {
 				LEP_zhang_yaozeng = { CHN_recruit_character_effect = yes }
 			}
 			LEP_election_pending_DSP = yes
+			# 联盟伙伴加成：民主科学社在政府之内
+			if = {
+				limit = { is_part_of_government_social_liberal = yes }
+				custom_effect_tooltip = LEP_nic_judicial_ZZH_in_gov_tt
+				add_stability = 0.03
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_judicial_ZZH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3065,6 +3158,15 @@ focus_tree = {
 					CHI_shi_cuntong = { CHN_recruit_character_effect = yes }
 					CHI_zhang_bojun = { CHN_recruit_character_effect = yes }
 				}
+			}
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_civilian_JGH_in_gov_tt
+				add_stability = 0.03
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_civilian_JGH_not_in_gov_tt
 			}
 		}
 	}
@@ -3126,6 +3228,15 @@ focus_tree = {
 			# 下次大选的竞选声势：法条通过，学界与工人会记住这件事
 			LEP_election_pending_DSP = yes
 			LEP_election_pending_JNSB = yes
+			# 联盟伙伴加成：中工盟在政府之内
+			if = {
+				limit = { is_part_of_government_syndicalist = yes }
+				custom_effect_tooltip = LEP_nic_factory_law_GTD_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_factory_law_GTD_not_in_gov_tt
+			}
 		}
 	}
 
@@ -3214,6 +3325,15 @@ focus_tree = {
 			LEP_election_pending_JNSB = yes
 			LEP_election_pending_KMT = yes
 
+			# 联盟伙伴加成：国民党在政府之内
+			if = {
+				limit = { is_part_of_government_market_liberal = yes }
+				custom_effect_tooltip = LEP_nic_beiyang_ZXX_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_beiyang_ZXX_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3283,6 +3403,15 @@ focus_tree = {
 			}
 			LEP_election_pending_JNSB = yes
 			LEP_election_pending_DSP = yes
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_property_JNSB_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_property_JNSB_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3356,6 +3485,15 @@ focus_tree = {
 			
 			
 			
+			# 联盟伙伴加成：民主科学社在政府之内
+			if = {
+				limit = { is_part_of_government_social_liberal = yes }
+				custom_effect_tooltip = LEP_nic_civil_code_ZZH_in_gov_tt
+				add_political_power = 30
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_civil_code_ZZH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3426,6 +3564,15 @@ focus_tree = {
 					}
 				}
 			}
+			# 联盟伙伴加成：民主科学社在政府之内
+			if = {
+				limit = { is_part_of_government_social_liberal = yes }
+				custom_effect_tooltip = LEP_nic_elite_ZZH_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_elite_ZZH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3473,6 +3620,15 @@ focus_tree = {
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
 				days = -100
+			}
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_production_JNSB_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_production_JNSB_not_in_gov_tt
 			}
 		}
 	}
@@ -3577,6 +3733,15 @@ focus_tree = {
 			USA = {
 				country_event = {id = league_national.11 days = 0 }
 			}
+			# 联盟伙伴加成：该党在政府之内（is_part_of_government_*，含执政党本身）
+			if = {
+				limit = { is_part_of_government_market_liberal = yes }
+				custom_effect_tooltip = LEP_nic_recognition_ZXX_in_gov_tt
+				add_political_power = 50
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_recognition_ZXX_not_in_gov_tt
+			}
 		}
 	}
 	
@@ -3598,6 +3763,19 @@ focus_tree = {
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
 				days = -100
+			}
+			# 联盟伙伴加成：该党在政府之内（is_part_of_government_*，含执政党本身）
+			if = {
+				limit = { is_part_of_government_syndicalist = yes }
+				custom_effect_tooltip = LEP_nic_economy_GTD_in_gov_tt
+				add_stability = 0.03
+				add_days_mission_timeout = {
+					mission = LEP_economic_recovery_ongoing
+					days = -50
+				}
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_economy_GTD_not_in_gov_tt
 			}
 		}
 	}
@@ -3672,6 +3850,15 @@ focus_tree = {
 						fallback = yes
 					}
 				}
+			}
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_railway_JNSB_in_gov_tt
+				CHN_add_civilian_industry_effect = yes
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_railway_JNSB_not_in_gov_tt
 			}
 		}
 	}
@@ -3779,6 +3966,15 @@ focus_tree = {
 				}
 			}
 		    search_filters = { FOCUS_FILTER_INDUSTRY }
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_resources_JNSB_in_gov_tt
+				add_political_power = 30
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_resources_JNSB_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3804,6 +4000,15 @@ focus_tree = {
 			hidden_effect = {
 				LEP_lu_yudao = { CHN_recruit_character_effect = yes }
 			}
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_health_JGH_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_health_JGH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3826,6 +4031,15 @@ focus_tree = {
 			add_days_mission_timeout = {
 				mission = LEP_economic_recovery_ongoing
 				days = -50
+			}
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_infrastructure_JNSB_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_infrastructure_JNSB_not_in_gov_tt
 			}
 		}
 	}
@@ -3863,6 +4077,15 @@ focus_tree = {
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_land_act }
 			}
+			# 联盟伙伴加成：农工民主党在政府之内
+			if = {
+				limit = { is_part_of_government_radical_socialist = yes }
+				custom_effect_tooltip = LEP_nic_farmers_NGMD_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_farmers_NGMD_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -3899,6 +4122,15 @@ focus_tree = {
 				LEP_liang_xi = { CHN_recruit_character_effect = yes }
 				LEP_pan_shu = { CHN_recruit_character_effect = yes }
 				LEP_wu_zaoxi = { CHN_recruit_character_effect = yes }
+			}
+			# 联盟伙伴加成：民主科学社在政府之内
+			if = {
+				limit = { is_part_of_government_social_liberal = yes }
+				custom_effect_tooltip = LEP_nic_education_ZZH_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_education_ZZH_not_in_gov_tt
 			}
 		}
 	}
@@ -4056,6 +4288,15 @@ focus_tree = {
 				amount = 250
 				producer = USA
 			}
+			# 联盟伙伴加成：国民党在政府之内
+			if = {
+				limit = { is_part_of_government_market_liberal = yes }
+				custom_effect_tooltip = LEP_nic_appeal_ZXX_in_gov_tt
+				add_political_power = 30
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_appeal_ZXX_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4134,6 +4375,15 @@ focus_tree = {
 			}
 			unlock_decision_tooltip = LEP_train_technical_talent
 			unlock_decision_tooltip = LEP_recall_skilled_workers
+			# 联盟伙伴加成：工商勇进党在政府之内
+			if = {
+				limit = { is_part_of_government_social_conservative = yes }
+				custom_effect_tooltip = LEP_nic_tech_JNSB_in_gov_tt
+				add_equipment_to_stockpile = { type = infantry_equipment amount = 500 }
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_tech_JNSB_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4167,6 +4417,15 @@ focus_tree = {
 			LEP_NSU_right = yes
 			# 先发优势：景星会已在联盟内占主导，全国动员时能借重其地方人脉
 			LEP_election_pending_NSU_right = yes
+			# 联盟伙伴加成：景星会在政府之内
+			if = {
+				limit = { is_part_of_government_authoritarian_democrat = yes }
+				custom_effect_tooltip = LEP_nic_president_JXH_in_gov_tt
+				add_political_power = 40
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_president_JXH_not_in_gov_tt
+			}
 		}
 	}
 	
@@ -4226,6 +4485,15 @@ focus_tree = {
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_social_security_act }	
 			}
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_social_security_JGH_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_social_security_JGH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4253,6 +4521,15 @@ focus_tree = {
 			}
 			LEP_election_pending_KMT = yes
 			LEP_election_pending_JNSB = yes
+			# 联盟伙伴加成：民主科学社在政府之内
+			if = {
+				limit = { is_part_of_government_social_liberal = yes }
+				custom_effect_tooltip = LEP_nic_issues_ZZH_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_issues_ZZH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4325,6 +4602,15 @@ focus_tree = {
 			}
 			LEP_election_pending_DSP = yes
 			LEP_election_pending_KMT = yes
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_alliance_JGH_in_gov_tt
+				add_political_power = 40
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_alliance_JGH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4372,6 +4658,15 @@ focus_tree = {
 				QIE_xiao_yaonan = {
 					CHN_recruit_character_effect = yes
 				}
+			}
+			# 联盟伙伴加成：退伍军人协会在政府之内
+			if = {
+				limit = { is_part_of_government_paternal_autocrat = yes }
+				custom_effect_tooltip = LEP_nic_local_TWJ_in_gov_tt
+				add_manpower = 5000
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_local_TWJ_not_in_gov_tt
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4436,6 +4731,15 @@ focus_tree = {
 			hidden_effect = {
 				activate_targeted_decision = { target = LEP decision = LEP_collective_agreement_act }
 			}
+			# 联盟伙伴加成：中国青年党在政府之内
+			if = {
+				limit = { is_part_of_government_national_populist = yes }
+				custom_effect_tooltip = LEP_nic_civic_YCP_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_civic_YCP_not_in_gov_tt
+			}
 		}
 	}
 
@@ -4470,6 +4774,15 @@ focus_tree = {
 			LEP_NSU_left = yes
 			# 先发优势：人民救国会在联盟内已占主导，全国动员时能借重其组织
 			LEP_election_pending_NSU_left = yes
+			# 联盟伙伴加成：国民党在政府之内
+			if = {
+				limit = { is_part_of_government_market_liberal = yes }
+				custom_effect_tooltip = LEP_nic_parliament_ZXX_in_gov_tt
+				add_political_power = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_parliament_ZXX_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4541,6 +4854,15 @@ focus_tree = {
 			CHN_add_civilian_industry_effect = yes
 			set_temp_variable = { LEP_cons_var_change = 1 }
 			LEP_cons_var = yes
+			# 联盟伙伴加成：农工民主党在政府之内
+			if = {
+				limit = { is_part_of_government_radical_socialist = yes }
+				custom_effect_tooltip = LEP_nic_works_NGMD_in_gov_tt
+				add_manpower = 3000
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_works_NGMD_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4576,6 +4898,15 @@ focus_tree = {
 			army_experience = -20
 			add_command_power = 25
 			retire_character = LEP_shi_yousan
+			# 联盟伙伴加成：景星会在政府之内
+			if = {
+				limit = { is_part_of_government_authoritarian_democrat = yes }
+				custom_effect_tooltip = LEP_nic_audit_JXH_in_gov_tt
+				army_experience = 25
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_audit_JXH_not_in_gov_tt
+			}
 		}
 	}
 	focus = {
@@ -4619,6 +4950,15 @@ focus_tree = {
 		relative_position_id = LEP_new_factory_law
 		completion_reward = {
 			country_event = { id = league_national.23 days = 0 }
+			# 联盟伙伴加成：人民救国会在政府之内
+			if = {
+				limit = { is_part_of_government_social_democrat = yes }
+				custom_effect_tooltip = LEP_nic_hearing_JGH_in_gov_tt
+				add_stability = 0.02
+			}
+			else = {
+				custom_effect_tooltip = LEP_nic_hearing_JGH_not_in_gov_tt
+			}
 		}
 	}
 

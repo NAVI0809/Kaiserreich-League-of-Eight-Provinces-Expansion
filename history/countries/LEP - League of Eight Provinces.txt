@@ -507,3 +507,6 @@ set_variable = {
 	var = LEP_tsingtau_level
 	value = 2
 }
+
+#结盟谈判价格（决议 cost 读取）：基础 25 + 每个已在联盟的党 50
+set_variable = { global.LEP_invite_cost_var = 25 }

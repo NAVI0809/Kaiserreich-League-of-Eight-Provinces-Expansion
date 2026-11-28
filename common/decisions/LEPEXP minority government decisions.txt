@@ -76,7 +76,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_totalist_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = totalist }
@@ -110,7 +110,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_syndicalist_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = syndicalist }
@@ -148,7 +148,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_radical_socialist_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = radical_socialist }
@@ -186,7 +186,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_social_democrat_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_democrat }
@@ -224,7 +224,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_social_liberal_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_liberal }
@@ -258,7 +258,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_market_liberal_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = market_liberal }
@@ -292,7 +292,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_social_conservative_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = social_conservative }
@@ -326,7 +326,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_authoritarian_democrat_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = authoritarian_democrat }
@@ -364,7 +364,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_paternal_autocrat_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = paternal_autocrat }
@@ -398,7 +398,7 @@ LEPEXP_parliament = {
 
 	LEP_invite_national_populist_decision = {
 		icon = GFX_decision_generic_agreement
-		cost = 0
+		cost = global.LEP_invite_cost_var
 		visible = { has_country_flag = LEP_minority_gov }
 		available = {
 			NOT = { has_government = national_populist }

@@ -24,13 +24,12 @@ country_event = { #test
 	option = { #
 		log = "[GetLogInfo]: event league_mid.999 option league_mid.999.a"
 		name = league_mid.999.a
-		set_politics = {
-			ruling_party = social_democrat
-		}
-		promote_character = {
-			character = LEP_zou_taofen
-			ideologies = social_democrat_subtype
-		}
+		LEP_hold_election_seats = yes
+		LEP_strengthen_YCP_large = yes
+		LEP_strengthen_YCP_large = yes
+		LEP_strengthen_YCP_large = yes
+		LEP_strengthen_YCP_large = yes
+		LEP_strengthen_YCP_large = yes
 		
 		
 		
@@ -2739,12 +2738,9 @@ country_event = { #青年党在华东
 		add_political_power = 10
 		add_popularity = {
 			ideology = social_liberal
-			popularity = 0.03
-		}
-		add_popularity = {
-			ideology = national_populist
 			popularity = 0.01
 		}
+		LEP_strengthen_YCP_large = yes
 	}
 
 	option = {
@@ -2755,10 +2751,7 @@ country_event = { #青年党在华东
 			ideology = paternal_autocrat
 			popularity = 0.03
 		}
-		add_popularity = {
-			ideology = national_populist
-			popularity = 0.01
-		}
+		LEP_strengthen_YCP_large = yes
 	}
 
 	option = {

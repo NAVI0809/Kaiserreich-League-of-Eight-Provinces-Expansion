@@ -939,6 +939,10 @@ LEP_dem_unification_effect = {
 	}
 }
 
+### 「影响力」效果：主账走 party_popularity（小幅 3% / 大幅 8%），
+### 另叠一小笔国会席位（小幅 2 席 / 大幅 4 席，经 LEP_seat_pending 累积、
+### 在重排席位时兑现），使「影响力」在国会有直接体现而不至于重复计太多。
+### 青年党例外——只给席位、不动支持率，且数额仍为 3 / 8，见文件下方 YCP 段。
 LEP_strengthen_ZZH_small = {
 	custom_effect_tooltip = LEP_add_ZZH_small_tooltip
 	hidden_effect = {
@@ -946,6 +950,7 @@ LEP_strengthen_ZZH_small = {
 			ideology = social_liberal
 			popularity = 0.03
 		}
+		add_to_variable = { LEP_seat_pending_4 = 2 }
 	}
 }
 
@@ -956,6 +961,7 @@ LEP_strengthen_ZZH_large = {
 			ideology = social_liberal
 			popularity = 0.08
 		}
+		add_to_variable = { LEP_seat_pending_4 = 4 }
 	}
 }
 
@@ -966,6 +972,7 @@ LEP_strengthen_ZXX_small = {
 			ideology = market_liberal
 			popularity = 0.03
 		}
+		add_to_variable = { LEP_seat_pending_5 = 2 }
 	}
 }
 
@@ -976,6 +983,7 @@ LEP_strengthen_ZXX_large = {
 			ideology = market_liberal
 			popularity = 0.08
 		}
+		add_to_variable = { LEP_seat_pending_5 = 4 }
 	}
 }
 
@@ -986,6 +994,7 @@ LEP_strengthen_JNSB_small = {
 			ideology = social_conservative
 			popularity = 0.03
 		}
+		add_to_variable = { LEP_seat_pending_6 = 2 }
 	}
 }
 
@@ -996,6 +1005,7 @@ LEP_strengthen_JNSB_large = {
 			ideology = social_conservative
 			popularity = 0.08
 		}
+		add_to_variable = { LEP_seat_pending_6 = 4 }
 	}
 }
 
@@ -1006,6 +1016,7 @@ LEP_strengthen_JGH_large = {
 			ideology = social_democrat
 			popularity = 0.08
 		}
+		add_to_variable = { LEP_seat_pending_3 = 4 }
 	}
 }
 
@@ -1016,6 +1027,7 @@ LEP_strengthen_JXH_large = {
 			ideology = authoritarian_democrat
 			popularity = 0.08
 		}
+		add_to_variable = { LEP_seat_pending_7 = 4 }
 	}
 }
 
@@ -1026,6 +1038,7 @@ LEP_weaken_ZZH_small = {
 			ideology = social_liberal
 			popularity = -0.03
 		}
+		add_to_variable = { LEP_seat_pending_4 = -2 }
 	}
 }
 
@@ -1036,6 +1049,7 @@ LEP_weaken_ZZH_large = {
 			ideology = social_liberal
 			popularity = -0.08
 		}
+		add_to_variable = { LEP_seat_pending_4 = -4 }
 	}
 }
 
@@ -1046,6 +1060,7 @@ LEP_weaken_ZXX_small = {
 			ideology = market_liberal
 			popularity = -0.03
 		}
+		add_to_variable = { LEP_seat_pending_5 = -2 }
 	}
 }
 
@@ -1056,6 +1071,7 @@ LEP_weaken_ZXX_large = {
 			ideology = market_liberal
 			popularity = -0.08
 		}
+		add_to_variable = { LEP_seat_pending_5 = -4 }
 	}
 }
 
@@ -1066,6 +1082,7 @@ LEP_weaken_JNSB_small = {
 			ideology = social_conservative
 			popularity = -0.03
 		}
+		add_to_variable = { LEP_seat_pending_6 = -2 }
 	}
 }
 
@@ -1074,10 +1091,45 @@ LEP_weaken_JNSB_large = {
 	hidden_effect = {
 		add_popularity = {
 			ideology = social_conservative
-			popularity = -0.03
+			popularity = -0.08
 		}
+		add_to_variable = { LEP_seat_pending_6 = -4 }
 	}
 }
+
+### 青年党（national_populist，席位序号 9）的影响力效果
+### 与其他党不同：只给国会席位，不动 party_popularity ——
+### 该党名义上属国家民粹主义，支持率留在原处更贴近其实际地位。
+### 小幅 3 席 / 大幅 8 席，先累入 LEP_seat_pending_9，
+### 由 LEP_settle_seat_pending 在重排席位时并入 bonus。
+LEP_strengthen_YCP_small = {
+	custom_effect_tooltip = LEP_add_YCP_small_tooltip
+	hidden_effect = {
+		add_to_variable = { LEP_seat_pending_9 = 3 }
+	}
+}
+
+LEP_strengthen_YCP_large = {
+	custom_effect_tooltip = LEP_add_YCP_large_tooltip
+	hidden_effect = {
+		add_to_variable = { LEP_seat_pending_9 = 8 }
+	}
+}
+
+LEP_weaken_YCP_small = {
+	custom_effect_tooltip = LEP_sub_YCP_small_tooltip
+	hidden_effect = {
+		add_to_variable = { LEP_seat_pending_9 = -3 }
+	}
+}
+
+LEP_weaken_YCP_large = {
+	custom_effect_tooltip = LEP_sub_YCP_large_tooltip
+	hidden_effect = {
+		add_to_variable = { LEP_seat_pending_9 = -8 }
+	}
+}
+
 
 LEP_change_clothes_of_generals = {
 	LEP_chen_yi = {

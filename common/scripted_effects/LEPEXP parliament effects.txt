@@ -1,6 +1,9 @@
 ### LEP 国会席位图 · 数据层（274 席）
 ### 调用 LEP_hold_election_seats：请求重排席位（延迟 1 天执行，见文件末尾说明）
 ### 实际计算在 LEP_do_count_seats：按各党支持率把席位分下去，产出帧数组 LEP_seat_party
+### 影响力效果另叠的席位（其他五党小幅 2 / 大幅 4，青年党 3 / 8）只累加 LEP_seat_pending_N，
+###   由 LEP_hold_election_seats 统一兑现进 LEP_seat_bonus_N 后再算进席位；
+###   支持率那一笔仍由 party_popularity 自行结算。
 ### 帧号 = 政治光谱序（10 个意识形态）：
 ###   0 totalist (#770F00)
 ###   1 syndicalist (#E30613)
@@ -16,7 +19,29 @@
 ### 归一化：有效党派按比例分摊，保证总数恰好 274
 ### 席位坐标写死在 interface/kaiserreich/LEPEXP_parliament.gui
 
+### ─────────────────────────────────────────────────────────
+### LEP_recalc_invite_cost：结盟谈判的政治点价格
+###   价格 = 25 + 50 × 已在执政联盟中的党数（不含执政党本身）。
+###   决议里写 cost = global.LEP_invite_cost_var，政治点不足时游戏自动禁用该决议。
+###   校验点：LEP_do_count_seats 每次重排席位时重算 —— 入盟与换届解散都会触发重排。
+### ─────────────────────────────────────────────────────────
+LEP_recalc_invite_cost = {
+	set_variable = { global.LEP_invite_cost_var = 25 }
+	if = { limit = { is_in_coalition_with_totalist = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_syndicalist = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_radical_socialist = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_social_democrat = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_social_liberal = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_market_liberal = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_social_conservative = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_authoritarian_democrat = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_paternal_autocrat = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+	if = { limit = { is_in_coalition_with_national_populist = yes } add_to_variable = { global.LEP_invite_cost_var = 50 } }
+}
+
 LEP_do_count_seats = {
+	# 结盟谈判价格随联盟规模递增（详见下方 LEP_recalc_invite_cost）
+	LEP_recalc_invite_cost = yes
 
 	# ① 取 10 个意识形态的支持率（KR 里一个意识形态对应一个政党）
 	#    注意 party_popularity@xxx 必须包在 { value = ... } 里，否则会被读成 0
@@ -30,6 +55,139 @@ LEP_do_count_seats = {
 	set_temp_variable = { s7 = { value = party_popularity@authoritarian_democrat } }
 	set_temp_variable = { s8 = { value = party_popularity@paternal_autocrat } }
 	set_temp_variable = { s9 = { value = party_popularity@national_populist } }
+
+	# ①.5 青年党（国家民粹主义）席位接口
+	#   LEP_youth_party_seat_var = 百分比修正，缺省 0（+15 即席位份额 +15%，-30 即削减 30%）
+	#   用法：add_to_variable = { LEP_youth_party_seat_var = 15 }，改完调用 LEP_hold_election_seats 重排
+	#   位置在 ② 之前：未解禁（无 LEP_thaw_broad）时 s9 仍会被归零，变量只在解禁后起作用
+	set_temp_variable = { ymod = 1 }
+	if = {
+		limit = { has_variable = LEP_youth_party_seat_var }
+		set_temp_variable = { yadd = LEP_youth_party_seat_var }
+		divide_temp_variable = { yadd = 100 }
+		add_to_temp_variable = { ymod = yadd }
+	}
+	# 乘数下限 0：负修正最多把该党支持率压到 0，不会出现负席位
+	if = {
+		limit = { NOT = { check_variable = { ymod > 0 } } }
+		set_temp_variable = { ymod = 0 }
+	}
+	multiply_temp_variable = { s9 = ymod }
+
+	# ①.6 影响力席位加成（LEP_seat_bonus_0..9）
+	#   由 LEP_settle_seat_pending 在 LEP_hold_election_seats 时从 LEP_seat_pending_* 兑现而来，
+	#   写入方：其他五党影响力（小幅 2 席 / 大幅 4 席）与青年党（3 / 8）
+	#   与本轮 popularity 分到的席位叠加结算：
+	#   最终席位 = 按支持率分到的席位 + 本项加成，总数仍为 274
+	#   换算：一席 = 有效支持率总和 / 274，把加成折成支持率权重，再走原有归一化
+	#   不设单党上下限：写多少就体现多少，仅受 274 席归一化约束
+	#   负加成把支持率压到 0 以下时，由 ③ 门槛统一归零，不会出现负席位
+	set_temp_variable = { seat_sum = 0 }
+	add_to_temp_variable = { seat_sum = s0 }
+	add_to_temp_variable = { seat_sum = s1 }
+	add_to_temp_variable = { seat_sum = s2 }
+	add_to_temp_variable = { seat_sum = s3 }
+	add_to_temp_variable = { seat_sum = s4 }
+	add_to_temp_variable = { seat_sum = s5 }
+	add_to_temp_variable = { seat_sum = s6 }
+	add_to_temp_variable = { seat_sum = s7 }
+	add_to_temp_variable = { seat_sum = s8 }
+	add_to_temp_variable = { seat_sum = s9 }
+	if = {
+		limit = { check_variable = { seat_sum > 0 } }
+		set_temp_variable = { seat_unit = seat_sum }
+		divide_temp_variable = { seat_unit = 274 }
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_0
+				NOT = { check_variable = { LEP_seat_bonus_0 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_0 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s0 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_1
+				NOT = { check_variable = { LEP_seat_bonus_1 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_1 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s1 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_2
+				NOT = { check_variable = { LEP_seat_bonus_2 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_2 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s2 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_3
+				NOT = { check_variable = { LEP_seat_bonus_3 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_3 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s3 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_4
+				NOT = { check_variable = { LEP_seat_bonus_4 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_4 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s4 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_5
+				NOT = { check_variable = { LEP_seat_bonus_5 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_5 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s5 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_6
+				NOT = { check_variable = { LEP_seat_bonus_6 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_6 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s6 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_7
+				NOT = { check_variable = { LEP_seat_bonus_7 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_7 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s7 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_8
+				NOT = { check_variable = { LEP_seat_bonus_8 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_8 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s8 = sbshift }
+		}
+		if = {
+			limit = {
+				has_variable = LEP_seat_bonus_9
+				NOT = { check_variable = { LEP_seat_bonus_9 = 0 } }
+			}
+			set_temp_variable = { sbshift = LEP_seat_bonus_9 }
+			multiply_temp_variable = { sbshift = seat_unit }
+			add_to_temp_variable = { s9 = sbshift }
+		}
+	}
 
 	# ② 参选资格
 	#    常驻：社会民主(3) 社会自由(4) 市场自由(5) 社会保守(6) 威权民主(7)
@@ -395,6 +553,90 @@ LEP_do_count_seats = {
 }
 
 ### ─────────────────────────────────────────────────────────
+### LEP_settle_seat_pending：把累积的影响力兑现成席位补偿
+###   影响力效果另叠的席位（其他五党 ±2/±4、青年党 ±3/±8）
+###   只累加 LEP_seat_pending_N，
+###   当场的席位图不受影响。本效果由 LEP_hold_election_seats 调用，
+###   一次性并入 LEP_seat_bonus_N 并把 pending 清零；
+###   其后的重算（LEP_do_count_seats）按 bonus 落席。
+###   兑现时机 = 请求重排席位的那一刻，而该效果绝大多数调用点都在
+###   大选结算与组阁，故表现为「影响力累积到下届大选才体现」。
+### ─────────────────────────────────────────────────────────
+LEP_settle_seat_pending = {
+	# n0 = 新社会民主党（totalist）… n9 = 青年党（national_populist）
+	if = {
+		limit = { has_variable = LEP_seat_pending_0 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_0 } } set_variable = { LEP_seat_bonus_0 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_0 }
+		add_to_variable = { LEP_seat_bonus_0 = settle_add }
+		set_variable = { LEP_seat_pending_0 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_1 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_1 } } set_variable = { LEP_seat_bonus_1 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_1 }
+		add_to_variable = { LEP_seat_bonus_1 = settle_add }
+		set_variable = { LEP_seat_pending_1 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_2 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_2 } } set_variable = { LEP_seat_bonus_2 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_2 }
+		add_to_variable = { LEP_seat_bonus_2 = settle_add }
+		set_variable = { LEP_seat_pending_2 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_3 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_3 } } set_variable = { LEP_seat_bonus_3 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_3 }
+		add_to_variable = { LEP_seat_bonus_3 = settle_add }
+		set_variable = { LEP_seat_pending_3 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_4 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_4 } } set_variable = { LEP_seat_bonus_4 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_4 }
+		add_to_variable = { LEP_seat_bonus_4 = settle_add }
+		set_variable = { LEP_seat_pending_4 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_5 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_5 } } set_variable = { LEP_seat_bonus_5 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_5 }
+		add_to_variable = { LEP_seat_bonus_5 = settle_add }
+		set_variable = { LEP_seat_pending_5 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_6 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_6 } } set_variable = { LEP_seat_bonus_6 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_6 }
+		add_to_variable = { LEP_seat_bonus_6 = settle_add }
+		set_variable = { LEP_seat_pending_6 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_7 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_7 } } set_variable = { LEP_seat_bonus_7 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_7 }
+		add_to_variable = { LEP_seat_bonus_7 = settle_add }
+		set_variable = { LEP_seat_pending_7 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_8 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_8 } } set_variable = { LEP_seat_bonus_8 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_8 }
+		add_to_variable = { LEP_seat_bonus_8 = settle_add }
+		set_variable = { LEP_seat_pending_8 = 0 }
+	}
+	if = {
+		limit = { has_variable = LEP_seat_pending_9 }
+		if = { limit = { NOT = { has_variable = LEP_seat_bonus_9 } } set_variable = { LEP_seat_bonus_9 = 0 } }
+		set_temp_variable = { settle_add = LEP_seat_pending_9 }
+		add_to_variable = { LEP_seat_bonus_9 = settle_add }
+		set_variable = { LEP_seat_pending_9 = 0 }
+	}
+}
+
+### ─────────────────────────────────────────────────────────
 ### 请求重排席位。
 ### 为什么不直接算：调用点常常在同一个效果块里先做 add_popularity /
 ### set_party_name / add_to_coalition，而同一块内 party_popularity@X 读到的
@@ -402,12 +644,15 @@ LEP_do_count_seats = {
 ### 因此这里只发一个延迟 1 天的事件，等支持率落定后再实际计算。
 ### 全 mod 的调用点都走这里，故各调用点无需关心顺序问题。
 ### ─────────────────────────────────────────────────────────
+
 LEP_hold_election_seats = {
 	# 席位结算延迟一天（避免同帧读到旧的 party_popularity）。
 	# 触发过程藏进 hidden_effect，界面上不露「将触发某事件」；改由下面一行统一提示。
 	hidden_effect = {
 		if = {
 			limit = { has_country_flag = LEP_seat_enabled }
+			# 影响力累积先兑现为席位补偿，随后一天重算落席
+			LEP_settle_seat_pending = yes
 			country_event = { id = LEP_seat_recount.1 days = 1 }
 		}
 	}
